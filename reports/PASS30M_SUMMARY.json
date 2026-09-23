@@ -1,0 +1,331 @@
+{
+  "pass": "layout-pass30m",
+  "timestamp_ist": "2026-09-23 11:44 IST",
+  "phase": "COMPLETE_REVERTED",
+  "scope": "deeper nRESET co-route only (+ P0.02 only if free corridor after nRESET)",
+  "one_atomic_cycle": true,
+  "keep_stage_A": true,
+  "keep_pass30i_30l": true,
+  "no_gerbers": true,
+  "hard_bans": [
+    "P0.15 west wrap",
+    "RF keepout",
+    "U3/GNSS bias",
+    "Stage A + pass30i\u201330l kept copper (P0.08/VIN_F/SWDCLK closes)"
+  ],
+  "nreset_gap": {
+    "west_island": "U1.32/J8.8/C39 \u2014 F tip (53.65,10.8)/(52.22,11.2)",
+    "east_island": "R5.1/TP9 \u2014 B column x=101.68 y=26..58.8",
+    "chosen_corridor": "B.Cu H @ y=12.6 from x=53.65 \u2192 101.68",
+    "gap_mm": "~48"
+  },
+  "preflight_b_verticals_crossing_y12_6": [
+    {
+      "net": "VDD_GPIO",
+      "x": 70.0,
+      "y1": 8.0,
+      "y2": 14.8,
+      "action": "F-hop (no rip)"
+    },
+    {
+      "net": "VDD_GPIO",
+      "x": 70.0,
+      "y1": 14.8,
+      "y2": 9.0,
+      "action": "F-hop (no rip; duplicate seg)"
+    },
+    {
+      "net": "VIN_F",
+      "x": 70.8,
+      "y1": 11.0,
+      "y2": 16.2,
+      "action": "F-hop PROTECTED"
+    },
+    {
+      "net": "P0.15",
+      "x": 72.0,
+      "y1": 15.35,
+      "y2": 7.2,
+      "action": "RIP then restore F-bridge"
+    }
+  ],
+  "preflight_rip_list": [
+    {
+      "id": "P015_EAST_B_V_72",
+      "net": "P0.15",
+      "layer": "B.Cu",
+      "kind": "track",
+      "x1": 72.0,
+      "y1": 15.35,
+      "x2": 72.0,
+      "y2": 7.2,
+      "w": 0.18,
+      "reason": "B vertical crosses nRESET corridor @y=12.6; via would land on stub \u2014 local east stub rip allowed",
+      "required": true
+    }
+  ],
+  "preflight_no_rip": [
+    {
+      "net": "ENABLE",
+      "reason": "No ENABLE copper in x=53..102 y=10..18; crossings are @y\u224820\u201331 \u2014 out of corridor"
+    },
+    {
+      "net": "VIN_FILT",
+      "kind": "H@y13.3 B (55.35\u219251.9)",
+      "reason": "H at y=13.3 does not overlap y=12.6 corridor; F V@55.35 is F.Cu only"
+    },
+    {
+      "net": "VDD2",
+      "reason": "Vias/tracks @y\u224816.3\u201318; no cross of y=12.6"
+    },
+    {
+      "net": "VDD2_MID",
+      "reason": "Same \u2014 south of corridor"
+    },
+    {
+      "net": "VIN_F",
+      "reason": "PROTECTED pass30k close \u2014 F-hop only, do not rip B V@x70.8"
+    },
+    {
+      "net": "P0.08",
+      "reason": "Hard ban \u2014 pass30i/j kept"
+    },
+    {
+      "net": "SWDCLK",
+      "reason": "Hard ban \u2014 pass30l kept"
+    },
+    {
+      "net": "P0.15",
+      "kind": "west wrap x<45",
+      "reason": "Hard ban \u2014 do not touch"
+    },
+    {
+      "net": "VDD_GPIO",
+      "kind": "B V@x70",
+      "reason": "Not in approved rip set; F-hop with VIN_F cluster"
+    }
+  ],
+  "pad_only_block": false,
+  "placement_proposal": null,
+  "planned_nreset": {
+    "attach_west": "F (53.65,10.8)->(53.65,12.6) via",
+    "corridor": "B (53.65,12.6)->(69.0,12.6) | F-hop (69.0,12.6)->(71.5,12.6) over VDD_GPIO@70+VIN_F@70.8 | B (71.5,12.6)->(101.68,12.6)",
+    "attach_east": "B (101.68,12.6)->(101.68,26.0) into existing nRESET B column"
+  },
+  "planned_p015_restore": {
+    "after_rip": "B (72,15.35)->(72,13.8) via | F (72,13.8)->(72,11.4) | via B (72,11.4)->(72,7.2)",
+    "notes": "F-bridge straddles nRESET B@y12.6; preserves via@(72,15.35) and H@(72,7.2)->(106,7.2)"
+  },
+  "copper_edit_started": true,
+  "backup": ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30m-20260923-114330",
+  "closed": [],
+  "blocked": {
+    "nRESET": "Atomic revert after mid DRC: shorting=0 clearance=1 crossing=2; nRESET_unc mid=None (was 1). Collisions: B@y12.6 \u00d7 COEX2, B@y12.6 \u00d7 P0.01; clearance vs VDD_nRF via@(57.95,12.0).",
+    "P0.02": "Not attempted \u2014 nRESET not closed"
+  },
+  "reverted": true,
+  "reverted_nets": [
+    "nRESET"
+  ],
+  "restores": {
+    "P0.15": [
+      "B (72.0,15.35)->(72.0,13.8)",
+      "via(72.0,13.8)",
+      "F (72.0,13.8)->(72.0,11.4)",
+      "via(72.0,11.4)",
+      "B (72.0,11.4)->(72.0,7.2)",
+      "NOTE: restore was applied in mid tx then entire tx reverted"
+    ]
+  },
+  "notes": [
+    "Preflight rip list recorded in PASS30M_SUMMARY before copper edit",
+    "ONE atomic cycle: rip P0.15 east stub \u2192 route nRESET B@y12.6 + F-hop 69\u201371.5 \u2192 restore P0.15 F-bridge \u2192 DRC",
+    "Zone-fill segfault after save; mid DRC via kicad-cli showed clearance/crossing \u2014 full tx reverted from pre-nreset-tx",
+    "STOP \u2014 no further Class-F thrash this pass"
+  ],
+  "p002_attempted": false,
+  "p015_west_segs": {
+    "before": 21,
+    "after": 21,
+    "preserved": true
+  },
+  "stage_a_check_before": {
+    "VDD_nRF_via_north": true,
+    "VDD2_vias": 2,
+    "VDD2_present": true
+  },
+  "before": {
+    "unconnected_items": 74,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 73
+  },
+  "before_nets_watch": {
+    "nRESET": 1,
+    "P0.02": 1,
+    "P0.15": 0,
+    "ENABLE": 0,
+    "VIN_FILT": 0,
+    "VIN_F": 0,
+    "VDD_GPIO": 4,
+    "P0.08": 0,
+    "SWDCLK": 0,
+    "VDD2": 0,
+    "COEX2": 0,
+    "P0.01": 1,
+    "VDD_nRF": 0
+  },
+  "ripped_actual": [
+    {
+      "net": "P0.15",
+      "layer": "B.Cu",
+      "x1": 72.0,
+      "y1": 15.35,
+      "x2": 72.0,
+      "y2": 7.2,
+      "w": 0.18,
+      "note": "ripped then restored in tx; full tx reverted"
+    }
+  ],
+  "nreset_attempt": {
+    "y": 12.6,
+    "f_hop": [
+      69.0,
+      71.5
+    ],
+    "segments": [
+      "F (53.65,10.8)->(53.65,12.6) via",
+      "B (53.65,12.6)->(69.0,12.6)",
+      "F-hop (69.0,12.6)->(71.5,12.6)",
+      "B (71.5,12.6)->(101.68,12.6)",
+      "B (101.68,12.6)->(101.68,26.0)"
+    ]
+  },
+  "mid": {
+    "unconnected_items": 73,
+    "shorting_items": 0,
+    "clearance": 1,
+    "tracks_crossing": 2,
+    "via_dangling": 73
+  },
+  "after": {
+    "unconnected_items": 74,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 73
+  },
+  "mid_nets_watch": {
+    "nRESET": 0,
+    "P0.02": 1,
+    "P0.15": 0,
+    "ENABLE": 0,
+    "VIN_FILT": 0,
+    "VIN_F": 0,
+    "VDD_GPIO": 4,
+    "P0.08": 0,
+    "SWDCLK": 0,
+    "VDD2": 0,
+    "COEX2": 0,
+    "P0.01": 1,
+    "VDD_nRF": 0
+  },
+  "colliding_copper": [
+    {
+      "type": "tracks_crossing",
+      "description": "Tracks crossing",
+      "items": [
+        {
+          "description": "Track [COEX2] on B.Cu, length 33.1000 mm",
+          "pos": {
+            "x": 72.0,
+            "y": 24.6
+          }
+        },
+        {
+          "description": "Track [nRESET] on B.Cu, length 13.4000 mm",
+          "pos": {
+            "x": 101.68,
+            "y": 12.6
+          }
+        }
+      ]
+    },
+    {
+      "type": "tracks_crossing",
+      "description": "Tracks crossing",
+      "items": [
+        {
+          "description": "Track [P0.01] on B.Cu, length 19.4100 mm",
+          "pos": {
+            "x": 86.14,
+            "y": 15.2
+          }
+        },
+        {
+          "description": "Track [nRESET] on B.Cu, length 13.4000 mm",
+          "pos": {
+            "x": 101.68,
+            "y": 12.6
+          }
+        }
+      ]
+    },
+    {
+      "type": "clearance",
+      "description": "Clearance violation (netclass 'POWER' clearance 0.1500 mm; actual 0.1100 mm)",
+      "items": [
+        {
+          "description": "Track [nRESET] on B.Cu, length 15.3500 mm",
+          "pos": {
+            "x": 53.65,
+            "y": 12.6
+          }
+        },
+        {
+          "description": "Via [VDD_nRF] on F.Cu - B.Cu",
+          "pos": {
+            "x": 57.949999,
+            "y": 12.0
+          }
+        }
+      ]
+    }
+  ],
+  "stage_a_check": {
+    "VDD_nRF_via_north": true,
+    "VDD2_vias": 2,
+    "VDD2_present": true
+  },
+  "stop": true,
+  "success_gate": "NOT MET (74\u219274; nRESET reverted)",
+  "signal_net_deltas": {
+    "nRESET": 0,
+    "P0.02": 0,
+    "P0.15": 0,
+    "ENABLE": 0,
+    "VIN_FILT": 0,
+    "VIN_F": 0,
+    "VDD_GPIO": 0,
+    "P0.08": 0,
+    "SWDCLK": 0,
+    "VDD2": 0,
+    "COEX2": 0,
+    "P0.01": 0,
+    "VDD_nRF": 0
+  },
+  "all_net_deltas": {},
+  "files_touched": [
+    "nRF9161-DEV-BOARD.kicad_pcb",
+    "reports/DRC_PASS30M_BEFORE.json",
+    "reports/DRC_PASS30M_MID.json",
+    "reports/DRC_PASS30M_AFTER.json",
+    "reports/PASS30M_SUMMARY.json",
+    "docs/PCB_LAYOUT_REVIEW.md",
+    "scripts/final_pass30m.py",
+    ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30m-20260923-114330",
+    ".mcp-backups/pass30m-connect/pre-nreset-tx.kicad_pcb",
+    ".mcp-backups/pass30m-connect/preflight_probe.json"
+  ]
+}
