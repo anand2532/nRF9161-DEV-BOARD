@@ -1,0 +1,95 @@
+{
+  "pass": "layout-pass30e",
+  "timestamp_ist": "2026-09-23 16:04 IST",
+  "before": {
+    "unconnected_items": 78,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0
+  },
+  "after": {
+    "unconnected_items": 78,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0
+  },
+  "success_gate": "unconnected < 78 with shorting=0 — NOT MET",
+  "closed": [],
+  "deferred": [
+    "VIN_FILT",
+    "VIN_F",
+    "SWDCLK",
+    "nRESET",
+    "P0.02",
+    "P0.08",
+    "COEX0 north island"
+  ],
+  "blockers_ripped_and_restored_in_trials": [
+    {
+      "net": "VDD_GPIO",
+      "segment": "B.Cu H @y≈14.8 (70.0–48.05)",
+      "trial": "VIN_FILT",
+      "restore": "north U-bridge @y=10.0–11.5 columns x≈53.5/57.5 — workable when isolated",
+      "left_on_board": false
+    },
+    {
+      "net": "P0.15",
+      "segment": "B.Cu north trunk H @y≈15.35 (46.7–72) — NOT west wrap",
+      "trial": "VIN_FILT",
+      "restore": "B stubs + vias@(51,16.5)/(60,18) + F.Cu bridge y≈19.5 — clearance OK in isolation",
+      "left_on_board": false
+    },
+    {
+      "net": "ENABLE",
+      "segment": "B.Cu H @y≈20.3 (50.85–56.5)",
+      "trial": "VIN_FILT",
+      "restore": "FAILED — B south loops hit VDD1 via@53.7/H@25.6; F reconnects hit C5/C6 VDD1 pads, VIN_FILT F spine, VDD1 tracks",
+      "left_on_board": false
+    },
+    {
+      "net": "COEX2",
+      "segment": "B.Cu V @x≈72 (y24.6–38)",
+      "trial": "P0.08",
+      "restore": "planned east jog @x=74 — not kept (P0.08 path still blocked)",
+      "left_on_board": false
+    },
+    {
+      "net": "ENABLE",
+      "segment": "B.Cu V @x≈62.5 (y25.2–40.95)",
+      "trial": "P0.08",
+      "restore": "planned west jog — not kept",
+      "left_on_board": false
+    }
+  ],
+  "corridor_failures": {
+    "VIN_FILT": "B path (55.35,13.3)→(51.9,21.9) requires ripping VDD_GPIO@14.8 + P0.15 north trunk@15.35 + ENABLE@20.3. VDD_GPIO+P0.15 restores proven (north U + F via bridge). ENABLE restore is the failing link: every legal B/F reconnect collides with VDD1 caps/tracks or the existing VIN_FILT F island around (52,22–28). Without ENABLE restore, DRC shorts/crossings or new ENABLE opens. Aborted per PM one-cycle rule; board restored.",
+    "P0.08": "After ripping COEX2@x72 + ENABLE@x62.5, path still blocked by ENABLE H @y≈28 (76.8–90.38) and VDD_nRF via@(69.3,30) / GND via forest near dest. Needs deeper ENABLE/VDD1 surgery — deferred.",
+    "VIN_F": "Not reached — blocked behind VIN_FILT corridor.",
+    "SWDCLK": "Probe: blocked by VDD_GPIO H@14.8 and via@46.35,3.46 — needs same VDD_GPIO wall jog as VIN_FILT.",
+    "nRESET": "Not attempted this pass (long east↔west).",
+    "P0.02": "Not attempted this pass.",
+    "COEX0": "Cheap stitch not available: GND via@(33,29), SIM_CLK/nRESET/P0.28 vias wall north↔south."
+  },
+  "notes": [
+    "Hardware PM approved rip list honored; all trial rips reverted — live board == pre-pass30e backup",
+    "P0.15 west wrap never ripped (west-ish B segs=21 before/after)",
+    "RF keepout x0–24.2 y20–64 respected; no digital under matching on F.Cu",
+    "No Gerbers generated",
+    "pcbnew Remove()+GetTracks() is unsafe mid-session on KiCad 9.0.2 — trials used single-lifecycle edit then fresh-process DRC",
+    "Next pass recommendation: treat ENABLE as co-routed with VIN_FILT (rip ENABLE H together with VDD1 local jog or relocate C5/C6 fanout), or close P0.08 by also ripping ENABLE H@y28 + VDD_nRF via jog"
+  ],
+  "p0_15_wrap": "preserved",
+  "p0_15_west_segs": {"before": 21, "after": 21},
+  "gerbers": false,
+  "backup": ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30e-20260923-102320",
+  "drc": [
+    "reports/DRC_PASS30E_BEFORE.json",
+    "reports/DRC_PASS30E_AFTER.json"
+  ],
+  "files_touched": [
+    "reports/DRC_PASS30E_BEFORE.json",
+    "reports/DRC_PASS30E_AFTER.json",
+    "reports/PASS30E_SUMMARY.json",
+    "docs/PCB_LAYOUT_REVIEW.md"
+  ]
+}

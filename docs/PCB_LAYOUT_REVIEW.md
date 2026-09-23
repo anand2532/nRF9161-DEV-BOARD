@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-23 10:03 IST (Asia/Calcutta) — pass30c executed
+**Review date:** 2026-09-23 16:04 IST (Asia/Calcutta) — pass30e executed
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,11 +14,11 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **78** | `reports/DRC_PASS30C_AFTER.json` (live `kicad-cli` 9.0.2); was **80** at pass30c baseline after U3 netlist sync |
+| **unconnected_items** | **78** | `reports/DRC_PASS30E_AFTER.json` (live `kicad-cli` 9.0.2); unchanged through pass30d/30e |
 | **shorting_items** | **0** | Same JSON |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
-| via_dangling | **79** | `DRC_PASS30C_AFTER.json` |
+| via_dangling | **79** | `DRC_PASS30E_AFTER.json` |
 | drill_out_of_range | **0** | Pass30 before/after — P0.02 & nRESET already ≥0.50/0.30 |
 | via_diameter | **0** | Same |
 | track_dangling | 13 | Same JSON (includes load-bearing P0.15 west-wrap stubs) |
@@ -33,11 +33,13 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `reports/DRC_BEFORE_FINAL.json` | 120 | Pre-final pass |
 | `reports/DRC_final.json` / `FINAL_DESIGN_REVIEW.md` | 104 | Mid campaign |
 | `reports/DRC_AFTER_CONNECT_FULL.json` | 98 | Intermediate |
-| **`DRC_PASS30C_AFTER.json`** | **78** | **Authoritative after pass30c** |
+| **`DRC_PASS30E_AFTER.json`** | **78** | **Authoritative after pass30e** (same as 30c/30d) |
 
 Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.json` / `reports/DRC_PASS30C_AFTER.json`). On-disk `fab/gerbers/` CreationDate **2026-09-16** remains **stale** and must not be used for fab (DFM checklist §5).
 
 **Pass delta (pass30c):** netlist sync + U3.VIN + U3.ON closed. **Before unconnected:** 80 · **After unconnected:** 78 · **Nets closed:** VDD_GPIO (U3.1), COEX0 (U3.3). Class F deferred. shorting/clearance=0. P0.15 wrap preserved.
+
+**Pass delta (pass30e):** Aggressive Class F corridor clear (PM-approved rip list). **Before/After unconnected:** 78/78 · **shorting/clearance:** 0/0 · **Nets closed:** none. VIN_FILT corridor: VDD_GPIO@y14.8 + P0.15 north trunk restores proven; **ENABLE@y20.3 restore fails** (VDD1 caps / VIN_FILT F spine). P0.08: COEX2@x72 rip insufficient (ENABLE@y28 + via forest). All trial copper reverted; live board = pre-pass30e backup. Details: `reports/PASS30E_SUMMARY.json`.
 
 ---
 
