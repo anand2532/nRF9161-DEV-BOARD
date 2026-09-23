@@ -14,7 +14,7 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **72** | `reports/DRC_PASS30M_AFTER.json` (live `kicad-cli` 9.0.2); nRESET reverted; Stage A+pass30i–30l kept |
+| **unconnected_items** | **70** | `reports/DRC_PASS30P_AFTER.json` (live `kicad-cli`); Pass30p KEEP P0.22 U1↔J8 + P0.11 U1; Stage A+pass30i–30o kept |
 | **shorting_items** | **0** | Same JSON |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
@@ -748,3 +748,54 @@ P0.02 first with atomic rip/restore of non-banned blockers; then cheap true sign
 | P0.01 | 0 |
 | P0.15 | 0 |
 | nRESET | 0 |
+
+---
+
+## Pass30p — P0.22 → P0.11 → pairs/MAGPIO/AUX (2026-09-23 12:13 IST)
+
+### Goal
+Lock order P0.22 → P0.11 → P0.10/17/31 pairs + MAGPIO/MIPI/AUX true opens. Skip Class-E GND zone islands. VDD_GPIO last/careful (deferred). shorting=0 clearance=0 crossing=0. No Gerbers. Protect Stage A + pass30i–30o + P0.15 west wrap + RF/U3. Two restore fails → STOP.
+
+### Result
+- **Closed/KEPT:** ['P0.22 (U1↔J8 island)', 'P0.11 (U1 fanout into existing B island)']
+- **Reverted attempts:** 3 (all atomic; restore_fail_streak=0)
+- **Before unconnected:** 72
+- **After unconnected:** 70 (shorting=0 clearance=0 crossing=0)
+- **P0.15 west segs:** {'before': 21, 'after': 21, 'preserved': True}
+- **Stage A:** {'VDD_nRF_via_north': True, 'VDD2_vias': 2, 'VDD2_present': True}
+
+### Geometry kept
+- **P0.22 U1↔J8:** F fanout (35.25,26.75)→via(35.25,22); F-hop VDD_GPIO H@y19.13; B north-band y=2 with F-hops over P0.02 @x36.5 and @x64; attach into existing via(53.65,6) / J8.6 stub
+- **P0.11 U1 fanout:** F (44,28)→(46.5,28) + via + B (46.5,28)→(46.5,29.2) into existing B island
+
+### Blocked / deferred
+- **P0.22_J13_J10:** South/east header pair blocked by P0.01/P0.15/VDD_GPIO dual-layer corridors; deferred
+- **P0.11_J12_J16:** Header extensions congested (P0.15/P0.16/VDD_GPIO/VIN_F); U1-only keep this cycle
+- **P0.10:** Same class as P0.11; fanout exists; header runs not pre-cleared
+- **P0.17:** U1 via island ↔ bottom J13/J18 island: x42 south hits P0.13/COEX2/P0.04; y50 H clear but COEX0@58.8 on x48.16
+- **P0.31:** PAD-ONLY (U1.89, J13.16, J11.2) — no copper; see placement_proposal
+- **MAGPIO0_2_MIPI:** Long U1→J14 runs; fanouts only; no pre-cleared stub
+- **AUX:** Two DRC-failed probes (RF_50OHM clr to GPS/GNSS_ANT; GNSS_VBIAS B short) — reverted atomically
+- **AUX_FIT:** RF keepout path (skipped)
+- **VDD_GPIO:** Deferred (power last; no thrash this cycle)
+
+### Placement proposal (NOT applied — needs new OK)
+- Net **P0.31**: Three pads, zero copper; no DRC-clean corridor found without cutting protected copper
+- {'move': 'J11', 'from': [116.0, 48.54], 'to': [116.0, 45.54], 'delta_mm': 3.0, 'note': 'Nudge J11 3mm north may open east-edge column vs VDD_GPIO@38.8/51 — NOT applied'}
+- {'move': 'J13', 'from': [102.1, 76.0], 'to': [102.1, 73.0], 'delta_mm': 3.0, 'note': 'Nudge J13 3mm north toward interior corridors — NOT applied'}
+- {'move': 'U1', 'note': 'Do not move SoC; prefer header nudge ≤3mm if future OK'}
+
+### Signal net deltas (excl. GND zone noise)
+| Net | Δ unconnected |
+| --- | --- |
+| P0.11 | -1 |
+| P0.22 | -1 |
+
+### GND zone deltas
+| Net | Δ |
+| --- | --- |
+| (none — Class-E skipped) | 0 |
+
+**Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30p-20260923-120436`  
+**DRC:** `reports/DRC_PASS30P_BEFORE.json`, `reports/DRC_PASS30P_MID_P022.json`, `reports/DRC_PASS30P_MID_P011.json`, `reports/DRC_PASS30P_AFTER.json`  
+**Summary:** `reports/PASS30P_SUMMARY.json`

@@ -1,0 +1,215 @@
+{
+  "pass": "layout-pass30p",
+  "timestamp_ist": "2026-09-23 12:13 IST",
+  "phase": "COMPLETE_KEPT",
+  "scope": "P0.22 \u2192 P0.11 \u2192 pairs/MAGPIO/MIPI/AUX true opens; skip Class-E GND; VDD_GPIO deferred",
+  "keep_stage_A": true,
+  "keep_pass30i_30o": true,
+  "no_gerbers": true,
+  "hard_bans": [
+    "P0.15 west wrap",
+    "RF keepout",
+    "U3/GNSS bias",
+    "Stage A + pass30i\u201330o kept copper"
+  ],
+  "backup": ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30p-20260923-120436",
+  "closed": [
+    "P0.22 (U1\u2194J8 island)",
+    "P0.11 (U1 fanout into existing B island)"
+  ],
+  "blocked": {
+    "P0.22_J13_J10": "South/east header pair blocked by P0.01/P0.15/VDD_GPIO dual-layer corridors; deferred",
+    "P0.11_J12_J16": "Header extensions congested (P0.15/P0.16/VDD_GPIO/VIN_F); U1-only keep this cycle",
+    "P0.10": "Same class as P0.11; fanout exists; header runs not pre-cleared",
+    "P0.17": "U1 via island \u2194 bottom J13/J18 island: x42 south hits P0.13/COEX2/P0.04; y50 H clear but COEX0@58.8 on x48.16",
+    "P0.31": "PAD-ONLY (U1.89, J13.16, J11.2) \u2014 no copper; see placement_proposal",
+    "MAGPIO0_2_MIPI": "Long U1\u2192J14 runs; fanouts only; no pre-cleared stub",
+    "AUX": "Two DRC-failed probes (RF_50OHM clr to GPS/GNSS_ANT; GNSS_VBIAS B short) \u2014 reverted atomically",
+    "AUX_FIT": "RF keepout path (skipped)",
+    "VDD_GPIO": "Deferred (power last; no thrash this cycle)"
+  },
+  "reverted_attempts": [
+    {
+      "net": "P0.22",
+      "attempt": 1,
+      "reason": "J8.10/VIN_F/nRESET clashes on south F-hop path"
+    },
+    {
+      "net": "AUX",
+      "attempt": 1,
+      "reason": "RF_50OHM clearance 0.13<0.15 to GPS/GNSS_ANT"
+    },
+    {
+      "net": "AUX",
+      "attempt": 2,
+      "reason": "GNSS_VBIAS B short + GPS F cross"
+    }
+  ],
+  "restore_fail_streak": 0,
+  "p022_kept": true,
+  "p011_kept": true,
+  "pad_only_block": true,
+  "placement_proposal": {
+    "net": "P0.31",
+    "reason": "Three pads, zero copper; no DRC-clean corridor found without cutting protected copper",
+    "options_mm": [
+      {
+        "move": "J11",
+        "from": [
+          116.0,
+          48.54
+        ],
+        "to": [
+          116.0,
+          45.54
+        ],
+        "delta_mm": 3.0,
+        "note": "Nudge J11 3mm north may open east-edge column vs VDD_GPIO@38.8/51 \u2014 NOT applied"
+      },
+      {
+        "move": "J13",
+        "from": [
+          102.1,
+          76.0
+        ],
+        "to": [
+          102.1,
+          73.0
+        ],
+        "delta_mm": 3.0,
+        "note": "Nudge J13 3mm north toward interior corridors \u2014 NOT applied"
+      },
+      {
+        "move": "U1",
+        "note": "Do not move SoC; prefer header nudge \u22643mm if future OK"
+      }
+    ]
+  },
+  "before": {
+    "unconnected_items": 72,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 73
+  },
+  "after": {
+    "unconnected_items": 70,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 72
+  },
+  "before_nets_watch": {
+    "P0.22": 3,
+    "P0.11": 3,
+    "P0.10": 2,
+    "P0.17": 2,
+    "P0.31": 2,
+    "MAGPIO0": 1,
+    "MAGPIO1": 1,
+    "MAGPIO2": 1,
+    "MIPI_SCLK": 1,
+    "MIPI_SDATA": 1,
+    "MIPI_VIO": 1,
+    "AUX": 1,
+    "AUX_FIT": 1,
+    "VDD_GPIO": 4,
+    "P0.15": 0,
+    "P0.02": 0,
+    "nRESET": 0,
+    "SWDCLK": 0,
+    "VIN_F": 0,
+    "VIN_FILT": 0,
+    "P0.08": 0,
+    "ENABLE": 0,
+    "COEX2": 0,
+    "VDD2": 0,
+    "VDD_nRF": 0,
+    "GND": 10
+  },
+  "after_nets_watch": {
+    "P0.22": 2,
+    "P0.11": 2,
+    "P0.10": 2,
+    "P0.17": 2,
+    "P0.31": 2,
+    "MAGPIO0": 1,
+    "MAGPIO1": 1,
+    "MAGPIO2": 1,
+    "MIPI_SCLK": 1,
+    "MIPI_SDATA": 1,
+    "MIPI_VIO": 1,
+    "AUX": 1,
+    "AUX_FIT": 1,
+    "VDD_GPIO": 4,
+    "P0.15": 0,
+    "P0.02": 0,
+    "nRESET": 0,
+    "SWDCLK": 0,
+    "VIN_F": 0,
+    "VIN_FILT": 0,
+    "P0.08": 0,
+    "ENABLE": 0,
+    "COEX2": 0,
+    "VDD2": 0,
+    "VDD_nRF": 0,
+    "GND": 10
+  },
+  "signal_net_deltas": {
+    "AUX": 0,
+    "AUX_FIT": 0,
+    "COEX2": 0,
+    "ENABLE": 0,
+    "MAGPIO0": 0,
+    "MAGPIO1": 0,
+    "MAGPIO2": 0,
+    "MIPI_SCLK": 0,
+    "MIPI_SDATA": 0,
+    "MIPI_VIO": 0,
+    "P0.02": 0,
+    "P0.08": 0,
+    "P0.10": 0,
+    "P0.11": -1,
+    "P0.15": 0,
+    "P0.17": 0,
+    "P0.22": -1,
+    "P0.31": 0,
+    "SWDCLK": 0,
+    "VDD2": 0,
+    "VDD_GPIO": 0,
+    "VDD_nRF": 0,
+    "VIN_F": 0,
+    "VIN_FILT": 0,
+    "nRESET": 0
+  },
+  "gnd_zone_deltas": {},
+  "all_net_deltas": {
+    "P0.11": -1,
+    "P0.22": -1
+  },
+  "p015_west_segs": {
+    "before": 21,
+    "after": 21,
+    "preserved": true
+  },
+  "stage_a_check": {
+    "VDD_nRF_via_north": true,
+    "VDD2_vias": 2,
+    "VDD2_present": true
+  },
+  "success_gate": "MET (72\u219270; P0.22 U1-J8 + P0.11 U1 fanout KEPT; shorting=clearance=crossing=0)",
+  "stop": false,
+  "files_touched": [
+    "nRF9161-DEV-BOARD.kicad_pcb",
+    "reports/DRC_PASS30P_BEFORE.json",
+    "reports/DRC_PASS30P_MID_P022.json",
+    "reports/DRC_PASS30P_MID_P011.json",
+    "reports/DRC_PASS30P_MID_AUX.json",
+    "reports/DRC_PASS30P_AFTER.json",
+    "reports/PASS30P_SUMMARY.json",
+    "docs/PCB_LAYOUT_REVIEW.md",
+    "scripts/final_pass30p.py",
+    ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30p-20260923-120436",
+    ".mcp-backups/pass30p-connect/"
+  ]
+}
