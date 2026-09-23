@@ -1,0 +1,246 @@
+{
+  "pass": "layout-pass30f",
+  "timestamp_ist": "2026-09-23 10:42 IST",
+  "before": {
+    "unconnected_items": 78,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 79
+  },
+  "after": {
+    "unconnected_items": 78,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 78
+  },
+  "success_gate": "unconnected < 78 with shorting=0 \u2014 NOT MET (still 78; VIN_FILT closed but Class-E GND zone islands 9\u219210)",
+  "reverted": false,
+  "closed": [
+    "VIN_FILT"
+  ],
+  "nets_ripped_and_restored": [
+    {
+      "net": "VDD_GPIO",
+      "ripped": "B.Cu H @y\u224814.8 (70.0\u201348.05)",
+      "restore": "north U-bridge B (70,14.8)\u2192(70,9.0)\u2192(48.05,9.0)\u2192(48.05,14.8)",
+      "left_on_board": true
+    },
+    {
+      "net": "P0.15",
+      "ripped": "B.Cu north trunk H @y\u224815.35 (46.7\u201372) \u2014 NOT west wrap",
+      "restore": "F via-bridge: vias@(51.0,16.5)/(60.0,16.5) + F H@y=19.5 + B stubs; required VDD2_MID south jog first",
+      "left_on_board": true
+    },
+    {
+      "net": "ENABLE",
+      "ripped": "B.Cu H @y\u224820.3 (50.85\u201356.50)",
+      "restore": "F.Cu via-bridge (50.85,23.15)\u2192(50.85,20.30)\u2192(56.50,20.30) using existing vias (courtyard-clean of C5/C6)",
+      "left_on_board": true
+    },
+    {
+      "net": "VDD2_MID",
+      "ripped": "B.Cu H @y\u224816.87 (58.14\u201367.21) \u2014 local jog to free P0.15 east via site",
+      "restore": "south U (58.14,16.87)\u2192(58.14,17.80)\u2192(67.21,17.80)\u2192(67.21,16.87)",
+      "left_on_board": true
+    }
+  ],
+  "vin_filt_route": {
+    "layer": "B.Cu",
+    "width_mm": 0.3,
+    "path": [
+      [
+        55.35,
+        13.3
+      ],
+      [
+        51.9,
+        13.3
+      ],
+      [
+        51.9,
+        21.9
+      ]
+    ],
+    "result": "closed (unconnected VIN_FILT 1\u21920)"
+  },
+  "deferred": [
+    "VIN_F",
+    "SWDCLK",
+    "nRESET",
+    "P0.02",
+    "P0.08",
+    "COEX0 north island"
+  ],
+  "corridor_failures": {
+    "P0.08": "After ripping ENABLE H@y28 (76.8\u201390.38) + ENABLE V@x62.5 + COEX2 V@x72, all B/F y27\u201332 paths still blocked. Primary: VDD_nRF via@(69.30,30.00) on y=30; also P0.10 via@(47.40,28.50), VDD1 via@(53.70,27.13), TP11 VDD1 pad@(60,30), R2 VDD_nRF pad@(58,27.46), VDD_GPIO via@(78,32). ENABLE H28 restore also hard (GND via@90,30 / VDD_GPIO via@87.81,26). Probe-only on /tmp \u2014 live board not polluted. Needs placement moves.",
+    "VIN_F": "Not attempted \u2014 corridor still congested north of VIN_FILT; leave for 30g.",
+    "SWDCLK": "Not attempted this pass (cheap probe deferred)."
+  },
+  "failure_geometry": {
+    "unconnected_stuck_at": 78,
+    "why_count_unchanged": "VIN_FILT closed (\u22121) offset by Class-E F.Cu GND zone-island reports 9\u219210 (all at pos \u2248\u22120.05,\u22120.05 \u2014 zone fill artifact, not a signal route). shorting=0 clearance=0.",
+    "p0_08_colliding_copper": [
+      {
+        "net": "VDD_nRF",
+        "kind": "via",
+        "xy": [
+          69.3,
+          30.0
+        ],
+        "blocks": "P0.08 B H @y=30"
+      },
+      {
+        "net": "P0.10",
+        "kind": "via",
+        "xy": [
+          47.4,
+          28.5
+        ],
+        "blocks": "P0.08 B H @y=28/29"
+      },
+      {
+        "net": "VDD1",
+        "kind": "via",
+        "xy": [
+          53.7,
+          27.13
+        ],
+        "blocks": "P0.08 B H @y=27"
+      },
+      {
+        "net": "VDD1",
+        "kind": "pad",
+        "ref": "TP11",
+        "xy": [
+          60.0,
+          30.0
+        ],
+        "blocks": "P0.08 F H @y=30"
+      },
+      {
+        "net": "VDD_nRF",
+        "kind": "pad",
+        "ref": "R2.2",
+        "xy": [
+          58.0,
+          27.46
+        ],
+        "blocks": "P0.08 F H @y=28"
+      },
+      {
+        "net": "VDD_GPIO",
+        "kind": "via",
+        "xy": [
+          78.0,
+          32.0
+        ],
+        "blocks": "P0.08 B V descent"
+      }
+    ]
+  },
+  "placement_move_proposals_for_hardware_pm": [
+    {
+      "refdes": "TP11",
+      "current_xy_mm": [
+        60.0,
+        30.0
+      ],
+      "proposed_delta_mm": [
+        0.0,
+        2.5
+      ],
+      "proposed_xy_mm": [
+        60.0,
+        32.5
+      ],
+      "why": "Frees F.Cu y\u224830 corridor for P0.08 east\u2192west; testpoint, \u22643 mm move"
+    },
+    {
+      "refdes": "R2",
+      "current_xy_mm": [
+        58.0,
+        26.0
+      ],
+      "proposed_delta_mm": [
+        0.0,
+        -2.0
+      ],
+      "proposed_xy_mm": [
+        58.0,
+        24.0
+      ],
+      "why": "Moves VDD_nRF pad off F y\u224828 so P0.08/ENABLE H28 restores clear; \u22643 mm"
+    },
+    {
+      "refdes": "C6",
+      "current_xy_mm": [
+        51.0,
+        27.0
+      ],
+      "proposed_delta_mm": [
+        -2.0,
+        0.0
+      ],
+      "proposed_xy_mm": [
+        49.0,
+        27.0
+      ],
+      "why": "Opens B column near x\u224851\u201353 for future ENABLE/VDD1 fanout and P0.08 west approach; \u22643 mm"
+    },
+    {
+      "refdes": "TP19",
+      "current_xy_mm": [
+        52.0,
+        22.0
+      ],
+      "proposed_delta_mm": [
+        2.5,
+        0.0
+      ],
+      "proposed_xy_mm": [
+        54.5,
+        22.0
+      ],
+      "why": "VIN_FILT testpoint currently sits on south ENABLE/VIN_FILT F spine; shift east frees F south jogs; \u22643 mm"
+    }
+  ],
+  "notes": [
+    "ONE atomic co-route cycle kept on live board: VIN_FILT + full restores (VDD_GPIO, P0.15, ENABLE, VDD2_MID jog). shorting=0 clearance=0.",
+    "P0.15 west wrap preserved (west-ish B segs=21 before/after).",
+    "P0.08 attempted as probe only after step1 clean \u2014 no live copper left from that probe.",
+    "RF keepout / matching / U3 GNSS bias untouched. No footprints moved. No Gerbers.",
+    "First VIN_FILT attempt shorted P0.15 via@(60,16.5) to VDD2_MID H@y16.87 \u2014 rebuilt with VDD2_MID south jog; final DRC shorting=0.",
+    "Next: Hardware PM approve placement deltas OR pass30g VIN_F/SWDCLK with similar co-route discipline."
+  ],
+  "p0_15_wrap": "preserved",
+  "p0_15_west_segs": {
+    "before": 21,
+    "after": 21
+  },
+  "gerbers": false,
+  "backup": ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30f-20260923-103606",
+  "drc": [
+    "reports/DRC_PASS30F_BEFORE.json",
+    "reports/DRC_PASS30F_AFTER.json"
+  ],
+  "files_touched": [
+    "nRF9161-DEV-BOARD.kicad_pcb",
+    "reports/DRC_PASS30F_BEFORE.json",
+    "reports/DRC_PASS30F_AFTER.json",
+    "reports/PASS30F_SUMMARY.json",
+    "docs/PCB_LAYOUT_REVIEW.md",
+    "scripts/final_pass30f.py"
+  ],
+  "net_unconnected_delta": {
+    "GND": [
+      9,
+      10
+    ],
+    "VIN_FILT": [
+      1,
+      0
+    ]
+  }
+}
