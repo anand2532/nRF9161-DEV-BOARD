@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-23 13:09 IST (Asia/Calcutta) — pass30w STOP_TWO_FAILS + Option E handoff (no keep; board=pass30u)
+**Review date:** 2026-09-23 18:43 IST (Asia/Calcutta) — pass30x PLACEMENT PROPOSALS ONLY (board untouched; pass30u keep)
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -44,6 +44,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
 
 Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.json` / `reports/DRC_PASS30C_AFTER.json`). On-disk `fab/gerbers/` CreationDate **2026-09-16** remains **stale** and must not be used for fab (DFM checklist §5).
+
+**Pass delta (pass30x):** PLACEMENT PROPOSALS ONLY — no footprint moves, no copper, no Gerbers. Measured live XY J8–J17 + U1. Packages: (A) SE duals J9/J12/J16/J17 for P0.05/07/09–12/17; (B) SE column J10/J11/J13 for P0.18–31 — J13 preferred (64,78.5) / alt (67,76); **do not repeat failed (64,73)** vs P0.08 vias @65.2; (C) West long-haul J14/J15 for MAGPIO/MIPI/COEX1; (D) VDD_GPIO U1.12 note only — **no U1 move without later explicit OK**. PM override: waive **only** GND×10; MUST-FIX ANT_FIT/AUX/AUX_FIT (RF Class C DNP place-later); P0.19/P0.22 leftover ratsnests are real GPIO opens (Package B helps). Hard gate still unconnected→0. Artifacts: `reports/PASS30X_PLACEMENT_PROPOSALS.md` (+ JSON).
 
 **Pass delta (pass30w):** Ordered VDD_GPIO low-risk island joins only (NEW geometries). U1.12 NW F@y34.5 + B col@x35.5 F-hops — dirty shorting=12 clearance=11 (hit P0.22/P0.21 via forest @x35.25/35.75). Mid via(87.81,26)→TP10 F-hops — dirty shorting=2 clearance=1 crossing=3 (VIN_FILT). **STOP** two consecutive dirty fails; SIM_*/COEX1/MAGPIO long-haul (~40–80 mm) **not** short-stub class — deferred. SE dual GPIO thrash skipped. **Nothing kept** → Option E matrix `reports/REMAINING_OPENS_MATRIX.md` (+ JSON). **Before/After unconnected:** 67/67 · shorting/clearance/crossing 0. P0.15 west preserved (21 segs). Stage A + P0.22 + P0.19 keep. No placement. No Gerbers. No further copper pass. Details: `reports/PASS30W_SUMMARY.json`.
 
@@ -991,3 +993,41 @@ Copper-only (no placement): P0.11 header stubs → P0.10/P0.17 → MAGPIO/MIPI/A
 
 **Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30v-20260923-125645`  
 **Artifacts:** `reports/DRC_PASS30V_BEFORE.json`, `reports/DRC_PASS30V_AFTER.json`, `reports/PASS30V_SUMMARY.json`, `scripts/final_pass30v.py`
+
+## Pass30x — Placement proposals ONLY (2026-09-23 18:43 IST)
+
+**Goal:** Proposal docs for Hardware PM — coherent placement packages ≤3 mm. **NO** footprint moves, **NO** copper, **NO** Gerbers this pass.
+
+**Board:** untouched (mtime unchanged from pass30w handoff). Live keep = pass30u (unconnected=67).
+
+### PM / DFM override
+- **Waive only:** GND ×10 zone islands
+- **Must-fix:** ANT_FIT / AUX / AUX_FIT — RF Class C DNP shunt pads (place later under PM OK; never route through RF keepout)
+- **Must-fix:** P0.19 / P0.22 leftover ratsnests — real GPIO opens (finish in post-placement copper; Package B primary help)
+- **Route-later:** SIM_*, COEX0, GPIO singles (P0.00/01/03/14/16/20/25–29)
+- **Hard gate:** unconnected → 0
+
+### Live XY (measured)
+| Ref | XY mm | Rot |
+| --- | --- | ---: |
+| J8 | (50, 6) | 0 |
+| J9 | (116, 8) | 0 |
+| J10 | (116, 28) | 0 |
+| J11 | (116, 46) | 0 |
+| J12 | (6, 76) | 90 |
+| J13 | (64, 76) | 90 |
+| J14 | (104, 48) | 0 |
+| J15 | (104, 62) | 0 |
+| J16 | (108, 8) | 0 |
+| J17 | (108, 26) | 0 |
+| U1 | (36, 32) | 180 |
+
+### Packages (summary)
+1. **A SE duals** — J16/J9/J17 west 2.54 mm (+ optional J12 east 2.54): unlock P0.05/07/09–12/17
+2. **B SE column** — J13 → **(64, 78.5)** preferred / **(67, 76)** alt (avoid failed **(64, 73)** vs P0.08 vias); J10/J11 west 2.54: unlock P0.18–31 + helps finish P0.19/P0.22
+3. **C West long-haul** — J14/J15 west 3 mm lockstep: MAGPIO/MIPI/COEX1
+4. **D Note only** — VDD_GPIO U1.12 @≈(44, 31.5); **no U1 move** without later explicit OK
+
+**Artifacts:** `reports/PASS30X_PLACEMENT_PROPOSALS.md`, `reports/PASS30X_PLACEMENT_PROPOSALS.json`  
+**Next:** Hardware PM approve package(s) → execute placement pass (still no Gerbers until unconnected=0)
+

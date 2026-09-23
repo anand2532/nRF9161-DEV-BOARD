@@ -1,0 +1,791 @@
+{
+  "pass": "pass30x",
+  "mode": "PLACEMENT_PROPOSALS_ONLY",
+  "timestamp_ist": "2026-09-23 18:43 IST",
+  "board_state": "pass30u KEEP (pass30w no copper keep); unconnected_items=67",
+  "hard_gate": "unconnected \u2192 0",
+  "constraints": [
+    "NO footprint moves this pass",
+    "NO copper edits this pass",
+    "NO Gerbers",
+    "Preferred and alt deltas \u2264 3 mm per footprint",
+    "One coherent package per cluster preferred over scattershot"
+  ],
+  "pm_override_2026_09_23": {
+    "waive_only": [
+      "GND\u00d710 zone islands"
+    ],
+    "must_fix_not_accept": {
+      "ANT_FIT": "RF owns Class C DNP shunt pads; may place later under PM OK; do NOT route through RF keepout",
+      "AUX": "RF owns Class C DNP shunt pads; may place later under PM OK; do NOT route through RF keepout",
+      "AUX_FIT": "RF owns Class C DNP shunt pads (C24.1/L2.2); may place later under PM OK; do NOT route through RF keepout",
+      "P0.19": "leftover ratsnest is a real GPIO open (pass30u partial keep) \u2014 finish in post-placement copper",
+      "P0.22": "leftover ratsnest is a real GPIO open (pass30r partial keep) \u2014 finish in post-placement copper"
+    }
+  },
+  "context_buckets": {
+    "waive": [
+      {
+        "net": "GND",
+        "opens": 10,
+        "note": "zone islands only \u2014 DFM waive / Class-E cosmetic"
+      }
+    ],
+    "must_fix_rf_class_c": [
+      {
+        "net": "ANT_FIT",
+        "opens": 1,
+        "note": "RF Class C DNP shunt \u2014 place later under PM OK; no RF-keepout routing"
+      },
+      {
+        "net": "AUX",
+        "opens": 1,
+        "note": "RF Class C DNP shunt \u2014 place later under PM OK; no RF-keepout routing"
+      },
+      {
+        "net": "AUX_FIT",
+        "opens": 1,
+        "pads": [
+          "C24.1",
+          "L2.2"
+        ],
+        "note": "RF Class C DNP shunt \u2014 place later under PM OK; no RF-keepout routing"
+      }
+    ],
+    "must_fix_gpio_partials": [
+      {
+        "net": "P0.19",
+        "opens": 1,
+        "pads": [
+          "U1.30"
+        ],
+        "note": "pass30u B@y64 partial keep; remaining ratsnest real open"
+      },
+      {
+        "net": "P0.22",
+        "opens": 1,
+        "note": "pass30r J13.7\u2194J10.2 B-attach partial keep; remaining ratsnest real open"
+      }
+    ],
+    "route_later": [
+      {
+        "net": "SIM_1V8",
+        "opens": 1
+      },
+      {
+        "net": "SIM_CLK",
+        "opens": 1
+      },
+      {
+        "net": "SIM_IO",
+        "opens": 1
+      },
+      {
+        "net": "SIM_RST",
+        "opens": 1
+      },
+      {
+        "net": "COEX0",
+        "opens": 1,
+        "note": "pass30u B west-col dirty; co-route mandate"
+      },
+      {
+        "net": "P0.00",
+        "opens": 1
+      },
+      {
+        "net": "P0.01",
+        "opens": 1
+      },
+      {
+        "net": "P0.03",
+        "opens": 1
+      },
+      {
+        "net": "P0.14",
+        "opens": 1
+      },
+      {
+        "net": "P0.16",
+        "opens": 1
+      },
+      {
+        "net": "P0.20",
+        "opens": 1
+      },
+      {
+        "net": "P0.25",
+        "opens": 1
+      },
+      {
+        "net": "P0.26",
+        "opens": 1
+      },
+      {
+        "net": "P0.27",
+        "opens": 1
+      },
+      {
+        "net": "P0.28",
+        "opens": 1
+      },
+      {
+        "net": "P0.29",
+        "opens": 1
+      }
+    ]
+  },
+  "live_footprint_xy_mm": {
+    "J8": {
+      "xy": [
+        50.0,
+        6.0
+      ],
+      "rot": 0.0,
+      "fp": "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD"
+    },
+    "J9": {
+      "xy": [
+        116.0,
+        8.0
+      ],
+      "rot": 0.0,
+      "fp": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
+    },
+    "J10": {
+      "xy": [
+        116.0,
+        28.0
+      ],
+      "rot": 0.0,
+      "fp": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
+    },
+    "J11": {
+      "xy": [
+        116.0,
+        46.0
+      ],
+      "rot": 0.0,
+      "fp": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+    },
+    "J12": {
+      "xy": [
+        6.0,
+        76.0
+      ],
+      "rot": 90.0,
+      "fp": "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical"
+    },
+    "J13": {
+      "xy": [
+        64.0,
+        76.0
+      ],
+      "rot": 90.0,
+      "fp": "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical"
+    },
+    "J14": {
+      "xy": [
+        104.0,
+        48.0
+      ],
+      "rot": 0.0,
+      "fp": "Connector_PinHeader_1.27mm:PinHeader_1x06_P1.27mm_Vertical"
+    },
+    "J15": {
+      "xy": [
+        104.0,
+        62.0
+      ],
+      "rot": 0.0,
+      "fp": "Connector_PinHeader_1.27mm:PinHeader_1x06_P1.27mm_Vertical"
+    },
+    "J16": {
+      "xy": [
+        108.0,
+        8.0
+      ],
+      "rot": 0.0,
+      "fp": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
+    },
+    "J17": {
+      "xy": [
+        108.0,
+        26.0
+      ],
+      "rot": 0.0,
+      "fp": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+    },
+    "U1": {
+      "xy": [
+        36.0,
+        32.0
+      ],
+      "rot": 180.0,
+      "fp": "Board:nRF9161_LGA_16.0x10.5mm",
+      "pad12_vdd_gpio_abs": [
+        44.0,
+        31.5
+      ]
+    }
+  },
+  "history_notes": {
+    "j13_prior_fail": "pass30s attempted J13 (64,76)\u2192(64,73) \u0394y=-3; reverted \u2014 P0.08 vias @(65.2,72.25)/(65.2,73.95) clearance to J13.1@y73 + reattach H corridor crossings (P0.16/17/18)",
+    "j13_live": [
+      64.0,
+      76.0
+    ],
+    "se_column_squeeze": "VDD_GPIO B-wall@x110.6 + P0.22@x109.2 + J17@x108; pass30v SE stitches dirty",
+    "se_duals": "pass30v P0.05/P0.07 bottom-F highways dirty; saturated SE dual class",
+    "west_longhaul": "MAGPIO/MIPI/COEX1 U1\u2194J14/J15 ~70\u201380 mm; not short-stub (pass30w)"
+  },
+  "packages": [
+    {
+      "id": "A_SE_duals_J9_J12_J16_J17",
+      "title": "SE duals \u2014 J9/J12 (+ J16/J17) for P0.05/07/09/10/11/12/17",
+      "intent": "Open a pin-pitch column between east dual headers (J16/J9, J17) and optionally shift J12 east to shorten saturated bottom-F dual highways that failed in pass30v.",
+      "apply_as": "single package (J16+J9+J17 together; J12 optional same commit)",
+      "nets_cluster": [
+        "P0.05",
+        "P0.07",
+        "P0.09",
+        "P0.10",
+        "P0.11",
+        "P0.12",
+        "P0.17"
+      ],
+      "proposals": [
+        {
+          "refdes": "J16",
+          "current_xy_mm": [
+            108.0,
+            8.0
+          ],
+          "current_rot_deg": 0.0,
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+          "preferred_delta_mm": [
+            -2.54,
+            0.0
+          ],
+          "preferred_to_xy_mm": [
+            105.46,
+            8.0
+          ],
+          "preferred_delta_mag_mm": 2.54,
+          "alt_delta_mm": [
+            0.0,
+            2.54
+          ],
+          "alt_to_xy_mm": [
+            108.0,
+            10.54
+          ],
+          "alt_delta_mag_mm": 2.54,
+          "nets_unlocked": [
+            "P0.09",
+            "P0.10",
+            "P0.11",
+            "P0.12"
+          ],
+          "protected_copper_risk": "West nudge toward interior may approach VIN_F / P0.15 east stubs @x~105\u2013108 and VDD_GPIO J16\u2194J17 keep @x111; south alt may crowd J17/P0.17 pad band",
+          "full_reattach_net_list": [
+            "P0.10",
+            "P0.11",
+            "P0.12",
+            "P0.09",
+            "VDD_GPIO",
+            "GND"
+          ],
+          "notes": "Open 1-pin-pitch column between J16 and J9 for dual stubs; unlocks P0.09\u201312 header side",
+          "package": "A_SE_duals_J9_J12_J16_J17"
+        },
+        {
+          "refdes": "J9",
+          "current_xy_mm": [
+            116.0,
+            8.0
+          ],
+          "current_rot_deg": 0.0,
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+          "preferred_delta_mm": [
+            -2.54,
+            0.0
+          ],
+          "preferred_to_xy_mm": [
+            113.46,
+            8.0
+          ],
+          "preferred_delta_mag_mm": 2.54,
+          "alt_delta_mm": [
+            0.0,
+            2.54
+          ],
+          "alt_to_xy_mm": [
+            116.0,
+            10.54
+          ],
+          "alt_delta_mag_mm": 2.54,
+          "nets_unlocked": [
+            "P0.05",
+            "P0.07"
+          ],
+          "protected_copper_risk": "West nudge shortens J9\u2194J16 gap (good) but pads approach J16 PTH; south alt toward J10 may hit P0.06/east VDD_GPIO copies",
+          "full_reattach_net_list": [
+            "P0.06",
+            "P0.07",
+            "P0.05",
+            "P0.04",
+            "VDD_GPIO",
+            "GND"
+          ],
+          "notes": "Pair with J16 west as one package \u2014 do not move J9 alone",
+          "package": "A_SE_duals_J9_J12_J16_J17"
+        },
+        {
+          "refdes": "J17",
+          "current_xy_mm": [
+            108.0,
+            26.0
+          ],
+          "current_rot_deg": 0.0,
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+          "preferred_delta_mm": [
+            -2.54,
+            0.0
+          ],
+          "preferred_to_xy_mm": [
+            105.46,
+            26.0
+          ],
+          "preferred_delta_mag_mm": 2.54,
+          "alt_delta_mm": [
+            0.0,
+            -2.0
+          ],
+          "alt_to_xy_mm": [
+            108.0,
+            24.0
+          ],
+          "alt_delta_mag_mm": 2.0,
+          "nets_unlocked": [
+            "P0.17",
+            "P0.18"
+          ],
+          "protected_copper_risk": "West nudge clears x108 corridor vs P0.22@109.2 / VDD wall@110.6; north alt toward J16 may hit VDD_GPIO keep jog @x111",
+          "full_reattach_net_list": [
+            "P0.17",
+            "P0.18",
+            "VDD_GPIO",
+            "GND"
+          ],
+          "notes": "Helps P0.17 U1\u2194J17.1 and P0.18 dual; keep VDD_GPIO J16\u2194J17 F-jog reattach",
+          "package": "A_SE_duals_J9_J12_J16_J17"
+        },
+        {
+          "refdes": "J12",
+          "current_xy_mm": [
+            6.0,
+            76.0
+          ],
+          "current_rot_deg": 90.0,
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical",
+          "preferred_delta_mm": [
+            2.54,
+            0.0
+          ],
+          "preferred_to_xy_mm": [
+            8.54,
+            76.0
+          ],
+          "preferred_delta_mag_mm": 2.54,
+          "alt_delta_mm": [
+            0.0,
+            -2.0
+          ],
+          "alt_to_xy_mm": [
+            6.0,
+            74.0
+          ],
+          "alt_delta_mag_mm": 2.0,
+          "nets_unlocked": [
+            "P0.05",
+            "P0.07",
+            "P0.09",
+            "P0.10",
+            "P0.11",
+            "P0.12"
+          ],
+          "protected_copper_risk": "East nudge (toward J13) may approach P0.08 bottom stitch / P0.15 bottom H@y77.45 wide F-bridge; north alt toward interior may hit P0.08 via column vicinity and south GPIO copper",
+          "full_reattach_net_list": [
+            "P0.00",
+            "P0.01",
+            "P0.02",
+            "P0.03",
+            "P0.04",
+            "P0.05",
+            "P0.06",
+            "P0.07",
+            "P0.08",
+            "P0.09",
+            "P0.10",
+            "P0.11",
+            "P0.12",
+            "P0.13",
+            "P0.14",
+            "P0.15",
+            "VDD_GPIO",
+            "GND"
+          ],
+          "notes": "Optional within package \u2014 shortens bottom dual haul toward east dual column; reattach ALL J12 nets incl. closed P0.08",
+          "package": "A_SE_duals_J9_J12_J16_J17"
+        }
+      ],
+      "post_placement_copper_hints": [
+        "Retry P0.05/P0.07 J12\u2194J9 on NEW column (not pass30v fy77/fy778 geometries)",
+        "Retry P0.09\u201312 J12\u2194J16 stubs in opened x108\u2013116 gap",
+        "Retry P0.17 U1\u2194J17 with J17 west of P0.22 keep"
+      ],
+      "helps_p019_p022": "Indirect only \u2014 J17 west slightly eases SE corridor congestion near P0.22@x109.2; does not finish P0.19/P0.22 by itself."
+    },
+    {
+      "id": "B_SE_column_J10_J11_J13",
+      "title": "SE column \u2014 J10/J11/J13 for P0.18\u201331 squeeze",
+      "intent": "Relieve J13\u2194J10/J11 column squeeze (VDD_GPIO wall + P0.22 keep) without repeating failed J13 (64,73).",
+      "apply_as": "single package (J13 + J10 + J11 together)",
+      "nets_cluster": [
+        "P0.18",
+        "P0.21",
+        "P0.23",
+        "P0.24",
+        "P0.30",
+        "P0.31"
+      ],
+      "j13_anti_collision": {
+        "failed_proposal": {
+          "from": [
+            64.0,
+            76.0
+          ],
+          "to": [
+            64.0,
+            73.0
+          ],
+          "delta_mm": [
+            0.0,
+            -3.0
+          ],
+          "why_failed": "P0.08 vias (65.2,72.25)/(65.2,73.95) vs J13.1@y73"
+        },
+        "preferred_alternate": {
+          "to": [
+            64.0,
+            78.5
+          ],
+          "delta_mm": [
+            0.0,
+            2.5
+          ],
+          "why": "south away from via stack; open north-of-header reattach band"
+        },
+        "alt_alternate": {
+          "to": [
+            67.0,
+            76.0
+          ],
+          "delta_mm": [
+            3.0,
+            0.0
+          ],
+          "why": "east shift clears x65.2 via column laterally"
+        }
+      },
+      "proposals": [
+        {
+          "refdes": "J13",
+          "current_xy_mm": [
+            64.0,
+            76.0
+          ],
+          "current_rot_deg": 90.0,
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical",
+          "preferred_delta_mm": [
+            0.0,
+            2.5
+          ],
+          "preferred_to_xy_mm": [
+            64.0,
+            78.5
+          ],
+          "preferred_delta_mag_mm": 2.5,
+          "alt_delta_mm": [
+            3.0,
+            0.0
+          ],
+          "alt_to_xy_mm": [
+            67.0,
+            76.0
+          ],
+          "alt_delta_mag_mm": 3.0,
+          "nets_unlocked": [
+            "P0.18",
+            "P0.21",
+            "P0.23",
+            "P0.24",
+            "P0.30",
+            "P0.31",
+            "P0.19",
+            "P0.22"
+          ],
+          "protected_copper_risk": "PREFERRED south (64,78.5): avoids known-fail (64,73) vs P0.08 vias @(65.2,72.25)/(65.2,73.95). Risk: board Edge.Cuts y=80 clearance/silk; south pads closer to edge. ALT east (67,76): shifts pad row away from via x=65.2 column; risk pad shorts into existing B copper near former pass30r y\u224872.8 class if any stubs remain north \u2014 verify before keep. DO NOT propose (64,73) again.",
+          "full_reattach_net_list": [
+            "P0.16",
+            "P0.17",
+            "P0.18",
+            "P0.19",
+            "P0.20",
+            "P0.21",
+            "P0.22",
+            "P0.23",
+            "P0.24",
+            "P0.25",
+            "P0.26",
+            "P0.27",
+            "P0.28",
+            "P0.29",
+            "P0.30",
+            "P0.31",
+            "VDD_nRF",
+            "VDD_GPIO",
+            "GND"
+          ],
+          "notes": "Prior (64,73) FAILED pass30s. Preferred \u0394=(0,+2.5)\u2192(64,78.5) mag=2.5; alt \u0394=(+3,0)\u2192(67,76). Full reattach all 20 pins after move.",
+          "package": "B_SE_column_J10_J11_J13"
+        },
+        {
+          "refdes": "J10",
+          "current_xy_mm": [
+            116.0,
+            28.0
+          ],
+          "current_rot_deg": 0.0,
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+          "preferred_delta_mm": [
+            -2.54,
+            0.0
+          ],
+          "preferred_to_xy_mm": [
+            113.46,
+            28.0
+          ],
+          "preferred_delta_mag_mm": 2.54,
+          "alt_delta_mm": [
+            0.0,
+            2.54
+          ],
+          "alt_to_xy_mm": [
+            116.0,
+            30.54
+          ],
+          "alt_delta_mag_mm": 2.54,
+          "nets_unlocked": [
+            "P0.21",
+            "P0.23",
+            "P0.24",
+            "P0.22"
+          ],
+          "protected_copper_risk": "West nudge toward interior past VDD_GPIO wall@x110.6 / P0.22 col@x109.2 \u2014 may hit J17@x108 / P0.06@107.4 band; south alt crowds J11",
+          "full_reattach_net_list": [
+            "P0.21",
+            "P0.22",
+            "P0.23",
+            "P0.24",
+            "VDD_GPIO",
+            "GND"
+          ],
+          "notes": "Opens east-edge squeeze for P0.18\u201324 duals; MUST reattach pass30r P0.22 B-attach into J10.2",
+          "package": "B_SE_column_J10_J11_J13"
+        },
+        {
+          "refdes": "J11",
+          "current_xy_mm": [
+            116.0,
+            46.0
+          ],
+          "current_rot_deg": 0.0,
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+          "preferred_delta_mm": [
+            -2.54,
+            0.0
+          ],
+          "preferred_to_xy_mm": [
+            113.46,
+            46.0
+          ],
+          "preferred_delta_mag_mm": 2.54,
+          "alt_delta_mm": [
+            0.0,
+            -2.54
+          ],
+          "alt_to_xy_mm": [
+            116.0,
+            43.46
+          ],
+          "alt_delta_mag_mm": 2.54,
+          "nets_unlocked": [
+            "P0.30",
+            "P0.31"
+          ],
+          "protected_copper_risk": "West nudge same class as J10 (VDD H@y51.08 / east wall); north alt toward J10 may PTH-collide",
+          "full_reattach_net_list": [
+            "P0.30",
+            "P0.31",
+            "VDD_GPIO",
+            "GND"
+          ],
+          "notes": "Unlocks P0.30/P0.31 J13\u2194J11 after J13 alternate landing",
+          "package": "B_SE_column_J10_J11_J13"
+        }
+      ],
+      "post_placement_copper_hints": [
+        "Reattach J13 stubs on NEW y (south) or NEW x (east) \u2014 do not reuse pass30s y70 mutual H crossings",
+        "Retry P0.31 U1.89\u2194J13.16\u2194J11.2 after column opens",
+        "Retry P0.18/21/23/24/30 SE stitches with NEW geometries (not pass30v)"
+      ],
+      "helps_p019_p022": "YES \u2014 primary help. J13 south/east requires reattach of P0.19 (J13.4) and P0.22 (J13.7); J10 west shortens remaining P0.22 ratsnest to J10.2 and eases finish of pass30r partial. P0.19 finish still needs copper from U1.30/pass30u island to J13.4 after reattach."
+    },
+    {
+      "id": "C_west_longhaul_J14_J15",
+      "title": "West long-haul \u2014 J14/J15 for MAGPIO/MIPI/COEX1",
+      "intent": "Nudge J14/J15 west (toward U1) as one package to shorten MAGPIO/MIPI/COEX1 long-haul before any copper retry.",
+      "apply_as": "single package (J14+J15 lockstep \u2014 preserve 14 mm vertical spacing)",
+      "nets_cluster": [
+        "MAGPIO0",
+        "MAGPIO1",
+        "MAGPIO2",
+        "MIPI_VIO",
+        "MIPI_SCLK",
+        "MIPI_SDATA",
+        "COEX1"
+      ],
+      "proposals": [
+        {
+          "refdes": "J14",
+          "current_xy_mm": [
+            104.0,
+            48.0
+          ],
+          "current_rot_deg": 0.0,
+          "footprint": "Connector_PinHeader_1.27mm:PinHeader_1x06_P1.27mm_Vertical",
+          "preferred_delta_mm": [
+            -3.0,
+            0.0
+          ],
+          "preferred_to_xy_mm": [
+            101.0,
+            48.0
+          ],
+          "preferred_delta_mag_mm": 3.0,
+          "alt_delta_mm": [
+            -2.0,
+            -2.0
+          ],
+          "alt_to_xy_mm": [
+            102.0,
+            46.0
+          ],
+          "alt_delta_mag_mm": 2.828,
+          "nets_unlocked": [
+            "MAGPIO0",
+            "MAGPIO1",
+            "MAGPIO2",
+            "MIPI_VIO",
+            "MIPI_SCLK",
+            "MIPI_SDATA"
+          ],
+          "protected_copper_risk": "West toward U1 shortens ~70\u201380mm haul; may approach east GPIO / VDD_GPIO SE wall and under-mod copper. Diagonal alt (-2,-2)\u2192(102,46) mag\u22482.83 toward U1 west pad exit \u2014 risk RF-adjacent north band if later routed north of keepout incorrectly (routing must stay outside RF keepout)",
+          "full_reattach_net_list": [
+            "MAGPIO0",
+            "MAGPIO1",
+            "MAGPIO2",
+            "MIPI_VIO",
+            "MIPI_SCLK",
+            "MIPI_SDATA"
+          ],
+          "notes": "Place-first to make long-haul class tractable; copper still post-placement",
+          "package": "C_west_longhaul_J14_J15"
+        },
+        {
+          "refdes": "J15",
+          "current_xy_mm": [
+            104.0,
+            62.0
+          ],
+          "current_rot_deg": 0.0,
+          "footprint": "Connector_PinHeader_1.27mm:PinHeader_1x06_P1.27mm_Vertical",
+          "preferred_delta_mm": [
+            -3.0,
+            0.0
+          ],
+          "preferred_to_xy_mm": [
+            101.0,
+            62.0
+          ],
+          "preferred_delta_mag_mm": 3.0,
+          "alt_delta_mm": [
+            -2.0,
+            -2.0
+          ],
+          "alt_to_xy_mm": [
+            102.0,
+            60.0
+          ],
+          "alt_delta_mag_mm": 2.828,
+          "nets_unlocked": [
+            "COEX1"
+          ],
+          "protected_copper_risk": "Same west package as J14; COEX0 is route-later (not unlocked by place alone). Keep COEX2 existing copper clear. Diagonal alt keeps J14/J15 relative pitch.",
+          "full_reattach_net_list": [
+            "COEX0",
+            "COEX1",
+            "COEX2",
+            "GND",
+            "VDD_GPIO"
+          ],
+          "notes": "COEX1 is place-target; COEX0 remains route-later co-route. Reattach COEX2 if stubs break.",
+          "package": "C_west_longhaul_J14_J15"
+        }
+      ],
+      "post_placement_copper_hints": [
+        "After place: route MAGPIO/MIPI/COEX1 outside RF keepout (north-of-keepout jog then east was prior plan \u2014 re-validate path length)",
+        "COEX0 stays route-later (pass30u dirty) \u2014 do not expect place alone to close it"
+      ],
+      "helps_p019_p022": "No direct help.",
+      "rf_note": "ANT_FIT/AUX/AUX_FIT remain MUST-FIX via RF Class C DNP placement under separate PM OK \u2014 not part of this J14/J15 package; never route through RF keepout."
+    },
+    {
+      "id": "D_VDD_GPIO_U1_12_NOTE_ONLY",
+      "title": "Optional note only \u2014 VDD_GPIO U1.12 escape",
+      "intent": "Document U1.12 blockage; NO U1 move proposal without later explicit PM OK.",
+      "apply_as": "note only \u2014 not a placement package",
+      "u1_live_xy_mm": [
+        36.0,
+        32.0
+      ],
+      "u1_12_abs_xy_mm": [
+        44.0,
+        31.5
+      ],
+      "blocker": "U1.12 fanout vs GND via forest + P0.13/COEX2/Stage-A VDD2; pass30w NW F@y34.5 + B@x35.5 hit P0.22/P0.21 via forest",
+      "proposal": null,
+      "flag": "NO U1 MOVE without later explicit Hardware PM OK",
+      "preferred_path_without_u1_move": "Header-side VDD_GPIO escapes (J16/J17/J10 already partially tied) + co-route rip list for mid island \u2014 not placement this pass",
+      "helps_p019_p022": "No \u2014 U1 stay. Avoid any VDD_GPIO escape that clips P0.22/P0.19 keep copper."
+    }
+  ],
+  "pcb_untouched": true,
+  "deliverables": [
+    "reports/PASS30X_PLACEMENT_PROPOSALS.md",
+    "reports/PASS30X_PLACEMENT_PROPOSALS.json",
+    "docs/PCB_LAYOUT_REVIEW.md (Pass30x section)"
+  ]
+}
