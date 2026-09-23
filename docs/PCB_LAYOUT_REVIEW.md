@@ -311,3 +311,30 @@ Per Hardware PM / DFM (2026-09-23): after each connectivity move, **also**:
 **DRC:** `reports/DRC_PASS30C_BEFORE.json`, `reports/DRC_PASS30C_AFTER.json`  
 **Summary:** `reports/PASS30C_SUMMARY.json`
 
+
+
+---
+
+## Pass30d (2026-09-23 IST)
+
+**Goal:** Drop unconnected below 78 by closing Class F (`VIN_FILT`→`VIN_F`→`SWDCLK`→`nRESET`→`P0.02`/`P0.08`) plus easy `COEX0` north island. Aggressive non-critical blocker jogs allowed; keep shorting=0; do not rip P0.15 west wrap; RF keepout intact.
+
+| Metric | Before | After |
+| --- | ---: | ---: |
+| unconnected_items | **78** | **78** |
+| shorting_items | 0 | 0 |
+| clearance | 0 | 0 |
+
+**Closed:** none (all Class F attempts aborted or failed clearance).
+
+**What blocked (honest):**
+- `VIN_FILT`: geometric B corridor from via(55.35,13.3) to via(51.9,21.9) requires gap through `VDD_GPIO` H@y=14.8 + `P0.15` north trunk@y=15.35 + `ENABLE` H@y=20.3 + `VDD2` H/V. Simulated deep/north reconnect jogs made the path clear in `track_clear`, but live DRC reported **shorting_items=10 / tracks_crossing=11** — copper discarded.
+- `P0.08`: farthest progress — jogged `COEX2` V@x=72, `ENABLE` V@x=62.5, `ENABLE` H@y=28; then blocked by `VDD1` via@53.7 and `P0.10`/`P0.11` via forest near dest via@46.2.
+- `VIN_F` / `SWDCLK` / `nRESET` / `P0.02` / `COEX0`: via/track forests; no safe DRC-clean path found.
+
+**Constraints held:** shorting=0 (failed attempts restored); P0.15 west wrap intact; RF keepout respected; no Gerbers.
+
+**Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30d-20260923-100505`  
+**DRC:** `reports/DRC_PASS30D_BEFORE.json`, `reports/DRC_PASS30D_AFTER.json`  
+**Summary:** `reports/PASS30D_SUMMARY.json`
+
