@@ -1,0 +1,14 @@
+ERC report (kicad-cli)
+sheet /
+sheet /A. nRF9161/
+sheet /B. POWER/
+sheet /C. LTE/NR+ RF/
+sheet /D. GNSS/
+sheet /E. SIM/UICC/
+sheet /F. SWD/DEBUG/
+sheet /G. UART/
+sheet /H. SPI/I2C/
+sheet /I. I2S/PDM/ADC/
+sheet /J. GPIO EXPANSION/
+sheet /K. LEDs/BUTTONS/
+sheet /L. TEST POINTS/

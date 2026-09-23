@@ -1,0 +1,121 @@
+net,class,dist_mm,ax,ay,a,bx,by,b,note
+ENABLE,F,16.027,47.6800,22.0000,Pad 1 [ENABLE] of C14 on F.Cu,42.7500,37.2500,Pad 101 [ENABLE] of U1 on F.Cu,"short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+ENABLE,F,2.342,50.0000,21.6800,Pad 2 [ENABLE] of R1 on F.Cu,47.6800,22.0000,Pad 1 [ENABLE] of C14 on F.Cu,"short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+ENABLE,F,41.952,52.0000,40.9500,"Track [ENABLE] on F.Cu, length 20.8625 mm",90.3750,24.0000,Pad 1 [ENABLE] of SW1 on F.Cu,"short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+MAGPIO1,A,78.920,28.0000,28.0000,Pad 54 [MAGPIO1] of U1 on F.Cu,104.0000,49.2700,PTH pad 2 [MAGPIO1] of J14,U1/via to primary header (private B.Cu column)
+GND,E,0.000,-0.0500,-0.0500,"Zone [GND] on F.Cu, priority 0",-0.0500,-0.0500,"Zone [GND] on F.Cu, priority 0","GND zone-to-zone; refill/stitch, no dummy copper"
+GND,E,0.000,-0.0500,-0.0500,"Zone [GND] on F.Cu, priority 0",-0.0500,-0.0500,"Zone [GND] on F.Cu, priority 0","GND zone-to-zone; refill/stitch, no dummy copper"
+GND,E,0.000,-0.0500,-0.0500,"Zone [GND] on F.Cu, priority 0",-0.0500,-0.0500,"Zone [GND] on F.Cu, priority 0","GND zone-to-zone; refill/stitch, no dummy copper"
+MIPI_VIO,A,79.207,28.0000,29.5000,"Track [MIPI_VIO] on F.Cu, length 3.3500 mm",104.0000,51.8100,PTH pad 4 [MIPI_VIO] of J14,U1/via to primary header (private B.Cu column)
+AUX_FIT,C,23.000,19.5200,56.0000,Pad 1 [AUX_FIT] of C24 on F.Cu,19.5150,33.0000,"Track [AUX_FIT] on F.Cu, length 7.5150 mm",DNP RF shunt: short same-net stub; do not rewrite 50 ohm trunks
+P0.10,A,49.143,44.0000,28.5000,"Track [P0.10] on F.Cu, length 3.4000 mm",31.4000,76.0000,PTH pad 11 [P0.10] of J12,U1/via to primary header (private B.Cu column)
+P0.10,A,63.974,47.4000,28.5000,Via [P0.10] on F.Cu - B.Cu,108.0000,8.0000,PTH pad 1 [P0.10] of J16,U1/via to primary header (private B.Cu column)
+SIM_CLK_C,F,22.718,77.7500,54.7000,"Track [SIM_CLK_C] on F.Cu, length 1.1258 mm",98.5400,45.5400,"Track [SIM_CLK_C] on F.Cu, length 0.6500 mm",SIM local 0402-U4-J7 F.Cu jogs
+P0.22,A,66.035,35.2500,26.7500,Pad 38 [P0.22] of U1 on F.Cu,79.2400,76.0000,PTH pad 7 [P0.22] of J13,U1/via to primary header (private B.Cu column)
+P0.22,A,26.636,51.9500,6.0000,"Track [P0.22] on F.Cu, length 1.7000 mm",35.2500,26.7500,Pad 38 [P0.22] of U1 on F.Cu,U1/via to primary header (private B.Cu column)
+P0.22,G,58.463,79.2400,76.0000,PTH pad 7 [P0.22] of J13,116.0000,30.5400,PTH pad 2 [P0.22] of J10,header duplicate branch from primary J12/J13
+P0.16,A,35.520,41.2500,26.7500,Pad 26 [P0.16] of U1 on F.Cu,45.6200,62.0000,PTH pad 4 [P0.16] of J18,U1/via to primary header (private B.Cu column)
+P0.16,G,23.105,45.6200,62.0000,PTH pad 4 [P0.16] of J18,64.0000,76.0000,PTH pad 1 [P0.16] of J13,header duplicate branch from primary J12/J13
+P0.04,A,46.715,42.2500,37.2500,Pad 100 [P0.04] of U1 on F.Cu,16.1600,76.0000,PTH pad 5 [P0.04] of J12,U1/via to primary header (private B.Cu column)
+P0.04,A,76.856,116.0000,15.6200,PTH pad 4 [P0.04] of J9,42.2500,37.2500,Pad 100 [P0.04] of U1 on F.Cu,U1/via to primary header (private B.Cu column)
+P0.17,A,36.127,40.2500,26.7500,"Track [P0.17] on F.Cu, length 3.6500 mm",48.1600,62.0000,PTH pad 5 [P0.17] of J18,U1/via to primary header (private B.Cu column)
+P0.17,G,23.105,48.1600,62.0000,PTH pad 5 [P0.17] of J18,66.5400,76.0000,PTH pad 2 [P0.17] of J13,header duplicate branch from primary J12/J13
+P0.17,G,64.953,66.5400,76.0000,PTH pad 2 [P0.17] of J13,108.0000,26.0000,PTH pad 1 [P0.17] of J17,header duplicate branch from primary J12/J13
+SIM_IO_C,F,21.865,77.3500,55.4000,Pad 1 [SIM_IO_C] of U4 on F.Cu,98.5400,50.0100,Via [SIM_IO_C] on F.Cu - B.Cu,SIM local 0402-U4-J7 F.Cu jogs
+VDD1,F,2.389,53.0500,26.0000,"Track [VDD1] on F.Cu, length 0.6500 mm",50.6800,26.3000,"Track [VDD1] on F.Cu, length 0.6800 mm","short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+VIN_IN,F,20.396,62.0000,10.0000,"Track [VIN_IN] on F.Cu, length 1.3000 mm",82.0000,6.0000,PTH pad 1 [VIN_IN] of J1,"short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+SIM_VCC,F,13.044,93.4600,45.5400,Pad C1 [SIM_VCC] of J7 on F.Cu,80.6500,48.0000,"Track [SIM_VCC] on F.Cu, length 2.0000 mm",SIM local 0402-U4-J7 F.Cu jogs
+P0.31,A,75.975,36.7500,37.2500,Pad 89 [P0.31] of U1 on F.Cu,102.1000,76.0000,PTH pad 16 [P0.31] of J13,U1/via to primary header (private B.Cu column)
+P0.31,G,30.778,102.1000,76.0000,PTH pad 16 [P0.31] of J13,116.0000,48.5400,PTH pad 2 [P0.31] of J11,header duplicate branch from primary J12/J13
+P0.26,A,67.812,33.7500,37.2500,"Track [P0.26] on F.Cu, length 3.8500 mm",89.4000,76.0000,PTH pad 11 [P0.26] of J13,U1/via to primary header (private B.Cu column)
+SIM_RST,F,13.563,71.6800,48.0000,Pad 1 [SIM_RST] of C36 on F.Cu,78.0000,36.0000,Pad 1 [SIM_RST] of TP4 on F.Cu,SIM local 0402-U4-J7 F.Cu jogs
+SIM_RST,A,44.352,71.6800,48.0000,Pad 1 [SIM_RST] of C36 on F.Cu,32.7500,26.7500,Pad 43 [SIM_RST] of U1 on F.Cu,"SIM U1 to island via private B.Cu column, not through RF"
+SIM_RST,F,10.822,78.2500,56.6000,Pad 6 [SIM_RST] of U4 on F.Cu,71.6800,48.0000,Pad 1 [SIM_RST] of C36 on F.Cu,SIM local 0402-U4-J7 F.Cu jogs
+MIPI_SCLK,A,79.427,104.0000,53.0800,PTH pad 5 [MIPI_SCLK] of J14,28.0000,30.0000,"Track [MIPI_SCLK] on F.Cu, length 1.1000 mm",U1/via to primary header (private B.Cu column)
+P0.05,A,46.908,44.0000,36.5000,"Track [P0.05] on F.Cu, length 3.4000 mm",18.7000,76.0000,PTH pad 6 [P0.05] of J12,U1/via to primary header (private B.Cu column)
+P0.05,A,72.488,47.4000,36.5000,Via [P0.05] on F.Cu - B.Cu,116.0000,13.0800,PTH pad 3 [P0.05] of J9,U1/via to primary header (private B.Cu column)
+VDD_GPIO,A,13.160,44.0000,31.5000,Pad 12 [VDD_GPIO] of U1 on F.Cu,39.5200,19.1258,"Track [VDD_GPIO] on F.Cu, length 0.6500 mm",VDD_GPIO star U2/C12 to U1 pad 12 (east jog around DEC0)
+VDD_GPIO,A,33.671,44.0000,31.5000,Pad 12 [VDD_GPIO] of U1 on F.Cu,14.0000,46.7875,Pad 1 [VDD_GPIO] of FB5 on F.Cu,VDD_GPIO star U2/C12 to U1 pad 12 (east jog around DEC0)
+VDD_GPIO,A,5.281,44.6800,18.0000,Pad 1 [VDD_GPIO] of C12 on F.Cu,39.5200,19.1258,"Track [VDD_GPIO] on F.Cu, length 0.6500 mm",VDD_GPIO remaining island
+VDD_GPIO,G,16.719,58.3200,62.0000,PTH pad 9 [VDD_GPIO] of J18,49.1800,76.0000,PTH pad 18 [VDD_GPIO] of J12,VDD_GPIO header branch from nearest live copper
+VDD_GPIO,A,22.415,70.0000,8.0000,"Track [VDD_GPIO] on F.Cu, length 1.3000 mm",48.0500,3.4600,"Track [VDD_GPIO] on F.Cu, length 1.7000 mm",VDD_GPIO remaining island
+VDD_GPIO,A,23.566,71.3000,8.0000,Via [VDD_GPIO] on F.Cu - B.Cu,86.5100,26.0000,"Track [VDD_GPIO] on F.Cu, length 6.0000 mm",VDD_GPIO remaining island
+VDD_GPIO,A,28.452,75.1375,39.0500,"Track [VDD_GPIO] on F.Cu, length 1.3000 mm",58.3200,62.0000,PTH pad 9 [VDD_GPIO] of J18,VDD_GPIO remaining island
+VDD_GPIO,G,9.470,104.0000,67.0800,PTH pad 5 [VDD_GPIO] of J15,107.1800,76.0000,PTH pad 18 [VDD_GPIO] of J13,VDD_GPIO header branch from nearest live copper
+VDD_GPIO,G,20.000,104.0000,67.0800,PTH pad 5 [VDD_GPIO] of J15,116.0000,51.0800,PTH pad 3 [VDD_GPIO] of J11,VDD_GPIO header branch from nearest live copper
+VDD_GPIO,A,32.196,86.5100,31.0800,"Track [VDD_GPIO] on F.Cu, length 21.4900 mm",116.0000,18.1600,"Track [VDD_GPIO] on F.Cu, length 8.0000 mm",VDD_GPIO remaining island
+VDD_GPIO,A,30.328,116.0000,38.1600,PTH pad 5 [VDD_GPIO] of J10,86.5100,31.0800,"Track [VDD_GPIO] on F.Cu, length 21.4900 mm",VDD_GPIO remaining island
+VDD_GPIO,G,12.920,116.0000,51.0800,PTH pad 3 [VDD_GPIO] of J11,116.0000,38.1600,PTH pad 5 [VDD_GPIO] of J10,VDD_GPIO header branch from nearest live copper
+P0.09,A,48.903,44.0000,29.5000,Pad 16 [P0.09] of U1 on F.Cu,28.8600,76.0000,PTH pad 10 [P0.09] of J12,U1/via to primary header (private B.Cu column)
+P0.09,A,65.488,108.0000,15.6200,PTH pad 4 [P0.09] of J16,44.0000,29.5000,Pad 16 [P0.09] of U1 on F.Cu,U1/via to primary header (private B.Cu column)
+P0.27,A,69.496,34.2500,37.2500,Pad 84 [P0.27] of U1 on F.Cu,91.9400,76.0000,PTH pad 12 [P0.27] of J13,U1/via to primary header (private B.Cu column)
+P0.19,A,37.925,39.2500,26.7500,"Track [P0.19] on F.Cu, length 3.6500 mm",53.2400,62.0000,PTH pad 7 [P0.19] of J18,U1/via to primary header (private B.Cu column)
+P0.19,G,23.105,53.2400,62.0000,PTH pad 7 [P0.19] of J18,71.6200,76.0000,PTH pad 4 [P0.19] of J13,header duplicate branch from primary J12/J13
+P0.03,A,44.825,13.6200,76.0000,PTH pad 4 [P0.03] of J12,41.7500,41.1000,Via [P0.03] on F.Cu - B.Cu,U1/via to primary header (private B.Cu column)
+P0.03,A,58.970,41.7500,37.2500,"Track [P0.03] on F.Cu, length 3.8500 mm",97.4900,18.0000,"Track [P0.03] on F.Cu, length 1.1258 mm",U1/via to primary header (private B.Cu column)
+VDD2_MID,F,8.425,58.7875,18.0000,"Track [VDD2_MID] on F.Cu, length 0.6500 mm",67.2125,18.0000,"Track [VDD2_MID] on F.Cu, length 1.7000 mm","short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+DEC0,F,9.600,48.7200,29.6000,Pad 1 [DEC0] of C13 on F.Cu,48.6500,20.0000,"Track [DEC0] on F.Cu, length 1.1258 mm","short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+P0.07,A,45.267,44.0000,35.5000,"Track [P0.07] on F.Cu, length 3.4000 mm",23.7800,76.0000,PTH pad 8 [P0.07] of J12,U1/via to primary header (private B.Cu column)
+P0.07,A,76.204,44.0000,35.5000,"Track [P0.07] on F.Cu, length 3.4000 mm",116.0000,10.5400,PTH pad 2 [P0.07] of J9,U1/via to primary header (private B.Cu column)
+P0.01,A,50.913,86.1400,15.2000,"Track [P0.01] on B.Cu, length 58.4900 mm",40.2500,37.2500,Pad 96 [P0.01] of U1 on F.Cu,U1/via to primary header (private B.Cu column)
+COEX0,A,18.369,28.5100,22.0000,"Track [COEX0] on F.Cu, length 1.3000 mm",38.7500,37.2500,"Track [COEX0] on F.Cu, length 3.8500 mm",U1/via to primary header (private B.Cu column)
+P0.30,A,72.292,36.2500,41.1000,Via [P0.30] on F.Cu - B.Cu,99.5600,76.0000,PTH pad 15 [P0.30] of J13,U1/via to primary header (private B.Cu column)
+P0.30,G,34.209,99.5600,76.0000,PTH pad 15 [P0.30] of J13,116.0000,46.0000,PTH pad 1 [P0.30] of J11,header duplicate branch from primary J12/J13
+VDD2,F,10.393,43.2500,26.7500,Pad 22 [VDD2] of U1 on F.Cu,52.2200,32.0000,Via [VDD2] on F.Cu - B.Cu,"short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+VDD2,F,6.002,53.5200,32.0000,"Track [VDD2] on F.Cu, length 1.3000 mm",53.6800,38.0000,"Track [VDD2] on F.Cu, length 2.0000 mm","short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+VDD2,F,20.164,59.0500,36.0000,"Track [VDD2] on F.Cu, length 0.6500 mm",68.1375,18.0000,"Track [VDD2] on F.Cu, length 1.1258 mm","short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+VDD2,F,7.876,60.0000,42.0000,"Track [VDD2] on F.Cu, length 1.3000 mm",53.6800,37.3000,"Track [VDD2] on F.Cu, length 5.3700 mm","short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+nRESET_SW,A,3.316,102.3200,26.0000,Pad 2 [nRESET_SW] of R5 on F.Cu,99.6750,24.0000,Via [nRESET_SW] on F.Cu - B.Cu,remaining connectivity
+VIN_FILT,F,10.546,55.3500,12.0000,"Track [VIN_FILT] on F.Cu, length 1.3000 mm",52.0000,22.0000,"Track [VIN_FILT] on F.Cu, length 0.1414 mm","short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+P0.15,G,14.037,44.1000,76.0000,PTH pad 16 [P0.15] of J12,43.0800,62.0000,PTH pad 3 [P0.15] of J18,header duplicate branch from primary J12/J13
+MAGPIO2,A,79.416,28.0000,27.5000,"Track [MAGPIO2] on F.Cu, length 1.2500 mm",104.0000,50.5400,PTH pad 3 [MAGPIO2] of J14,U1/via to primary header (private B.Cu column)
+P0.13,G,14.037,38.0000,62.0000,PTH pad 1 [P0.13] of J18,39.0200,76.0000,PTH pad 14 [P0.13] of J12,header duplicate branch from primary J12/J13
+P0.13,A,35.569,42.7500,26.7500,"Track [P0.13] on F.Cu, length 3.6500 mm",38.0000,62.0000,PTH pad 1 [P0.13] of J18,U1/via to primary header (private B.Cu column)
+P0.18,A,36.912,39.7500,26.7500,Pad 29 [P0.18] of U1 on F.Cu,50.7000,62.0000,PTH pad 6 [P0.18] of J18,U1/via to primary header (private B.Cu column)
+P0.18,G,23.105,50.7000,62.0000,PTH pad 6 [P0.18] of J18,69.0800,76.0000,PTH pad 3 [P0.18] of J13,header duplicate branch from primary J12/J13
+P0.18,G,61.378,69.0800,76.0000,PTH pad 3 [P0.18] of J13,108.0000,28.5400,PTH pad 2 [P0.18] of J17,header duplicate branch from primary J12/J13
+AUX,C,17.355,28.2500,33.0000,"Track [AUX] on F.Cu, length 7.7650 mm",19.5200,48.0000,Pad 1 [AUX] of C23 on F.Cu,DNP RF shunt: short same-net stub; do not rewrite 50 ohm trunks
+P0.25,A,72.798,33.2500,26.7500,"Track [P0.25] on F.Cu, length 3.6500 mm",86.8600,76.0000,PTH pad 10 [P0.25] of J13,U1/via to primary header (private B.Cu column)
+P0.02,A,48.804,11.0800,76.0000,PTH pad 3 [P0.02] of J12,40.7500,37.2500,"Track [P0.02] on F.Cu, length 3.8500 mm",U1/via to primary header (private B.Cu column)
+P0.02,A,53.880,40.7500,37.2500,"Track [P0.02] on F.Cu, length 3.8500 mm",91.4900,19.1258,"Track [P0.02] on F.Cu, length 0.6500 mm",U1/via to primary header (private B.Cu column)
+SIM_RST_C,F,18.981,79.3758,54.7000,"Track [SIM_RST_C] on F.Cu, length 1.3500 mm",96.0000,45.5400,"Track [SIM_RST_C] on F.Cu, length 1.3000 mm",SIM local 0402-U4-J7 F.Cu jogs
+SIM_1V8,F,10.597,71.7000,48.6000,"Track [SIM_1V8] on F.Cu, length 3.4001 mm",78.6500,56.6000,Pad 5 [SIM_1V8] of U4 on F.Cu,SIM local 0402-U4-J7 F.Cu jogs
+SIM_1V8,A,49.023,75.6000,44.1000,"Track [SIM_1V8] on F.Cu, length 2.7000 mm",29.7500,26.7500,Pad 49 [SIM_1V8] of U1 on F.Cu,"SIM U1 to island via private B.Cu column, not through RF"
+SIM_IO,F,51.975,75.6800,52.0000,"Track [SIM_IO] on F.Cu, length 4.6000 mm",30.2500,26.7500,"Track [SIM_IO] on F.Cu, length 3.6500 mm",SIM local 0402-U4-J7 F.Cu jogs
+SIM_CLK,F,41.787,31.2500,26.7500,"Track [SIM_CLK] on F.Cu, length 3.6500 mm",72.0000,36.0000,"Track [SIM_CLK] on F.Cu, length 1.3000 mm",SIM local 0402-U4-J7 F.Cu jogs
+SIM_CLK,F,13.986,71.6800,44.0000,Pad 1 [SIM_CLK] of C35 on F.Cu,77.7500,56.6000,"Track [SIM_CLK] on F.Cu, length 1.1258 mm",SIM local 0402-U4-J7 F.Cu jogs
+SIM_CLK,F,8.006,72.0000,36.0000,"Track [SIM_CLK] on F.Cu, length 1.3000 mm",71.6800,44.0000,Pad 1 [SIM_CLK] of C35 on F.Cu,SIM local 0402-U4-J7 F.Cu jogs
+nRESET,F,10.277,45.6800,16.0000,Pad 1 [nRESET] of C39 on F.Cu,38.2500,23.1000,Via [nRESET] on F.Cu - B.Cu,"short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+nRESET,F,10.748,51.9500,7.2700,"Track [nRESET] on F.Cu, length 1.7000 mm",45.6800,16.0000,Pad 1 [nRESET] of C39 on F.Cu,"short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+nRESET,F,51.553,101.6800,26.0000,Pad 1 [nRESET] of R5 on F.Cu,53.6500,7.2700,Via [nRESET] on F.Cu - B.Cu,"short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+nRESET,F,10.005,102.0000,36.0000,"Track [nRESET] on F.Cu, length 1.3000 mm",101.6800,26.0000,Pad 1 [nRESET] of R5 on F.Cu,"short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+GNSS_VBIAS,F,4.506,13.5200,50.0000,Pad 1 [GNSS_VBIAS] of C28 on F.Cu,18.0000,49.5200,Pad 1 [GNSS_VBIAS] of C30 on F.Cu,"short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+GNSS_VBIAS,F,8.748,17.0000,38.0000,Via [GNSS_VBIAS] on F.Cu - B.Cu,12.0500,45.2125,"Track [GNSS_VBIAS] on F.Cu, length 1.9500 mm","short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+P0.00,A,43.678,39.7500,37.2500,Pad 95 [P0.00] of U1 on F.Cu,79.4900,19.1258,"Track [P0.00] on F.Cu, length 0.6500 mm",U1/via to primary header (private B.Cu column)
+P0.00,A,51.387,39.7500,37.2500,"Track [P0.00] on F.Cu, length 3.8500 mm",6.0000,76.0000,PTH pad 1 [P0.00] of J12,U1/via to primary header (private B.Cu column)
+MAGPIO0,A,78.462,28.0000,28.5000,Pad 55 [MAGPIO0] of U1 on F.Cu,104.0000,48.0000,PTH pad 1 [MAGPIO0] of J14,U1/via to primary header (private B.Cu column)
+COEX1,A,70.711,38.2500,37.2500,Pad 92 [COEX1] of U1 on F.Cu,104.0000,63.2700,PTH pad 2 [COEX1] of J15,U1/via to primary header (private B.Cu column)
+P0.08,F,49.281,44.0000,30.0000,"Track [P0.08] on F.Cu, length 2.2000 mm",26.3200,76.0000,PTH pad 9 [P0.08] of J12,"short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+P0.08,F,32.423,46.2000,30.0000,Via [P0.08] on F.Cu - B.Cu,78.3750,26.0000,"Track [P0.08] on F.Cu, length 7.1150 mm","short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+P0.24,A,70.232,34.2500,26.7500,Pad 40 [P0.24] of U1 on F.Cu,84.3200,76.0000,PTH pad 9 [P0.24] of J13,U1/via to primary header (private B.Cu column)
+P0.24,G,51.324,84.3200,76.0000,PTH pad 9 [P0.24] of J13,116.0000,35.6200,PTH pad 4 [P0.24] of J10,header duplicate branch from primary J12/J13
+P0.29,A,72.495,35.7500,37.2500,Pad 87 [P0.29] of U1 on F.Cu,97.0200,76.0000,PTH pad 14 [P0.29] of J13,U1/via to primary header (private B.Cu column)
+ANT_FIT,C,4.470,19.5200,36.0000,Pad 1 [ANT_FIT] of C22 on F.Cu,21.5150,32.0000,"Track [ANT_FIT] on F.Cu, length 10.3216 mm",DNP RF shunt: short same-net stub; do not rewrite 50 ohm trunks
+P0.12,A,49.080,44.0000,27.5000,"Track [P0.12] on F.Cu, length 3.4000 mm",36.4800,76.0000,PTH pad 13 [P0.12] of J12,U1/via to primary header (private B.Cu column)
+P0.12,A,62.292,47.4000,27.5000,Via [P0.12] on F.Cu - B.Cu,108.0000,13.0800,PTH pad 3 [P0.12] of J16,U1/via to primary header (private B.Cu column)
+SWDCLK,F,26.202,51.9500,4.7300,"Track [SWDCLK] on F.Cu, length 10.0500 mm",37.7500,26.7500,Pad 33 [SWDCLK] of U1 on F.Cu,"short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"
+P0.20,A,40.059,36.7500,26.7500,Pad 35 [P0.20] of U1 on F.Cu,55.7800,62.0000,PTH pad 8 [P0.20] of J18,U1/via to primary header (private B.Cu column)
+P0.20,G,23.105,55.7800,62.0000,PTH pad 8 [P0.20] of J18,74.1600,76.0000,PTH pad 5 [P0.20] of J13,header duplicate branch from primary J12/J13
+P0.28,A,68.747,35.2500,41.1000,Via [P0.28] on F.Cu - B.Cu,94.4800,76.0000,PTH pad 13 [P0.28] of J13,U1/via to primary header (private B.Cu column)
+P0.21,A,64.050,35.7500,26.7500,"Track [P0.21] on F.Cu, length 3.6500 mm",76.7000,76.0000,PTH pad 6 [P0.21] of J13,U1/via to primary header (private B.Cu column)
+P0.21,G,62.036,76.7000,76.0000,PTH pad 6 [P0.21] of J13,116.0000,28.0000,PTH pad 1 [P0.21] of J10,header duplicate branch from primary J12/J13
+MIPI_SDATA,A,79.654,28.0000,30.5000,Pad 59 [MIPI_SDATA] of U1 on F.Cu,104.0000,54.3500,PTH pad 6 [MIPI_SDATA] of J14,U1/via to primary header (private B.Cu column)
+P0.11,A,49.043,44.0000,28.0000,"Track [P0.11] on F.Cu, length 2.2000 mm",33.9400,76.0000,PTH pad 12 [P0.11] of J12,U1/via to primary header (private B.Cu column)
+P0.11,A,66.339,108.0000,10.5400,PTH pad 2 [P0.11] of J16,44.0000,28.0000,"Track [P0.11] on F.Cu, length 2.2000 mm",U1/via to primary header (private B.Cu column)
+P0.14,G,14.037,40.5400,62.0000,PTH pad 2 [P0.14] of J18,41.5600,76.0000,PTH pad 15 [P0.14] of J12,header duplicate branch from primary J12/J13
+P0.14,A,35.291,42.2500,26.7500,Pad 24 [P0.14] of U1 on F.Cu,40.5400,62.0000,PTH pad 2 [P0.14] of J18,U1/via to primary header (private B.Cu column)
+P0.06,A,46.022,44.0000,36.0000,"Track [P0.06] on F.Cu, length 2.2000 mm",21.2400,76.0000,PTH pad 7 [P0.06] of J12,U1/via to primary header (private B.Cu column)
+P0.06,A,77.253,116.0000,8.0000,PTH pad 1 [P0.06] of J9,44.0000,36.0000,"Track [P0.06] on F.Cu, length 2.2000 mm",U1/via to primary header (private B.Cu column)
+P0.23,A,68.098,34.7500,26.7500,Pad 39 [P0.23] of U1 on F.Cu,81.7800,76.0000,PTH pad 8 [P0.23] of J13,U1/via to primary header (private B.Cu column)
+P0.23,G,54.892,81.7800,76.0000,PTH pad 8 [P0.23] of J13,116.0000,33.0800,PTH pad 3 [P0.23] of J10,header duplicate branch from primary J12/J13
+VIN_F,F,24.113,71.5751,17.6625,Via [VIN_F] on F.Cu - B.Cu,48.0000,12.6000,"Track [VIN_F] on F.Cu, length 1.3000 mm","short F.Cu island / local via (power, bias, SWD, P0.08 F-to-B)"

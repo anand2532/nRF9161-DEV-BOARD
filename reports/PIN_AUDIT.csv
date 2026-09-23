@@ -1,0 +1,128 @@
+PIN,FUNCTION,SCHEMATIC_CONNECTION,PCB_CONNECTION,STATUS
+1,GND,GND,LGA GND pads + L2 plane,GND
+2,P0.05,J12 / UART RTS J9,See PCB net P0.05,EXTERNAL HEADER
+3,P0.06,J12 / UART TX J9,See PCB net P0.06,EXTERNAL HEADER
+4,P0.07,J12 / UART RX J9,See PCB net P0.07,EXTERNAL HEADER
+5,GND,GND,LGA GND pads + L2 plane,GND
+6,GND,GND,LGA GND pads + L2 plane,GND
+7,GND,GND,LGA GND pads + L2 plane,GND
+8,GND,GND,LGA GND pads + L2 plane,GND
+9,GND,GND,LGA GND pads + L2 plane,GND
+10,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+11,GND,GND,LGA GND pads + L2 plane,GND
+12,VDD_GPIO,VDD_GPIO from TLV73330,See PCB net VDD_GPIO,USED
+13,DEC0,C13 4.7uF (PCN134),See PCB net DEC0,USED
+14,GND,GND,LGA GND pads + L2 plane,GND
+15,P0.08,J12 + USER SW3,See PCB net P0.08,USED
+16,P0.09,J12 / I2S SDIN J16,See PCB net P0.09,EXTERNAL HEADER
+17,GND,GND,LGA GND pads + L2 plane,GND
+18,P0.10,J12 / I2S SCK J16,See PCB net P0.10,EXTERNAL HEADER
+19,P0.11,J12 / I2S LRCK J16,See PCB net P0.11,EXTERNAL HEADER
+20,P0.12,J12 / I2S SDOUT J16,See PCB net P0.12,EXTERNAL HEADER
+21,GND,GND,LGA GND pads + L2 plane,GND
+22,VDD2,VDD2 via FB2+FB3 + C7-C10,See PCB net VDD2,USED
+23,P0.13_AIN0,J12 / ADC J18,See PCB net P0.13_AIN0,EXTERNAL HEADER
+24,P0.14_AIN1,J12 / ADC J18,See PCB net P0.14_AIN1,EXTERNAL HEADER
+25,P0.15_AIN2,J12 / ADC J18,See PCB net P0.15_AIN2,EXTERNAL HEADER
+26,P0.16_AIN3,J13 / ADC J18,See PCB net P0.16_AIN3,EXTERNAL HEADER
+27,GND,GND,LGA GND pads + L2 plane,GND
+28,P0.17_AIN4,J13 / ADC J18 / PDM CLK J17,See PCB net P0.17_AIN4,EXTERNAL HEADER
+29,P0.18_AIN5,J13 / ADC J18 / PDM DIN J17,See PCB net P0.18_AIN5,EXTERNAL HEADER
+30,P0.19_AIN6,J13 / ADC J18,See PCB net P0.19_AIN6,EXTERNAL HEADER
+31,GND,GND,LGA GND pads + L2 plane,GND
+32,~{RESET},"R5 1k, SW2, J8 pin 8, TP9",See PCB net ~{RESET},USED
+33,SWDCLK,J8 pin 4 + TP8,See PCB net SWDCLK,USED
+34,SWDIO,J8 pin 2 + TP7,See PCB net SWDIO,USED
+35,P0.20_AIN7,J13 / ADC J18,See PCB net P0.20_AIN7,EXTERNAL HEADER
+36,GND,GND,LGA GND pads + L2 plane,GND
+37,P0.21_TRACECLK,J13 / SPI SCK J10,See PCB net P0.21_TRACECLK,EXTERNAL HEADER
+38,P0.22_TRACEDATA0,J13 / SPI MOSI J10 / SWO J8.6,See PCB net P0.22_TRACEDATA0,EXTERNAL HEADER
+39,P0.23_TRACEDATA1,J13 / SPI MISO J10,See PCB net P0.23_TRACEDATA1,EXTERNAL HEADER
+40,P0.24_TRACEDATA2,J13 / SPI CS J10,See PCB net P0.24_TRACEDATA2,EXTERNAL HEADER
+41,GND,GND,LGA GND pads + L2 plane,GND
+42,P0.25_TRACEDATA3,J13,See PCB net P0.25_TRACEDATA3,EXTERNAL HEADER
+43,SIM_RST,TPD3F303 -> J7,See PCB net SIM_RST,USED
+44,GND,GND,LGA GND pads + L2 plane,GND
+45,SIM_DET,Must float (PS). Mechanical CD on J7/TP6 only,See PCB net SIM_DET,NC
+46,SIM_CLK,TPD3F303 -> J7,See PCB net SIM_CLK,USED
+47,GND,GND,LGA GND pads + L2 plane,GND
+48,SIM_IO,TPD3F303 -> J7,See PCB net SIM_IO,USED
+49,SIM_1V8,SIM VCC via JP2,See PCB net SIM_1V8,USED
+50,GND,GND,LGA GND pads + L2 plane,GND
+51,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+52,GND,GND,LGA GND pads + L2 plane,GND
+53,MAGPIO2,J14,See PCB net MAGPIO2,EXTERNAL HEADER
+54,MAGPIO1,J14,See PCB net MAGPIO1,EXTERNAL HEADER
+55,MAGPIO0,J14,See PCB net MAGPIO0,EXTERNAL HEADER
+56,GND,GND,LGA GND pads + L2 plane,GND
+57,MIPI_VIO,J14,See PCB net MIPI_VIO,EXTERNAL HEADER
+58,MIPI_SCLK,J14,See PCB net MIPI_SCLK,EXTERNAL HEADER
+59,MIPI_SDATA,J14,See PCB net MIPI_SDATA,EXTERNAL HEADER
+60,GND,GND,LGA GND pads + L2 plane,GND
+61,ANT,ANT -> L1 0R/pi DNP -> J2 U.FL / J3 SWF,See PCB net ANT,RF
+62,GND,GND,LGA GND pads + L2 plane,GND
+63,GND,GND,LGA GND pads + L2 plane,GND
+64,AUX,AUX -> L2/pi DNP -> TP1,See PCB net AUX,RF
+65,GND,GND,LGA GND pads + L2 plane,GND
+66,GND,GND,LGA GND pads + L2 plane,GND
+67,GPS,GPS -> C27/L4 bias-T -> J5 U.FL / J6 SWF,See PCB net GPS,RF
+68,GND,GND,LGA GND pads + L2 plane,GND
+69,GND,GND,LGA GND pads + L2 plane,GND
+70,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+71,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+72,GND,GND,LGA GND pads + L2 plane,GND
+73,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+74,GND,GND,LGA GND pads + L2 plane,GND
+75,GND,GND,LGA GND pads + L2 plane,GND
+76,GND,GND,LGA GND pads + L2 plane,GND
+77,GND,GND,LGA GND pads + L2 plane,GND
+78,GND,GND,LGA GND pads + L2 plane,GND
+79,GND,GND,LGA GND pads + L2 plane,GND
+80,GND,GND,LGA GND pads + L2 plane,GND
+81,GND,GND,LGA GND pads + L2 plane,GND
+82,GND,GND,LGA GND pads + L2 plane,GND
+83,P0.26,J13,See PCB net P0.26,EXTERNAL HEADER
+84,P0.27,J13,See PCB net P0.27,EXTERNAL HEADER
+85,GND,GND,LGA GND pads + L2 plane,GND
+86,P0.28,J13,See PCB net P0.28,EXTERNAL HEADER
+87,P0.29,J13,See PCB net P0.29,EXTERNAL HEADER
+88,P0.30,J13 / I2C SDA J11,See PCB net P0.30,EXTERNAL HEADER
+89,P0.31,J13 / I2C SCL J11,See PCB net P0.31,EXTERNAL HEADER
+90,GND,GND,LGA GND pads + L2 plane,GND
+91,COEX2,J15,See PCB net COEX2,EXTERNAL HEADER
+92,COEX1,J15,See PCB net COEX1,EXTERNAL HEADER
+93,COEX0,J15 + R4 GNSS_LNA_EN,See PCB net COEX0,USED
+94,GND,GND,LGA GND pads + L2 plane,GND
+95,P0.00,J12 + LED D4 STATUS,See PCB net P0.00,USED
+96,P0.01,J12 + LED D5 LTE,See PCB net P0.01,USED
+97,P0.02,J12 + LED D6 GNSS,See PCB net P0.02,USED
+98,GND,GND,LGA GND pads + L2 plane,GND
+99,P0.03,J12 + LED D7 SPARE (fit optional),See PCB net P0.03,EXTERNAL HEADER
+100,P0.04,J12 / UART CTS J9,See PCB net P0.04,EXTERNAL HEADER
+101,ENABLE,"R1 10k from VDD1, SW1 DISABLE, C14",See PCB net ENABLE,USED
+102,VDD1,VDD1 via FB1 + C3/C4/C5/C6,See PCB net VDD1,USED
+103,GND,GND,LGA GND pads + L2 plane,GND
+104,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+105,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+106,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+107,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+108,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+109,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+110,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+111,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+112,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+113,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+114,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+115,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+116,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+117,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+118,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+119,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+120,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+121,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+122,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+123,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+124,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+125,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+126,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED
+127,RES,"NC (soldered mechanically, electrically open)","LGA pad present, no net",RESERVED

@@ -1,0 +1,84 @@
+Reference,Quantity,Value,Description,Manufacturer,MPN,Package,DNP/Optional,Function
+U1,1,nRF9161-LACA-R7,LTE-M/NB-IoT/DECT NR+/GNSS SiP (PS v1.0),Nordic Semiconductor,nRF9161-LACA-R7,LGA 16.0x10.5mm,,LTE-M/NB-IoT/DECT NR+/GNSS SiP (PS v1.0)
+U2,1,TLV73330PDBV,3.3 V VDD_GPIO LDO; EN tied to ENABLE,Texas Instruments,TLV73330PDBVR,SOT-23-5,,3.3 V VDD_GPIO LDO; EN tied to ENABLE
+U4,1,TPD3F303DPV,SIM ESD/EMI filter per nRF91 HDG,Texas Instruments,TPD3F303DPVR,USON-8 1.45x1.45mm,,SIM ESD/EMI filter per nRF91 HDG
+C1,1,10uF/16V X5R,VIN bulk after input filter,Murata,GRM21BR61C106ME15,0805,,VIN bulk after input filter
+C2,1,100nF 10V X5R,VIN HF decoupling,Murata,GRM155R61A104KA01,0402,,VIN HF decoupling
+C3,1,47uF 10V X5R,VDD1 bulk (nRF91 HDG Table 2 C3),Murata,GRM21BR61A476ME15,0805,,VDD1 bulk (nRF91 HDG Table 2 C3)
+C4,1,4.7uF 10V X5R,VDD1 mid decoupling (HDG Table 2),Murata,GRM155R61A475MEAA,0402,,VDD1 mid decoupling (HDG Table 2)
+C5,1,100nF 10V X5R,VDD1 HF decoupling (HDG Table 2),Murata,GRM033R61A104KE15,0201,,VDD1 HF decoupling (HDG Table 2)
+C6,1,15pF 25V C0G,VDD1 RF decoupling (HDG Table 2),Murata,GJM0335C1E150JB01,0201,,VDD1 RF decoupling (HDG Table 2)
+C7,1,47uF 10V X5R,VDD2 bulk (HDG Table 2 C10),Murata,GRM21BR61A476ME15,0805,,VDD2 bulk (HDG Table 2 C10)
+C8,1,4.7uF 10V X5R,VDD2 mid decoupling,Murata,GRM155R61A475MEAA,0402,,VDD2 mid decoupling
+C9,1,100nF 10V X5R,VDD2 HF decoupling,Murata,GRM033R61A104KE15,0201,,VDD2 HF decoupling
+C10,1,15pF 25V C0G,VDD2 RF decoupling,Murata,GJM0335C1E150JB01,0201,,VDD2 RF decoupling
+C11,1,4.7uF 10V X5R,VDD_GPIO bulk,Murata,GRM155R61A475MEAA,0402,,VDD_GPIO bulk
+C12,1,100nF 10V X5R,VDD_GPIO HF,Murata,GRM033R61A104KE15,0201,,VDD_GPIO HF
+C13,1,4.7uF 10V X5R,DEC0 (nRF91x1 / PCN134 4.7uF not 47uF),Murata,GRM155R61A475MEAA,0402,,DEC0 (nRF91x1 / PCN134 4.7uF not 47uF)
+C14,1,100nF 10V X5R,ENABLE decoupling (HDG 4.3),Murata,GRM033R61A104KE15,0201,,ENABLE decoupling (HDG 4.3)
+C21,1,DNP High-Q,LTE pi-match shunt (unpopulated until antenna tune),Murata,GJM1555C1H100JB01,0402,DNP,LTE pi-match shunt (unpopulated until antenna tune)
+C22,1,DNP High-Q,LTE pi-match shunt (DNP),Murata,GJM1555C1H100JB01,0402,DNP,LTE pi-match shunt (DNP)
+C23,1,DNP High-Q,AUX pi-match shunt (DNP),Murata,GJM1555C1H100JB01,0402,DNP,AUX pi-match shunt (DNP)
+C24,1,DNP High-Q,AUX pi-match shunt (DNP),Murata,GJM1555C1H100JB01,0402,DNP,AUX pi-match shunt (DNP)
+C27,1,100pF C0G,GNSS DC block (nWP033 active-antenna bias-T),Murata,GJM0335C1E101JB01,0201,,GNSS DC block (nWP033 active-antenna bias-T)
+C28,1,100pF,GNSS Vbias HF filter,Murata,GRM155R71H101KA01,0402,,GNSS Vbias HF filter
+C29,1,10nF,GNSS Vbias mid filter,Murata,GRM155R71H103KA01,0402,,GNSS Vbias mid filter
+C30,1,100nF,GNSS Vbias bulk filter,Murata,GRM155R61A104KA01,0402,,GNSS Vbias bulk filter
+C31,1,DNP,GNSS match shunt (DNP),Murata,GJM1555C1H100JB01,0402,DNP,GNSS match shunt (DNP)
+C32,1,DNP,GNSS match shunt (DNP),Murata,GJM1555C1H100JB01,0402,DNP,GNSS match shunt (DNP)
+C33,1,100nF,SIM_1V8 decoupling,Murata,GRM155R61A104KA01,0402,,SIM_1V8 decoupling
+C34,1,220nF,SIM VCC decoupling (ISO 7816 / HDG),Murata,GRM155R61A224KE01,0402,,SIM VCC decoupling (ISO 7816 / HDG)
+C35,1,22pF C0G,SIM_CLK filter,Murata,GRM0335C1E220JA01,0201,,SIM_CLK filter
+C36,1,22pF C0G,SIM_RST filter,Murata,GRM0335C1E220JA01,0201,,SIM_RST filter
+C37,1,22pF C0G,SIM_IO filter,Murata,GRM0335C1E220JA01,0201,,SIM_IO filter
+C38,1,22pF C0G,SIM_1V8 HF,Murata,GRM0335C1E220JA01,0201,,SIM_1V8 HF
+C39,1,DNP,Optional nRESET cap (not fitted; HDG forbids extra PU),Murata,GRM033R61A104KE15,0201,DNP,Optional nRESET cap (not fitted; HDG forbids extra PU)
+D1,1,PMEG4030ER,Reverse-polarity Schottky,Nexperia,PMEG4030ER,SOD-123W,,Reverse-polarity Schottky
+D2,1,SMAJ5.0A,VIN TVS 5.0 V,Littelfuse,SMAJ5.0A,DO-214AC,,VIN TVS 5.0 V
+D3,1,Green LED,Power LED on VIN,Kingbright,KP-2012SGC,0603,,Power LED on VIN
+D4,1,Green LED,User LED1 on P0.00,Kingbright,KP-2012SGC,0603,,User LED1 on P0.00
+D5,1,Green LED,User LED2 on P0.01,Kingbright,KP-2012SGC,0603,,User LED2 on P0.01
+D6,1,Green LED,User LED3 on P0.02,Kingbright,KP-2012SGC,0603,,User LED3 on P0.02
+D7,1,Green LED,User LED4 on P0.03,Kingbright,KP-2012SGC,0603,Optional,User LED4 on P0.03
+F1,1,2A fuse,VIN fuse,Littelfuse,0468002.NR,1206,,VIN fuse
+FB1,1,BLM18KG221SN1,VDD1 ferrite (nRF91 HDG),Murata,BLM18KG221SN1D,0603,,VDD1 ferrite (nRF91 HDG)
+FB2,1,BLM18KG221SN1,VDD2 ferrite 1,Murata,BLM18KG221SN1D,0603,,VDD2 ferrite 1
+FB3,1,BLM18KG221SN1,VDD2 ferrite 2 (nRF9161 DK extra FB3),Murata,BLM18KG221SN1D,0603,,VDD2 ferrite 2 (nRF9161 DK extra FB3)
+FB4,1,BLM18PG221SN1,VIN input ferrite,Murata,BLM18PG221SN1D,0805,,VIN input ferrite
+FB5,1,BLM15HG102SN1,GNSS bias ferrite,Murata,BLM15HG102SN1D,0402,,GNSS bias ferrite
+L1,1,0R / DNP match,LTE series match placeholder (0R until tune; LQW15AN family per HDG),Murata,LQW15AN10NG00,0402,Fit 0R until VNA; then LQW15AN,LTE series match placeholder (0R until tune; LQW15AN family per HDG)
+L2,1,0R / DNP match,AUX series match placeholder,Murata,LQW15AN10NG00,0402,Fit 0R until VNA; then LQW15AN,AUX series match placeholder
+L4,1,100nH,GNSS bias-T RF choke (nWP033),Murata,LQW15ANR10J00,0402,,GNSS bias-T RF choke (nWP033)
+R1,1,10k,ENABLE series to VDD1 (HDG 4.3),Yageo,RC0201FR-0710KL,0201,,ENABLE series to VDD1 (HDG 4.3)
+R2,1,0.05 ohm 1%,Current-sense (bypass with JP1),Yageo,PE1206FRF070R05L,1206,,Current-sense (bypass with JP1)
+R3,1,1k,Power LED resistor,Yageo,RC0402FR-071KL,0402,,Power LED resistor
+R4,1,0R,COEX0 to GNSS_LNA_EN (active-antenna enable),Yageo,RC0402JR-070RL,0402,,COEX0 to GNSS_LNA_EN (active-antenna enable)
+R5,1,1k,nRESET series (HDG 4.8; no external pull-up),Yageo,RC0201FR-071KL,0201,,nRESET series (HDG 4.8; no external pull-up)
+R10,1,1k,LED1 series,Yageo,RC0402FR-071KL,0402,,LED1 series
+R11,1,1k,LED2 series,Yageo,RC0402FR-071KL,0402,,LED2 series
+R12,1,1k,LED3 series,Yageo,RC0402FR-071KL,0402,,LED3 series
+R13,1,1k,LED4 series,Yageo,RC0402FR-071KL,0402,,LED4 series
+R14,1,10k,USER button pull-up to VDD_GPIO,Yageo,RC0402FR-0710KL,0402,,USER button pull-up to VDD_GPIO
+JP1,1,I_MEAS jumper,Close to bypass R2; open for current measurement,Keystone,solder jumper,SJ-2 open,,Close to bypass R2; open for current measurement
+JP2,1,SIM_VCC jumper,Connect SIM_1V8 to card VCC; close for operation,Keystone,solder jumper,SJ-2 open,,Connect SIM_1V8 to card VCC; close for operation
+J1,1,VIN 3.0-5.5V header,Main power input,Wurth,61300211121,1x02 2.54mm,,Main power input
+J2,1,U.FL LTE/NR+,External LTE/DECT NR+ antenna,Hirose,U.FL-R-SMT-1(10),U.FL,,External LTE/DECT NR+ antenna
+J3,1,SWF LTE,LTE RF test connector (Nordic-style),Murata,MM8130-2600,SWF,Optional,LTE RF test connector (Nordic-style)
+J5,1,U.FL GNSS,External active GNSS antenna,Hirose,U.FL-R-SMT-1(10),U.FL,,External active GNSS antenna
+J6,1,SWF GNSS,GNSS RF test connector,Murata,MM8130-2600,SWF,Optional,GNSS RF test connector
+J7,1,nano-SIM 4FF,nano-SIM connector,JAE,SF72S006V4BR,SF72S006,,nano-SIM connector
+J8,1,SWD 10-pin,ARM Cortex 10-pin (J-Link compatible),Samtec,FTSH-105-01-L-DV,2x05 1.27mm,,ARM Cortex 10-pin (J-Link compatible)
+J9,1,UART0 header,UART TX/RX/RTS/CTS + power,Wurth,61300611121,1x06 2.54mm,,UART TX/RX/RTS/CTS + power
+J10,1,SPI0 header,SPI SCK/MOSI/MISO/CS + power,Wurth,61300611121,1x06 2.54mm,,SPI SCK/MOSI/MISO/CS + power
+J11,1,I2C0 header,I2C SDA/SCL + power,Wurth,61300411121,1x04 2.54mm,,I2C SDA/SCL + power
+J12,1,GPIO P0.00-15,GPIO expansion 0-15,Wurth,61302011121,1x20 2.54mm,,GPIO expansion 0-15
+J13,1,GPIO P0.16-31,GPIO expansion 16-31,Wurth,61302011121,1x20 2.54mm,,GPIO expansion 16-31
+J14,1,MAGPIO/MIPI RFFE,MAGPIO0-2 MIPI VIO/SCLK/SDATA,Wurth,61300611121,1x06 1.27mm,,MAGPIO0-2 MIPI VIO/SCLK/SDATA
+J15,1,COEX header,COEX0-2 + power,Wurth,61300611121,1x06 1.27mm,,COEX0-2 + power
+J16,1,I2S header,I2S SCK/LRCK/SDOUT/SDIN,Wurth,61300611121,1x06 2.54mm,,I2S SCK/LRCK/SDOUT/SDIN
+J17,1,PDM header,PDM CLK/DIN,Wurth,61300411121,1x04 2.54mm,,PDM CLK/DIN
+J18,1,ADC AIN0-7,SAADC AIN0-7,Wurth,61301011121,1x10 2.54mm,,SAADC AIN0-7
+SW1,1,DISABLE,Grounds ENABLE (system disable),C&K,KXT311LHS,KXT3,,Grounds ENABLE (system disable)
+SW2,1,RESET,nRESET button,C&K,KXT311LHS,KXT3,,nRESET button
+SW3,1,USER,User button on P0.08,C&K,KXT311LHS,KXT3,,User button on P0.08
+TP1-TP20,20,Test points,Power/RF/SIM/SWD/I_MEAS test access,Keystone,5015,D1.0/1.5mm pad,,Power/RF/SIM/SWD/I_MEAS test access

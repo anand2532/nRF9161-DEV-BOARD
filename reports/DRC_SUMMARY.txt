@@ -1,0 +1,5 @@
+kicad-cli pcb drc --severity-error
+  116 [unconnected_items]
+shorting_items: 0
+clearance: 0
+hole_clearance: 0

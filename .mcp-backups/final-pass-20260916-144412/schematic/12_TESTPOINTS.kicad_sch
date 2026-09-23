@@ -1,0 +1,961 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid bf73c4fd-a136-4989-955e-e348f1f20fc0)
+	(paper "A4")
+	(lib_symbols
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 38.1 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fbf45e12-8345-401c-a128-a79b8414f2e6")
+		(property "Reference" "TP11"
+			(at 38.1 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VDD1"
+			(at 38.1 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 43.18 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 38.1 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "660e1223-f0c2-4d71-af0d-076283bf38d8")
+		)
+		(instances
+			(project "nRF9161-DEV-BOARD"
+				(path "/bf73c4fd-a136-4989-955e-e348f1f20fc0"
+					(reference "TP11")
+					(unit 1)
+				)
+			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/73d32b2b-48cc-47ad-ae2b-d020e901a75a" (reference "TP11") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/6094c42a-44ea-4b9f-82fd-f46adfb0569c" (reference "TP11") (unit 1)))
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 50.8 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c5d6cc51-5f13-4262-84a9-1e7049f8ff89")
+		(property "Reference" "TP12"
+			(at 50.8 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VDD2"
+			(at 50.8 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 55.88 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 50.8 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e97abe66-cef9-4bcf-a4da-d0cad8992817")
+		)
+		(instances
+			(project "nRF9161-DEV-BOARD"
+				(path "/bf73c4fd-a136-4989-955e-e348f1f20fc0"
+					(reference "TP12")
+					(unit 1)
+				)
+			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/73d32b2b-48cc-47ad-ae2b-d020e901a75a" (reference "TP12") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/6094c42a-44ea-4b9f-82fd-f46adfb0569c" (reference "TP12") (unit 1)))
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 63.5 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "04842368-d6df-44ec-8b1b-bc63a02137a7")
+		(property "Reference" "TP13"
+			(at 63.5 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VDD_GPIO"
+			(at 63.5 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 68.58 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 63.5 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a8f4a322-a92d-4d66-8203-839ce1f15a14")
+		)
+		(instances
+			(project "nRF9161-DEV-BOARD"
+				(path "/bf73c4fd-a136-4989-955e-e348f1f20fc0"
+					(reference "TP13")
+					(unit 1)
+				)
+			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/73d32b2b-48cc-47ad-ae2b-d020e901a75a" (reference "TP13") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/6094c42a-44ea-4b9f-82fd-f46adfb0569c" (reference "TP13") (unit 1)))
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 76.2 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2f51ab81-10b7-4678-9ba6-cd68b08baca6")
+		(property "Reference" "TP14"
+			(at 76.2 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VDD_nRF"
+			(at 76.2 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 81.28 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 76.2 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d043553b-460a-4682-ad16-d7e97acec656")
+		)
+		(instances
+			(project "nRF9161-DEV-BOARD"
+				(path "/bf73c4fd-a136-4989-955e-e348f1f20fc0"
+					(reference "TP14")
+					(unit 1)
+				)
+			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/73d32b2b-48cc-47ad-ae2b-d020e901a75a" (reference "TP14") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/6094c42a-44ea-4b9f-82fd-f46adfb0569c" (reference "TP14") (unit 1)))
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 88.9 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "02f31fe1-8cc4-4442-a99c-07f528feceec")
+		(property "Reference" "TP15"
+			(at 88.9 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VIN"
+			(at 88.9 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 93.98 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 88.9 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6d0b127c-0723-4206-aa3e-599b65fc887d")
+		)
+		(instances
+			(project "nRF9161-DEV-BOARD"
+				(path "/bf73c4fd-a136-4989-955e-e348f1f20fc0"
+					(reference "TP15")
+					(unit 1)
+				)
+			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/73d32b2b-48cc-47ad-ae2b-d020e901a75a" (reference "TP15") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/6094c42a-44ea-4b9f-82fd-f46adfb0569c" (reference "TP15") (unit 1)))
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 101.6 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "380699c3-4f05-48c0-85a6-0eeb2d4ae045")
+		(property "Reference" "TP16"
+			(at 101.6 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 101.6 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 106.68 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 101.6 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d43dea70-2f09-4342-8281-ec438e120439")
+		)
+		(instances
+			(project "nRF9161-DEV-BOARD"
+				(path "/bf73c4fd-a136-4989-955e-e348f1f20fc0"
+					(reference "TP16")
+					(unit 1)
+				)
+			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/73d32b2b-48cc-47ad-ae2b-d020e901a75a" (reference "TP16") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/6094c42a-44ea-4b9f-82fd-f46adfb0569c" (reference "TP16") (unit 1)))
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 114.3 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "06630937-37de-482e-8278-390cd0517c3b")
+		(property "Reference" "TP17"
+			(at 114.3 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ENABLE"
+			(at 114.3 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 119.38 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 114.3 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "438b8c42-c147-4115-ae60-046abc04089f")
+		)
+		(instances
+			(project "nRF9161-DEV-BOARD"
+				(path "/bf73c4fd-a136-4989-955e-e348f1f20fc0"
+					(reference "TP17")
+					(unit 1)
+				)
+			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/73d32b2b-48cc-47ad-ae2b-d020e901a75a" (reference "TP17") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/6094c42a-44ea-4b9f-82fd-f46adfb0569c" (reference "TP17") (unit 1)))
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 127 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1ec09cf3-2fc8-4a13-954a-f367d0c12df9")
+		(property "Reference" "TP18"
+			(at 127.0 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DEC0"
+			(at 127.0 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 132.08 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 127 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b6e718e3-86d0-4ffa-a7cc-03169dc6d6c8")
+		)
+		(instances
+			(project "nRF9161-DEV-BOARD"
+				(path "/bf73c4fd-a136-4989-955e-e348f1f20fc0"
+					(reference "TP18")
+					(unit 1)
+				)
+			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/73d32b2b-48cc-47ad-ae2b-d020e901a75a" (reference "TP18") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/6094c42a-44ea-4b9f-82fd-f46adfb0569c" (reference "TP18") (unit 1)))
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 38.1 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "32d81db5-a877-4327-917c-ca68f2f337e7")
+		(property "Reference" "TP19"
+			(at 38.1 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "I_MEAS+"
+			(at 38.1 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 43.18 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 38.1 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3c7e1d18-6376-4b6c-9d5c-6286503b999d")
+		)
+		(instances
+			(project "nRF9161-DEV-BOARD"
+				(path "/bf73c4fd-a136-4989-955e-e348f1f20fc0"
+					(reference "TP19")
+					(unit 1)
+				)
+			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/73d32b2b-48cc-47ad-ae2b-d020e901a75a" (reference "TP19") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/6094c42a-44ea-4b9f-82fd-f46adfb0569c" (reference "TP19") (unit 1)))
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 50.8 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f7a0baef-6501-4ce5-a4f8-f512718c838d")
+		(property "Reference" "TP20"
+			(at 50.8 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "I_MEAS-"
+			(at 50.8 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 55.88 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 50.8 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "163a0f03-2b87-4182-ad12-cdb271f64f5c")
+		)
+		(instances
+			(project "nRF9161-DEV-BOARD"
+				(path "/bf73c4fd-a136-4989-955e-e348f1f20fc0"
+					(reference "TP20")
+					(unit 1)
+				)
+			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/73d32b2b-48cc-47ad-ae2b-d020e901a75a" (reference "TP20") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/6094c42a-44ea-4b9f-82fd-f46adfb0569c" (reference "TP20") (unit 1)))
+		)
+	)
+	(global_label "VDD1"
+		(at 38.1 38.1 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6cdd8936-9976-4db3-a4f2-95fd744d28f3")
+	)
+	(global_label "VDD2"
+		(at 50.8 38.1 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "496db0f5-edc6-4888-b98d-ce0fa7cb5c73")
+	)
+	(global_label "VDD_GPIO"
+		(at 63.5 38.1 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "dec06732-e5ee-4673-b670-aabe2c0eae8f")
+	)
+	(global_label "VDD_nRF"
+		(at 76.2 38.1 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6c04a284-3216-45ac-a5e8-ff6f82e9106a")
+	)
+	(global_label "VIN"
+		(at 88.9 38.1 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e4f37b88-6fbc-45d7-ad3c-4ac80755d9a2")
+	)
+	(global_label "GND"
+		(at 101.6 38.1 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2e33e7f2-09d3-4463-9cea-c3d60cc85dae")
+	)
+	(global_label "ENABLE"
+		(at 114.3 38.1 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0b7c5296-5c99-4b67-8a14-30311d3ef6fe")
+	)
+	(global_label "DEC0"
+		(at 127.0 38.1 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e855c843-3da7-4bfa-84fe-b41186307e37")
+	)
+	(global_label "VIN_FILT"
+		(at 38.1 63.5 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d0de8e87-a86d-4966-9aa9-a8eee0948365")
+	)
+	(global_label "VDD_nRF"
+		(at 50.8 63.5 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "696cf759-80e7-4bd8-95c1-50f815c2706f")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

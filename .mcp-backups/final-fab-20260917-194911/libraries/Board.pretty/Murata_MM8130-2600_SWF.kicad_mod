@@ -1,0 +1,117 @@
+(footprint "Murata_MM8130-2600_SWF"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Murata SWF RF test connector MM8130-2600 used on Nordic nRF91 DKs")
+	(tags "RF SWF Murata test")
+	(property "Reference" "REF**"
+		(at 0 -1.27 0)
+		(layer "F.SilkS")
+		(uuid "f8cea853-aa08-4954-aef4-1b511e669657")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Murata_MM8130-2600_SWF"
+		(at 0 1.27 0)
+		(layer "F.Fab")
+		(uuid "86b994f7-3b55-4a0a-8460-94277e3c6895")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "9045973f-f3bf-4ca3-bbd7-5d993badb2ae")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ba25a856-8a01-4fb4-8127-ee5b78b72aca")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -1.1 -1.1)
+		(end 1.1 1.1)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "3b7ea583-9ab6-4fe7-adbf-43ee0bf9929e")
+	)
+	(fp_rect
+		(start -1.5 -1.5)
+		(end 1.5 1.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "08fb8d43-1e67-449e-9383-ef0ce780e425")
+	)
+	(fp_rect
+		(start -1 -1)
+		(end 1 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "02833c85-da2d-4024-940c-ad80c229c8a1")
+	)
+	(pad "1" smd rect
+		(at 0 0)
+		(size 0.6 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "61756605-24c4-446a-af64-d26de678df62")
+	)
+	(pad "2" smd rect
+		(at -0.75 0.75)
+		(size 0.5 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7b7c7736-a8fb-4bc7-ac97-9953fda5346b")
+	)
+	(pad "3" smd rect
+		(at 0.75 0.75)
+		(size 0.5 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "492a1e67-cb96-405d-bdce-a54a240f7b97")
+	)
+	(pad "4" smd rect
+		(at -0.75 -0.75)
+		(size 0.5 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8a579c63-0426-49d2-aeb0-d82696019128")
+	)
+	(pad "5" smd rect
+		(at 0.75 -0.75)
+		(size 0.5 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "84f509ec-1a2f-4e66-848d-2086cded85d5")
+	)
+	(embedded_fonts no)
+)

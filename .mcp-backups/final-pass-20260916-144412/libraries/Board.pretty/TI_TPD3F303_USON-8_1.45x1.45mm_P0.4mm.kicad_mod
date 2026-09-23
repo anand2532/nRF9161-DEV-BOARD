@@ -1,0 +1,141 @@
+(footprint "TI_TPD3F303_USON-8_1.45x1.45mm_P0.4mm"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Texas Instruments TPD3F303 DPV USON-8 1.45x1.45mm 0.4mm pitch with thermal pad (pin 9)")
+	(tags "TI TPD3F303 USON ESD SIM")
+	(property "Reference" "REF**"
+		(at 0 -1.27 0)
+		(layer "F.SilkS")
+		(uuid "7bbc6fae-d308-4365-b0de-6e2af6757d61")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TI_TPD3F303_USON-8_1.45x1.45mm_P0.4mm"
+		(at 0 1.27 0)
+		(layer "F.Fab")
+		(uuid "c117dac1-f0ee-408c-8092-1b70ee1b43f7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "4a6514cc-5db0-47d5-b5a1-cb4e28985b2a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "47c4e791-de91-44bf-91fc-d09ccc48746a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -0.85 -0.85)
+		(end 0.85 0.85)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "2af7adc2-acab-4804-933d-cc0a6d9e1ac2")
+	)
+	(fp_rect
+		(start -0.975 -0.975)
+		(end 0.975 0.975)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "eb19ddfd-f6ad-4a20-b708-900e00351f03")
+	)
+	(fp_rect
+		(start -0.725 -0.725)
+		(end 0.725 0.725)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "71341799-f505-4956-82c0-eeaece7d69a0")
+	)
+	(pad "1" smd rect
+		(at -0.65 -0.6)
+		(size 0.25 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "dde11418-c8c9-4e6e-b99f-6fb6406a48b7")
+	)
+	(pad "2" smd rect
+		(at -0.25 -0.6)
+		(size 0.25 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "01a1484e-8a64-4adc-bdc7-06a6a77c4d46")
+	)
+	(pad "3" smd rect
+		(at 0.25 -0.6)
+		(size 0.25 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f768ea47-cfa5-448d-9cb6-556682006311")
+	)
+	(pad "4" smd rect
+		(at 0.65 -0.6)
+		(size 0.25 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6cdd37f3-3f41-4956-982a-e246c71bfb97")
+	)
+	(pad "5" smd rect
+		(at 0.65 0.6)
+		(size 0.25 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bd06b156-e9fb-44bc-8431-4f57c5a56e3f")
+	)
+	(pad "6" smd rect
+		(at 0.25 0.6)
+		(size 0.25 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "099a4777-d907-492d-a082-c98f434b0c45")
+	)
+	(pad "7" smd rect
+		(at -0.25 0.6)
+		(size 0.25 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2afb5843-ca94-4208-b89f-d3d1d9a686a9")
+	)
+	(pad "8" smd rect
+		(at -0.65 0.6)
+		(size 0.25 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "66a421f2-5959-4d37-9c58-c8d7e00227ba")
+	)
+	(pad "9" smd rect
+		(at 0 0)
+		(size 0.7 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2639e254-f6b2-4d27-840f-97ade57b8e5a")
+	)
+	(embedded_fonts no)
+)

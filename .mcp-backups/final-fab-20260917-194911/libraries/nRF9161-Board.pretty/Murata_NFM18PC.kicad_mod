@@ -1,0 +1,80 @@
+(footprint "Murata_NFM18PC"
+  (version 20241229)
+  (generator "kicad-mcp")
+  (generator_version "9.0")
+  (layer "F.Cu")
+  (descr "Murata NFM18PC105R1C3 0603 3-terminal feedthrough EMI filter")
+  (tags "filter EMI feedthrough Murata NFM18 0603")
+
+  (property "Reference" "REF**" (at 0 -1.27 0)
+    (layer "F.SilkS")
+    (uuid "142ae119-a2f3-4be5-906f-b7fd37fd988b")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (property "Value" "Murata_NFM18PC" (at 0 1.27 0)
+    (layer "F.Fab")
+    (uuid "4265358b-3268-4105-a9fe-c504deabeaab")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (property "Datasheet" "" (at 0 0 0)
+    (layer "F.Fab")
+    (uuid "340f3f6e-1211-460f-8899-e55bb115cba6")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+
+  (fp_rect
+    (start -1.35 -0.8)
+    (end 1.35 0.8)
+    (stroke (width 0.05) (type default))
+    (fill none)
+    (layer "F.CrtYd")
+    (uuid "6c62483b-e8b2-46bc-8c79-d469c78bb9e0")
+  )
+
+  (fp_rect
+    (start -1.05 -0.55)
+    (end 1.05 0.55)
+    (stroke (width 0.12) (type default))
+    (fill none)
+    (layer "F.SilkS")
+    (uuid "adc8d714-7b02-4de8-b762-27a2b0d9d349")
+  )
+
+  (fp_rect
+    (start -0.8 -0.4)
+    (end 0.8 0.4)
+    (stroke (width 0.1) (type default))
+    (fill none)
+    (layer "F.Fab")
+    (uuid "28a28bff-cbb4-44eb-91bc-65e947c0bcc2")
+  )
+
+  (pad "1" smd rect
+    (at -0.8 0)
+    (size 0.5 0.9)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (uuid "588d59c0-d694-41c3-a02d-7751bb984df2")
+  )
+
+  (pad "2" smd rect
+    (at 0 0.55)
+    (size 0.6 0.4)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (uuid "217560fe-bd96-4480-972b-de555e11a30d")
+  )
+
+  (pad "2" smd rect
+    (at 0 -0.55)
+    (size 0.6 0.4)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (uuid "4268371b-4269-486b-b412-30e5fea218a3")
+  )
+
+  (pad "3" smd rect
+    (at 0.8 0)
+    (size 0.5 0.9)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (uuid "7039615c-10a9-4f7d-83b2-e3d0684d914b")
+  )
+
+)

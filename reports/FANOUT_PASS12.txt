@@ -1,0 +1,20 @@
+name	via_xy_r	status
+P0.01	(40.25, 39.45, 2.2)	added oblong v05
+P0.04	(42.25, 39.45, 2.2)	added oblong v05
+P0.06	(45.15, 36.0, 1.15)	added oblong v05
+P0.09	(45.15, 29.5, 1.15)	added oblong v05
+P0.11	(45.2, 28.0, 1.2)	added stub v05
+P0.14	None	NOVIA oblong r=1.15 (42.25,25.60): U1_BOX (42.25,25.60) | oblong r=1.40 (42.25,25.35): U1_BOX (42.25,25.35) | oblong r=1.70 (42.25,25.05): trk B COEX2 d=0.450 (37.75,24.60)-(105.10,24.60) | oblong r=2.10 (42.25,24.65): via P0.13 d=0.860 @(42.75,23.95) Ffail=oblong r=4.80 (42.25,21.95);oblong r=5.20 (42.25,21.55);a45 r=2.20 (43.81,25.19);a30 r=3.30 (43.90,23.89)
+P0.16	(40.7, 20.8, 5.975366097570925)	existing-outside
+P0.18	None	NOVIA oblong r=1.15 (39.75,25.60): U1_BOX (39.75,25.60) | oblong r=1.40 (39.75,25.35): U1_BOX (39.75,25.35) | oblong r=1.70 (39.75,25.05): trk B COEX2 d=0.450 (37.75,24.60)-(105.10,24.60) | oblong r=2.10 (39.75,24.65): via P0.17 d=0.860 @(40.25,23.95) Ffail=oblong r=4.80 (39.75,21.95);oblong r=5.20 (39.75,21.55);a30 r=5.20 (42.35,22.25)
+P0.20	(36.2, 20.8, 5.975366097570925)	existing-outside
+P0.22	(35.25, 25.05, 1.7)	added oblong v05
+P0.24	(34.25, 25.05, 1.7)	added oblong v05
+P0.27	(34.25, 39.45, 2.2)	added oblong v05
+P0.29	(35.75, 39.45, 2.2)	added oblong v05
+P0.31	(36.75, 39.45, 2.2)	added oblong v05
+MAGPIO0	(26.85, 28.5, 1.1499999999999986)	added west-north v05
+MIPI_VIO	(24.65, 24.4, 6.101843983583981)	existing-outside
+MIPI_SCLK	(26.874166, 30.65, 1.3000008444443414)	existing-outside
+MIPI_SDATA	None	NOVIA west-north r=1.15 (26.85,30.50): via MIPI_SCLK d=0.152 @(26.87,30.65) | west-north r=1.22 (26.85,30.90): via MIPI_SCLK d=0.251 @(26.87,30.65) | west-north r=1.22 (26.85,30.10): via MIPI_SCLK d=0.551 @(26.87,30.65) | west-north r=1.66 (26.85,31.70): trk F ANT d=0.078 (28.25,31.50)-(22.48,32.00) Ffail=west-north r=11.36 (26.85,19.20);west-north r=11.66 (26.85,18.90);west-north r=12.15 (26.85,18.40);west-north r=11.37 (26.70,19.20)
+COEX1	(38.25, 39.45, 2.2)	added oblong v05

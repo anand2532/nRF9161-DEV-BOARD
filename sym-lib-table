@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Nordic_nRF91")(type "KiCad")(uri "/home/anand/kicad-projects/nRF9161-DEV-BOARD/libraries/Nordic_nRF91.kicad_sym")(options "")(descr "nRF9161 SiP symbol from Nordic PS pinout"))
+  (lib (name "Nordic_nRF9161")(type "KiCad")(uri "/home/anand/kicad-projects/nRF9161-DEV-BOARD/libraries/Nordic_nRF9161.kicad_sym")(options "")(descr "nRF9161-LACA-R7 official PS pinout"))
+)

@@ -1,0 +1,94 @@
+(footprint "Infineon_BGM1212N7_TSNP-6-9"
+  (version 20241229)
+  (generator "kicad-mcp")
+  (generator_version "9.0")
+  (layer "F.Cu")
+  (descr "Infineon BGM1212N7 PG-TSNP-6-9 GNSS LNA")
+  (tags "GNSS LNA Infineon TSNP-6")
+
+  (property "Reference" "REF**" (at 0 -1.27 0)
+    (layer "F.SilkS")
+    (uuid "a3fb8828-63cd-4c06-aaf6-dfdcd0c7d630")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (property "Value" "Infineon_BGM1212N7_TSNP-6-9" (at 0 1.27 0)
+    (layer "F.Fab")
+    (uuid "379d3c5c-d6d2-4b69-afec-9f1d77c9f43b")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (property "Datasheet" "" (at 0 0 0)
+    (layer "F.Fab")
+    (uuid "4febc761-7105-4cf8-aad5-86afbabe4688")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+
+  (fp_rect
+    (start -1.2 -1)
+    (end 1.2 1)
+    (stroke (width 0.05) (type default))
+    (fill none)
+    (layer "F.CrtYd")
+    (uuid "6986f991-6a43-4433-a2a8-8effd52d233a")
+  )
+
+  (fp_rect
+    (start -0.7 -0.55)
+    (end 0.7 0.55)
+    (stroke (width 0.12) (type default))
+    (fill none)
+    (layer "F.SilkS")
+    (uuid "c75d6bf7-c9e0-4349-8926-c4a9f90c0059")
+  )
+
+  (fp_rect
+    (start -0.55 -0.45)
+    (end 0.55 0.45)
+    (stroke (width 0.1) (type default))
+    (fill none)
+    (layer "F.Fab")
+    (uuid "2e400a27-53aa-4222-9e07-530510cca8e4")
+  )
+
+  (pad "1" smd rect
+    (at -0.35 -0.25)
+    (size 0.22 0.22)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (uuid "f40a502a-ca5c-4d93-8280-7416884da66e")
+  )
+
+  (pad "2" smd rect
+    (at 0 -0.25)
+    (size 0.22 0.22)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (uuid "32f7733e-cd90-4d65-9975-5e2b2be87d1d")
+  )
+
+  (pad "3" smd rect
+    (at 0.35 -0.25)
+    (size 0.22 0.22)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (uuid "cc452ca9-6470-405b-ab21-d996f8c9dd8e")
+  )
+
+  (pad "4" smd rect
+    (at -0.35 0.25)
+    (size 0.22 0.22)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (uuid "19b6296f-1fe8-41cc-97b2-59936bd1c314")
+  )
+
+  (pad "5" smd rect
+    (at 0 0.25)
+    (size 0.22 0.22)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (uuid "37bf115f-3810-4797-bd42-82c3babd9c0f")
+  )
+
+  (pad "6" smd rect
+    (at 0.35 0.25)
+    (size 0.22 0.22)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (uuid "65811962-7b3f-4a4a-91d7-8a11a8702c86")
+  )
+
+)

@@ -1,0 +1,33 @@
+ERC report (2026-09-16T15:16:46+0530, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+[lib_symbol_mismatch]: Symbol 'TPD3F303DPV' doesn't match copy in library 'Power_Protection'
+    ; warning
+    @(50.80 mm, 63.50 mm): Symbol U4 [TPD3F303DPV]
+
+***** Sheet /A. nRF9161/
+
+***** Sheet /B. POWER/
+
+***** Sheet /C. LTE/NR+ RF/
+
+***** Sheet /D. GNSS/
+
+***** Sheet /E. SIM/UICC/
+
+***** Sheet /F. SWD/DEBUG/
+
+***** Sheet /G. UART/
+
+***** Sheet /H. SPI/I2C/
+
+***** Sheet /I. I2S/PDM/ADC/
+
+***** Sheet /J. GPIO EXPANSION/
+
+***** Sheet /K. LEDs/BUTTONS/
+
+***** Sheet /L. TEST POINTS/
+
+ ** ERC messages: 1  Errors 0  Warnings 1
