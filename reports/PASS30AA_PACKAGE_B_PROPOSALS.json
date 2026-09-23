@@ -1,0 +1,247 @@
+{
+  "pass": "pass30aa",
+  "type": "proposal_only",
+  "timestamp": "2026-09-23 13:24 IST",
+  "board": "nRF9161-DEV-BOARD",
+  "after_pass": "pass30z KEEP (Class C closed; unconnected 67\u219264)",
+  "live_keep_xy": {
+    "J13": [
+      64.0,
+      76.0
+    ],
+    "J10": [
+      116.0,
+      28.0
+    ],
+    "J11": [
+      116.0,
+      46.0
+    ],
+    "U1": [
+      36.0,
+      32.0
+    ]
+  },
+  "banned_j13_landings": [
+    [
+      64,
+      73
+    ],
+    [
+      64,
+      78.5
+    ],
+    [
+      67,
+      76
+    ]
+  ],
+  "hard_clears_required": {
+    "P0.22_via": [
+      112.5,
+      32.5
+    ],
+    "bottom_highways_y": [
+      78.5,
+      79.2
+    ],
+    "P0.01_via": [
+      80.51,
+      76.7
+    ]
+  },
+  "package_A": "deferred \u2014 not proposed for execute",
+  "preferred": {
+    "name": "Bprime_pref_J13_64_75_J10J11_x115",
+    "J13": [
+      64.0,
+      75.0
+    ],
+    "J10": [
+      115.0,
+      28.0
+    ],
+    "J11": [
+      115.0,
+      46.0
+    ],
+    "U1": [
+      36.0,
+      32.0
+    ],
+    "deltas_mm": {
+      "J13": 1.0,
+      "J10": 1.0,
+      "J11": 1.0
+    },
+    "rationale": [
+      "J13 north \u22121.0 mm from live (64,76) \u2192 pads at y=75 clear bottom highways y\u224878.5\u201379.2 and P0.15 @ y=77.45",
+      "J13 x stays 64 (not banned 64,73 / 64,78.5 / 67,76); east pad column still clears P0.01 via@(80.51,76.7) with dy\u22481.7 mm",
+      "J10/J11 west only \u22121.0 mm to x=115.0 (not 113.46): pad3 P0.23 center\u2248(115.0,33.08) vs P0.22 via@(112.5,32.5) dist\u22482.57 mm (113.46 failed at \u22481.12 mm)",
+      "Atomic package; U1 unmoved; Package A deferred"
+    ],
+    "hard_clears": {
+      "P0.22_via_112.5_32.5": "J10 west x=115 clears (dist pad3\u22482.57 mm)",
+      "bottom_highways_y_78.5_79.2": "J13 y=75 \u2014 no pad row on those Y",
+      "P0.01_via_80.51_76.7": "J13 y=75 dy\u22481.7 to via; nearest pads pad7/pad8 not shorting same-net rule"
+    },
+    "static_probe": {
+      "hard_clear": true,
+      "geom_hits": {
+        "J13": 0,
+        "J10": 0,
+        "J11": 0
+      }
+    },
+    "risks": [
+      "Full reattach (rip+route) can still create shorts beyond static pad-vs-copper probe \u2014 gate on DRC mid as in pass30y",
+      "P0.01 vias@(62,74.5)/(68,74.5) and P0.08 vias@(65.2,73.95) sit north of row \u2014 watch hole_clearance on reattach stubs",
+      "Silk/courtyard not in hard gate but expect silk_overlap churn"
+    ]
+  },
+  "alternates": [
+    {
+      "name": "Bprime_alt1_J13_64_74.5_J10J11_x115.5",
+      "J13": [
+        64.0,
+        74.5
+      ],
+      "J10": [
+        115.5,
+        28.0
+      ],
+      "J11": [
+        115.5,
+        46.0
+      ],
+      "U1": [
+        36.0,
+        32.0
+      ],
+      "deltas_mm": {
+        "J13": 1.5,
+        "J10": 0.5,
+        "J11": 0.5
+      },
+      "rationale": [
+        "More north margin for J13 (\u22121.5 mm) vs south highway band and P0.15 @77.45",
+        "J10/J11 only \u22120.5 mm west \u2014 maximum clearance to P0.22 via@(112.5,32.5) while still easing east edge pressure",
+        "Use if preferred reattach hits P0.08/P0.01 north vias near y=74.5 \u2014 may need nudge south toward 75.0 instead"
+      ],
+      "hard_clears": {
+        "P0.22_via_112.5_32.5": "J10 x=115.5 dist pad3\u22483.06 mm",
+        "bottom_highways_y_78.5_79.2": "J13 y=74.5 clear",
+        "P0.01_via_80.51_76.7": "dy\u22482.2 mm"
+      },
+      "static_probe": {
+        "hard_clear": true,
+        "geom_hits": {
+          "J13": 0,
+          "J10": 0,
+          "J11": 0
+        }
+      },
+      "risks": [
+        "Closer to P0.08 vias@(65.2,73.95)/(65.2,72.25) and P0.01@(62/68,74.5) \u2014 primary residual risk"
+      ]
+    },
+    {
+      "name": "Bprime_alt2_J13_65_75_J10J11_x114.5",
+      "J13": [
+        65.0,
+        75.0
+      ],
+      "J10": [
+        114.5,
+        28.0
+      ],
+      "J11": [
+        114.5,
+        46.0
+      ],
+      "U1": [
+        36.0,
+        32.0
+      ],
+      "deltas_mm": {
+        "J13": 1.414,
+        "J10": 1.5,
+        "J11": 1.5
+      },
+      "rationale": [
+        "J13 +1 mm east + \u22121 mm north: shifts pad column so gap near P0.01 via@(80.51,76.7) moves (pad7 x\u219280.24)",
+        "J10/J11 x=114.5 still clears P0.22 via (dist pad3\u22482.08 mm) \u2014 tighter than preferred but > failed 113.46",
+        "Use if preferred needs more east escape from west P0.15/P0.08 via cluster at x\u224861\u201368"
+      ],
+      "hard_clears": {
+        "P0.22_via_112.5_32.5": "J10 x=114.5 dist pad3\u22482.08 mm (margin vs 113.46)",
+        "bottom_highways_y_78.5_79.2": "J13 y=75 clear",
+        "P0.01_via_80.51_76.7": "pad column shifted; verify pad7/8 clearance in DRC mid"
+      },
+      "static_probe": {
+        "hard_clear": true,
+        "geom_hits": {
+          "J13": 0,
+          "J10": 0,
+          "J11": 0
+        }
+      },
+      "risks": [
+        "J10 west more aggressive \u2014 re-check P0.22 vias also at (114.70,29.90)/(112.50,29.90) vs P0.21/P0.23 pads",
+        "Do not slide J10 to 113.46 (known fail)"
+      ]
+    }
+  ],
+  "rejected_do_not_retry": [
+    {
+      "xy": {
+        "J13": [
+          64,
+          78.5
+        ],
+        "J10": [
+          113.46,
+          28
+        ],
+        "J11": [
+          113.46,
+          46
+        ]
+      },
+      "reason": "pass30y preferred \u2014 J13 on P0.01/P0.04/P0.06/P0.08 highways y\u224878.5\u201379.2; J10 shorts P0.22 via"
+    },
+    {
+      "xy": {
+        "J13": [
+          67,
+          76
+        ],
+        "J10": [
+          113.46,
+          28
+        ],
+        "J11": [
+          113.46,
+          46
+        ]
+      },
+      "reason": "pass30y alt \u2014 J13 pad6 P0.21 vs P0.01 via@(80.51,76.7); same J10 west short"
+    },
+    {
+      "xy": {
+        "J13": [
+          64,
+          73
+        ]
+      },
+      "reason": "banned prior landing \u2014 do not reuse"
+    }
+  ],
+  "execute_gate": [
+    "Atomic Package B' only (J13+J10+J11 together)",
+    "Backup + DRC before/mid/after; shorting/clearance/crossing must be 0 else full revert",
+    "No U1 move; no Package A/C; no Gerbers",
+    "Protect Stage A, P0.15 west wrap, P0.22/P0.19, pass30u + pass30z RF Class C copper"
+  ],
+  "method": "Static pad-center vs live via/track geometry probe on post-pass30z board; not a substitute for DRC mid after reattach"
+}

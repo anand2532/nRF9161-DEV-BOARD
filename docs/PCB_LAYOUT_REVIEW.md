@@ -1058,3 +1058,17 @@ Copper-only (no placement): P0.11 header stubs → P0.10/P0.17 → MAGPIO/MIPI/A
 **Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30y-20260923-131619` / `.mcp-backups/pass30y-connect/pre-edit.kicad_pcb`  
 **Artifacts:** `reports/DRC_PASS30Y_BEFORE.json`, `DRC_PASS30Y_MID_PREF.json`, `DRC_PASS30Y_MID_ALT.json`, `DRC_PASS30Y_AFTER.json`, `reports/PASS30Y_SUMMARY.json`, `reports/PASS30Y_SUMMARY.md`, `scripts/final_pass30y.py`
 
+## Pass30z — RF Class C (C22/C23/C24) — 2026-09-23 13:23 IST
+
+- **Decision:** **KEEP**
+- Unconnected **67 → 64**; shorting/clearance/crossing = **0/0/0**
+- Class C closed: ANT_FIT, AUX, AUX_FIT (all three)
+- Final XY: C22=(17.5, 31.75) rot=-90; C23=(24.8, 34.0); C24=(15.0, 31.8); stubs 0.883 / 1.0 / 1.2 mm; DNP kept
+- Details: `reports/PASS30Z_SUMMARY.md` / `.json`; script `scripts/final_pass30z.py`
+- Intermediate dirty attempts (C22 on-trunk short; AUX_FIT clearance) reverted before keep
+
+## Pass30aa — Package B' proposals (no execute) — 2026-09-23 IST
+
+- Proposal-only after pass30z KEEP. Preferred: J13(64,75) + J10/J11(115,28)/(115,46); alts in report.
+- Banned J13: (64,73), (64,78.5), (67,76). Hard clears: P0.22 via@(112.5,32.5), highways y≈78.5–79.2, P0.01 via@(80.51,76.7).
+- Details: `reports/PASS30AA_PACKAGE_B_PROPOSALS.md`
