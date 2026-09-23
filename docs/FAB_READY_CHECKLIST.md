@@ -102,6 +102,18 @@ Authoritative connectivity truth: `kicad-cli pcb drc` JSON `unconnected_items` (
 | **Evidence** | **Unconnected = 80** — `reports/FINAL_FAB_RELEASE.md` (hard gate failed); `reports/DRC_AFTER_CONNECT.json` (`unconnected_items` length 80, date 2026-09-18 IST); `reports/UNCONNECTED_AFTER_FINAL.csv` (80 rows). Classes summarized in FINAL_FAB_RELEASE (A55/F6/G7/C3/E9). Additional DRC in same JSON: silk_overlap 147, via_dangling 82, silk_over_copper 36, track_dangling 13, lib_footprint_mismatch 3, via_diameter 2, drill_out_of_range 2. Older `reports/DRC_SUMMARY.txt` / README cite 116 unconnected — superseded by AFTER_CONNECT/FINAL_FAB (80). ERC: `reports/ERC_kicad-cli.rpt` (2026-09-16) **0 errors, 1 warning** (lib_symbol_mismatch U4); root `nRF9161-DEV-BOARD-erc.rpt` older with dangling global-label warnings. |
 | **To go green** | Route/repair until `unconnected_items=0` and ratsnest=0; clear or waive remaining DRC with documented severity; re-run ERC clean for release; only then regenerate fab outputs. |
 
+### 8.1 DFM waive candidates (Option E accept class — 2026-09-23 IST)
+
+Reviewed against `reports/REMAINING_OPENS_MATRIX.md` + live `reports/DRC_PASS30W_AFTER.json` (unconnected=**67**). **Hard gate stays `unconnected_items → 0`.** Overall gate remains **RED**. No Gerbers regenerated.
+
+| Bucket | DFM verdict | Note |
+| --- | --- | --- |
+| GND×10 zone islands | **WAIVE candidate** (cosmetic) | Zone↔zone @ ≈(−0.05,−0.05); Class E fill/island artifact — refill/stitch after copper freeze; not a discrete signal break |
+| ANT_FIT / AUX / AUX_FIT | **MUST-FIX** (RF) | Not a keepout waive: RF policy requires **stub-terminate** DNP shunt pads (`docs/RF_POWER_REVIEW.md` Class C); do not leave open |
+| P0.19 / P0.22 leftover ratsnests | **MUST-FIX** (electrical) | Partial-keep copper left real GPIO island gaps (U1.30↔B stub; B↔F P0.22 islands) — finish or place before fab |
+
+Only GND Class-E could be jointly redefined as non-gate after zone refill proves phantom; do **not** redefine RF or GPIO partial-keeps.
+
 ---
 
 ## Inventory snapshot (evidence tree)
