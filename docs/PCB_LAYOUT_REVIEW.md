@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-23 09:51 IST (Asia/Calcutta) — pass30-connect executed  
+**Review date:** 2026-09-23 10:03 IST (Asia/Calcutta) — pass30c executed
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,11 +14,11 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **80** | `reports/DRC_PASS30_AFTER.json` (live `kicad-cli` 9.0.2); was **79** at pass30 baseline before U3 pads opened COEX0/VIN |
-| **shorting_items** | **0** | Same JSON + FINAL_FAB_RELEASE |
+| **unconnected_items** | **78** | `reports/DRC_PASS30C_AFTER.json` (live `kicad-cli` 9.0.2); was **80** at pass30c baseline after U3 netlist sync |
+| **shorting_items** | **0** | Same JSON |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
-| via_dangling | **80** | `DRC_PASS30_AFTER.json` |
+| via_dangling | **79** | `DRC_PASS30C_AFTER.json` |
 | drill_out_of_range | **0** | Pass30 before/after — P0.02 & nRESET already ≥0.50/0.30 |
 | via_diameter | **0** | Same |
 | track_dangling | 13 | Same JSON (includes load-bearing P0.15 west-wrap stubs) |
@@ -33,12 +33,11 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `reports/DRC_BEFORE_FINAL.json` | 120 | Pre-final pass |
 | `reports/DRC_final.json` / `FINAL_DESIGN_REVIEW.md` | 104 | Mid campaign |
 | `reports/DRC_AFTER_CONNECT_FULL.json` | 98 | Intermediate |
-| **`DRC_AFTER_CONNECT.json` / FINAL_FAB / CSV** | **80** | **Authoritative for this review** |
+| **`DRC_PASS30C_AFTER.json`** | **78** | **Authoritative after pass30c** |
 
-`kicad-cli` / `pcbnew` are **not available** in this box session, so a fresh DRC could not be re-run. Authoritative numbers remain the AFTER_CONNECT / FINAL_FAB set above. On-disk `fab/gerbers/` CreationDate **2026-09-16** is **stale** and must not be used for fab (DFM checklist §5).
+Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.json` / `reports/DRC_PASS30C_AFTER.json`). On-disk `fab/gerbers/` CreationDate **2026-09-16** remains **stale** and must not be used for fab (DFM checklist §5).
 
-**Pass delta (this Layout Engineer session):** review / documentation only — **no copper edit**.  
-**Before unconnected:** 80 · **After unconnected:** 80 · **Nets closed:** none.
+**Pass delta (pass30c):** netlist sync + U3.VIN + U3.ON closed. **Before unconnected:** 80 · **After unconnected:** 78 · **Nets closed:** VDD_GPIO (U3.1), COEX0 (U3.3). Class F deferred. shorting/clearance=0. P0.15 wrap preserved.
 
 ---
 
@@ -279,3 +278,36 @@ Per Hardware PM / DFM (2026-09-23): after each connectivity move, **also**:
 ---
 
 *End of PCB Layout Review — pass30-connect 2026-09-23 IST*
+
+
+---
+
+## Pass30c (2026-09-23 10:03 IST)
+
+**Goal:** Sync schematic U3 nets, then close U3.VIN / U3.ON and Class F surgically.
+
+| Metric | Before | After |
+| --- | ---: | ---: |
+| unconnected_items | **80** | **78** |
+| shorting_items | 0 | 0 |
+| clearance | 0 | 0 |
+| hole_clearance | 0 | 0 |
+
+**Netlist sync:** `reports/netlist_after_u3.xml` + ERC Errors=0 (`reports/ERC_U3_after.rpt`). U3 signal pads already matched schematic (`VDD_GPIO` / `GND` / `COEX0` / `GNSS_VBIAS_SRC`); pads 4/5 assigned `unconnected-(U3-NC-Pad4)` / `unconnected-(U3-QOD-Pad5)`. No manual VIN/VOUT/ON overrides retained beyond netlist.
+
+**Closed:**
+- `VDD_GPIO` U3.1 VIN — F stub to via (28.5, 40) then B north to (40.17, 19.13)
+- `COEX0` U3.3 ON — F west-north-east around VIN (26.2 → 38 corridor) to via (33, 43) then B to spine (38.8, 43)
+
+**Still open (priority leftovers):**
+- Class F: `VIN_FILT`, `VIN_F`, `SWDCLK`, `nRESET`, `P0.02`, `P0.08` (power/debug congestion; no safe path without clearance hits)
+- `COEX0` north island still split from south F stub (`F@38.75,37.25` ↔ `via@31.11,22`)
+- Other `VDD_GPIO` header/island opens (U3 pad itself is connected)
+- SIM / ADC / MAGPIO / MIPI / COEX headers
+
+**Constraints held:** shorting=0; clearance=0; P0.15 B.Cu west wrap intact (17 segments); no Gerbers; RF keepout x≈0–24.2 respected for new copper (U3 routes x≥26.2).
+
+**Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30c-20260923-095159`  
+**DRC:** `reports/DRC_PASS30C_BEFORE.json`, `reports/DRC_PASS30C_AFTER.json`  
+**Summary:** `reports/PASS30C_SUMMARY.json`
+
