@@ -260,6 +260,9 @@ README tree vs live `02_POWER.kicad_sch` (verified values):
 
 ### 2) Class C — DNP 50 Ω RF shunts (C21–C24, C31–C32)
 
+> **Class C stub plan (2026-09-23):** Full actionable plan for Hardware PM — nets/pads table, placement, schematic status, layout may/must-not, acceptance — is in [`docs/RF_STUB_DNP_PLAN.md`](RF_STUB_DNP_PLAN.md). DFM: `ANT_FIT` / `AUX` / `AUX_FIT` are **MUST-FIX** (RF keepout does not waive). Schematic DNP flags already set; copper remains plan-only until PM unlocks a tiny RF-only edit.
+
+
 **Disposition: stub-terminate (short same-net stub to RF pad). Do not leave open. Do not populate. Do not rip 50 Ω trunks.**
 
 Nordic nWP033 reserved-π practice: series = 0 Ω for first bring-up; **shunts unpopulated until VNA**. Footprints must remain.
