@@ -1,0 +1,282 @@
+{
+  "pass": "layout-pass30ad",
+  "timestamp_ist": "2026-09-23 13:31 IST",
+  "mode": "PROPOSALS ONLY \u2014 no footprint moves, no copper, no Gerbers",
+  "baseline_after_pass30ac": "REVERT to pass30z KEEP; unconnected=64; shorting/clearance/crossing=0",
+  "se_column_execute": "FROZEN until Hardware PM OK",
+  "j13_ban_list": [
+    [
+      64,
+      73
+    ],
+    [
+      64,
+      78.5
+    ],
+    [
+      67,
+      76
+    ],
+    [
+      64,
+      75
+    ],
+    [
+      64,
+      74.5
+    ]
+  ],
+  "hard_clears": {
+    "P0.22_vias_near_J10": [
+      [
+        112.5,
+        32.5
+      ],
+      [
+        114.7,
+        29.9
+      ],
+      [
+        112.5,
+        29.9
+      ]
+    ],
+    "P0.22_col_extra": [
+      [
+        109.2,
+        32.5
+      ]
+    ],
+    "P0.04_F_trunks": [
+      {
+        "seg": [
+          [
+            113.8,
+            49.2
+          ],
+          [
+            113.8,
+            36.8
+          ]
+        ],
+        "note": "vertical near J10/J11 west"
+      },
+      {
+        "seg": [
+          [
+            114.8,
+            78.8
+          ],
+          [
+            114.8,
+            52.5
+          ]
+        ],
+        "note": "east vertical vs J11.4"
+      },
+      {
+        "seg": [
+          [
+            114.8,
+            52.5
+          ],
+          [
+            108.45,
+            52.5
+          ]
+        ],
+        "note": "H near J11"
+      }
+    ],
+    "VDD_GPIO_stubs_note": "F H@y51.08 to J11; F jog x114.4 near J10; keep wall @x110.6/111",
+    "J13_forest": {
+      "P0.01_F_y74.5": [
+        [
+          62.0,
+          74.5
+        ],
+        [
+          68.0,
+          74.5
+        ]
+      ],
+      "P0.01_via": [
+        68.0,
+        74.5
+      ],
+      "P0.08_vias": [
+        [
+          65.2,
+          73.95
+        ],
+        [
+          65.2,
+          72.25
+        ]
+      ]
+    },
+    "not_113.46": "J10/J11 preferred west (113.46,*) banned \u2014 known fail vs P0.22 via@112.5"
+  },
+  "section1_j10_j11_only": {
+    "j13_stays": [
+      64.0,
+      76.0
+    ],
+    "candidates_probed_mm": [
+      {
+        "J10": [
+          115.5,
+          28.0
+        ],
+        "J11": [
+          115.5,
+          46.0
+        ],
+        "dx": -0.5,
+        "clear": false,
+        "hits": "J10.2\u2194P0.22 via@(114.7,29.9) hole; J11.4\u2194P0.04 F@x114.8"
+      },
+      {
+        "J10": [
+          115.0,
+          28.0
+        ],
+        "J11": [
+          115.0,
+          46.0
+        ],
+        "dx": -1.0,
+        "clear": false,
+        "hits": "J10.2\u2194via114.7; J10.5/6\u2194P0.04 F@x113.8; J11 pads\u2194P0.04"
+      },
+      {
+        "J10": [
+          114.5,
+          28.0
+        ],
+        "J11": [
+          114.5,
+          46.0
+        ],
+        "dx": -1.5,
+        "clear": false,
+        "hits": "same class denser"
+      },
+      {
+        "J10": [
+          114.0,
+          28.0
+        ],
+        "J11": [
+          114.0,
+          46.0
+        ],
+        "dx": -2.0,
+        "clear": false,
+        "hits": "J10.5/6 almost on P0.04@x113.8"
+      },
+      {
+        "J10": [
+          113.46,
+          28.0
+        ],
+        "J11": [
+          113.46,
+          46.0
+        ],
+        "dx": -2.54,
+        "clear": false,
+        "banned": true,
+        "hits": "J10.3\u2194P0.22 via@(112.5,32.5) \u2014 banned landing"
+      },
+      {
+        "J10": [
+          113.0,
+          28.0
+        ],
+        "J11": [
+          113.0,
+          46.0
+        ],
+        "dx": -3.0,
+        "clear": false,
+        "hits": "J10.3\u2194via112.5 + P0.04"
+      }
+    ],
+    "safe_west_deltas": [],
+    "conclusion": "NO safe J10/J11-only west delta \u22643 mm that clears P0.22 via@(112.5,32.5)/(114.7,29.9) and P0.04 F / VDD stubs. Even \u22120.5 mm fails hole_clearance on same-net P0.22 via@114.7 and J11.4 vs P0.04 F@x114.8."
+  },
+  "section2_optional_j13_west_only": {
+    "stay_y": 76.0,
+    "banned_excluded": true,
+    "candidates": [
+      {
+        "xy": [
+          63.5,
+          76.0
+        ],
+        "dx": -0.5,
+        "static_clear_vs_forest": true,
+        "mag_mm": 0.5
+      },
+      {
+        "xy": [
+          63.0,
+          76.0
+        ],
+        "dx": -1.0,
+        "static_clear_vs_forest": true,
+        "mag_mm": 1.0
+      },
+      {
+        "xy": [
+          62.5,
+          76.0
+        ],
+        "dx": -1.5,
+        "static_clear_vs_forest": true,
+        "mag_mm": 1.5
+      },
+      {
+        "xy": [
+          62.0,
+          76.0
+        ],
+        "dx": -2.0,
+        "static_clear_vs_forest": true,
+        "mag_mm": 2.0
+      }
+    ],
+    "notes": [
+      "Static probe only (pad vs via/track geometry) \u2014 NOT mid-DRC after reattach",
+      "West moves pad1 away from P0.08 via column @x65.2 and keeps y=76 clear of P0.01 F@y74.5 (\u0394y=1.5)",
+      "Does NOT by itself open J10/J11 east squeeze (P0.22/P0.04 still block header west)",
+      "Full reattach of all 20 J13 nets still required if ever executed"
+    ],
+    "preferred_if_ever": [
+      62.0,
+      76.0
+    ],
+    "alt_if_ever": [
+      63.0,
+      76.0
+    ]
+  },
+  "section3_leave_se_frozen": {
+    "recommendation": "LEAVE SE COLUMN FROZEN",
+    "rationale": [
+      "Static probe finds NO safe \u22643 mm J10/J11-only west package clearing hard P0.22/P0.04/VDD keeps",
+      "Optional J13 west-only \u22642 mm is statically clear of P0.01/P0.08 forest but does not unlock SE dual corridor without J10/J11 motion",
+      "Prior executes (pass30y / pass30ab) already dirty-reverted on (64,78.5)/(67,76)/(64,75)/(64,74.5)+J10/J11 west",
+      "pass30ac Package A also reverted \u2014 east dual column still congested (P0.01/P0.04/P0.06)"
+    ],
+    "preconditions_before_unfreeze": [
+      "Copper pre-clear or relocate P0.22 vias @(112.5,32.5) and @(114.7,29.9) (or accept same-net attach redesign)",
+      "Rip/jog P0.04 F east trunk @x113.8 / @x114.8 out of J10/J11 west pad sweep",
+      "Preserve VDD_GPIO H@y51.08 and wall @x110.6 during any co-route",
+      "Hardware PM explicit OK before any SE column execute"
+    ]
+  },
+  "no_copper_execute": true,
+  "no_gerbers": true
+}

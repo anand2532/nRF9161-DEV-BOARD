@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-23 18:48 IST (Asia/Calcutta) — pass30y Package B place+reattach REVERTED (pass30u keep)
+**Review date:** 2026-09-23 19:01 IST (Asia/Calcutta) — pass30ac Package A REVERTED; pass30ad B'' proposals; SE column FROZEN (pass30z keep, unc=64)
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,7 +14,7 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **67** | `reports/DRC_PASS30W_AFTER.json` (live `kicad-cli`); Pass30w STOP — Stage A+pass30i–30u+P0.22/P0.19 kept; Option E matrix; no new copper
+| **unconnected_items** | **64** | `reports/DRC_PASS30AC_AFTER.json` (live `kicad-cli`); pass30z Class C KEEP (−3 RF); pass30ab/ac REVERT; Stage A+pass30i–30u+P0.22/P0.19+Class C kept
 | **shorting_items** | **0** | Same JSON |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
@@ -44,6 +44,10 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
 
 Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.json` / `reports/DRC_PASS30C_AFTER.json`). On-disk `fab/gerbers/` CreationDate **2026-09-16** remains **stale** and must not be used for fab (DFM checklist §5).
+
+**Pass delta (pass30ac):** Package A_SE_duals EXECUTE (J16+J9+J17; **excl J12**). Preferred west −2.54 → (105.46,8)/(113.46,8)/(105.46,26) mid dirty shorting=7 clr=1 cross=4 (P0.01 B@y15.2 × J17/J16; P0.04/P0.06 × VDD_GPIO/J9). Alt Y once J16/J9 south +2.54 / J17 north −2.0 also dirty shorting=11 clr=5 cross=7 unc 64→68. **FULL PACKAGE REVERT** to pass30z keep. Landing: **none**. Final XY unchanged. Before/After unconnected: 64/64 · shorting/clearance/crossing 0. Class C + Stage A + SE column frozen + J12 unmoved. No Gerbers. Details: `reports/PASS30AC_SUMMARY.json` (+ MD).
+
+**Pass delta (pass30ad):** B'' PROPOSALS ONLY (no execute). J10/J11-only west: **no** safe ≤3 mm clearing P0.22 via@(112.5,32.5)/(114.7,29.9) + P0.04 F (even −0.5 fails; 113.46 banned). Optional J13 west-only ≤2 mm toward x=62 statically clears P0.01/P0.08 forest but does not unlock SE duals alone. **Recommendation: LEAVE SE COLUMN FROZEN** until copper pre-clear + PM OK. Artifacts: `reports/PASS30AD_B_DOUBLE_PRIME_PROPOSALS.md` (+ JSON).
 
 **Pass delta (pass30y):** Package B ONLY atomic place+reattach (J13+J10+J11). Live start XY confirmed J13(64,76)/J10(116,28)/J11(116,46). Preferred J13→(64,78.5)+J10/J11→(113.46,*) mid-DRC dirty shorting=11 clearance=3 crossing=7 hole_clearance=4 (edge-class: P0.01/P0.04/P0.06 south highways @y≈78.5–79.2 + J10 west vs P0.22 via@112.5). Alt once J13→(67,76)+same J10/J11 also dirty shorting=16 clearance=3 crossing=4 hole_clearance=4 (J10.3↔P0.22 via; J13.6↔P0.01 via; VDD_GPIO reattach diagonals). **FULL PACKAGE REVERT** to pass30u keep. J13 landing kept: **none**. Final XY unchanged. Before/After unconnected: 67/67 · shorting/clearance/crossing 0. Stage A + P0.15 west + P0.22/P0.19 keeps intact. No Package A/C/D. No U1 move. No Gerbers. Details: `reports/PASS30Y_SUMMARY.json` (+ MD).
 
@@ -1093,3 +1097,33 @@ Copper-only (no placement): P0.11 header stubs → P0.10/P0.17 → MAGPIO/MIPI/A
 
 **Backup:** `.mcp-backups/pass30ab-package-b/pre-edit.kicad_pcb`  
 **Artifacts:** `reports/DRC_PASS30AB_{BEFORE,MID_PREF,MID_ALT,AFTER}.json`, `reports/PASS30AB_SUMMARY.{md,json}`, `scripts/final_pass30ab.py`
+
+
+## Pass30ac — Package A_SE_duals execute (excl J12) — 2026-09-23 13:32 IST
+
+**Goal:** Atomic Package A place+reattach J16+J9+J17. Preferred west −2.54; Alt Y once if dirty. Gate shorting/clearance/crossing=0 else full revert. J12 DO NOT MOVE. SE column FROZEN. Protect Stage A, P0.15 west, RF/U3, pass30r/u, **pass30z Class C**. No Gerbers. No B'' execute.
+
+| Attempt | Landing | Mid DRC | Result |
+| --- | --- | --- | --- |
+| preferred | J16/J17(105.46,*) J9(113.46,8) | short=7 clr=1 cross=4 | reverted → Alt |
+| Alt (once) | J16/J9 y+2.54; J17 y−2.0 | short=11 clr=5 cross=7 unc=68 | **full revert** |
+| keep | J16(108,8) J9(116,8) J17(108,26) | — | pass30z keep restored |
+
+**Blockers (head):** Preferred — P0.01 B@y15.2 × J17.3/J16.4; P0.06 × J16.5; P0.04 × J9.6. Alt — VDD_GPIO Y-shift × P0.22 via@(114.7,29.9) / P0.04 via@(113.8,36.8).
+
+**Protect:** Class C C22/C23/C24 OK; Stage A OK; P0.15 west OK; J12/J13/J10/J11/U1 unmoved.
+
+**Before/after unconnected:** 64→64 (shorting=clearance=crossing=0/0/0 after revert)
+
+**Landing kept:** none
+
+**Backup:** `.mcp-backups/pass30ac-package-a/pre-edit.kicad_pcb`  
+**Artifacts:** `reports/DRC_PASS30AC_{BEFORE,MID_PREF,MID_ALT,AFTER}.json`, `reports/PASS30AC_SUMMARY.{md,json}`, `scripts/final_pass30ac.py`
+
+## Pass30ad — B'' proposals ONLY (no execute) — 2026-09-23 13:32 IST
+
+- **J10/J11-only:** no safe west ≤3 mm vs P0.22 vias @(112.5,32.5)/(114.7,29.9) + P0.04 F (113.46 banned)
+- **Optional J13 west-only ≤2 mm:** (63.5…62.0, 76) statically clear of P0.01/P0.08 forest — does not unlock SE duals alone
+- **Recommendation: LEAVE SE COLUMN FROZEN** until copper pre-clear + Hardware PM OK
+- No copper execute. No Gerbers.
+- Details: `reports/PASS30AD_B_DOUBLE_PRIME_PROPOSALS.md` / `.json`

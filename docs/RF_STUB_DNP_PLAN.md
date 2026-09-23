@@ -143,3 +143,50 @@ Optional cleanup (not blocking Class C copper): root-sheet text still mentions �
 3. After copper: assign **RF** to re-review; then continue P0 opens toward unconnected = 0 before any Gerber release.
 
 **RF recommendation:** Approve. Preferred fix is footprint relocation + short stubs — not trunk rips, not “accept/waive,” not populating shunts pre-VNA.
+
+---
+
+## 10. pass30z RF re-review (2026-09-23 IST)
+
+| Field | Value |
+| --- | --- |
+| **Reviewer** | RF Power Engineer (independent re-review) |
+| **Copper claim** | Layout pass30z KEEP — `reports/PASS30Z_SUMMARY.md` / `.json` |
+| **DRC** | `reports/DRC_PASS30Z_BEFORE.json` (67 unc) → `reports/DRC_PASS30Z_AFTER.json` (64 unc) |
+| **Verdict** | **PASS** |
+
+### Measured stub table (live `nRF9161-DEV-BOARD.kicad_pcb`)
+
+| Ref | Body XY (mm) | pad1 net @ XY | pad2 | Stub len (mm) | Stub ≤2 mm | GND via | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| C22 | (17.50, 31.75) rot −90° | `ANT_FIT` @(17.50, 31.27) | GND @(17.50, 32.23) | **0.883** | YES | on pad2 @(17.50, 32.23) | Joins L1.2→J2/J3 trunk |
+| C23 | (24.80, 34.00) rot 0° | `AUX` @(24.32, 34.00) | GND @(25.28, 34.00) | **1.000** | YES | @(25.98, 34.00) + 0.25 mm pour | Joins U1→L2.1 trunk @ y=33 |
+| C24 | (15.00, 31.80) rot 0° | `AUX_FIT` @(14.52, 31.80) | GND @(15.48, 31.80) | **1.200** | YES | @(16.18, 31.80) + 0.25 mm pour | Next to L2.2/TP1 trunk @ y=33 |
+
+### Acceptance checklist
+
+| Check | Result |
+| --- | --- |
+| Class C MUST-FIX closed (`ANT_FIT` / `AUX` / `AUX_FIT`) | **PASS** — 0 opens on those nets in `DRC_PASS30Z_AFTER` (unc 67→64) |
+| Same-net stubs ≤2 mm | **PASS** — 0.883 / 1.000 / 1.200 mm |
+| pad2 → solid GND (via/pour) | **PASS** |
+| DNP unpopulated | **PASS** — schematic `03_LTE_RF`: Value=`DNP`, `(dnp yes)`, `(in_bom no)` |
+| 50 Ω trunks / series L1 & inductor-L2 / TP1 / J2 / J3 | **PASS** — positions unchanged vs pre-edit backup |
+| Solid In1 (layer L2) GND under RF | **PASS** — In1 GND zone byte-identical to pre-edit (no split for these fixes) |
+| U3 / bias-T (C27, L4, FB5) | **PASS** — untouched |
+| West keepout spirit (x≈0–24.2, y≈20–64) | **PASS** — C23 body just east of x=24.2 (OK); C22/C24 pad-in-matching allowed by plan |
+| No long RF stubs (>2 mm) left dangling for Class C | **PASS** |
+
+### Issues requiring Layout rework
+
+**None** for Class C.
+
+### Residual fab gate (unchanged)
+
+Still **no Gerbers** — board unconnected **64** (not 0). P0 remain: `VDD_GPIO`, all `SIM_*`, `COEX0`/`COEX1`, MAGPIO/MIPI corridor, remaining GPIO opens, GND zone islands. Class C alone does **not** unlock fab.
+
+### Package B′ protection (Hardware PM)
+
+While Layout runs **Package B′**, lock RF Class C copper: **C22/C23/C24 stubs**, **50 Ω trunks**, **solid In1/L2 under RF**, **series L1 / inductor-L2 / TP1**, **U3 / bias-T (C27/L4/FB5)**. Do not rip or nudge these to close P0.
+
+Full write-up: `reports/RF_PASS30Z_REVIEW.md`.
