@@ -856,6 +856,202 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power_switch:TPS22919DCK"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -5.08 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TPS22919DCK"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
+				(at 0 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps22919.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "5.5V 1.5A 90mohm load switch with adj. QOD, SC-70-6"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "load switch high-side TPS22919"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT*363* SC*70*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TPS22919DCK_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TPS22919DCK_1_1"
+				(pin power_in line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "ON"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "QOD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -1279,7 +1475,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
+		(property "Footprint" "Inductor_SMD:L_0402_1005Metric"
 			(at 38.1 39.878 90)
 			(hide yes)
 			(show_name no)
@@ -1486,9 +1682,9 @@
 		(at 50.8 63.5 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "68501197-6b09-4338-af95-aa4749e46978")
 		(property "Reference" "C31"
 			(at 50.8 60.96 0)
@@ -1565,9 +1761,9 @@
 		(at 76.2 63.5 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "d4eac5f8-a9e2-418b-968f-9959f009f6b0")
 		(property "Reference" "C32"
 			(at 76.2 60.96 0)
@@ -1890,7 +2086,7 @@
 		)
 		(uuid "b5d3d31f-67b2-481d-9a06-afa13e4cacc4")
 	)
-	(global_label "VDD_GPIO"
+	(global_label "GNSS_VBIAS_SRC"
 		(at 34.29 38.1 180)
 		(effects
 			(font
@@ -2020,7 +2216,144 @@
 		)
 		(uuid "a03bd3b1-11cc-40bd-8cfd-f31e369dfba1")
 	)
-	(text "D. GNSS  (nWP033 active antenna bias-T, 50 ohm)"
+	(symbol
+		(lib_id "power_switch:TPS22919DCK")
+		(at 15.24 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d6f404c3-dcf3-4e6f-a903-611a9667f36e")
+		(property "Reference" "U3"
+			(at 15.24 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TPS22919DCKR"
+			(at 15.24 30.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
+			(at 15.24 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps22919.pdf"
+			(at 15.24 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "GNSS VBIAS high-side load switch; EN=COEX0"
+			(at 15.24 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dcf90c74-0a04-44e0-83a7-399677ff53f7")
+		)
+		(pin "2"
+			(uuid "ceb2664a-68e5-4fec-a5dd-7fe6436d4ba6")
+		)
+		(pin "3"
+			(uuid "a96781a7-ed81-4e3d-80fe-873f3a0fda1e")
+		)
+		(pin "4"
+			(uuid "8f90051a-e0b5-4a15-ba5d-07a70de38a76")
+		)
+		(pin "5"
+			(uuid "3c521a76-c344-4389-a8ca-c076cec7f4b5")
+		)
+		(pin "6"
+			(uuid "04b93c26-48cf-4c67-9b02-17c3e558f6ec")
+		)
+		(instances
+			(project "nRF9161-DEV-BOARD"
+				(path "/320bf8b0-a48d-42b3-ac88-adf50757caa1"
+					(reference "U3")
+					(unit 1)
+				)
+			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/846499a2-d5e5-4b82-8bbd-f42a5b8cc356" (reference "U3") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/4f557c02-0258-45cb-8da4-f63d73173d91" (reference "U3") (unit 1)))
+		)
+	)
+	(global_label "VDD_GPIO"
+		(at 7.62 40.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "72641825-34f8-4cc3-9957-3722feda1418")
+	)
+	(global_label "COEX0"
+		(at 7.62 38.1 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "704f5a5d-9401-4366-8e69-dfad591503ef")
+	)
+	(global_label "GNSS_VBIAS_SRC"
+		(at 22.86 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "18efaf02-4bf1-4a3f-804c-835602515a89")
+	)
+	(global_label "GND"
+		(at 15.24 30.48 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "85a932f8-e7f1-42be-8f75-2fac56af8429")
+	)
+	(no_connect
+		(at 22.86 38.1)
+		(uuid "aaed0388-121b-4080-aeb9-849475fefb73")
+	)
+	(no_connect
+		(at 22.86 35.56)
+		(uuid "93a01541-0a0f-4d6a-9d3d-3788680c9963")
+	)
+	(text "D. GNSS  (nWP033 bias-T + COEX0-gated VBIAS, 50 ohm)"
 		(exclude_from_sim no)
 		(at 25.4 5.08 0)
 		(effects

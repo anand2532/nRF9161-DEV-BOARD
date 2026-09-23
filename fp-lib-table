@@ -1,7 +1,7 @@
 (fp_lib_table
   (version 7)
-  (lib (name "Nordic_nRF91")(type "KiCad")(uri "/home/anand/kicad-projects/nRF9161-DEV-BOARD/libraries/Nordic_nRF91.pretty")(options "")(descr "Official nRF9161 16.0x10.5mm LGA footprint"))
-  (lib (name "nRF9161-Board")(type "KiCad")(uri "/home/anand/kicad-projects/nRF9161-DEV-BOARD/libraries/nRF9161-Board.pretty")(options "")(descr "Board-specific footprints (LNA, RF switch, mounting)"))
-  (lib (name "Nordic_nRF9161")(type "KiCad")(uri "/home/anand/kicad-projects/nRF9161-DEV-BOARD/libraries/Nordic_nRF9161.pretty")(options "")(descr "nRF9161 LGA footprint from PS mechanical"))
-  (lib (name "Board")(type "KiCad")(uri "/home/anand/kicad-projects/nRF9161-DEV-BOARD/libraries/Board.pretty")(options "")(descr "Board-specific footprints"))
+  (lib (name "Nordic_nRF91")(type "KiCad")(uri "/workspace/kicad-projects/nRF9161-DEV-BOARD/libraries/Nordic_nRF91.pretty")(options "")(descr "Official nRF9161 16.0x10.5mm LGA footprint"))
+  (lib (name "nRF9161-Board")(type "KiCad")(uri "/workspace/kicad-projects/nRF9161-DEV-BOARD/libraries/nRF9161-Board.pretty")(options "")(descr "Board-specific footprints (LNA, RF switch, mounting)"))
+  (lib (name "Nordic_nRF9161")(type "KiCad")(uri "/workspace/kicad-projects/nRF9161-DEV-BOARD/libraries/Nordic_nRF9161.pretty")(options "")(descr "nRF9161 LGA footprint from PS mechanical"))
+  (lib (name "Board")(type "KiCad")(uri "/workspace/kicad-projects/nRF9161-DEV-BOARD/libraries/Board.pretty")(options "")(descr "Board-specific footprints"))
 )

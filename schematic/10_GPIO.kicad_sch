@@ -1292,7 +1292,7 @@
 		)
 		(uuid "f8969595-08aa-4005-aca3-f122917ab002")
 	)
-	(global_label "VDD_nRF"
+	(global_label "VDD_GPIO"
 		(at 134.61999999999998 68.58 180)
 		(effects
 			(font

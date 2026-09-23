@@ -45,7 +45,7 @@ VIN (J1)
        FB1 → VDD1 (pin 102) + C3 47 µF / C4 4.7 µF / C5 100 nF / C6 15 pF
        FB2 + FB3 → VDD2 (pin 22) + C7–C10 (FB3 per nRF9161 DK)
   R1 10 kΩ → ENABLE (pin 101) + C14 100 nF; SW1 to GND = disable
-  TLV73330 3.3 V (EN=ENABLE) → VDD_GPIO (pin 12) + C11/C12
+  TLV73333 3.3 V (EN=ENABLE) → VDD_GPIO (pin 12) + C11/C12
   DEC0 (pin 13) → C13 4.7 µF
 ```
 
@@ -63,7 +63,7 @@ Nordic evaluates ANT/AUX/GPS as **50 Ω single-ended**. Matching values are ante
 
 - LTE/NR+: series L1 is a 0 Ω / LQW15AN placeholder; C21/C22 DNP high-Q 0402 (HDG: Murata LQW15AN + GJM1555C1).
 - AUX: same reserved π (L2, C23, C24).
-- GNSS: nWP033 active-antenna bias-T — C27 100 pF DC block, L4 100 nH choke, C28–C30 + FB5 on ~3.3 V bias from VDD_GPIO through R4/COEX0. Shunts C31/C32 DNP.
+- GNSS: nWP033 active-antenna bias-T — C27 100 pF DC block, L4 100 nH choke, C28–C30 + FB5 on ~3.3 V bias from VDD_GPIO via U3 TPS22919DCKR (ON=COEX0) → FB5; R4/TP2 are COEX0 sense only. Shunts C31/C32 DNP.
 
 Tune L1/C21/C22 (and GNSS shunts) on the finished mechanics with a VNA.
 

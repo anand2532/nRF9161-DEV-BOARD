@@ -1,6 +1,7 @@
 Reference,Quantity,Value,Description,Manufacturer,MPN,Package,DNP/Optional,Function
 U1,1,nRF9161-LACA-R7,LTE-M/NB-IoT/DECT NR+/GNSS SiP (PS v1.0),Nordic Semiconductor,nRF9161-LACA-R7,LGA 16.0x10.5mm,,LTE-M/NB-IoT/DECT NR+/GNSS SiP (PS v1.0)
-U2,1,TLV73330PDBV,3.3 V VDD_GPIO LDO; EN tied to ENABLE,Texas Instruments,TLV73330PDBVR,SOT-23-5,,3.3 V VDD_GPIO LDO; EN tied to ENABLE
+U2,1,TLV73333PDBV,3.3 V VDD_GPIO LDO; EN tied to ENABLE,Texas Instruments,TLV73333PDBVR,SOT-23-5,,3.3 V VDD_GPIO LDO; EN tied to ENABLE
+U3,1,TPS22919DCKR,GNSS VBIAS high-side load switch; ON=COEX0,Texas Instruments,TPS22919DCKR,SC-70-6 / SOT-363,,GNSS active-antenna bias gate (LOCKED)
 U4,1,TPD3F303DPV,SIM ESD/EMI filter per nRF91 HDG,Texas Instruments,TPD3F303DPVR,USON-8 1.45x1.45mm,,SIM ESD/EMI filter per nRF91 HDG
 C1,1,10uF/16V X5R,VIN bulk after input filter,Murata,GRM21BR61C106ME15,0805,,VIN bulk after input filter
 C2,1,100nF 10V X5R,VIN HF decoupling,Murata,GRM155R61A104KA01,0402,,VIN HF decoupling
@@ -45,7 +46,7 @@ FB1,1,BLM18KG221SN1,VDD1 ferrite (nRF91 HDG),Murata,BLM18KG221SN1D,0603,,VDD1 fe
 FB2,1,BLM18KG221SN1,VDD2 ferrite 1,Murata,BLM18KG221SN1D,0603,,VDD2 ferrite 1
 FB3,1,BLM18KG221SN1,VDD2 ferrite 2 (nRF9161 DK extra FB3),Murata,BLM18KG221SN1D,0603,,VDD2 ferrite 2 (nRF9161 DK extra FB3)
 FB4,1,BLM18PG221SN1,VIN input ferrite,Murata,BLM18PG221SN1D,0805,,VIN input ferrite
-FB5,1,BLM15HG102SN1,GNSS bias ferrite,Murata,BLM15HG102SN1D,0402,,GNSS bias ferrite
+FB5,1,BLM15HG102SN1,GNSS bias ferrite (land L_0402_1005Metric),Murata,BLM15HG102SN1D,0402,,GNSS bias ferrite; schematic footprint fixed 0603→0402
 L1,1,0R / DNP match,LTE series match placeholder (0R until tune; LQW15AN family per HDG),Murata,LQW15AN10NG00,0402,Fit 0R until VNA; then LQW15AN,LTE series match placeholder (0R until tune; LQW15AN family per HDG)
 L2,1,0R / DNP match,AUX series match placeholder,Murata,LQW15AN10NG00,0402,Fit 0R until VNA; then LQW15AN,AUX series match placeholder
 L4,1,100nH,GNSS bias-T RF choke (nWP033),Murata,LQW15ANR10J00,0402,,GNSS bias-T RF choke (nWP033)

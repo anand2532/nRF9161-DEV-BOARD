@@ -26698,8 +26698,8 @@
 	)
 	(via
 		(at 40.75 43.5)
-		(size 0.45)
-		(drill 0.25)
+		(size 0.60)
+		(drill 0.30)
 		(layers "F.Cu" "B.Cu")
 		(net 50)
 		(uuid "2d1e1e15-5548-4f79-a2b1-4011d52c1736")
@@ -27578,8 +27578,8 @@
 	)
 	(via
 		(at 45.68 15.8)
-		(size 0.45)
-		(drill 0.25)
+		(size 0.60)
+		(drill 0.30)
 		(layers "F.Cu" "B.Cu")
 		(net 55)
 		(uuid "d4671a67-91e7-4673-aecf-b689d76f4688")
