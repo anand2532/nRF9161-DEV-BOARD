@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-23 18:43 IST (Asia/Calcutta) — pass30x PLACEMENT PROPOSALS ONLY (board untouched; pass30u keep)
+**Review date:** 2026-09-23 18:48 IST (Asia/Calcutta) — pass30y Package B place+reattach REVERTED (pass30u keep)
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -44,6 +44,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
 
 Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.json` / `reports/DRC_PASS30C_AFTER.json`). On-disk `fab/gerbers/` CreationDate **2026-09-16** remains **stale** and must not be used for fab (DFM checklist §5).
+
+**Pass delta (pass30y):** Package B ONLY atomic place+reattach (J13+J10+J11). Live start XY confirmed J13(64,76)/J10(116,28)/J11(116,46). Preferred J13→(64,78.5)+J10/J11→(113.46,*) mid-DRC dirty shorting=11 clearance=3 crossing=7 hole_clearance=4 (edge-class: P0.01/P0.04/P0.06 south highways @y≈78.5–79.2 + J10 west vs P0.22 via@112.5). Alt once J13→(67,76)+same J10/J11 also dirty shorting=16 clearance=3 crossing=4 hole_clearance=4 (J10.3↔P0.22 via; J13.6↔P0.01 via; VDD_GPIO reattach diagonals). **FULL PACKAGE REVERT** to pass30u keep. J13 landing kept: **none**. Final XY unchanged. Before/After unconnected: 67/67 · shorting/clearance/crossing 0. Stage A + P0.15 west + P0.22/P0.19 keeps intact. No Package A/C/D. No U1 move. No Gerbers. Details: `reports/PASS30Y_SUMMARY.json` (+ MD).
 
 **Pass delta (pass30x):** PLACEMENT PROPOSALS ONLY — no footprint moves, no copper, no Gerbers. Measured live XY J8–J17 + U1. Packages: (A) SE duals J9/J12/J16/J17 for P0.05/07/09–12/17; (B) SE column J10/J11/J13 for P0.18–31 — J13 preferred (64,78.5) / alt (67,76); **do not repeat failed (64,73)** vs P0.08 vias @65.2; (C) West long-haul J14/J15 for MAGPIO/MIPI/COEX1; (D) VDD_GPIO U1.12 note only — **no U1 move without later explicit OK**. PM override: waive **only** GND×10; MUST-FIX ANT_FIT/AUX/AUX_FIT (RF Class C DNP place-later); P0.19/P0.22 leftover ratsnests are real GPIO opens (Package B helps). Hard gate still unconnected→0. Artifacts: `reports/PASS30X_PLACEMENT_PROPOSALS.md` (+ JSON).
 
@@ -1030,4 +1032,29 @@ Copper-only (no placement): P0.11 header stubs → P0.10/P0.17 → MAGPIO/MIPI/A
 
 **Artifacts:** `reports/PASS30X_PLACEMENT_PROPOSALS.md`, `reports/PASS30X_PLACEMENT_PROPOSALS.json`  
 **Next:** Hardware PM approve package(s) → execute placement pass (still no Gerbers until unconnected=0)
+
+## Pass30y — Package B ONLY place+reattach (2026-09-23 18:48 IST)
+
+**Goal:** Execute pass30x Package B (J13+J10+J11) as one atomic package with full reattach of Package B net lists. Preferred J13 (64,78.5); alt once (67,76) only if preferred fails Edge.Cuts/silk/pad clearance toward y=80. shorting=clearance=crossing=0 or full package revert. Protect Stage A, P0.15 west wrap, RF/U3, pass30r/u keeps. No Gerbers. No Package A/C/D. No U1 move.
+
+**Live XY before (measured):** J13(64.0, 76.0) · J10(116.0, 28.0) · J11(116.0, 46.0) · U1(36.0, 32.0)
+
+| Attempt | Landing | Mid DRC | Result |
+| --- | --- | --- | --- |
+| preferred | J13(64,78.5) J10/J11(113.46,*) | short=11 clr=3 cross=7 hole=4 (edge-class) | reverted → try alt |
+| alt (once) | J13(67,76) J10/J11(113.46,*) | short=16 clr=3 cross=4 hole=4 | **full revert** |
+| keep | J13(64,76) J10/J11(116,*) | — | pass30u keep restored |
+
+**Blockers (head):**
+- Preferred: P0.01 B@y78.5 × P0.18/19/22 stubs; P0.22 via@(112.5,32.5) × J10.3; P0.04 × P0.22 stub; hole_clearance on south pads
+- Alt: same J10 west vs P0.22 via@(112.5,32.5); J13.6 P0.21 × P0.01 via@(80.51,76.7); VDD_GPIO F reattach × GND/P0.22
+
+**Protect checks:** P0.15 west preserved; Stage A VDD2 vias + VDD_nRF via north OK; P0.22 + P0.19 copper untouched after revert; U1 unmoved.
+
+**Before/after unconnected:** 67→67 (shorting=0 clearance=0 crossing=0)
+
+**J13 landing kept:** none (both landings dirty)
+
+**Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30y-20260923-131619` / `.mcp-backups/pass30y-connect/pre-edit.kicad_pcb`  
+**Artifacts:** `reports/DRC_PASS30Y_BEFORE.json`, `DRC_PASS30Y_MID_PREF.json`, `DRC_PASS30Y_MID_ALT.json`, `DRC_PASS30Y_AFTER.json`, `reports/PASS30Y_SUMMARY.json`, `reports/PASS30Y_SUMMARY.md`, `scripts/final_pass30y.py`
 
