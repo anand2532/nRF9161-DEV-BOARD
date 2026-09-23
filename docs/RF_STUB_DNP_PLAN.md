@@ -5,7 +5,7 @@
 | **Date** | 2026-09-23 (Asia/Calcutta) |
 | **Author** | RF Power Engineer |
 | **Board** | nRF9161-DEV-BOARD (working copy `/workspace/kicad-projects/nRF9161-DEV-BOARD`) |
-| **Status** | **PLAN ONLY** — copper frozen (unconnected ≈ 67). No Gerbers. No `.kicad_pcb` / `.kicad_sch` edits in this deliverable. |
+| **Status** | **APPROVED by Hardware PM (2026-09-23)** — Layout executes as **pass30z** (after pass30y Package B finishes; not interleaved). No Gerbers until unconnected→0. RF re-reviews after copper. |
 | **Related** | `docs/RF_POWER_REVIEW.md` §Class C; `docs/SCHEMATIC_REVIEW.md` §C; `docs/FAB_STACKUP_NOTES.md`; `docs/PCB_LAYOUT_REVIEW.md` §3.4; `reports/REMAINING_OPENS_MATRIX.md`; `reports/DRC_PASS30W_AFTER.json` |
 
 ---
@@ -21,7 +21,7 @@ Policy (locked):
 - **Do not** rip 50 Ω trunks (L1/L2 series path, J2/J3/J5/J6, TP1 feeds) to “clear” DRC.
 - Solid **layer L2** (In1 GND) under ANT/AUX/GNSS remains **LOCKED**.
 
-This document is the Hardware PM gate package. Layout may apply a **tiny RF-only** copper edit only after **PM + RF** approve; RF re-reviews **after** copper, not before.
+Hardware PM approved this plan (2026-09-23). Sequencing: Layout finishes **pass30y Package B** (J13/J10/J11) first; RF-only copper is **pass30z** (or next idle after 30y), not interleaved with B. Layout then relocates/nudges C22/C23/C24 per §4–§7; RF re-reviews **after** that copper. Still no Gerbers until unconnected→0.
 
 ---
 
