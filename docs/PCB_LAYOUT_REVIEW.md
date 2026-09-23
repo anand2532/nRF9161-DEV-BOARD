@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-23 09:27 IST (Asia/Calcutta)  
+**Review date:** 2026-09-23 09:51 IST (Asia/Calcutta) — pass30-connect executed  
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,16 +14,16 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **80** | `reports/DRC_AFTER_CONNECT.json` (`unconnected_items` length; date `2026-09-18T02:01:29+05:30`); `reports/UNCONNECTED_AFTER_FINAL.csv` (80 data rows); `reports/FINAL_FAB_RELEASE.md` |
+| **unconnected_items** | **80** | `reports/DRC_PASS30_AFTER.json` (live `kicad-cli` 9.0.2); was **79** at pass30 baseline before U3 pads opened COEX0/VIN |
 | **shorting_items** | **0** | Same JSON + FINAL_FAB_RELEASE |
-| **clearance** | **0** | Same |
+| **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
-| via_dangling | **82** | `DRC_AFTER_CONNECT.json` violations (fold into next routing pass after / with connectivity) |
-| drill_out_of_range | **2** | Same — vias with **0.25 mm** hole (board min **0.30 mm**) |
-| via_diameter | **2** | Same — vias with **0.45 mm** diameter (board min **0.50 mm**); same two vias as drill violations |
+| via_dangling | **80** | `DRC_PASS30_AFTER.json` |
+| drill_out_of_range | **0** | Pass30 before/after — P0.02 & nRESET already ≥0.50/0.30 |
+| via_diameter | **0** | Same |
 | track_dangling | 13 | Same JSON (includes load-bearing P0.15 west-wrap stubs) |
 | silk_overlap / silk_over_copper | 147 / 36 | Cosmetics — after copper freeze |
-| Live copper | 777 segments, 250 vias | Parsed from live `nRF9161-DEV-BOARD.kicad_pcb` |
+| Live copper | ~780 segments, ~250 vias | Live after pass30 |
 
 ### Count reconciliation (do not mix eras)
 
@@ -230,52 +230,52 @@ Per Hardware PM / DFM (2026-09-23): after each connectivity move, **also**:
 
 ---
 
-## 7. Session outcome (Layout Engineer)
+## 7. Session outcome — `layout-pass30-connect` (2026-09-23 09:51 IST)
 
 | Item | Result |
 | --- | --- |
-| PCB copper edited | **No** (review-only) |
-| Backup taken | N/A (no edit); prior backups exist under `.mcp-backups/` |
-| Nets closed | **None** |
-| Unconnected before → after | **80 → 80** |
-| Shorting | **0** (unchanged) |
-| Why no auto-route | `pcbnew` / `kicad-cli` missing on box; remaining opens sit on P0.15 wrap, RF keepout, and courtyard congestion — blind sexp edits are reckless |
-| DFM fold-in acknowledged | Next connect pass must also attack `via_dangling`×82 and resize the two 0.45/0.25 vias (`P0.02` @ 40.75,43.5; `nRESET` @ 45.68,15.8) |
-| This document | `docs/PCB_LAYOUT_REVIEW.md` |
+| PCB copper edited | **Yes** (pcbnew 9.0.2 + `kicad-cli`) |
+| Backup | `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30-connect-20260923-094344` (+ `.mcp-backups/pass30-connect/start.kicad_pcb`) |
+| **Before → after unconnected** | **79 → 80** (`reports/DRC_PASS30_BEFORE.json` / `DRC_PASS30_AFTER.json`) |
+| Shorting before → after | **0 → 0** |
+| Clearance before → after | **6 → 0** (zone refill; no new shorts) |
+| via_dangling | **80 → 80** |
+| drill_out_of_range / via_diameter | **0 → 0** (already fixed pre-pass) |
+| Gerbers | **Not generated** |
+
+### Placed / closed
+
+| Item | Detail |
+| --- | --- |
+| **U3** | `TPS22919DCKR` footprint `SOT-363_SC-70-6` @ **(26.5, 47.0)** mm, orient 180° (east of RF keepout) |
+| **FB5** | `L_0603_1608Metric` → **`L_0402_1005Metric`** @ **(23.8, 47.65)** orient 180° |
+| Nets closed | **`GNSS_VBIAS_SRC`** U3.VOUT→FB5.1; **`GNSS_VBIAS`** FB5.2→bias-T (B.Cu); U3.GND stub |
+| Class C | Stub attempts on C21–C24/C31–C32 where clearance allowed (DNP policy; trunks not ripped) |
+| P0.15 west wrap | **Preserved** |
+
+### Deferred (honest)
+
+- **U3.VIN (`VDD_GPIO`)** and **U3.ON (`COEX0`)** — courtyard congestion (P0.00/P0.04/P0.13 walls + via forest). Ratsnest remains.
+- Class F surgical (`VIN_FILT`, `VIN_F`, `SWDCLK`, `nRESET`, `P0.02`, `P0.08`) — blocked geometry; not forced.
+- SIM / ADC / MAGPIO / MIPI / COEX header routes — stopped before risky RF edits.
+- Schematic `04_GNSS`: U3 VIN/VOUT/GND global labels do not appear in netlist (ON=`COEX0` does); PCB nets assigned manually to match approved topology.
+
+### Scripts / reports
+
+- `scripts/final_pass30.py`, `scripts/final_pass30b.py`
+- `reports/PASS30_SUMMARY.json`, `reports/DRC_PASS30_BEFORE.json`, `reports/DRC_PASS30_AFTER.json`
+- Also `/tmp/drc_pass30_before.json`, `/tmp/drc_pass30_after.json`
+
+**Success gate:** clear progress (U3 placed + FB5 0402 + bias path closed) with shorts held at 0; unconnected +1 from new U3 EN/VIN pads still open.
 
 ---
 
-## 8. RF layout locks for pass30 (Hardware PM + RF Power — 2026-09-23)
+## 8. RF layout locks (still in force)
 
-**Status:** Locked for when copper tooling returns. **No copper until** pcbnew+kicad-cli on shared box **or** vyomos local exec. Source: Hardware PM handoff; details in `docs/RF_POWER_REVIEW.md` §Layout pass30 coordination.
-
-1. **West RF keepout (mandatory):** x ≈ **0–24.2 mm**, y ≈ **20–64 mm**.
-   - No digital under matching on **F.Cu**.
-   - MAGPIO / MIPI / COEX: **north-then-east on B.Cu**.
-   - Do **not** split **In1 GND** under 50 Ω trunks.
-   - Stay ≥ **0.5 mm** outside matching courtyards.
-
-2. **Class C DNP 50 Ω shunts C21–C24, C31–C32:** STUB-TERMINATE ≤ **2 mm** same-net stub to the RF-side pad; GND pad to solid GND. Do **not** leave open, populate, or rip trunks.
-
-3. **GNSS bias** remains **Schematic Engineer** scope (not layout).
-
-Pass30 sequence otherwise unchanged (VIN_FILT → … → Class C only after RF confirms — now locked as stub-terminate above).
+1. West RF keepout x≈**0–24.2**, y≈**20–64** — respected (U3 placed at x=26.5).
+2. Class C DNP stub-terminate policy — applied where clear.
+3. Do not split In1 GND under 50 Ω; no digital under matching on F.Cu.
 
 ---
 
-
-### Pass30 add-ons (Schematic complete — Hardware PM 2026-09-23)
-
-When tooling unlocks copper (still **idle** until pcbnew/local exec), **after backup** add to sequence:
-
-1. **Place/route U3** `TPS22919DCKR` (SC-70-6) near GNSS bias-T:
-   - VIN = `VDD_GPIO`
-   - VOUT → **FB5** (0402) → `GNSS_VBIAS`
-   - EN = `COEX0`
-2. **FB5 footprint:** update to **0402** land if PCB still has an older size.
-3. **Stub-terminate** DNP **C21–C24 / C31–C32** per RF locks (§8): ≤2 mm same-net stub to RF-side pad; GND pad to solid GND.
-
-Note: unconnected remains **80** today; placing U3 will add nets until those nets are routed. No Gerbers until unconnected = 0.
-
-
-*End of PCB Layout Review — 2026-09-23 IST*
+*End of PCB Layout Review — pass30-connect 2026-09-23 IST*

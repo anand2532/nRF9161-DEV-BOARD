@@ -1,0 +1,61 @@
+{
+  "pass": "layout-pass30-connect",
+  "before": {
+    "unconnected_items": 79,
+    "shorting_items": 0,
+    "clearance": 6,
+    "via_dangling": 80,
+    "drill_out_of_range": 0,
+    "via_diameter": 0,
+    "hole_clearance": 0,
+    "track_dangling": 11
+  },
+  "after": {
+    "unconnected_items": 80,
+    "shorting_items": 0,
+    "clearance": 0,
+    "via_dangling": 80,
+    "drill_out_of_range": 0,
+    "via_diameter": 0,
+    "hole_clearance": 0,
+    "track_dangling": 15
+  },
+  "placed": [
+    "U3 TPS22919DCKR SOT-363_SC-70-6 @ (26.5,47) orient 180",
+    "FB5 retargeted L_0603_1608Metric \u2192 L_0402_1005Metric @ (23.8,47.65) orient 180"
+  ],
+  "nets_closed": [
+    "GNSS_VBIAS_SRC (U3.VOUT pad6 \u2192 FB5.1)",
+    "GNSS_VBIAS (FB5.2 \u2192 bias-T via B.Cu)",
+    "U3.GND stub into pour"
+  ],
+  "class_c_stubs": [
+    "C21",
+    "C22",
+    "C23",
+    "C24",
+    "C31",
+    "C32 attempted; stubs where clearance allowed"
+  ],
+  "deferred": [
+    "U3.VIN (VDD_GPIO) \u2014 courtyard congestion (P0.00/P0.04 walls, U1 south)",
+    "U3.ON (COEX0) \u2014 blocked by P0.04/P0.13/VDD vias near (28\u201334,41\u201347)",
+    "VIN_FILT / VIN_F / SWDCLK / nRESET / P0.02 / P0.08 Class F \u2014 geometric congestion",
+    "SIM_* private exits \u2014 courtyard wall",
+    "ADC / MAGPIO/MIPI/COEX header routes \u2014 deferred (RF keepout + P0.15 wrap preserved)",
+    "Schematic note: U3 VIN/VOUT/GND labels in 04_GNSS do not netlist-connect (COEX0 ON does); PCB nets assigned manually"
+  ],
+  "vias": {
+    "drill_via_diameter": "already \u22650.50/0.30 before pass (no remaining drill_out_of_range/via_diameter)",
+    "clearance": "baseline 6 via/zone clearances cleared to 0 after zone refill"
+  },
+  "p0_15_wrap": "preserved (B.Cu west courtyard snake intact)",
+  "gerbers": false,
+  "backup": ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30-connect-20260923-094344",
+  "drc": [
+    "reports/DRC_PASS30_BEFORE.json",
+    "reports/DRC_PASS30_AFTER.json",
+    "/tmp/drc_pass30_before.json",
+    "/tmp/drc_pass30_after.json"
+  ]
+}
