@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-23 11:44 IST (Asia/Calcutta) — pass30m executed (reverted)
+**Review date:** 2026-09-23 11:52 IST (Asia/Calcutta) — pass30n executed
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,7 +14,7 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **74** | `reports/DRC_PASS30M_AFTER.json` (live `kicad-cli` 9.0.2); nRESET reverted; Stage A+pass30i–30l kept |
+| **unconnected_items** | **73** | `reports/DRC_PASS30M_AFTER.json` (live `kicad-cli` 9.0.2); nRESET reverted; Stage A+pass30i–30l kept |
 | **shorting_items** | **0** | Same JSON |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
@@ -50,6 +50,8 @@ Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.j
 **Pass delta (pass30i):** ONE atomic P0.08 + ENABLE/COEX2 co-route (Stage A kept; no placement). Ripped ENABLE V@62.5 / V@76.8 / H@y28 + COEX2 V@72; placed P0.08 B@y30.25; restored with F via-bridges (ENABLE@x62.5 ys/yn=29.6/30.9, COEX2@x72 same, ENABLE east F-hop to x=79.2). **Before/After unconnected:** 78/77 · shorting/clearance/crossing 0. Closed P0.08 U1↔SW3/R14; J12.9 still open. P0.15 west preserved. Details: `reports/PASS30I_SUMMARY.json`.
 
 **Pass delta (pass30j):** ONE honest cycle — stitch P0.08 island→J12.9. B column @x=65.2 with F via-hops over COEX2/COEX0/P0.18+P0.17; rip+restore P0.15 bottom H (wide F-bridge 61.5–68.5 @y77.45) + P0.01 (final F-bridge 24.5–27.2 @y78.5 + column U-jog F@y74.5); B H@y79 → via(26.32,78) → F to J12.9. **Before/After unconnected:** 77/76 · shorting/clearance/crossing 0. P0.15 west wrap preserved (21 segs). VIN_F/SWDCLK skipped (not cheap). Details: `reports/PASS30J_SUMMARY.json`.
+
+**Pass delta (pass30n):** ONE atomic nRESET co-route (F@y10.8 under VDD_nRF/JP1). Preflight rip (3): P0.15 (72.0,15.35)→(72.0,7.2), COEX2 (72.0,24.6)→(105.1,24.6), P0.01 (86.14,15.2)→(105.55,15.2). nRESET **KEPT** B@y12.6 + F clearance hop + F-hop 69–71.5; COEX2/P0.01/P0.15 east co-restored. **Before/After unconnected:** 74/73 · shorting/clearance/crossing 0. P0.02 skipped (no free corridor). Stage A + pass30i–30l kept. P0.15 west wrap preserved. No Gerbers. Details: `reports/PASS30N_SUMMARY.json`.
 
 **Pass delta (pass30m):** ONE atomic nRESET co-route. Preflight rip list (1 seg) recorded before copper edit: P0.15 B.Cu (72.0,15.35)→(72.0,7.2). Ripped → routed nRESET B@y12.6 + F-hop 69.0–71.5 over VDD_GPIO/VIN_F → P0.15 F-bridge restore → mid DRC clearance=1 crossing=2 (shorting=0) → **atomic revert**. Colliding copper: nRESET×COEX2, nRESET×P0.01 on B; clearance vs VDD_nRF via@(57.95,12.0). P0.02 not attempted. **Before/After unconnected:** 74/74 · shorting/clearance/crossing 0. Stage A + pass30i–30l kept. P0.15 west wrap preserved. No Gerbers. Details: `reports/PASS30M_SUMMARY.json`.
 
@@ -666,3 +668,41 @@ Atomic nRESET B@y12.6 co-route with preflight-recorded rip list. Restore ripped 
 - Backup: `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30m-20260923-114330`
 - DRC: `reports/DRC_PASS30M_BEFORE.json`, `reports/DRC_PASS30M_MID.json`, `reports/DRC_PASS30M_AFTER.json`
 - Summary: `reports/PASS30M_SUMMARY.json`
+
+
+---
+
+## Pass30n — nRESET co-route + COEX2/P0.01 rip-restore (2026-09-23 11:52 IST)
+
+### Goal
+Atomic nRESET with ≥0.15 mm clearance to VDD_nRF via@(57.95,12) d=0.8. Rip P0.15 east + COEX2 + P0.01 crossed segs; co-restore before DRC. shorting=0 clearance=0 crossing=0. No Gerbers.
+
+### Preflight rip list (recorded before copper edit)
+- `P015_EAST_B_V_72`: P0.15 B.Cu (72.0,15.35)→(72.0,7.2) w=0.18 — B vertical crosses nRESET corridor @y=12.6; local east stub rip allowed (as pass30m)
+- `COEX2_B_H_246`: COEX2 B.Cu (72.0,24.6)→(105.1,24.6) w=0.18 — B H crossed by nRESET east attach V@x=101.68 y=12.6→26.0 (pass30m mid crossing)
+- `P001_B_H_152`: P0.01 B.Cu (86.14,15.2)→(105.55,15.2) w=0.18 — B H crossed by nRESET east attach V@x=101.68 y=12.6→26.0 (pass30m mid crossing)
+
+### Attempt
+- Clearance: F@y=10.8 from x=53.65→59.4 under JP1/VDD_nRF (no via near JP1 pads; expect clr ~0.71 mm to via d=0.8)
+- F-hop 69.0–71.5 over VDD_GPIO/VIN_F (no rip)
+- Co-restore: COEX2 F-hop @y22.5 south of SW2; P0.01 F-hop @y15.2; P0.15 east F-bridge
+
+### Result
+- **nRESET closed/KEPT:** yes
+- **Reverted:** no
+- **Before unconnected:** 74
+- **Mid/After unconnected:** 73 (shorting=0 clearance=0 crossing=0)
+- **P0.15 west segs:** {'before': 21, 'after': 21, 'preserved': True}
+- **P0.02:** Skipped — no free corridor identified without additional rips this cycle (only after nRESET KEPT; defer)
+- **Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30n-20260923-115144`
+- **DRC:** `reports/DRC_PASS30N_BEFORE.json`, `reports/DRC_PASS30N_MID.json`, `reports/DRC_PASS30N_AFTER.json`
+- **Summary:** `reports/PASS30N_SUMMARY.json`
+
+### Signal deltas
+| Net | Δ unconnected |
+| --- | --- |
+| nRESET | -1 |
+| P0.02 | 0 |
+| COEX2 | 0 |
+| P0.01 | 0 |
+| P0.15 | 0 |
