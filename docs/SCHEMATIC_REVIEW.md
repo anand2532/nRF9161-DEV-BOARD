@@ -227,8 +227,7 @@ Layout stubs pads; parts stay unpopulated.
 
 ### F) ERC
 
-- `kicad-cli` **not installed** in this environment — could not run `kicad-cli sch erc`.
-- Prior authoritative report remains `reports/ERC_kicad-cli.rpt` (stale vs this edit); re-run ERC in KiCad before fab.
+- Later same-day pass ran `/usr/bin/kicad-cli sch erc` — see **U3 TPS22919 netlist connectivity fix** below (`reports/ERC_U3_after.rpt`, 0 errors). Prior `reports/ERC_kicad-cli.rpt` may still be stale for non-U3 items.
 
 ### Files modified (this pass)
 
@@ -247,6 +246,59 @@ Layout stubs pads; parts stay unpopulated.
 4. Layout/DFM: drive `unconnected_items` → 0 before fab — **do not claim fab-ready**.
 
 
+
+---
+
+## Schematic Engineer pass — 2026-09-23 (IST) — U3 TPS22919 netlist connectivity fix
+
+**Problem (Layout):** PCB Layout reported **U3** VIN/VOUT/GND (and risk to EN) had no schematic nets — they had to assign PCB nets manually.
+
+### Root cause
+
+Embedded symbol `power_switch:TPS22919DCK` pin numbers/names match TI DS SC-70-6 (1 IN/VIN, 2 GND, 3 ON, 4 NC, 5 QOD, 6 VOUT). **Not** a wrong pinout.
+
+U3 instance at `(15.24, 38.1)`. KiCad places symbol pins with **library Y-up → schematic Y-down flip**. Actual pin tips:
+
+| Pin | Name | Actual sch tip | Labels/NCs were at (wrong) |
+| --- | --- | --- | --- |
+| 1 | VIN | `(7.62, 35.56)` | `VDD_GPIO` @ `(7.62, 40.64)` |
+| 2 | GND | `(15.24, 45.72)` | `GND` @ `(15.24, 30.48)` |
+| 3 | ON | `(7.62, 38.10)` | `COEX0` @ `(7.62, 38.10)` — already correct |
+| 4 | NC | `(22.86, 38.10)` | `no_connect` OK |
+| 5 | QOD | `(22.86, 40.64)` | `no_connect` was @ `(22.86, 35.56)` (**on VOUT**) |
+| 6 | VOUT | `(22.86, 35.56)` | `GNSS_VBIAS_SRC` @ `(22.86, 40.64)` (**on QOD**) |
+
+Labels were placed with naive `origin + pin_at` (no Y-flip). Sheet had **zero wires** near U3, so nothing rescued the miss. Result: netlist showed `unconnected-(U3-VIN-Pad1)`, `unconnected-(U3-VOUT-Pad6)`, `unconnected-(U3-GND-Pad2)`; VOUT also got `no_connect` from the misplaced NC marker.
+
+### Fix (`schematic/04_GNSS.kicad_sch` only — not `schematics/`)
+
+- Moved global labels to correct tips (via short stub wires): `VDD_GPIO`←VIN, `GNSS_VBIAS_SRC`←VOUT, `GND`←GND; kept `COEX0`←ON.
+- Moved QOD `no_connect` to `(22.86, 40.64)`; NC stays `(22.86, 38.10)`.
+- Nudged U3 Reference/Value text off pin tips.
+- Topology unchanged: `VDD_GPIO`→U3.VIN / U3.VOUT→`GNSS_VBIAS_SRC`→FB5 / ON←`COEX0` / GND / NC+QOD float.
+
+### Netlist proof (`kicad-cli sch export netlist`, `reports/netlist_after_u3.xml`)
+
+- **U3.1 VIN** → net `VDD_GPIO` (with U2.5 OUT, U1.12, …)
+- **U3.2 GND** → net `GND`
+- **U3.3 ON** → net `COEX0` (with U1.93, R4.1, …)
+- **U3.6 VOUT** → net `GNSS_VBIAS_SRC` (with FB5.1)
+- **U3.4 NC / U3.5 QOD** → intentional unconnected + `no_connect`
+
+### ERC
+
+- Before: `reports/ERC_U3_before.rpt` — **4 errors** (U3 VIN/GND pin_not_connected + power_pin_not_driven).
+- After: `reports/ERC_U3_after.rpt` — **0 errors** (107 warnings remain, mostly missing system libs / dangling globals elsewhere).
+
+### Files modified (this pass)
+
+- `schematic/04_GNSS.kicad_sch` — U3 label/wire/no_connect coords
+- `docs/SCHEMATIC_REVIEW.md` — this section
+- `reports/netlist_before_u3.xml`, `reports/netlist_after_u3.xml`, `reports/ERC_U3_before.rpt`, `reports/ERC_U3_after.rpt`
+
+**PCB Layout next:** re-import netlist / update PCB from schematic so U3 pads pick up `VDD_GPIO`, `GNSS_VBIAS_SRC`, `COEX0`, `GND` automatically — remove any manual net overrides on those pads.
+
+
 ## Recommended next fixes (severity order)
 
 1. **High — GNSS bias control:** **DONE on schematic** (U3 TPS22919DCKR); PCB must still place/route U3 + `COEX0` + FB5 0402 land.
@@ -260,7 +312,7 @@ Layout stubs pads; parts stay unpopulated.
 
 ## Open questions / unresolved without KiCad GUI
 
-- Could not re-execute `kicad-cli sch erc` in this environment (package not installed; no root for apt). Conclusions use static S-expression connectivity (pin↔global_label with library Y-flip) + existing reports.
+- `kicad-cli sch erc` / netlist **were** run for the U3 connectivity fix (2026-09-23); see reports `ERC_U3_after.rpt` / `netlist_after_u3.xml`.
 - Exact Nordic DK GNSS bias switch topology (part number) not copied here — needs RF/Power engineer sign-off on the COEX0 gate implementation.
 - Whether J13.17 `VDD_nRF` was a deliberate “expose raw rail” feature: overridden to match README; restore only with explicit PM + silkscreen change.
 
