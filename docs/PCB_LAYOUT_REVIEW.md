@@ -399,3 +399,45 @@ Per Hardware PM / DFM (2026-09-23): after each connectivity move, **also**:
 **Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30f-20260923-103606`  
 **DRC:** `reports/DRC_PASS30F_BEFORE.json`, `reports/DRC_PASS30F_AFTER.json`  
 **Summary:** `reports/PASS30F_SUMMARY.json`
+
+
+---
+
+## Pass30g (2026-09-23 IST)
+
+**Goal:** ONE honest cycle — apply Hardware-PM-approved four placement moves, zone refill, close P0.08 (then VIN_F/SWDCLK if cheap). shorting=0 clearance=0. No Gerbers. Protect P0.15 west wrap + RF/U3.
+
+| Metric | Before | After (restored) |
+| --- | ---: | ---: |
+| unconnected_items | **78** | **78** |
+| shorting_items | 0 | 0 |
+| clearance | 0 | 0 |
+
+**Result: STOP — placement set not DRC-legal; board reverted.**
+
+### What was attempted
+| Ref | Requested | Outcome |
+| --- | --- | --- |
+| TP11 | (60,30)→(60,32.5) | Applied in bundle; **reverted** (bundle shorting) |
+| R2 | (58,26)→(58,24) | **SKIPPED** — R2.1 VIN_FILT @(58,22.54) overlaps TP20 VDD_nRF @(58,22) |
+| C6 | (51,27)→(49,27) | Applied; VDD1 reattach along x≈48.7 shorts **DEC0/P0.11**; **reverted** |
+| TP19 | (52,22)→(54.5,22) | Applied; pad shorts **VDD2 via@(54.50,21.20)**; **reverted** |
+| VDD_nRF via | (69.3,30)→(69.3,28) | Attempted with bundle; **reverted** |
+
+Mid-attempt DRC (not kept): shorting=11, tracks_crossing=7.
+
+### P0.08
+Not closable this cycle. Even prior /tmp probes with TP11/C6/TP19 + via jog + ENABLE/COEX2 rip remain walled by **VDD2 verticals** @x=52.22 and @x=54.50 on B@y≈30.
+
+### Next proposals (need Hardware PM)
+1. **TP20** (58,22)→(56,20) — unlock R2→(58,24)
+2. **Revise TP19** target — (54.5,22) illegal; try (56.5,22) or (52,20)
+3. **VDD2 via-bridge / east U-jog** at y≈30 (primary B corridor wall)
+4. **C6 VDD1 reattach** via existing via@(49.2,25.6) — avoid DEC0 column
+5. Optional **GND via** (80,30)→(80,32.5) for dest approach
+
+**Constraints held on live board:** shorting=0; clearance=0; P0.15 west wrap 21 segs; RF keepout / U3 untouched; no Gerbers; no footprint moves left on board.
+
+**Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30g-20260923-104551`  
+**DRC:** `reports/DRC_PASS30G_BEFORE.json`, `reports/DRC_PASS30G_MID.json`, `reports/DRC_PASS30G_AFTER.json`  
+**Summary:** `reports/PASS30G_SUMMARY.json`

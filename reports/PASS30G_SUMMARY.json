@@ -1,0 +1,250 @@
+{
+  "pass": "layout-pass30g",
+  "timestamp_ist": "2026-09-23 10:56 IST",
+  "one_honest_cycle": true,
+  "before": {
+    "unconnected_items": 78,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 78
+  },
+  "mid_attempt_then_reverted": {
+    "note": "Pass30g mid-attempt after TP11/C6/TP19 moves + VDD_nRF via jog + reattach; board REVERTED.",
+    "unconnected_items": 78,
+    "shorting_items": 11,
+    "clearance": 0,
+    "tracks_crossing": 7,
+    "via_dangling": 78,
+    "root_causes": [
+      "TP19@(54.5,22) pad shorts VDD2 via@(54.50,21.20)",
+      "C6 VDD1 reattach x=48.68 y27\u219231 crosses DEC0 / P0.11",
+      "VDD_nRF stitch (69.3,30)-(69.3,28) crosses VIN_FILT F"
+    ]
+  },
+  "after": {
+    "unconnected_items": 78,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 78
+  },
+  "success_gate": "unconnected < 78 with shorting=0 \u2014 NOT MET (board restored; no net progress)",
+  "reverted": true,
+  "moves_requested_pm_approved": [
+    {
+      "ref": "TP11",
+      "from": [
+        60.0,
+        30.0
+      ],
+      "to": [
+        60.0,
+        32.5
+      ],
+      "result": "applied then REVERTED (bundle shorting)"
+    },
+    {
+      "ref": "R2",
+      "from": [
+        58.0,
+        26.0
+      ],
+      "to": [
+        58.0,
+        24.0
+      ],
+      "result": "SKIPPED \u2014 R2.1@(58,22.54) overlaps TP20@(58,22) (VIN_FILT vs VDD_nRF)"
+    },
+    {
+      "ref": "C6",
+      "from": [
+        51.0,
+        27.0
+      ],
+      "to": [
+        49.0,
+        27.0
+      ],
+      "result": "applied then REVERTED \u2014 VDD1 reattach shorts DEC0/P0.11"
+    },
+    {
+      "ref": "TP19",
+      "from": [
+        52.0,
+        22.0
+      ],
+      "to": [
+        54.5,
+        22.0
+      ],
+      "result": "applied then REVERTED \u2014 pad shorts VDD2 via@(54.50,21.20)"
+    }
+  ],
+  "vias_jogged_attempted": [
+    {
+      "net": "VDD_nRF",
+      "from": [
+        69.3,
+        30.0
+      ],
+      "to": [
+        69.3,
+        28.0
+      ],
+      "result": "REVERTED with bundle"
+    }
+  ],
+  "closed": [],
+  "stop": true,
+  "blocked": {
+    "P0.08": {
+      "status": "STOP \u2014 cannot apply approved placement set cleanly; corridor still VDD2-walled even in probes",
+      "placement_blockers": [
+        {
+          "ref": "R2",
+          "geometry": "target puts pad1 VIN_FILT @(58.0,22.54) overlapping TP20 VDD_nRF @(58.0,22.0) (1.5mm TP + 1206 pad)"
+        },
+        {
+          "ref": "TP19",
+          "geometry": "target @(54.5,22.0) pad overlaps VDD2 via @(54.50,21.20) diam~0.8 \u2014 center dist 0.80mm"
+        },
+        {
+          "ref": "C6",
+          "geometry": "target @(49,27) OK vs C5, but VDD1 fanout to C5 along x\u224848.7 crosses DEC0/P0.11 F copper"
+        }
+      ],
+      "routing_blockers_if_moves_were_clean": {
+        "VDD2_walls_B": [
+          [
+            [
+              52.22,
+              26.75
+            ],
+            [
+              52.22,
+              32.0
+            ]
+          ],
+          [
+            [
+              54.5,
+              21.2
+            ],
+            [
+              54.5,
+              32.0
+            ]
+          ]
+        ],
+        "GND_via": [
+          80.0,
+          30.0
+        ],
+        "note": "Prior /tmp probes with TP11/C6/TP19 + VDD_nRF via jog + ENABLE/COEX2 rip still failed B@y30 due to VDD2 verticals; inter-column gap not enterable from west"
+      },
+      "next_proposals": [
+        {
+          "ref": "TP20",
+          "from": [
+            58.0,
+            22.0
+          ],
+          "to": [
+            56.0,
+            20.0
+          ],
+          "why": "Unlock R2\u2192(58,24) without VIN_FILT/VDD_nRF pad short"
+        },
+        {
+          "ref": "TP19",
+          "from": [
+            52.0,
+            22.0
+          ],
+          "revised_to": [
+            56.5,
+            22.0
+          ],
+          "why": "Original PM target (54.5,22) hits VDD2 via@(54.5,21.2); shift further east or to (52,20)"
+        },
+        {
+          "action": "VDD2 via-bridge or east U-jog at y\u224830",
+          "segments": [
+            [
+              [
+                52.22,
+                26.75
+              ],
+              [
+                52.22,
+                32.0
+              ]
+            ],
+            [
+              [
+                54.5,
+                21.2
+              ],
+              [
+                54.5,
+                32.0
+              ]
+            ]
+          ],
+          "why": "Primary P0.08 B corridor wall once placement is legal"
+        },
+        {
+          "action": "C6 VDD1 reattach plan",
+          "detail": "After C6\u2192(49,27), route via existing VDD1 via@(49.2,25.6) south \u2014 avoid x=48.7 vertical through DEC0/C13"
+        },
+        {
+          "action": "GND via jog",
+          "from": [
+            80.0,
+            30.0
+          ],
+          "to": [
+            80.0,
+            32.5
+          ],
+          "why": "Clear P0.08 dest approach"
+        }
+      ]
+    },
+    "VIN_F": "Not attempted \u2014 P0.08 STOP / placement set illegal",
+    "SWDCLK": "Not attempted \u2014 P0.08 STOP / placement set illegal"
+  },
+  "net_unconnected_delta": {},
+  "signal_net_deltas": {},
+  "p015_west_segs": {
+    "before": 21,
+    "after": 21,
+    "preserved": true
+  },
+  "enable_f_bridge": "untouched on live board (revert)",
+  "rf_keepout_u3": "untouched",
+  "gerbers": false,
+  "notes": [
+    "ONE honest cycle. Attempted PM-approved four-move set.",
+    "R2 skipped immediately (TP20 collision). TP11+C6+TP19+VDD_nRF via jog applied with reattach \u2192 DRC shorting=11 tracks_crossing=7.",
+    "Live board REVERTED to .mcp-backups/...pre-pass30g-20260923-104551. shorting=0 clearance=0 restored.",
+    "STOP \u2014 do not thrash. Need revised placement approvals before retrying P0.08.",
+    "Class-E GND zone-island noise @\u2248(-0.05,-0.05) unchanged (10); ignored per brief."
+  ],
+  "backup": ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30g-20260923-104551",
+  "drc": [
+    "reports/DRC_PASS30G_BEFORE.json",
+    "reports/DRC_PASS30G_MID.json",
+    "reports/DRC_PASS30G_AFTER.json"
+  ],
+  "files_touched": [
+    "nRF9161-DEV-BOARD.kicad_pcb",
+    "reports/DRC_PASS30G_BEFORE.json",
+    "reports/DRC_PASS30G_MID.json",
+    "reports/DRC_PASS30G_AFTER.json",
+    "reports/PASS30G_SUMMARY.json",
+    "docs/PCB_LAYOUT_REVIEW.md",
+    "scripts/final_pass30g.py"
+  ]
+}

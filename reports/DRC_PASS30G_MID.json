@@ -1,0 +1,13 @@
+{
+  "note": "Pass30g mid-attempt after TP11/C6/TP19 moves + VDD_nRF via jog + reattach; board REVERTED.",
+  "unconnected_items": 78,
+  "shorting_items": 11,
+  "clearance": 0,
+  "tracks_crossing": 7,
+  "via_dangling": 78,
+  "root_causes": [
+    "TP19@(54.5,22) pad shorts VDD2 via@(54.50,21.20)",
+    "C6 VDD1 reattach x=48.68 y27\u219231 crosses DEC0 / P0.11",
+    "VDD_nRF stitch (69.3,30)-(69.3,28) crosses VIN_FILT F"
+  ]
+}
