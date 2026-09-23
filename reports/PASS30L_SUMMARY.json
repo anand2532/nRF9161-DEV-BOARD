@@ -1,0 +1,403 @@
+{
+  "pass": "layout-pass30l",
+  "timestamp_ist": "2026-09-23 11:40 IST",
+  "one_honest_cycle": true,
+  "keep_stage_A": true,
+  "keep_pass30i_30k": true,
+  "no_placement": true,
+  "no_j8_move": true,
+  "order": [
+    "SWDCLK",
+    "nRESET",
+    "P0.02",
+    "option_C"
+  ],
+  "closed": [
+    "SWDCLK"
+  ],
+  "blocked": {
+    "nRESET": "Corridor @y=12.6 failed clean: shorting=1 clearance=1 crossing=3 nRESET_unc=None (was 1). {\"west_island\": \"U1.32/J8.8/C39 bbox~(38.2,7.3)-(53.6,26.8)\", \"east_island\": \"R5.1/TP9 bbox~(101.7,26.0)-(103.3,58.8)\", \"gap_mm\": \"~48 mm east-west through ENABLE/VIN_FILT/VDD2/P0.15/VIN_F via forest\"}",
+    "P0.02": "Not attempted \u2014 Class-F restore failures=1 or nRESET not closed; stop thrash",
+    "COEX0": "deferred_geometry"
+  },
+  "proposals": [],
+  "restores": {},
+  "reverted_nets": [
+    "nRESET"
+  ],
+  "class_f_restore_failures": 1,
+  "stop": true,
+  "notes": [
+    "SWDCLK closed: unconnected 75\u219274",
+    "Option C candidates (1-unc signal): ['MAGPIO1', 'MIPI_VIO', 'AUX_FIT', 'P0.16', 'P0.26', 'SIM_RST', 'MIPI_SCLK', 'P0.27']"
+  ],
+  "backup": ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30l-20260923-114002",
+  "p015_west_segs": {
+    "before": 21,
+    "after": 21,
+    "preserved": true
+  },
+  "stage_a_check_before": {
+    "VDD_nRF_via_north": true,
+    "VDD2_vias": 2,
+    "VDD2_present": true
+  },
+  "before": {
+    "unconnected_items": 75,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 73
+  },
+  "swdclk": {
+    "X_west": 34.2,
+    "segments": [
+      "F (37.75,26.75)->(37.75,24.8)",
+      "via(37.75,24.8) B->(34.2,24.8)->(34.2,19.8)",
+      "via F-hop over VDD_GPIO H@19.13: (34.2,19.8)->(34.2,18.4)",
+      "B (34.2,18.4)->(34.2,1.5) via",
+      "F (34.2,1.5)->(53.65,1.5)->(53.65,4.73) into existing SWDCLK via"
+    ],
+    "notes": "F/mixed detour north of J8.3 GND@(48.05,4.73); no J8 move; no VDD_GPIO rip"
+  },
+  "mid_swdclk": {
+    "unconnected_items": 74,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 73
+  },
+  "after_swdclk": {
+    "unconnected_items": 74,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 73
+  },
+  "nreset_gap": {
+    "west_island": "U1.32/J8.8/C39 bbox~(38.2,7.3)-(53.6,26.8)",
+    "east_island": "R5.1/TP9 bbox~(101.7,26.0)-(103.3,58.8)",
+    "gap_mm": "~48 mm east-west through ENABLE/VIN_FILT/VDD2/P0.15/VIN_F via forest"
+  },
+  "nreset_attempt": {
+    "y": 12.6,
+    "f_hops": [
+      [
+        61.0,
+        62.9
+      ],
+      [
+        69.0,
+        72.0
+      ]
+    ],
+    "attach": "F (53.65,10.8)->(53.65,12.6) via + B corridor to R5"
+  },
+  "mid_nreset": {
+    "unconnected_items": 73,
+    "shorting_items": 1,
+    "clearance": 1,
+    "tracks_crossing": 3,
+    "via_dangling": 73
+  },
+  "option_c_candidates": [
+    "MAGPIO1",
+    "MIPI_VIO",
+    "AUX_FIT",
+    "P0.16",
+    "P0.26",
+    "SIM_RST",
+    "MIPI_SCLK",
+    "P0.27"
+  ],
+  "coex0_segs": [
+    [
+      26.2,
+      38.0,
+      33.0,
+      38.0,
+      0.18
+    ],
+    [
+      33.0,
+      38.0,
+      33.0,
+      43.0,
+      0.18
+    ],
+    [
+      29.81,
+      22.0,
+      31.11,
+      22.0,
+      0.18
+    ],
+    [
+      28.51,
+      22.0,
+      29.81,
+      22.0,
+      0.18
+    ],
+    [
+      26.2,
+      46.35,
+      26.2,
+      38.0,
+      0.18
+    ],
+    [
+      38.75,
+      37.25,
+      38.75,
+      41.1,
+      0.18
+    ],
+    [
+      27.45,
+      46.35,
+      26.2,
+      46.35,
+      0.18
+    ]
+  ],
+  "coex0_pads": [
+    [
+      "R4",
+      "1",
+      28.51,
+      22.0
+    ],
+    [
+      "U3",
+      "3",
+      27.45,
+      46.35
+    ],
+    [
+      "U1",
+      "93",
+      38.75,
+      37.25
+    ],
+    [
+      "J15",
+      "1",
+      104.0,
+      62.0
+    ]
+  ],
+  "option_c_geometry": {
+    "MAGPIO1": {
+      "pads": [
+        [
+          "J14",
+          104.0,
+          49.27
+        ],
+        [
+          "U1",
+          28.0,
+          28.0
+        ]
+      ],
+      "ends_sample": [
+        [
+          28.0,
+          28.0,
+          "F.Cu"
+        ],
+        [
+          25.6,
+          28.0,
+          "F.Cu"
+        ],
+        [
+          25.6,
+          28.0,
+          "F.Cu"
+        ],
+        [
+          25.6,
+          23.1,
+          "F.Cu"
+        ]
+      ]
+    },
+    "MIPI_VIO": {
+      "pads": [
+        [
+          "J14",
+          104.0,
+          51.81
+        ],
+        [
+          "U1",
+          28.0,
+          29.5
+        ]
+      ],
+      "ends_sample": [
+        [
+          28.0,
+          29.5,
+          "F.Cu"
+        ],
+        [
+          24.65,
+          29.5,
+          "F.Cu"
+        ],
+        [
+          24.65,
+          29.5,
+          "F.Cu"
+        ],
+        [
+          24.65,
+          24.4,
+          "F.Cu"
+        ]
+      ]
+    },
+    "AUX_FIT": {
+      "pads": [
+        [
+          "C24",
+          19.52,
+          56.0
+        ],
+        [
+          "TP1",
+          12.0,
+          33.0
+        ],
+        [
+          "L2",
+          19.515,
+          33.0
+        ]
+      ],
+      "ends_sample": [
+        [
+          19.515,
+          33.0,
+          "F.Cu"
+        ],
+        [
+          12.0,
+          33.0,
+          "F.Cu"
+        ],
+        [
+          19.52,
+          56.0,
+          "F.Cu"
+        ],
+        [
+          19.52,
+          57.5,
+          "F.Cu"
+        ]
+      ]
+    },
+    "P0.16": {
+      "pads": [
+        [
+          "J18",
+          45.62,
+          62.0
+        ],
+        [
+          "J13",
+          64.0,
+          76.0
+        ],
+        [
+          "U1",
+          41.25,
+          26.75
+        ]
+      ],
+      "ends_sample": [
+        [
+          41.25,
+          26.75,
+          "F.Cu"
+        ],
+        [
+          40.7,
+          20.8,
+          "F.Cu"
+        ],
+        [
+          64.0,
+          74.0,
+          "B.Cu"
+        ],
+        [
+          45.62,
+          74.0,
+          "B.Cu"
+        ],
+        [
+          64.0,
+          76.0,
+          "B.Cu"
+        ],
+        [
+          64.0,
+          74.0,
+          "B.Cu"
+        ]
+      ]
+    }
+  },
+  "after": {
+    "unconnected_items": 74,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 73
+  },
+  "signal_net_deltas": {
+    "SWDCLK": -1,
+    "nRESET": 0,
+    "P0.02": 0,
+    "COEX0": 0,
+    "P0.15": 0,
+    "VDD_GPIO": 0,
+    "ENABLE": 0,
+    "VIN_F": 0,
+    "VIN_FILT": 0,
+    "P0.08": 0,
+    "GND": 0
+  },
+  "all_net_deltas": {
+    "SWDCLK": -1
+  },
+  "stage_a_check": {
+    "VDD_nRF_via_north": true,
+    "VDD2_vias": 2,
+    "VDD2_present": true
+  },
+  "success_gate": "MET (75\u219274)",
+  "stop_reason": "SWDCLK kept; nRESET one-probe failed \u2014 STOP further Class-F thrash per PM",
+  "files_touched": [
+    "nRF9161-DEV-BOARD.kicad_pcb",
+    "reports/DRC_PASS30L_BEFORE.json",
+    "reports/DRC_PASS30L_MID.json",
+    "reports/DRC_PASS30L_AFTER.json",
+    "reports/PASS30L_SUMMARY.json",
+    "reports/DRC_PASS30L_MID_NRESET.json",
+    "reports/DRC_PASS30L_MID_OPTC.json",
+    "docs/PCB_LAYOUT_REVIEW.md",
+    "scripts/final_pass30l.py"
+  ],
+  "option_c_notes": [
+    "Scanned 1-unc signal nets; no cheap DRC-clean stub close without RF/U3 risk.",
+    "AUX_FIT vertical @x19.52 blocked by GPS/ANT_FIT/GNSS_VBIAS (RF keepout) \u2014 skipped.",
+    "COEX0 involves U3.3 \u2014 protected, not touched.",
+    "MAGPIO1/MIPI_*/P0.26/P0.27/SIM_RST are long header runs \u2014 not cheap this cycle."
+  ]
+}

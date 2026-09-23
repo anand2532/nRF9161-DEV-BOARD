@@ -49,6 +49,8 @@ Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.j
 
 **Pass delta (pass30j):** ONE honest cycle — stitch P0.08 island→J12.9. B column @x=65.2 with F via-hops over COEX2/COEX0/P0.18+P0.17; rip+restore P0.15 bottom H (wide F-bridge 61.5–68.5 @y77.45) + P0.01 (final F-bridge 24.5–27.2 @y78.5 + column U-jog F@y74.5); B H@y79 → via(26.32,78) → F to J12.9. **Before/After unconnected:** 77/76 · shorting/clearance/crossing 0. P0.15 west wrap preserved (21 segs). VIN_F/SWDCLK skipped (not cheap). Details: `reports/PASS30J_SUMMARY.json`.
 
+**Pass delta (pass30l):** ONE honest Class-F cycle (SWDCLK→nRESET→P0.02; option C scan). SWDCLK mixed F/B west column x=34.2 + F-hop over VDD_GPIO H@19.13 + F north band y=1.5 around J8.3 into via@(53.65,4.73) — **closed**. nRESET @y12.6 corridor probed then **reverted** (shorting/clearance/crossing). P0.02 skipped. Option C: no cheap non-RF/U3 stub. **Before/After unconnected:** 75/74 · shorting/clearance/crossing 0. P0.15 west wrap preserved (21 segs). Stage A + pass30i–30k kept. No J8 move. No Gerbers. Details: `reports/PASS30L_SUMMARY.json`.
+
 **Pass delta (pass30k):** ONE honest Class-F cycle (VIN_F→SWDCLK→nRESET→P0.02). VIN_F B@y11 + F-hop over VDD_GPIO@x70 + B to FB4 island; P0.15 east H@y15.35 F-bridged (69.3–72.0). SWDCLK/nRESET probed then left (restore not DRC-clean in one attempt); P0.02 skipped — STOP. **Before/After unconnected:** 76/75 · shorting/clearance/crossing 0. P0.15 west wrap preserved (21 segs). Stage A + pass30i/30j kept. Details: `reports/PASS30K_SUMMARY.json`.
 
 **Pass delta (pass30h):** ONE honest cycle. Stage A KEPT (VDD2 B walls→via-bridge @x=58; VDD_nRF via (69.3,30)→(69.3,31.5) north). P0.08 probe CLEAR @y=30.25 after ENABLE/COEX2 rip but restore re-crosses / jog hits VDD_GPIO — **reverted**. Stage B placement REVERTED (shorting=5; C6.1@x=48.68 DEC0). **Before/After unconnected:** 78/78 · shorting/clearance/crossing 0. Details: `reports/PASS30H_SUMMARY.json`.
@@ -582,3 +584,46 @@ First restore pair (P0.15@77.45 + P0.01 U-jog@77.8) caused shorting=5/clearance=
 **Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30k-20260923-112757`  
 **DRC:** `reports/DRC_PASS30K_BEFORE.json`, `reports/DRC_PASS30K_MID_VINF.json`, `reports/DRC_PASS30K_AFTER.json`  
 **Summary:** `reports/PASS30K_SUMMARY.json`
+
+---
+
+## Pass30l — SWDCLK F/mixed detour around J8.3 (2026-09-23 11:40 IST)
+
+**Goal:** Class F order SWDCLK → nRESET → P0.02; if Class F stalls, option C cheap signal islands. Keep Stage A + pass30i–30k. F.Cu/mixed detour around J8.3 GND without moving J8. Co-restore VDD_GPIO if ripped. shorting=0 clearance=0. No Gerbers.
+
+**Result: KEEP — unconnected 75→74; SWDCLK U1.33↔J8.4 closed.**
+
+### Geometry kept (SWDCLK)
+- F stub `(37.75,26.75)→(37.75,24.8)` + via
+- B west column `@x=34.2`: `(37.75,24.8)→(34.2,24.8)→(34.2,19.8)`
+- F-hop over intact VDD_GPIO H@y19.13: vias@(34.2,19.8)/(34.2,18.4)
+- B `(34.2,18.4)→(34.2,1.5)` + via
+- F north band around J8.3: `(34.2,1.5)→(53.65,1.5)→(53.65,4.73)` into existing SWDCLK via
+- **No VDD_GPIO rip. No J8 move.**
+
+### Blocked / deferred
+- **nRESET:** one probe B@y12.6 with F-hops @ENABLE/VIN_F → shorting=1 clearance=1 crossing=3 — **reverted atomically**
+- **P0.02:** not attempted (nRESET not closed; avoid thrash)
+- **Option C:** candidates MAGPIO1/MIPI_VIO/AUX_FIT/P0.16/… scanned; AUX_FIT @x19.52 hits RF (GPS/ANT_FIT/GNSS_VBIAS); COEX0 touches U3 — skipped
+
+### Preserved
+- Stage A VDD2 via-bridge + VDD_nRF via north @(69.3,31.5)
+- pass30i–30k ENABLE/COEX2/P0.08/VIN_F/P0.15 restores
+- P0.15 west wrap (21 segs)
+- RF keepout / U3
+
+### Signal deltas
+| Net | Δ unconnected |
+| --- | --- |
+| SWDCLK | −1 |
+| nRESET | 0 |
+| P0.02 | 0 |
+| others watched | 0 |
+
+### J8 proposal (NOT applied — needs new OK)
+None required this cycle (SWDCLK closed without placement). If future B@x48.05 restore still desired: J8 `(50.0,6.0)→(50.0,3.5)` Δ=2.5 mm north — opens pad clearance vs VDD_GPIO V@x48.05 (only if a later pass re-needs that column).
+
+**Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30l-20260923-114002`  
+**DRC:** `reports/DRC_PASS30L_BEFORE.json`, `reports/DRC_PASS30L_MID.json`, `reports/DRC_PASS30L_MID_NRESET.json`, `reports/DRC_PASS30L_AFTER.json`  
+**Summary:** `reports/PASS30L_SUMMARY.json`
+
