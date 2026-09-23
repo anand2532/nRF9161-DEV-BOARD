@@ -1,0 +1,405 @@
+{
+  "pass": "pass30w",
+  "option": "E",
+  "unconnected": 67,
+  "rows": [
+    {
+      "net": "GND",
+      "open_count": 10,
+      "pads_refdes": [],
+      "likely_blocker_class": "zone_island",
+      "suggested_next": "accept"
+    },
+    {
+      "net": "VDD_GPIO",
+      "open_count": 3,
+      "pads_refdes": [
+        "U1.12"
+      ],
+      "likely_blocker_class": "U1.12 fanout vs GND via forest + P0.13/COEX2/Stage-A VDD2",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.05",
+      "open_count": 2,
+      "pads_refdes": [
+        "J12.6",
+        "J9.3"
+      ],
+      "likely_blocker_class": "SE dual header / bottom-F highway saturated",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.07",
+      "open_count": 2,
+      "pads_refdes": [
+        "J12.8",
+        "J9.2"
+      ],
+      "likely_blocker_class": "SE dual header / bottom-F highway saturated",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.09",
+      "open_count": 2,
+      "pads_refdes": [
+        "J12.10",
+        "J16.4",
+        "U1.16"
+      ],
+      "likely_blocker_class": "SE dual header / bottom-F highway saturated",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.10",
+      "open_count": 2,
+      "pads_refdes": [
+        "J12.11",
+        "J16.1",
+        "U1.18"
+      ],
+      "likely_blocker_class": "pass30t failed geometries; north/east dual still blocked",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.11",
+      "open_count": 2,
+      "pads_refdes": [
+        "J12.12",
+        "J16.2"
+      ],
+      "likely_blocker_class": "pass30t failed geometries; north/east dual still blocked",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.12",
+      "open_count": 2,
+      "pads_refdes": [
+        "J12.13",
+        "J16.3"
+      ],
+      "likely_blocker_class": "SE dual header / bottom-F highway saturated",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.17",
+      "open_count": 2,
+      "pads_refdes": [
+        "J17.1",
+        "U1.28"
+      ],
+      "likely_blocker_class": "pass30t failed geometries; north/east dual still blocked",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.18",
+      "open_count": 2,
+      "pads_refdes": [
+        "J17.2",
+        "U1.29"
+      ],
+      "likely_blocker_class": "SE J13\u2194J10/J11 column squeeze (VDD_GPIO wall + P0.22 keep)",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.21",
+      "open_count": 2,
+      "pads_refdes": [
+        "J10.1",
+        "J13.6",
+        "U1.37"
+      ],
+      "likely_blocker_class": "SE J13\u2194J10/J11 column squeeze (VDD_GPIO wall + P0.22 keep)",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.23",
+      "open_count": 2,
+      "pads_refdes": [
+        "J10.3",
+        "J13.8",
+        "U1.39"
+      ],
+      "likely_blocker_class": "SE J13\u2194J10/J11 column squeeze (VDD_GPIO wall + P0.22 keep)",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.24",
+      "open_count": 2,
+      "pads_refdes": [
+        "J10.4",
+        "J13.9",
+        "U1.40"
+      ],
+      "likely_blocker_class": "SE J13\u2194J10/J11 column squeeze (VDD_GPIO wall + P0.22 keep)",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.30",
+      "open_count": 2,
+      "pads_refdes": [
+        "J11.1",
+        "J13.15"
+      ],
+      "likely_blocker_class": "SE J13\u2194J10/J11 column squeeze (VDD_GPIO wall + P0.22 keep)",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.31",
+      "open_count": 2,
+      "pads_refdes": [
+        "J11.2",
+        "J13.16",
+        "U1.89"
+      ],
+      "likely_blocker_class": "J13\u2194J11 SE saturated + under-mod",
+      "suggested_next": "place"
+    },
+    {
+      "net": "ANT_FIT",
+      "open_count": 1,
+      "pads_refdes": [],
+      "likely_blocker_class": "RF keepout / matching / U3 region",
+      "suggested_next": "accept"
+    },
+    {
+      "net": "AUX",
+      "open_count": 1,
+      "pads_refdes": [],
+      "likely_blocker_class": "RF keepout / matching / U3 region",
+      "suggested_next": "accept"
+    },
+    {
+      "net": "AUX_FIT",
+      "open_count": 1,
+      "pads_refdes": [
+        "C24.1",
+        "L2.2"
+      ],
+      "likely_blocker_class": "RF keepout / matching / U3 region",
+      "suggested_next": "accept"
+    },
+    {
+      "net": "COEX0",
+      "open_count": 1,
+      "pads_refdes": [],
+      "likely_blocker_class": "R4 stub \u2194 U3/main; west-col GND via forest (pass30u dirty)",
+      "suggested_next": "route"
+    },
+    {
+      "net": "COEX1",
+      "open_count": 1,
+      "pads_refdes": [
+        "J15.2",
+        "U1.92"
+      ],
+      "likely_blocker_class": "U1 west pad \u2194 J14/J15 (~70\u201380mm); RF-adjacent north band dirty",
+      "suggested_next": "place"
+    },
+    {
+      "net": "MAGPIO0",
+      "open_count": 1,
+      "pads_refdes": [
+        "J14.1",
+        "U1.55"
+      ],
+      "likely_blocker_class": "U1 west pad \u2194 J14/J15 (~70\u201380mm); RF-adjacent north band dirty",
+      "suggested_next": "place"
+    },
+    {
+      "net": "MAGPIO1",
+      "open_count": 1,
+      "pads_refdes": [
+        "J14.2"
+      ],
+      "likely_blocker_class": "U1 west pad \u2194 J14/J15 (~70\u201380mm); RF-adjacent north band dirty",
+      "suggested_next": "place"
+    },
+    {
+      "net": "MAGPIO2",
+      "open_count": 1,
+      "pads_refdes": [
+        "J14.3"
+      ],
+      "likely_blocker_class": "U1 west pad \u2194 J14/J15 (~70\u201380mm); RF-adjacent north band dirty",
+      "suggested_next": "place"
+    },
+    {
+      "net": "MIPI_SCLK",
+      "open_count": 1,
+      "pads_refdes": [
+        "J14.5",
+        "U1.58"
+      ],
+      "likely_blocker_class": "U1 west pad \u2194 J14/J15 (~70\u201380mm); RF-adjacent north band dirty",
+      "suggested_next": "place"
+    },
+    {
+      "net": "MIPI_SDATA",
+      "open_count": 1,
+      "pads_refdes": [
+        "J14.6",
+        "U1.59"
+      ],
+      "likely_blocker_class": "U1 west pad \u2194 J14/J15 (~70\u201380mm); RF-adjacent north band dirty",
+      "suggested_next": "place"
+    },
+    {
+      "net": "MIPI_VIO",
+      "open_count": 1,
+      "pads_refdes": [
+        "J14.4",
+        "U1.57"
+      ],
+      "likely_blocker_class": "U1 west pad \u2194 J14/J15 (~70\u201380mm); RF-adjacent north band dirty",
+      "suggested_next": "place"
+    },
+    {
+      "net": "P0.00",
+      "open_count": 1,
+      "pads_refdes": [
+        "U1.95"
+      ],
+      "likely_blocker_class": "GPIO corridor saturated / protected copper",
+      "suggested_next": "route"
+    },
+    {
+      "net": "P0.01",
+      "open_count": 1,
+      "pads_refdes": [
+        "U1.96"
+      ],
+      "likely_blocker_class": "GPIO corridor saturated / protected copper",
+      "suggested_next": "route"
+    },
+    {
+      "net": "P0.03",
+      "open_count": 1,
+      "pads_refdes": [],
+      "likely_blocker_class": "GPIO corridor saturated / protected copper",
+      "suggested_next": "route"
+    },
+    {
+      "net": "P0.14",
+      "open_count": 1,
+      "pads_refdes": [
+        "U1.24"
+      ],
+      "likely_blocker_class": "GPIO corridor saturated / protected copper",
+      "suggested_next": "route"
+    },
+    {
+      "net": "P0.16",
+      "open_count": 1,
+      "pads_refdes": [
+        "U1.26"
+      ],
+      "likely_blocker_class": "GPIO corridor saturated / protected copper",
+      "suggested_next": "route"
+    },
+    {
+      "net": "P0.19",
+      "open_count": 1,
+      "pads_refdes": [
+        "U1.30"
+      ],
+      "likely_blocker_class": "partial keep \u2014 remaining ratsnest to far header/stub",
+      "suggested_next": "accept"
+    },
+    {
+      "net": "P0.20",
+      "open_count": 1,
+      "pads_refdes": [],
+      "likely_blocker_class": "GPIO corridor saturated / protected copper",
+      "suggested_next": "route"
+    },
+    {
+      "net": "P0.22",
+      "open_count": 1,
+      "pads_refdes": [],
+      "likely_blocker_class": "partial keep \u2014 remaining ratsnest to far header/stub",
+      "suggested_next": "accept"
+    },
+    {
+      "net": "P0.25",
+      "open_count": 1,
+      "pads_refdes": [
+        "J13.10"
+      ],
+      "likely_blocker_class": "GPIO corridor saturated / protected copper",
+      "suggested_next": "route"
+    },
+    {
+      "net": "P0.26",
+      "open_count": 1,
+      "pads_refdes": [
+        "J13.11"
+      ],
+      "likely_blocker_class": "GPIO corridor saturated / protected copper",
+      "suggested_next": "route"
+    },
+    {
+      "net": "P0.27",
+      "open_count": 1,
+      "pads_refdes": [
+        "J13.12",
+        "U1.84"
+      ],
+      "likely_blocker_class": "GPIO corridor saturated / protected copper",
+      "suggested_next": "route"
+    },
+    {
+      "net": "P0.28",
+      "open_count": 1,
+      "pads_refdes": [
+        "J13.13"
+      ],
+      "likely_blocker_class": "GPIO corridor saturated / protected copper",
+      "suggested_next": "route"
+    },
+    {
+      "net": "P0.29",
+      "open_count": 1,
+      "pads_refdes": [
+        "J13.14",
+        "U1.87"
+      ],
+      "likely_blocker_class": "GPIO corridor saturated / protected copper",
+      "suggested_next": "route"
+    },
+    {
+      "net": "SIM_1V8",
+      "open_count": 1,
+      "pads_refdes": [
+        "U1.49"
+      ],
+      "likely_blocker_class": "U1 SIM fanout \u2194 U4 island (~40mm) through COEX2/ENABLE/VDD2",
+      "suggested_next": "route"
+    },
+    {
+      "net": "SIM_CLK",
+      "open_count": 1,
+      "pads_refdes": [
+        "U1.46"
+      ],
+      "likely_blocker_class": "U1 SIM fanout \u2194 U4 island (~40mm) through COEX2/ENABLE/VDD2",
+      "suggested_next": "route"
+    },
+    {
+      "net": "SIM_IO",
+      "open_count": 1,
+      "pads_refdes": [],
+      "likely_blocker_class": "U1 SIM fanout \u2194 U4 island (~40mm) through COEX2/ENABLE/VDD2",
+      "suggested_next": "route"
+    },
+    {
+      "net": "SIM_RST",
+      "open_count": 1,
+      "pads_refdes": [
+        "U1.43"
+      ],
+      "likely_blocker_class": "U1 SIM fanout \u2194 U4 island (~40mm) through COEX2/ENABLE/VDD2",
+      "suggested_next": "route"
+    }
+  ]
+}

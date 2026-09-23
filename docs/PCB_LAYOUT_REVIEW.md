@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-23 13:03 IST (Asia/Calcutta) — pass30v STOP_TWO_FAILS (no keep; board=pass30u)
+**Review date:** 2026-09-23 13:09 IST (Asia/Calcutta) — pass30w STOP_TWO_FAILS + Option E handoff (no keep; board=pass30u)
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,7 +14,7 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **67** | `reports/DRC_PASS30V_AFTER.json` (live `kicad-cli`); Pass30v STOP — Stage A+pass30i–30u+P0.22/P0.19 kept; no new copper
+| **unconnected_items** | **67** | `reports/DRC_PASS30W_AFTER.json` (live `kicad-cli`); Pass30w STOP — Stage A+pass30i–30u+P0.22/P0.19 kept; Option E matrix; no new copper
 | **shorting_items** | **0** | Same JSON |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
@@ -33,7 +33,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `reports/DRC_BEFORE_FINAL.json` | 120 | Pre-final pass |
 | `reports/DRC_final.json` / `FINAL_DESIGN_REVIEW.md` | 104 | Mid campaign |
 | `reports/DRC_AFTER_CONNECT_FULL.json` | 98 | Intermediate |
-| **`DRC_PASS30V_AFTER.json`** | **67** | **Authoritative after pass30v** (STOP two fails; pass30u keep intact) |
+| **`DRC_PASS30W_AFTER.json`** | **67** | **Authoritative after pass30w** (STOP two fails; Option E handoff; pass30u keep intact) |
+| `DRC_PASS30V_AFTER.json` | 67 | Prior — STOP two fails; no keep |
 | `DRC_PASS30U_AFTER.json` | 67 | Prior — P0.19 J18↔J13; Stage A+pass30i–30t+P0.22 kept |
 | `DRC_PASS30T_AFTER.json` | 68 | Prior — VDD_GPIO J16↔J17; P0.11/10/17 probes reverted |
 | `DRC_PASS30M_AFTER.json` | 74 | Prior — nRESET probed+reverted; Stage A+pass30i–30l kept |
@@ -43,6 +44,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
 
 Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.json` / `reports/DRC_PASS30C_AFTER.json`). On-disk `fab/gerbers/` CreationDate **2026-09-16** remains **stale** and must not be used for fab (DFM checklist §5).
+
+**Pass delta (pass30w):** Ordered VDD_GPIO low-risk island joins only (NEW geometries). U1.12 NW F@y34.5 + B col@x35.5 F-hops — dirty shorting=12 clearance=11 (hit P0.22/P0.21 via forest @x35.25/35.75). Mid via(87.81,26)→TP10 F-hops — dirty shorting=2 clearance=1 crossing=3 (VIN_FILT). **STOP** two consecutive dirty fails; SIM_*/COEX1/MAGPIO long-haul (~40–80 mm) **not** short-stub class — deferred. SE dual GPIO thrash skipped. **Nothing kept** → Option E matrix `reports/REMAINING_OPENS_MATRIX.md` (+ JSON). **Before/After unconnected:** 67/67 · shorting/clearance/crossing 0. P0.15 west preserved (21 segs). Stage A + P0.22 + P0.19 keep. No placement. No Gerbers. No further copper pass. Details: `reports/PASS30W_SUMMARY.json`.
 
 **Pass delta (pass30v):** Ordered duals P0.05→P0.07 NEW bottom-F highways — both dirty (shorting/clearance/crossing); atomic revert; **STOP** two consecutive fails. P0.09/12/18/21/23/24 and VDD_GPIO not attempted in ordered run. Post-stop probes (all reverted): SE J13↔J10 blocked by VDD_GPIO dual H@y51.08 + P0.22@x109.2 + J17@x108 corridor squeeze; VDD mid@x78 blocked by P0.08/COEX2/P0.15/VIN_F. **Before/After unconnected:** 67/67 · shorting/clearance/crossing 0. P0.15 west preserved (21 segs). Stage A + P0.22 + P0.19 keep. No placement. No Gerbers. Details: `reports/PASS30V_SUMMARY.json`.
 
