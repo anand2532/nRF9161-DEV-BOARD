@@ -7,7 +7,7 @@ import sys
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import hypot  # noqa: E402
 from final_connect import BOARD  # noqa: E402
 from final_pass7 import why  # noqa: E402
@@ -24,7 +24,7 @@ from final_pass14 import (  # noqa: E402
 )
 from final_connect import run_drc  # noqa: E402
 
-REP = "/home/anand/kicad-projects/nRF9161-DEV-BOARD/reports"
+REP = "/workspace/kicad-projects/nRF9161-DEV-BOARD/reports"
 
 
 def route_sim_clk_via(r):

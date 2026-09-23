@@ -10,7 +10,7 @@ from collections import defaultdict
 
 import pcbnew
 
-ROOT = "/home/anand/kicad-projects/nRF9161-DEV-BOARD"
+ROOT = "/workspace/kicad-projects/nRF9161-DEV-BOARD"
 BOARD = f"{ROOT}/nRF9161-DEV-BOARD.kicad_pcb"
 BACKUP = f"{ROOT}/.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-fullroute"
 

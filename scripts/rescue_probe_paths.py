@@ -6,7 +6,7 @@ import sys
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import hypot  # noqa: E402
 from final_connect import BOARD, Final  # noqa: E402
 from rescue_final import existing_via, pok  # noqa: E402

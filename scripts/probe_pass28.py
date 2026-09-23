@@ -6,7 +6,7 @@ import sys
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from final_pass14 import reload  # noqa: E402
 
 F, B = pcbnew.F_Cu, pcbnew.B_Cu

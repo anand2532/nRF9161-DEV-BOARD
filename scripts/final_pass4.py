@@ -8,12 +8,12 @@ import sys
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import ADC, BOARD, hypot, vec  # noqa: E402
 from final_connect import BACKUP, DRC_JSON, Final, SNAP_DIR, fill_zones, run_drc  # noqa: E402
 from final_pass2 import dnp_stubs, save_chk, wrap_fanout  # noqa: E402
 
-ROOT = "/home/anand/kicad-projects/nRF9161-DEV-BOARD"
+ROOT = "/workspace/kicad-projects/nRF9161-DEV-BOARD"
 
 
 def load():

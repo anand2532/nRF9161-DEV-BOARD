@@ -16,7 +16,7 @@ from collections import defaultdict
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import ADC, BOARD, RF_NETS, hypot, nm, vec  # noqa: E402
 from final_connect import (  # noqa: E402
     BACKUP,
@@ -27,7 +27,7 @@ from final_connect import (  # noqa: E402
     run_drc,
 )
 
-ROOT = "/home/anand/kicad-projects/nRF9161-DEV-BOARD"
+ROOT = "/workspace/kicad-projects/nRF9161-DEV-BOARD"
 
 
 def fatal(counts, baseline):

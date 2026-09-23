@@ -8,7 +8,7 @@ import sys
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from final_connect import BOARD, SNAP_DIR, Final, fill_zones, run_drc  # noqa: E402
 from final_pass7 import commit_or_why, place_via  # noqa: E402
 

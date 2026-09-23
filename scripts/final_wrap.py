@@ -12,7 +12,7 @@ from collections import Counter, defaultdict
 
 import pcbnew
 
-ROOT = "/home/anand/kicad-projects/nRF9161-DEV-BOARD"
+ROOT = "/workspace/kicad-projects/nRF9161-DEV-BOARD"
 BOARD = f"{ROOT}/nRF9161-DEV-BOARD.kicad_pcb"
 SNAP = f"{ROOT}/.mcp-backups/final-fab-20260917-194911/after-pass8.kicad_pcb"
 REP = f"{ROOT}/reports"

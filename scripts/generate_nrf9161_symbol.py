@@ -2,7 +2,7 @@
 """Generate nRF9161-LACA-R7 multi-unit KiCad symbol from Nordic PS v1.0 pin table."""
 from pathlib import Path
 
-OUT = Path("/home/anand/kicad-projects/nRF9161-DEV-BOARD/libraries/Nordic_nRF9161.kicad_sym")
+OUT = Path("/workspace/kicad-projects/nRF9161-DEV-BOARD/libraries/Nordic_nRF9161.kicad_sym")
 GRID = 2.54
 PLEN = 2.54
 

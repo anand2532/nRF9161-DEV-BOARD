@@ -12,7 +12,7 @@ import sys
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import hypot  # noqa: E402
 from final_connect import BOARD, fill_zones, run_drc  # noqa: E402
 from final_pass7 import why  # noqa: E402
@@ -29,7 +29,7 @@ from final_pass14 import (  # noqa: E402
 import final_pass17 as p17  # noqa: E402
 from final_pass17 import try_list, try_via_routes, try_wp_box  # noqa: E402
 
-REP = "/home/anand/kicad-projects/nRF9161-DEV-BOARD/reports"
+REP = "/workspace/kicad-projects/nRF9161-DEV-BOARD/reports"
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 BLOCKERS = {}
 p17.BLOCKERS = BLOCKERS

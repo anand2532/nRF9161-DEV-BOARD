@@ -8,7 +8,7 @@ import sys
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import dist_seg, hypot, in_box, RF_BOX  # noqa: E402
 from final_connect import BOARD, Final  # noqa: E402
 from final_pass7 import why  # noqa: E402

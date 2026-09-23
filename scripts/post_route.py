@@ -4,7 +4,7 @@ import math
 import sys
 import pcbnew
 
-BOARD_PATH = "/home/anand/kicad-projects/nRF9161-DEV-BOARD/nRF9161-DEV-BOARD.kicad_pcb"
+BOARD_PATH = "/workspace/kicad-projects/nRF9161-DEV-BOARD/nRF9161-DEV-BOARD.kicad_pcb"
 
 
 def nm(x):

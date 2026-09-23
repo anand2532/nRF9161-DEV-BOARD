@@ -9,7 +9,7 @@ from collections import defaultdict
 
 import pcbnew
 
-BOARD = "/home/anand/kicad-projects/nRF9161-DEV-BOARD/nRF9161-DEV-BOARD.kicad_pcb"
+BOARD = "/workspace/kicad-projects/nRF9161-DEV-BOARD/nRF9161-DEV-BOARD.kicad_pcb"
 
 RF_PADS = {"61", "64", "67"}
 RF_NETS = {"ANT", "ANT_FIT", "AUX", "AUX_FIT", "GPS", "GNSS_ANT"}

@@ -8,7 +8,7 @@ from collections import defaultdict
 
 import pcbnew
 
-BOARD = "/home/anand/kicad-projects/nRF9161-DEV-BOARD/nRF9161-DEV-BOARD.kicad_pcb"
+BOARD = "/workspace/kicad-projects/nRF9161-DEV-BOARD/nRF9161-DEV-BOARD.kicad_pcb"
 U1C = (36.0, 32.0)
 EDGE = 0.70
 VIA_S, VIA_D = 0.60, 0.30

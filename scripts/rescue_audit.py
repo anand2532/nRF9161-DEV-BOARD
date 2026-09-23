@@ -13,7 +13,7 @@ from collections import Counter, defaultdict, deque
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import hypot, in_box, RF_BOX, U1_BOX, J18_BOX  # noqa: E402
 from final_connect import (  # noqa: E402
     BOARD,
@@ -22,7 +22,7 @@ from final_connect import (  # noqa: E402
     parse_drc,
 )
 
-ROOT = "/home/anand/kicad-projects/nRF9161-DEV-BOARD"
+ROOT = "/workspace/kicad-projects/nRF9161-DEV-BOARD"
 REP = f"{ROOT}/reports"
 DRC = "/tmp/nrf_rescue_drc_full.json"
 F, B = pcbnew.F_Cu, pcbnew.B_Cu

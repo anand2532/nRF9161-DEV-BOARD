@@ -8,7 +8,7 @@ import sys
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import BOARD, RF_NETS, Router, hypot, net_width  # noqa: E402
 
 DRC = "/tmp/nrf_fcu.json"

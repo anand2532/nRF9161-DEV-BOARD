@@ -8,7 +8,7 @@ import sys
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import (  # noqa: E402
     BOARD,
     RF_NETS,
@@ -241,7 +241,7 @@ def main():
             print("ABORT shorts created; restore pre-close-gaps backup")
             import shutil
             shutil.copy2(
-                "/home/anand/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-close-gaps",
+                "/workspace/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-close-gaps",
                 BOARD,
             )
             return 1

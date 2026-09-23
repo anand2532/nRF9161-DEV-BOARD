@@ -11,8 +11,8 @@ from pathlib import Path
 
 import pcbnew
 
-BOARD = "/home/anand/kicad-projects/nRF9161-DEV-BOARD/nRF9161-DEV-BOARD.kicad_pcb"
-FP_LIB = Path("/home/anand/kicad-projects/nRF9161-DEV-BOARD/libraries/Board.pretty/nRF9161_LGA_16.0x10.5mm.kicad_mod")
+BOARD = "/workspace/kicad-projects/nRF9161-DEV-BOARD/nRF9161-DEV-BOARD.kicad_pcb"
+FP_LIB = Path("/workspace/kicad-projects/nRF9161-DEV-BOARD/libraries/Board.pretty/nRF9161_LGA_16.0x10.5mm.kicad_mod")
 GRID = 0.30
 CLEAR = 0.12
 VIA_S, VIA_D = 0.55, 0.25

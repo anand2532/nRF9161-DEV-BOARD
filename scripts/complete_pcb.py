@@ -9,7 +9,7 @@ from collections import defaultdict
 
 import pcbnew
 
-BOARD_PATH = "/home/anand/kicad-projects/nRF9161-DEV-BOARD/nRF9161-DEV-BOARD.kicad_pcb"
+BOARD_PATH = "/workspace/kicad-projects/nRF9161-DEV-BOARD/nRF9161-DEV-BOARD.kicad_pcb"
 GRID = 0.15  # mm
 CLEAR = 0.10
 VIA_SIZE = 0.6

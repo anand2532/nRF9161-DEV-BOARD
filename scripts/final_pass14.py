@@ -18,7 +18,7 @@ from collections import Counter, defaultdict
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import hypot  # noqa: E402
 from final_connect import (  # noqa: E402
     BOARD,
@@ -31,8 +31,8 @@ from final_connect import (  # noqa: E402
 from final_pass7 import why  # noqa: E402
 
 ABORT = {"shorting_items", "clearance", "hole_clearance", "tracks_crossing"}
-REP = "/home/anand/kicad-projects/nRF9161-DEV-BOARD/reports"
-ROOT = "/home/anand/kicad-projects/nRF9161-DEV-BOARD"
+REP = "/workspace/kicad-projects/nRF9161-DEV-BOARD/reports"
+ROOT = "/workspace/kicad-projects/nRF9161-DEV-BOARD"
 
 # Orthogonal search grid (includes west wrap, stub, east of P0.15, north of SIM_RST).
 XS = [

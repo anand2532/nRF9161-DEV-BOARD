@@ -7,7 +7,7 @@ import sys
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import hypot  # noqa: E402
 from final_connect import BOARD, fill_zones, run_drc  # noqa: E402
 from final_pass14 import (  # noqa: E402
@@ -36,7 +36,7 @@ from final_pass16 import (  # noqa: E402
     check,
 )
 
-REP = "/home/anand/kicad-projects/nRF9161-DEV-BOARD/reports"
+REP = "/workspace/kicad-projects/nRF9161-DEV-BOARD/reports"
 
 # Never enters x=48–72, y=18–26. Ties west via to existing J18.3.
 J18_WRAP = [

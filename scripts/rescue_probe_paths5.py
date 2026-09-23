@@ -2,7 +2,7 @@
 from __future__ import annotations
 import sys
 import pcbnew
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from final_connect import BOARD, Final
 from rescue_final import pok
 B = pcbnew.B_Cu

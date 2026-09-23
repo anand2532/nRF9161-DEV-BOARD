@@ -14,14 +14,14 @@ from collections import defaultdict, deque
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import hypot, in_box, RF_BOX  # noqa: E402
 from final_connect import BOARD, SNAP_DIR, Final, fill_zones, run_drc  # noqa: E402
 from final_pass7 import why  # noqa: E402
 from final_pass14 import waypoint_route  # noqa: E402
 from rescue_audit import graph_net  # noqa: E402
 
-ROOT = "/home/anand/kicad-projects/nRF9161-DEV-BOARD"
+ROOT = "/workspace/kicad-projects/nRF9161-DEV-BOARD"
 START = os.path.join(SNAP_DIR, "after-pass30-start.kicad_pcb")
 ABORT = {"shorting_items", "clearance", "hole_clearance", "tracks_crossing"}
 F, B = pcbnew.F_Cu, pcbnew.B_Cu

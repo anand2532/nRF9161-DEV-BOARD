@@ -3,7 +3,7 @@
 import math
 import pcbnew
 
-BOARD = "/home/anand/kicad-projects/nRF9161-DEV-BOARD/nRF9161-DEV-BOARD.kicad_pcb"
+BOARD = "/workspace/kicad-projects/nRF9161-DEV-BOARD/nRF9161-DEV-BOARD.kicad_pcb"
 RF_PADS = {"61", "64", "67"}
 
 

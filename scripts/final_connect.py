@@ -20,7 +20,7 @@ from collections import defaultdict
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import (  # noqa: E402
     ADC,
     BOARD,
@@ -37,7 +37,7 @@ from complete_route import (  # noqa: E402
     vec,
 )
 
-ROOT = "/home/anand/kicad-projects/nRF9161-DEV-BOARD"
+ROOT = "/workspace/kicad-projects/nRF9161-DEV-BOARD"
 BACKUP = f"{ROOT}/.mcp-backups/final-fab-20260917-194911/nRF9161-DEV-BOARD.kicad_pcb"
 SNAP_DIR = f"{ROOT}/.mcp-backups/final-fab-20260917-194911"
 DRC_JSON = "/tmp/nrf_final_drc.json"

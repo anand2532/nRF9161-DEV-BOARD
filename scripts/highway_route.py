@@ -8,7 +8,7 @@ import sys
 
 import pcbnew
 
-sys.path.insert(0, "/home/anand/kicad-projects/nRF9161-DEV-BOARD/scripts")
+sys.path.insert(0, "/workspace/kicad-projects/nRF9161-DEV-BOARD/scripts")
 from complete_route import (  # noqa: E402
     BOARD,
     RF_NETS,
@@ -18,7 +18,7 @@ from complete_route import (  # noqa: E402
 )
 
 DRC_JSON = "/tmp/nrf_hw_drc.json"
-BACKUP = "/home/anand/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-close-gaps"
+BACKUP = "/workspace/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-close-gaps"
 
 # Missing courtyard vias: staggered off the occupied 0.95 mm rings.
 FANOUT = {
