@@ -845,3 +845,33 @@ Copper-first: close remaining P0.22 J13↔J10 island, then P0.11 header stubs, t
 **Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30q-20260923-121611`  
 **DRC:** `reports/DRC_PASS30Q_BEFORE.json`, `reports/DRC_PASS30Q_MID_P022.json`, `reports/DRC_PASS30Q_MID_P022b.json`, `reports/DRC_PASS30Q_AFTER.json`  
 **Summary:** `reports/PASS30Q_SUMMARY.json`
+
+## Pass30r — P0.22 B-attach → headers → J13+P0.31 (2026-09-23 12:31 IST)
+
+### Goal
+One P0.22 B-attach geometry only; if new collision STOP. Then headers; then J13 move+P0.31.
+Protect Stage A + pass30i–30q KEEP + P0.15 west wrap + RF/U3. No Gerbers. J11/U1 never move.
+
+### Result
+- **Phase:** COMPLETE_P022_ONLY
+- **Closed/KEPT:** ['P0.22 J13.7↔J10.2 (B-attach y29.9)']
+- **P0.22 kept:** True — unconnected 70→69, P0.22 2→1, shorting=clearance=crossing=0
+- **Headers:** Deferred (congested P0.11/P0.10/P0.17 corridors)
+- **J13 move+P0.31:** **REVERTED** — shorting=7 clearance=3 crossing=27 (J13 pad shorts into existing B copper @y≈72.8; P0.31 B@y39.5 crossed SIM_CLK/VDD2/ENABLE). Board restored to P0.22-keep.
+- **J13 position:** unchanged at (64.0, 76.0)
+- **P0.15 west segs:** 21→21 preserved
+- **Stage A:** VDD_nRF via north + VDD2 via-bridge present
+- **Blocked:** {
+  "P0.11_J12_J16": "Deferred \u2014 congested (P0.15/P0.16/VDD_GPIO/VIN_F); no pre-cleared stub",
+  "P0.10": "Deferred \u2014 same class as P0.11",
+  "P0.17": "Deferred \u2014 U1\u2194J18 blocked (COEX0/P0.13)",
+  "P0.31": "dirty={'unconnected_items': 69, 'shorting_items': 7, 'clearance': 3, 'tracks_crossing': 27, 'via_dangling': 71}; collide=[{'type': 'shorting_items', 'description': 'Items shorting two nets (nets P0.17 and P0.18)', 'items': [{'description': 'PTH pad 2 [P0.17] of J13', 'pos': {'x': 66.54, 'y': 73.0}}, {'description': 'Track [P0.18] on B.Cu, length 18.3800 mm', 'pos': {'x': 69.08, 'y': 72.8}}]}, {'type': 'shorting_items', 'description': 'Items shorting two nets (nets P0.17 and P0.18)', 'items': [{'description': 'PTH pad 2 [P0.17] of J13', 'pos': {'x': 66.54, 'y': 73.0}}, {'description': 'Track [P0.18] on B.Cu, length 18.3800 mm', 'pos': {'x': 69.08, 'y': 72.8}}]}, {'type': 'tracks_crossing', 'description': 'Tracks crossing', 'items': [{'description': 'Track [SIM_CLK] on B.Cu, length 6.4000 mm', 'pos': {'x': 73.3, 'y': 36.0}}, {'description': 'Track [P0.31] on B.Cu, length 65.3500 mm', 'pos': {'x': 36.75, 'y': 39.5}}]}]",
+  "J13_move": "Reverted with P0.31 (atomic)"
+}
+
+### P0.22 B-attach geometry (KEPT)
+Corridor B@y71.5 col@x109.2. Attach: F-hop VDD_GPIO B@x110.6 at y32.5 → B north to y29.9 @x112.5 → F-hop (112.5→114.7)@y29.9 over P0.04/P0.06 → B into J10.2 PTH. Avoids VDD_GPIO F@y31.08 (pass30q fail mode).
+
+**Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30r-20260923-122526`  
+**DRC:** `reports/DRC_PASS30R_BEFORE.json`, `reports/DRC_PASS30R_MID_P022.json`, `reports/DRC_PASS30R_AFTER.json`  
+**Summary:** `reports/PASS30R_SUMMARY.json`
