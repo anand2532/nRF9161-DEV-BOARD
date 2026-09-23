@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-23 11:24 IST (Asia/Calcutta) — pass30j executed
+**Review date:** 2026-09-23 11:34 IST (Asia/Calcutta) — pass30k executed
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,7 +14,7 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **76** | `reports/DRC_PASS30J_AFTER.json` (live `kicad-cli` 9.0.2); Stage A+pass30i kept; P0.08↔J12.9 closed |
+| **unconnected_items** | **75** | `reports/DRC_PASS30K_AFTER.json` (live `kicad-cli` 9.0.2); Stage A+pass30i/30j kept; VIN_F closed |
 | **shorting_items** | **0** | Same JSON |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
@@ -33,7 +33,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `reports/DRC_BEFORE_FINAL.json` | 120 | Pre-final pass |
 | `reports/DRC_final.json` / `FINAL_DESIGN_REVIEW.md` | 104 | Mid campaign |
 | `reports/DRC_AFTER_CONNECT_FULL.json` | 98 | Intermediate |
-| **`DRC_PASS30J_AFTER.json`** | **76** | **Authoritative after pass30j** (P0.08→J12.9 stitch; Stage A+pass30i kept) |
+| **`DRC_PASS30K_AFTER.json`** | **75** | **Authoritative after pass30k** (VIN_F closed; Stage A+pass30i/30j kept) |
+| `DRC_PASS30J_AFTER.json` | 76 | Prior — P0.08→J12.9 stitch |
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
 
 Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.json` / `reports/DRC_PASS30C_AFTER.json`). On-disk `fab/gerbers/` CreationDate **2026-09-16** remains **stale** and must not be used for fab (DFM checklist §5).
@@ -47,6 +48,8 @@ Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.j
 **Pass delta (pass30i):** ONE atomic P0.08 + ENABLE/COEX2 co-route (Stage A kept; no placement). Ripped ENABLE V@62.5 / V@76.8 / H@y28 + COEX2 V@72; placed P0.08 B@y30.25; restored with F via-bridges (ENABLE@x62.5 ys/yn=29.6/30.9, COEX2@x72 same, ENABLE east F-hop to x=79.2). **Before/After unconnected:** 78/77 · shorting/clearance/crossing 0. Closed P0.08 U1↔SW3/R14; J12.9 still open. P0.15 west preserved. Details: `reports/PASS30I_SUMMARY.json`.
 
 **Pass delta (pass30j):** ONE honest cycle — stitch P0.08 island→J12.9. B column @x=65.2 with F via-hops over COEX2/COEX0/P0.18+P0.17; rip+restore P0.15 bottom H (wide F-bridge 61.5–68.5 @y77.45) + P0.01 (final F-bridge 24.5–27.2 @y78.5 + column U-jog F@y74.5); B H@y79 → via(26.32,78) → F to J12.9. **Before/After unconnected:** 77/76 · shorting/clearance/crossing 0. P0.15 west wrap preserved (21 segs). VIN_F/SWDCLK skipped (not cheap). Details: `reports/PASS30J_SUMMARY.json`.
+
+**Pass delta (pass30k):** ONE honest Class-F cycle (VIN_F→SWDCLK→nRESET→P0.02). VIN_F B@y11 + F-hop over VDD_GPIO@x70 + B to FB4 island; P0.15 east H@y15.35 F-bridged (69.3–72.0). SWDCLK/nRESET probed then left (restore not DRC-clean in one attempt); P0.02 skipped — STOP. **Before/After unconnected:** 76/75 · shorting/clearance/crossing 0. P0.15 west wrap preserved (21 segs). Stage A + pass30i/30j kept. Details: `reports/PASS30K_SUMMARY.json`.
 
 **Pass delta (pass30h):** ONE honest cycle. Stage A KEPT (VDD2 B walls→via-bridge @x=58; VDD_nRF via (69.3,30)→(69.3,31.5) north). P0.08 probe CLEAR @y=30.25 after ENABLE/COEX2 rip but restore re-crosses / jog hits VDD_GPIO — **reverted**. Stage B placement REVERTED (shorting=5; C6.1@x=48.68 DEC0). **Before/After unconnected:** 78/78 · shorting/clearance/crossing 0. Details: `reports/PASS30H_SUMMARY.json`.
 
@@ -549,3 +552,33 @@ First restore pair (P0.15@77.45 + P0.01 U-jog@77.8) caused shorting=5/clearance=
 **Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30j-20260923-112326`  
 **DRC:** `reports/DRC_PASS30J_BEFORE.json`, `reports/DRC_PASS30J_MID.json`, `reports/DRC_PASS30J_AFTER.json`  
 **Summary:** `reports/PASS30J_SUMMARY.json`
+
+---
+
+## Pass30k — Class F VIN_F close (2026-09-23 11:34 IST)
+
+**Goal:** Class F order VIN_F → SWDCLK → nRESET → P0.02 (one net at a time; DRC-clean before next). Keep Stage A + pass30i/30j. Co-restore ripped nets. shorting=0 clearance=0. No placement. No Gerbers. Stop after two Class-F restore failures.
+
+**Result: KEEP — unconnected 76→75; VIN_F closed.**
+
+### Geometry kept
+- **VIN_F** B: `(49.30,12.60)→(49.30,11.00)→(69.20,11.00)` w=0.30
+- **VIN_F** F-hop over VDD_GPIO V@x70: vias@(69.20,11.00)/(70.80,11.00) + F H
+- **VIN_F** B: `(70.80,11.00)→(70.80,16.20)→(71.575,16.20)→(71.575,19.062)` into FB4 island
+- **P0.15 restore:** east H@y15.35 F-bridge vias@(69.30,15.35)/(72.00,15.35); B keep 60→69.3
+- **VDD_GPIO** intact (no rip — hopped on F)
+
+### Blocked / deferred (one honest cycle each)
+- **SWDCLK:** B west column after VDD_GPIO H@19.13 rip is geometrically clear, but V@x48.05 restore hits J8.3 GND @(48.05,4.73). No live copper left.
+- **nRESET:** H corridors congested (VIN_FILT / VDD2 / P0.15 / VIN_F / ENABLE vias). Left untouched.
+- **P0.02 / COEX0:** not attempted — STOP after two Class-F restore failures.
+
+### Preserved
+- Stage A VDD2 via-bridge + VDD_nRF via north
+- pass30i ENABLE/COEX2 + P0.08 trunk H@y30.25 + pass30j J12.9 stitch
+- P0.15 west wrap (21 segs)
+- RF keepout / U3/GNSS bias
+
+**Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30k-20260923-112757`  
+**DRC:** `reports/DRC_PASS30K_BEFORE.json`, `reports/DRC_PASS30K_MID_VINF.json`, `reports/DRC_PASS30K_AFTER.json`  
+**Summary:** `reports/PASS30K_SUMMARY.json`

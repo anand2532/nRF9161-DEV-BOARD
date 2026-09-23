@@ -1,0 +1,114 @@
+{
+  "pass": "layout-pass30k",
+  "timestamp_ist": "2026-09-23 11:34 IST",
+  "one_honest_cycle": true,
+  "keep_stage_A": true,
+  "keep_pass30i": true,
+  "keep_pass30j": true,
+  "no_placement": true,
+  "order": [
+    "VIN_F",
+    "SWDCLK",
+    "nRESET",
+    "P0.02"
+  ],
+  "closed": [
+    "VIN_F"
+  ],
+  "blocked": {
+    "SWDCLK": "Path exists via B west column x=35.3 after VDD_GPIO H@19.13 rip, but VDD_GPIO V@x48.05 restore blocked by J8.3 GND pad @(48.05,4.73); F-C restores found none. Left untouched.",
+    "nRESET": "H corridors blocked by VIN_FILT/VDD2/P0.15/VIN_F/ENABLE vias; P0.15 F-restore only clear at y19-20.8 which conflicts with needed H. One probe cycle \u2014 left untouched.",
+    "P0.02": "Not attempted \u2014 stop after two Class-F restore failures (SWDCLK, nRESET).",
+    "COEX0": "Not attempted \u2014 not cheap while copper closed."
+  },
+  "restores": {
+    "P0.15_east_H_y15.35": {
+      "type": "F-bridge",
+      "for": "VIN_F V@x70.8",
+      "vias": [
+        [
+          69.3,
+          15.35
+        ],
+        [
+          72.0,
+          15.35
+        ]
+      ],
+      "B_keep": "60.0\u219269.3 @y15.35",
+      "F_hop": "69.3\u219272.0 @y15.35",
+      "note": "west wrap untouched (21 segs)"
+    }
+  },
+  "vin_f": {
+    "path_mm": [
+      "B (49.30,12.60)->(49.30,11.00)->(69.20,11.00)",
+      "via(69.20,11.00) F->(70.80,11.00) via(70.80,11.00)",
+      "B (70.80,11.00)->(70.80,16.20)->(71.575,16.20)->(71.575,19.062)"
+    ],
+    "width_mm": 0.3,
+    "notes": "F-hop over intact VDD_GPIO V@x=70 \u2014 no VDD_GPIO rip; P0.15 east H@y15.35 F-bridged 69.3\u219272.0"
+  },
+  "reverted_nets": [],
+  "stop": true,
+  "stop_reason": "Two Class-F nets (SWDCLK, nRESET) failed clean restore in one honest cycle each \u2014 STOP per PM; do not thrash. VIN_F success keeps gate.",
+  "notes": [
+    "VIN_F closed: unconnected 76\u219275, shorting=0 clearance=0 crossing=0.",
+    "Stage A VDD2 + VDD_nRF via north preserved; pass30i/30j P0.08 copper preserved.",
+    "P0.15 west wrap preserved; only east H@y15.35 F-bridged for VIN_F.",
+    "No placement. No Gerbers."
+  ],
+  "backup": ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30k-20260923-112757",
+  "p015_west_segs": {
+    "before": 21,
+    "after": 21,
+    "preserved": true
+  },
+  "stage_a_check": {
+    "VDD_nRF_via_north": true,
+    "VDD2_present": true
+  },
+  "before": {
+    "unconnected_items": 76,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 76
+  },
+  "mid_vin_f": {
+    "unconnected_items": 75,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 73
+  },
+  "after": {
+    "unconnected_items": 75,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 73
+  },
+  "signal_net_deltas": {
+    "VIN_F": -1,
+    "SWDCLK": 0,
+    "nRESET": 0,
+    "P0.02": 0,
+    "COEX0": 0,
+    "P0.15": 0,
+    "VDD_GPIO": 0
+  },
+  "all_net_deltas": {
+    "VIN_F": -1
+  },
+  "success_gate": "any drop in unconnected with shorting=0 \u2014 MET (76\u219275)",
+  "files_touched": [
+    "nRF9161-DEV-BOARD.kicad_pcb",
+    "reports/DRC_PASS30K_BEFORE.json",
+    "reports/DRC_PASS30K_MID_VINF.json",
+    "reports/DRC_PASS30K_AFTER.json",
+    "reports/PASS30K_SUMMARY.json",
+    "docs/PCB_LAYOUT_REVIEW.md",
+    "scripts/final_pass30k.py"
+  ]
+}
