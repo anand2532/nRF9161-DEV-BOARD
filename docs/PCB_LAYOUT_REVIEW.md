@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-23 11:52 IST (Asia/Calcutta) — pass30n executed
+**Review date:** 2026-09-23 12:22 IST (Asia/Calcutta) — pass30q STOP (2× P0.22 restore fail)
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,7 +14,7 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **70** | `reports/DRC_PASS30P_AFTER.json` (live `kicad-cli`); Pass30p KEEP P0.22 U1↔J8 + P0.11 U1; Stage A+pass30i–30o kept |
+| **unconnected_items** | **70** | `reports/DRC_PASS30Q_AFTER.json` (live `kicad-cli`); Pass30q STOP — board restored to pass30p KEEP; Stage A+pass30i–30p kept
 | **shorting_items** | **0** | Same JSON |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
@@ -799,3 +799,49 @@ Lock order P0.22 → P0.11 → P0.10/17/31 pairs + MAGPIO/MIPI/AUX true opens. S
 **Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30p-20260923-120436`  
 **DRC:** `reports/DRC_PASS30P_BEFORE.json`, `reports/DRC_PASS30P_MID_P022.json`, `reports/DRC_PASS30P_MID_P011.json`, `reports/DRC_PASS30P_AFTER.json`  
 **Summary:** `reports/PASS30P_SUMMARY.json`
+
+
+---
+
+## Pass30q — P0.22 J13↔J10 then stubs (2026-09-23 12:22 IST)
+
+### Goal
+Copper-first: close remaining P0.22 J13↔J10 island, then P0.11 header stubs, then P0.10/P0.17 if corridor opens. Skip GND zone noise. VDD_GPIO last/careful (deferred). shorting=0 clearance=0 crossing=0. No Gerbers. Protect Stage A + pass30i–30p + P0.15 west wrap + RF/U3. Two restore fails → STOP.
+
+**PM OK (conditional):** J13 only `(102.1, 76.0)→(102.1, 73.0)` if P0.31 still pad-blocked after copper attempts. J11 **not** approved. Never move U1. After J13 move: reattach all J13 nets + stitch P0.31 same cycle if clean.
+
+### Result
+- **Closed/KEPT:** none
+- **Reverted attempts:** 2 (both P0.22; atomic restore OK; **restore_fail_streak=2 → STOP**)
+- **Before unconnected:** 70
+- **After unconnected:** 70 (shorting=0 clearance=0 crossing=0)
+- **P0.15 west segs:** before=21 after=21 preserved=True
+- **Stage A:** VDD_nRF via north @ (69.3,31.5) + VDD2 via-bridge present
+- **J13 move:** **not applied** (STOP before P0.31 copper attempts; copper-first gate)
+
+### Attempts (P0.22 J13.7↔J10.2)
+- Corridor found: B stub@x79.24 → F-hop P0.01@80.51 → B H@y71.5 → F-hop wall (P0.01@105.55+P0.15@106) → B col@x109.2 with F-hop over P0.06@y55.5 → east jog.
+- **Attempt1 REVERT:** attach via@(112.5,30.54) clearance **0.115&lt;0.15** vs VDD_GPIO F H@y31.08 (POWER).
+- **Attempt2 REVERT:** F-only attach (111.8,30.54)→J10.2 **tracks_crossing** VDD_GPIO F H@y31.08.
+- **Next-path note (not applied):** B-side attach with F-hop vias at **y≤29.9** over P0.04@113.8 / P0.06@113.2, then B into J10.2 PTH — keeps clear of VDD_GPIO F@y31.08.
+
+### Blocked / deferred
+- **P0.22_J13_J10:** STOP after 2 restore fails (see next-path note)
+- **P0.11 / P0.10 / P0.17:** Not attempted — STOP
+- **P0.31:** Still PAD-ONLY (U1.89, J13.16, J11.2); J13 move approved but gated behind copper attempts (not reached)
+- **VDD_GPIO:** Deferred; also the J10 attach blocker
+- **GND:** Skipped (zone noise)
+
+### Signal net deltas (excl. GND zone noise)
+| Net | Δ unconnected |
+| --- | --- |
+| (none) | 0 |
+
+### GND zone deltas
+| Net | Δ |
+| --- | --- |
+| (none — Class-E skipped) | 0 |
+
+**Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30q-20260923-121611`  
+**DRC:** `reports/DRC_PASS30Q_BEFORE.json`, `reports/DRC_PASS30Q_MID_P022.json`, `reports/DRC_PASS30Q_MID_P022b.json`, `reports/DRC_PASS30Q_AFTER.json`  
+**Summary:** `reports/PASS30Q_SUMMARY.json`
