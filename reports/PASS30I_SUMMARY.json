@@ -1,0 +1,145 @@
+{
+  "pass": "layout-pass30i",
+  "timestamp_ist": "2026-09-23 11:11 IST",
+  "one_honest_cycle": true,
+  "keep_stage_A": true,
+  "no_placement": true,
+  "backup": ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30i-20260923-111156",
+  "ripped": {
+    "ENABLE": [
+      [
+        76.8,
+        28.0,
+        90.38,
+        28.0,
+        0.18
+      ],
+      [
+        76.8,
+        36.0,
+        76.8,
+        28.0,
+        0.18
+      ],
+      [
+        62.5,
+        25.2,
+        62.5,
+        40.95,
+        0.18
+      ]
+    ],
+    "COEX2": [
+      [
+        72.0,
+        38.0,
+        72.0,
+        24.6,
+        0.18
+      ]
+    ]
+  },
+  "p008_path": {
+    "layer": "B.Cu",
+    "w": 0.18,
+    "pts": [
+      [
+        46.2,
+        30.0
+      ],
+      [
+        46.2,
+        30.25
+      ],
+      [
+        78.5,
+        30.25
+      ],
+      [
+        78.5,
+        26.0
+      ],
+      [
+        79.67,
+        26.0
+      ]
+    ]
+  },
+  "restores": {
+    "ENABLE_62.5": {
+      "type": "via-bridge",
+      "ys": 29.6,
+      "yn": 30.9,
+      "x": 62.5
+    },
+    "COEX2_72": {
+      "type": "via-bridge",
+      "ys": 29.6,
+      "yn": 30.9,
+      "x": 72.0
+    },
+    "ENABLE_east": {
+      "type": "via-bridge",
+      "ye": 30.9,
+      "xe": 79.2,
+      "reconnect": [
+        79.2,
+        28.0,
+        90.38,
+        28.0
+      ]
+    }
+  },
+  "closed": [
+    "P0.08 U1\u2194SW3/R14 (B@y30.25)"
+  ],
+  "reverted": false,
+  "stop": false,
+  "notes": [
+    "Atomic co-route KEPT: rip ENABLE V@62.5/V@76.8/H@y28 + COEX2 V@72; P0.08 B@y30.25; via-bridges ENABLE@29.6/30.9 x=62.5, COEX2 same, ENABLE east F-hop to x=79.2.",
+    "P0.08 net not fully done: J12.9 still open (Class A/G style). Signal unconnected 78\u219277."
+  ],
+  "before": {
+    "unconnected_items": 78,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 78
+  },
+  "p015_west_segs": {
+    "before": 21,
+    "after": 21,
+    "preserved": true
+  },
+  "mid": {
+    "unconnected_items": 77,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 76
+  },
+  "net_unconnected_delta": {
+    "P0.08": -1
+  },
+  "success_gate": "signal-net drop with shorting=0 clearance=0 crossing=0 \u2014 MET",
+  "after": {
+    "unconnected_items": 77,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 76
+  },
+  "signal_net_deltas": {
+    "P0.08": -1
+  },
+  "remaining_p008": "F stub@U1 (44,30) \u2194 J12.9 @ (26.32,76) \u2014 separate header branch",
+  "files_touched": [
+    "nRF9161-DEV-BOARD.kicad_pcb",
+    "reports/DRC_PASS30I_BEFORE.json",
+    "reports/DRC_PASS30I_MID.json",
+    "reports/DRC_PASS30I_AFTER.json",
+    "reports/PASS30I_SUMMARY.json",
+    "docs/PCB_LAYOUT_REVIEW.md",
+    "scripts/final_pass30i.py"
+  ]
+}

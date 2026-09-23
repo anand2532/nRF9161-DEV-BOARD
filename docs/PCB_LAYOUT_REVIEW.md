@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-23 11:07 IST (Asia/Calcutta) — pass30h executed
+**Review date:** 2026-09-23 11:12 IST (Asia/Calcutta) — pass30i executed
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,7 +14,7 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **78** | `reports/DRC_PASS30H_AFTER.json` (live `kicad-cli` 9.0.2); Stage A copper kept; Class-E GND islands unchanged |
+| **unconnected_items** | **77** | `reports/DRC_PASS30I_AFTER.json` (live `kicad-cli` 9.0.2); Stage A kept; P0.08 U1↔east closed |
 | **shorting_items** | **0** | Same JSON |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
@@ -33,7 +33,7 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `reports/DRC_BEFORE_FINAL.json` | 120 | Pre-final pass |
 | `reports/DRC_final.json` / `FINAL_DESIGN_REVIEW.md` | 104 | Mid campaign |
 | `reports/DRC_AFTER_CONNECT_FULL.json` | 98 | Intermediate |
-| **`DRC_PASS30H_AFTER.json`** | **78** | **Authoritative after pass30h** (Stage A VDD2 via-bridge + VDD_nRF via jog; no net closed) |
+| **`DRC_PASS30I_AFTER.json`** | **77** | **Authoritative after pass30i** (atomic P0.08+ENABLE/COEX2 co-route; Stage A kept) |
 
 Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.json` / `reports/DRC_PASS30C_AFTER.json`). On-disk `fab/gerbers/` CreationDate **2026-09-16** remains **stale** and must not be used for fab (DFM checklist §5).
 
@@ -42,6 +42,8 @@ Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.j
 **Pass delta (pass30e):** Aggressive Class F corridor clear (PM-approved rip list). **Before/After unconnected:** 78/78 · **shorting/clearance:** 0/0 · **Nets closed:** none. ENABLE restore was the failing link. All trial copper reverted. Details: `reports/PASS30E_SUMMARY.json`.
 
 **Pass delta (pass30f):** ONE atomic VIN_FILT co-route. **Before/After unconnected:** 78/78 · **shorting/clearance:** 0/0 · **Nets closed:** `VIN_FILT` (offset by Class-E GND zone islands 9→10). Ripped+restored in same transaction: VDD_GPIO north U@y9, P0.15 F via-bridge (vias@51/60,y16.5 + F@19.5), ENABLE F via-bridge, VDD2_MID south jog@y17.8. P0.08 probe after approved rips still blocked (VDD_nRF via@69.3,30 + via forest) — no live trial copper kept. STOP per still-78 rule; placement-move list for Hardware PM. Details: `reports/PASS30F_SUMMARY.json`.
+
+**Pass delta (pass30i):** ONE atomic P0.08 + ENABLE/COEX2 co-route (Stage A kept; no placement). Ripped ENABLE V@62.5 / V@76.8 / H@y28 + COEX2 V@72; placed P0.08 B@y30.25; restored with F via-bridges (ENABLE@x62.5 ys/yn=29.6/30.9, COEX2@x72 same, ENABLE east F-hop to x=79.2). **Before/After unconnected:** 78/77 · shorting/clearance/crossing 0. Closed P0.08 U1↔SW3/R14; J12.9 still open. P0.15 west preserved. Details: `reports/PASS30I_SUMMARY.json`.
 
 **Pass delta (pass30h):** ONE honest cycle. Stage A KEPT (VDD2 B walls→via-bridge @x=58; VDD_nRF via (69.3,30)→(69.3,31.5) north). P0.08 probe CLEAR @y=30.25 after ENABLE/COEX2 rip but restore re-crosses / jog hits VDD_GPIO — **reverted**. Stage B placement REVERTED (shorting=5; C6.1@x=48.68 DEC0). **Before/After unconnected:** 78/78 · shorting/clearance/crossing 0. Details: `reports/PASS30H_SUMMARY.json`.
 
@@ -488,3 +490,28 @@ None (empty). Class-E GND islands unchanged (total still 78).
 **Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30h-20260923-105755`  
 **DRC:** `reports/DRC_PASS30H_BEFORE.json`, `reports/DRC_PASS30H_MID.json`, `reports/DRC_PASS30H_AFTER.json`  
 **Summary:** `reports/PASS30H_SUMMARY.json`
+
+
+---
+
+## Pass30i — atomic P0.08 co-route (2026-09-23 11:12 IST)
+
+**Goal:** Atomic ENABLE/COEX2 + P0.08 co-route on Stage A board. No placement. shorting=0 clearance=0.
+
+**Result: KEEP — unconnected 78→77; P0.08 U1↔SW3/R14 closed.**
+
+### Geometry kept
+- **P0.08** B: `(46.2,30)→(46.2,30.25)→(78.5,30.25)→(78.5,26)→(79.67,26)` w=0.18
+- **ENABLE @x=62.5** via-bridge: vias@(62.5,29.6)/(62.5,30.9) + F hop (B U-jog impossible across P0.08 H)
+- **COEX2 @x=72** via-bridge: vias@(72,30.9)/(72,29.6) + F hop
+- **ENABLE east**: via-bridge vias@(76.8,30.9)/(79.2,30.9) + F hop; B reconnect `(79.2,28)→(90.38,28)`
+
+### Remaining
+- **P0.08 → J12.9** still open (F stub @U1 ↔ header @≈(26.32,76))
+- Class E GND islands / other Class F (VIN_F, SWDCLK, nRESET) unchanged
+- Stage B placement still illegal (C6.1 DEC0) — not attempted
+
+### Next proposals
+1. Route P0.08 west/south stub to J12.9 (private column; protect P0.15 wrap)
+2. VIN_F / SWDCLK Class F if corridor free after P0.08 east copper
+3. Stage B C6 reattach only with pad1 stitch x≥49.0 (never vertical @x=48.68)
