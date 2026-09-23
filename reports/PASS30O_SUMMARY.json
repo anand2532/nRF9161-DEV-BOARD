@@ -1,0 +1,256 @@
+{
+  "pass": "layout-pass30o",
+  "timestamp_ist": "2026-09-23 12:03 IST",
+  "phase": "COMPLETE_KEPT",
+  "scope": "P0.02 atomic close then cheap signal islands/header stubs",
+  "one_atomic_cycle": true,
+  "keep_stage_A": true,
+  "keep_pass30i_30n": true,
+  "no_gerbers": true,
+  "hard_bans": [
+    "P0.15 west wrap",
+    "RF keepout",
+    "U3/GNSS bias",
+    "Stage A + pass30i\u201330n kept copper (P0.08/VIN_F/SWDCLK/nRESET/ENABLE-COEX2 restores/VIN_FILT)"
+  ],
+  "preflight_rip_list": [
+    {
+      "id": "VDD_GPIO_B_V_4805",
+      "net": "VDD_GPIO",
+      "layer": "B.Cu",
+      "x1": 48.05,
+      "y1": 3.46,
+      "x2": 48.05,
+      "y2": 14.8,
+      "reason": "crosses P0.02 H@y4.5; U-jog west restore"
+    },
+    {
+      "id": "P001_B_H_152",
+      "net": "P0.01",
+      "layer": "B.Cu",
+      "x1": 86.14,
+      "y1": 15.2,
+      "x2": 100.3,
+      "y2": 15.2,
+      "reason": "crossed by P0.02 east col @x89"
+    },
+    {
+      "id": "P015_EAST_B_H_72",
+      "net": "P0.15",
+      "layer": "B.Cu",
+      "x1": 72.0,
+      "y1": 7.2,
+      "x2": 106.0,
+      "y2": 7.2,
+      "reason": "east H crossed by P0.02 east col (not west wrap)"
+    }
+  ],
+  "backup": ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30o-20260923-120037",
+  "closed": [
+    "P0.02"
+  ],
+  "blocked": {
+    "cheap_islands": "Scanned 1-unc signal nets; no DRC-precleared stub path committed this cycle after P0.02 keep (avoid speculative rip thrash)"
+  },
+  "reverted": false,
+  "reverted_nets": [],
+  "p002_kept": true,
+  "restore_fail_streak": 0,
+  "restores": {
+    "VDD_GPIO": [
+      "B (48.05,3.46)->(45.0,3.46)->(45.0,5.5)->(48.05,5.5)->(48.05,14.8)"
+    ],
+    "P0.01": [
+      "B (86.14,15.2)->(88.2,15.2) via F (88.2,15.2)->(89.8,15.2) via B (89.8,15.2)->(100.3,15.2)"
+    ],
+    "P0.15": [
+      "B (72.0,7.2)->(88.2,7.2) via F (88.2,7.2)->(89.8,7.2) via B (89.8,7.2)->(106.0,7.2)"
+    ]
+  },
+  "p002_attempt": {
+    "west_col": 27.5,
+    "corridor_y": 4.5,
+    "east_col": 89.0,
+    "attach": "(89.0,19.13)->(92.14,19.13) into existing east via",
+    "note": "north jog around SWDCLK via@(53.65,4.73); F-hops SWDCLK@34.2 + VDD_GPIO U@45; F-hop nRESET@12.6"
+  },
+  "ripped_actual": [
+    {
+      "net": "VDD_GPIO",
+      "x1": 48.05,
+      "y1": 3.46,
+      "x2": 48.05,
+      "y2": 14.8
+    },
+    {
+      "net": "VDD_GPIO",
+      "x1": 48.05,
+      "y1": 3.46,
+      "x2": 48.05,
+      "y2": 14.8
+    },
+    {
+      "net": "VDD_GPIO",
+      "x1": 48.05,
+      "y1": 14.8,
+      "x2": 48.05,
+      "y2": 3.46
+    },
+    {
+      "net": "VDD_GPIO",
+      "x1": 48.05,
+      "y1": 14.8,
+      "x2": 48.05,
+      "y2": 3.46
+    },
+    {
+      "net": "VDD_GPIO",
+      "x1": 48.05,
+      "y1": 9.0,
+      "x2": 48.05,
+      "y2": 14.8
+    },
+    {
+      "net": "VDD_GPIO",
+      "x1": 46.35,
+      "y1": 3.46,
+      "x2": 48.05,
+      "y2": 14.8
+    },
+    {
+      "net": "P0.01",
+      "x1": 86.14,
+      "y1": 15.2,
+      "x2": 100.3,
+      "y2": 15.2
+    },
+    {
+      "net": "P0.15",
+      "x1": 72.0,
+      "y1": 7.2,
+      "x2": 106.0,
+      "y2": 7.2
+    }
+  ],
+  "notes": [
+    "P0.02 KEPT: unconnected 73\u219272; shorting=0 clearance=0 crossing=0",
+    "First MID attempt @EX=91 shorted via to D6.1 LED3_A \u2014 reverted conceptually; re-routed @EX=89",
+    "GetTracks() snapshot-once required (second GetTracks() SWIG-breaks after Remove)",
+    "Cheap candidates scanned (1-unc, non-RF/power): ['MAGPIO0', 'MAGPIO1', 'MAGPIO2', 'MIPI_SCLK', 'MIPI_SDATA', 'MIPI_VIO', 'P0.00', 'P0.01', 'P0.03', 'P0.14', 'P0.16', 'P0.20', 'P0.25', 'P0.26', 'P0.27']"
+  ],
+  "cheap_candidates_scanned": [
+    "MAGPIO0",
+    "MAGPIO1",
+    "MAGPIO2",
+    "MIPI_SCLK",
+    "MIPI_SDATA",
+    "MIPI_VIO",
+    "P0.00",
+    "P0.01",
+    "P0.03",
+    "P0.14",
+    "P0.16",
+    "P0.20",
+    "P0.25",
+    "P0.26",
+    "P0.27",
+    "P0.28",
+    "P0.29"
+  ],
+  "cheap_attempts": [],
+  "pad_only_block": false,
+  "placement_proposal": null,
+  "before": {
+    "unconnected_items": 73,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 74
+  },
+  "mid": {
+    "unconnected_items": 72,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 73
+  },
+  "after": {
+    "unconnected_items": 72,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 73
+  },
+  "before_nets_watch": {
+    "P0.02": 1,
+    "P0.15": 0,
+    "P0.01": 1,
+    "VDD_GPIO": 4,
+    "nRESET": 0,
+    "SWDCLK": 0,
+    "VIN_F": 0,
+    "VIN_FILT": 0,
+    "P0.08": 0,
+    "ENABLE": 0,
+    "COEX2": 0,
+    "VDD2": 0,
+    "VDD_nRF": 0
+  },
+  "after_nets_watch": {
+    "P0.02": 0,
+    "P0.15": 0,
+    "P0.01": 1,
+    "VDD_GPIO": 4,
+    "nRESET": 0,
+    "SWDCLK": 0,
+    "VIN_F": 0,
+    "VIN_FILT": 0,
+    "P0.08": 0,
+    "ENABLE": 0,
+    "COEX2": 0,
+    "VDD2": 0,
+    "VDD_nRF": 0
+  },
+  "p015_west_segs": {
+    "before": 21,
+    "after": 21,
+    "preserved": true
+  },
+  "stage_a_check": {
+    "VDD_nRF_via_north": true,
+    "VDD2_vias": 2,
+    "VDD2_present": true
+  },
+  "signal_net_deltas": {
+    "P0.02": -1,
+    "P0.15": 0,
+    "P0.01": 0,
+    "VDD_GPIO": 0,
+    "nRESET": 0,
+    "SWDCLK": 0,
+    "VIN_F": 0,
+    "VIN_FILT": 0,
+    "P0.08": 0,
+    "ENABLE": 0,
+    "COEX2": 0,
+    "VDD2": 0,
+    "VDD_nRF": 0
+  },
+  "all_net_deltas": {
+    "P0.02": -1
+  },
+  "success_gate": "MET (73\u219272; P0.02 KEPT)",
+  "stop": false,
+  "files_touched": [
+    "nRF9161-DEV-BOARD.kicad_pcb",
+    "reports/DRC_PASS30O_BEFORE.json",
+    "reports/DRC_PASS30O_MID.json",
+    "reports/DRC_PASS30O_AFTER.json",
+    "reports/PASS30O_SUMMARY.json",
+    "docs/PCB_LAYOUT_REVIEW.md",
+    "scripts/final_pass30o.py",
+    ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30o-20260923-120037",
+    ".mcp-backups/pass30o-connect/pre-p002-tx.kicad_pcb",
+    ".mcp-backups/pass30o-connect/ripped.json"
+  ]
+}

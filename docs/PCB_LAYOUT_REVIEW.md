@@ -14,7 +14,7 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **73** | `reports/DRC_PASS30M_AFTER.json` (live `kicad-cli` 9.0.2); nRESET reverted; Stage A+pass30i–30l kept |
+| **unconnected_items** | **72** | `reports/DRC_PASS30M_AFTER.json` (live `kicad-cli` 9.0.2); nRESET reverted; Stage A+pass30i–30l kept |
 | **shorting_items** | **0** | Same JSON |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
@@ -50,6 +50,8 @@ Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.j
 **Pass delta (pass30i):** ONE atomic P0.08 + ENABLE/COEX2 co-route (Stage A kept; no placement). Ripped ENABLE V@62.5 / V@76.8 / H@y28 + COEX2 V@72; placed P0.08 B@y30.25; restored with F via-bridges (ENABLE@x62.5 ys/yn=29.6/30.9, COEX2@x72 same, ENABLE east F-hop to x=79.2). **Before/After unconnected:** 78/77 · shorting/clearance/crossing 0. Closed P0.08 U1↔SW3/R14; J12.9 still open. P0.15 west preserved. Details: `reports/PASS30I_SUMMARY.json`.
 
 **Pass delta (pass30j):** ONE honest cycle — stitch P0.08 island→J12.9. B column @x=65.2 with F via-hops over COEX2/COEX0/P0.18+P0.17; rip+restore P0.15 bottom H (wide F-bridge 61.5–68.5 @y77.45) + P0.01 (final F-bridge 24.5–27.2 @y78.5 + column U-jog F@y74.5); B H@y79 → via(26.32,78) → F to J12.9. **Before/After unconnected:** 77/76 · shorting/clearance/crossing 0. P0.15 west wrap preserved (21 segs). VIN_F/SWDCLK skipped (not cheap). Details: `reports/PASS30J_SUMMARY.json`.
+
+**Pass delta (pass30o):** P0.02 atomic close (west col x=27.5, B@y4.5, east col x=89). Preflight rip: VDD_GPIO V@48.05 (U-jog west), P0.01 H@15.2 (F-hop 88.2–89.8), P0.15 east H@7.2 (F-hop 88.2–89.8). **Before/After unconnected:** 73/72 · shorting/clearance/crossing 0. P0.15 west wrap preserved. Stage A + pass30i–30n kept. No Gerbers. Details: `reports/PASS30O_SUMMARY.json`.
 
 **Pass delta (pass30n):** ONE atomic nRESET co-route (F@y10.8 under VDD_nRF/JP1). Preflight rip (3): P0.15 (72.0,15.35)→(72.0,7.2), COEX2 (72.0,24.6)→(105.1,24.6), P0.01 (86.14,15.2)→(105.55,15.2). nRESET **KEPT** B@y12.6 + F clearance hop + F-hop 69–71.5; COEX2/P0.01/P0.15 east co-restored. **Before/After unconnected:** 74/73 · shorting/clearance/crossing 0. P0.02 skipped (no free corridor). Stage A + pass30i–30l kept. P0.15 west wrap preserved. No Gerbers. Details: `reports/PASS30N_SUMMARY.json`.
 
@@ -706,3 +708,43 @@ Atomic nRESET with ≥0.15 mm clearance to VDD_nRF via@(57.95,12) d=0.8. Rip P0.
 | COEX2 | 0 |
 | P0.01 | 0 |
 | P0.15 | 0 |
+
+
+---
+
+## Pass30o — P0.02 close (2026-09-23 12:03 IST)
+
+### Goal
+P0.02 first with atomic rip/restore of non-banned blockers; then cheap true signal islands/header stubs. shorting=0 clearance=0 crossing=0. No Gerbers. Protect Stage A + pass30i–30n kept copper + P0.15 west wrap + RF/U3.
+
+### Preflight rip list
+- `VDD_GPIO_B_V_4805`: VDD_GPIO B.Cu (48.05,3.46)→(48.05,14.80) — crosses P0.02 H@y4.5; U-jog west restore
+- `P001_B_H_152`: P0.01 B.Cu (86.14,15.2)→(100.3,15.2) — crossed by P0.02 east col @x89
+- `P015_EAST_B_H_72`: P0.15 B.Cu (72.0,7.2)→(106.0,7.2) — east H only (not west wrap)
+
+### Geometry kept (P0.02)
+- West: from existing B@y45.8 via col **x=27.5** with F-hops over P0.06@44.5 / P0.13@43–41
+- Corridor: B **H@y=4.5** with F-hops over SWDCLK@x34.2 + VDD_GPIO U@x45; **north jog** around SWDCLK via@(53.65,4.73)
+- East: col **x=89** F-hop over nRESET@y12.6 → attach (89,19.13)→(92.14,19.13) into existing via
+- Restores: VDD_GPIO U-jog west; P0.01/P0.15 F-hops 88.2–89.8
+
+### Result
+- **Closed/KEPT:** P0.02
+- **Reverted:** no
+- **Before unconnected:** 73
+- **After unconnected:** 72 (shorting=0 clearance=0 crossing=0)
+- **P0.15 west segs:** before=21 after=21 preserved=True
+- **Stage A:** {'VDD_nRF_via_north': True, 'VDD2_vias': 2, 'VDD2_present': True}
+- **Cheap islands:** scanned ['MAGPIO0', 'MAGPIO1', 'MAGPIO2', 'MIPI_SCLK', 'MIPI_SDATA', 'MIPI_VIO', 'P0.00', 'P0.01', 'P0.03', 'P0.14', 'P0.16', 'P0.20'] — none committed (no pre-cleared stub this cycle)
+- **Backup:** `.mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30o-20260923-120037`
+- **DRC:** `reports/DRC_PASS30O_BEFORE.json`, `reports/DRC_PASS30O_MID.json`, `reports/DRC_PASS30O_AFTER.json`
+- **Summary:** `reports/PASS30O_SUMMARY.json`
+
+### Signal deltas
+| Net | Δ unconnected |
+| --- | --- |
+| P0.02 | -1 |
+| VDD_GPIO | 0 |
+| P0.01 | 0 |
+| P0.15 | 0 |
+| nRESET | 0 |
