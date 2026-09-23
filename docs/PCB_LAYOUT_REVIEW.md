@@ -1072,3 +1072,24 @@ Copper-only (no placement): P0.11 header stubs → P0.10/P0.17 → MAGPIO/MIPI/A
 - Proposal-only after pass30z KEEP. Preferred: J13(64,75) + J10/J11(115,28)/(115,46); alts in report.
 - Banned J13: (64,73), (64,78.5), (67,76). Hard clears: P0.22 via@(112.5,32.5), highways y≈78.5–79.2, P0.01 via@(80.51,76.7).
 - Details: `reports/PASS30AA_PACKAGE_B_PROPOSALS.md`
+
+## Pass30ab — Package B' execute (preferred then Alt1-once) — 2026-09-23 18:57 IST
+
+**Goal:** Atomic B' place+reattach. Preferred J13(64,75)+J10/J11(115,*); Alt1 once J13(64,74.5)+J10/J11(115.5,*) if preferred dirty. Gate shorting/clearance/crossing=0 else full revert. Protect Stage A, P0.15 west, RF/U3, pass30r/u, **pass30z Class C**. No Alt2 / Package A / U1 / Gerbers.
+
+| Attempt | Landing | Mid DRC | Result |
+| --- | --- | --- | --- |
+| preferred | J13(64,75) J10/J11(115,*) | short=4 clr=1 cross=0 | reverted → Alt1 |
+| Alt1 (once) | J13(64,74.5) J10/J11(115.5,*) | short=3 clr=2 cross=0 | **full revert** |
+| keep | J13(64,76) J10/J11(116,*) | — | pass30z keep restored |
+
+**Blockers (head):** P0.01 F@y74.5 × J13 pads; P0.01 via@(68,74.5); P0.04 F × J11 GND; VDD_GPIO F stubs × J10 P0.22/P0.23; Alt1 also P0.08 via@(65.2,73.95) × J13.1.
+
+**Protect:** Class C C22/C23/C24 stubs+GND vias OK; Stage A OK; P0.15 west OK; U1 unmoved.
+
+**Before/after unconnected:** 64→64 (shorting=clearance=crossing=0/0/0 after revert)
+
+**Landing kept:** none
+
+**Backup:** `.mcp-backups/pass30ab-package-b/pre-edit.kicad_pcb`  
+**Artifacts:** `reports/DRC_PASS30AB_{BEFORE,MID_PREF,MID_ALT,AFTER}.json`, `reports/PASS30AB_SUMMARY.{md,json}`, `scripts/final_pass30ab.py`

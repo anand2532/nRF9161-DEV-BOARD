@@ -1,0 +1,769 @@
+{
+  "pass": "layout-pass30ab",
+  "timestamp_ist": "2026-09-23 13:27 IST",
+  "scope": "Package B' ONLY \u2014 J13+J10+J11 atomic place + full reattach",
+  "preferred": {
+    "J13": [
+      64.0,
+      75.0
+    ],
+    "J10": [
+      115.0,
+      28.0
+    ],
+    "J11": [
+      115.0,
+      46.0
+    ]
+  },
+  "alt1": {
+    "J13": [
+      64.0,
+      74.5
+    ],
+    "J10": [
+      115.5,
+      28.0
+    ],
+    "J11": [
+      115.5,
+      46.0
+    ]
+  },
+  "banned_j13": [
+    [
+      64.0,
+      73.0
+    ],
+    [
+      64.0,
+      78.5
+    ],
+    [
+      67.0,
+      76.0
+    ]
+  ],
+  "no_gerbers": true,
+  "packages_skipped": [
+    "A",
+    "C",
+    "D",
+    "Alt2"
+  ],
+  "no_u1_move": true,
+  "baseline": "pass30z KEEP unconnected=64",
+  "backup": "/workspace/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/pass30ab-package-b/pre-edit.kicad_pcb",
+  "live_xy_before": {
+    "J13": [
+      64.0,
+      76.0
+    ],
+    "J10": [
+      116.0,
+      28.0
+    ],
+    "J11": [
+      116.0,
+      46.0
+    ],
+    "U1": [
+      36.0,
+      32.0
+    ],
+    "C22": [
+      17.5,
+      31.75
+    ],
+    "C23": [
+      24.8,
+      34.0
+    ],
+    "C24": [
+      15.0,
+      31.8
+    ]
+  },
+  "landing_kept": null,
+  "phase": "COMPLETE_REVERTED",
+  "p015_west_before": 21,
+  "stage_a_before": {
+    "VDD_nRF_via_north": true,
+    "VDD2_vias": 2,
+    "VDD2_present": true
+  },
+  "class_c_before": {
+    "fps_ok": true,
+    "gnd_vias": {
+      "C22": true,
+      "C23": true,
+      "C24": true
+    },
+    "stub_tracks": {
+      "C22": 1,
+      "C23": 1,
+      "C24": 1
+    },
+    "ok": true,
+    "reasons": []
+  },
+  "before": {
+    "unconnected_items": 64,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "copper_edge_clearance": 0,
+    "silk_over_copper": 35,
+    "silk_overlap": 145,
+    "hole_clearance": 0,
+    "via_dangling": 72,
+    "track_dangling": 15
+  },
+  "before_nets_watch": {
+    "P0.08": 0,
+    "P0.15": 0,
+    "P0.16": 1,
+    "P0.17": 2,
+    "P0.18": 2,
+    "P0.19": 1,
+    "P0.20": 1,
+    "P0.21": 2,
+    "P0.22": 1,
+    "P0.23": 2,
+    "P0.24": 2,
+    "P0.30": 2,
+    "P0.31": 2,
+    "VDD_GPIO": 3,
+    "VDD_nRF": 0,
+    "VDD2": 0,
+    "GND": 10,
+    "COEX0": 1,
+    "COEX2": 0,
+    "ENABLE": 0,
+    "ANT_FIT": 0,
+    "AUX": 0,
+    "AUX_FIT": 0
+  },
+  "j13_landing_kept": null,
+  "stop_reason": "preferred dirty/reject (dirty_drc); Alt1 also dirty/reject (dirty_drc) \u2014 full revert to pass30z keep; STOP (no Alt2)",
+  "attempts": [
+    {
+      "label": "preferred_J13_64_75",
+      "targets": {
+        "J13": [
+          64.0,
+          75.0
+        ],
+        "J10": [
+          115.0,
+          28.0
+        ],
+        "J11": [
+          115.0,
+          46.0
+        ]
+      },
+      "ripped": 18,
+      "reattached_segs": 21,
+      "bus_shifted": 6,
+      "row_shifted": 0,
+      "final_xy": {
+        "J13": [
+          64.0,
+          75.0
+        ],
+        "J10": [
+          115.0,
+          28.0
+        ],
+        "J11": [
+          115.0,
+          46.0
+        ]
+      },
+      "new_pads_sample": {
+        "J13.1": [
+          64.0,
+          75.0
+        ],
+        "J13.4": [
+          71.62,
+          75.0
+        ],
+        "J13.7": [
+          79.24,
+          75.0
+        ],
+        "J10.2": [
+          115.0,
+          30.54
+        ],
+        "J11.2": [
+          115.0,
+          48.54
+        ]
+      },
+      "mid": {
+        "unconnected_items": 64,
+        "shorting_items": 4,
+        "clearance": 1,
+        "tracks_crossing": 0,
+        "copper_edge_clearance": 0,
+        "silk_over_copper": 55,
+        "silk_overlap": 185,
+        "hole_clearance": 1,
+        "via_dangling": 72,
+        "track_dangling": 15
+      },
+      "mid_nets_watch": {
+        "P0.08": 0,
+        "P0.15": 0,
+        "P0.16": 1,
+        "P0.17": 2,
+        "P0.18": 2,
+        "P0.19": 1,
+        "P0.20": 1,
+        "P0.21": 2,
+        "P0.22": 1,
+        "P0.23": 2,
+        "P0.24": 2,
+        "P0.30": 2,
+        "P0.31": 2,
+        "VDD_GPIO": 3,
+        "VDD_nRF": 0,
+        "VDD2": 0,
+        "GND": 10,
+        "COEX0": 1,
+        "COEX2": 0,
+        "ENABLE": 0,
+        "ANT_FIT": 0,
+        "AUX": 0,
+        "AUX_FIT": 0
+      },
+      "clean": false,
+      "protect": {
+        "stage_a": {
+          "VDD_nRF_via_north": true,
+          "VDD2_vias": 2,
+          "VDD2_present": true
+        },
+        "p015_west": 21,
+        "p015_west_before": 21,
+        "class_c": {
+          "fps_ok": true,
+          "gnd_vias": {
+            "C22": true,
+            "C23": true,
+            "C24": true
+          },
+          "stub_tracks": {
+            "C22": 1,
+            "C23": 1,
+            "C24": 1
+          },
+          "ok": true,
+          "reasons": []
+        },
+        "U1": [
+          36.0,
+          32.0
+        ],
+        "ok": true,
+        "reasons": []
+      },
+      "reject_reason": "dirty_drc",
+      "collide": [
+        {
+          "type": "shorting_items",
+          "description": "Items shorting two nets (nets P0.17 and P0.01)",
+          "items": [
+            {
+              "description": "PTH pad 2 [P0.17] of J13",
+              "pos": {
+                "x": 66.54,
+                "y": 75.0
+              }
+            },
+            {
+              "description": "Track [P0.01] on F.Cu, length 6.0000 mm",
+              "pos": {
+                "x": 62.0,
+                "y": 74.5
+              }
+            }
+          ]
+        },
+        {
+          "type": "clearance",
+          "description": "Clearance violation (netclass 'Default' clearance 0.1000 mm; actual 0.0401 mm)",
+          "items": [
+            {
+              "description": "PTH pad 3 [P0.18] of J13",
+              "pos": {
+                "x": 69.08,
+                "y": 75.0
+              }
+            },
+            {
+              "description": "Via [P0.01] on F.Cu - B.Cu",
+              "pos": {
+                "x": 68.0,
+                "y": 74.5
+              }
+            }
+          ]
+        },
+        {
+          "type": "shorting_items",
+          "description": "Items shorting two nets (nets P0.04 and GND)",
+          "items": [
+            {
+              "description": "Track [P0.04] on F.Cu, length 26.3000 mm",
+              "pos": {
+                "x": 114.8,
+                "y": 78.8
+              }
+            },
+            {
+              "description": "PTH pad 4 [GND] of J11",
+              "pos": {
+                "x": 115.0,
+                "y": 53.62
+              }
+            }
+          ]
+        },
+        {
+          "type": "shorting_items",
+          "description": "Items shorting two nets (nets VDD_GPIO and P0.22)",
+          "items": [
+            {
+              "description": "Track [VDD_GPIO] on F.Cu, length 27.8900 mm",
+              "pos": {
+                "x": 114.4,
+                "y": 31.08
+              }
+            },
+            {
+              "description": "PTH pad 2 [P0.22] of J10",
+              "pos": {
+                "x": 115.0,
+                "y": 30.54
+              }
+            }
+          ]
+        },
+        {
+          "type": "shorting_items",
+          "description": "Items shorting two nets (nets P0.23 and VDD_GPIO)",
+          "items": [
+            {
+              "description": "PTH pad 3 [P0.23] of J10",
+              "pos": {
+                "x": 115.0,
+                "y": 33.08
+              }
+            },
+            {
+              "description": "Track [VDD_GPIO] on F.Cu, length 7.0800 mm",
+              "pos": {
+                "x": 114.4,
+                "y": 38.16
+              }
+            }
+          ]
+        },
+        {
+          "type": "hole_clearance",
+          "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1901 mm)",
+          "items": [
+            {
+              "description": "PTH pad 3 [P0.18] of J13",
+              "pos": {
+                "x": 69.08,
+                "y": 75.0
+              }
+            },
+            {
+              "description": "Via [P0.01] on F.Cu - B.Cu",
+              "pos": {
+                "x": 68.0,
+                "y": 74.5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "alt1_J13_64_74.5",
+      "targets": {
+        "J13": [
+          64.0,
+          74.5
+        ],
+        "J10": [
+          115.5,
+          28.0
+        ],
+        "J11": [
+          115.5,
+          46.0
+        ]
+      },
+      "ripped": 18,
+      "reattached_segs": 21,
+      "bus_shifted": 6,
+      "row_shifted": 0,
+      "final_xy": {
+        "J13": [
+          64.0,
+          74.5
+        ],
+        "J10": [
+          115.5,
+          28.0
+        ],
+        "J11": [
+          115.5,
+          46.0
+        ]
+      },
+      "new_pads_sample": {
+        "J13.1": [
+          64.0,
+          74.5
+        ],
+        "J13.4": [
+          71.62,
+          74.5
+        ],
+        "J13.7": [
+          79.24,
+          74.5
+        ],
+        "J10.2": [
+          115.5,
+          30.54
+        ],
+        "J11.2": [
+          115.5,
+          48.54
+        ]
+      },
+      "mid": {
+        "unconnected_items": 64,
+        "shorting_items": 3,
+        "clearance": 2,
+        "tracks_crossing": 0,
+        "copper_edge_clearance": 0,
+        "silk_over_copper": 55,
+        "silk_overlap": 145,
+        "hole_clearance": 2,
+        "via_dangling": 72,
+        "track_dangling": 15
+      },
+      "mid_nets_watch": {
+        "P0.08": 0,
+        "P0.15": 0,
+        "P0.16": 1,
+        "P0.17": 2,
+        "P0.18": 2,
+        "P0.19": 1,
+        "P0.20": 1,
+        "P0.21": 2,
+        "P0.22": 1,
+        "P0.23": 2,
+        "P0.24": 2,
+        "P0.30": 2,
+        "P0.31": 2,
+        "VDD_GPIO": 3,
+        "VDD_nRF": 0,
+        "VDD2": 0,
+        "GND": 10,
+        "COEX0": 1,
+        "COEX2": 0,
+        "ENABLE": 0,
+        "ANT_FIT": 0,
+        "AUX": 0,
+        "AUX_FIT": 0
+      },
+      "clean": false,
+      "protect": {
+        "stage_a": {
+          "VDD_nRF_via_north": true,
+          "VDD2_vias": 2,
+          "VDD2_present": true
+        },
+        "p015_west": 21,
+        "p015_west_before": 21,
+        "class_c": {
+          "fps_ok": true,
+          "gnd_vias": {
+            "C22": true,
+            "C23": true,
+            "C24": true
+          },
+          "stub_tracks": {
+            "C22": 1,
+            "C23": 1,
+            "C24": 1
+          },
+          "ok": true,
+          "reasons": []
+        },
+        "U1": [
+          36.0,
+          32.0
+        ],
+        "ok": true,
+        "reasons": []
+      },
+      "reject_reason": "dirty_drc",
+      "collide": [
+        {
+          "type": "shorting_items",
+          "description": "Items shorting two nets (nets P0.17 and P0.01)",
+          "items": [
+            {
+              "description": "PTH pad 2 [P0.17] of J13",
+              "pos": {
+                "x": 66.54,
+                "y": 74.5
+              }
+            },
+            {
+              "description": "Track [P0.01] on F.Cu, length 6.0000 mm",
+              "pos": {
+                "x": 62.0,
+                "y": 74.5
+              }
+            }
+          ]
+        },
+        {
+          "type": "shorting_items",
+          "description": "Items shorting two nets (nets P0.18 and P0.01)",
+          "items": [
+            {
+              "description": "PTH pad 3 [P0.18] of J13",
+              "pos": {
+                "x": 69.08,
+                "y": 74.5
+              }
+            },
+            {
+              "description": "Via [P0.01] on F.Cu - B.Cu",
+              "pos": {
+                "x": 68.0,
+                "y": 74.5
+              }
+            }
+          ]
+        },
+        {
+          "type": "shorting_items",
+          "description": "Items shorting two nets (nets P0.04 and GND)",
+          "items": [
+            {
+              "description": "Track [P0.04] on F.Cu, length 26.3000 mm",
+              "pos": {
+                "x": 114.8,
+                "y": 78.8
+              }
+            },
+            {
+              "description": "PTH pad 4 [GND] of J11",
+              "pos": {
+                "x": 115.5,
+                "y": 53.62
+              }
+            }
+          ]
+        },
+        {
+          "type": "clearance",
+          "description": "Clearance violation (netclass 'POWER' clearance 0.1500 mm; actual 0.1250 mm)",
+          "items": [
+            {
+              "description": "PTH pad 3 [P0.23] of J10",
+              "pos": {
+                "x": 115.5,
+                "y": 33.08
+              }
+            },
+            {
+              "description": "Track [VDD_GPIO] on F.Cu, length 7.0800 mm",
+              "pos": {
+                "x": 114.4,
+                "y": 38.16
+              }
+            }
+          ]
+        },
+        {
+          "type": "clearance",
+          "description": "Clearance violation (netclass 'Default' clearance 0.1000 mm; actual 0.0500 mm)",
+          "items": [
+            {
+              "description": "Via [P0.08] on F.Cu - B.Cu",
+              "pos": {
+                "x": 65.2,
+                "y": 73.95
+              }
+            },
+            {
+              "description": "PTH pad 1 [P0.16] of J13",
+              "pos": {
+                "x": 64.0,
+                "y": 74.5
+              }
+            }
+          ]
+        },
+        {
+          "type": "hole_clearance",
+          "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2000 mm)",
+          "items": [
+            {
+              "description": "PTH pad 1 [P0.16] of J13",
+              "pos": {
+                "x": 64.0,
+                "y": 74.5
+              }
+            },
+            {
+              "description": "Via [P0.08] on F.Cu - B.Cu",
+              "pos": {
+                "x": 65.2,
+                "y": 73.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "hole_clearance",
+          "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0800 mm)",
+          "items": [
+            {
+              "description": "PTH pad 3 [P0.18] of J13",
+              "pos": {
+                "x": 69.08,
+                "y": 74.5
+              }
+            },
+            {
+              "description": "Via [P0.01] on F.Cu - B.Cu",
+              "pos": {
+                "x": 68.0,
+                "y": 74.5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "after": {
+    "unconnected_items": 64,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "copper_edge_clearance": 0,
+    "silk_over_copper": 35,
+    "silk_overlap": 145,
+    "hole_clearance": 0,
+    "via_dangling": 72,
+    "track_dangling": 15
+  },
+  "after_nets_watch": {
+    "P0.08": 0,
+    "P0.15": 0,
+    "P0.16": 1,
+    "P0.17": 2,
+    "P0.18": 2,
+    "P0.19": 1,
+    "P0.20": 1,
+    "P0.21": 2,
+    "P0.22": 1,
+    "P0.23": 2,
+    "P0.24": 2,
+    "P0.30": 2,
+    "P0.31": 2,
+    "VDD_GPIO": 3,
+    "VDD_nRF": 0,
+    "VDD2": 0,
+    "GND": 10,
+    "COEX0": 1,
+    "COEX2": 0,
+    "ENABLE": 0,
+    "ANT_FIT": 0,
+    "AUX": 0,
+    "AUX_FIT": 0
+  },
+  "final_xy": {
+    "J13": [
+      64.0,
+      76.0
+    ],
+    "J10": [
+      116.0,
+      28.0
+    ],
+    "J11": [
+      116.0,
+      46.0
+    ],
+    "U1": [
+      36.0,
+      32.0
+    ],
+    "C22": [
+      17.5,
+      31.75
+    ],
+    "C23": [
+      24.8,
+      34.0
+    ],
+    "C24": [
+      15.0,
+      31.8
+    ]
+  },
+  "protect_after": {
+    "stage_a": {
+      "VDD_nRF_via_north": true,
+      "VDD2_vias": 2,
+      "VDD2_present": true
+    },
+    "p015_west": 21,
+    "p015_west_before": 21,
+    "class_c": {
+      "fps_ok": true,
+      "gnd_vias": {
+        "C22": true,
+        "C23": true,
+        "C24": true
+      },
+      "stub_tracks": {
+        "C22": 1,
+        "C23": 1,
+        "C24": 1
+      },
+      "ok": true,
+      "reasons": []
+    },
+    "U1": [
+      36.0,
+      32.0
+    ],
+    "ok": true,
+    "reasons": []
+  },
+  "kept": null,
+  "reverted": true,
+  "unconnected_delta": 0,
+  "decision": "REVERT",
+  "success_gate": "BLOCKED \u2014 reverted to pass30z keep; unconnected 64\u219264; shorting/clearance/crossing=0/0/0"
+}
