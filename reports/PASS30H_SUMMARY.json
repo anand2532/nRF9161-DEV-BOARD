@@ -1,0 +1,201 @@
+{
+  "pass": "layout-pass30h",
+  "timestamp_ist": "2026-09-23 11:06 IST",
+  "one_honest_cycle": true,
+  "before": {
+    "unconnected_items": 78,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 78
+  },
+  "after": {
+    "unconnected_items": 78,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "via_dangling": 78
+  },
+  "mid_stageA": null,
+  "stages": {
+    "A_applied": true,
+    "A_vdd2": {
+      "action": "via-bridge-redesign",
+      "ripped_B_walls": [
+        [
+          [
+            52.22,
+            26.75
+          ],
+          [
+            52.22,
+            32.0
+          ]
+        ],
+        [
+          [
+            54.5,
+            21.2
+          ],
+          [
+            54.5,
+            32.0
+          ]
+        ]
+      ],
+      "via_bridge": {
+        "vias": [
+          [
+            58.0,
+            29.55
+          ],
+          [
+            58.0,
+            30.95
+          ]
+        ],
+        "F_hop": true,
+        "south_feeder_y": 29.55,
+        "north_feeder": false,
+        "north_via_stitch_to_y32": true
+      }
+    },
+    "A_vdd_nrf": {
+      "from": [
+        69.3,
+        30.0
+      ],
+      "to": [
+        69.3,
+        31.5
+      ],
+      "chosen": "north \u22642mm; not south onto VIN_FILT F@y28.8"
+    },
+    "A_gnd_via": {
+      "requested": [
+        [
+          80.0,
+          30.0
+        ],
+        [
+          80.0,
+          32.5
+        ]
+      ],
+      "result": "SKIPPED \u2014 (80,32.5) shorts VDD_GPIO F"
+    },
+    "P008": {
+      "status": "REVERTED \u2014 path CLEAR at y=30.25 after Stage A but ENABLE/COEX2 original restore crossed P0.08 (tracks_crossing=4); jogged restore hit clearance vs VDD_GPIO via",
+      "probe_clear_path": "B_y30.25 [(46.2,30),(46.2,30.25),(78.5,30.25),(78.5,26),(79.67,26)]",
+      "failure_geometry": {
+        "ENABLE_crossings": [
+          "x=62.5 vertical",
+          "x=76.8 vertical",
+          "H@y28 vs P0.08 V@x=78.5"
+        ],
+        "COEX2_crossing": "x=72 vertical",
+        "jog_restore_blocker": "ENABLE north U @y31.5 near VDD_GPIO via clearance"
+      }
+    },
+    "B": {
+      "status": "REVERTED",
+      "drc": {
+        "unconnected_items": 80,
+        "shorting_items": 5,
+        "clearance": 2,
+        "tracks_crossing": 7
+      },
+      "failure_geometry": {
+        "C6_pad1_at_target": [
+          48.68,
+          27.0
+        ],
+        "note": "C6@(49,27) puts pad1 on x\u224848.7 DEC0/P0.11 column \u2014 brief forbids that reattach column",
+        "TP19": [
+          52.0,
+          20.0
+        ],
+        "TP20": [
+          56.0,
+          20.0
+        ],
+        "R2": [
+          58.0,
+          24.0
+        ],
+        "TP11": [
+          60.0,
+          32.5
+        ]
+      }
+    },
+    "A_drc": {
+      "unconnected_items": 78,
+      "shorting_items": 0,
+      "clearance": 0,
+      "tracks_crossing": 0
+    }
+  },
+  "vias_jogged": [
+    {
+      "net": "VDD_nRF",
+      "from": [
+        69.3,
+        30.0
+      ],
+      "to": [
+        69.3,
+        31.5
+      ],
+      "dir": "north"
+    }
+  ],
+  "moves_done": [],
+  "moves_skipped": [],
+  "closed": [],
+  "net_unconnected_delta": {},
+  "signal_net_deltas": {},
+  "gnd_class_e": {},
+  "p015_west_segs": {
+    "before": 21,
+    "after": 21,
+    "preserved": true
+  },
+  "success_gate": "signal-net unconnected drop with shorting=0 clearance=0 \u2014 NOT MET (Stage A kept; no net closed; P0.08/B reverted)",
+  "stop": true,
+  "reverted": false,
+  "notes": [
+    "ONE honest cycle. Stage A KEPT: VDD2 B walls broken with via-bridge @x=58 (south feeder only; north via\u2192y32); VDD_nRF via jogged north to (69.3,31.5).",
+    "P0.08: corridor opens at y=30.25 after Stage A+ENABLE/COEX2 temp rip, but honest restore of ENABLE/COEX2 re-crosses; jogged restore clearance-fails. P0.08 copper REVERTED.",
+    "Stage B placement attempted (TP20/R2/TP11/TP19/C6) then REVERTED (shorting=5) \u2014 C6.1@x=48.68 is forbidden DEC0 column.",
+    "GND via jog skipped. shorting=0 clearance=0 tracks_crossing=0 at end. VIN_F/SWDCLK not attempted.",
+    "Class-E GND island noise unchanged; total unconnected still 78."
+  ],
+  "backup": ".mcp-backups/nRF9161-DEV-BOARD.kicad_pcb.pre-pass30h-20260923-105755",
+  "drc": [
+    "reports/DRC_PASS30H_BEFORE.json",
+    "reports/DRC_PASS30H_MID.json",
+    "reports/DRC_PASS30H_AFTER.json"
+  ],
+  "rf_keepout_u3": "untouched",
+  "gerbers": false,
+  "files_touched": [
+    "nRF9161-DEV-BOARD.kicad_pcb",
+    "reports/DRC_PASS30H_BEFORE.json",
+    "reports/DRC_PASS30H_MID.json",
+    "reports/DRC_PASS30H_AFTER.json",
+    "reports/PASS30H_SUMMARY.json",
+    "docs/PCB_LAYOUT_REVIEW.md",
+    "scripts/final_pass30h.py"
+  ],
+  "next_proposals": [
+    {
+      "action": "ENABLE/COEX2 co-route with P0.08",
+      "detail": "Atomic rip ENABLE x=62.5/76.8 + H@y28 + COEX2 x=72; place P0.08 B@y30.25; restore ENABLE/COEX2 with jogs that clear VDD_GPIO vias (probe clearance first)"
+    },
+    {
+      "action": "Stage B C6 reattach",
+      "detail": "After C6\u2192(49,27), ONLY stitch pad1 to via@(49.2,25.6) on path that stays x\u226549.0 \u2014 never vertical at x=48.68"
+    }
+  ]
+}
