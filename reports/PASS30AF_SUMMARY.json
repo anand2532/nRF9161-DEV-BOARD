@@ -1,0 +1,164 @@
+{
+  "pass": "layout-pass30af-preclear",
+  "timestamp_ist": "2026-09-30 03:42 IST",
+  "kicad": "9.0.2+dfsg-1",
+  "python": "/usr/bin/python3",
+  "scope": "Safest SIM preclear only. No P0.22 rip. No header moves.",
+  "backup": "/workspace/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/pass30af-preclear/pre-edit.kicad_pcb",
+  "phase": "COMPLETE_KEEP",
+  "protect_before": {
+    "ok": true,
+    "reasons": [],
+    "stage_a": {
+      "VDD_nRF_via_north": true,
+      "VDD2_vias": 2,
+      "VDD2_present": true
+    },
+    "p015_west": 21,
+    "p022_vias": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "before": {
+    "unconnected_items": 64,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "track_dangling": 15
+  },
+  "before_nets_watch": {
+    "SIM_RST_C": 0,
+    "SIM_CD": 0,
+    "SIM_CLK_C": 0,
+    "SIM_RST": 1,
+    "SIM_CLK": 1,
+    "SIM_IO": 1,
+    "SIM_1V8": 1,
+    "P0.22": 1,
+    "P0.04": 0,
+    "P0.06": 0,
+    "P0.01": 1,
+    "P0.15": 0,
+    "P0.19": 1,
+    "VDD2": 0,
+    "VDD_nRF": 0
+  },
+  "attempts": [
+    {
+      "label": "SIM_RST_C_dangling_rip_and_y45_jog",
+      "net": "SIM_RST_C",
+      "edit": {
+        "deleted_dangling": 2,
+        "jogged_trunk": 1,
+        "extended_riser": 1,
+        "trimmed_via_risers": 2,
+        "new_trunk_y": 45.0
+      },
+      "mid": {
+        "unconnected_items": 64,
+        "shorting_items": 0,
+        "clearance": 0,
+        "tracks_crossing": 0,
+        "hole_clearance": 0,
+        "track_dangling": 13
+      },
+      "mid_nets_watch": {
+        "SIM_RST_C": 0,
+        "SIM_CD": 0,
+        "SIM_CLK_C": 0,
+        "SIM_RST": 1,
+        "SIM_CLK": 1,
+        "SIM_IO": 1,
+        "SIM_1V8": 1,
+        "P0.22": 1,
+        "P0.04": 0,
+        "P0.06": 0,
+        "P0.01": 1,
+        "P0.15": 0,
+        "P0.19": 1,
+        "VDD2": 0,
+        "VDD_nRF": 0
+      },
+      "clean": true,
+      "protect": {
+        "ok": true,
+        "reasons": [],
+        "stage_a": {
+          "VDD_nRF_via_north": true,
+          "VDD2_vias": 2,
+          "VDD2_present": true
+        },
+        "p015_west": 21,
+        "p022_vias": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "accept": true,
+      "reason": "ok",
+      "collide": []
+    }
+  ],
+  "after": {
+    "unconnected_items": 64,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "track_dangling": 13
+  },
+  "after_nets_watch": {
+    "SIM_RST_C": 0,
+    "SIM_CD": 0,
+    "SIM_CLK_C": 0,
+    "SIM_RST": 1,
+    "SIM_CLK": 1,
+    "SIM_IO": 1,
+    "SIM_1V8": 1,
+    "P0.22": 1,
+    "P0.04": 0,
+    "P0.06": 0,
+    "P0.01": 1,
+    "P0.15": 0,
+    "P0.19": 1,
+    "VDD2": 0,
+    "VDD_nRF": 0
+  },
+  "unconnected_delta": 0,
+  "protect_after": {
+    "ok": true,
+    "reasons": [],
+    "stage_a": {
+      "VDD_nRF_via_north": true,
+      "VDD2_vias": 2,
+      "VDD2_present": true
+    },
+    "p015_west": 21,
+    "p022_vias": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "kept": {
+    "net": "SIM_RST_C",
+    "label": "SIM_RST_C_dangling_rip_and_y45_jog",
+    "edit": {
+      "deleted_dangling": 2,
+      "jogged_trunk": 1,
+      "extended_riser": 1,
+      "trimmed_via_risers": 2,
+      "new_trunk_y": 45.0
+    }
+  },
+  "reverted": false,
+  "decision": "KEEP",
+  "corridor": "B.Cu y\u224844.60 x\u224881.8\u201397.3 freed for one 0.18 mm signal (SIM_RST_C trunk now y=45.00; dangling duplicates removed)"
+}

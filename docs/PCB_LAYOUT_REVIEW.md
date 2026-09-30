@@ -1127,3 +1127,37 @@ Copper-only (no placement): P0.11 header stubs → P0.10/P0.17 → MAGPIO/MIPI/A
 - **Recommendation: LEAVE SE COLUMN FROZEN** until copper pre-clear + Hardware PM OK
 - No copper execute. No Gerbers.
 - Details: `reports/PASS30AD_B_DOUBLE_PRIME_PROPOSALS.md` / `.json`
+
+## Pass30ae — Package C J14/J15 place+reattach — 2026-09-30 03:37 IST
+
+**Goal:** Atomic Package C only. Preferred J14/J15 (101, 48)/(101, 62); alt once (102, 46)/(102, 60). Place+reattach MAGPIO/MIPI/COEX lists. No long-haul through RF keepout. Gate shorting/clearance/crossing=0 else full revert. Frozen SE + east duals, J12, U1, Class C.
+
+| Attempt | Landing | Mid DRC | Result |
+| --- | --- | --- | --- |
+| preferred | J14/J15 (101, 48)/(101, 62) | short=3 clr=2 cross=0 unc=64 | reverted → alt |
+| alt (once) | J14/J15 (102, 46)/(102, 60) | short=11 clr=2 cross=0 unc=64 | **full revert** |
+| keep | J14(104, 48) J15(104, 62) | — | pre-edit restored |
+
+**Blockers (head):** Preferred — J14 PTH vs J7 shield GND (MAGPIO1/MAGPIO2) and nRESET B clearance 0.090 mm at x=101.68. Alt — nRESET B shorts MAGPIO0; COEX2 reattach jog shorts J15 GND.
+
+**Protect:** Class C, Stage A, P0.15 west (21), L1/L2/U3, frozen headers all held. No RF-keepout copper added.
+
+**Before/after unconnected:** 64→64 (shorting=clearance=crossing=0/0/0 after revert)
+
+**Landing kept:** none
+
+**Backup:** `.mcp-backups/pass30ae-package-c/pre-edit.kicad_pcb`  
+**Artifacts:** `reports/DRC_PASS30AE_{BEFORE,MID_PREF,MID_ALT,AFTER}.json`, `reports/PASS30AE_SUMMARY.{md,json}`, `scripts/final_pass30ae.py`
+
+## Pass30af — SIM_RST_C preclear (after AE revert) — 2026-09-30 03:42 IST
+
+**Decision:** **KEEP** one net only. P0.04 / P0.06 / P0.01 and the P0.22 keep were not ripped (closed GPIO or explicit keep). SE column x>108 unchanged.
+
+**Edit:** Deleted two dangling duplicate `SIM_RST_C` B tracks `(79.38, 44.60)–(97.30, 44.60)`. Jogged the live B trunk to y=45.00 and trimmed the via risers so they no longer tail into y=44.60.
+
+**Corridor freed (not routed):** B.Cu y≈44.60, x≈81.8–97.3, for one 0.18 mm signal between `SIM_CLK_C` @y44.05 and the jogged trunk.
+
+**Unconnected:** 64→64 (delta 0). shorting/clearance/crossing=0/0/0. track_dangling 15→13.
+
+**Backup:** `.mcp-backups/pass30af-preclear/pre-edit.kicad_pcb`  
+**Artifacts:** `reports/PASS30AF_PRECLEAR_PLAN.{md,json}`, `reports/DRC_PASS30AF_{BEFORE,MID_SIM_RST_C,AFTER}.json`, `reports/PASS30AF_SUMMARY.{md,json}`, `scripts/final_pass30af_preclear.py`
