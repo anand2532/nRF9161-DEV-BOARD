@@ -43,6 +43,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `DRC_PASS30J_AFTER.json` | 76 | Prior — P0.08→J12.9 stitch |
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
 
+**Pass delta (pass30ah):** **NO ROUTE.** Shortest real (non-GND, non-protected-keep) island gap is `VDD_GPIO` **12.305 mm** F.Cu via@(40.17,19.13) ↔ pad U1.12 — over the 12 mm gate, and the straight line shorts the P0.15 keep plus P0.16. Zero gaps ≤ 12 mm, so no track and no via. Unconnected 64→64. short/clr/cross 0/0/0 (baseline). GND zone islands ignored. SIM walls, Class C, Stage-A VDD2, P0.22/P0.19/P0.04/P0.06/P0.01 and the y=44.60 pocket untouched. No Gerbers. Details: `reports/PASS30AH_SUMMARY.md`, shortlist `reports/PASS30AH_SHORTLIST.md`.
+
 **Pass delta (pass30ag):** Corridor probe `SIM_RST` **REVERT**. SIM_RST_C already continuous. In-corridor B track did not join any open island (pocket sealed by SIM_IO_C @x78.60 and SIM_CLK_C @x78.95 / x97.85). Unconnected 64→64. short/clr/cross 0/0/0. Corridor still free. No Gerbers. Details: `reports/PASS30AG_SUMMARY.md`.
 
 Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.json` / `reports/DRC_PASS30C_AFTER.json`). On-disk `fab/gerbers/` CreationDate **2026-09-16** remains **stale** and must not be used for fab (DFM checklist §5).
