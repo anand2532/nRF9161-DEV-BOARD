@@ -1,0 +1,164 @@
+{
+  "pass": "30ar",
+  "timestamp": "2026-09-30 11:07 IST",
+  "decision": "NO-ROUTE",
+  "net_measured": "P0.31",
+  "routed": false,
+  "reason": "pad-edge gap 66.737 mm is over the 25 mm cap, so no jog was attempted",
+  "gap_mm": 66.737,
+  "gap_method": "copper edge to copper edge (pcbnew pad effective shape clearance to the track segment is 66.736 mm; geometric edge gap 66.737 mm)",
+  "endpoints": [
+    {
+      "ref": "pad U1.89",
+      "layer": "F.Cu",
+      "xy": [
+        36.9,
+        37.614
+      ],
+      "role": "solo P0.31 island (the pad only)"
+    },
+    {
+      "ref": "F.Cu track (103.05,47.10)-(106.70,47.10)",
+      "layer": "F.Cu",
+      "xy": [
+        102.961,
+        47.087
+      ],
+      "role": "nearest copper on the locked pass30aq island (J13.16 + six F.Cu segments + J11.2)"
+    }
+  ],
+  "same_layer": "F.Cu",
+  "straight_line": {
+    "width_mm": 0.18,
+    "layer": "F.Cu",
+    "from": [
+      36.9,
+      37.614
+    ],
+    "to": [
+      102.961,
+      47.087
+    ],
+    "would_hit": "yes \u2014 47 foreign items on 17 nets inside 0.15 mm (negative clearance means the 0.18 mm capsule overlaps that copper)",
+    "nearest": {
+      "clearance_mm": -0.301,
+      "net": "SIM_CLK",
+      "item": "via@70.9,42.4"
+    },
+    "hits_under_0_15_by_net": [
+      {
+        "net": "SIM_CLK",
+        "clearance_mm": -0.301,
+        "item": "via@70.9,42.4",
+        "count": 4
+      },
+      {
+        "net": "VDD2",
+        "clearance_mm": -0.29,
+        "item": "F.Cu (50.68,40.00)-(50.68,39.00)",
+        "count": 12
+      },
+      {
+        "net": "SIM_CLK_C",
+        "clearance_mm": -0.272,
+        "item": "via@99.19,46.666",
+        "count": 2
+      },
+      {
+        "net": "SIM_VCC",
+        "clearance_mm": -0.215,
+        "item": "F.Cu (80.65,33.54)-(80.65,46.00)",
+        "count": 5
+      },
+      {
+        "net": "ENABLE",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (42.75,37.25)-(42.75,41.10)",
+        "count": 4
+      },
+      {
+        "net": "P0.04",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (42.25,37.25)-(42.25,40.30)",
+        "count": 1
+      },
+      {
+        "net": "VDD_GPIO",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (72.44,43.05)-(71.94,42.05)",
+        "count": 4
+      },
+      {
+        "net": "P0.03",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (41.75,37.25)-(41.75,41.10)",
+        "count": 2
+      },
+      {
+        "net": "COEX0",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (38.75,37.25)-(38.75,41.10)",
+        "count": 2
+      },
+      {
+        "net": "SIM_CD",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (90.00,52.04)-(90.00,36.00)",
+        "count": 1
+      },
+      {
+        "net": "P0.02",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (40.75,37.25)-(40.75,41.10)",
+        "count": 1
+      },
+      {
+        "net": "SIM_IO",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (84.00,58.60)-(84.00,36.00)",
+        "count": 1
+      },
+      {
+        "net": "P0.00",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (39.75,37.25)-(39.75,41.10)",
+        "count": 1
+      },
+      {
+        "net": "COEX2",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (37.75,37.25)-(37.75,41.10)",
+        "count": 2
+      },
+      {
+        "net": "GND",
+        "clearance_mm": -0.09,
+        "item": "pad U1.90",
+        "count": 3
+      },
+      {
+        "net": "SIM_RST_C",
+        "clearance_mm": 0.043,
+        "item": "pad J7.C2",
+        "count": 1
+      },
+      {
+        "net": "COEX1",
+        "clearance_mm": 0.05,
+        "item": "pad U1.92",
+        "count": 1
+      }
+    ],
+    "zones_not_counted": "filled zones are not discrete blockers; a pour retreats around a track. Hits are tracks, vias, and pads only."
+  },
+  "cap_mm": 25.0,
+  "unconnected_live": 61,
+  "unconnected_source": "pcbnew CONNECTIVITY_DATA.GetUnconnectedCount == 61, matches reports/DRC_PASS30AQ_AFTER.json",
+  "p031_opens": 1,
+  "board_edited": false,
+  "backup": null,
+  "drc_files": null,
+  "locked_p031_run_intact": true,
+  "p030_not_started": true,
+  "shortlist": "reports/PASS30AR_SHORTLIST.md"
+}

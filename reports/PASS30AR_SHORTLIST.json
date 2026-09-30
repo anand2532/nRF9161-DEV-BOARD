@@ -1,0 +1,530 @@
+{
+  "pass": "30ar",
+  "timestamp": "2026-09-30 11:07 IST",
+  "decision": "NO-ROUTE",
+  "note": "Five shortest real non-GND DRC opens by copper-edge gap, plus the P0.31 U1.89 leftover which is not in the five. GND islands excluded. Zone-tied nets with no DRC open are excluded. Straight-line blockers are foreign tracks/vias/pads within 0.15 mm of a 0.18 mm capsule on the same-layer chord.",
+  "five_shortest": [
+    {
+      "net": "P0.30",
+      "gap_mm": 32.207,
+      "endpoint_a": {
+        "ref": "pad J13.15",
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "xy": [
+          99.961,
+          75.25
+        ]
+      },
+      "endpoint_b": {
+        "ref": "pad J11.1",
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "xy": [
+          115.15,
+          46.85
+        ]
+      },
+      "straight": {
+        "layer": "F.Cu",
+        "width_mm": 0.18,
+        "from_xy": [
+          99.961,
+          75.25
+        ],
+        "to_xy": [
+          115.15,
+          46.85
+        ]
+      },
+      "same_layer_gap_mm": 32.207,
+      "drc_items": [
+        "PTH pad 15 [P0.30] of J13",
+        "PTH pad 1 [P0.30] of J11"
+      ],
+      "hits_under_0_15_by_net": [
+        {
+          "net": "VDD_GPIO",
+          "clearance_mm": -0.215,
+          "item": "F.Cu (105.10,67.08)-(105.10,51.08)",
+          "count": 5
+        },
+        {
+          "net": "P0.04",
+          "clearance_mm": -0.18,
+          "item": "F.Cu (114.80,52.50)-(108.45,52.50)",
+          "count": 3
+        },
+        {
+          "net": "P0.31",
+          "clearance_mm": -0.18,
+          "item": "F.Cu (102.60,75.50)-(103.05,47.10)",
+          "count": 2
+        },
+        {
+          "net": "GND",
+          "clearance_mm": -0.09,
+          "item": "pad J15.6",
+          "count": 1
+        }
+      ],
+      "hit_item_count": 11,
+      "nearest_foreign": {
+        "clearance_mm": -0.215,
+        "net": "VDD_GPIO",
+        "item": "F.Cu (105.10,67.08)-(105.10,51.08)"
+      }
+    },
+    {
+      "net": "P0.14",
+      "gap_mm": 34.038,
+      "endpoint_a": {
+        "ref": "pad U1.24",
+        "layers": [
+          "F.Cu"
+        ],
+        "xy": [
+          42.136,
+          27.15
+        ]
+      },
+      "endpoint_b": {
+        "ref": "pad J18.2",
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "xy": [
+          40.623,
+          61.154
+        ]
+      },
+      "straight": {
+        "layer": "F.Cu",
+        "width_mm": 0.18,
+        "from_xy": [
+          42.136,
+          27.15
+        ],
+        "to_xy": [
+          40.623,
+          61.154
+        ]
+      },
+      "same_layer_gap_mm": 34.038,
+      "drc_items": [
+        "Pad 24 [P0.14] of U1 on F.Cu",
+        "Track [P0.14] on B.Cu, length 16.1500 mm"
+      ],
+      "hits_under_0_15_by_net": [
+        {
+          "net": "GND",
+          "clearance_mm": -0.336,
+          "item": "via@42.0,29.0",
+          "count": 8
+        },
+        {
+          "net": "P0.04",
+          "clearance_mm": -0.168,
+          "item": "F.Cu (41.25,46.80)-(37.40,46.80)",
+          "count": 3
+        },
+        {
+          "net": "P0.03",
+          "clearance_mm": -0.156,
+          "item": "via@41.75,41.1",
+          "count": 4
+        },
+        {
+          "net": "P0.15",
+          "clearance_mm": 0.149,
+          "item": "pad U1.25",
+          "count": 1
+        }
+      ],
+      "hit_item_count": 16,
+      "nearest_foreign": {
+        "clearance_mm": -0.336,
+        "net": "GND",
+        "item": "via@42.0,29.0"
+      }
+    },
+    {
+      "net": "P0.16",
+      "gap_mm": 34.259,
+      "endpoint_a": {
+        "ref": "pad J18.4",
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "xy": [
+          45.537,
+          61.154
+        ]
+      },
+      "endpoint_b": {
+        "ref": "pad U1.26",
+        "layers": [
+          "F.Cu"
+        ],
+        "xy": [
+          41.364,
+          27.15
+        ]
+      },
+      "straight": {
+        "layer": "F.Cu",
+        "width_mm": 0.18,
+        "from_xy": [
+          45.537,
+          61.154
+        ],
+        "to_xy": [
+          41.364,
+          27.15
+        ]
+      },
+      "same_layer_gap_mm": 34.259,
+      "drc_items": [
+        "PTH pad 4 [P0.16] of J18",
+        "Pad 26 [P0.16] of U1 on F.Cu"
+      ],
+      "hits_under_0_15_by_net": [
+        {
+          "net": "GND",
+          "clearance_mm": -0.349,
+          "item": "via@42.0,32.0",
+          "count": 8
+        },
+        {
+          "net": "ENABLE",
+          "clearance_mm": -0.321,
+          "item": "via@43.4,45.126",
+          "count": 7
+        },
+        {
+          "net": "P0.04",
+          "clearance_mm": 0.068,
+          "item": "pad U1.100",
+          "count": 1
+        },
+        {
+          "net": "P0.15",
+          "clearance_mm": 0.149,
+          "item": "pad U1.25",
+          "count": 1
+        }
+      ],
+      "hit_item_count": 17,
+      "nearest_foreign": {
+        "clearance_mm": -0.349,
+        "net": "GND",
+        "item": "via@42.0,32.0"
+      }
+    },
+    {
+      "net": "P0.17",
+      "gap_mm": 34.863,
+      "endpoint_a": {
+        "ref": "pad U1.28",
+        "layers": [
+          "F.Cu"
+        ],
+        "xy": [
+          40.378,
+          27.147
+        ]
+      },
+      "endpoint_b": {
+        "ref": "pad J18.5",
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "xy": [
+          47.913,
+          61.187
+        ]
+      },
+      "straight": {
+        "layer": "F.Cu",
+        "width_mm": 0.18,
+        "from_xy": [
+          40.378,
+          27.147
+        ],
+        "to_xy": [
+          47.913,
+          61.187
+        ]
+      },
+      "same_layer_gap_mm": 34.863,
+      "drc_items": [
+        "Pad 28 [P0.17] of U1 on F.Cu",
+        "PTH pad 5 [P0.17] of J18"
+      ],
+      "hits_under_0_15_by_net": [
+        {
+          "net": "GND",
+          "clearance_mm": -0.277,
+          "item": "via@42.0,35.0",
+          "count": 6
+        },
+        {
+          "net": "ENABLE",
+          "clearance_mm": -0.18,
+          "item": "F.Cu (52.00,44.00)-(42.75,44.00)",
+          "count": 4
+        },
+        {
+          "net": "P0.04",
+          "clearance_mm": 0.04,
+          "item": "pad U1.100",
+          "count": 1
+        }
+      ],
+      "hit_item_count": 11,
+      "nearest_foreign": {
+        "clearance_mm": -0.277,
+        "net": "GND",
+        "item": "via@42.0,35.0"
+      }
+    },
+    {
+      "net": "P0.18",
+      "gap_mm": 35.644,
+      "endpoint_a": {
+        "ref": "pad J18.6",
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "xy": [
+          50.453,
+          61.187
+        ]
+      },
+      "endpoint_b": {
+        "ref": "pad U1.29",
+        "layers": [
+          "F.Cu"
+        ],
+        "xy": [
+          39.878,
+          27.147
+        ]
+      },
+      "straight": {
+        "layer": "F.Cu",
+        "width_mm": 0.18,
+        "from_xy": [
+          50.453,
+          61.187
+        ],
+        "to_xy": [
+          39.878,
+          27.147
+        ]
+      },
+      "same_layer_gap_mm": 35.644,
+      "drc_items": [
+        "Track [P0.18] on B.Cu, length 10.8000 mm",
+        "Pad 29 [P0.18] of U1 on F.Cu"
+      ],
+      "hits_under_0_15_by_net": [
+        {
+          "net": "VDD1",
+          "clearance_mm": -0.29,
+          "item": "F.Cu (50.52,38.00)-(43.25,38.00)",
+          "count": 9
+        },
+        {
+          "net": "P0.06",
+          "clearance_mm": -0.237,
+          "item": "via@44.0,39.9",
+          "count": 1
+        },
+        {
+          "net": "ENABLE",
+          "clearance_mm": -0.18,
+          "item": "F.Cu (52.00,44.00)-(42.75,44.00)",
+          "count": 4
+        },
+        {
+          "net": "GND",
+          "clearance_mm": -0.09,
+          "item": "pad U1.103",
+          "count": 5
+        },
+        {
+          "net": "P0.17",
+          "clearance_mm": 0.131,
+          "item": "pad U1.28",
+          "count": 1
+        }
+      ],
+      "hit_item_count": 20,
+      "nearest_foreign": {
+        "clearance_mm": -0.29,
+        "net": "VDD1",
+        "item": "F.Cu (50.52,38.00)-(43.25,38.00)"
+      }
+    }
+  ],
+  "u1_89_leftover_included": {
+    "net": "P0.31",
+    "gap_mm": 66.737,
+    "endpoint_a": {
+      "ref": "pad U1.89",
+      "layers": [
+        "F.Cu"
+      ],
+      "xy": [
+        36.9,
+        37.614
+      ]
+    },
+    "endpoint_b": {
+      "ref": "F.Cu (103.05,47.10)-(106.70,47.10)",
+      "layers": [
+        "F.Cu"
+      ],
+      "xy": [
+        102.961,
+        47.087
+      ]
+    },
+    "straight": {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "from_xy": [
+        36.9,
+        37.614
+      ],
+      "to_xy": [
+        102.961,
+        47.087
+      ]
+    },
+    "same_layer_gap_mm": 66.737,
+    "drc_items": [
+      "Pad 89 [P0.31] of U1 on F.Cu",
+      "Track [P0.31] on F.Cu, length 28.4036 mm"
+    ],
+    "hits_under_0_15_by_net": [
+      {
+        "net": "SIM_CLK",
+        "clearance_mm": -0.301,
+        "item": "via@70.9,42.4",
+        "count": 4
+      },
+      {
+        "net": "VDD2",
+        "clearance_mm": -0.29,
+        "item": "F.Cu (50.68,40.00)-(50.68,39.00)",
+        "count": 12
+      },
+      {
+        "net": "SIM_CLK_C",
+        "clearance_mm": -0.272,
+        "item": "via@99.19,46.666",
+        "count": 2
+      },
+      {
+        "net": "SIM_VCC",
+        "clearance_mm": -0.215,
+        "item": "F.Cu (80.65,33.54)-(80.65,46.00)",
+        "count": 5
+      },
+      {
+        "net": "ENABLE",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (42.75,37.25)-(42.75,41.10)",
+        "count": 4
+      },
+      {
+        "net": "P0.04",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (42.25,37.25)-(42.25,40.30)",
+        "count": 1
+      },
+      {
+        "net": "VDD_GPIO",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (72.44,43.05)-(71.94,42.05)",
+        "count": 4
+      },
+      {
+        "net": "P0.03",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (41.75,37.25)-(41.75,41.10)",
+        "count": 2
+      },
+      {
+        "net": "COEX0",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (38.75,37.25)-(38.75,41.10)",
+        "count": 2
+      },
+      {
+        "net": "SIM_CD",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (90.00,52.04)-(90.00,36.00)",
+        "count": 1
+      },
+      {
+        "net": "P0.02",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (40.75,37.25)-(40.75,41.10)",
+        "count": 1
+      },
+      {
+        "net": "SIM_IO",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (84.00,58.60)-(84.00,36.00)",
+        "count": 1
+      },
+      {
+        "net": "P0.00",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (39.75,37.25)-(39.75,41.10)",
+        "count": 1
+      },
+      {
+        "net": "COEX2",
+        "clearance_mm": -0.18,
+        "item": "F.Cu (37.75,37.25)-(37.75,41.10)",
+        "count": 2
+      },
+      {
+        "net": "GND",
+        "clearance_mm": -0.09,
+        "item": "pad U1.90",
+        "count": 3
+      },
+      {
+        "net": "SIM_RST_C",
+        "clearance_mm": 0.043,
+        "item": "pad J7.C2",
+        "count": 1
+      },
+      {
+        "net": "COEX1",
+        "clearance_mm": 0.05,
+        "item": "pad U1.92",
+        "count": 1
+      }
+    ],
+    "hit_item_count": 47,
+    "nearest_foreign": {
+      "clearance_mm": -0.301,
+      "net": "SIM_CLK",
+      "item": "via@70.9,42.4"
+    }
+  }
+}
