@@ -1,0 +1,169 @@
+{
+  "pass": "30bj",
+  "timestamp": "2026-09-30 18:05 IST",
+  "kicad": "9.0.2",
+  "decision": "NO-ROUTE",
+  "stopping_rule": "length",
+  "routed": false,
+  "copper_changed": false,
+  "new_via": false,
+  "segments": [],
+  "segment_count": 0,
+  "net": "P0.05",
+  "git_head": "d9a24687f90a94df2bd3796832823588efd1e078",
+  "pcb_blob_at_start": "7bcfe5791b156e426a2a0affefe938be4d39f8e6",
+  "pcb_blob_at_end": "7bcfe5791b156e426a2a0affefe938be4d39f8e6",
+  "sha1sum_at_start": "c6dc3ba60aa52dbe533823c2a6a2af7aa5fb0e40",
+  "sha1sum_at_end": "c6dc3ba60aa52dbe533823c2a6a2af7aa5fb0e40",
+  "expected_head_prefix": "d9a2468",
+  "expected_blob": "7bcfe5791b156e426a2a0affefe938be4d39f8e6",
+  "expected_sha1": "c6dc3ba60aa52dbe533823c2a6a2af7aa5fb0e40",
+  "head_matches_expected": true,
+  "blob_matches_expected": true,
+  "end_blob_matches_start": true,
+  "precondition": {
+    "unconnected": 51,
+    "p005_opens": 1,
+    "required_unconnected": 51,
+    "required_p005_opens": 1,
+    "ok": true
+  },
+  "leftover_pad": {
+    "refdes": "J9.3",
+    "center": [
+      116.0,
+      13.08
+    ],
+    "layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "shape": "circle",
+    "size_mm": [
+      1.7,
+      1.7
+    ],
+    "drill_mm": 1.0,
+    "matches_prior_j9_3": true
+  },
+  "pad_edge_mm": 63.217656,
+  "pad_edge_exact_mm": 63.217656,
+  "pad_edge_layer": "In1.Cu",
+  "over_36_mm": true,
+  "limit_mm": 36.0,
+  "nearest_copper": {
+    "layer": "In1.Cu",
+    "corner_xy": [
+      57.05,
+      38.4
+    ],
+    "track_edge_xy": [
+      57.132695,
+      38.364481
+    ],
+    "pad_edge_xy": [
+      115.218994,
+      13.415455
+    ],
+    "center_distance_mm": 64.157657,
+    "tied_items": [
+      {
+        "clearance_mm": 63.217656,
+        "layer": "In1.Cu",
+        "item": "In1.Cu (47.400,38.400)-(57.050,38.400)",
+        "kind": "trk"
+      },
+      {
+        "clearance_mm": 63.217656,
+        "layer": "In1.Cu",
+        "item": "In1.Cu (57.050,38.400)-(57.050,74.700)",
+        "kind": "trk"
+      }
+    ],
+    "note": "Shared round cap of the locked In1 P0.05 run. Both adjoining segments return the same GetClearance."
+  },
+  "closed_island": [
+    "J12.6",
+    "U1.2",
+    "F.Cu (44.000,36.500)-(47.400,36.500)",
+    "via@47.400,36.500",
+    "In1.Cu (22.510,74.700)-(22.510,79.400)",
+    "In1.Cu (47.400,38.400)-(57.050,38.400)",
+    "In1.Cu (47.400,36.500)-(47.400,38.400)",
+    "In1.Cu (57.050,38.400)-(57.050,74.700)",
+    "In1.Cu (18.700,79.400)-(18.700,76.000)",
+    "In1.Cu (22.510,79.400)-(18.700,79.400)",
+    "In1.Cu (57.050,74.700)-(22.510,74.700)"
+  ],
+  "foreign_clearance_mm": null,
+  "power_clearance_mm": null,
+  "whole_segment_crossing_count": 0,
+  "crossing_note": "No segments were laid. Crossing count is 0. No route was attempted.",
+  "drc_before": {
+    "unconnected_items": 51,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "p019_unconnected": 0,
+    "p005_unconnected": 1
+  },
+  "drc_after": {
+    "unconnected_items": 51,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "p019_unconnected": 0,
+    "p005_unconnected": 1
+  },
+  "p005_opens_before": 1,
+  "p005_opens_after": 1,
+  "unconnected_before": 51,
+  "unconnected_after": 51,
+  "short": 0,
+  "clearance": 0,
+  "crossing": 0,
+  "hole": 0,
+  "hole_to_hole": 1,
+  "gnd_islands": 12,
+  "locked_protect": {
+    "p016": true,
+    "p017": true,
+    "p019": true,
+    "p020": true,
+    "sim_clk": true,
+    "sim_rst_in1": true,
+    "sim_rst_neck": true,
+    "sim_rst_via": true,
+    "p000": true,
+    "p007": true,
+    "p007_via": true,
+    "p005": true,
+    "p005_via": true,
+    "j9_2": true
+  },
+  "locked_intact": true,
+  "j9_2": {
+    "xy": [
+      116.0,
+      10.54
+    ],
+    "net": "P0.07",
+    "fp_xy": [
+      116.0,
+      8.0
+    ]
+  },
+  "j9_2_untouched": true,
+  "other_nets_touched": false,
+  "backup": null,
+  "gerbers": false,
+  "commit": false
+}
