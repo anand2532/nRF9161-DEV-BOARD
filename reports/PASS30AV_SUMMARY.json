@@ -1,0 +1,130 @@
+{
+  "pass": "pass30av",
+  "timestamp": "2026-09-30 12:06 IST",
+  "kicad": "9.0.2",
+  "decision": "REVERT",
+  "net": "P0.14",
+  "backup": ".mcp-backups/pass30av/pre-edit.kicad_pcb",
+  "via": {
+    "x": 42.25,
+    "y": 25.5,
+    "pad_mm": 0.5,
+    "drill_mm": 0.3,
+    "placed_then_reverted": true
+  },
+  "fcu_stub": {
+    "width_mm": 0.18,
+    "start": [
+      42.25,
+      26.4
+    ],
+    "end": [
+      42.25,
+      25.5
+    ],
+    "note": "Not part of the 8-segment B.Cu budget. Reverted with the via."
+  },
+  "bcu_segments": [],
+  "bcu_segment_count": 0,
+  "bcu_limit": 8,
+  "free_space": {
+    "start_ok": true,
+    "start": [
+      42.2,
+      25.6
+    ],
+    "cells": 1645,
+    "bbox": {
+      "xmin": 29.0,
+      "xmax": 46.2,
+      "ymin": 16.0,
+      "ymax": 26.6
+    },
+    "reaches_j18": false,
+    "step_mm": 0.2
+  },
+  "refill_cleared_via": true,
+  "zone": {
+    "F.Cu": {
+      "present": true,
+      "center_inside_fill": false,
+      "center_to_fill_mm": 0.8437,
+      "pad_edge_clearance_mm": 0.5937
+    },
+    "B.Cu": {
+      "present": true,
+      "center_inside_fill": false,
+      "center_to_fill_mm": 0.5005,
+      "pad_edge_clearance_mm": 0.2505
+    }
+  },
+  "min_foreign_clearance_mm": 0.16,
+  "min_foreign_item": {
+    "net": "P0.15",
+    "item": "F P0.15 (41.75,26.75)-(41.75,23.10)"
+  },
+  "min_power_vin_clearance_mm": 0.702,
+  "min_power_item": {
+    "net": "VDD2",
+    "item": "F VDD2 (43.25,25.90)-(44.72,25.90)"
+  },
+  "min_hole_to_hole_mm": 1.3286,
+  "min_hole_to_hole_item": "viahole P0.13 @(42.750,23.950)",
+  "p014_opens": {
+    "before": 1,
+    "mid": 1,
+    "after": 1
+  },
+  "unconnected": {
+    "before": 60,
+    "mid": 60,
+    "after": 60
+  },
+  "gnd_islands": {
+    "before": 12,
+    "mid": 12,
+    "after": 12,
+    "note": "waived"
+  },
+  "drc_mid": {
+    "unconnected_items": 60,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "p014_unconnected": 1,
+    "p030_unconnected": 1,
+    "p031_unconnected": 1
+  },
+  "drc_after": {
+    "unconnected_items": 60,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "p014_unconnected": 1,
+    "p030_unconnected": 1,
+    "p031_unconnected": 1
+  },
+  "reason": "REVERT. P0.14 opens 1\u21921 (need a drop of at least 1). B.Cu segments added: 0. Free-space component reaches J18: False. Refill cleared via: True. Foreign 0.16 mm, POWER 0.702 mm. Mid short/clearance/crossing/hole 0/0/0/0, hole_to_hole 1\u21921. Other nets gained: none. Full restore. No second path. No F.Cu pinch retry.",
+  "board_sha256_final": "3f209b087c54966030c17b3ca9f91dc0758a511bfacc0aacd44ef7a1850ff005",
+  "locked_untouched": [
+    "P0.15",
+    "P0.30",
+    "P0.31",
+    "P0.22",
+    "P0.04",
+    "VDD_GPIO",
+    "COEX0",
+    "DEC0",
+    "P0.10",
+    "P0.12",
+    "P0.19",
+    "U1.88",
+    "U1.89"
+  ]
+}

@@ -1309,3 +1309,13 @@ A straight 0.18 mm line between those endpoints overlaps locked and foreign copp
 **Blocker:** U1.24's F.Cu pocket is closed. Pad gaps to P0.13/P0.15 are 0.2 / 0.2 mm (need 0.48 mm). North via pinch copper gap 0.4 mm (need 0.48 mm). B.Cu in the pocket is GND fill; the halo beside P0.13 is 0.25 mm and will not take a via. No east-of-package jog within 8 segments and one via without entering the body, the south fanout, or the pour. Locked copper not ripped. U1.88 / U1.89 not retried. P0.24 not started. No Gerbers.
 
 **Artifacts:** `reports/PASS30AU_SUMMARY.{md,json}`, `scripts/final_pass30au.py`
+
+## Pass30av — P0.14 via in the pocket, revert — 2026-09-30 12:06 IST
+
+**Decision:** **REVERT**. One via at (42.25, 25.50), 0.50/0.30, plus one F.Cu stub (42.25, 26.40)–(42.25, 25.50). Refill cleared the via: True (B.Cu pad-edge 0.2505 mm). B.Cu segments 0. The free B.Cu component from the via is x 29.0–46.2, y 16.0–26.6 and does not reach J18.2, so no 8-segment route was added.
+
+**Clearance of the new copper (mid, after refill):** foreign 0.16 mm, POWER 0.702 mm, hole-to-hole 1.3286 mm.
+
+**P0.14 opens:** 1 → 1 (mid 1). **Unconnected:** 60 → 60 (mid 60). GND islands waived. Full restore to `.mcp-backups/pass30av/pre-edit.kicad_pcb`. No F.Cu pinch retry. P0.13/P0.15 vias not moved. U1.88 / U1.89 not retried. P0.24 not started. No Gerbers. No git commit.
+
+**Artifacts:** `reports/PASS30AV_SUMMARY.{md,json}`, `reports/DRC_PASS30AV_BEFORE.json`, `reports/DRC_PASS30AV_MID.json`, `reports/DRC_PASS30AV_AFTER.json`, `scripts/final_pass30av.py`
