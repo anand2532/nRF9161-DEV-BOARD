@@ -1,0 +1,4027 @@
+{
+  "pass": "pass30aw",
+  "timestamp": "2026-09-30 12:27 IST",
+  "kicad": "9.0.2",
+  "decision": "NO-COPPER",
+  "body_fab_mm": {
+    "x": [
+      28.0,
+      44.0
+    ],
+    "y": [
+      26.75,
+      37.25
+    ],
+    "source": "U1 F.Fab rect"
+  },
+  "courtyard_mm": {
+    "x": [
+      27.75,
+      44.25
+    ],
+    "y": [
+      26.5,
+      37.5
+    ],
+    "source": "U1 F.Courtyard rect"
+  },
+  "exit_outline": "fab body, not courtyard",
+  "track_mm": 0.18,
+  "clearance_mm": 0.15,
+  "need_gap_mm": 0.48,
+  "keepout": {
+    "x_le": 24.2,
+    "y": [
+      20,
+      64
+    ]
+  },
+  "counts": {
+    "u1_open_pads": 37,
+    "can_exit": 31,
+    "trapped": 6,
+    "trapped_by_keepout": 0,
+    "shortest_exitable_net": "P0.16",
+    "shortest_exitable_mm": 34.259
+  },
+  "census": [
+    {
+      "net": "P0.14",
+      "u1_pad": "U1.24",
+      "center_xy": [
+        42.25,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J18.2",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          40.623,
+          61.154
+        ],
+        "pads_on_that_island": [
+          "pad J18.2",
+          "pad J12.15"
+        ]
+      },
+      "pad_edge_mm": 34.038,
+      "class": "trapped",
+      "exit_by": "trapped",
+      "side_left": {
+        "pad": "U1.25",
+        "net": "P0.15",
+        "xy": [
+          41.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.23",
+        "net": "P0.13",
+        "xy": [
+          42.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.16",
+      "u1_pad": "U1.26",
+      "center_xy": [
+        41.25,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J18.4",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          45.537,
+          61.154
+        ],
+        "pads_on_that_island": [
+          "pad J18.4",
+          "pad J13.1"
+        ]
+      },
+      "pad_edge_mm": 34.259,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.27",
+        "net": "GND",
+        "xy": [
+          40.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.25",
+        "net": "P0.15",
+        "xy": [
+          41.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.17",
+      "u1_pad": "U1.28",
+      "center_xy": [
+        40.25,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 3,
+      "other": {
+        "item": "pad J18.5",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          47.913,
+          61.187
+        ],
+        "pads_on_that_island": [
+          "pad J18.5",
+          "pad J13.2"
+        ]
+      },
+      "pad_edge_mm": 34.863,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.29",
+        "net": "P0.18",
+        "xy": [
+          39.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.27",
+        "net": "GND",
+        "xy": [
+          40.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.18",
+      "u1_pad": "U1.29",
+      "center_xy": [
+        39.75,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 3,
+      "other": {
+        "item": "pad J18.6",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          50.453,
+          61.187
+        ],
+        "pads_on_that_island": [
+          "pad J18.6",
+          "pad J13.3"
+        ]
+      },
+      "pad_edge_mm": 35.644,
+      "class": "trapped",
+      "exit_by": "trapped",
+      "side_left": {
+        "pad": "U1.30",
+        "net": "P0.19",
+        "xy": [
+          39.25,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.28",
+        "net": "P0.17",
+        "xy": [
+          40.25,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.19",
+      "u1_pad": "U1.30",
+      "center_xy": [
+        39.25,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J18.7",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          52.993,
+          61.187
+        ],
+        "pads_on_that_island": [
+          "pad J18.7",
+          "pad J13.4"
+        ]
+      },
+      "pad_edge_mm": 36.661,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.31",
+        "net": "GND",
+        "xy": [
+          38.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.29",
+        "net": "P0.18",
+        "xy": [
+          39.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.20",
+      "u1_pad": "U1.35",
+      "center_xy": [
+        36.75,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 2,
+      "other": {
+        "item": "F.Cu (55.78,62.00)-(55.78,60.90)",
+        "layer": "F.Cu",
+        "xy": [
+          55.736,
+          60.821
+        ],
+        "pads_on_that_island": [
+          "pad J18.8",
+          "pad J13.5"
+        ]
+      },
+      "pad_edge_mm": 38.595,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.36",
+        "net": "GND",
+        "xy": [
+          36.25,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.34",
+        "net": "SWDIO",
+        "xy": [
+          37.25,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.01",
+      "u1_pad": "U1.96",
+      "center_xy": [
+        40.25,
+        37.25
+      ],
+      "layer": "F.Cu",
+      "edge": "S",
+      "n_islands": 2,
+      "other": {
+        "item": "B.Cu (27.20,78.50)-(62.00,78.50)",
+        "layer": "B.Cu",
+        "xy": [
+          40.364,
+          78.41
+        ],
+        "pads_on_that_island": [
+          "pad J12.2",
+          "pad R11.1"
+        ]
+      },
+      "pad_edge_mm": 40.76,
+      "class": "trapped",
+      "exit_by": "trapped",
+      "side_left": {
+        "pad": "U1.95",
+        "net": "P0.00",
+        "xy": [
+          39.75,
+          37.25
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.97",
+        "net": "P0.02",
+        "xy": [
+          40.75,
+          37.25
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "SIM_CLK",
+      "u1_pad": "U1.46",
+      "center_xy": [
+        31.25,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 2,
+      "other": {
+        "item": "B.Cu (70.90,45.50)-(68.14,45.50)",
+        "layer": "B.Cu",
+        "xy": [
+          68.06,
+          45.46
+        ],
+        "pads_on_that_island": [
+          "pad U4.7",
+          "pad C35.1",
+          "pad TP3.1"
+        ]
+      },
+      "pad_edge_mm": 40.99,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.47",
+        "net": "GND",
+        "xy": [
+          30.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.45",
+        "net": "<no-net>",
+        "xy": [
+          31.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "SIM_RST",
+      "u1_pad": "U1.43",
+      "center_xy": [
+        32.75,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 2,
+      "other": {
+        "item": "B.Cu (71.68,43.80)-(71.68,48.00)",
+        "layer": "B.Cu",
+        "xy": [
+          71.597,
+          43.764
+        ],
+        "pads_on_that_island": [
+          "pad TP4.1",
+          "pad U4.6",
+          "pad C36.1"
+        ]
+      },
+      "pad_edge_mm": 42.124,
+      "class": "exit",
+      "exit_by": "via-row",
+      "side_left": {
+        "pad": "U1.44",
+        "net": "GND",
+        "xy": [
+          32.25,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.42",
+        "net": "P0.25",
+        "xy": [
+          33.25,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.00",
+      "u1_pad": "U1.95",
+      "center_xy": [
+        39.75,
+        37.25
+      ],
+      "layer": "F.Cu",
+      "edge": "S",
+      "n_islands": 2,
+      "other": {
+        "item": "F.Cu (79.49,18.00)-(79.49,19.13)",
+        "layer": "F.Cu",
+        "xy": [
+          79.408,
+          19.163
+        ],
+        "pads_on_that_island": [
+          "pad R10.1"
+        ]
+      },
+      "pad_edge_mm": 43.298,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.94",
+        "net": "GND",
+        "xy": [
+          39.25,
+          37.25
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.96",
+        "net": "P0.01",
+        "xy": [
+          40.25,
+          37.25
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.07",
+      "u1_pad": "U1.4",
+      "center_xy": [
+        44.0,
+        35.5
+      ],
+      "layer": "F.Cu",
+      "edge": "E",
+      "n_islands": 3,
+      "other": {
+        "item": "pad J12.8",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          24.181,
+          75.25
+        ],
+        "pads_on_that_island": [
+          "pad J12.8"
+        ]
+      },
+      "pad_edge_mm": 44.118,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.5",
+        "net": "GND",
+        "xy": [
+          44.0,
+          35.0
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.3",
+        "net": "P0.06",
+        "xy": [
+          44.0,
+          36.0
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.05",
+      "u1_pad": "U1.2",
+      "center_xy": [
+        44.0,
+        36.5
+      ],
+      "layer": "F.Cu",
+      "edge": "E",
+      "n_islands": 3,
+      "other": {
+        "item": "pad J12.6",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          19.101,
+          75.25
+        ],
+        "pads_on_that_island": [
+          "pad J12.6"
+        ]
+      },
+      "pad_edge_mm": 45.733,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.3",
+        "net": "P0.06",
+        "xy": [
+          44.0,
+          36.0
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.1",
+        "net": "GND",
+        "xy": [
+          44.0,
+          37.0
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "SIM_1V8",
+      "u1_pad": "U1.49",
+      "center_xy": [
+        29.75,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 2,
+      "other": {
+        "item": "F.Cu (72.90,44.10)-(72.90,48.60)",
+        "layer": "F.Cu",
+        "xy": [
+          72.714,
+          44.027
+        ],
+        "pads_on_that_island": [
+          "pad C38.1",
+          "pad U4.5",
+          "pad C33.1",
+          "pad JP2.1"
+        ]
+      },
+      "pad_edge_mm": 46.031,
+      "class": "exit",
+      "exit_by": "via-row",
+      "side_left": {
+        "pad": "U1.50",
+        "net": "GND",
+        "xy": [
+          29.25,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.48",
+        "net": "SIM_IO",
+        "xy": [
+          30.25,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.09",
+      "u1_pad": "U1.16",
+      "center_xy": [
+        44.0,
+        29.5
+      ],
+      "layer": "F.Cu",
+      "edge": "E",
+      "n_islands": 3,
+      "other": {
+        "item": "pad J12.10",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          29.107,
+          75.187
+        ],
+        "pads_on_that_island": [
+          "pad J12.10"
+        ]
+      },
+      "pad_edge_mm": 47.797,
+      "class": "exit",
+      "exit_by": "via-row",
+      "side_left": {
+        "pad": "U1.17",
+        "net": "GND",
+        "xy": [
+          44.0,
+          29.0
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.15",
+        "net": "P0.08",
+        "xy": [
+          44.0,
+          30.0
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.11",
+      "u1_pad": "U1.19",
+      "center_xy": [
+        44.0,
+        28.0
+      ],
+      "layer": "F.Cu",
+      "edge": "E",
+      "n_islands": 3,
+      "other": {
+        "item": "pad J12.12",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          34.187,
+          75.187
+        ],
+        "pads_on_that_island": [
+          "pad J12.12"
+        ]
+      },
+      "pad_edge_mm": 47.976,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.20",
+        "net": "P0.12",
+        "xy": [
+          44.0,
+          27.5
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.18",
+        "net": "P0.10",
+        "xy": [
+          44.0,
+          28.5
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.12",
+      "u1_pad": "U1.20",
+      "center_xy": [
+        44.0,
+        27.5
+      ],
+      "layer": "F.Cu",
+      "edge": "E",
+      "n_islands": 3,
+      "other": {
+        "item": "pad J12.13",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          36.563,
+          75.154
+        ],
+        "pads_on_that_island": [
+          "pad J12.13"
+        ]
+      },
+      "pad_edge_mm": 48.028,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.21",
+        "net": "GND",
+        "xy": [
+          44.0,
+          27.0
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.19",
+        "net": "P0.11",
+        "xy": [
+          44.0,
+          28.0
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.10",
+      "u1_pad": "U1.18",
+      "center_xy": [
+        44.0,
+        28.5
+      ],
+      "layer": "F.Cu",
+      "edge": "E",
+      "n_islands": 3,
+      "other": {
+        "item": "pad J12.11",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          31.647,
+          75.187
+        ],
+        "pads_on_that_island": [
+          "pad J12.11"
+        ]
+      },
+      "pad_edge_mm": 48.055,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.19",
+        "net": "P0.11",
+        "xy": [
+          44.0,
+          28.0
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.17",
+        "net": "GND",
+        "xy": [
+          44.0,
+          29.0
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "SIM_IO",
+      "u1_pad": "U1.48",
+      "center_xy": [
+        30.25,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 2,
+      "other": {
+        "item": "pad C37.1",
+        "layer": "F.Cu",
+        "xy": [
+          75.458,
+          51.862
+        ],
+        "pads_on_that_island": [
+          "pad U4.8",
+          "pad TP5.1",
+          "pad C37.1"
+        ]
+      },
+      "pad_edge_mm": 51.402,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.49",
+        "net": "SIM_1V8",
+        "xy": [
+          29.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.47",
+        "net": "GND",
+        "xy": [
+          30.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.03",
+      "u1_pad": "U1.99",
+      "center_xy": [
+        41.75,
+        37.25
+      ],
+      "layer": "F.Cu",
+      "edge": "S",
+      "n_islands": 2,
+      "other": {
+        "item": "F.Cu (97.49,18.00)-(97.49,19.13)",
+        "layer": "F.Cu",
+        "xy": [
+          97.404,
+          19.153
+        ],
+        "pads_on_that_island": [
+          "pad R13.1"
+        ]
+      },
+      "pad_edge_mm": 58.267,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.98",
+        "net": "GND",
+        "xy": [
+          41.25,
+          37.25
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.100",
+        "net": "P0.04",
+        "xy": [
+          42.25,
+          37.25
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.22",
+      "u1_pad": "U1.38",
+      "center_xy": [
+        35.25,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 2,
+      "other": {
+        "item": "via@79.24,71.5",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          79.029,
+          71.287
+        ],
+        "pads_on_that_island": [
+          "pad J10.2",
+          "pad J13.7"
+        ]
+      },
+      "pad_edge_mm": 62.076,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.39",
+        "net": "P0.23",
+        "xy": [
+          34.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.37",
+        "net": "P0.21",
+        "xy": [
+          35.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.21",
+      "u1_pad": "U1.37",
+      "center_xy": [
+        35.75,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 3,
+      "other": {
+        "item": "pad J13.6",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          76.161,
+          75.343
+        ],
+        "pads_on_that_island": [
+          "pad J13.6"
+        ]
+      },
+      "pad_edge_mm": 62.812,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.38",
+        "net": "P0.22",
+        "xy": [
+          35.25,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.36",
+        "net": "GND",
+        "xy": [
+          36.25,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.30",
+      "u1_pad": "U1.88",
+      "center_xy": [
+        36.25,
+        37.25
+      ],
+      "layer": "F.Cu",
+      "edge": "S",
+      "n_islands": 2,
+      "other": {
+        "item": "F.Cu (101.20,46.40)-(112.40,46.40)",
+        "layer": "F.Cu",
+        "xy": [
+          101.111,
+          46.388
+        ],
+        "pads_on_that_island": [
+          "pad J13.15",
+          "pad J11.1"
+        ]
+      },
+      "pad_edge_mm": 65.303,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.87",
+        "net": "P0.29",
+        "xy": [
+          35.75,
+          37.25
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.89",
+        "net": "P0.31",
+        "xy": [
+          36.75,
+          37.25
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.26",
+      "u1_pad": "U1.83",
+      "center_xy": [
+        33.75,
+        37.25
+      ],
+      "layer": "F.Cu",
+      "edge": "S",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J13.11",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          88.743,
+          75.461
+        ],
+        "pads_on_that_island": [
+          "pad J13.11"
+        ]
+      },
+      "pad_edge_mm": 66.628,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.82",
+        "net": "GND",
+        "xy": [
+          33.25,
+          37.25
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.84",
+        "net": "P0.27",
+        "xy": [
+          34.25,
+          37.25
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.31",
+      "u1_pad": "U1.89",
+      "center_xy": [
+        36.75,
+        37.25
+      ],
+      "layer": "F.Cu",
+      "edge": "S",
+      "n_islands": 2,
+      "other": {
+        "item": "F.Cu (103.05,47.10)-(106.70,47.10)",
+        "layer": "F.Cu",
+        "xy": [
+          102.961,
+          47.087
+        ],
+        "pads_on_that_island": [
+          "pad J13.16",
+          "pad J11.2"
+        ]
+      },
+      "pad_edge_mm": 66.737,
+      "class": "exit",
+      "exit_by": "via-row",
+      "side_left": {
+        "pad": "U1.88",
+        "net": "P0.30",
+        "xy": [
+          36.25,
+          37.25
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.90",
+        "net": "GND",
+        "xy": [
+          37.25,
+          37.25
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.23",
+      "u1_pad": "U1.39",
+      "center_xy": [
+        34.75,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 3,
+      "other": {
+        "item": "pad J13.8",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          81.241,
+          75.343
+        ],
+        "pads_on_that_island": [
+          "pad J13.8"
+        ]
+      },
+      "pad_edge_mm": 66.873,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.40",
+        "net": "P0.24",
+        "xy": [
+          34.25,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.38",
+        "net": "P0.22",
+        "xy": [
+          35.25,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.27",
+      "u1_pad": "U1.84",
+      "center_xy": [
+        34.25,
+        37.25
+      ],
+      "layer": "F.Cu",
+      "edge": "S",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J13.12",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          91.202,
+          75.583
+        ],
+        "pads_on_that_island": [
+          "pad J13.12"
+        ]
+      },
+      "pad_edge_mm": 68.318,
+      "class": "exit",
+      "exit_by": "via-row",
+      "side_left": {
+        "pad": "U1.83",
+        "net": "P0.26",
+        "xy": [
+          33.75,
+          37.25
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.85",
+        "net": "GND",
+        "xy": [
+          34.75,
+          37.25
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.24",
+      "u1_pad": "U1.40",
+      "center_xy": [
+        34.25,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 3,
+      "other": {
+        "item": "pad J13.9",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          83.663,
+          75.461
+        ],
+        "pads_on_that_island": [
+          "pad J13.9"
+        ]
+      },
+      "pad_edge_mm": 69.013,
+      "class": "exit",
+      "exit_by": "via-row",
+      "side_left": {
+        "pad": "U1.41",
+        "net": "GND",
+        "xy": [
+          33.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.39",
+        "net": "P0.23",
+        "xy": [
+          34.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.28",
+      "u1_pad": "U1.86",
+      "center_xy": [
+        35.25,
+        37.25
+      ],
+      "layer": "F.Cu",
+      "edge": "S",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J13.13",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          93.73,
+          75.599
+        ],
+        "pads_on_that_island": [
+          "pad J13.13"
+        ]
+      },
+      "pad_edge_mm": 69.603,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.85",
+        "net": "GND",
+        "xy": [
+          34.75,
+          37.25
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.87",
+        "net": "P0.29",
+        "xy": [
+          35.75,
+          37.25
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "COEX1",
+      "u1_pad": "U1.92",
+      "center_xy": [
+        38.25,
+        37.25
+      ],
+      "layer": "F.Cu",
+      "edge": "S",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J15.2",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          103.538,
+          63.079
+        ],
+        "pads_on_that_island": [
+          "pad J15.2"
+        ]
+      },
+      "pad_edge_mm": 69.936,
+      "class": "trapped",
+      "exit_by": "trapped",
+      "side_left": {
+        "pad": "U1.91",
+        "net": "COEX2",
+        "xy": [
+          37.75,
+          37.25
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.93",
+        "net": "COEX0",
+        "xy": [
+          38.75,
+          37.25
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.29",
+      "u1_pad": "U1.87",
+      "center_xy": [
+        35.75,
+        37.25
+      ],
+      "layer": "F.Cu",
+      "edge": "S",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J13.14",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          96.27,
+          75.599
+        ],
+        "pads_on_that_island": [
+          "pad J13.14"
+        ]
+      },
+      "pad_edge_mm": 71.321,
+      "class": "trapped",
+      "exit_by": "trapped",
+      "side_left": {
+        "pad": "U1.86",
+        "net": "P0.28",
+        "xy": [
+          35.25,
+          37.25
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.88",
+        "net": "P0.30",
+        "xy": [
+          36.25,
+          37.25
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "P0.25",
+      "u1_pad": "U1.42",
+      "center_xy": [
+        33.25,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J13.10",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          86.203,
+          75.461
+        ],
+        "pads_on_that_island": [
+          "pad J13.10"
+        ]
+      },
+      "pad_edge_mm": 71.584,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.43",
+        "net": "SIM_RST",
+        "xy": [
+          32.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.41",
+        "net": "GND",
+        "xy": [
+          33.75,
+          26.75
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "MAGPIO0",
+      "u1_pad": "U1.55",
+      "center_xy": [
+        28.0,
+        28.5
+      ],
+      "layer": "F.Cu",
+      "edge": "W",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J14.1",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          103.5,
+          47.5
+        ],
+        "pads_on_that_island": [
+          "pad J14.1"
+        ]
+      },
+      "pad_edge_mm": 77.438,
+      "class": "exit",
+      "exit_by": "via-row",
+      "side_left": {
+        "pad": "U1.54",
+        "net": "MAGPIO1",
+        "xy": [
+          28.0,
+          28.0
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.56",
+        "net": "GND",
+        "xy": [
+          28.0,
+          29.0
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "MAGPIO1",
+      "u1_pad": "U1.54",
+      "center_xy": [
+        28.0,
+        28.0
+      ],
+      "layer": "F.Cu",
+      "edge": "W",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J14.2",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          103.538,
+          49.079
+        ],
+        "pads_on_that_island": [
+          "pad J14.2"
+        ]
+      },
+      "pad_edge_mm": 78.007,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.53",
+        "net": "MAGPIO2",
+        "xy": [
+          28.0,
+          27.5
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.55",
+        "net": "MAGPIO0",
+        "xy": [
+          28.0,
+          28.5
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "MIPI_VIO",
+      "u1_pad": "U1.57",
+      "center_xy": [
+        28.0,
+        29.5
+      ],
+      "layer": "F.Cu",
+      "edge": "W",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J14.4",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          103.538,
+          51.619
+        ],
+        "pads_on_that_island": [
+          "pad J14.4"
+        ]
+      },
+      "pad_edge_mm": 78.293,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.56",
+        "net": "GND",
+        "xy": [
+          28.0,
+          29.0
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.58",
+        "net": "MIPI_SCLK",
+        "xy": [
+          28.0,
+          30.0
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "MAGPIO2",
+      "u1_pad": "U1.53",
+      "center_xy": [
+        28.0,
+        27.5
+      ],
+      "layer": "F.Cu",
+      "edge": "W",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J14.3",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          103.538,
+          50.349
+        ],
+        "pads_on_that_island": [
+          "pad J14.3"
+        ]
+      },
+      "pad_edge_mm": 78.501,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.52",
+        "net": "GND",
+        "xy": [
+          28.0,
+          27.0
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.54",
+        "net": "MAGPIO1",
+        "xy": [
+          28.0,
+          28.0
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "MIPI_SCLK",
+      "u1_pad": "U1.58",
+      "center_xy": [
+        28.0,
+        30.0
+      ],
+      "layer": "F.Cu",
+      "edge": "W",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J14.5",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          103.538,
+          52.889
+        ],
+        "pads_on_that_island": [
+          "pad J14.5"
+        ]
+      },
+      "pad_edge_mm": 78.512,
+      "class": "exit",
+      "exit_by": "stub",
+      "side_left": {
+        "pad": "U1.57",
+        "net": "MIPI_VIO",
+        "xy": [
+          28.0,
+          29.5
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.59",
+        "net": "MIPI_SDATA",
+        "xy": [
+          28.0,
+          30.5
+        ],
+        "gap_mm": 0.2
+      }
+    },
+    {
+      "net": "MIPI_SDATA",
+      "u1_pad": "U1.59",
+      "center_xy": [
+        28.0,
+        30.5
+      ],
+      "layer": "F.Cu",
+      "edge": "W",
+      "n_islands": 2,
+      "other": {
+        "item": "pad J14.6",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          103.538,
+          54.159
+        ],
+        "pads_on_that_island": [
+          "pad J14.6"
+        ]
+      },
+      "pad_edge_mm": 78.739,
+      "class": "trapped",
+      "exit_by": "trapped",
+      "side_left": {
+        "pad": "U1.58",
+        "net": "MIPI_SCLK",
+        "xy": [
+          28.0,
+          30.0
+        ],
+        "gap_mm": 0.2
+      },
+      "side_right": {
+        "pad": "U1.60",
+        "net": "GND",
+        "xy": [
+          28.0,
+          31.0
+        ],
+        "gap_mm": 0.2
+      }
+    }
+  ],
+  "exit_ranked": [
+    {
+      "rank": 1,
+      "net": "P0.16",
+      "pad_edge_mm": 34.259,
+      "exit_by": "stub",
+      "exit_note": "F.Cu (41.25, 26.75)\u2013(40.70, 20.80) and via (40.70, 20.80) r=0.30 already north of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.26",
+          "layer": "F.Cu",
+          "xy": [
+            41.364,
+            27.15
+          ],
+          "center_xy": [
+            41.25,
+            26.75
+          ]
+        },
+        "other": {
+          "ref": "pad J18.4",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            45.537,
+            61.154
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          41.364,
+          27.15
+        ],
+        "to": [
+          45.537,
+          61.154
+        ],
+        "nearest": {
+          "net": "GND",
+          "clearance_mm": -0.349,
+          "item": "via@42.0,32.0",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 5,
+        "top": [
+          {
+            "net": "GND",
+            "clearance_mm": -0.349,
+            "item": "via@42.0,32.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.321,
+            "item": "via@43.4,45.126",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "<no-net>",
+            "clearance_mm": -0.074,
+            "item": "pad U1.105 (no net)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.04",
+            "clearance_mm": 0.068,
+            "item": "pad U1.100",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "net": "P0.17",
+      "pad_edge_mm": 34.863,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (40.25, 23.10) r=0.30 already north of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.28",
+          "layer": "F.Cu",
+          "xy": [
+            40.378,
+            27.147
+          ],
+          "center_xy": [
+            40.25,
+            26.75
+          ]
+        },
+        "other": {
+          "ref": "pad J18.5",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            47.913,
+            61.187
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          40.378,
+          27.147
+        ],
+        "to": [
+          47.913,
+          61.187
+        ],
+        "nearest": {
+          "net": "GND",
+          "clearance_mm": -0.277,
+          "item": "via@42.0,35.0",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 4,
+        "top": [
+          {
+            "net": "GND",
+            "clearance_mm": -0.277,
+            "item": "via@42.0,35.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,44.00)-(42.75,44.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "<no-net>",
+            "clearance_mm": -0.02,
+            "item": "pad U1.107 (no net)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.04",
+            "clearance_mm": 0.04,
+            "item": "pad U1.100",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "net": "P0.19",
+      "pad_edge_mm": 36.661,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (39.25, 23.10) r=0.30 already north of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.30",
+          "layer": "F.Cu",
+          "xy": [
+            39.378,
+            27.147
+          ],
+          "center_xy": [
+            39.25,
+            26.75
+          ]
+        },
+        "other": {
+          "ref": "pad J18.7",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            52.993,
+            61.187
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          39.378,
+          27.147
+        ],
+        "to": [
+          52.993,
+          61.187
+        ],
+        "nearest": {
+          "net": "VDD1",
+          "clearance_mm": -0.29,
+          "item": "F.Cu (50.52,38.00)-(43.25,38.00)",
+          "layer": "F.Cu"
+        },
+        "foreign_nets_under_0_15": 5,
+        "top": [
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.52,38.00)-(43.25,38.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,44.00)-(42.75,44.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "GND",
+            "clearance_mm": -0.09,
+            "item": "pad U1.103",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.06",
+            "clearance_mm": 0.055,
+            "item": "via@44.0,39.9",
+            "layer": "F.Cu+B.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "net": "P0.20",
+      "pad_edge_mm": 38.595,
+      "exit_by": "stub",
+      "exit_note": "F.Cu (36.75, 26.75)\u2013(36.20, 20.80) and via (36.20, 20.80) r=0.30 already north of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.35",
+          "layer": "F.Cu",
+          "xy": [
+            36.878,
+            27.147
+          ],
+          "center_xy": [
+            36.75,
+            26.75
+          ]
+        },
+        "other": {
+          "ref": "F.Cu (55.78,62.00)-(55.78,60.90)",
+          "layer": "F.Cu",
+          "xy": [
+            55.736,
+            60.821
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          36.878,
+          27.147
+        ],
+        "to": [
+          55.736,
+          60.821
+        ],
+        "nearest": {
+          "net": "P0.06",
+          "clearance_mm": -0.373,
+          "item": "via@44.0,39.9",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 8,
+        "top": [
+          {
+            "net": "P0.06",
+            "clearance_mm": -0.373,
+            "item": "via@44.0,39.9",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "GND",
+            "clearance_mm": -0.207,
+            "item": "via@50.0,50.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,44.00)-(42.75,44.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD_GPIO",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (70.44,41.55)-(54.44,61.05)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "net": "SIM_CLK",
+      "pad_edge_mm": 40.99,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (31.25, 23.10) r=0.30 already north of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.46",
+          "layer": "F.Cu",
+          "xy": [
+            31.397,
+            27.128
+          ],
+          "center_xy": [
+            31.25,
+            26.75
+          ]
+        },
+        "other": {
+          "ref": "B.Cu (70.90,45.50)-(68.14,45.50)",
+          "layer": "B.Cu",
+          "xy": [
+            68.06,
+            45.46
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          31.397,
+          27.128
+        ],
+        "to": [
+          68.06,
+          45.46
+        ],
+        "nearest": {
+          "net": "VDD2",
+          "clearance_mm": -0.419,
+          "item": "via@61.3,42.0",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 9,
+        "top": [
+          {
+            "net": "VDD2",
+            "clearance_mm": -0.419,
+            "item": "via@61.3,42.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.52,37.95)-(50.52,35.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,40.95)-(72.86,40.95)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD_GPIO",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (70.44,41.55)-(54.44,61.05)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "net": "SIM_RST",
+      "pad_edge_mm": 42.124,
+      "exit_by": "via-row",
+      "exit_note": "West side of the via row is open (no F.Cu flank within 4.4 mm). The only flank is P0.25 via (33.25, 23.10) r=0.30. A 0.18 mm track centered at x=32.71, still on the pad, clears that via by 0.15 mm. Sideways pad gaps are 0.200 mm, so the exit is the open via row, not the pad gap.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.43",
+          "layer": "F.Cu",
+          "xy": [
+            32.897,
+            27.128
+          ],
+          "center_xy": [
+            32.75,
+            26.75
+          ]
+        },
+        "other": {
+          "ref": "B.Cu (71.68,43.80)-(71.68,48.00)",
+          "layer": "B.Cu",
+          "xy": [
+            71.597,
+            43.764
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          32.897,
+          27.128
+        ],
+        "to": [
+          71.597,
+          43.764
+        ],
+        "nearest": {
+          "net": "VDD1",
+          "clearance_mm": -0.29,
+          "item": "F.Cu (50.68,35.00)-(50.68,31.00)",
+          "layer": "F.Cu"
+        },
+        "foreign_nets_under_0_15": 7,
+        "top": [
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.68,35.00)-(50.68,31.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD2",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (53.68,38.00)-(53.68,36.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,40.95)-(72.86,40.95)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD_GPIO",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (70.44,41.55)-(54.44,61.05)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "net": "P0.00",
+      "pad_edge_mm": 43.298,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (39.75, 41.10) r=0.30 already south of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.95",
+          "layer": "F.Cu",
+          "xy": [
+            39.897,
+            36.872
+          ],
+          "center_xy": [
+            39.75,
+            37.25
+          ]
+        },
+        "other": {
+          "ref": "F.Cu (79.49,18.00)-(79.49,19.13)",
+          "layer": "F.Cu",
+          "xy": [
+            79.408,
+            19.163
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          39.897,
+          36.872
+        ],
+        "to": [
+          79.408,
+          19.163
+        ],
+        "nearest": {
+          "net": "VDD1",
+          "clearance_mm": -0.29,
+          "item": "F.Cu (50.68,35.00)-(50.68,31.00)",
+          "layer": "F.Cu"
+        },
+        "foreign_nets_under_0_15": 9,
+        "top": [
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.68,35.00)-(50.68,31.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VIN",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (74.00,22.00)-(74.00,20.70)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VIN_FILT",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (75.30,16.94)-(75.30,28.95)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "LED_PWR_K",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (76.79,8.00)-(76.79,22.51)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "net": "P0.07",
+      "pad_edge_mm": 44.118,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (47.40, 36.50) r=0.30 already east of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.4",
+          "layer": "F.Cu",
+          "xy": [
+            43.622,
+            35.647
+          ],
+          "center_xy": [
+            44.0,
+            35.5
+          ]
+        },
+        "other": {
+          "ref": "pad J12.8",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            24.181,
+            75.25
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          43.622,
+          35.647
+        ],
+        "to": [
+          24.181,
+          75.25
+        ],
+        "nearest": {
+          "net": "P0.02",
+          "clearance_mm": -0.215,
+          "item": "via@40.75,41.1",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 6,
+        "top": [
+          {
+            "net": "P0.02",
+            "clearance_mm": -0.215,
+            "item": "via@40.75,41.1",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (42.75,37.25)-(42.75,41.10)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.04",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (41.25,46.80)-(37.40,46.80)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.03",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (41.75,37.25)-(41.75,41.10)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "net": "P0.05",
+      "pad_edge_mm": 45.733,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (47.40, 36.50) r=0.30 already east of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.2",
+          "layer": "F.Cu",
+          "xy": [
+            43.622,
+            36.647
+          ],
+          "center_xy": [
+            44.0,
+            36.5
+          ]
+        },
+        "other": {
+          "ref": "pad J12.6",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            19.101,
+            75.25
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          43.622,
+          36.647
+        ],
+        "to": [
+          19.101,
+          75.25
+        ],
+        "nearest": {
+          "net": "P0.02",
+          "clearance_mm": -0.353,
+          "item": "via@40.75,41.1",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 7,
+        "top": [
+          {
+            "net": "P0.02",
+            "clearance_mm": -0.353,
+            "item": "via@40.75,41.1",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.281,
+            "item": "F.Cu (43.25,38.00)-(43.25,37.25)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (42.75,37.25)-(42.75,41.10)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.04",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (42.25,37.25)-(42.25,40.30)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "net": "SIM_1V8",
+      "pad_edge_mm": 46.031,
+      "exit_by": "via-row",
+      "exit_note": "West side of the y=23.10 via row is open. The only flank is SIM_IO via (30.25, 23.10) r=0.30. A 0.18 mm track centered at x=29.71 clears it by 0.15 mm. COEX0 via (29.81, 22.00) is 4.75 mm north of the body, past this row.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.49",
+          "layer": "F.Cu",
+          "xy": [
+            29.897,
+            27.128
+          ],
+          "center_xy": [
+            29.75,
+            26.75
+          ]
+        },
+        "other": {
+          "ref": "F.Cu (72.90,44.10)-(72.90,48.60)",
+          "layer": "F.Cu",
+          "xy": [
+            72.714,
+            44.027
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          29.897,
+          27.128
+        ],
+        "to": [
+          72.714,
+          44.027
+        ],
+        "nearest": {
+          "net": "GND",
+          "clearance_mm": -0.301,
+          "item": "via@42.0,32.0",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 9,
+        "top": [
+          {
+            "net": "GND",
+            "clearance_mm": -0.301,
+            "item": "via@42.0,32.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.52,37.95)-(50.52,35.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD2",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (53.68,38.00)-(53.68,36.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,40.95)-(72.86,40.95)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "net": "P0.09",
+      "pad_edge_mm": 47.797,
+      "exit_by": "via-row",
+      "exit_note": "F.Cu via-row gap 0.900 mm between P0.10 via (47.00, 28.50) r=0.30 (inner edge y=28.80) and P0.08 via (46.20, 30.00) r=0.30 (inner edge y=29.70). A 0.18 mm track centered at y=29.45 clears both by at least 0.15 mm. VDD_GPIO at x=47.55 is beyond this row.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.16",
+          "layer": "F.Cu",
+          "xy": [
+            43.622,
+            29.647
+          ],
+          "center_xy": [
+            44.0,
+            29.5
+          ]
+        },
+        "other": {
+          "ref": "pad J12.10",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            29.107,
+            75.187
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          43.622,
+          29.647
+        ],
+        "to": [
+          29.107,
+          75.187
+        ],
+        "nearest": {
+          "net": "GND",
+          "clearance_mm": -0.31,
+          "item": "via@42.0,35.0",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 8,
+        "top": [
+          {
+            "net": "GND",
+            "clearance_mm": -0.31,
+            "item": "via@42.0,35.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "P0.04",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (41.25,46.80)-(37.40,46.80)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.03",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (13.62,74.40)-(41.75,74.40)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.02",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (40.75,37.25)-(40.75,41.10)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "net": "P0.11",
+      "pad_edge_mm": 47.976,
+      "exit_by": "stub",
+      "exit_note": "F.Cu (44.00, 28.00)\u2013(46.50, 28.00) and via (48.62, 28.00) r=0.30 already east of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.19",
+          "layer": "F.Cu",
+          "xy": [
+            43.622,
+            28.147
+          ],
+          "center_xy": [
+            44.0,
+            28.0
+          ]
+        },
+        "other": {
+          "ref": "pad J12.12",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            34.187,
+            75.187
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          43.622,
+          28.147
+        ],
+        "to": [
+          34.187,
+          75.187
+        ],
+        "nearest": {
+          "net": "P0.06",
+          "clearance_mm": -0.251,
+          "item": "via@40.2,44.5",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 9,
+        "top": [
+          {
+            "net": "P0.06",
+            "clearance_mm": -0.251,
+            "item": "via@40.2,44.5",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "P0.02",
+            "clearance_mm": -0.187,
+            "item": "via@40.75,43.5",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "P0.04",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (41.25,46.80)-(37.40,46.80)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.03",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (41.75,37.25)-(41.75,41.10)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "net": "P0.12",
+      "pad_edge_mm": 48.028,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (47.00, 27.50) r=0.30 already east of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.20",
+          "layer": "F.Cu",
+          "xy": [
+            43.636,
+            27.65
+          ],
+          "center_xy": [
+            44.0,
+            27.5
+          ]
+        },
+        "other": {
+          "ref": "pad J12.13",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            36.563,
+            75.154
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          43.636,
+          27.65
+        ],
+        "to": [
+          36.563,
+          75.154
+        ],
+        "nearest": {
+          "net": "P0.03",
+          "clearance_mm": -0.275,
+          "item": "via@41.75,41.1",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 8,
+        "top": [
+          {
+            "net": "P0.03",
+            "clearance_mm": -0.275,
+            "item": "via@41.75,41.1",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "P0.04",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (41.25,46.80)-(37.40,46.80)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "GND",
+            "clearance_mm": -0.085,
+            "item": "via@40.0,50.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "P0.10",
+            "clearance_mm": -0.017,
+            "item": "pad U1.18",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "net": "P0.10",
+      "pad_edge_mm": 48.055,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (47.00, 28.50) r=0.30 already east of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.18",
+          "layer": "F.Cu",
+          "xy": [
+            43.622,
+            28.647
+          ],
+          "center_xy": [
+            44.0,
+            28.5
+          ]
+        },
+        "other": {
+          "ref": "pad J12.11",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            31.647,
+            75.187
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          43.622,
+          28.647
+        ],
+        "to": [
+          31.647,
+          75.187
+        ],
+        "nearest": {
+          "net": "GND",
+          "clearance_mm": -0.378,
+          "item": "via@42.0,35.0",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 7,
+        "top": [
+          {
+            "net": "GND",
+            "clearance_mm": -0.378,
+            "item": "via@42.0,35.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "P0.04",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (41.25,46.80)-(37.40,46.80)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.03",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (13.62,74.40)-(41.75,74.40)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.02",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (40.75,37.25)-(40.75,41.10)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "net": "SIM_IO",
+      "pad_edge_mm": 51.402,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (30.25, 23.10) r=0.30 already north of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.48",
+          "layer": "F.Cu",
+          "xy": [
+            30.397,
+            27.128
+          ],
+          "center_xy": [
+            30.25,
+            26.75
+          ]
+        },
+        "other": {
+          "ref": "pad C37.1",
+          "layer": "F.Cu",
+          "xy": [
+            75.458,
+            51.862
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          30.397,
+          27.128
+        ],
+        "to": [
+          75.458,
+          51.862
+        ],
+        "nearest": {
+          "net": "P0.05",
+          "clearance_mm": -0.356,
+          "item": "via@47.4,36.5",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 12,
+        "top": [
+          {
+            "net": "P0.05",
+            "clearance_mm": -0.356,
+            "item": "via@47.4,36.5",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.52,38.00)-(43.25,38.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD2",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (53.68,38.00)-(53.68,40.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "SIM_1V8",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (71.70,48.60)-(71.68,52.00)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 16,
+      "net": "P0.03",
+      "pad_edge_mm": 58.267,
+      "exit_by": "stub",
+      "exit_note": "F.Cu (41.75, 37.25)\u2013(41.75, 41.10) already south of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.99",
+          "layer": "F.Cu",
+          "xy": [
+            41.897,
+            36.872
+          ],
+          "center_xy": [
+            41.75,
+            37.25
+          ]
+        },
+        "other": {
+          "ref": "F.Cu (97.49,18.00)-(97.49,19.13)",
+          "layer": "F.Cu",
+          "xy": [
+            97.404,
+            19.153
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          41.897,
+          36.872
+        ],
+        "to": [
+          97.404,
+          19.153
+        ],
+        "nearest": {
+          "net": "VDD1",
+          "clearance_mm": -0.29,
+          "item": "F.Cu (50.68,35.00)-(50.68,31.00)",
+          "layer": "F.Cu"
+        },
+        "foreign_nets_under_0_15": 10,
+        "top": [
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.68,35.00)-(50.68,31.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VIN_FILT",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (75.30,16.94)-(75.30,28.95)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.06",
+            "clearance_mm": -0.182,
+            "item": "via@45.15,36.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (62.50,29.60)-(62.50,30.90)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 17,
+      "net": "P0.22",
+      "pad_edge_mm": 62.076,
+      "exit_by": "stub",
+      "exit_note": "F.Cu (35.25, 26.75)\u2013(35.25, 22.00) already north of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.38",
+          "layer": "F.Cu",
+          "xy": [
+            35.389,
+            27.14
+          ],
+          "center_xy": [
+            35.25,
+            26.75
+          ]
+        },
+        "other": {
+          "ref": "via@79.24,71.5",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            79.029,
+            71.287
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          35.389,
+          27.14
+        ],
+        "to": [
+          79.029,
+          71.287
+        ],
+        "nearest": {
+          "net": "P0.06",
+          "clearance_mm": -0.324,
+          "item": "via@48.8,40.8",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 10,
+        "top": [
+          {
+            "net": "P0.06",
+            "clearance_mm": -0.324,
+            "item": "via@48.8,40.8",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.52,38.00)-(43.25,38.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,44.00)-(52.00,40.95)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.05",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (44.00,36.50)-(47.40,36.50)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 18,
+      "net": "P0.21",
+      "pad_edge_mm": 62.812,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (35.75, 23.10) r=0.30 already north of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.37",
+          "layer": "F.Cu",
+          "xy": [
+            35.889,
+            27.14
+          ],
+          "center_xy": [
+            35.75,
+            26.75
+          ]
+        },
+        "other": {
+          "ref": "pad J13.6",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            76.161,
+            75.343
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          35.889,
+          27.14
+        ],
+        "to": [
+          76.161,
+          75.343
+        ],
+        "nearest": {
+          "net": "VDD1",
+          "clearance_mm": -0.29,
+          "item": "F.Cu (50.52,38.00)-(43.25,38.00)",
+          "layer": "F.Cu"
+        },
+        "foreign_nets_under_0_15": 10,
+        "top": [
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.52,38.00)-(43.25,38.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,44.00)-(42.75,44.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD_GPIO",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (70.44,41.55)-(54.44,61.05)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.08",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (65.20,61.45)-(65.20,62.55)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 19,
+      "net": "P0.30",
+      "pad_edge_mm": 65.303,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (36.25, 41.10) r=0.30 already south of the fab body. Classified only; not a route to retry.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.88",
+          "layer": "F.Cu",
+          "xy": [
+            36.4,
+            37.614
+          ],
+          "center_xy": [
+            36.25,
+            37.25
+          ]
+        },
+        "other": {
+          "ref": "F.Cu (101.20,46.40)-(112.40,46.40)",
+          "layer": "F.Cu",
+          "xy": [
+            101.111,
+            46.388
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          36.4,
+          37.614
+        ],
+        "to": [
+          101.111,
+          46.388
+        ],
+        "nearest": {
+          "net": "SIM_VCC",
+          "clearance_mm": -0.377,
+          "item": "via@94.76,45.54",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 18,
+        "top": [
+          {
+            "net": "SIM_VCC",
+            "clearance_mm": -0.377,
+            "item": "via@94.76,45.54",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "VDD2",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (53.68,38.00)-(53.68,40.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "SIM_CLK",
+            "clearance_mm": -0.283,
+            "item": "via@70.9,42.4",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.189,
+            "item": "via@62.5,40.95",
+            "layer": "F.Cu+B.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 20,
+      "net": "P0.26",
+      "pad_edge_mm": 66.628,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (33.75, 41.10) r=0.30 already south of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.83",
+          "layer": "F.Cu",
+          "xy": [
+            33.889,
+            37.639
+          ],
+          "center_xy": [
+            33.75,
+            37.25
+          ]
+        },
+        "other": {
+          "ref": "pad J13.11",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            88.743,
+            75.461
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          33.889,
+          37.639
+        ],
+        "to": [
+          88.743,
+          75.461
+        ],
+        "nearest": {
+          "net": "COEX0",
+          "clearance_mm": -0.3,
+          "item": "via@38.75,41.1",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 12,
+        "top": [
+          {
+            "net": "COEX0",
+            "clearance_mm": -0.3,
+            "item": "via@38.75,41.1",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,44.00)-(42.75,44.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.04",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (41.25,42.50)-(41.25,46.80)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD_GPIO",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (70.44,41.55)-(54.44,61.05)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 21,
+      "net": "P0.31",
+      "pad_edge_mm": 66.737,
+      "exit_by": "via-row",
+      "exit_note": "F.Cu via-row gap 0.900 mm between P0.30 via (36.25, 41.10) r=0.30 (edge x=36.55) and COEX2 via (37.75, 41.10) r=0.30 (edge x=37.45). A 0.18 mm track centered at x=36.80 clears both by at least 0.15 mm. Right neighbor U1.90 is GND and has no local via, so this is not the 0.40 mm adjacent-via pinch. Classified only; not a route to retry.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.89",
+          "layer": "F.Cu",
+          "xy": [
+            36.9,
+            37.614
+          ],
+          "center_xy": [
+            36.75,
+            37.25
+          ]
+        },
+        "other": {
+          "ref": "F.Cu (103.05,47.10)-(106.70,47.10)",
+          "layer": "F.Cu",
+          "xy": [
+            102.961,
+            47.087
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          36.9,
+          37.614
+        ],
+        "to": [
+          102.961,
+          47.087
+        ],
+        "nearest": {
+          "net": "SIM_CLK",
+          "clearance_mm": -0.301,
+          "item": "via@70.9,42.4",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 18,
+        "top": [
+          {
+            "net": "SIM_CLK",
+            "clearance_mm": -0.301,
+            "item": "via@70.9,42.4",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "VDD2",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (53.68,40.00)-(50.68,40.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "SIM_CLK_C",
+            "clearance_mm": -0.272,
+            "item": "via@99.19,46.666",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "SIM_VCC",
+            "clearance_mm": -0.215,
+            "item": "F.Cu (80.65,33.54)-(80.65,46.00)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 22,
+      "net": "P0.23",
+      "pad_edge_mm": 66.873,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (34.75, 23.10) r=0.30 already north of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.39",
+          "layer": "F.Cu",
+          "xy": [
+            34.889,
+            27.14
+          ],
+          "center_xy": [
+            34.75,
+            26.75
+          ]
+        },
+        "other": {
+          "ref": "pad J13.8",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            81.241,
+            75.343
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          34.889,
+          27.14
+        ],
+        "to": [
+          81.241,
+          75.343
+        ],
+        "nearest": {
+          "net": "VDD1",
+          "clearance_mm": -0.29,
+          "item": "F.Cu (50.52,38.00)-(43.25,38.00)",
+          "layer": "F.Cu"
+        },
+        "foreign_nets_under_0_15": 8,
+        "top": [
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.52,38.00)-(43.25,38.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,44.00)-(42.75,44.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD_GPIO",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (70.44,41.55)-(54.44,61.05)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.20",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (74.16,60.90)-(74.16,76.00)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 23,
+      "net": "P0.27",
+      "pad_edge_mm": 68.318,
+      "exit_by": "via-row",
+      "exit_note": "F.Cu via-row gap 0.900 mm between P0.26 via (33.75, 41.10) r=0.30 and P0.28 via (35.25, 41.10) r=0.30. A 0.18 mm track centered at x=34.30 clears both by at least 0.15 mm. Right neighbor U1.85 is GND and has no local via.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.84",
+          "layer": "F.Cu",
+          "xy": [
+            34.389,
+            37.639
+          ],
+          "center_xy": [
+            34.25,
+            37.25
+          ]
+        },
+        "other": {
+          "ref": "pad J13.12",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            91.202,
+            75.583
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          34.389,
+          37.639
+        ],
+        "to": [
+          91.202,
+          75.583
+        ],
+        "nearest": {
+          "net": "P0.00",
+          "clearance_mm": -0.291,
+          "item": "via@39.75,41.1",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 12,
+        "top": [
+          {
+            "net": "P0.00",
+            "clearance_mm": -0.291,
+            "item": "via@39.75,41.1",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,44.00)-(42.75,44.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD_GPIO",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (70.44,41.55)-(54.44,61.05)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.03",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (41.75,74.40)-(41.75,37.25)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 24,
+      "net": "P0.24",
+      "pad_edge_mm": 69.013,
+      "exit_by": "via-row",
+      "exit_note": "F.Cu via-row gap 0.900 mm between P0.25 via (33.25, 23.10) r=0.30 and P0.23 via (34.75, 23.10) r=0.30. A 0.18 mm track centered at x=34.21 clears the P0.23 via by 0.15 mm. Left neighbor U1.41 is GND and has no local via. SWDCLK at x=34.20 is B.Cu only.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.40",
+          "layer": "F.Cu",
+          "xy": [
+            34.389,
+            27.14
+          ],
+          "center_xy": [
+            34.25,
+            26.75
+          ]
+        },
+        "other": {
+          "ref": "pad J13.9",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            83.663,
+            75.461
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          34.389,
+          27.14
+        ],
+        "to": [
+          83.663,
+          75.461
+        ],
+        "nearest": {
+          "net": "VDD1",
+          "clearance_mm": -0.29,
+          "item": "F.Cu (50.52,38.00)-(43.25,38.00)",
+          "layer": "F.Cu"
+        },
+        "foreign_nets_under_0_15": 9,
+        "top": [
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.52,38.00)-(43.25,38.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "GND",
+            "clearance_mm": -0.189,
+            "item": "via@36.0,29.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,44.00)-(42.75,44.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.22",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (79.24,71.50)-(81.30,71.50)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 25,
+      "net": "P0.28",
+      "pad_edge_mm": 69.603,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (35.25, 41.10) r=0.30 already south of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.86",
+          "layer": "F.Cu",
+          "xy": [
+            35.397,
+            37.628
+          ],
+          "center_xy": [
+            35.25,
+            37.25
+          ]
+        },
+        "other": {
+          "ref": "pad J13.13",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            93.73,
+            75.599
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          35.397,
+          37.628
+        ],
+        "to": [
+          93.73,
+          75.599
+        ],
+        "nearest": {
+          "net": "P0.02",
+          "clearance_mm": -0.38,
+          "item": "via@40.75,41.1",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 10,
+        "top": [
+          {
+            "net": "P0.02",
+            "clearance_mm": -0.38,
+            "item": "via@40.75,41.1",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,44.00)-(42.75,44.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD_GPIO",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (70.44,41.55)-(54.44,61.05)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "P0.03",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (41.75,74.40)-(41.75,37.25)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 26,
+      "net": "P0.25",
+      "pad_edge_mm": 71.584,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (33.25, 23.10) r=0.30 already north of the fab body.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.42",
+          "layer": "F.Cu",
+          "xy": [
+            33.389,
+            27.14
+          ],
+          "center_xy": [
+            33.25,
+            26.75
+          ]
+        },
+        "other": {
+          "ref": "pad J13.10",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            86.203,
+            75.461
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          33.389,
+          27.14
+        ],
+        "to": [
+          86.203,
+          75.461
+        ],
+        "nearest": {
+          "net": "GND",
+          "clearance_mm": -0.377,
+          "item": "via@42.0,35.0",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 9,
+        "top": [
+          {
+            "net": "GND",
+            "clearance_mm": -0.377,
+            "item": "via@42.0,35.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "COEX0",
+            "clearance_mm": -0.348,
+            "item": "via@37.0,30.5",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.52,38.00)-(43.25,38.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "ENABLE",
+            "clearance_mm": -0.18,
+            "item": "F.Cu (52.00,44.00)-(42.75,44.00)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 27,
+      "net": "MAGPIO0",
+      "pad_edge_mm": 77.438,
+      "exit_by": "via-row",
+      "exit_note": "F.Cu gap 1.320 mm between MAGPIO1 track y=28.00 w=0.18 (edge y=28.09) and MIPI_VIO track y=29.50 w=0.18 (edge y=29.41). Outward is west, into the strip 24.2 < x < 28, which is outside the RF keepout. Not trapped-by-keepout.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.55",
+          "layer": "F.Cu",
+          "xy": [
+            28.397,
+            28.628
+          ],
+          "center_xy": [
+            28.0,
+            28.5
+          ]
+        },
+        "other": {
+          "ref": "pad J14.1",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            103.5,
+            47.5
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          28.397,
+          28.628
+        ],
+        "to": [
+          103.5,
+          47.5
+        ],
+        "nearest": {
+          "net": "GND",
+          "clearance_mm": -0.36,
+          "item": "via@30.0,29.0",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 15,
+        "top": [
+          {
+            "net": "GND",
+            "clearance_mm": -0.36,
+            "item": "via@30.0,29.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.68,35.00)-(50.68,31.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD2",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (59.70,36.00)-(59.70,37.13)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "SIM_VCC",
+            "clearance_mm": -0.215,
+            "item": "F.Cu (93.46,45.54)-(93.46,33.54)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 28,
+      "net": "MAGPIO1",
+      "pad_edge_mm": 78.007,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (25.60, 23.10) r=0.30. Via copper stays at x\u226525.30, outside the keepout x\u226424.2.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.54",
+          "layer": "F.Cu",
+          "xy": [
+            28.397,
+            28.128
+          ],
+          "center_xy": [
+            28.0,
+            28.0
+          ]
+        },
+        "other": {
+          "ref": "pad J14.2",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            103.538,
+            49.079
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          28.397,
+          28.128
+        ],
+        "to": [
+          103.538,
+          49.079
+        ],
+        "nearest": {
+          "net": "COEX0",
+          "clearance_mm": -0.365,
+          "item": "via@37.0,30.5",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 14,
+        "top": [
+          {
+            "net": "COEX0",
+            "clearance_mm": -0.365,
+            "item": "via@37.0,30.5",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "GND",
+            "clearance_mm": -0.313,
+            "item": "via@42.0,32.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.68,35.00)-(50.68,31.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD2",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (59.70,36.00)-(59.70,37.13)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 29,
+      "net": "MIPI_VIO",
+      "pad_edge_mm": 78.293,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (24.65, 24.40) r=0.30. Via copper west edge is x=24.35, still outside the keepout x\u226424.2.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.57",
+          "layer": "F.Cu",
+          "xy": [
+            28.397,
+            29.628
+          ],
+          "center_xy": [
+            28.0,
+            29.5
+          ]
+        },
+        "other": {
+          "ref": "pad J14.4",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            103.538,
+            51.619
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          28.397,
+          29.628
+        ],
+        "to": [
+          103.538,
+          51.619
+        ],
+        "nearest": {
+          "net": "VDD1",
+          "clearance_mm": -0.29,
+          "item": "F.Cu (50.52,37.95)-(50.52,35.00)",
+          "layer": "F.Cu"
+        },
+        "foreign_nets_under_0_15": 18,
+        "top": [
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.52,37.95)-(50.52,35.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD2",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (53.68,38.00)-(53.68,36.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "SIM_IO_C",
+            "clearance_mm": -0.25,
+            "item": "via@98.54,50.01",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "GND",
+            "clearance_mm": -0.249,
+            "item": "via@36.0,32.0",
+            "layer": "F.Cu+B.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 30,
+      "net": "MAGPIO2",
+      "pad_edge_mm": 78.501,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (26.75, 23.10) r=0.30, outside the keepout.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.53",
+          "layer": "F.Cu",
+          "xy": [
+            28.397,
+            27.628
+          ],
+          "center_xy": [
+            28.0,
+            27.5
+          ]
+        },
+        "other": {
+          "ref": "pad J14.3",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            103.538,
+            50.349
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          28.397,
+          27.628
+        ],
+        "to": [
+          103.538,
+          50.349
+        ],
+        "nearest": {
+          "net": "VDD2",
+          "clearance_mm": -0.459,
+          "item": "via@59.7,37.126",
+          "layer": "F.Cu+B.Cu"
+        },
+        "foreign_nets_under_0_15": 15,
+        "top": [
+          {
+            "net": "VDD2",
+            "clearance_mm": -0.459,
+            "item": "via@59.7,37.126",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "GND",
+            "clearance_mm": -0.371,
+            "item": "via@33.0,29.0",
+            "layer": "F.Cu+B.Cu"
+          },
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.68,35.00)-(50.68,31.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "SIM_VCC",
+            "clearance_mm": -0.215,
+            "item": "F.Cu (80.65,33.54)-(80.65,46.00)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    },
+    {
+      "rank": 31,
+      "net": "MIPI_SCLK",
+      "pad_edge_mm": 78.512,
+      "exit_by": "stub",
+      "exit_note": "F.Cu to via (26.874, 30.65) r=0.30, outside the keepout.",
+      "endpoints": {
+        "u1": {
+          "ref": "U1.58",
+          "layer": "F.Cu",
+          "xy": [
+            28.397,
+            30.128
+          ],
+          "center_xy": [
+            28.0,
+            30.0
+          ]
+        },
+        "other": {
+          "ref": "pad J14.5",
+          "layer": "F.Cu+B.Cu",
+          "xy": [
+            103.538,
+            52.889
+          ]
+        }
+      },
+      "straight_0_18_FCu": {
+        "from": [
+          28.397,
+          30.128
+        ],
+        "to": [
+          103.538,
+          52.889
+        ],
+        "nearest": {
+          "net": "VDD1",
+          "clearance_mm": -0.29,
+          "item": "F.Cu (50.52,37.95)-(50.52,35.00)",
+          "layer": "F.Cu"
+        },
+        "foreign_nets_under_0_15": 16,
+        "top": [
+          {
+            "net": "VDD1",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (50.52,37.95)-(50.52,35.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "VDD2",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (53.68,38.00)-(53.68,36.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "SIM_1V8",
+            "clearance_mm": -0.29,
+            "item": "F.Cu (75.52,44.00)-(75.52,46.00)",
+            "layer": "F.Cu"
+          },
+          {
+            "net": "SIM_VCC",
+            "clearance_mm": -0.248,
+            "item": "F.Cu (80.65,48.00)-(80.65,46.00)",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    }
+  ],
+  "trapped_list": [
+    {
+      "net": "P0.14",
+      "u1_pad": "U1.24",
+      "center_xy": [
+        42.25,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "sideways_gap_mm": 0.2,
+      "via_row_gap_mm": 0.4,
+      "reason": "Sideways 0.200 mm to U1.25 (P0.15) and to U1.23 (P0.13). North via-row 0.400 mm between P0.15 via (41.75, 23.10) r=0.30 and P0.13 via (42.75, 23.10 and 23.95) r=0.30. Need 0.48 mm. No stub. Same pinch measured in pass30au; the reverted via (42.25, 25.50) was not placed again.",
+      "other": {
+        "item": "pad J18.2",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          40.623,
+          61.154
+        ]
+      },
+      "pad_edge_mm_not_ranked": 34.038
+    },
+    {
+      "net": "P0.18",
+      "u1_pad": "U1.29",
+      "center_xy": [
+        39.75,
+        26.75
+      ],
+      "layer": "F.Cu",
+      "edge": "N",
+      "sideways_gap_mm": 0.2,
+      "via_row_gap_mm": 0.4,
+      "reason": "Sideways 0.200 mm to U1.30 (P0.19) and to U1.28 (P0.17). Via-row 0.400 mm between P0.19 via (39.25, 23.10) r=0.30 and P0.17 via (40.25, 23.10) r=0.30. No stub.",
+      "other": {
+        "item": "pad J18.6",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          50.453,
+          61.187
+        ]
+      },
+      "pad_edge_mm_not_ranked": 35.644
+    },
+    {
+      "net": "P0.01",
+      "u1_pad": "U1.96",
+      "center_xy": [
+        40.25,
+        37.25
+      ],
+      "layer": "F.Cu",
+      "edge": "S",
+      "sideways_gap_mm": 0.2,
+      "via_row_gap_mm": 0.4,
+      "reason": "Sideways 0.200 mm to U1.95 (P0.00) and to U1.97 (P0.02). South via-row 0.400 mm between P0.00 via (39.75, 41.10) r=0.30 and P0.02 via (40.75, 41.10) r=0.30. No stub.",
+      "other": {
+        "item": "B.Cu (27.20,78.50)-(62.00,78.50)",
+        "layer": "B.Cu",
+        "xy": [
+          40.364,
+          78.41
+        ]
+      },
+      "pad_edge_mm_not_ranked": 40.76
+    },
+    {
+      "net": "COEX1",
+      "u1_pad": "U1.92",
+      "center_xy": [
+        38.25,
+        37.25
+      ],
+      "layer": "F.Cu",
+      "edge": "S",
+      "sideways_gap_mm": 0.2,
+      "via_row_gap_mm": 0.4,
+      "reason": "Sideways 0.200 mm to U1.91 (COEX2) and to U1.93 (COEX0). South via-row 0.400 mm between COEX2 via (37.75, 41.10) r=0.30 and COEX0 via (38.75, 41.10) r=0.30. No stub.",
+      "other": {
+        "item": "pad J15.2",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          103.538,
+          63.079
+        ]
+      },
+      "pad_edge_mm_not_ranked": 69.936
+    },
+    {
+      "net": "P0.29",
+      "u1_pad": "U1.87",
+      "center_xy": [
+        35.75,
+        37.25
+      ],
+      "layer": "F.Cu",
+      "edge": "S",
+      "sideways_gap_mm": 0.2,
+      "via_row_gap_mm": 0.4,
+      "reason": "Sideways 0.200 mm to U1.86 (P0.28) and to U1.88 (P0.30). South via-row 0.400 mm between vias (35.25, 41.10) and (36.25, 41.10), both r=0.30. No stub.",
+      "other": {
+        "item": "pad J13.14",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          96.27,
+          75.599
+        ]
+      },
+      "pad_edge_mm_not_ranked": 71.321
+    },
+    {
+      "net": "MIPI_SDATA",
+      "u1_pad": "U1.59",
+      "center_xy": [
+        28.0,
+        30.5
+      ],
+      "layer": "F.Cu",
+      "edge": "W",
+      "sideways_gap_mm": 0.2,
+      "via_row_gap_mm": 0.0,
+      "reason": "Sideways 0.200 mm to U1.58 (MIPI_SCLK) and to U1.60 (GND). MIPI_SCLK via (26.874, 30.650) r=0.30 covers y 30.35\u201330.95 and straddles the pad axis y=30.50, so the via-row gap on the axis is 0. The pad's track-center window (\u00b10.06 mm) cannot clear that via by 0.15 mm. The via is at x=26.87, outside the RF keepout, so this is a via block, not trapped-by-keepout. No stub.",
+      "other": {
+        "item": "pad J14.6",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          103.538,
+          54.159
+        ]
+      },
+      "pad_edge_mm_not_ranked": 78.739
+    }
+  ]
+}

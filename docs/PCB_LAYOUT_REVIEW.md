@@ -12,6 +12,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 ## 1. Current connectivity status
 
+**2026-09-30 12:27 IST — pass30aw no-copper census.** U1-open pads 37, can exit 31, trapped 6 (U1.24 included). Board file not modified. See `reports/PASS30AW_SHORTLIST.md`.
+
 | Metric | Count | Source |
 | --- | --- | --- |
 | **unconnected_items** | **60** | live `GetUnconnectedCount` 60 and `reports/DRC_PASS30AS_AFTER.json`. pass30at NO-ROUTE (P0.30 leftover 64.776 mm > 25 mm, no copper). Prior pass30as KEEP: P0.30 opens 2→1. GND islands 12 (waived). foreign 0.29 mm, POWER 0.7 mm. Prior pass30ar NO-ROUTE
@@ -42,6 +44,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `DRC_PASS30K_AFTER.json` | 75 | Prior — VIN_F closed; Stage A+pass30i/30j kept |
 | `DRC_PASS30J_AFTER.json` | 76 | Prior — P0.08→J12.9 stitch |
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
+
+**Pass delta (pass30aw):** no-copper census of U1 pads on non-GND opens. 37 such pads: **31 can exit** the fab body (x 28.0–44.0, y 26.75–37.25), **6 trapped**, **0 trapped-by-keepout**. Shortest exitable is `P0.16` 34.259 mm (U1.26 stub via 40.70, 20.80). Trapped: U1.24 P0.14 via-row 0.400 mm / sideways 0.200 mm; U1.29 P0.18, U1.96 P0.01, U1.87 P0.29, U1.92 COEX1 the same 0.400/0.200 pinch; U1.59 MIPI_SDATA via-row 0 (MIPI_SCLK via straddles the axis). U1.88 P0.30 classified exit by its existing via (36.25, 41.10); U1.89 P0.31 classified exit by a 0.900 mm via-row (P0.30 via to COEX2 via). Neither was routed. Board sha256 unchanged `3f209b08…ff005`. Unconnected stays 60. No Gerbers. Details: `reports/PASS30AW_SUMMARY.md`, `reports/PASS30AW_SHORTLIST.md`.
 
 **Pass delta (pass30at):** P0.30 leftover U1.88↔locked pass30as track, **NO-ROUTE**. Copper-edge gap 64.776 mm on F.Cu, via@(36.25, 41.10) ring edge (36.549, 41.124) to the west edge of F.Cu (101.20, 46.40)–(112.40, 46.40) at (101.110, 46.393). U1.88 pad-edge to that track is 65.303 mm. Over the 25 mm cap, so no jog. Straight 0.18 mm chord hits 16 foreign nets (nearest SIM_1V8 -0.290 mm; also VDD2, VDD_GPIO, locked COEX0 and SIM_CLK_C). Unconnected stays 60. Locked pass30as run not ripped. P0.31 leftover not retried. P0.14 not started. No Gerbers. Details: `reports/PASS30AT_SUMMARY.md`, `reports/PASS30AT_SHORTLIST.md`.
 

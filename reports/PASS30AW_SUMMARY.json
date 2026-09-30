@@ -1,0 +1,91 @@
+{
+  "pass": "pass30aw",
+  "timestamp": "2026-09-30 12:27 IST",
+  "kicad": "9.0.2",
+  "decision": "NO-COPPER",
+  "u1_open_pads": 37,
+  "can_exit": 31,
+  "trapped": 6,
+  "trapped_by_keepout": 0,
+  "shortest_exitable": {
+    "net": "P0.16",
+    "pad": "U1.26",
+    "pad_edge_mm": 34.259,
+    "endpoints": {
+      "u1": {
+        "ref": "U1.26",
+        "layer": "F.Cu",
+        "xy": [
+          41.364,
+          27.15
+        ],
+        "center_xy": [
+          41.25,
+          26.75
+        ]
+      },
+      "other": {
+        "ref": "pad J18.4",
+        "layer": "F.Cu+B.Cu",
+        "xy": [
+          45.537,
+          61.154
+        ]
+      }
+    }
+  },
+  "exit_nets_ranked": [
+    "P0.16",
+    "P0.17",
+    "P0.19",
+    "P0.20",
+    "SIM_CLK",
+    "SIM_RST",
+    "P0.00",
+    "P0.07",
+    "P0.05",
+    "SIM_1V8",
+    "P0.09",
+    "P0.11",
+    "P0.12",
+    "P0.10",
+    "SIM_IO",
+    "P0.03",
+    "P0.22",
+    "P0.21",
+    "P0.30",
+    "P0.26",
+    "P0.31",
+    "P0.23",
+    "P0.27",
+    "P0.24",
+    "P0.28",
+    "P0.25",
+    "MAGPIO0",
+    "MAGPIO1",
+    "MIPI_VIO",
+    "MAGPIO2",
+    "MIPI_SCLK"
+  ],
+  "trapped_pads": [
+    "U1.24 P0.14",
+    "U1.29 P0.18",
+    "U1.96 P0.01",
+    "U1.92 COEX1",
+    "U1.87 P0.29",
+    "U1.59 MIPI_SDATA"
+  ],
+  "board_file": "nRF9161-DEV-BOARD.kicad_pcb",
+  "notes": [
+    "Measure only. Board file not saved by this pass.",
+    "U1.88 P0.30 classified exit by existing via (36.25, 41.10), not retried as a route.",
+    "U1.89 P0.31 classified exit by 0.900 mm via-row, not retried as a route.",
+    "U1.24 P0.14 trapped, via-row 0.400 mm, sideways 0.200 mm."
+  ],
+  "board_unchanged": true,
+  "board_sha256": "3f209b087c54966030c17b3ca9f91dc0758a511bfacc0aacd44ef7a1850ff005",
+  "board_sha256_before": "3f209b087c54966030c17b3ca9f91dc0758a511bfacc0aacd44ef7a1850ff005",
+  "board_mtime_utc": "2026-09-30 05:53:28Z",
+  "board_mtime_ist": "2026-09-30 11:23 IST",
+  "board_size": 2357924
+}
