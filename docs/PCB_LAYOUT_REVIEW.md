@@ -43,6 +43,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `DRC_PASS30J_AFTER.json` | 76 | Prior — P0.08→J12.9 stitch |
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
 
+**Pass delta (pass30ai):** VDD_GPIO one jog, **REVERT**. Live via island VDD_GPIO F.Cu @(40.170, 19.126) dia 0.8/0.4 → U1.12 (44.000, 31.500). Three 0.18 mm F.Cu segments: (40.170,19.126)→(45.500,20.150)→(45.500,26.050)→(44.000,31.500). Segments 1–2 clear P0.16 and the P0.15 keep. Landing segment tracks_crossing=8 (P0.08, P0.10, P0.11, P0.12, DEC0×4). short/clearance/hole 0. Unconnected 64→64 (VDD_GPIO 3→2 offset by GND zone islands 10→11). No via. Full restore to pre-edit. No Gerbers. Details: `reports/PASS30AI_SUMMARY.md`.
+
 **Pass delta (pass30ah):** **NO ROUTE.** Shortest real (non-GND, non-protected-keep) island gap is `VDD_GPIO` **12.305 mm** F.Cu via@(40.17,19.13) ↔ pad U1.12 — over the 12 mm gate, and the straight line shorts the P0.15 keep plus P0.16. Zero gaps ≤ 12 mm, so no track and no via. Unconnected 64→64. short/clr/cross 0/0/0 (baseline). GND zone islands ignored. SIM walls, Class C, Stage-A VDD2, P0.22/P0.19/P0.04/P0.06/P0.01 and the y=44.60 pocket untouched. No Gerbers. Details: `reports/PASS30AH_SUMMARY.md`, shortlist `reports/PASS30AH_SHORTLIST.md`.
 
 **Pass delta (pass30ag):** Corridor probe `SIM_RST` **REVERT**. SIM_RST_C already continuous. In-corridor B track did not join any open island (pocket sealed by SIM_IO_C @x78.60 and SIM_CLK_C @x78.95 / x97.85). Unconnected 64→64. short/clr/cross 0/0/0. Corridor still free. No Gerbers. Details: `reports/PASS30AG_SUMMARY.md`.
