@@ -1,0 +1,548 @@
+{
+  "pass": "30ap",
+  "timestamp": "2026-09-30 10:47 IST",
+  "decision": "KEEP",
+  "net": "VDD_GPIO",
+  "via_added": false,
+  "start_via_existing": [
+    76.4375,
+    39.05
+  ],
+  "segments": [
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        76.4375,
+        39.05
+      ],
+      "end": [
+        76.4375,
+        41.55
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        76.4375,
+        41.55
+      ],
+      "end": [
+        74.438,
+        43.05
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        74.438,
+        43.05
+      ],
+      "end": [
+        72.438,
+        43.05
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        72.438,
+        43.05
+      ],
+      "end": [
+        71.938,
+        42.05
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        71.938,
+        42.05
+      ],
+      "end": [
+        70.438,
+        41.55
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        70.438,
+        41.55
+      ],
+      "end": [
+        54.438,
+        61.05
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        54.438,
+        61.05
+      ],
+      "end": [
+        54.438,
+        63.55
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        54.438,
+        63.55
+      ],
+      "end": [
+        58.2,
+        62.7
+      ]
+    }
+  ],
+  "segment_count": 8,
+  "attempted_segments": [
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        76.4375,
+        39.05
+      ],
+      "end": [
+        76.4375,
+        41.55
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        76.4375,
+        41.55
+      ],
+      "end": [
+        74.438,
+        43.05
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        74.438,
+        43.05
+      ],
+      "end": [
+        72.438,
+        43.05
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        72.438,
+        43.05
+      ],
+      "end": [
+        71.938,
+        42.05
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        71.938,
+        42.05
+      ],
+      "end": [
+        70.438,
+        41.55
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        70.438,
+        41.55
+      ],
+      "end": [
+        54.438,
+        61.05
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        54.438,
+        61.05
+      ],
+      "end": [
+        54.438,
+        63.55
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        54.438,
+        63.55
+      ],
+      "end": [
+        58.2,
+        62.7
+      ]
+    }
+  ],
+  "min_power_clearance_mm": 2.2373,
+  "min_foreign_clearance_mm": 0.2073,
+  "measure": {
+    "segments": [
+      {
+        "start": [
+          76.4375,
+          39.05
+        ],
+        "end": [
+          76.4375,
+          41.55
+        ],
+        "min_clearance_mm": 0.5475,
+        "min_item": {
+          "net": "",
+          "item": "pad U2.4 []"
+        },
+        "min_power_mm": 2.8225,
+        "min_power_item": {
+          "net": "VDD_nRF",
+          "item": "pad U2.1 [VDD_nRF]"
+        }
+      },
+      {
+        "start": [
+          76.4375,
+          41.55
+        ],
+        "end": [
+          74.438,
+          43.05
+        ],
+        "min_clearance_mm": 0.2728,
+        "min_item": {
+          "net": "ENABLE",
+          "item": "via ENABLE @(74.200,42.400)"
+        },
+        "min_power_mm": 3.4776,
+        "min_power_item": {
+          "net": "VDD_nRF",
+          "item": "pad U2.1 [VDD_nRF]"
+        }
+      },
+      {
+        "start": [
+          74.438,
+          43.05
+        ],
+        "end": [
+          72.438,
+          43.05
+        ],
+        "min_clearance_mm": 0.26,
+        "min_item": {
+          "net": "ENABLE",
+          "item": "via ENABLE @(74.200,42.400)"
+        },
+        "min_power_mm": 3.6047,
+        "min_power_item": {
+          "net": "VDD_nRF",
+          "item": "via VDD_nRF @(71.562,39.050)"
+        }
+      },
+      {
+        "start": [
+          72.438,
+          43.05
+        ],
+        "end": [
+          71.938,
+          42.05
+        ],
+        "min_clearance_mm": 0.2073,
+        "min_item": {
+          "net": "SIM_CLK",
+          "item": "F.Cu SIM_CLK (71.680,42.400)-(70.900,42.400)"
+        },
+        "min_power_mm": 2.5334,
+        "min_power_item": {
+          "net": "VDD_nRF",
+          "item": "via VDD_nRF @(71.562,39.050)"
+        }
+      },
+      {
+        "start": [
+          71.938,
+          42.05
+        ],
+        "end": [
+          70.438,
+          41.55
+        ],
+        "min_clearance_mm": 0.2336,
+        "min_item": {
+          "net": "SIM_CLK",
+          "item": "F.Cu SIM_CLK (71.680,42.400)-(70.900,42.400)"
+        },
+        "min_power_mm": 2.2373,
+        "min_power_item": {
+          "net": "VDD_nRF",
+          "item": "via VDD_nRF @(71.562,39.050)"
+        }
+      },
+      {
+        "start": [
+          70.438,
+          41.55
+        ],
+        "end": [
+          54.438,
+          61.05
+        ],
+        "min_clearance_mm": 0.42,
+        "min_item": {
+          "net": "ENABLE",
+          "item": "F.Cu ENABLE (52.000,40.950)-(72.862,40.950)"
+        },
+        "min_power_mm": 2.2513,
+        "min_power_item": {
+          "net": "VDD_nRF",
+          "item": "via VDD_nRF @(71.562,39.050)"
+        }
+      },
+      {
+        "start": [
+          54.438,
+          61.05
+        ],
+        "end": [
+          54.438,
+          63.55
+        ],
+        "min_clearance_mm": 0.258,
+        "min_item": {
+          "net": "P0.19",
+          "item": "pad J18.7 [P0.19]"
+        },
+        "min_power_mm": 17.0771,
+        "min_power_item": {
+          "net": "VDD2",
+          "item": "via VDD2 @(61.800,45.100)"
+        }
+      },
+      {
+        "start": [
+          54.438,
+          63.55
+        ],
+        "end": [
+          58.2,
+          62.7
+        ],
+        "min_clearance_mm": 0.2761,
+        "min_item": {
+          "net": "P0.20",
+          "item": "pad J18.8 [P0.20]"
+        },
+        "min_power_mm": 17.4744,
+        "min_power_item": {
+          "net": "VDD2",
+          "item": "via VDD2 @(61.800,45.100)"
+        }
+      }
+    ],
+    "min_clearance_mm": 0.2073,
+    "min_clearance_item": {
+      "net": "SIM_CLK",
+      "item": "F.Cu SIM_CLK (71.680,42.400)-(70.900,42.400)"
+    },
+    "min_power_vin_mm": 2.2373,
+    "min_power_vin_item": {
+      "net": "VDD_nRF",
+      "item": "via VDD_nRF @(71.562,39.050)"
+    },
+    "meets_power_0_20": true,
+    "meets_drc_0_15": true
+  },
+  "jog_around": [
+    "ENABLE",
+    "SIM_CLK",
+    "P0.20"
+  ],
+  "blockers_remeasured": {
+    "tracks_found": {
+      "ENABLE": [
+        {
+          "start": [
+            72.86,
+            40.95
+          ],
+          "end": [
+            72.86,
+            42.4
+          ],
+          "width_mm": 0.18
+        },
+        {
+          "start": [
+            72.86,
+            42.4
+          ],
+          "end": [
+            74.2,
+            42.4
+          ],
+          "width_mm": 0.18
+        }
+      ],
+      "SIM_CLK": [
+        {
+          "start": [
+            71.68,
+            44.0
+          ],
+          "end": [
+            70.9,
+            44.0
+          ],
+          "width_mm": 0.18
+        },
+        {
+          "start": [
+            71.68,
+            44.0
+          ],
+          "end": [
+            71.68,
+            42.4
+          ],
+          "width_mm": 0.18
+        }
+      ],
+      "P0.20": [
+        {
+          "start": [
+            55.78,
+            60.9
+          ],
+          "end": [
+            74.16,
+            60.9
+          ],
+          "width_mm": 0.18
+        }
+      ]
+    },
+    "pad_U2_3": {
+      "net": "ENABLE",
+      "xy": [
+        72.862,
+        40.95
+      ]
+    }
+  },
+  "pad_gap": {
+    "u2_5": [
+      75.138,
+      39.05
+    ],
+    "j18_9": [
+      58.32,
+      62.0
+    ],
+    "pad_edge_gap_mm": 27.03,
+    "end_on_j18_9": true
+  },
+  "before": {
+    "unconnected_items": 63,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "vdd_gpio_unconnected": 1
+  },
+  "mid": {
+    "unconnected_items": 62,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "vdd_gpio_unconnected": 0
+  },
+  "after": {
+    "unconnected_items": 62,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "vdd_gpio_unconnected": 0
+  },
+  "vdd_gpio_opens": {
+    "before": 1,
+    "after": 0
+  },
+  "unconnected": {
+    "before": 63,
+    "after": 62
+  },
+  "gnd_islands": {
+    "before": 12,
+    "after": 12,
+    "waived": true
+  },
+  "nongnd_gained": {},
+  "hole_to_hole": {
+    "before": 1,
+    "after": 1
+  },
+  "gate_met": true,
+  "reason": "KEEP. VDD_GPIO opens 1\u21920. No other non-GND net gained an open. short/clearance/crossing/hole_clearance 0. hole_to_hole 1\u21921. POWER clearance 2.2373 mm. GND islands 12\u219212 (waived).",
+  "protect": {
+    "before": {
+      "y7050": true,
+      "u1_12_poly": true,
+      "dec0_bridge": true,
+      "coex0_via": true,
+      "coex0_runs": true,
+      "p010": true,
+      "p012": true,
+      "p015": 42
+    },
+    "after_add": {
+      "y7050": true,
+      "u1_12_poly": true,
+      "dec0_bridge": true,
+      "coex0_via": true,
+      "coex0_runs": true,
+      "p010": true,
+      "p012": true,
+      "p015": 42
+    },
+    "moved": []
+  }
+}
