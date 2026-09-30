@@ -1,0 +1,713 @@
+{
+  "pass": "30bb",
+  "timestamp": "2026-09-30 13:32 IST",
+  "decision": "KEEP",
+  "net": "P0.19",
+  "git_head": "816310c76593afe19c905ba35450d05129ac5a6f",
+  "pcb_blob_at_start": "e1adfbd7a38989b42abaef3557368955484cd560",
+  "pcb_blob_at_end": "9f2d8c0370c9ac60c5283fc3cbb2bc8b015d447a",
+  "same_island_u1_30_j18_7": false,
+  "pad_edge_mm": 36.658,
+  "pad_edge_exact_mm": 36.658325,
+  "u1_30": [
+    39.25,
+    26.75
+  ],
+  "j18_7": [
+    53.24,
+    62.0
+  ],
+  "j18_7_pad": {
+    "center": [
+      53.24,
+      62.0
+    ],
+    "size_mm": [
+      1.7,
+      1.7
+    ],
+    "shape": 0,
+    "shape_name": "circle",
+    "drill_mm": 1.0,
+    "layers_include_in1": true
+  },
+  "whole_segment_skirt_test": {
+    "method": "segment-vs-segment intersection plus 0.05 mm samples along each new segment, both skirts, layers not exempt",
+    "crossed": false,
+    "crossing_count": 0,
+    "crossings": [],
+    "sample_touches": [],
+    "min_center_distance_mm": 0.35,
+    "min_center_item": {
+      "net": "P0.16",
+      "segment": [
+        [
+          45.55,
+          27.4
+        ],
+        [
+          44.6,
+          27.4
+        ]
+      ]
+    },
+    "segments": [
+      {
+        "start": [
+          39.25,
+          23.1
+        ],
+        "end": [
+          39.25,
+          26.5
+        ],
+        "samples": 68,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.17",
+          "segment": [
+            [
+              40.25,
+              23.1
+            ],
+            [
+              40.25,
+              21.5
+            ]
+          ],
+          "center_distance_mm": 1.0,
+          "edge_clearance_mm": 0.82
+        }
+      },
+      {
+        "start": [
+          39.25,
+          26.5
+        ],
+        "end": [
+          44.25,
+          26.5
+        ],
+        "samples": 101,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.16",
+          "segment": [
+            [
+              45.55,
+              27.4
+            ],
+            [
+              44.6,
+              27.4
+            ]
+          ],
+          "center_distance_mm": 0.9657,
+          "edge_clearance_mm": 0.7857
+        }
+      },
+      {
+        "start": [
+          44.25,
+          26.5
+        ],
+        "end": [
+          44.25,
+          39.1
+        ],
+        "samples": 253,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.16",
+          "segment": [
+            [
+              45.55,
+              27.4
+            ],
+            [
+              44.6,
+              27.4
+            ]
+          ],
+          "center_distance_mm": 0.35,
+          "edge_clearance_mm": 0.17
+        }
+      },
+      {
+        "start": [
+          44.25,
+          39.1
+        ],
+        "end": [
+          42.8,
+          39.9
+        ],
+        "samples": 34,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.16",
+          "segment": [
+            [
+              44.6,
+              27.4
+            ],
+            [
+              44.6,
+              60.4
+            ]
+          ],
+          "center_distance_mm": 0.35,
+          "edge_clearance_mm": 0.17
+        }
+      },
+      {
+        "start": [
+          42.8,
+          39.9
+        ],
+        "end": [
+          44.25,
+          40.7
+        ],
+        "samples": 34,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.16",
+          "segment": [
+            [
+              44.6,
+              27.4
+            ],
+            [
+              44.6,
+              60.4
+            ]
+          ],
+          "center_distance_mm": 0.35,
+          "edge_clearance_mm": 0.17
+        }
+      },
+      {
+        "start": [
+          44.25,
+          40.7
+        ],
+        "end": [
+          44.25,
+          63.2
+        ],
+        "samples": 451,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.16",
+          "segment": [
+            [
+              44.6,
+              27.4
+            ],
+            [
+              44.6,
+              60.4
+            ]
+          ],
+          "center_distance_mm": 0.35,
+          "edge_clearance_mm": 0.17
+        }
+      },
+      {
+        "start": [
+          44.25,
+          63.2
+        ],
+        "end": [
+          53.24,
+          63.2
+        ],
+        "samples": 180,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.17",
+          "segment": [
+            [
+              48.16,
+              60.4
+            ],
+            [
+              48.16,
+              61.3
+            ]
+          ],
+          "center_distance_mm": 1.9,
+          "edge_clearance_mm": 1.72
+        }
+      },
+      {
+        "start": [
+          53.24,
+          63.2
+        ],
+        "end": [
+          53.24,
+          62.0
+        ],
+        "samples": 25,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.17",
+          "segment": [
+            [
+              48.16,
+              60.4
+            ],
+            [
+              48.16,
+              61.3
+            ]
+          ],
+          "center_distance_mm": 5.128,
+          "edge_clearance_mm": 4.948
+        }
+      }
+    ],
+    "y61_63_note": "A horizontal at y=61.63 clears both skirt centerlines (>=0.33 mm) but its copper runs through J18.4/J18.5/J18.6 (1.7 mm circles at y=62.0). That Y is not the route. The one attempt is y=63.20."
+  },
+  "y_61_63_blocker": {
+    "segment": [
+      [
+        44.25,
+        61.63
+      ],
+      [
+        53.24,
+        61.63
+      ]
+    ],
+    "ok": false,
+    "foreign_mm": 0.0,
+    "foreign_item": {
+      "net": "P0.16",
+      "item": "pad J18.4"
+    },
+    "hole_mm": -0.22,
+    "hole_item": "hole J18.4 [P0.16]",
+    "why": "J18 pads are 1.700 mm circles on y=62.000. y=61.63 is inside J18.4 (P0.16), J18.5 (P0.17) and J18.6 (P0.18). Blocked. Not placed."
+  },
+  "new_via": false,
+  "segments": [
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        39.25,
+        23.1
+      ],
+      "end": [
+        39.25,
+        26.5
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        39.25,
+        26.5
+      ],
+      "end": [
+        44.25,
+        26.5
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        26.5
+      ],
+      "end": [
+        44.25,
+        39.1
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        39.1
+      ],
+      "end": [
+        42.8,
+        39.9
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        42.8,
+        39.9
+      ],
+      "end": [
+        44.25,
+        40.7
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        40.7
+      ],
+      "end": [
+        44.25,
+        63.2
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        63.2
+      ],
+      "end": [
+        53.24,
+        63.2
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        53.24,
+        63.2
+      ],
+      "end": [
+        53.24,
+        62.0
+      ]
+    }
+  ],
+  "segment_count": 8,
+  "attempted_segments": [
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        39.25,
+        23.1
+      ],
+      "end": [
+        39.25,
+        26.5
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        39.25,
+        26.5
+      ],
+      "end": [
+        44.25,
+        26.5
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        26.5
+      ],
+      "end": [
+        44.25,
+        39.1
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        39.1
+      ],
+      "end": [
+        42.8,
+        39.9
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        42.8,
+        39.9
+      ],
+      "end": [
+        44.25,
+        40.7
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        40.7
+      ],
+      "end": [
+        44.25,
+        63.2
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        63.2
+      ],
+      "end": [
+        53.24,
+        63.2
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        53.24,
+        63.2
+      ],
+      "end": [
+        53.24,
+        62.0
+      ]
+    }
+  ],
+  "min_foreign_clearance_mm": 0.17,
+  "min_foreign_item": {
+    "net": "P0.16",
+    "item": "trk (44.60,27.40)-(44.60,60.40)"
+  },
+  "min_power_clearance_mm": 0.2736,
+  "min_power_item": {
+    "net": "VDD2",
+    "item": "via@44.722,25.900"
+  },
+  "min_hole_clearance_mm": 0.3397,
+  "min_hole_item": "via P0.06 @44.000,39.900",
+  "segment_clearances": [
+    {
+      "start": [
+        39.25,
+        23.1
+      ],
+      "end": [
+        39.25,
+        26.5
+      ],
+      "ok": true,
+      "foreign_mm": 0.61,
+      "foreign_item": {
+        "net": "P0.17",
+        "item": "via@40.250,23.100"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.76,
+      "hole_item": "via P0.17 @40.250,23.100",
+      "why": null
+    },
+    {
+      "start": [
+        39.25,
+        26.5
+      ],
+      "end": [
+        44.25,
+        26.5
+      ],
+      "ok": true,
+      "foreign_mm": 0.2736,
+      "foreign_item": {
+        "net": "VDD2",
+        "item": "via@44.722,25.900"
+      },
+      "power_mm": 0.2736,
+      "power_item": {
+        "net": "VDD2",
+        "item": "via@44.722,25.900"
+      },
+      "hole_mm": 0.4736,
+      "hole_item": "via VDD2 @44.722,25.900",
+      "why": null
+    },
+    {
+      "start": [
+        44.25,
+        26.5
+      ],
+      "end": [
+        44.25,
+        39.1
+      ],
+      "ok": true,
+      "foreign_mm": 0.17,
+      "foreign_item": {
+        "net": "P0.16",
+        "item": "trk (44.60,27.40)-(44.60,60.40)"
+      },
+      "power_mm": 0.2736,
+      "power_item": {
+        "net": "VDD2",
+        "item": "via@44.722,25.900"
+      },
+      "hole_mm": 0.4736,
+      "hole_item": "via VDD2 @44.722,25.900",
+      "why": null
+    },
+    {
+      "start": [
+        44.25,
+        39.1
+      ],
+      "end": [
+        42.8,
+        39.9
+      ],
+      "ok": true,
+      "foreign_mm": 0.17,
+      "foreign_item": {
+        "net": "P0.16",
+        "item": "trk (44.60,27.40)-(44.60,60.40)"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.3397,
+      "hole_item": "via P0.06 @44.000,39.900",
+      "why": null
+    },
+    {
+      "start": [
+        42.8,
+        39.9
+      ],
+      "end": [
+        44.25,
+        40.7
+      ],
+      "ok": true,
+      "foreign_mm": 0.17,
+      "foreign_item": {
+        "net": "P0.16",
+        "item": "trk (44.60,27.40)-(44.60,60.40)"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.3397,
+      "hole_item": "via P0.06 @44.000,39.900",
+      "why": null
+    },
+    {
+      "start": [
+        44.25,
+        40.7
+      ],
+      "end": [
+        44.25,
+        63.2
+      ],
+      "ok": true,
+      "foreign_mm": 0.17,
+      "foreign_item": {
+        "net": "P0.16",
+        "item": "trk (44.60,60.40)-(45.62,60.40)"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.56,
+      "hole_item": "via ENABLE @43.400,45.126",
+      "why": null
+    },
+    {
+      "start": [
+        44.25,
+        63.2
+      ],
+      "end": [
+        53.24,
+        63.2
+      ],
+      "ok": true,
+      "foreign_mm": 0.26,
+      "foreign_item": {
+        "net": "P0.16",
+        "item": "pad J18.4"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.61,
+      "hole_item": "hole J18.4 [P0.16]",
+      "why": null
+    },
+    {
+      "start": [
+        53.24,
+        63.2
+      ],
+      "end": [
+        53.24,
+        62.0
+      ],
+      "ok": true,
+      "foreign_mm": 1.6,
+      "foreign_item": {
+        "net": "P0.18",
+        "item": "pad J18.6"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 1.95,
+      "hole_item": "hole J18.6 [P0.18]",
+      "why": null
+    }
+  ],
+  "p019_opens_before": 1,
+  "p019_opens_after": 0,
+  "unconnected_before": 58,
+  "unconnected_after": 57,
+  "short_clearance_crossing_hole_before": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "short_clearance_crossing_hole_after": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "hole_to_hole_before": 1,
+  "hole_to_hole_after": 1,
+  "gnd_islands_before": 12,
+  "gnd_islands_after": 12,
+  "other_nongnd_gained": {},
+  "reason": "KEEP. In1.Cu south of both end caps, 8 new segments, no new via. Whole-segment skirt test: 0 crossings (min center distance 0.35 mm). P0.19 opens 1\u21920. Unconnected 58\u219257. Foreign 0.17 mm vs {'net': 'P0.16', 'item': 'trk (44.60,27.40)-(44.60,60.40)'}. POWER 0.2736 mm vs {'net': 'VDD2', 'item': 'via@44.722,25.900'}. short/clearance/crossing/hole 0/0/0/0. hole_to_hole 1. GND islands 12\u219212 (waived). Other non-GND gained: none. Skirts not crossed or ripped. P0.17 not retried.",
+  "skirts_crossed": false,
+  "skirts_ripped": false,
+  "p017_not_retried": true,
+  "other_net": false,
+  "gerbers": false,
+  "commit": false,
+  "locked_copper_ripped": false,
+  "board_sha256": "142d8e06b77bff2f9c7e8051c71146e6a5bd3a39be5fe9ad99820af867777e06",
+  "backup": "/workspace/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/pass30bb/pre-edit.kicad_pcb",
+  "reverted_to_pre_edit_blob": false
+}
