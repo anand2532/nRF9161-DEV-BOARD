@@ -1,0 +1,687 @@
+{
+  "pass": "30as",
+  "timestamp": "2026-09-30 11:23 IST",
+  "decision": "KEEP",
+  "net": "P0.30",
+  "via_added": true,
+  "via": {
+    "xy": [
+      112.4,
+      46.4
+    ],
+    "od_mm": 0.6,
+    "drill_mm": 0.3,
+    "layers": "F.Cu-B.Cu"
+  },
+  "segments": [
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        99.56,
+        75.28
+      ],
+      "end": [
+        99.56,
+        74.7
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        99.56,
+        74.7
+      ],
+      "end": [
+        101.2,
+        74.7
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        101.2,
+        74.7
+      ],
+      "end": [
+        101.2,
+        46.4
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        101.2,
+        46.4
+      ],
+      "end": [
+        112.4,
+        46.4
+      ]
+    },
+    {
+      "layer": "B.Cu",
+      "width_mm": 0.18,
+      "start": [
+        112.4,
+        46.4
+      ],
+      "end": [
+        112.4,
+        45.0
+      ]
+    },
+    {
+      "layer": "B.Cu",
+      "width_mm": 0.18,
+      "start": [
+        112.4,
+        45.0
+      ],
+      "end": [
+        117.6,
+        45.0
+      ]
+    },
+    {
+      "layer": "B.Cu",
+      "width_mm": 0.18,
+      "start": [
+        117.6,
+        45.0
+      ],
+      "end": [
+        117.6,
+        46.0
+      ]
+    },
+    {
+      "layer": "B.Cu",
+      "width_mm": 0.18,
+      "start": [
+        117.6,
+        46.0
+      ],
+      "end": [
+        116.7,
+        46.0
+      ]
+    }
+  ],
+  "segment_count": 8,
+  "attempted_segments": [
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        99.56,
+        75.28
+      ],
+      "end": [
+        99.56,
+        74.7
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        99.56,
+        74.7
+      ],
+      "end": [
+        101.2,
+        74.7
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        101.2,
+        74.7
+      ],
+      "end": [
+        101.2,
+        46.4
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        101.2,
+        46.4
+      ],
+      "end": [
+        112.4,
+        46.4
+      ]
+    },
+    {
+      "layer": "B.Cu",
+      "width_mm": 0.18,
+      "start": [
+        112.4,
+        46.4
+      ],
+      "end": [
+        112.4,
+        45.0
+      ]
+    },
+    {
+      "layer": "B.Cu",
+      "width_mm": 0.18,
+      "start": [
+        112.4,
+        45.0
+      ],
+      "end": [
+        117.6,
+        45.0
+      ]
+    },
+    {
+      "layer": "B.Cu",
+      "width_mm": 0.18,
+      "start": [
+        117.6,
+        45.0
+      ],
+      "end": [
+        117.6,
+        46.0
+      ]
+    },
+    {
+      "layer": "B.Cu",
+      "width_mm": 0.18,
+      "start": [
+        117.6,
+        46.0
+      ],
+      "end": [
+        116.7,
+        46.0
+      ]
+    }
+  ],
+  "min_foreign_clearance_mm": 0.29,
+  "min_power_clearance_mm": 0.7,
+  "min_hole_clearance_mm": 0.56,
+  "min_hole_to_hole_new_via_mm": 3.538,
+  "measure": {
+    "segments": [
+      {
+        "layer": "F.Cu",
+        "start": [
+          99.56,
+          75.28
+        ],
+        "end": [
+          99.56,
+          74.7
+        ],
+        "min_clearance_mm": 1.7001,
+        "min_item": {
+          "net": "P0.29",
+          "item": "pad J13.14 [P0.29]"
+        },
+        "min_power_mm": 4.1908,
+        "min_power_item": {
+          "net": "VDD_nRF",
+          "item": "pad J13.17 [VDD_nRF]"
+        },
+        "min_hole_mm": 2.0501,
+        "min_hole_item": "hole J13.14 [P0.29]"
+      },
+      {
+        "layer": "F.Cu",
+        "start": [
+          99.56,
+          74.7
+        ],
+        "end": [
+          101.2,
+          74.7
+        ],
+        "min_clearance_mm": 0.6411,
+        "min_item": {
+          "net": "P0.31",
+          "item": "pad J13.16 [P0.31]"
+        },
+        "min_power_mm": 2.7374,
+        "min_power_item": {
+          "net": "VDD_nRF",
+          "item": "pad J13.17 [VDD_nRF]"
+        },
+        "min_hole_mm": 0.9911,
+        "min_hole_item": "hole J13.16 [P0.31]"
+      },
+      {
+        "layer": "F.Cu",
+        "start": [
+          101.2,
+          74.7
+        ],
+        "end": [
+          101.2,
+          46.4
+        ],
+        "min_clearance_mm": 0.29,
+        "min_item": {
+          "net": "GND",
+          "item": "pad J7.SH [GND]"
+        },
+        "min_power_mm": 2.21,
+        "min_power_item": {
+          "net": "VDD_GPIO",
+          "item": "pad J15.5 [VDD_GPIO]"
+        },
+        "min_hole_mm": 0.91,
+        "min_hole_item": "viahole GND @(100.000,70.000)"
+      },
+      {
+        "layer": "F.Cu",
+        "start": [
+          101.2,
+          46.4
+        ],
+        "end": [
+          112.4,
+          46.4
+        ],
+        "min_clearance_mm": 0.3056,
+        "min_item": {
+          "net": "GND",
+          "item": "pad J7.SH [GND]"
+        },
+        "min_power_mm": 4.465,
+        "min_power_item": {
+          "net": "VDD_GPIO",
+          "item": "F.Cu VDD_GPIO (105.100,67.080)-(105.100,51.080)"
+        },
+        "min_hole_mm": 0.56,
+        "min_hole_item": "viahole P0.06 @(107.400,47.200)"
+      },
+      {
+        "layer": "B.Cu",
+        "start": [
+          112.4,
+          46.4
+        ],
+        "end": [
+          112.4,
+          45.0
+        ],
+        "min_clearance_mm": 0.91,
+        "min_item": {
+          "net": "VDD_GPIO",
+          "item": "B.Cu VDD_GPIO (111.200,51.080)-(111.200,38.800)"
+        },
+        "min_power_mm": 0.91,
+        "min_power_item": {
+          "net": "VDD_GPIO",
+          "item": "B.Cu VDD_GPIO (111.200,51.080)-(111.200,38.800)"
+        },
+        "min_hole_mm": null,
+        "min_hole_item": null
+      },
+      {
+        "layer": "B.Cu",
+        "start": [
+          112.4,
+          45.0
+        ],
+        "end": [
+          117.6,
+          45.0
+        ],
+        "min_clearance_mm": 0.91,
+        "min_item": {
+          "net": "VDD_GPIO",
+          "item": "B.Cu VDD_GPIO (111.200,51.080)-(111.200,38.800)"
+        },
+        "min_power_mm": 0.91,
+        "min_power_item": {
+          "net": "VDD_GPIO",
+          "item": "B.Cu VDD_GPIO (111.200,51.080)-(111.200,38.800)"
+        },
+        "min_hole_mm": null,
+        "min_hole_item": null
+      },
+      {
+        "layer": "B.Cu",
+        "start": [
+          117.6,
+          45.0
+        ],
+        "end": [
+          117.6,
+          46.0
+        ],
+        "min_clearance_mm": 2.0619,
+        "min_item": {
+          "net": "P0.31",
+          "item": "pad J11.2 [P0.31]"
+        },
+        "min_power_mm": 4.386,
+        "min_power_item": {
+          "net": "VDD_GPIO",
+          "item": "pad J11.3 [VDD_GPIO]"
+        },
+        "min_hole_mm": 2.4119,
+        "min_hole_item": "hole J11.2 [P0.31]"
+      },
+      {
+        "layer": "B.Cu",
+        "start": [
+          117.6,
+          46.0
+        ],
+        "end": [
+          116.7,
+          46.0
+        ],
+        "min_clearance_mm": 1.6947,
+        "min_item": {
+          "net": "P0.31",
+          "item": "pad J11.2 [P0.31]"
+        },
+        "min_power_mm": 4.188,
+        "min_power_item": {
+          "net": "VDD_GPIO",
+          "item": "pad J11.3 [VDD_GPIO]"
+        },
+        "min_hole_mm": 2.0447,
+        "min_hole_item": "hole J11.2 [P0.31]"
+      },
+      {
+        "layer": "F.Cu",
+        "via": [
+          112.4,
+          46.4
+        ],
+        "od_mm": 0.6,
+        "drill_mm": 0.3,
+        "min_clearance_mm": 0.41,
+        "min_item": {
+          "net": "P0.06",
+          "item": "F.Cu P0.06 (113.200,47.200)-(113.200,36.000)"
+        },
+        "min_power_mm": 4.255,
+        "min_power_item": {
+          "net": "VDD_GPIO",
+          "item": "F.Cu VDD_GPIO (105.100,51.080)-(116.000,51.080)"
+        },
+        "min_hole_mm": null,
+        "min_hole_item": null
+      },
+      {
+        "layer": "B.Cu",
+        "via": [
+          112.4,
+          46.4
+        ],
+        "od_mm": 0.6,
+        "drill_mm": 0.3,
+        "min_clearance_mm": 0.7,
+        "min_item": {
+          "net": "VDD_GPIO",
+          "item": "B.Cu VDD_GPIO (111.200,51.080)-(111.200,38.800)"
+        },
+        "min_power_mm": 0.7,
+        "min_power_item": {
+          "net": "VDD_GPIO",
+          "item": "B.Cu VDD_GPIO (111.200,51.080)-(111.200,38.800)"
+        },
+        "min_hole_mm": null,
+        "min_hole_item": null
+      }
+    ],
+    "min_clearance_mm": 0.29,
+    "min_clearance_item": {
+      "net": "GND",
+      "item": "pad J7.SH [GND]"
+    },
+    "min_power_vin_mm": 0.7,
+    "min_power_vin_item": {
+      "net": "VDD_GPIO",
+      "item": "B.Cu VDD_GPIO (111.200,51.080)-(111.200,38.800)"
+    },
+    "min_hole_mm": 0.56,
+    "min_hole_item": "viahole P0.06 @(107.400,47.200)",
+    "min_hole_to_hole_mm": 3.538,
+    "min_hole_to_hole_item": "hole J11.2 [P0.31]",
+    "meets_power_0_20": true,
+    "meets_foreign_0_15": true,
+    "meets_hole_0_25": true
+  },
+  "straight_line_not_used": {
+    "from": [
+      99.961,
+      75.25
+    ],
+    "to": [
+      115.15,
+      46.85
+    ],
+    "length_mm": 32.207,
+    "worst_by_net": {
+      "P0.04": {
+        "clearance_mm": 0.0,
+        "net": "P0.04",
+        "power": false,
+        "item": "F.Cu P0.04 (113.800,49.200)-(113.800,36.800)"
+      },
+      "P0.31": {
+        "clearance_mm": 0.0,
+        "net": "P0.31",
+        "power": false,
+        "item": "F.Cu P0.31 (102.600,75.500)-(103.050,47.100)"
+      },
+      "VDD_GPIO": {
+        "clearance_mm": 0.0,
+        "net": "VDD_GPIO",
+        "power": true,
+        "item": "F.Cu VDD_GPIO (105.100,67.080)-(105.100,51.080)"
+      },
+      "GND": {
+        "clearance_mm": 0.0,
+        "net": "GND",
+        "power": false,
+        "item": "pad J15.6 [GND]"
+      }
+    },
+    "hit_count_under_0_15": 11
+  },
+  "jog_around": [
+    "VDD_GPIO F.Cu (105.10,67.08)-(105.10,51.08) and (104.00,67.08)-(107.18,67.08) POWER",
+    "P0.04 F.Cu (114.80,52.50)-(108.45,52.50) and (113.80,49.20)-(113.80,36.80)",
+    "locked P0.31 F.Cu run including the J11.2 landing (114.90,48.80)-(115.55,48.80)",
+    "GND pad J15.6",
+    "GND via (100,70) and J7 shield on the F.Cu north run",
+    "P0.06 / P0.04 fence (via hops to B.Cu instead of crossing them)",
+    "B.Cu VDD_GPIO trunk x=111.2 w=0.40 (east gutter stays 0.91 mm clear)",
+    "sealed B.Cu pocket y\u224844.60 x\u224881.8-97.3 not used"
+  ],
+  "blockers_remeasured": {
+    "tracks_found": {
+      "VDD_GPIO": [
+        {
+          "start": [
+            105.1,
+            67.08
+          ],
+          "end": [
+            105.1,
+            51.08
+          ],
+          "width_mm": 0.25
+        },
+        {
+          "start": [
+            104.0,
+            67.08
+          ],
+          "end": [
+            107.18,
+            67.08
+          ],
+          "width_mm": 0.25
+        }
+      ],
+      "P0.04": [
+        {
+          "start": [
+            113.8,
+            49.2
+          ],
+          "end": [
+            113.8,
+            36.8
+          ],
+          "width_mm": 0.18
+        },
+        {
+          "start": [
+            114.8,
+            52.5
+          ],
+          "end": [
+            108.45,
+            52.5
+          ],
+          "width_mm": 0.18
+        }
+      ],
+      "P0.31": [
+        {
+          "start": [
+            102.6,
+            75.5
+          ],
+          "end": [
+            103.05,
+            47.1
+          ],
+          "width_mm": 0.18
+        },
+        {
+          "start": [
+            114.9,
+            48.8
+          ],
+          "end": [
+            115.55,
+            48.8
+          ],
+          "width_mm": 0.18
+        }
+      ]
+    }
+  },
+  "pad_gap": {
+    "j13_15": [
+      99.56,
+      76.0
+    ],
+    "j11_1": [
+      116.0,
+      46.0
+    ],
+    "pad_edge_gap_mm": 32.207,
+    "start_on_j13_15": true,
+    "end_on_j11_1": true
+  },
+  "before": {
+    "unconnected_items": 61,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "p030_unconnected": 2,
+    "p031_unconnected": 1
+  },
+  "mid": {
+    "unconnected_items": 60,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "p030_unconnected": 1,
+    "p031_unconnected": 1
+  },
+  "after": {
+    "unconnected_items": 60,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "p030_unconnected": 1,
+    "p031_unconnected": 1
+  },
+  "p030_opens": {
+    "before": 2,
+    "after": 1
+  },
+  "unconnected": {
+    "before": 61,
+    "after": 60
+  },
+  "gnd_islands": {
+    "before": 12,
+    "after": 12,
+    "waived": true
+  },
+  "nongnd_gained": {},
+  "hole_to_hole": {
+    "before": 1,
+    "after": 1
+  },
+  "gate_met": true,
+  "reason": "KEEP. P0.30 opens 2\u21921. No other non-GND net gained an open. short/clearance/crossing/hole_clearance 0. hole_to_hole 1\u21921. Foreign clearance 0.29 mm. POWER clearance 0.7 mm. GND islands 12\u219212 (waived).",
+  "protect": {
+    "before": {
+      "ap_run": true,
+      "ap_via": true,
+      "y7050": true,
+      "u1_12_poly": true,
+      "dec0_bridge": true,
+      "coex0_via": true,
+      "coex0_runs": true,
+      "p010": true,
+      "p012": true,
+      "p015": 42,
+      "p004_locked_track": true,
+      "p022_locked_track": true,
+      "p031_locked_run": true
+    },
+    "after_add": {
+      "ap_run": true,
+      "ap_via": true,
+      "y7050": true,
+      "u1_12_poly": true,
+      "dec0_bridge": true,
+      "coex0_via": true,
+      "coex0_runs": true,
+      "p010": true,
+      "p012": true,
+      "p015": 42,
+      "p004_locked_track": true,
+      "p022_locked_track": true,
+      "p031_locked_run": true
+    },
+    "moved": []
+  }
+}
