@@ -1,0 +1,1357 @@
+{
+  "pass": "30bc",
+  "timestamp": "2026-09-30 13:43 IST",
+  "decision": "KEEP",
+  "net": "P0.20",
+  "git_head": "9ad4b9475455a74a7195575b6d0cec9b6566a38e",
+  "pcb_blob_at_start": "9f2d8c0370c9ac60c5283fc3cbb2bc8b015d447a",
+  "pcb_blob_at_end": "2d07228fba7bf2e61497e4e15cb3c4a9b90e1d57",
+  "expected_head_prefix": "9ad4b94",
+  "expected_blob": "9f2d8c0370c9ac60c5283fc3cbb2bc8b015d447a",
+  "head_matches_expected": true,
+  "blob_matches_expected": true,
+  "same_island": false,
+  "far_island_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "far_island_fcu_only": false,
+  "u1_island_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "u1_island": [
+    "U1.35",
+    "F.Cu (36.750,26.750)-(36.200,20.800)",
+    "via@36.200,20.800"
+  ],
+  "far_island": [
+    "J18.8",
+    "J13.5",
+    "F.Cu (55.780,62.000)-(55.780,60.900)",
+    "F.Cu (74.160,60.900)-(74.160,76.000)",
+    "F.Cu (55.780,60.900)-(74.160,60.900)"
+  ],
+  "pad_edge_mm": 38.594909,
+  "pad_edge_census_mm": 38.595,
+  "straight_chord": {
+    "from": [
+      36.878,
+      27.147
+    ],
+    "to": [
+      55.736,
+      60.821
+    ],
+    "width_mm": 0.18,
+    "layer": "F.Cu",
+    "length_mm": 38.59485,
+    "crosses_sip_body": true,
+    "p006": {
+      "via_xy": [
+        44.0,
+        39.9
+      ],
+      "via_radius_mm": 0.3,
+      "centerline_distance_mm": 0.0174,
+      "edge_clearance_mm": -0.3726
+    },
+    "used": false,
+    "note": "Chord crosses the fab body and hits P0.06. Not used."
+  },
+  "existing_via": {
+    "pos": [
+      36.2,
+      20.8
+    ],
+    "drill_mm": 0.3,
+    "pad_mm": 0.6,
+    "top": "F.Cu",
+    "bottom": "B.Cu",
+    "through": true,
+    "on": {
+      "F.Cu": true,
+      "In1.Cu": true,
+      "In2.Cu": true,
+      "B.Cu": true
+    }
+  },
+  "layer_die_from_via": {
+    "from": [
+      36.2,
+      20.8
+    ],
+    "straight_south": {
+      "F.Cu": {
+        "last_clear_y": 22.8,
+        "blocked_by_y": 23.05,
+        "foreign_mm": 0.0628,
+        "foreign_item": {
+          "net": "P0.21",
+          "item": "via@35.750,23.100"
+        },
+        "why": "clearance",
+        "body": false
+      },
+      "In1.Cu": {
+        "last_clear_y": 22.8,
+        "blocked_by_y": 23.05,
+        "foreign_mm": 0.0628,
+        "foreign_item": {
+          "net": "P0.21",
+          "item": "via@35.750,23.100"
+        },
+        "why": "clearance",
+        "body": false
+      },
+      "In2.Cu": {
+        "last_clear_y": 22.8,
+        "blocked_by_y": 23.05,
+        "foreign_mm": 0.0628,
+        "foreign_item": {
+          "net": "P0.21",
+          "item": "via@35.750,23.100"
+        },
+        "why": "clearance",
+        "body": false
+      },
+      "B.Cu": {
+        "last_clear_y": 22.8,
+        "blocked_by_y": 23.05,
+        "foreign_mm": 0.0628,
+        "foreign_item": {
+          "net": "P0.21",
+          "item": "via@35.750,23.100"
+        },
+        "why": "clearance",
+        "body": false
+      }
+    },
+    "note": "F.Cu and B.Cu (and In1/In2 on this same x) die at the P0.21 via (35.750, 23.100), before y=26.5. The neighbor vias at x=39.25/40.25 were the ones that died at y=26.5. This via is through-hole to In2, so the route jogs to x=36.45 on In2 and does not punch a new via."
+  },
+  "y_61_63_blocker": {
+    "segment": [
+      [
+        44.25,
+        61.63
+      ],
+      [
+        55.78,
+        61.63
+      ]
+    ],
+    "ok": false,
+    "foreign_mm": 0.0,
+    "foreign_item": {
+      "net": "P0.16",
+      "item": "pad J18.4"
+    },
+    "why": "J18 pads are 1.700 mm circles on y=62.000. y=61.63 is inside the pad copper. Not placed."
+  },
+  "no_dodge": {
+    "ok": false,
+    "foreign_mm": -0.14,
+    "foreign_item": {
+      "net": "P0.06",
+      "item": "via@44.000,39.900"
+    },
+    "hole_mm": 0.01,
+    "hole_item": "via P0.06 @44.000,39.900",
+    "why": "x=44.25 passes 0.25 mm from P0.06 via (44.000, 39.900). Edge clearance is negative. Dodge required. P0.19 dodge not ripped."
+  },
+  "whole_segment_crossing_test": {
+    "method": "segment-vs-segment interior intersection plus 0.05 mm samples, against P0.16, P0.17, and P0.19, layers not exempt. Collinear overlap with P0.19 is the x=44.25 In2 slot, not a crossing. Endpoint-only touches are not crossings. A sample in the interior of a locked segment is a crossing.",
+    "crossed": false,
+    "crossing_count": 0,
+    "crossings": [],
+    "p019_same_centerline_stacks": [
+      {
+        "segment": [
+          [
+            36.45,
+            26.5
+          ],
+          [
+            44.25,
+            26.5
+          ]
+        ],
+        "p019": [
+          [
+            39.25,
+            26.5
+          ],
+          [
+            44.25,
+            26.5
+          ]
+        ],
+        "note": "same-centerline In2 slot beside P0.19, not a crossing"
+      },
+      {
+        "segment": [
+          [
+            44.25,
+            26.5
+          ],
+          [
+            44.25,
+            39.1
+          ]
+        ],
+        "p019": [
+          [
+            44.25,
+            26.5
+          ],
+          [
+            44.25,
+            39.1
+          ]
+        ],
+        "note": "same-centerline In2 slot beside P0.19, not a crossing"
+      },
+      {
+        "segment": [
+          [
+            44.25,
+            39.1
+          ],
+          [
+            42.8,
+            39.9
+          ]
+        ],
+        "p019": [
+          [
+            44.25,
+            39.1
+          ],
+          [
+            42.8,
+            39.9
+          ]
+        ],
+        "note": "same-centerline In2 slot beside P0.19, not a crossing"
+      },
+      {
+        "segment": [
+          [
+            42.8,
+            39.9
+          ],
+          [
+            44.25,
+            40.7
+          ]
+        ],
+        "p019": [
+          [
+            42.8,
+            39.9
+          ],
+          [
+            44.25,
+            40.7
+          ]
+        ],
+        "note": "same-centerline In2 slot beside P0.19, not a crossing"
+      },
+      {
+        "segment": [
+          [
+            44.25,
+            40.7
+          ],
+          [
+            44.25,
+            63.2
+          ]
+        ],
+        "p019": [
+          [
+            44.25,
+            40.7
+          ],
+          [
+            44.25,
+            63.2
+          ]
+        ],
+        "note": "same-centerline In2 slot beside P0.19, not a crossing"
+      },
+      {
+        "segment": [
+          [
+            44.25,
+            63.2
+          ],
+          [
+            55.78,
+            63.2
+          ]
+        ],
+        "p019": [
+          [
+            44.25,
+            63.2
+          ],
+          [
+            53.24,
+            63.2
+          ]
+        ],
+        "note": "same-centerline In2 slot beside P0.19, not a crossing"
+      }
+    ],
+    "endpoint_joins_not_crossings": [
+      {
+        "segment": [
+          [
+            36.45,
+            26.5
+          ],
+          [
+            44.25,
+            26.5
+          ]
+        ],
+        "locked_net": "P0.19",
+        "locked": [
+          [
+            39.25,
+            23.1
+          ],
+          [
+            39.25,
+            26.5
+          ]
+        ],
+        "note": "endpoint touch only; centerline does not pass through the locked interior"
+      },
+      {
+        "segment": [
+          [
+            36.45,
+            26.5
+          ],
+          [
+            44.25,
+            26.5
+          ]
+        ],
+        "locked_net": "P0.19",
+        "locked": [
+          [
+            44.25,
+            26.5
+          ],
+          [
+            44.25,
+            39.1
+          ]
+        ],
+        "note": "endpoint touch only; centerline does not pass through the locked interior"
+      },
+      {
+        "segment": [
+          [
+            44.25,
+            26.5
+          ],
+          [
+            44.25,
+            39.1
+          ]
+        ],
+        "locked_net": "P0.19",
+        "locked": [
+          [
+            39.25,
+            26.5
+          ],
+          [
+            44.25,
+            26.5
+          ]
+        ],
+        "note": "endpoint touch only; centerline does not pass through the locked interior"
+      },
+      {
+        "segment": [
+          [
+            44.25,
+            26.5
+          ],
+          [
+            44.25,
+            39.1
+          ]
+        ],
+        "locked_net": "P0.19",
+        "locked": [
+          [
+            44.25,
+            39.1
+          ],
+          [
+            42.8,
+            39.9
+          ]
+        ],
+        "note": "endpoint touch only; centerline does not pass through the locked interior"
+      },
+      {
+        "segment": [
+          [
+            44.25,
+            39.1
+          ],
+          [
+            42.8,
+            39.9
+          ]
+        ],
+        "locked_net": "P0.19",
+        "locked": [
+          [
+            44.25,
+            26.5
+          ],
+          [
+            44.25,
+            39.1
+          ]
+        ],
+        "note": "endpoint touch only; centerline does not pass through the locked interior"
+      },
+      {
+        "segment": [
+          [
+            44.25,
+            39.1
+          ],
+          [
+            42.8,
+            39.9
+          ]
+        ],
+        "locked_net": "P0.19",
+        "locked": [
+          [
+            42.8,
+            39.9
+          ],
+          [
+            44.25,
+            40.7
+          ]
+        ],
+        "note": "endpoint touch only; centerline does not pass through the locked interior"
+      },
+      {
+        "segment": [
+          [
+            42.8,
+            39.9
+          ],
+          [
+            44.25,
+            40.7
+          ]
+        ],
+        "locked_net": "P0.19",
+        "locked": [
+          [
+            44.25,
+            39.1
+          ],
+          [
+            42.8,
+            39.9
+          ]
+        ],
+        "note": "endpoint touch only; centerline does not pass through the locked interior"
+      },
+      {
+        "segment": [
+          [
+            42.8,
+            39.9
+          ],
+          [
+            44.25,
+            40.7
+          ]
+        ],
+        "locked_net": "P0.19",
+        "locked": [
+          [
+            44.25,
+            40.7
+          ],
+          [
+            44.25,
+            63.2
+          ]
+        ],
+        "note": "endpoint touch only; centerline does not pass through the locked interior"
+      },
+      {
+        "segment": [
+          [
+            44.25,
+            40.7
+          ],
+          [
+            44.25,
+            63.2
+          ]
+        ],
+        "locked_net": "P0.19",
+        "locked": [
+          [
+            42.8,
+            39.9
+          ],
+          [
+            44.25,
+            40.7
+          ]
+        ],
+        "note": "endpoint touch only; centerline does not pass through the locked interior"
+      },
+      {
+        "segment": [
+          [
+            44.25,
+            40.7
+          ],
+          [
+            44.25,
+            63.2
+          ]
+        ],
+        "locked_net": "P0.19",
+        "locked": [
+          [
+            44.25,
+            63.2
+          ],
+          [
+            53.24,
+            63.2
+          ]
+        ],
+        "note": "endpoint touch only; centerline does not pass through the locked interior"
+      },
+      {
+        "segment": [
+          [
+            44.25,
+            63.2
+          ],
+          [
+            55.78,
+            63.2
+          ]
+        ],
+        "locked_net": "P0.19",
+        "locked": [
+          [
+            44.25,
+            40.7
+          ],
+          [
+            44.25,
+            63.2
+          ]
+        ],
+        "note": "endpoint touch only; centerline does not pass through the locked interior"
+      },
+      {
+        "segment": [
+          [
+            44.25,
+            63.2
+          ],
+          [
+            55.78,
+            63.2
+          ]
+        ],
+        "locked_net": "P0.19",
+        "locked": [
+          [
+            53.24,
+            63.2
+          ],
+          [
+            53.24,
+            62.0
+          ]
+        ],
+        "note": "endpoint touch only; centerline does not pass through the locked interior"
+      }
+    ],
+    "min_center_distance_to_p016_p017_mm": 0.35,
+    "min_skirt_item": {
+      "net": "P0.16",
+      "segment": [
+        [
+          45.55,
+          27.4
+        ],
+        [
+          44.6,
+          27.4
+        ]
+      ]
+    },
+    "min_center_distance_to_p019_mm": 0.0,
+    "min_p019_item": {
+      "net": "P0.19",
+      "segment": [
+        [
+          39.25,
+          23.1
+        ],
+        [
+          39.25,
+          26.5
+        ]
+      ]
+    },
+    "segments": [
+      {
+        "start": [
+          36.2,
+          20.8
+        ],
+        "end": [
+          36.45,
+          20.8
+        ],
+        "samples": 6,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.17",
+          "segment": [
+            [
+              40.25,
+              23.1
+            ],
+            [
+              40.25,
+              21.5
+            ]
+          ],
+          "center_distance_mm": 3.8639,
+          "edge_clearance_mm": 3.6839
+        }
+      },
+      {
+        "start": [
+          36.45,
+          20.8
+        ],
+        "end": [
+          36.45,
+          26.5
+        ],
+        "samples": 114,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.17",
+          "segment": [
+            [
+              40.25,
+              23.1
+            ],
+            [
+              40.25,
+              21.5
+            ]
+          ],
+          "center_distance_mm": 3.8,
+          "edge_clearance_mm": 3.62
+        }
+      },
+      {
+        "start": [
+          36.45,
+          26.5
+        ],
+        "end": [
+          44.25,
+          26.5
+        ],
+        "samples": 156,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.16",
+          "segment": [
+            [
+              45.55,
+              27.4
+            ],
+            [
+              44.6,
+              27.4
+            ]
+          ],
+          "center_distance_mm": 0.9657,
+          "edge_clearance_mm": 0.7857
+        }
+      },
+      {
+        "start": [
+          44.25,
+          26.5
+        ],
+        "end": [
+          44.25,
+          39.1
+        ],
+        "samples": 253,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.16",
+          "segment": [
+            [
+              45.55,
+              27.4
+            ],
+            [
+              44.6,
+              27.4
+            ]
+          ],
+          "center_distance_mm": 0.35,
+          "edge_clearance_mm": 0.17
+        }
+      },
+      {
+        "start": [
+          44.25,
+          39.1
+        ],
+        "end": [
+          42.8,
+          39.9
+        ],
+        "samples": 34,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.16",
+          "segment": [
+            [
+              44.6,
+              27.4
+            ],
+            [
+              44.6,
+              60.4
+            ]
+          ],
+          "center_distance_mm": 0.35,
+          "edge_clearance_mm": 0.17
+        }
+      },
+      {
+        "start": [
+          42.8,
+          39.9
+        ],
+        "end": [
+          44.25,
+          40.7
+        ],
+        "samples": 34,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.16",
+          "segment": [
+            [
+              44.6,
+              27.4
+            ],
+            [
+              44.6,
+              60.4
+            ]
+          ],
+          "center_distance_mm": 0.35,
+          "edge_clearance_mm": 0.17
+        }
+      },
+      {
+        "start": [
+          44.25,
+          40.7
+        ],
+        "end": [
+          44.25,
+          63.2
+        ],
+        "samples": 451,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.16",
+          "segment": [
+            [
+              44.6,
+              27.4
+            ],
+            [
+              44.6,
+              60.4
+            ]
+          ],
+          "center_distance_mm": 0.35,
+          "edge_clearance_mm": 0.17
+        }
+      },
+      {
+        "start": [
+          44.25,
+          63.2
+        ],
+        "end": [
+          55.78,
+          63.2
+        ],
+        "samples": 231,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.17",
+          "segment": [
+            [
+              48.16,
+              60.4
+            ],
+            [
+              48.16,
+              61.3
+            ]
+          ],
+          "center_distance_mm": 1.9,
+          "edge_clearance_mm": 1.72
+        }
+      },
+      {
+        "start": [
+          55.78,
+          63.2
+        ],
+        "end": [
+          55.78,
+          62.0
+        ],
+        "samples": 25,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.17",
+          "segment": [
+            [
+              48.16,
+              60.4
+            ],
+            [
+              48.16,
+              61.3
+            ]
+          ],
+          "center_distance_mm": 7.6521,
+          "edge_clearance_mm": 7.4721
+        }
+      }
+    ],
+    "y61_63_not_used": "y=61.63 is inside the J18.4/5/6 pad circles. Not this route. Eastbound is y=63.20."
+  },
+  "new_via": false,
+  "third_in1_skirt": false,
+  "via_punched_into_fcu_pad": false,
+  "segments": [
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        36.2,
+        20.8
+      ],
+      "end": [
+        36.45,
+        20.8
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        36.45,
+        20.8
+      ],
+      "end": [
+        36.45,
+        26.5
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        36.45,
+        26.5
+      ],
+      "end": [
+        44.25,
+        26.5
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        26.5
+      ],
+      "end": [
+        44.25,
+        39.1
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        39.1
+      ],
+      "end": [
+        42.8,
+        39.9
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        42.8,
+        39.9
+      ],
+      "end": [
+        44.25,
+        40.7
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        40.7
+      ],
+      "end": [
+        44.25,
+        63.2
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        63.2
+      ],
+      "end": [
+        55.78,
+        63.2
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        55.78,
+        63.2
+      ],
+      "end": [
+        55.78,
+        62.0
+      ]
+    }
+  ],
+  "segment_count": 9,
+  "attempted_segments": [
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        36.2,
+        20.8
+      ],
+      "end": [
+        36.45,
+        20.8
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        36.45,
+        20.8
+      ],
+      "end": [
+        36.45,
+        26.5
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        36.45,
+        26.5
+      ],
+      "end": [
+        44.25,
+        26.5
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        26.5
+      ],
+      "end": [
+        44.25,
+        39.1
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        39.1
+      ],
+      "end": [
+        42.8,
+        39.9
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        42.8,
+        39.9
+      ],
+      "end": [
+        44.25,
+        40.7
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        40.7
+      ],
+      "end": [
+        44.25,
+        63.2
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        63.2
+      ],
+      "end": [
+        55.78,
+        63.2
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        55.78,
+        63.2
+      ],
+      "end": [
+        55.78,
+        62.0
+      ]
+    }
+  ],
+  "min_foreign_clearance_mm": 0.17,
+  "min_foreign_item": {
+    "net": "P0.17",
+    "item": "trk (44.60,27.40)-(44.60,60.40)"
+  },
+  "min_power_clearance_mm": 0.2736,
+  "min_power_item": {
+    "net": "VDD2",
+    "item": "via@44.722,25.900"
+  },
+  "min_hole_clearance_mm": 0.3397,
+  "min_hole_item": "via P0.06 @44.000,39.900",
+  "segment_clearances": [
+    {
+      "start": [
+        36.2,
+        20.8
+      ],
+      "end": [
+        36.45,
+        20.8
+      ],
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.9186,
+      "foreign_item": {
+        "net": "P0.22",
+        "item": "via@35.250,19.900"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 1.0686,
+      "hole_item": "via P0.22 @35.250,19.900",
+      "why": null
+    },
+    {
+      "start": [
+        36.45,
+        20.8
+      ],
+      "end": [
+        36.45,
+        26.5
+      ],
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.31,
+      "foreign_item": {
+        "net": "P0.21",
+        "item": "via@35.750,23.100"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.46,
+      "hole_item": "via P0.21 @35.750,23.100",
+      "why": null
+    },
+    {
+      "start": [
+        36.45,
+        26.5
+      ],
+      "end": [
+        44.25,
+        26.5
+      ],
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.2736,
+      "foreign_item": {
+        "net": "VDD2",
+        "item": "via@44.722,25.900"
+      },
+      "power_mm": 0.2736,
+      "power_item": {
+        "net": "VDD2",
+        "item": "via@44.722,25.900"
+      },
+      "hole_mm": 0.4736,
+      "hole_item": "via VDD2 @44.722,25.900",
+      "why": null
+    },
+    {
+      "start": [
+        44.25,
+        26.5
+      ],
+      "end": [
+        44.25,
+        39.1
+      ],
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.17,
+      "foreign_item": {
+        "net": "P0.17",
+        "item": "trk (44.60,27.40)-(44.60,60.40)"
+      },
+      "power_mm": 0.2736,
+      "power_item": {
+        "net": "VDD2",
+        "item": "via@44.722,25.900"
+      },
+      "hole_mm": 0.4736,
+      "hole_item": "via VDD2 @44.722,25.900",
+      "why": null
+    },
+    {
+      "start": [
+        44.25,
+        39.1
+      ],
+      "end": [
+        42.8,
+        39.9
+      ],
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.17,
+      "foreign_item": {
+        "net": "P0.17",
+        "item": "trk (44.60,27.40)-(44.60,60.40)"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.3397,
+      "hole_item": "via P0.06 @44.000,39.900",
+      "why": null
+    },
+    {
+      "start": [
+        42.8,
+        39.9
+      ],
+      "end": [
+        44.25,
+        40.7
+      ],
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.17,
+      "foreign_item": {
+        "net": "P0.17",
+        "item": "trk (44.60,27.40)-(44.60,60.40)"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.3397,
+      "hole_item": "via P0.06 @44.000,39.900",
+      "why": null
+    },
+    {
+      "start": [
+        44.25,
+        40.7
+      ],
+      "end": [
+        44.25,
+        63.2
+      ],
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.17,
+      "foreign_item": {
+        "net": "P0.17",
+        "item": "trk (44.60,60.40)-(48.16,60.40)"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.56,
+      "hole_item": "via ENABLE @43.400,45.126",
+      "why": null
+    },
+    {
+      "start": [
+        44.25,
+        63.2
+      ],
+      "end": [
+        55.78,
+        63.2
+      ],
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.26,
+      "foreign_item": {
+        "net": "P0.16",
+        "item": "pad J18.4"
+      },
+      "power_mm": 1.8692,
+      "power_item": {
+        "net": "VDD_GPIO",
+        "item": "pad J18.9"
+      },
+      "hole_mm": 0.61,
+      "hole_item": "hole J18.4 [P0.16]",
+      "why": null
+    },
+    {
+      "start": [
+        55.78,
+        63.2
+      ],
+      "end": [
+        55.78,
+        62.0
+      ],
+      "ok": true,
+      "body": false,
+      "foreign_mm": 1.6,
+      "foreign_item": {
+        "net": "P0.19",
+        "item": "pad J18.7"
+      },
+      "power_mm": 1.6,
+      "power_item": {
+        "net": "VDD_GPIO",
+        "item": "pad J18.9"
+      },
+      "hole_mm": 1.95,
+      "hole_item": "hole J18.7 [P0.19]",
+      "why": null
+    }
+  ],
+  "p020_opens_before": 1,
+  "p020_opens_after": 0,
+  "unconnected_before": 57,
+  "unconnected_after": 56,
+  "short_clearance_crossing_hole_before": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "short_clearance_crossing_hole_after": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "hole_to_hole_before": 1,
+  "hole_to_hole_after": 1,
+  "gnd_islands_before": 12,
+  "gnd_islands_after": 12,
+  "other_nongnd_gained": {},
+  "reason": "KEEP. In2.Cu x=44.25 slot, 9 new segments, no new via. Whole-segment crossing test: 0 crossings (min center to P0.16/P0.17 0.35 mm; P0.19 same-centerline stacks 6, not crossings). P0.20 opens 1\u21920. Unconnected 57\u219256. Foreign 0.17 mm vs {'net': 'P0.17', 'item': 'trk (44.60,27.40)-(44.60,60.40)'}. POWER 0.2736 mm vs {'net': 'VDD2', 'item': 'via@44.722,25.900'}. short/clearance/crossing/hole 0/0/0/0. hole_to_hole 1. GND islands 12\u219212 (waived). Other non-GND gained: none. No third In1 skirt. Skirts and P0.19 not ripped.",
+  "skirts_or_p019_crossed": false,
+  "skirts_ripped": false,
+  "p019_ripped": false,
+  "p017_not_retried": true,
+  "p018_not_routed": true,
+  "other_net": false,
+  "gerbers": false,
+  "commit": false,
+  "board_sha256": "f8da103be893f5f092ace7eae03b628438bfd48d94f16542b3aa823db05dcab0",
+  "backup": "/workspace/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/pass30bc/pre-edit.kicad_pcb",
+  "reverted_to_pre_edit_blob": false
+}
