@@ -1,0 +1,743 @@
+{
+  "pass": "30bi",
+  "timestamp": "2026-09-30 18:00 IST",
+  "decision": "KEEP",
+  "net": "P0.05",
+  "pair": "U1.2-J12.6",
+  "git_head": "99ff66c8a933ebb01cc397bcf392732c55d9c9c6",
+  "pcb_blob_at_start": "953e98bc52f2b39ffec50928389f4492eff69ce7",
+  "pcb_blob_at_end": "7bcfe5791b156e426a2a0affefe938be4d39f8e6",
+  "sha1sum_at_start": "828df5c6726a56fb12bc18312f258fc973d582d6",
+  "sha1sum_at_end": "c6dc3ba60aa52dbe533823c2a6a2af7aa5fb0e40",
+  "expected_head_prefix": "99ff66c",
+  "expected_blob": "953e98bc52f2b39ffec50928389f4492eff69ce7",
+  "head_matches_expected": true,
+  "blob_matches_expected": true,
+  "end_blob_matches_start": false,
+  "same_island": false,
+  "via_47_40_36_50_on_u1_2_island": true,
+  "start_via": {
+    "xy": [
+      47.4,
+      36.5
+    ],
+    "width_mm": 0.6,
+    "radius_mm": 0.3,
+    "drill_mm": 0.3,
+    "through": true,
+    "nm": [
+      47400000,
+      36500000
+    ],
+    "net": "P0.05"
+  },
+  "j12_6_center": [
+    18.7,
+    76.0
+  ],
+  "j12_6_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "j12_6_size_mm": [
+    1.7,
+    1.7
+  ],
+  "j12_6_drill_mm": 1.0,
+  "far_island_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "u1_island_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "u1_island": [
+    "U1.2",
+    "F.Cu (44.000,36.500)-(47.400,36.500)",
+    "via@47.400,36.500"
+  ],
+  "far_island": [
+    "J12.6"
+  ],
+  "far_fcu_only": false,
+  "other_p005_opens_left": [
+    {
+      "name": "J9.3",
+      "xy": [
+        116.0,
+        13.08
+      ],
+      "island": [
+        "J9.3"
+      ],
+      "same_as_u1": false,
+      "same_as_j12": false
+    }
+  ],
+  "joined": "J12.6 pad center on In1.Cu (PTH, copper already on In1)",
+  "pad_edge_mm": 45.730103,
+  "pad_edge_census_mm": 45.733,
+  "straight_chord": {
+    "from_existing_copper": [
+      43.622,
+      36.647
+    ],
+    "to_pad_edge_point": [
+      19.101,
+      75.25
+    ],
+    "width_mm": 0.18,
+    "layer": "F.Cu",
+    "length_mm": 45.732604,
+    "crosses_sip_body": true,
+    "p002": {
+      "xy": [
+        40.75,
+        41.1
+      ],
+      "width_mm": 0.6,
+      "center_distance_mm": 0.03664350727677847,
+      "edge_clearance_mm": -0.35335649272322156
+    },
+    "used": false,
+    "note": "Straight F.Cu chord hits P0.02 via (40.75, 41.10). Not used."
+  },
+  "whole_segment_crossing_test": {
+    "method": "segment-vs-segment interior intersection plus 0.05 mm samples, against P0.16, P0.17, P0.19, P0.20, the SIM_CLK In1 run, the SIM_RST run (F.Cu neck plus In1), the P0.00 In1 run, and the P0.07 In2 run. Layers are not exempt. A same-centerline stack on x=44.25, x=44.60, the y=63.20 eastbounds, or any locked P0.07 centerline is a fail. Endpoint-only touches are not crossings.",
+    "crossed": false,
+    "crossing_count": 0,
+    "crossings": [],
+    "min_center_distance_to_locked_mm": 0.5,
+    "min_locked_item": {
+      "net": "P0.07",
+      "segment": [
+        [
+          48.05,
+          35.5
+        ],
+        [
+          48.05,
+          37.9
+        ]
+      ]
+    },
+    "segments": [
+      {
+        "start": [
+          47.4,
+          36.5
+        ],
+        "end": [
+          47.4,
+          38.4
+        ],
+        "samples": 38,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.07",
+          "segment": [
+            [
+              48.05,
+              35.5
+            ],
+            [
+              48.05,
+              37.9
+            ]
+          ],
+          "center_distance_mm": 0.65,
+          "edge_clearance_mm": 0.47
+        }
+      },
+      {
+        "start": [
+          47.4,
+          38.4
+        ],
+        "end": [
+          57.05,
+          38.4
+        ],
+        "samples": 193,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.07",
+          "segment": [
+            [
+              48.05,
+              35.5
+            ],
+            [
+              48.05,
+              37.9
+            ]
+          ],
+          "center_distance_mm": 0.5,
+          "edge_clearance_mm": 0.32
+        }
+      },
+      {
+        "start": [
+          57.05,
+          38.4
+        ],
+        "end": [
+          57.05,
+          74.7
+        ],
+        "samples": 727,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.07",
+          "segment": [
+            [
+              48.05,
+              37.9
+            ],
+            [
+              63.1,
+              37.9
+            ]
+          ],
+          "center_distance_mm": 0.5,
+          "edge_clearance_mm": 0.32
+        }
+      },
+      {
+        "start": [
+          57.05,
+          74.7
+        ],
+        "end": [
+          22.51,
+          74.7
+        ],
+        "samples": 691,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.07",
+          "segment": [
+            [
+              25.2,
+              79.2
+            ],
+            [
+              25.2,
+              76.0
+            ]
+          ],
+          "center_distance_mm": 1.3,
+          "edge_clearance_mm": 1.12
+        }
+      },
+      {
+        "start": [
+          22.51,
+          74.7
+        ],
+        "end": [
+          22.51,
+          79.4
+        ],
+        "samples": 95,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.07",
+          "segment": [
+            [
+              25.2,
+              76.0
+            ],
+            [
+              23.78,
+              76.0
+            ]
+          ],
+          "center_distance_mm": 1.27,
+          "edge_clearance_mm": 1.09
+        }
+      },
+      {
+        "start": [
+          22.51,
+          79.4
+        ],
+        "end": [
+          18.7,
+          79.4
+        ],
+        "samples": 77,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.07",
+          "segment": [
+            [
+              62.7,
+              79.2
+            ],
+            [
+              25.2,
+              79.2
+            ]
+          ],
+          "center_distance_mm": 2.6974,
+          "edge_clearance_mm": 2.5174
+        }
+      },
+      {
+        "start": [
+          18.7,
+          79.4
+        ],
+        "end": [
+          18.7,
+          76.0
+        ],
+        "samples": 69,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.07",
+          "segment": [
+            [
+              25.2,
+              76.0
+            ],
+            [
+              23.78,
+              76.0
+            ]
+          ],
+          "center_distance_mm": 5.08,
+          "edge_clearance_mm": 4.9
+        }
+      }
+    ]
+  },
+  "new_via": false,
+  "segments": [
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        47.4,
+        36.5
+      ],
+      "end": [
+        47.4,
+        38.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        47.4,
+        38.4
+      ],
+      "end": [
+        57.05,
+        38.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        57.05,
+        38.4
+      ],
+      "end": [
+        57.05,
+        74.7
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        57.05,
+        74.7
+      ],
+      "end": [
+        22.51,
+        74.7
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        22.51,
+        74.7
+      ],
+      "end": [
+        22.51,
+        79.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        22.51,
+        79.4
+      ],
+      "end": [
+        18.7,
+        79.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        18.7,
+        79.4
+      ],
+      "end": [
+        18.7,
+        76.0
+      ]
+    }
+  ],
+  "segment_count": 7,
+  "attempted_segments": [
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        47.4,
+        36.5
+      ],
+      "end": [
+        47.4,
+        38.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        47.4,
+        38.4
+      ],
+      "end": [
+        57.05,
+        38.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        57.05,
+        38.4
+      ],
+      "end": [
+        57.05,
+        74.7
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        57.05,
+        74.7
+      ],
+      "end": [
+        22.51,
+        74.7
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        22.51,
+        74.7
+      ],
+      "end": [
+        22.51,
+        79.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        22.51,
+        79.4
+      ],
+      "end": [
+        18.7,
+        79.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        18.7,
+        79.4
+      ],
+      "end": [
+        18.7,
+        76.0
+      ]
+    }
+  ],
+  "min_foreign_clearance_mm": 0.33,
+  "min_foreign_item": {
+    "net": "P0.20",
+    "item": "pad J18.8"
+  },
+  "min_power_clearance_mm": 0.33,
+  "min_power_item": {
+    "net": "VDD_GPIO",
+    "item": "pad J18.9"
+  },
+  "min_hole_clearance_mm": 0.68,
+  "min_hole_item": "hole J18.8 [P0.20]",
+  "segment_clearances": [
+    {
+      "start": [
+        47.4,
+        36.5
+      ],
+      "end": [
+        47.4,
+        38.4
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.61,
+      "foreign_item": {
+        "net": "P0.07",
+        "item": "via@47.400,35.500"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.76,
+      "hole_item": "via P0.07 @47.400,35.500",
+      "why": null
+    },
+    {
+      "start": [
+        47.4,
+        38.4
+      ],
+      "end": [
+        57.05,
+        38.4
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 2.01,
+      "foreign_item": {
+        "net": "P0.06",
+        "item": "via@48.620,36.000"
+      },
+      "power_mm": 2.4504,
+      "power_item": {
+        "net": "VDD2",
+        "item": "via@59.700,37.126"
+      },
+      "hole_mm": 2.16,
+      "hole_item": "via P0.06 @48.620,36.000",
+      "why": null
+    },
+    {
+      "start": [
+        57.05,
+        38.4
+      ],
+      "end": [
+        57.05,
+        74.7
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.33,
+      "foreign_item": {
+        "net": "P0.20",
+        "item": "pad J18.8"
+      },
+      "power_mm": 0.33,
+      "power_item": {
+        "net": "VDD_GPIO",
+        "item": "pad J18.9"
+      },
+      "hole_mm": 0.68,
+      "hole_item": "hole J18.8 [P0.20]",
+      "why": null
+    },
+    {
+      "start": [
+        57.05,
+        74.7
+      ],
+      "end": [
+        22.51,
+        74.7
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.36,
+      "foreign_item": {
+        "net": "P0.07",
+        "item": "pad J12.8"
+      },
+      "power_mm": 0.36,
+      "power_item": {
+        "net": "VDD_GPIO",
+        "item": "pad J12.17"
+      },
+      "hole_mm": 0.71,
+      "hole_item": "hole J12.8 [P0.07]",
+      "why": null
+    },
+    {
+      "start": [
+        22.51,
+        74.7
+      ],
+      "end": [
+        22.51,
+        79.4
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.33,
+      "foreign_item": {
+        "net": "P0.06",
+        "item": "pad J12.7"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.68,
+      "hole_item": "hole J12.8 [P0.07]",
+      "why": null
+    },
+    {
+      "start": [
+        22.51,
+        79.4
+      ],
+      "end": [
+        18.7,
+        79.4
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 1.7941,
+      "foreign_item": {
+        "net": "P0.01",
+        "item": "via@24.500,78.500"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 1.9441,
+      "hole_item": "via P0.01 @24.500,78.500",
+      "why": null
+    },
+    {
+      "start": [
+        18.7,
+        79.4
+      ],
+      "end": [
+        18.7,
+        76.0
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 1.6,
+      "foreign_item": {
+        "net": "P0.04",
+        "item": "pad J12.5"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 1.95,
+      "hole_item": "hole J12.5 [P0.04]",
+      "why": null
+    }
+  ],
+  "p005_opens_before": 2,
+  "p005_opens_after": 1,
+  "u1_2_j12_6_open_before": true,
+  "u1_2_j12_6_open_after": false,
+  "unconnected_before": 52,
+  "unconnected_after": 51,
+  "short_clearance_crossing_hole_before": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "short_clearance_crossing_hole_after": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "hole_to_hole_before": 1,
+  "hole_to_hole_after": 1,
+  "gnd_islands_before": 12,
+  "gnd_islands_after": 12,
+  "other_nongnd_gained": {},
+  "reason": "KEEP. In1 south approach, 7 new segments, no new via, from existing P0.05 through-via (47.40, 36.50) onto J12.6. Via is on the U1.2 island. Straight F.Cu chord not used (P0.02). P0.07 centerline not used. Skirt slot, sealed pocket, and RF keepout not used. Whole-segment crossings: 0. P0.05 opens 2\u21921. U1.2\u2194J12.6 open closed. Unconnected 52\u219251. Foreign 0.33 mm vs {'net': 'P0.20', 'item': 'pad J18.8'}. POWER 0.33 mm vs {'net': 'VDD_GPIO', 'item': 'pad J18.9'}. short/clearance/crossing/hole 0/0/0/0. hole_to_hole 1. GND islands 12\u219212 (waived). Other non-GND gained: none. J9.3 left open. J9.2 not touched. Four skirts, SIM_CLK, SIM_RST, P0.00, and P0.07 not ripped or stacked. No other net.",
+  "skirts_crossed_or_stacked": false,
+  "skirts_ripped": false,
+  "sim_clk_ripped_or_stacked": false,
+  "sim_rst_ripped_or_stacked": false,
+  "p000_ripped_or_stacked": false,
+  "p007_ripped_or_stacked": false,
+  "j9_2_before": {
+    "xy": [
+      116.0,
+      10.54
+    ],
+    "net": "P0.07",
+    "fp_xy": [
+      116.0,
+      8.0
+    ]
+  },
+  "j9_2_after": {
+    "xy": [
+      116.0,
+      10.54
+    ],
+    "net": "P0.07",
+    "fp_xy": [
+      116.0,
+      8.0
+    ]
+  },
+  "j9_2_touched": false,
+  "skirt_slot_used": false,
+  "sealed_pocket_used": false,
+  "rf_keepout_used": false,
+  "other_net": false,
+  "gerbers": false,
+  "commit": false,
+  "board_sha256": "32edf40e10ce2dcf2d36e617daffb98b9f04e2412b319bbf1b5cf348d1aa865f",
+  "backup": "/workspace/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/pass30bi/pre-edit.kicad_pcb",
+  "reverted_to_pre_edit_blob": false
+}
