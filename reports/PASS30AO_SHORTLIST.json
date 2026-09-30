@@ -1,0 +1,295 @@
+{
+  "pass": "30ao",
+  "timestamp": "2026-09-30 10:37 IST",
+  "decision": "NO-ROUTE",
+  "rule": "Do not route. Priority 1 needs the remaining VDD_GPIO gap <= 25 mm. Priority 2 needs some other non-GND gap <= 20 mm. Neither is true on the live board. GND zone islands ignored.",
+  "vdd_gpio_remaining_gap_mm": 27.034,
+  "shortest_other": {
+    "net": "P0.31",
+    "distance_mm": 29.078
+  },
+  "five": [
+    {
+      "rank": 1,
+      "net": "VDD_GPIO",
+      "distance_mm": 27.034,
+      "protected_keep": false,
+      "island_a": {
+        "closest_copper_mm": [
+          74.519,
+          39.306
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "item": "pad U2.5",
+        "pads": [
+          "pad C11.1",
+          "pad J8.1",
+          "pad J9.5",
+          "pad TP10.1",
+          "pad J10.5",
+          "pad J13.18",
+          "pad R14.2",
+          "pad J11.3"
+        ],
+        "anchor_mm": [
+          77.799,
+          28.13
+        ],
+        "island_layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "primitives": 90
+      },
+      "island_b": {
+        "closest_copper_mm": [
+          58.859,
+          61.343
+        ],
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "item": "pad J18.9",
+        "pads": [
+          "pad J18.9",
+          "pad J12.17",
+          "pad J12.18"
+        ],
+        "anchor_mm": [
+          49.941,
+          73.375
+        ],
+        "island_layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "primitives": 8
+      },
+      "same_layer": "F.Cu",
+      "same_layer_gap_mm": 27.034,
+      "blocker": "remaining VDD_GPIO open is 27.034 mm, over the 25 mm cap, so priority 1 does not qualify; copper gap 27.034 mm is greater than 12 mm; one via (0.60 mm OD) cannot bridge this XY gap; straight 0.18 mm track on F.Cu hits ENABLE [foreign] worst -0.180 mm, n=2 (F.Cu (72.86,40.95)-(72.86,42.40) @-0.180; pad U2.3 @-0.090); SIM_CLK [foreign] worst -0.180 mm, n=4 (F.Cu (71.68,44.00)-(70.90,44.00) @-0.180; F.Cu (71.68,44.00)-(71.68,42.40) @-0.180); P0.20 [foreign] worst -0.180 mm, n=1 (F.Cu (55.78,60.90)-(74.16,60.90) @-0.180)"
+    },
+    {
+      "rank": 2,
+      "net": "P0.31",
+      "distance_mm": 29.078,
+      "protected_keep": false,
+      "island_a": {
+        "closest_copper_mm": [
+          102.501,
+          75.25
+        ],
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "item": "pad J13.16",
+        "pads": [
+          "pad J13.16"
+        ],
+        "anchor_mm": [
+          102.1,
+          76.0
+        ],
+        "island_layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "primitives": 1
+      },
+      "island_b": {
+        "closest_copper_mm": [
+          115.599,
+          49.29
+        ],
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "item": "pad J11.2",
+        "pads": [
+          "pad J11.2"
+        ],
+        "anchor_mm": [
+          116.0,
+          48.54
+        ],
+        "island_layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "primitives": 1
+      },
+      "same_layer": "F.Cu",
+      "same_layer_gap_mm": 29.078,
+      "blocker": "29.078 mm is over the 20 mm cap for any non-VDD_GPIO gap (remaining VDD_GPIO is 27.034 mm, already over 25 mm); copper gap 29.078 mm is greater than 12 mm; one via (0.60 mm OD) cannot bridge this XY gap; straight 0.18 mm track on F.Cu hits P0.22 [protected] worst -0.294 mm, n=2 (via@104.5,71.5 @-0.294; F.Cu (104.50,71.50)-(106.50,71.50) @-0.084); GND [foreign] worst -0.216 mm, n=1 (via@110.0,60.0 @-0.216); VDD_GPIO [foreign] worst -0.215 mm, n=2 (F.Cu (104.00,67.08)-(107.18,67.08) @-0.215; F.Cu (105.10,51.08)-(116.00,51.08) @-0.215); P0.04 [protected] worst -0.180 mm, n=1 (F.Cu (114.80,52.50)-(108.45,52.50) @-0.180)"
+    },
+    {
+      "rank": 3,
+      "net": "P0.30",
+      "distance_mm": 32.207,
+      "protected_keep": false,
+      "island_a": {
+        "closest_copper_mm": [
+          99.961,
+          75.25
+        ],
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "item": "pad J13.15",
+        "pads": [
+          "pad J13.15"
+        ],
+        "anchor_mm": [
+          99.56,
+          76.0
+        ],
+        "island_layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "primitives": 1
+      },
+      "island_b": {
+        "closest_copper_mm": [
+          115.15,
+          46.85
+        ],
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "item": "pad J11.1",
+        "pads": [
+          "pad J11.1"
+        ],
+        "anchor_mm": [
+          116.0,
+          46.0
+        ],
+        "island_layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "primitives": 1
+      },
+      "same_layer": "F.Cu",
+      "same_layer_gap_mm": 32.207,
+      "blocker": "32.207 mm is over the 20 mm cap for any non-VDD_GPIO gap (remaining VDD_GPIO is 27.034 mm, already over 25 mm); copper gap 32.207 mm is greater than 12 mm; one via (0.60 mm OD) cannot bridge this XY gap; straight 0.18 mm track on F.Cu hits VDD_GPIO [foreign] worst -0.215 mm, n=5 (F.Cu (105.10,67.08)-(105.10,51.08) @-0.215; F.Cu (104.00,67.08)-(107.18,67.08) @-0.215); P0.04 [protected] worst -0.180 mm, n=3 (F.Cu (114.80,52.50)-(108.45,52.50) @-0.180; F.Cu (113.80,49.20)-(113.80,36.80) @-0.098); GND [foreign] worst -0.090 mm, n=1 (pad J15.6 @-0.090)"
+    },
+    {
+      "rank": 4,
+      "net": "P0.14",
+      "distance_mm": 34.038,
+      "protected_keep": false,
+      "island_a": {
+        "closest_copper_mm": [
+          40.623,
+          61.154
+        ],
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "item": "pad J18.2",
+        "pads": [
+          "pad J18.2",
+          "pad J12.15"
+        ],
+        "anchor_mm": [
+          41.05,
+          74.121
+        ],
+        "island_layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "primitives": 14
+      },
+      "island_b": {
+        "closest_copper_mm": [
+          42.136,
+          27.15
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "item": "pad U1.24",
+        "pads": [
+          "pad U1.24"
+        ],
+        "anchor_mm": [
+          42.25,
+          26.75
+        ],
+        "island_layers": [
+          "F.Cu"
+        ],
+        "primitives": 1
+      },
+      "same_layer": "F.Cu",
+      "same_layer_gap_mm": 34.038,
+      "blocker": "34.038 mm is over the 20 mm cap for any non-VDD_GPIO gap (remaining VDD_GPIO is 27.034 mm, already over 25 mm); copper gap 34.038 mm is greater than 12 mm; one via (0.60 mm OD) cannot bridge this XY gap; straight 0.18 mm track on F.Cu hits GND [foreign] worst -0.336 mm, n=8 (via@42.0,29.0 @-0.336; via@42.0,32.0 @-0.310); P0.04 [protected] worst -0.168 mm, n=3 (F.Cu (41.25,46.80)-(37.40,46.80) @-0.168; F.Cu (41.25,42.50)-(41.25,46.80) @-0.168); P0.03 [foreign] worst -0.156 mm, n=4 (via@41.75,41.1 @-0.156; F.Cu (41.75,37.25)-(41.75,41.10) @-0.117); <no-net> [no-net copper] worst -0.090 mm, n=1 (pad U1.127 (no net) @-0.090)"
+    },
+    {
+      "rank": 5,
+      "net": "P0.16",
+      "distance_mm": 34.259,
+      "protected_keep": false,
+      "island_a": {
+        "closest_copper_mm": [
+          41.364,
+          27.15
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "item": "pad U1.26",
+        "pads": [
+          "pad U1.26"
+        ],
+        "anchor_mm": [
+          40.975,
+          23.775
+        ],
+        "island_layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "primitives": 3
+      },
+      "island_b": {
+        "closest_copper_mm": [
+          45.537,
+          61.154
+        ],
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "item": "pad J18.4",
+        "pads": [
+          "pad J18.4",
+          "pad J13.1"
+        ],
+        "anchor_mm": [
+          54.81,
+          71.5
+        ],
+        "island_layers": [
+          "B.Cu",
+          "F.Cu"
+        ],
+        "primitives": 8
+      },
+      "same_layer": "F.Cu",
+      "same_layer_gap_mm": 34.259,
+      "blocker": "34.259 mm is over the 20 mm cap for any non-VDD_GPIO gap (remaining VDD_GPIO is 27.034 mm, already over 25 mm); copper gap 34.259 mm is greater than 12 mm; one via (0.60 mm OD) cannot bridge this XY gap; straight 0.18 mm track on F.Cu hits GND [foreign] worst -0.349 mm, n=8 (via@42.0,32.0 @-0.349; pad U1.103 @-0.090); ENABLE [foreign] worst -0.321 mm, n=7 (via@43.4,45.126 @-0.321; F.Cu (52.00,44.00)-(42.75,44.00) @-0.180); <no-net> [no-net copper] worst -0.074 mm, n=2 (pad U1.105 (no net) @-0.074; pad U1.104 (no net) @0.074); P0.04 [protected] worst 0.068 mm, n=1 (pad U1.100 @0.068)"
+    }
+  ]
+}

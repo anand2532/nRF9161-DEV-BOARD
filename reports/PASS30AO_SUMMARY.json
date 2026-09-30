@@ -1,0 +1,67 @@
+{
+  "pass": "30ao",
+  "timestamp": "2026-09-30 10:37 IST",
+  "decision": "NO-ROUTE",
+  "routed": false,
+  "net": null,
+  "distance_mm": 27.034,
+  "vdd_gpio_remaining_gap_mm": 27.034,
+  "vdd_gpio_cap_mm": 25.0,
+  "vdd_gpio_qualifies": false,
+  "shortest_other_net": "P0.31",
+  "shortest_other_gap_mm": 29.078,
+  "other_cap_mm": 20.0,
+  "other_qualifies": false,
+  "why": "Remaining VDD_GPIO open is 27.034 mm (>25 mm) between F.Cu pad U2.5 (74.519, 39.306) and pad J18.9 (58.859, 61.343). Shortest other non-GND gap is P0.31 29.078 mm (>20 mm). Neither priority qualifies, so no track and no via.",
+  "path": null,
+  "via_used": false,
+  "segments": [],
+  "power_clearance_measured_mm": null,
+  "power_clearance_note": "No copper placed, so POWER/VIN clearance was not measured against a new track.",
+  "unconnected_before": 63,
+  "unconnected_after": 63,
+  "vdd_gpio_opens_before": 1,
+  "vdd_gpio_opens_after": 1,
+  "gnd_islands_before": 12,
+  "gnd_islands_after": 12,
+  "gnd_islands_waived": true,
+  "shorting_items": 0,
+  "clearance": 0,
+  "tracks_crossing": 0,
+  "hole_clearance": 0,
+  "hole_to_hole": 1,
+  "board_sha256": "970576bb9f280c6022d433d06fcb14008be4054859325e405cff46bd0a874f6b",
+  "board_modified": false,
+  "backup": null,
+  "drc_before": "reports/DRC_PASS30AO_BEFORE.json",
+  "drc_mid": null,
+  "drc_after": null,
+  "island_audit_matches_drc": true,
+  "y_7_050_path_not_repeated": true,
+  "y_44_60_pocket_not_used": true,
+  "locked_copper_not_ripped": true,
+  "no_gerbers": true,
+  "no_git_commit": true,
+  "five": [
+    {
+      "net": "VDD_GPIO",
+      "distance_mm": 27.034
+    },
+    {
+      "net": "P0.31",
+      "distance_mm": 29.078
+    },
+    {
+      "net": "P0.30",
+      "distance_mm": 32.207
+    },
+    {
+      "net": "P0.14",
+      "distance_mm": 34.038
+    },
+    {
+      "net": "P0.16",
+      "distance_mm": 34.259
+    }
+  ]
+}

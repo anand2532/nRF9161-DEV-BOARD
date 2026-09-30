@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-30 10:33 IST (Asia/Calcutta) — pass30an VDD_GPIO east KEEP (y=7.050, D3.1 clearance 0.385 mm; unc 63→63; VDD_GPIO opens 2→1; GND islands 11→12 waived). Prior: 2026-09-30 10:28 IST (Asia/Calcutta) — pass30am VDD_GPIO east REVERT (attempt mid: VDD_GPIO opens 2→1, clearance 1 vs D3.1 VIN, GND islands 11→12 waived; restored unc 63→63). Prior: pass30al COEX0 KEEP (unc 64→63; COEX0 opens 1→0; GND islands 11→11). Prior: pass30ak VDD_GPIO shove KEEP (unc headline was 64; VDD_GPIO opens 3→2; GND island 10→11 waived). Prior: pass30aj same geometry REVERT; pass30ac Package A REVERTED; SE column FROZEN (pass30z keep)
+**Review date:** 2026-09-30 10:37 IST (Asia/Calcutta) — pass30ao NO-ROUTE (remaining VDD_GPIO 27.034 mm > 25 mm; shortest other `P0.31` 29.078 mm > 20 mm; unc 63→63, no copper). Prior: 2026-09-30 10:33 IST (Asia/Calcutta) — pass30an VDD_GPIO east KEEP (y=7.050, D3.1 clearance 0.385 mm; unc 63→63; VDD_GPIO opens 2→1; GND islands 11→12 waived). Prior: 2026-09-30 10:28 IST (Asia/Calcutta) — pass30am VDD_GPIO east REVERT (attempt mid: VDD_GPIO opens 2→1, clearance 1 vs D3.1 VIN, GND islands 11→12 waived; restored unc 63→63). Prior: pass30al COEX0 KEEP (unc 64→63; COEX0 opens 1→0; GND islands 11→11). Prior: pass30ak VDD_GPIO shove KEEP (unc headline was 64; VDD_GPIO opens 3→2; GND island 10→11 waived). Prior: pass30aj same geometry REVERT; pass30ac Package A REVERTED; SE column FROZEN (pass30z keep)
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -1211,3 +1211,21 @@ Copper-only (no placement): P0.11 header stubs → P0.10/P0.17 → MAGPIO/MIPI/A
 **Unconnected:** 64→64. **VDD_GPIO opens:** 3→2. **GND islands:** 10→11 (waived).
 
 **Artifacts:** `reports/DRC_PASS30AK_{BEFORE,MID,AFTER}.json`, `reports/PASS30AK_SUMMARY.{md,json}`, `scripts/final_pass30ak.py`, backup `.mcp-backups/pass30ak/pre-edit.kicad_pcb`
+
+## Pass30ao — island remeasure, no qualifying gap — 2026-09-30 10:37 IST
+
+**Decision:** **NO-ROUTE**. No copper. No backup. Board bytes unchanged.
+
+**Live remeasure** (`reports/DRC_PASS30AO_BEFORE.json`, island copper matches DRC opens): unconnected 63, VDD_GPIO opens 1, GND islands 12 (ignored for ranking), short/clearance/crossing/hole_clearance 0/0/0, hole_to_hole 1.
+
+**Priority 1:** the remaining VDD_GPIO open is **27.034 mm** on F.Cu, pad U2.5 (74.519, 39.306) ↔ pad J18.9 (58.859, 61.343). Over the 25 mm cap, so it was not closed. The locked y=7.050 path was not repeated.
+
+**Priority 2:** shortest other non-GND gap is `P0.31` **29.078 mm**, over the 20 mm cap. No other non-GND pair is ≤ 20 mm.
+
+**POWER clearance:** not measured — no track was added.
+
+**Five shortest non-GND gaps:** VDD_GPIO 27.034, P0.31 29.078, P0.30 32.207, P0.14 34.038, P0.16 34.259. Detail: `reports/PASS30AO_SHORTLIST.md`.
+
+**Protect:** locked VDD_GPIO (y=7.050 and the U1.12 polyline), COEX0, DEC0 bridge, P0.10/P0.12 vias, P0.15 west wrap, Class C, P0.22, P0.19, Stage-A VDD2, SIM walls, y=44.60 pocket, RF keepout, U1 and headers all untouched. No Gerbers. No git commit.
+
+**Artifacts:** `reports/PASS30AO_SUMMARY.{md,json}`, `reports/PASS30AO_SHORTLIST.{md,json}`, `reports/DRC_PASS30AO_BEFORE.json`, `scripts/final_pass30ao.py`
