@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-23 19:01 IST (Asia/Calcutta) — pass30ac Package A REVERTED; pass30ad B'' proposals; SE column FROZEN (pass30z keep, unc=64)
+**Review date:** 2026-09-30 10:05 IST (Asia/Calcutta) — pass30ak VDD_GPIO shove KEEP (unc headline still 64; VDD_GPIO opens 3→2; GND island 10→11 waived). Prior: pass30aj same geometry REVERT; pass30ac Package A REVERTED; SE column FROZEN (pass30z keep)
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,8 +14,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **64** | `reports/DRC_PASS30AC_AFTER.json` (live `kicad-cli`); pass30z Class C KEEP (−3 RF); pass30ab/ac REVERT; Stage A+pass30i–30u+P0.22/P0.19+Class C kept
-| **shorting_items** | **0** | Same JSON |
+| **unconnected_items** | **64** | `reports/DRC_PASS30AK_AFTER.json` (live `kicad-cli` 9.0.2). Headline unchanged: VDD_GPIO opens 3→2, one extra F.Cu GND zone island 10→11 waived. Prior pass30ac/pass30z Class C + Stage A + P0.22/P0.19 kept
+| **shorting_items** | **0** | `reports/DRC_PASS30AK_AFTER.json` |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
 | via_dangling | **78** | `DRC_PASS30F_AFTER.json` |
@@ -42,6 +42,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `DRC_PASS30K_AFTER.json` | 75 | Prior — VIN_F closed; Stage A+pass30i/30j kept |
 | `DRC_PASS30J_AFTER.json` | 76 | Prior — P0.08→J12.9 stitch |
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
+
+**Pass delta (pass30ak):** Replay of the pass30aj shove, **KEEP**. Same 0.18 mm F.Cu polyline (40.170, 19.126)→(40.170, 20.200)→(45.900, 20.200)→(45.900, 25.400)→(47.550, 25.400)→(47.550, 31.500)→(44.000, 31.500). Shoved only P0.12 and P0.10 (dangling vias x=47.4→47.0) and DEC0 (F.Cu gap near x=47.55 bridged on B.Cu). P0.08 and P0.11 not shoved. P0.15 segments 42→42. New gate waives the extra F.Cu GND zone island. short/clearance/crossing/hole_clearance 0. VDD_GPIO opens 3→2. No non-GND net gained an open. Headline unconnected 64→64 because GND islands 10→11. No U1/header move. No COEX0. No Gerbers. Details: `reports/PASS30AK_SUMMARY.md`.
 
 **Pass delta (pass30ai):** VDD_GPIO one jog, **REVERT**. Live via island VDD_GPIO F.Cu @(40.170, 19.126) dia 0.8/0.4 → U1.12 (44.000, 31.500). Three 0.18 mm F.Cu segments: (40.170,19.126)→(45.500,20.150)→(45.500,26.050)→(44.000,31.500). Segments 1–2 clear P0.16 and the P0.15 keep. Landing segment tracks_crossing=8 (P0.08, P0.10, P0.11, P0.12, DEC0×4). short/clearance/hole 0. Unconnected 64→64 (VDD_GPIO 3→2 offset by GND zone islands 10→11). No via. Full restore to pre-edit. No Gerbers. Details: `reports/PASS30AI_SUMMARY.md`.
 
@@ -1191,3 +1193,15 @@ Copper-only (no placement): P0.11 header stubs → P0.10/P0.17 → MAGPIO/MIPI/A
 **Unconnected:** 64→64. **GND islands:** 10→10 after revert.
 
 **Artifacts:** `reports/DRC_PASS30AJ_{BEFORE,MID,AFTER}.json`, `reports/PASS30AJ_SUMMARY.{md,json}`, `scripts/final_pass30aj.py`, backup `.mcp-backups/pass30aj/pre-edit.kicad_pcb`
+
+## Pass30ak — replay pass30aj VDD_GPIO shove, GND islands waived — 2026-09-30 10:05 IST
+
+**Decision:** **KEEP**. Exact replay of `scripts/final_pass30aj.py` (`apply_shove` + `add_poly`). Not a new corridor. West not attempted. x=45.5 spine not used.
+
+**Edit:** 0.18 mm F.Cu polyline (40.170, 19.126)→(40.170, 20.200)→(45.900, 20.200)→(45.900, 25.400)→(47.550, 25.400)→(47.550, 31.500)→(44.000, 31.500). Shoved only P0.12 and P0.10 dangling vias (47.4, 27.5)/(47.4, 28.5) → (47.0, 27.5)/(47.0, 28.5). DEC0: F.Cu gap around the VDD drop at x=47.55, B.Cu bridge (46.950, 30.900)–(48.100, 30.900), dangling via parked at (45.400, 30.550). P0.08 and P0.11 not on this polyline, not shoved. P0.15 segments 42→42.
+
+**Gate (GND islands waived):** short/clearance/crossing/hole_clearance = 0/0/0/0. VDD_GPIO opens 3→2. No non-GND net gained an open. The extra F.Cu GND zone island (10→11) is waived and was not a revert reason. Copper diff vs pre-edit touches only DEC0, P0.10, P0.12, and VDD_GPIO. Footprints unchanged (U1 stays at (36, 32)).
+
+**Unconnected:** 64→64. **VDD_GPIO opens:** 3→2. **GND islands:** 10→11 (waived).
+
+**Artifacts:** `reports/DRC_PASS30AK_{BEFORE,MID,AFTER}.json`, `reports/PASS30AK_SUMMARY.{md,json}`, `scripts/final_pass30ak.py`, backup `.mcp-backups/pass30ak/pre-edit.kicad_pcb`
