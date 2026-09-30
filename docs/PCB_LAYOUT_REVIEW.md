@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-30 10:28 IST (Asia/Calcutta) — pass30am VDD_GPIO east REVERT (attempt mid: VDD_GPIO opens 2→1, clearance 1 vs D3.1 VIN, GND islands 11→12 waived; restored unc 63→63). Prior: pass30al COEX0 KEEP (unc 64→63; COEX0 opens 1→0; GND islands 11→11). Prior: pass30ak VDD_GPIO shove KEEP (unc headline was 64; VDD_GPIO opens 3→2; GND island 10→11 waived). Prior: pass30aj same geometry REVERT; pass30ac Package A REVERTED; SE column FROZEN (pass30z keep)
+**Review date:** 2026-09-30 10:33 IST (Asia/Calcutta) — pass30an VDD_GPIO east KEEP (y=7.050, D3.1 clearance 0.385 mm; unc 63→63; VDD_GPIO opens 2→1; GND islands 11→12 waived). Prior: 2026-09-30 10:28 IST (Asia/Calcutta) — pass30am VDD_GPIO east REVERT (attempt mid: VDD_GPIO opens 2→1, clearance 1 vs D3.1 VIN, GND islands 11→12 waived; restored unc 63→63). Prior: pass30al COEX0 KEEP (unc 64→63; COEX0 opens 1→0; GND islands 11→11). Prior: pass30ak VDD_GPIO shove KEEP (unc headline was 64; VDD_GPIO opens 3→2; GND island 10→11 waived). Prior: pass30aj same geometry REVERT; pass30ac Package A REVERTED; SE column FROZEN (pass30z keep)
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,8 +14,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **63** | `reports/DRC_PASS30AM_AFTER.json` (live `kicad-cli` 9.0.2). pass30am REVERT: mid clearance 1 (D3.1 VIN, POWER 0.150 mm, actual 0.135 mm). VDD_GPIO opens stayed 2. GND islands 11. Prior pass30al COEX0 kept
-| **shorting_items** | **0** | `reports/DRC_PASS30AM_AFTER.json` |
+| **unconnected_items** | **63** | `reports/DRC_PASS30AN_AFTER.json` (live `kicad-cli` 9.0.2). pass30an KEEP: VDD_GPIO opens 2→1. GND islands 11→12 (waived). D3.1 clearance 0.385 mm at y=7.050. Prior pass30am reverted
+| **shorting_items** | **0** | `reports/DRC_PASS30AN_AFTER.json` |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
 | via_dangling | **78** | `DRC_PASS30F_AFTER.json` |
@@ -42,6 +42,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `DRC_PASS30K_AFTER.json` | 75 | Prior — VIN_F closed; Stage A+pass30i/30j kept |
 | `DRC_PASS30J_AFTER.json` | 76 | Prior — P0.08→J12.9 stitch |
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
+
+**Pass delta (pass30an):** VDD_GPIO east island replay of pass30am, **KEEP**. Same corners except the horizontal moved north off y=7.300. Pre-commit measured clearance of the 0.18 mm horizontal to pad D3.1 [VIN] (75.213, 8.000) is 0.385 mm at y=7.050 (requirement 0.20 mm; y=6.800 not used). Segments: (71.300, 8.000)→(71.300, 7.050)→(77.300, 7.050)→(81.500, 13.500)→(86.510, 26.000). VDD_GPIO opens 2→1. Headline unconnected 63→63. short/clearance/crossing/hole_clearance 0/0/0/0. hole_to_hole 1→1. GND islands 11→12 (waived). Locked U1.12 polyline, COEX0, DEC0 bridge, P0.10/P0.12 x=47.0 not ripped. No U1/header move. No y=44.60 pocket. x>24.2. No Gerbers. Details: `reports/PASS30AN_SUMMARY.md`.
 
 **Pass delta (pass30am):** VDD_GPIO east island, **REVERT** (one attempt). Shortest remaining non-GND gap 17.626 mm (F.Cu y=32 trunk ↔ B.Cu x=70 riser). Straight B.Cu hits VIN_F / P0.08 / COEX2; COEX2 at x=72 walls a B.Cu hop. Four 0.18 mm F.Cu segments, no via: (71.300, 8.000)→(71.300, 7.300)→(77.300, 7.300)→(81.500, 13.500)→(86.510, 26.000), from the existing via (71.300, 8.000) onto the R14 junction. Mid DRC: VDD_GPIO opens 2→1, short/crossing/hole_clearance 0, hole_to_hole 1→1, GND islands 11→12 (waived) but clearance=1 — POWER netclass 0.150 mm vs pad D3.1 [VIN] (75.213, 8.000), actual 0.135 mm on the y=7.300 horizontal. Full restore. Final unconnected 63→63, short/clearance/crossing/hole_clearance 0/0/0/0. Locked U1.12 polyline, COEX0, DEC0 bridge, P0.10/P0.12 x=47.0 not ripped. No U1/header move. No y=44.60 pocket. x>24.2. No second attempt. No Gerbers. Details: `reports/PASS30AM_SUMMARY.md`.
 

@@ -1,0 +1,190 @@
+{
+  "pass": "30an",
+  "timestamp": "2026-09-30 10:33 IST",
+  "decision": "KEEP",
+  "routed": true,
+  "net": "VDD_GPIO",
+  "via_used": false,
+  "y_used": 7.05,
+  "y_preferred": 7.05,
+  "y_north_limit": 6.8,
+  "clearance_requirement_mm": 0.2,
+  "measured_clearance_d31_mm": 0.385,
+  "measure": {
+    "pref": {
+      "y": 7.05,
+      "d31_horizontal_mm": 0.385,
+      "d31_route_mm": 0.385,
+      "d31_route_segment": "(71.300,7.050)-(77.300,7.050)",
+      "d31_pad_mm": [
+        75.2125,
+        8.0
+      ],
+      "min_power_vin_route_mm": 0.385,
+      "min_power_vin_route": {
+        "segment": "(71.300,7.050)-(77.300,7.050)",
+        "net": "VIN",
+        "item": "pad D3.1 [VIN]"
+      },
+      "min_power_vin_horizontal_mm": 0.385,
+      "min_power_vin_horizontal": {
+        "net": "VIN",
+        "item": "pad D3.1 [VIN]"
+      },
+      "meets_0_20": true
+    },
+    "limit": null,
+    "chosen_y": 7.05,
+    "d31_horizontal_mm": 0.385
+  },
+  "gap_mm": 17.626,
+  "replay_of": "pass30am",
+  "change": "horizontal y=7.300 -> chosen y, vertical retied, other corners kept",
+  "segments": [
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        71.3,
+        8.0
+      ],
+      "end": [
+        71.3,
+        7.05
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        71.3,
+        7.05
+      ],
+      "end": [
+        77.3,
+        7.05
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        77.3,
+        7.05
+      ],
+      "end": [
+        81.5,
+        13.5
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        81.5,
+        13.5
+      ],
+      "end": [
+        86.51,
+        26.0
+      ]
+    }
+  ],
+  "segment_count": 4,
+  "confirmed": {
+    "u1": {
+      "x": 36.0,
+      "y": 32.0
+    },
+    "p015": 42,
+    "vdd_poly": true,
+    "dec0": true,
+    "coex0": true,
+    "p010": true,
+    "p012": true,
+    "moved": [],
+    "p015_after": 42,
+    "vdd_poly_after": true,
+    "dec0_after": true,
+    "coex0_after": true,
+    "p010_after": true,
+    "p012_after": true
+  },
+  "before": {
+    "unconnected_items": 63,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 11,
+    "vdd_gpio_unconnected": 2,
+    "via_dangling": 71,
+    "track_dangling": 13
+  },
+  "mid": {
+    "unconnected_items": 63,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "vdd_gpio_unconnected": 1,
+    "via_dangling": 71,
+    "track_dangling": 13
+  },
+  "after": {
+    "unconnected_items": 63,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "vdd_gpio_unconnected": 1,
+    "via_dangling": 71,
+    "track_dangling": 13
+  },
+  "vdd_gpio_opens": {
+    "before": 2,
+    "mid": 1,
+    "after": 1
+  },
+  "headline_unconnected": {
+    "before": 63,
+    "mid": 63,
+    "after": 63
+  },
+  "gnd_islands": {
+    "before": 11,
+    "mid": 12,
+    "after": 12,
+    "waived": true
+  },
+  "nongnd_gained": {},
+  "hole_to_hole": {
+    "before": 1,
+    "mid": 1,
+    "after": 1
+  },
+  "gate_met": true,
+  "reason": "KEEP. Horizontal at y=7.050 clears D3.1 by 0.385 mm (>= 0.20 mm) and other POWER/VIN copper by 0.385 mm. VDD_GPIO opens 2\u21921. No new short, clearance, crossing, or hole hit. No via. Locked COEX0 and the U1.12 polyline were not ripped.",
+  "protect": {
+    "vdd_gpio_u1_12_polyline": true,
+    "coex0_locked": true,
+    "dec0_bcu_bridge": true,
+    "p010_via_x47": true,
+    "p012_via_x47": true,
+    "p015_segments": {
+      "before": 42,
+      "after": 42
+    },
+    "u1_unmoved": true,
+    "headers_unmoved": true,
+    "y_44_60_pocket": "not used",
+    "min_x": 71.3,
+    "gerbers": false,
+    "git_commit": false
+  }
+}
