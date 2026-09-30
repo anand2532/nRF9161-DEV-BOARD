@@ -1,0 +1,181 @@
+{
+  "pass": "30am",
+  "timestamp": "2026-09-30 10:28 IST",
+  "decision": "REVERT",
+  "routed": true,
+  "net": "VDD_GPIO",
+  "via_used": false,
+  "gap_mm": 17.626,
+  "same_layer_gap_mm": 18.444,
+  "same_layer": "B.Cu",
+  "island_a": {
+    "closest_mm": [
+      75.08,
+      31.808
+    ],
+    "item": "F.Cu (75.14,32.00)-(75.14,39.05)",
+    "layers": [
+      "F.Cu"
+    ]
+  },
+  "island_b": {
+    "closest_mm": [
+      70.036,
+      14.92
+    ],
+    "item": "B.Cu (70.00,8.00)-(70.00,14.80)",
+    "layers": [
+      "B.Cu"
+    ]
+  },
+  "why_not_straight": "Closest copper is cross-layer (F.Cu vs B.Cu). Straight B.Cu between the same-layer points hits VIN_F, P0.08 and COEX2. COEX2's B.Cu vertical at x=72 walls the corridor north of y=24.60, and P0.08 B.Cu at y=30.25 spans x=46.20-78.50. The U1.12 landing was not repeated.",
+  "segments": [
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        71.3,
+        8.0
+      ],
+      "end": [
+        71.3,
+        7.3
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        71.3,
+        7.3
+      ],
+      "end": [
+        77.3,
+        7.3
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        77.3,
+        7.3
+      ],
+      "end": [
+        81.5,
+        13.5
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        81.5,
+        13.5
+      ],
+      "end": [
+        86.51,
+        26.0
+      ]
+    }
+  ],
+  "segment_count": 4,
+  "confirmed": {
+    "u1": {
+      "x": 36.0,
+      "y": 32.0
+    },
+    "p015": 42,
+    "vdd_poly": true,
+    "dec0": true,
+    "coex0": true,
+    "p010": true,
+    "p012": true,
+    "p015_after": 42,
+    "vdd_poly_after": true,
+    "dec0_after": true,
+    "coex0_after": true,
+    "p010_after": true,
+    "p012_after": true,
+    "moved": []
+  },
+  "before": {
+    "unconnected_items": 63,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 11,
+    "vdd_gpio_unconnected": 2,
+    "via_dangling": 71,
+    "track_dangling": 13
+  },
+  "after": {
+    "unconnected_items": 63,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 11,
+    "vdd_gpio_unconnected": 2,
+    "via_dangling": 71,
+    "track_dangling": 13
+  },
+  "vdd_gpio_opens": {
+    "before": 2,
+    "after": 2
+  },
+  "headline_unconnected": {
+    "before": 63,
+    "after": 63
+  },
+  "gnd_islands": {
+    "before": 11,
+    "after": 11,
+    "waived": true
+  },
+  "nongnd_gained": {},
+  "hole_to_hole": {
+    "before": 1,
+    "after": 1
+  },
+  "gate_met": false,
+  "reason": "REVERT. y=7.300 F.Cu horizontal vs pad D3.1 [VIN]: POWER clearance 0.150 mm, actual 0.135 mm. Mid VDD_GPIO opens 2\u21921, no other non-GND net gained an open, short/crossing/hole_clearance 0, hole_to_hole 1\u21921, GND islands 11\u219212 waived. Clearance failed the gate. Board restored to pre-edit. One attempt only.",
+  "protect": {
+    "vdd_gpio_u1_12_polyline": true,
+    "coex0_locked": true,
+    "dec0_bcu_bridge": true,
+    "p010_via_x47": true,
+    "p012_via_x47": true,
+    "p015_segments": {
+      "before": 42,
+      "after": 42
+    },
+    "u1_unmoved": true,
+    "headers_unmoved": true,
+    "y_44_60_pocket": "not used",
+    "min_x": 71.3,
+    "gerbers": false,
+    "git_commit": false
+  },
+  "mid": {
+    "unconnected_items": 63,
+    "shorting_items": 0,
+    "clearance": 1,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "vdd_gpio_unconnected": 1
+  },
+  "clearance_hit": {
+    "rule": "netclass POWER clearance 0.150 mm",
+    "actual_mm": 0.135,
+    "items": [
+      "Pad 1 [VIN] of D3 on F.Cu (75.2125, 8.0)",
+      "Track [VDD_GPIO] F.Cu (71.3, 7.3)-(77.3, 7.3)"
+    ]
+  }
+}

@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-30 10:20 IST (Asia/Calcutta) — pass30al COEX0 KEEP (unc 64→63; COEX0 opens 1→0; GND islands 11→11). Prior: pass30ak VDD_GPIO shove KEEP (unc headline was 64; VDD_GPIO opens 3→2; GND island 10→11 waived). Prior: pass30aj same geometry REVERT; pass30ac Package A REVERTED; SE column FROZEN (pass30z keep)
+**Review date:** 2026-09-30 10:28 IST (Asia/Calcutta) — pass30am VDD_GPIO east REVERT (attempt mid: VDD_GPIO opens 2→1, clearance 1 vs D3.1 VIN, GND islands 11→12 waived; restored unc 63→63). Prior: pass30al COEX0 KEEP (unc 64→63; COEX0 opens 1→0; GND islands 11→11). Prior: pass30ak VDD_GPIO shove KEEP (unc headline was 64; VDD_GPIO opens 3→2; GND island 10→11 waived). Prior: pass30aj same geometry REVERT; pass30ac Package A REVERTED; SE column FROZEN (pass30z keep)
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,8 +14,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **63** | `reports/DRC_PASS30AL_AFTER.json` (live `kicad-cli` 9.0.2). COEX0 opens 1→0. GND islands 11→11. Prior pass30ak VDD_GPIO kept
-| **shorting_items** | **0** | `reports/DRC_PASS30AL_AFTER.json` |
+| **unconnected_items** | **63** | `reports/DRC_PASS30AM_AFTER.json` (live `kicad-cli` 9.0.2). pass30am REVERT: mid clearance 1 (D3.1 VIN, POWER 0.150 mm, actual 0.135 mm). VDD_GPIO opens stayed 2. GND islands 11. Prior pass30al COEX0 kept
+| **shorting_items** | **0** | `reports/DRC_PASS30AM_AFTER.json` |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
 | via_dangling | **78** | `DRC_PASS30F_AFTER.json` |
@@ -42,6 +42,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `DRC_PASS30K_AFTER.json` | 75 | Prior — VIN_F closed; Stage A+pass30i/30j kept |
 | `DRC_PASS30J_AFTER.json` | 76 | Prior — P0.08→J12.9 stitch |
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
+
+**Pass delta (pass30am):** VDD_GPIO east island, **REVERT** (one attempt). Shortest remaining non-GND gap 17.626 mm (F.Cu y=32 trunk ↔ B.Cu x=70 riser). Straight B.Cu hits VIN_F / P0.08 / COEX2; COEX2 at x=72 walls a B.Cu hop. Four 0.18 mm F.Cu segments, no via: (71.300, 8.000)→(71.300, 7.300)→(77.300, 7.300)→(81.500, 13.500)→(86.510, 26.000), from the existing via (71.300, 8.000) onto the R14 junction. Mid DRC: VDD_GPIO opens 2→1, short/crossing/hole_clearance 0, hole_to_hole 1→1, GND islands 11→12 (waived) but clearance=1 — POWER netclass 0.150 mm vs pad D3.1 [VIN] (75.213, 8.000), actual 0.135 mm on the y=7.300 horizontal. Full restore. Final unconnected 63→63, short/clearance/crossing/hole_clearance 0/0/0/0. Locked U1.12 polyline, COEX0, DEC0 bridge, P0.10/P0.12 x=47.0 not ripped. No U1/header move. No y=44.60 pocket. x>24.2. No second attempt. No Gerbers. Details: `reports/PASS30AM_SUMMARY.md`.
 
 **Pass delta (pass30al):** COEX0 landing, **KEEP**. Straight F.Cu from the R4 via island (29.810, 22.000) to the y=38 run hits no-net U1.51 and U1.73; 0.50 mm pad pitch cannot be threaded, and a west F.Cu jog east of x=24.2 crosses MAGPIO/MIPI and ANT/AUX/GPS (AUX reaches x=20.485). One 0.6/0.3 via at (37.000, 30.500). Six 0.18 mm segments: B (31.110, 22.000)→(32.250, 22.000)→(32.250, 30.500)→(37.000, 30.500), F (37.000, 30.500)→(37.000, 35.900)→(38.750, 35.900)→(38.750, 37.250) onto U1.93 (same island as the y=38 run). COEX0 opens 1→0. Headline unconnected 64→63. short/clearance/crossing/hole_clearance 0/0/0/0. hole_to_hole 1→1. GND islands 11→11 (waived). No non-GND net gained an open. P0.15 still 42. VDD_GPIO polyline, DEC0 B.Cu bridge, P0.10/P0.12 x=47.0 not ripped. No U1/header move. No y=44.60 pocket. No Gerbers. Details: `reports/PASS30AL_SUMMARY.md`.
 
