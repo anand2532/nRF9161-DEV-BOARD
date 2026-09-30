@@ -1,0 +1,161 @@
+{
+  "pass": "30bh",
+  "timestamp": "2026-09-30 17:47 IST",
+  "kicad": "9.0.2",
+  "decision": "NO-ROUTE",
+  "stopping_rule": "length",
+  "routed": false,
+  "copper_changed": false,
+  "new_via": false,
+  "segments": [],
+  "segment_count": 0,
+  "net": "P0.07",
+  "git_head": "bed9dc7e7d4542c71796af436ae8c8e2b224188d",
+  "pcb_blob_at_start": "953e98bc52f2b39ffec50928389f4492eff69ce7",
+  "pcb_blob_at_end": "953e98bc52f2b39ffec50928389f4492eff69ce7",
+  "sha1sum_at_start": "828df5c6726a56fb12bc18312f258fc973d582d6",
+  "sha1sum_at_end": "828df5c6726a56fb12bc18312f258fc973d582d6",
+  "expected_head_prefix": "bed9dc7",
+  "expected_blob": "953e98bc52f2b39ffec50928389f4492eff69ce7",
+  "head_matches_expected": true,
+  "blob_matches_expected": true,
+  "end_blob_matches_start": true,
+  "precondition": {
+    "unconnected": 52,
+    "p007_opens": 1,
+    "required_unconnected": 52,
+    "required_p007_opens": 1,
+    "ok": true
+  },
+  "leftover_pad": {
+    "refdes": "J9.2",
+    "center": [
+      116.0,
+      10.54
+    ],
+    "layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "shape": "circle",
+    "size_mm": [
+      1.7,
+      1.7
+    ],
+    "drill_mm": 1.0
+  },
+  "pad_edge_mm": 58.616524,
+  "pad_edge_exact_mm": 58.616524,
+  "pad_edge_layer": "In2.Cu",
+  "over_36_mm": true,
+  "limit_mm": 36.0,
+  "nearest_copper": {
+    "layer": "In2.Cu",
+    "corner_xy": [
+      63.1,
+      37.9
+    ],
+    "track_edge_xy": [
+      63.179941,
+      37.858654
+    ],
+    "pad_edge_xy": [
+      115.245003,
+      10.930486
+    ],
+    "tied_items": [
+      {
+        "clearance_mm": 58.616524,
+        "layer": "In2.Cu",
+        "item": "In2.Cu (48.050,37.900)-(63.100,37.900)",
+        "kind": "trk"
+      },
+      {
+        "clearance_mm": 58.616524,
+        "layer": "In2.Cu",
+        "item": "In2.Cu (63.100,37.900)-(63.100,70.000)",
+        "kind": "trk"
+      }
+    ],
+    "note": "Shared round cap of the locked In2 run at (63.10, 37.90). Both adjoining segments return the same GetClearance."
+  },
+  "closed_island": [
+    "J12.8",
+    "U1.4",
+    "F.Cu (44.000,35.500)-(47.400,35.500)",
+    "via@47.400,35.500",
+    "In2.Cu (62.700,70.000)-(62.700,79.200)",
+    "In2.Cu (47.400,35.500)-(48.050,35.500)",
+    "In2.Cu (48.050,37.900)-(63.100,37.900)",
+    "In2.Cu (63.100,37.900)-(63.100,70.000)",
+    "In2.Cu (25.200,79.200)-(25.200,76.000)",
+    "In2.Cu (63.100,70.000)-(62.700,70.000)",
+    "In2.Cu (25.200,76.000)-(23.780,76.000)",
+    "In2.Cu (48.050,35.500)-(48.050,37.900)",
+    "In2.Cu (62.700,79.200)-(25.200,79.200)"
+  ],
+  "foreign_clearance_mm": null,
+  "power_clearance_mm": null,
+  "whole_segment_crossing_count": 0,
+  "crossing_note": "No segments were laid. Crossing count is 0. No route was attempted.",
+  "drc_before": {
+    "unconnected_items": 52,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "p019_unconnected": 0,
+    "p007_unconnected": 1
+  },
+  "drc_after": {
+    "unconnected_items": 52,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "p019_unconnected": 0,
+    "p007_unconnected": 1
+  },
+  "p007_opens_before": 1,
+  "p007_opens_after": 1,
+  "unconnected_before": 52,
+  "unconnected_after": 52,
+  "short": 0,
+  "clearance": 0,
+  "crossing": 0,
+  "hole": 0,
+  "hole_to_hole": 1,
+  "gnd_islands": 12,
+  "locked_protect": {
+    "p016": true,
+    "p017": true,
+    "p019": true,
+    "p020": true,
+    "sim_clk": true,
+    "sim_rst_in1": true,
+    "sim_rst_neck": true,
+    "sim_rst_via": true,
+    "p000": true
+  },
+  "locked_intact": true,
+  "p005_via": {
+    "net": "P0.05",
+    "xy": [
+      47.4,
+      36.5
+    ],
+    "width_mm": 0.6,
+    "drill_mm": 0.3
+  },
+  "p005_untouched": true,
+  "other_nets_touched": false,
+  "backup": null,
+  "gerbers": false,
+  "commit": false
+}
