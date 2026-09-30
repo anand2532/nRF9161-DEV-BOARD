@@ -1179,3 +1179,15 @@ Copper-only (no placement): P0.11 header stubs → P0.10/P0.17 → MAGPIO/MIPI/A
 **Unconnected:** 64→64. short/clearance/crossing after REVERT: 0/0/0. Corridor still free.
 
 **Artifacts:** `reports/PASS30AG_SUMMARY.md`, `reports/PASS30AG_SUMMARY.json`, `reports/DRC_PASS30AG_BEFORE.json`, `reports/DRC_PASS30AG_MID_SIM_RST.json`, `reports/DRC_PASS30AG_AFTER.json`, `scripts/final_pass30ag.py`
+
+## Pass30aj — VDD_GPIO to U1.12, one shove (2026-09-30 IST)
+
+**Decision:** **REVERT**. Path: **shove** (west not attempted — the shove does not enter the P0.15 keep). The pass30ai east spine at x=45.5 was not repeated. Straight line not used.
+
+**Edit (reverted):** 0.18 mm F.Cu polyline (40.170, 19.126)→(40.170, 20.200)→(45.900, 20.200)→(45.900, 25.400)→(47.550, 25.400)→(47.550, 31.500)→(44.000, 31.500). Shoved only P0.12 and P0.10 (dangling vias 47.4→47.0) and DEC0 (F gap around x=47.55 bridged on B.Cu; dangling via parked at (45.40, 30.55)). P0.08 and P0.11 not on this polyline, not shoved. P0.15 segments 42→42.
+
+**Gate:** short/clearance/crossing/hole_clearance = 0/0/0/0. VDD_GPIO opens 3→2 (U1.12 was reached) but a new F.Cu GND zone island (10→11) offset it, so headline unconnected stayed 64→64. The 186 mm² F.Cu GND pour (stitch via @(50, 10)) is split by any F exit from the via island. Full byte restore.
+
+**Unconnected:** 64→64. **GND islands:** 10→10 after revert.
+
+**Artifacts:** `reports/DRC_PASS30AJ_{BEFORE,MID,AFTER}.json`, `reports/PASS30AJ_SUMMARY.{md,json}`, `scripts/final_pass30aj.py`, backup `.mcp-backups/pass30aj/pre-edit.kicad_pcb`

@@ -1,0 +1,313 @@
+{
+  "pass": "30aj",
+  "timestamp": "2026-09-30 10:03 IST",
+  "decision": "REVERT",
+  "path": "shove",
+  "west_attempted": false,
+  "west_skipped_reason": "shove geometry does not enter the P0.15 keep (x=41.75, y=23.10-26.75); west approach not used",
+  "east_spine_x45_5": false,
+  "net": "VDD_GPIO",
+  "via_used_for_vdd": false,
+  "confirmed": {
+    "via": {
+      "net": "VDD_GPIO",
+      "x": 40.17,
+      "y": 19.126,
+      "dia": 0.8,
+      "drill": 0.4
+    },
+    "u1": {
+      "x": 36.0,
+      "y": 32.0
+    },
+    "pad12": {
+      "net": "VDD_GPIO",
+      "x": 44.0,
+      "y": 31.5,
+      "size": [
+        0.8,
+        0.3
+      ],
+      "bbox": [
+        43.6,
+        31.35,
+        44.4,
+        31.65
+      ],
+      "on_f": true
+    }
+  },
+  "segments": [
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        40.17,
+        19.126
+      ],
+      "end": [
+        40.17,
+        20.2
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        40.17,
+        20.2
+      ],
+      "end": [
+        45.9,
+        20.2
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        45.9,
+        20.2
+      ],
+      "end": [
+        45.9,
+        25.4
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        45.9,
+        25.4
+      ],
+      "end": [
+        47.55,
+        25.4
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        47.55,
+        25.4
+      ],
+      "end": [
+        47.55,
+        31.5
+      ]
+    },
+    {
+      "layer": "F.Cu",
+      "width_mm": 0.18,
+      "start": [
+        47.55,
+        31.5
+      ],
+      "end": [
+        44.0,
+        31.5
+      ]
+    }
+  ],
+  "shove": {
+    "path": "shove",
+    "nets": [
+      {
+        "net": "P0.12",
+        "action": "shorten F stub and move dangling via west",
+        "from": [
+          47.4,
+          27.5
+        ],
+        "to": [
+          47.0,
+          27.5
+        ]
+      },
+      {
+        "net": "P0.10",
+        "action": "shorten F stub and move dangling via west",
+        "from": [
+          47.4,
+          28.5
+        ],
+        "to": [
+          47.0,
+          28.5
+        ]
+      },
+      {
+        "net": "DEC0",
+        "action": "open F.Cu gap at the VDD drop; bridge on B.Cu; park the dangling via off the gap",
+        "removed_coincident_f_horizontals": 4,
+        "f_left": [
+          [
+            44.0,
+            31.0
+          ],
+          [
+            46.95,
+            31.0
+          ],
+          [
+            46.95,
+            30.9
+          ]
+        ],
+        "b_bridge": [
+          [
+            46.95,
+            30.9
+          ],
+          [
+            48.1,
+            30.9
+          ]
+        ],
+        "f_right": [
+          [
+            48.1,
+            30.9
+          ],
+          [
+            48.1,
+            31.0
+          ],
+          [
+            48.72,
+            31.0
+          ]
+        ],
+        "vias": [
+          [
+            46.95,
+            30.9
+          ],
+          [
+            48.1,
+            30.9
+          ]
+        ],
+        "dangling_via_from": [
+          47.8,
+          31.2
+        ],
+        "dangling_via_to": [
+          45.4,
+          30.55
+        ],
+        "dangling_track": [
+          [
+            45.4,
+            31.0
+          ],
+          [
+            45.4,
+            30.55
+          ]
+        ]
+      }
+    ],
+    "not_shoved": [
+      "P0.08",
+      "P0.11",
+      "P0.15"
+    ]
+  },
+  "unconnected_before": 64,
+  "unconnected_mid": 64,
+  "unconnected_after": 64,
+  "unconnected_delta_mid": 0,
+  "gnd_zone_islands_before": 10,
+  "gnd_zone_islands_mid": 11,
+  "gnd_zone_islands_after": 10,
+  "vdd_gpio_unconnected_before": 3,
+  "vdd_gpio_unconnected_mid": 2,
+  "gate": {
+    "clean_short_clear_cross_hole": true,
+    "unconnected_drop_at_least_1": false,
+    "gnd_islands_not_increased": false,
+    "p015_unchanged": true,
+    "met": false
+  },
+  "drc_mid": {
+    "unconnected_items": 64,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 11,
+    "vdd_gpio_unconnected": 2
+  },
+  "drc_after": {
+    "unconnected_items": 64,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 10,
+    "vdd_gpio_unconnected": 3
+  },
+  "p015_segments_before": 42,
+  "p015_segments_mid": 42,
+  "gnd_f_outlines_before": 15,
+  "gnd_f_outlines_mid": 16,
+  "gnd_outline_only_after": [
+    {
+      "area_mm2": 19.682,
+      "bbox": [
+        41.08,
+        20.54,
+        47.21,
+        27.16
+      ]
+    },
+    {
+      "area_mm2": 131.562,
+      "bbox": [
+        39.97,
+        3.74,
+        53.31,
+        25.06
+      ]
+    },
+    {
+      "area_mm2": 6921.852,
+      "bbox": [
+        0.5,
+        0.5,
+        119.5,
+        79.5
+      ]
+    }
+  ],
+  "gnd_outline_only_before": [
+    {
+      "area_mm2": 185.979,
+      "bbox": [
+        37.59,
+        3.74,
+        53.31,
+        27.16
+      ]
+    },
+    {
+      "area_mm2": 6925.47,
+      "bbox": [
+        0.5,
+        0.5,
+        119.5,
+        79.5
+      ]
+    }
+  ],
+  "hits": [],
+  "revert_reason": "unconnected did not drop (VDD_GPIO open closed but a new F.Cu GND zone island offset it) and/or short/clear/cross/hole not all zero",
+  "backup": "/workspace/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/pass30aj/pre-edit.kicad_pcb",
+  "backup_sha256": "cb0addfddd13cba30dc3cbb0e32dd24cc84574d086ae541ae0e0e2d7cc272f40",
+  "board_sha256_after": "cb0addfddd13cba30dc3cbb0e32dd24cc84574d086ae541ae0e0e2d7cc272f40"
+}
