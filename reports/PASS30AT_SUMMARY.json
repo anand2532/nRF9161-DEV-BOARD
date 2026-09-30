@@ -1,0 +1,157 @@
+{
+  "pass": "30at",
+  "timestamp_ist": "2026-09-30 11:27 IST",
+  "decision": "NO-ROUTE",
+  "routed": false,
+  "board_modified": false,
+  "backup": null,
+  "script": null,
+  "net": "P0.30",
+  "leftover_name": "U1.88 \u2194 locked pass30as (J13.15 / J11.1)",
+  "leftover_refs": [
+    "U1.88",
+    "J13.15",
+    "J11.1"
+  ],
+  "gap_mm": 64.776,
+  "gap_kind": "copper-edge via ring to locked F.Cu track",
+  "pad_edge_u1_88_to_locked_track_mm": 65.303,
+  "cap_mm": 25.0,
+  "straight_line_not_used": true,
+  "straight_line_hits": [
+    {
+      "net": "SIM_1V8",
+      "clearance_mm": -0.29,
+      "count": 10,
+      "item": "F.Cu (75.52,44.00)-(75.52,46.00)"
+    },
+    {
+      "net": "COEX2",
+      "clearance_mm": -0.268,
+      "count": 2,
+      "item": "via@37.75,41.1"
+    },
+    {
+      "net": "SIM_VCC",
+      "clearance_mm": -0.215,
+      "count": 5,
+      "item": "F.Cu (80.65,33.54)-(80.65,46.00)"
+    },
+    {
+      "net": "VDD2",
+      "clearance_mm": -0.215,
+      "count": 1,
+      "item": "F.Cu (61.80,42.00)-(61.80,45.10)",
+      "power": true
+    },
+    {
+      "net": "COEX0",
+      "clearance_mm": -0.187,
+      "count": 2,
+      "item": "via@38.75,41.1"
+    },
+    {
+      "net": "ENABLE",
+      "clearance_mm": -0.18,
+      "count": 3,
+      "item": "F.Cu (52.00,44.00)-(52.00,40.95)"
+    },
+    {
+      "net": "SIM_CLK_C",
+      "clearance_mm": -0.18,
+      "count": 2,
+      "item": "F.Cu (99.19,45.54)-(99.19,46.67)"
+    },
+    {
+      "net": "VDD_GPIO",
+      "clearance_mm": -0.18,
+      "count": 1,
+      "item": "F.Cu (70.44,41.55)-(54.44,61.05)",
+      "power": true
+    },
+    {
+      "net": "P0.03",
+      "clearance_mm": -0.18,
+      "count": 2,
+      "item": "F.Cu (41.75,74.40)-(41.75,37.25)"
+    },
+    {
+      "net": "SIM_CD",
+      "clearance_mm": -0.18,
+      "count": 1,
+      "item": "F.Cu (90.00,52.04)-(90.00,36.00)"
+    },
+    {
+      "net": "P0.02",
+      "clearance_mm": -0.18,
+      "count": 2,
+      "item": "F.Cu (40.75,41.10)-(40.75,43.50)"
+    },
+    {
+      "net": "SIM_IO",
+      "clearance_mm": -0.18,
+      "count": 1,
+      "item": "F.Cu (84.00,58.60)-(84.00,36.00)"
+    },
+    {
+      "net": "SIM_CLK",
+      "clearance_mm": -0.18,
+      "count": 4,
+      "item": "F.Cu (70.90,44.00)-(70.90,42.40)"
+    },
+    {
+      "net": "P0.00",
+      "clearance_mm": -0.18,
+      "count": 3,
+      "item": "F.Cu (39.75,41.10)-(6.00,76.00)"
+    },
+    {
+      "net": "GND",
+      "clearance_mm": -0.048,
+      "count": 4,
+      "item": "pad J7.SH"
+    },
+    {
+      "net": "SIM_RST_C",
+      "clearance_mm": -0.041,
+      "count": 2,
+      "item": "pad J7.C2"
+    }
+  ],
+  "nearest_blocker": {
+    "net": "SIM_1V8",
+    "clearance_mm": -0.29,
+    "item": "F.Cu (75.52,44.00)-(75.52,46.00)"
+  },
+  "unconnected_before": 60,
+  "unconnected_after": 60,
+  "p030_opens_before": 1,
+  "p030_opens_after": 1,
+  "p031_opens": 1,
+  "gnd_islands": 12,
+  "shorting_items": 0,
+  "clearance": 0,
+  "tracks_crossing": 0,
+  "hole_clearance": 0,
+  "hole_to_hole": 1,
+  "drc_source": "reports/DRC_PASS30AS_AFTER.json plus live GetUnconnectedCount 60; board bytes not edited",
+  "connector_shortlist": [
+    "P0.24",
+    "P0.23",
+    "P0.18",
+    "P0.21",
+    "P0.17"
+  ],
+  "connector_shortlist_pad_edge_mm": [
+    49.625,
+    53.192,
+    59.678,
+    59.99,
+    62.907
+  ],
+  "connector_pairs_total": 11,
+  "p014_started": false,
+  "p031_retried": false,
+  "no_gerbers": true,
+  "no_git_commit": true
+}

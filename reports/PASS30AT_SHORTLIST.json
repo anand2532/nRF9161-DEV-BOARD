@@ -1,0 +1,646 @@
+{
+  "pass": "30at",
+  "timestamp_ist": "2026-09-30 11:27 IST",
+  "decision": "NO-ROUTE",
+  "rule": "Gap of the remaining P0.30 open is over 25 mm, so no route. Five shortest non-GND opens whose both islands have only connector pads (ref J*, no U1, no passives). Ranked by pad-edge. GND islands not ranked.",
+  "filter": "Both islands have at least one pad and every pad ref starts with J. Islands that include U1 or any non-connector pad are excluded from the five.",
+  "island_audit_matches_drc": true,
+  "connector_pairs_total": 11,
+  "next_after_five": {
+    "net": "P0.12",
+    "pad_edge_mm": 93.559,
+    "pads": [
+      "J12.13",
+      "J16.3"
+    ]
+  },
+  "five": [
+    {
+      "rank": 1,
+      "net": "P0.24",
+      "pad_edge_mm": 49.625,
+      "copper_edge_mm": 49.625,
+      "copper_note": null,
+      "layer": "F.Cu",
+      "a": {
+        "ref": "J10.4",
+        "layers": "B.Cu+F.Cu",
+        "xy": [
+          116.0,
+          35.62
+        ]
+      },
+      "b": {
+        "ref": "J13.9",
+        "layers": "B.Cu+F.Cu",
+        "xy": [
+          84.32,
+          76.0
+        ]
+      },
+      "chord_a": [
+        115.461,
+        36.277
+      ],
+      "chord_b": [
+        84.859,
+        75.343
+      ],
+      "blocks": [
+        {
+          "net": "VDD_GPIO",
+          "clearance_mm": -0.215,
+          "count": 2,
+          "item": "F.Cu (114.40,38.16)-(114.40,31.08)",
+          "power": true
+        },
+        {
+          "net": "P0.04",
+          "clearance_mm": -0.18,
+          "count": 1,
+          "item": "F.Cu (113.80,49.20)-(113.80,36.80)"
+        },
+        {
+          "net": "P0.31",
+          "clearance_mm": -0.18,
+          "count": 3,
+          "item": "F.Cu (102.60,75.50)-(103.05,47.10)"
+        },
+        {
+          "net": "P0.30",
+          "clearance_mm": -0.18,
+          "count": 2,
+          "item": "F.Cu (101.20,46.40)-(112.40,46.40)"
+        },
+        {
+          "net": "P0.06",
+          "clearance_mm": -0.18,
+          "count": 2,
+          "item": "F.Cu (113.20,47.20)-(113.20,36.00)"
+        },
+        {
+          "net": "MAGPIO2",
+          "clearance_mm": -0.09,
+          "count": 1,
+          "item": "pad J14.3"
+        },
+        {
+          "net": "MIPI_VIO",
+          "clearance_mm": -0.034,
+          "count": 1,
+          "item": "pad J14.4"
+        },
+        {
+          "net": "GND",
+          "clearance_mm": 0.128,
+          "count": 1,
+          "item": "pad J7.SH"
+        }
+      ],
+      "b_cu_nearest": {
+        "net": "VDD_GPIO",
+        "clearance_mm": -0.29,
+        "item": "B.Cu (111.20,38.80)-(116.00,38.80)",
+        "n_nets": 10
+      }
+    },
+    {
+      "rank": 2,
+      "net": "P0.23",
+      "pad_edge_mm": 53.192,
+      "copper_edge_mm": 53.192,
+      "copper_note": null,
+      "layer": "F.Cu",
+      "a": {
+        "ref": "J10.3",
+        "layers": "B.Cu+F.Cu",
+        "xy": [
+          116.0,
+          33.08
+        ]
+      },
+      "b": {
+        "ref": "J13.8",
+        "layers": "B.Cu+F.Cu",
+        "xy": [
+          81.78,
+          76.0
+        ]
+      },
+      "chord_a": [
+        115.461,
+        33.737
+      ],
+      "chord_b": [
+        82.319,
+        75.343
+      ],
+      "blocks": [
+        {
+          "net": "VDD_GPIO",
+          "clearance_mm": -0.215,
+          "count": 1,
+          "item": "F.Cu (114.40,38.16)-(114.40,31.08)",
+          "power": true
+        },
+        {
+          "net": "P0.31",
+          "clearance_mm": -0.18,
+          "count": 2,
+          "item": "F.Cu (103.05,47.10)-(106.70,47.10)"
+        },
+        {
+          "net": "P0.30",
+          "clearance_mm": -0.18,
+          "count": 2,
+          "item": "F.Cu (101.20,46.40)-(112.40,46.40)"
+        },
+        {
+          "net": "P0.06",
+          "clearance_mm": -0.18,
+          "count": 2,
+          "item": "F.Cu (113.20,47.20)-(113.20,36.00)"
+        },
+        {
+          "net": "SIM_CD",
+          "clearance_mm": -0.09,
+          "count": 1,
+          "item": "pad J7.CSW"
+        },
+        {
+          "net": "GND",
+          "clearance_mm": -0.021,
+          "count": 3,
+          "item": "via@110.0,40.0"
+        },
+        {
+          "net": "MAGPIO0",
+          "clearance_mm": -0.001,
+          "count": 1,
+          "item": "pad J14.1"
+        },
+        {
+          "net": "MAGPIO1",
+          "clearance_mm": 0.123,
+          "count": 1,
+          "item": "pad J14.2"
+        }
+      ],
+      "b_cu_nearest": {
+        "net": "VDD_GPIO",
+        "clearance_mm": -0.29,
+        "item": "B.Cu (111.20,38.80)-(116.00,38.80)",
+        "n_nets": 12
+      }
+    },
+    {
+      "rank": 3,
+      "net": "P0.18",
+      "pad_edge_mm": 59.678,
+      "copper_edge_mm": 57.999,
+      "copper_note": "Island copper is 57.999 mm on B.Cu: track (69.08,72.80)-(50.70,72.80) on the J13 island to pad J17.2. Pad-edge is the longer of the two because that track sticks south of J13.3.",
+      "layer": "F.Cu",
+      "a": {
+        "ref": "J13.3",
+        "layers": "B.Cu+F.Cu",
+        "xy": [
+          69.08,
+          76.0
+        ]
+      },
+      "b": {
+        "ref": "J17.2",
+        "layers": "B.Cu+F.Cu",
+        "xy": [
+          108.0,
+          28.54
+        ]
+      },
+      "chord_a": [
+        69.619,
+        75.343
+      ],
+      "chord_b": [
+        107.461,
+        29.197
+      ],
+      "blocks": [
+        {
+          "net": "nRESET",
+          "clearance_mm": -0.299,
+          "count": 3,
+          "item": "via@102.0,36.0"
+        },
+        {
+          "net": "SIM_VCC",
+          "clearance_mm": -0.29,
+          "count": 2,
+          "item": "F.Cu (93.46,45.54)-(94.76,45.54)"
+        },
+        {
+          "net": "VDD_GPIO",
+          "clearance_mm": -0.29,
+          "count": 2,
+          "item": "F.Cu (86.51,31.08)-(108.00,31.08)",
+          "power": true
+        },
+        {
+          "net": "SIM_CD",
+          "clearance_mm": -0.18,
+          "count": 1,
+          "item": "F.Cu (90.00,52.04)-(90.00,36.00)"
+        },
+        {
+          "net": "SIM_IO",
+          "clearance_mm": -0.18,
+          "count": 2,
+          "item": "F.Cu (77.35,58.60)-(84.00,58.60)"
+        },
+        {
+          "net": "P0.20",
+          "clearance_mm": -0.18,
+          "count": 1,
+          "item": "F.Cu (74.16,60.90)-(74.16,76.00)"
+        },
+        {
+          "net": "GND",
+          "clearance_mm": 0.07,
+          "count": 1,
+          "item": "pad J7.SH"
+        }
+      ],
+      "b_cu_nearest": {
+        "net": "nRESET",
+        "clearance_mm": -0.299,
+        "item": "via@102.0,36.0",
+        "n_nets": 9
+      }
+    },
+    {
+      "rank": 4,
+      "net": "P0.21",
+      "pad_edge_mm": 59.99,
+      "copper_edge_mm": 59.99,
+      "copper_note": null,
+      "layer": "F.Cu",
+      "a": {
+        "ref": "J10.1",
+        "layers": "B.Cu+F.Cu",
+        "xy": [
+          116.0,
+          28.0
+        ]
+      },
+      "b": {
+        "ref": "J13.6",
+        "layers": "B.Cu+F.Cu",
+        "xy": [
+          76.7,
+          76.0
+        ]
+      },
+      "chord_a": [
+        115.15,
+        28.85
+      ],
+      "chord_b": [
+        77.239,
+        75.343
+      ],
+      "blocks": [
+        {
+          "net": "VDD_GPIO",
+          "clearance_mm": -0.215,
+          "count": 1,
+          "item": "F.Cu (114.40,31.08)-(86.51,31.08)",
+          "power": true
+        },
+        {
+          "net": "P0.22",
+          "clearance_mm": -0.18,
+          "count": 5,
+          "item": "F.Cu (112.50,29.90)-(114.70,29.90)"
+        },
+        {
+          "net": "SIM_IO_C",
+          "clearance_mm": -0.18,
+          "count": 3,
+          "item": "F.Cu (98.54,48.71)-(98.54,50.01)"
+        },
+        {
+          "net": "SIM_CD",
+          "clearance_mm": -0.18,
+          "count": 3,
+          "item": "F.Cu (100.27,52.04)-(90.00,52.04)"
+        },
+        {
+          "net": "GND",
+          "clearance_mm": -0.005,
+          "count": 1,
+          "item": "pad J7.SH"
+        },
+        {
+          "net": "P0.30",
+          "clearance_mm": 0.099,
+          "count": 2,
+          "item": "F.Cu (101.20,46.40)-(112.40,46.40)"
+        }
+      ],
+      "b_cu_nearest": {
+        "net": "VDD_GPIO",
+        "clearance_mm": -0.29,
+        "item": "B.Cu (110.60,31.08)-(110.60,38.80)",
+        "n_nets": 10
+      }
+    },
+    {
+      "rank": 5,
+      "net": "P0.17",
+      "pad_edge_mm": 62.907,
+      "copper_edge_mm": 61.684,
+      "copper_note": "Island copper is 61.684 mm on B.Cu: track (66.54,73.40)-(48.16,73.40) on the J13 island to pad J17.1. Pad-edge is 62.907 mm.",
+      "layer": "F.Cu",
+      "a": {
+        "ref": "J13.2",
+        "layers": "B.Cu+F.Cu",
+        "xy": [
+          66.54,
+          76.0
+        ]
+      },
+      "b": {
+        "ref": "J17.1",
+        "layers": "B.Cu+F.Cu",
+        "xy": [
+          108.0,
+          26.0
+        ]
+      },
+      "chord_a": [
+        67.079,
+        75.343
+      ],
+      "chord_b": [
+        107.15,
+        26.85
+      ],
+      "blocks": [
+        {
+          "net": "VDD_GPIO",
+          "clearance_mm": -0.29,
+          "count": 2,
+          "item": "F.Cu (86.51,31.08)-(108.00,31.08)",
+          "power": true
+        },
+        {
+          "net": "P0.01",
+          "clearance_mm": -0.217,
+          "count": 2,
+          "item": "via@68.0,74.5"
+        },
+        {
+          "net": "SIM_VCC",
+          "clearance_mm": -0.215,
+          "count": 1,
+          "item": "F.Cu (93.46,45.54)-(93.46,33.54)"
+        },
+        {
+          "net": "SIM_CD",
+          "clearance_mm": -0.18,
+          "count": 1,
+          "item": "F.Cu (90.00,52.04)-(90.00,36.00)"
+        },
+        {
+          "net": "SIM_IO",
+          "clearance_mm": -0.18,
+          "count": 2,
+          "item": "F.Cu (77.35,58.60)-(84.00,58.60)"
+        },
+        {
+          "net": "P0.20",
+          "clearance_mm": -0.18,
+          "count": 1,
+          "item": "F.Cu (74.16,60.90)-(74.16,76.00)"
+        },
+        {
+          "net": "GND",
+          "clearance_mm": 0.032,
+          "count": 1,
+          "item": "pad J7.SH"
+        }
+      ],
+      "b_cu_nearest": {
+        "net": "P0.01",
+        "clearance_mm": -0.217,
+        "item": "via@68.0,74.5",
+        "n_nets": 10
+      }
+    }
+  ],
+  "p030_leftover": {
+    "marked": "leftover",
+    "connector_to_connector": false,
+    "net": "P0.30",
+    "name": "U1.88 to locked pass30as island (J13.15 / J11.1)",
+    "gap_mm": 64.776,
+    "gap_kind": "copper-edge, leftover island to locked pass30as track",
+    "pad_edge_u1_88_to_locked_track_mm": 65.303,
+    "cap_mm": 25.0,
+    "over_cap": true,
+    "layer": "F.Cu",
+    "islands": {
+      "leftover": {
+        "pads": [
+          {
+            "ref": "U1.88",
+            "layer": "F.Cu",
+            "xy": [
+              36.25,
+              37.25
+            ],
+            "size_mm": [
+              0.3,
+              0.8
+            ]
+          }
+        ],
+        "via": {
+          "xy": [
+            36.25,
+            41.1
+          ],
+          "od_mm": 0.6,
+          "drill_mm": 0.3,
+          "layers": "F.Cu-B.Cu"
+        },
+        "track": "F.Cu 0.18 mm (36.25,37.25)-(36.25,41.10)"
+      },
+      "locked_pass30as": {
+        "pads": [
+          {
+            "ref": "J13.15",
+            "layer": "B.Cu+F.Cu",
+            "xy": [
+              99.56,
+              76.0
+            ]
+          },
+          {
+            "ref": "J11.1",
+            "layer": "B.Cu+F.Cu",
+            "xy": [
+              116.0,
+              46.0
+            ]
+          }
+        ],
+        "via": {
+          "xy": [
+            112.4,
+            46.4
+          ],
+          "od_mm": 0.6,
+          "drill_mm": 0.3
+        },
+        "nearest_item": "F.Cu (101.20,46.40)-(112.40,46.40)"
+      }
+    },
+    "endpoints": {
+      "a": {
+        "what": "via@36.25,41.1 copper edge",
+        "layer": "F.Cu",
+        "xy": [
+          36.549,
+          41.124
+        ]
+      },
+      "b": {
+        "what": "F.Cu (101.20,46.40)-(112.40,46.40) copper edge",
+        "layer": "F.Cu",
+        "xy": [
+          101.11,
+          46.393
+        ]
+      }
+    },
+    "straight_line": {
+      "width_mm": 0.18,
+      "from": [
+        36.549,
+        41.124
+      ],
+      "to": [
+        101.11,
+        46.393
+      ],
+      "nets_under_0_15": 16,
+      "items_under_0_15": 45,
+      "nearest": {
+        "net": "SIM_1V8",
+        "clearance_mm": -0.29,
+        "count": 10,
+        "item": "F.Cu (75.52,44.00)-(75.52,46.00)"
+      },
+      "blocks": [
+        {
+          "net": "SIM_1V8",
+          "clearance_mm": -0.29,
+          "count": 10,
+          "item": "F.Cu (75.52,44.00)-(75.52,46.00)"
+        },
+        {
+          "net": "COEX2",
+          "clearance_mm": -0.268,
+          "count": 2,
+          "item": "via@37.75,41.1"
+        },
+        {
+          "net": "SIM_VCC",
+          "clearance_mm": -0.215,
+          "count": 5,
+          "item": "F.Cu (80.65,33.54)-(80.65,46.00)"
+        },
+        {
+          "net": "VDD2",
+          "clearance_mm": -0.215,
+          "count": 1,
+          "item": "F.Cu (61.80,42.00)-(61.80,45.10)",
+          "power": true
+        },
+        {
+          "net": "COEX0",
+          "clearance_mm": -0.187,
+          "count": 2,
+          "item": "via@38.75,41.1"
+        },
+        {
+          "net": "ENABLE",
+          "clearance_mm": -0.18,
+          "count": 3,
+          "item": "F.Cu (52.00,44.00)-(52.00,40.95)"
+        },
+        {
+          "net": "SIM_CLK_C",
+          "clearance_mm": -0.18,
+          "count": 2,
+          "item": "F.Cu (99.19,45.54)-(99.19,46.67)"
+        },
+        {
+          "net": "VDD_GPIO",
+          "clearance_mm": -0.18,
+          "count": 1,
+          "item": "F.Cu (70.44,41.55)-(54.44,61.05)",
+          "power": true
+        },
+        {
+          "net": "P0.03",
+          "clearance_mm": -0.18,
+          "count": 2,
+          "item": "F.Cu (41.75,74.40)-(41.75,37.25)"
+        },
+        {
+          "net": "SIM_CD",
+          "clearance_mm": -0.18,
+          "count": 1,
+          "item": "F.Cu (90.00,52.04)-(90.00,36.00)"
+        },
+        {
+          "net": "P0.02",
+          "clearance_mm": -0.18,
+          "count": 2,
+          "item": "F.Cu (40.75,41.10)-(40.75,43.50)"
+        },
+        {
+          "net": "SIM_IO",
+          "clearance_mm": -0.18,
+          "count": 1,
+          "item": "F.Cu (84.00,58.60)-(84.00,36.00)"
+        },
+        {
+          "net": "SIM_CLK",
+          "clearance_mm": -0.18,
+          "count": 4,
+          "item": "F.Cu (70.90,44.00)-(70.90,42.40)"
+        },
+        {
+          "net": "P0.00",
+          "clearance_mm": -0.18,
+          "count": 3,
+          "item": "F.Cu (39.75,41.10)-(6.00,76.00)"
+        },
+        {
+          "net": "GND",
+          "clearance_mm": -0.048,
+          "count": 4,
+          "item": "pad J7.SH"
+        },
+        {
+          "net": "SIM_RST_C",
+          "clearance_mm": -0.041,
+          "count": 2,
+          "item": "pad J7.C2"
+        }
+      ]
+    }
+  }
+}
