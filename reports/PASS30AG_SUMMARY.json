@@ -1,0 +1,408 @@
+{
+  "pass": "layout-pass30ag-corridor",
+  "timestamp_ist": "2026-09-30 03:49 IST",
+  "kicad": "9.0.2+dfsg-1",
+  "python": "/usr/bin/python3",
+  "scope": "One 0.18 mm signal inside B.Cu corridor y=44.60 x=81.8-97.3 only.",
+  "backup": "/workspace/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/pass30ag-corridor/pre-edit.kicad_pcb",
+  "phase": "COMPLETE_REVERTED",
+  "corridor_spec": {
+    "layer": "B.Cu",
+    "y": 44.6,
+    "x1": 81.8,
+    "x2": 97.3,
+    "width_mm": 0.18
+  },
+  "protect_before": {
+    "ok": true,
+    "reasons": [],
+    "stage_a": {
+      "VDD_nRF_via_north": true,
+      "VDD2_vias": 2,
+      "VDD2_present": true
+    },
+    "p015_west": 21,
+    "p022_vias": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "corridor_audit": {
+    "SIM_RST_C": {
+      "islands": 1,
+      "islands_touching_B_slot": 0,
+      "islands_F_crossing_slot": 0,
+      "can_close_with_B_track_only": false,
+      "nearest": [
+        {
+          "sample": "F (79.38,54.70)-(79.38,56.05)",
+          "dist_B_copper_mm": 0.31,
+          "dist_F_copper_mm": 0.49,
+          "touches_B_track": false,
+          "F_crosses_slot": false
+        }
+      ]
+    },
+    "SIM_RST": {
+      "islands": 2,
+      "islands_touching_B_slot": 0,
+      "islands_F_crossing_slot": 0,
+      "can_close_with_B_track_only": false,
+      "nearest": [
+        {
+          "sample": "F (78.00,36.00)-(79.30,36.00)",
+          "dist_B_copper_mm": 3.549,
+          "dist_F_copper_mm": 8.656,
+          "touches_B_track": false,
+          "F_crosses_slot": false
+        },
+        {
+          "sample": "pad@F (32.75,26.75)",
+          "dist_B_copper_mm": null,
+          "dist_F_copper_mm": 51.797,
+          "touches_B_track": false,
+          "F_crosses_slot": false
+        }
+      ]
+    },
+    "SIM_CLK": {
+      "islands": 2,
+      "islands_touching_B_slot": 0,
+      "islands_F_crossing_slot": 0,
+      "can_close_with_B_track_only": false,
+      "nearest": [
+        {
+          "sample": "F (71.68,42.40)-(70.90,42.40)",
+          "dist_B_copper_mm": 8.69,
+          "dist_F_copper_mm": 9.908,
+          "touches_B_track": false,
+          "F_crosses_slot": false
+        },
+        {
+          "sample": "F (31.25,26.75)-(31.25,23.10)",
+          "dist_B_copper_mm": 54.632,
+          "dist_F_copper_mm": 53.209,
+          "touches_B_track": false,
+          "F_crosses_slot": false
+        }
+      ]
+    },
+    "SIM_IO": {
+      "islands": 2,
+      "islands_touching_B_slot": 0,
+      "islands_F_crossing_slot": 1,
+      "can_close_with_B_track_only": false,
+      "nearest": [
+        {
+          "sample": "F (77.35,56.60)-(77.35,58.60)",
+          "dist_B_copper_mm": 8.3,
+          "dist_F_copper_mm": 0.035,
+          "touches_B_track": false,
+          "F_crosses_slot": true
+        },
+        {
+          "sample": "F (30.25,26.75)-(30.25,23.10)",
+          "dist_B_copper_mm": 55.554,
+          "dist_F_copper_mm": 54.153,
+          "touches_B_track": false,
+          "F_crosses_slot": false
+        }
+      ]
+    },
+    "SIM_1V8": {
+      "islands": 2,
+      "islands_touching_B_slot": 0,
+      "islands_F_crossing_slot": 0,
+      "can_close_with_B_track_only": false,
+      "nearest": [
+        {
+          "sample": "F (75.52,44.00)-(75.60,44.10)",
+          "dist_B_copper_mm": 2.802,
+          "dist_F_copper_mm": 2.322,
+          "touches_B_track": false,
+          "F_crosses_slot": false
+        },
+        {
+          "sample": "pad@F (29.75,26.75)",
+          "dist_B_copper_mm": null,
+          "dist_F_copper_mm": 54.626,
+          "touches_B_track": false,
+          "F_crosses_slot": false
+        }
+      ]
+    }
+  },
+  "corridor_audit_extra": {
+    "P0.03": {
+      "islands_touching_B_slot": 0,
+      "can_close_with_B_track_only": false
+    },
+    "P0.22": {
+      "islands_touching_B_slot": 0,
+      "can_close_with_B_track_only": false
+    },
+    "SIM_CD": {
+      "islands_touching_B_slot": 0,
+      "can_close_with_B_track_only": false
+    },
+    "SIM_CLK_C": {
+      "islands_touching_B_slot": 0,
+      "can_close_with_B_track_only": false
+    },
+    "SIM_IO_C": {
+      "islands_touching_B_slot": 0,
+      "can_close_with_B_track_only": false
+    },
+    "SIM_VCC": {
+      "islands_touching_B_slot": 0,
+      "can_close_with_B_track_only": false
+    },
+    "VDD_GPIO": {
+      "islands_touching_B_slot": 0,
+      "can_close_with_B_track_only": false
+    },
+    "nRESET": {
+      "islands_touching_B_slot": 0,
+      "can_close_with_B_track_only": false
+    }
+  },
+  "attempt_net": "SIM_RST",
+  "choice_reason": "no SIM_* open has two islands on the B slot; probe SIM_RST (next open after continuous SIM_RST_C) inside the corridor only",
+  "probe_only": true,
+  "before": {
+    "unconnected_items": 64,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "track_dangling": 13,
+    "track_width": 0
+  },
+  "before_nets_watch": {
+    "SIM_RST_C": 0,
+    "SIM_RST": 1,
+    "SIM_CLK": 1,
+    "SIM_IO": 1,
+    "SIM_1V8": 1,
+    "SIM_CLK_C": 0,
+    "SIM_IO_C": 0,
+    "SIM_CD": 0,
+    "SIM_VCC": 0,
+    "P0.22": 1,
+    "P0.04": 0,
+    "P0.06": 0,
+    "P0.01": 1,
+    "P0.15": 0,
+    "P0.19": 1,
+    "VDD2": 0,
+    "VDD_nRF": 0,
+    "GND": 10
+  },
+  "attempts": [
+    {
+      "label": "corridor_B_y44.60",
+      "net": "SIM_RST",
+      "probe_only": true,
+      "edit": {
+        "net": "SIM_RST",
+        "layer": "B.Cu",
+        "from": [
+          81.8,
+          44.6
+        ],
+        "to": [
+          97.3,
+          44.6
+        ],
+        "width_mm": 0.18,
+        "note": "single segment strictly inside the opened corridor; no rip"
+      },
+      "mid": {
+        "unconnected_items": 65,
+        "shorting_items": 0,
+        "clearance": 0,
+        "tracks_crossing": 0,
+        "hole_clearance": 0,
+        "track_dangling": 14,
+        "track_width": 0
+      },
+      "mid_nets_watch": {
+        "SIM_RST_C": 0,
+        "SIM_RST": 2,
+        "SIM_CLK": 1,
+        "SIM_IO": 1,
+        "SIM_1V8": 1,
+        "SIM_CLK_C": 0,
+        "SIM_IO_C": 0,
+        "SIM_CD": 0,
+        "SIM_VCC": 0,
+        "P0.22": 1,
+        "P0.04": 0,
+        "P0.06": 0,
+        "P0.01": 1,
+        "P0.15": 0,
+        "P0.19": 1,
+        "VDD2": 0,
+        "VDD_nRF": 0,
+        "GND": 10
+      },
+      "clean": true,
+      "protect": {
+        "ok": true,
+        "reasons": [],
+        "stage_a": {
+          "VDD_nRF_via_north": true,
+          "VDD2_vias": 2,
+          "VDD2_present": true
+        },
+        "p015_west": 21,
+        "p022_vias": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "net_open_before": 1,
+      "net_open_mid": 2,
+      "unconnected_drop": -1,
+      "accept": false,
+      "reason": "unconnected_drop_-1;SIM_RST_open_1->2;probe_does_not_span_an_open",
+      "collide": []
+    }
+  ],
+  "after": {
+    "unconnected_items": 64,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "track_dangling": 13,
+    "track_width": 0
+  },
+  "after_nets_watch": {
+    "SIM_RST_C": 0,
+    "SIM_RST": 1,
+    "SIM_CLK": 1,
+    "SIM_IO": 1,
+    "SIM_1V8": 1,
+    "SIM_CLK_C": 0,
+    "SIM_IO_C": 0,
+    "SIM_CD": 0,
+    "SIM_VCC": 0,
+    "P0.22": 1,
+    "P0.04": 0,
+    "P0.06": 0,
+    "P0.01": 1,
+    "P0.15": 0,
+    "P0.19": 1,
+    "VDD2": 0,
+    "VDD_nRF": 0,
+    "GND": 10
+  },
+  "unconnected_delta": 0,
+  "protect_after": {
+    "ok": true,
+    "reasons": [],
+    "stage_a": {
+      "VDD_nRF_via_north": true,
+      "VDD2_vias": 2,
+      "VDD2_present": true
+    },
+    "p015_west": 21,
+    "p022_vias": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "kept": null,
+  "reverted": true,
+  "drop_at_least_1": false,
+  "decision": "REVERT",
+  "corridor": "still free \u2014 probe removed, pass30af corridor intact",
+  "stop_reason": "unconnected_drop_-1;SIM_RST_open_1->2;probe_does_not_span_an_open",
+  "audit": {
+    "SIM_RST_C_opens_before": 0,
+    "SIM_RST_C_continuous": true,
+    "SIM_RST_C_islands_touching_slot": 0,
+    "why": "The opened slot is a closed pocket on B.Cu. SIM_CLK_C occupies y=44.05 (x=78.95\u201397.85) and SIM_RST_C occupies y=45.00 (x=81.80\u201397.30); a 0.18 mm track at y=44.60 clears them (~0.37 mm and ~0.22 mm) under Default clearance 0.10 mm, but it does not land on two islands of any open net. West exit is blocked by SIM_IO_C B vertical x=78.60 (y=42.50\u201345.80) and SIM_CLK_C B vertical x=78.95. East exit is blocked by SIM_CLK_C B vertical x=97.85. SIM_RST's nearest B copper ends at x=78.25,y=43.80 (about 3.6 mm from the mouth) and the other island is U1.43 at (32.75, 26.75). SIM_CLK / SIM_IO / SIM_1V8 opens are the U1-to-filter gaps west of x\u224878, not this slot. SIM_IO's F spine at x=84 crosses the slot on F.Cu only (east island); a via there would not reach U1.48.",
+    "nearest_SIM_RST": [
+      {
+        "sample": "F (78.00,36.00)-(79.30,36.00)",
+        "dist_B_copper_mm": 3.549,
+        "dist_F_copper_mm": 8.656,
+        "touches_B_track": false,
+        "F_crosses_slot": false
+      },
+      {
+        "sample": "pad@F (32.75,26.75)",
+        "dist_B_copper_mm": null,
+        "dist_F_copper_mm": 51.797,
+        "touches_B_track": false,
+        "F_crosses_slot": false
+      }
+    ],
+    "nearest_SIM_CLK": [
+      {
+        "sample": "F (71.68,42.40)-(70.90,42.40)",
+        "dist_B_copper_mm": 8.69,
+        "dist_F_copper_mm": 9.908,
+        "touches_B_track": false,
+        "F_crosses_slot": false
+      },
+      {
+        "sample": "F (31.25,26.75)-(31.25,23.10)",
+        "dist_B_copper_mm": 54.632,
+        "dist_F_copper_mm": 53.209,
+        "touches_B_track": false,
+        "F_crosses_slot": false
+      }
+    ],
+    "nearest_SIM_IO": [
+      {
+        "sample": "F (77.35,56.60)-(77.35,58.60)",
+        "dist_B_copper_mm": 8.3,
+        "dist_F_copper_mm": 0.035,
+        "touches_B_track": false,
+        "F_crosses_slot": true
+      },
+      {
+        "sample": "F (30.25,26.75)-(30.25,23.10)",
+        "dist_B_copper_mm": 55.554,
+        "dist_F_copper_mm": 54.153,
+        "touches_B_track": false,
+        "F_crosses_slot": false
+      }
+    ],
+    "nearest_SIM_1V8": [
+      {
+        "sample": "F (75.52,44.00)-(75.60,44.10)",
+        "dist_B_copper_mm": 2.802,
+        "dist_F_copper_mm": 2.322,
+        "touches_B_track": false,
+        "F_crosses_slot": false
+      },
+      {
+        "sample": "pad@F (29.75,26.75)",
+        "dist_B_copper_mm": null,
+        "dist_F_copper_mm": 54.626,
+        "touches_B_track": false,
+        "F_crosses_slot": false
+      }
+    ],
+    "mid_collide": [],
+    "mid_stats": {
+      "unconnected_items": 65,
+      "shorting_items": 0,
+      "clearance": 0,
+      "tracks_crossing": 0,
+      "hole_clearance": 0,
+      "track_dangling": 14,
+      "track_width": 0
+    }
+  }
+}

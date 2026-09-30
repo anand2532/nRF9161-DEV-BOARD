@@ -43,6 +43,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `DRC_PASS30J_AFTER.json` | 76 | Prior — P0.08→J12.9 stitch |
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
 
+**Pass delta (pass30ag):** Corridor probe `SIM_RST` **REVERT**. SIM_RST_C already continuous. In-corridor B track did not join any open island (pocket sealed by SIM_IO_C @x78.60 and SIM_CLK_C @x78.95 / x97.85). Unconnected 64→64. short/clr/cross 0/0/0. Corridor still free. No Gerbers. Details: `reports/PASS30AG_SUMMARY.md`.
+
 Live `kicad-cli` 9.0.2 DRC was re-run for pass30c (`reports/DRC_PASS30C_BEFORE.json` / `reports/DRC_PASS30C_AFTER.json`). On-disk `fab/gerbers/` CreationDate **2026-09-16** remains **stale** and must not be used for fab (DFM checklist §5).
 
 **Pass delta (pass30ac):** Package A_SE_duals EXECUTE (J16+J9+J17; **excl J12**). Preferred west −2.54 → (105.46,8)/(113.46,8)/(105.46,26) mid dirty shorting=7 clr=1 cross=4 (P0.01 B@y15.2 × J17/J16; P0.04/P0.06 × VDD_GPIO/J9). Alt Y once J16/J9 south +2.54 / J17 north −2.0 also dirty shorting=11 clr=5 cross=7 unc 64→68. **FULL PACKAGE REVERT** to pass30z keep. Landing: **none**. Final XY unchanged. Before/After unconnected: 64/64 · shorting/clearance/crossing 0. Class C + Stage A + SE column frozen + J12 unmoved. No Gerbers. Details: `reports/PASS30AC_SUMMARY.json` (+ MD).
@@ -1161,3 +1163,15 @@ Copper-only (no placement): P0.11 header stubs → P0.10/P0.17 → MAGPIO/MIPI/A
 
 **Backup:** `.mcp-backups/pass30af-preclear/pre-edit.kicad_pcb`  
 **Artifacts:** `reports/PASS30AF_PRECLEAR_PLAN.{md,json}`, `reports/DRC_PASS30AF_{BEFORE,MID_SIM_RST_C,AFTER}.json`, `reports/PASS30AF_SUMMARY.{md,json}`, `scripts/final_pass30af_preclear.py`
+
+## Pass30ag — one signal in the B.Cu y=44.60 corridor — 2026-09-30 03:49 IST
+
+**Decision:** **REVERT**. Net attempted: `SIM_RST`. SIM_RST_C was already continuous (0 opens), so the corridor was spare.
+
+**Attempt:** one 0.18 mm B.Cu segment (81.80, 44.60)–(97.30, 44.60) only. No header move. No Class C / P0.22 / frozen east-SE rip.
+
+**Why it does not close a net:** the slot is a sealed pocket (not a clearance collision). Mid DRC on the probe was short/clearance/crossing = 0/0/0, but unconnected rose 64→65 because the segment touched no SIM_RST island. West mouth is walled by `SIM_IO_C` B @ x=78.60 and `SIM_CLK_C` B @ x=78.95; east mouth by `SIM_CLK_C` B @ x=97.85. No open SIM_* or GPIO island pair both touches that centerline.
+
+**Unconnected:** 64→64. short/clearance/crossing after REVERT: 0/0/0. Corridor still free.
+
+**Artifacts:** `reports/PASS30AG_SUMMARY.md`, `reports/PASS30AG_SUMMARY.json`, `reports/DRC_PASS30AG_BEFORE.json`, `reports/DRC_PASS30AG_MID_SIM_RST.json`, `reports/DRC_PASS30AG_AFTER.json`, `scripts/final_pass30ag.py`
