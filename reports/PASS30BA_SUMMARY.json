@@ -1,0 +1,409 @@
+{
+  "pass": "30ba",
+  "timestamp": "2026-09-30 13:23 IST",
+  "decision": "NO-ROUTE",
+  "net": "P0.19",
+  "git_head": "019630abc7962b82bee07d5c52f7057c9bbcceff",
+  "pcb_blob_at_start": "e1adfbd7a38989b42abaef3557368955484cd560",
+  "same_island_u1_30_j18_7": false,
+  "pad_edge_mm": 36.658,
+  "pad_edge_exact_mm": 36.658325,
+  "u1_30": [
+    39.25,
+    26.75
+  ],
+  "j18_7": [
+    53.24,
+    62.0
+  ],
+  "straight_chord": {
+    "from": [
+      39.378,
+      27.147
+    ],
+    "to": [
+      52.993,
+      61.187
+    ],
+    "length_mm": 36.662,
+    "crosses_sip_body": true,
+    "vdd1_track": {
+      "clearance_mm": -0.29,
+      "net": "VDD1",
+      "item": "F.Cu (50.52,38.00)-(43.25,38.00) w=0.400",
+      "power": true,
+      "clearance_note": "Centerlines intersect on F.Cu (50.52,38)-(43.25,38) w=0.40. Edge clearance = -(0.09+0.20) = -0.29 mm. Endpoint-only distance was 0.145 mm and is not the crossing clearance."
+    },
+    "foreign_under_0_15": [
+      {
+        "clearance_mm": -0.133,
+        "net": "VDD1",
+        "item": "F.Cu (43.25,38.00)-(43.25,37.25) w=0.400",
+        "power": true
+      },
+      {
+        "clearance_mm": -0.133,
+        "net": "VDD1",
+        "item": "F.Cu (43.25,37.25)-(43.25,37.95) w=0.400",
+        "power": true
+      },
+      {
+        "clearance_mm": -0.058,
+        "net": "VDD1",
+        "item": "F.Cu (43.25,37.25)-(43.25,37.60) w=0.250",
+        "power": true
+      },
+      {
+        "clearance_mm": 0.0,
+        "net": "VDD1",
+        "item": "pad U1.102",
+        "power": true,
+        "note": "GetClearance (0 means overlap)"
+      },
+      {
+        "clearance_mm": 0.0,
+        "net": "GND",
+        "item": "pad U1.103",
+        "power": false,
+        "note": "GetClearance (0 means overlap)"
+      },
+      {
+        "clearance_mm": 0.055,
+        "net": "P0.06",
+        "item": "via@44.000,39.900",
+        "power": false
+      },
+      {
+        "clearance_mm": 0.072,
+        "net": "VDD1",
+        "item": "F.Cu (43.25,37.60)-(50.52,37.60) w=0.250",
+        "power": true
+      },
+      {
+        "clearance_mm": 0.092,
+        "net": "GND",
+        "item": "via@42.000,35.000",
+        "power": false
+      },
+      {
+        "clearance_mm": 0.126,
+        "net": "GND",
+        "item": "pad U1.1",
+        "power": false,
+        "note": "GetClearance (0 means overlap)"
+      },
+      {
+        "clearance_mm": 0.126,
+        "net": "P0.18",
+        "item": "pad U1.29",
+        "power": false,
+        "note": "GetClearance (0 means overlap)"
+      },
+      {
+        "clearance_mm": 0.127,
+        "net": "VDD1",
+        "item": "F.Cu (43.25,37.95)-(50.52,37.95) w=0.400",
+        "power": true
+      },
+      {
+        "clearance_mm": 0.145,
+        "net": "VDD1",
+        "item": "F.Cu (50.52,38.00)-(43.25,38.00) w=0.400",
+        "power": true
+      }
+    ],
+    "power_under_0_20": [
+      {
+        "clearance_mm": -0.133,
+        "net": "VDD1",
+        "item": "F.Cu (43.25,38.00)-(43.25,37.25) w=0.400",
+        "power": true
+      },
+      {
+        "clearance_mm": -0.133,
+        "net": "VDD1",
+        "item": "F.Cu (43.25,37.25)-(43.25,37.95) w=0.400",
+        "power": true
+      },
+      {
+        "clearance_mm": -0.058,
+        "net": "VDD1",
+        "item": "F.Cu (43.25,37.25)-(43.25,37.60) w=0.250",
+        "power": true
+      },
+      {
+        "clearance_mm": 0.0,
+        "net": "VDD1",
+        "item": "pad U1.102",
+        "power": true,
+        "note": "GetClearance (0 means overlap)"
+      },
+      {
+        "clearance_mm": 0.072,
+        "net": "VDD1",
+        "item": "F.Cu (43.25,37.60)-(50.52,37.60) w=0.250",
+        "power": true
+      },
+      {
+        "clearance_mm": 0.127,
+        "net": "VDD1",
+        "item": "F.Cu (43.25,37.95)-(50.52,37.95) w=0.400",
+        "power": true
+      },
+      {
+        "clearance_mm": 0.145,
+        "net": "VDD1",
+        "item": "F.Cu (50.52,38.00)-(43.25,38.00) w=0.400",
+        "power": true
+      }
+    ]
+  },
+  "layers_checked": {
+    "F": {
+      "cells": 254,
+      "bbox": [
+        37.75,
+        40.5,
+        16.0,
+        26.5
+      ],
+      "ymax": 26.5,
+      "xmax": 40.5,
+      "reaches_j18": false
+    },
+    "B": {
+      "cells": 652,
+      "bbox": [
+        32.75,
+        46.25,
+        16.0,
+        26.5
+      ],
+      "ymax": 26.5,
+      "xmax": 46.25,
+      "reaches_j18": false
+    },
+    "In1": {
+      "cells": 35483,
+      "bbox": [
+        24.5,
+        72.0,
+        16.0,
+        70.0
+      ],
+      "ymax": 70.0,
+      "xmax": 72.0,
+      "reaches_j18": true
+    },
+    "In2": {
+      "cells": 35450,
+      "bbox": [
+        24.5,
+        72.0,
+        16.0,
+        70.0
+      ],
+      "ymax": 70.0,
+      "xmax": 72.0,
+      "reaches_j18": true
+    }
+  },
+  "layer_choice": "F.Cu and B.Cu free space from the via both die at ymax 26.5, short of J18.7, same wall as the P0.16/P0.17 vias. A second via was not added. In1.Cu and In2.Cu both flood-fill to J18.7. Both inner layers already carry a locked skirt at x=44.60 (P0.16 on In1, P0.17 on In2). The P0.06 via (45.150, 36.000) r=0.25 still closes the strip immediately east of x=44.60 (clearance at x=44.93 is -0.12 mm). The west offset x=44.25 clears that via (0.56 mm) and sits 0.35 mm from the skirt. A second P0.06 via at (44.000, 39.900) blocks x=44.25 at y\u224839.9, so the route dodges west of it south of the fab body, then returns. In1 was the one attempt: it is the GND plane (extra islands waived) and its P0.16 end cap stops at x=45.62, so y=60.00 passes north of that cap into J18.7. In2 was not used (VDD_nRF zone clearance 0.5 mm, and the P0.17 end cap runs to x=48.16). No sealed B.Cu pocket. x>24.2.",
+  "p006_via": {
+    "net": "P0.06",
+    "at": [
+      45.15,
+      36.0
+    ],
+    "radius_mm": 0.25,
+    "need_dx_mm": 0.49,
+    "skirt_x": 44.6,
+    "east_of_skirt_x": 44.93,
+    "clearance_at_x_44_93_mm": -0.12,
+    "clearance_at_x_44_25_mm": 0.56,
+    "east_strip_closed": true,
+    "west_x_44_25_clears_this_via": true
+  },
+  "via": {
+    "pos": [
+      39.25,
+      23.1
+    ],
+    "drill_mm": 0.3,
+    "pad_mm": 0.6,
+    "top": "F.Cu",
+    "bottom": "B.Cu",
+    "on": {
+      "F.Cu": true,
+      "In1.Cu": true,
+      "In2.Cu": true,
+      "B.Cu": true
+    }
+  },
+  "new_via": false,
+  "segments": [],
+  "segment_count": 0,
+  "attempted_segments": [
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        39.25,
+        23.1
+      ],
+      "end": [
+        39.25,
+        26.5
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        39.25,
+        26.5
+      ],
+      "end": [
+        44.25,
+        26.5
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        26.5
+      ],
+      "end": [
+        44.25,
+        39.1
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        39.1
+      ],
+      "end": [
+        42.8,
+        39.9
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        42.8,
+        39.9
+      ],
+      "end": [
+        44.25,
+        40.7
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        40.7
+      ],
+      "end": [
+        44.25,
+        60.0
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.25,
+        60.0
+      ],
+      "end": [
+        53.24,
+        60.0
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        53.24,
+        60.0
+      ],
+      "end": [
+        53.24,
+        61.4
+      ]
+    }
+  ],
+  "dead_end": "NO-ROUTE. One In1.Cu attempt (8 segments, no new via) joined P0.19 (opens 1\u21920, unconnected 58\u219257) but DRC tracks_crossing went 0\u21921: In1 (44.25, 60.00)\u2013(53.24, 60.00) crosses the locked P0.16 skirt (44.60, 27.40)\u2013(44.60, 60.40) at (44.60, 60.00). short/clearance/hole stayed 0. Full restore. Post-revert DRC matches pre-edit (unconnected 58, P0.19 1, short/clearance/crossing/hole 0/0/0/0, hole_to_hole 1, GND islands 12). No second path.",
+  "min_foreign_clearance_mm": 0.17,
+  "min_foreign_item": {
+    "net": "P0.16",
+    "item": "trk (44.60,27.40)-(44.60,60.40)"
+  },
+  "min_power_clearance_mm": 0.2736,
+  "min_power_item": {
+    "net": "VDD2",
+    "item": "via@44.722,25.900"
+  },
+  "min_hole_clearance_mm": 0.3397,
+  "min_hole_item": "via P0.06 @44.000,39.900",
+  "p019_opens_before": 1,
+  "p019_opens_after": 1,
+  "unconnected_before": 58,
+  "unconnected_after": 58,
+  "short_clearance_crossing_hole_before": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "short_clearance_crossing_hole_after": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "hole_to_hole_before": 1,
+  "hole_to_hole_after": 1,
+  "gnd_islands_before": 12,
+  "gnd_islands_after": 12,
+  "other_nongnd_gained": {},
+  "reason": "NO-ROUTE. One In1.Cu attempt (8 segments, no new via) joined P0.19 (opens 1\u21920, unconnected 58\u219257) but DRC tracks_crossing went 0\u21921: In1 (44.25, 60.00)\u2013(53.24, 60.00) crosses the locked P0.16 skirt (44.60, 27.40)\u2013(44.60, 60.40) at (44.60, 60.00). short/clearance/hole stayed 0. Full restore. Post-revert DRC matches pre-edit (unconnected 58, P0.19 1, short/clearance/crossing/hole 0/0/0/0, hole_to_hole 1, GND islands 12). No second path.",
+  "p017_not_retried": true,
+  "other_net": false,
+  "gerbers": false,
+  "commit": false,
+  "locked_copper_ripped": false,
+  "board_sha256": "a660d541cd60b2db6f5439da42eaa20f5bb4d88f8b29b4790dc39331af16dd25",
+  "backup": "/workspace/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/pass30ba/pre-edit.kicad_pcb",
+  "crossing": {
+    "mid_tracks_crossing": 1,
+    "items": [
+      "Track [P0.19] on In1.Cu, length 8.9900 mm, (44.25, 60.00)-(53.24, 60.00)",
+      "Track [P0.16] on In1.Cu, length 33.0000 mm, (44.60, 27.40)-(44.60, 60.40)"
+    ],
+    "at": [
+      44.6,
+      60.0
+    ],
+    "why": "The eastbound segment centerline crosses the locked P0.16 skirt. Endpoint clearance to that skirt was 0.17 mm, which missed the interior intersection."
+  },
+  "mid": {
+    "p019_unconnected": 0,
+    "unconnected_items": 57,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 1,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12
+  },
+  "attempted_segments_note": "Added then removed. Not left on the board."
+}

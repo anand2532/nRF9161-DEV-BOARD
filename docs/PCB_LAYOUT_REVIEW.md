@@ -1345,3 +1345,7 @@ Remeasured pad-edge U1.28↔J18.5 **34.860 mm** (effective shapes; chord between
 Straight 0.18 mm chord (45.640, 26.000)→(107.150, 26.000) does not cross the SiP fab body. Foreign under 0.15 mm: 5. POWER/VIN under 0.20 mm: 3. Chord not used. Skirt not ripped. P0.19 and P0.20 not started. Unconnected 58→58. P0.17 opens 1→1. No other net touched. No Gerbers. No commit.
 
 **Artifacts:** `reports/PASS30AZ_SUMMARY.md`, `reports/PASS30AZ_SUMMARY.json`, `scripts/final_pass30az.py`
+
+## Pass30ba — P0.19 — 2026-09-30 13:23 IST
+
+**Decision:** **NO-ROUTE**. U1.30 and J18.7 were separate (pad-edge 36.658 mm). One In1.Cu 8-segment jog from via (39.25, 23.10) to J18.7 was added and fully restored: the eastbound (44.25, 60.00)–(53.24, 60.00) crosses the locked P0.16 skirt (44.60, 27.40)–(44.60, 60.40) at (44.60, 60.00), so mid DRC was short/clearance/crossing/hole 0/0/1/0 even though P0.19 opens went 1→0 and unconnected 58→57. Straight F.Cu chord (39.378, 27.147)→(52.993, 61.187) crosses the SiP and hits VDD1 at −0.29 mm on (50.52, 38.00)–(43.25, 38.00); not used. F.Cu and B.Cu die at y=26.5. POWER pre-add 0.274 mm vs VDD2 via (44.722, 25.900). Post-revert unconnected 58, P0.19 opens 1, hole_to_hole 1, GND islands 12. Skirts not ripped. P0.17 not retried. No other net. No Gerbers. No commit.
