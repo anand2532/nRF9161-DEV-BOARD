@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-30 10:47 IST (Asia/Calcutta) — pass30ap VDD_GPIO last open KEEP (8-seg F.Cu jog around ENABLE/SIM_CLK/P0.20, no new via, POWER clearance 2.2373 mm; unc 63→62; VDD_GPIO opens 1→0; GND islands 12→12 waived). Prior: 2026-09-30 10:37 IST (Asia/Calcutta) — pass30ao NO-ROUTE (remaining VDD_GPIO 27.034 mm > 25 mm; shortest other `P0.31` 29.078 mm > 20 mm; unc 63→63, no copper). Prior: 2026-09-30 10:33 IST (Asia/Calcutta) — pass30an VDD_GPIO east KEEP (y=7.050, D3.1 clearance 0.385 mm; unc 63→63; VDD_GPIO opens 2→1; GND islands 11→12 waived). Prior: 2026-09-30 10:28 IST (Asia/Calcutta) — pass30am VDD_GPIO east REVERT (attempt mid: VDD_GPIO opens 2→1, clearance 1 vs D3.1 VIN, GND islands 11→12 waived; restored unc 63→63). Prior: pass30al COEX0 KEEP (unc 64→63; COEX0 opens 1→0; GND islands 11→11). Prior: pass30ak VDD_GPIO shove KEEP (unc headline was 64; VDD_GPIO opens 3→2; GND island 10→11 waived). Prior: pass30aj same geometry REVERT; pass30ac Package A REVERTED; SE column FROZEN (pass30z keep)
+**Review date:** 2026-09-30 11:01 IST (Asia/Calcutta) — pass30aq P0.31 KEEP (6-seg F.Cu jog around P0.22/P0.04/VDD_GPIO/J14, no via, foreign 0.23 mm, POWER 0.245 mm; unc 62→61; P0.31 opens 2→1; GND islands 12→12 waived). Prior: 2026-09-30 10:47 IST (Asia/Calcutta) — pass30ap VDD_GPIO last open KEEP (8-seg F.Cu jog around ENABLE/SIM_CLK/P0.20, no new via, POWER clearance 2.2373 mm; unc 63→62; VDD_GPIO opens 1→0; GND islands 12→12 waived). Prior: 2026-09-30 10:37 IST (Asia/Calcutta) — pass30ao NO-ROUTE (remaining VDD_GPIO 27.034 mm > 25 mm; shortest other `P0.31` 29.078 mm > 20 mm; unc 63→63, no copper). Prior: 2026-09-30 10:33 IST (Asia/Calcutta) — pass30an VDD_GPIO east KEEP (y=7.050, D3.1 clearance 0.385 mm; unc 63→63; VDD_GPIO opens 2→1; GND islands 11→12 waived). Prior: 2026-09-30 10:28 IST (Asia/Calcutta) — pass30am VDD_GPIO east REVERT (attempt mid: VDD_GPIO opens 2→1, clearance 1 vs D3.1 VIN, GND islands 11→12 waived; restored unc 63→63). Prior: pass30al COEX0 KEEP (unc 64→63; COEX0 opens 1→0; GND islands 11→11). Prior: pass30ak VDD_GPIO shove KEEP (unc headline was 64; VDD_GPIO opens 3→2; GND island 10→11 waived). Prior: pass30aj same geometry REVERT; pass30ac Package A REVERTED; SE column FROZEN (pass30z keep)
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,8 +14,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **62** | `reports/DRC_PASS30AP_AFTER.json` (live `kicad-cli` 9.0.2). pass30ap KEEP: VDD_GPIO opens 1→0. GND islands 12→12 (waived). POWER clearance 2.2373 mm. Prior pass30ao NO-ROUTE
-| **shorting_items** | **0** | `reports/DRC_PASS30AP_AFTER.json` |
+| **unconnected_items** | **61** | `reports/DRC_PASS30AQ_AFTER.json` (live `kicad-cli` 9.0.2). pass30aq KEEP: P0.31 opens 2→1. GND islands 12→12 (waived). foreign 0.23 mm, POWER 0.245 mm. Prior pass30ap KEEP
+| **shorting_items** | **0** | `reports/DRC_PASS30AQ_AFTER.json` |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
 | via_dangling | **78** | `DRC_PASS30F_AFTER.json` |
@@ -42,6 +42,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `DRC_PASS30K_AFTER.json` | 75 | Prior — VIN_F closed; Stage A+pass30i/30j kept |
 | `DRC_PASS30J_AFTER.json` | 76 | Prior — P0.08→J12.9 stitch |
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
+
+**Pass delta (pass30aq):** P0.31 J13.16↔J11.2, **KEEP**. Straight line not used (P0.22, GND via (110, 50), VDD_GPIO, P0.04). Six 0.18 mm F.Cu segments, no via: west of J14, north of J14.1, y=50.62 north of the VDD_GPIO trunk and south of the P0.04 corner, into J11.2. Pre-Add foreign clearance 0.23 mm (need 0.15), POWER/VIN 0.245 mm (need 0.20). P0.31 opens 2→1. Headline unconnected 62→61. short/clearance/crossing/hole_clearance 0/0/0/0. hole_to_hole 1→1. GND islands 12→12 (waived). Locked VDD_GPIO (pass30ap run, y=7.050, U1.12), P0.22, P0.04, COEX0, DEC0, P0.10/P0.12 not ripped. No U1/header move. No y=44.60 pocket. x>24.2. No P0.30. No Gerbers. Details: `reports/PASS30AQ_SUMMARY.md`.
 
 **Pass delta (pass30ap):** last VDD_GPIO open, **KEEP**. Straight line not used (ENABLE, SIM_CLK, P0.20). Eight 0.18 mm F.Cu segments from the existing via (76.4375, 39.050) around those trunks, west of P0.20 at x=54.438, into J18.9. No new via. Pre-Add POWER/VIN clearance 2.2373 mm (need 0.20). VDD_GPIO opens 1→0. Headline unconnected 63→62. short/clearance/crossing/hole_clearance 0/0/0/0. hole_to_hole 1→1. GND islands 12→12 (waived). Locked y=7.050 run, U1.12 polyline, COEX0, DEC0 bridge, P0.10/P0.12 not ripped. No U1/header move. No y=44.60 pocket. x>24.2. No Gerbers. Details: `reports/PASS30AP_SUMMARY.md`.
 
@@ -1241,3 +1243,13 @@ Straight F.Cu U2.5→J18.9 not used. Jog: existing via (76.4375, 39.050) south/w
 **POWER clearance:** 2.2373 mm (≥ 0.20). **VDD_GPIO opens:** 1→0. **Unconnected:** 63→62. **GND islands:** 12→12 (waived).
 
 **Artifacts:** `reports/PASS30AP_SUMMARY.{md,json}`, `reports/DRC_PASS30AP_{BEFORE,MID,AFTER}.json`, `scripts/final_pass30ap.py`
+
+## Pass30aq — P0.31 jog around P0.22 / P0.04 / VDD_GPIO — 2026-09-30 11:01 IST
+
+**Decision:** **KEEP**. No via. Width 0.18 mm. Segments 6.
+
+Straight F.Cu J13.16→J11.2 not used. Jog: (102.60, 75.50) on J13.16, x=103.05 west of J14 to y=47.10, east to x=106.70, y=50.62 north of VDD_GPIO and south of the P0.04 corner, east to x=114.90, into J11.2 at (115.55, 48.80).
+
+**Foreign clearance:** 0.23 mm (≥ 0.15). **POWER clearance:** 0.245 mm (≥ 0.20). **P0.31 opens:** 2→1. **Unconnected:** 62→61. **GND islands:** 12→12 (waived).
+
+**Artifacts:** `reports/PASS30AQ_SUMMARY.{md,json}`, `reports/DRC_PASS30AQ_{BEFORE,MID,AFTER}.json`, `scripts/final_pass30aq.py`
