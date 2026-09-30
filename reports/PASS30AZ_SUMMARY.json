@@ -1,0 +1,237 @@
+{
+  "pass": "30az",
+  "timestamp": "2026-09-30 13:09 IST",
+  "kicad": "9.0.2",
+  "decision": "NO-ROUTE",
+  "stopping_rule": "length",
+  "routed": false,
+  "copper_changed": false,
+  "new_via": false,
+  "segments": [],
+  "net": "P0.17",
+  "git_head": "8942891b2a70c7fe722dc95417f2936f390dfc6d",
+  "pcb_blob": "e1adfbd7a38989b42abaef3557368955484cd560",
+  "expected_head_prefix": "8942891",
+  "expected_blob_prefix": "e1adfbd",
+  "head_prefix_ok": true,
+  "blob_prefix_ok": true,
+  "precondition": {
+    "unconnected": 58,
+    "p017_opens": 1,
+    "required_unconnected": 58,
+    "required_p017_opens": 1,
+    "ok": true
+  },
+  "drc": {
+    "unconnected_items": 58,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "p017_unconnected": 1
+  },
+  "endpoints": {
+    "a": {
+      "ref": "J17",
+      "pad": "1",
+      "net": "P0.17",
+      "center_xy": [
+        108.0,
+        26.0
+      ],
+      "layers": [
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu",
+        "B.Cu"
+      ],
+      "shape": "rectangle 1.7 x 1.7 mm PTH",
+      "role": "isolated pad island"
+    },
+    "b": {
+      "ref": null,
+      "pad": null,
+      "net": "P0.17",
+      "drc_anchor": "Track on In2.Cu, length 5.900 mm",
+      "drc_anchor_xy": [
+        45.55,
+        21.5
+      ],
+      "track": {
+        "layer": "In2.Cu",
+        "width_mm": 0.18,
+        "start": [
+          45.55,
+          21.5
+        ],
+        "end": [
+          45.55,
+          27.4
+        ]
+      },
+      "nearest_copper_xy": [
+        45.64,
+        26.0
+      ],
+      "island_pads": [
+        {
+          "ref": "J18",
+          "pad": "5",
+          "net": "P0.17",
+          "center_xy": [
+            48.16,
+            62.0
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "south_u1": false
+        },
+        {
+          "ref": "J13",
+          "pad": "2",
+          "net": "P0.17",
+          "center_xy": [
+            66.54,
+            76.0
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "south_u1": false
+        },
+        {
+          "ref": "U1",
+          "pad": "28",
+          "net": "P0.17",
+          "center_xy": [
+            40.25,
+            26.75
+          ],
+          "layers": [
+            "F.Cu"
+          ],
+          "south_u1": false
+        }
+      ],
+      "role": "pass30ay In2.Cu skirt island (U1.28 / J18.5 / J13.2). Not ripped."
+    }
+  },
+  "pad_edge_mm": 61.51,
+  "pad_edge_exact_mm": 61.51,
+  "pad_edge_layer": "In2.Cu",
+  "equidistant_y_mm": [
+    25.15,
+    26.85
+  ],
+  "chord": {
+    "width_mm": 0.18,
+    "layer": "In2.Cu",
+    "from_xy": [
+      45.64,
+      26.0
+    ],
+    "to_xy": [
+      107.15,
+      26.0
+    ],
+    "from_item": "east edge of In2.Cu P0.17 (45.550,21.500)-(45.550,27.400)",
+    "to_item": "west edge of J17.1",
+    "length_mm": 61.51,
+    "crosses_sip_fab_body": false,
+    "sip_fab_body_xy": {
+      "x": [
+        28.0,
+        44.0
+      ],
+      "y": [
+        26.75,
+        37.25
+      ]
+    },
+    "used_for_routing": false
+  },
+  "chord_hits": {
+    "foreign_under_0_15": [
+      {
+        "clearance_mm": -0.988,
+        "net": "VDD_nRF",
+        "kind": "zone",
+        "item": "In2.Cu zone fill VDD_nRF (local clearance 0.5 mm); worst at x=92.070, centerline signed depth -0.898 mm",
+        "power_vin": true
+      },
+      {
+        "clearance_mm": -0.49,
+        "net": "VDD_GPIO",
+        "kind": "via",
+        "item": "via@87.810,26.000 r=0.400 on In2.Cu",
+        "power_vin": true
+      },
+      {
+        "clearance_mm": -0.39,
+        "net": "P0.08",
+        "kind": "via",
+        "item": "via@79.675,26.000 r=0.300 on In2.Cu",
+        "power_vin": false
+      },
+      {
+        "clearance_mm": -0.19,
+        "net": "ENABLE",
+        "kind": "via",
+        "item": "via@90.375,26.200 r=0.300 on In2.Cu",
+        "power_vin": false
+      },
+      {
+        "clearance_mm": -0.09,
+        "net": "VDD1",
+        "kind": "via",
+        "item": "via@49.200,25.600 r=0.400 on In2.Cu",
+        "power_vin": true
+      }
+    ],
+    "power_vin_under_0_20": [
+      {
+        "clearance_mm": -0.988,
+        "net": "VDD_nRF",
+        "kind": "zone",
+        "item": "In2.Cu zone fill VDD_nRF (local clearance 0.5 mm); worst at x=92.070, centerline signed depth -0.898 mm",
+        "power_vin": true
+      },
+      {
+        "clearance_mm": -0.49,
+        "net": "VDD_GPIO",
+        "kind": "via",
+        "item": "via@87.810,26.000 r=0.400 on In2.Cu",
+        "power_vin": true
+      },
+      {
+        "clearance_mm": -0.09,
+        "net": "VDD1",
+        "kind": "via",
+        "item": "via@49.200,25.600 r=0.400 on In2.Cu",
+        "power_vin": true
+      }
+    ]
+  },
+  "rules": {
+    "pad_edge_mm": 61.51,
+    "limit_mm": 36.0,
+    "length_blocks": true,
+    "south_u1_pad": false,
+    "east_fence_j10_or_j11": false,
+    "stopping_rule": "length"
+  },
+  "other_nets_touched": false,
+  "locked_copper_ripped": false,
+  "gerbers": false,
+  "commit": false,
+  "backup": null
+}

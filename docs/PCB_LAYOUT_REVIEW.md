@@ -1337,3 +1337,11 @@ Remeasured pad-edge U1.28↔J18.5 **34.860 mm** (effective shapes; chord between
 **P0.17 opens:** 2 → 1. **Unconnected:** 59 → 58. **short/clearance/crossing/hole:** 0/0/0/0. **hole_to_hole:** 1 → 1. **GND islands:** 12 → 12 (waived).
 
 **Artifacts:** `reports/PASS30AY_SUMMARY.md`, `reports/PASS30AY_SUMMARY.json`, `reports/DRC_PASS30AY_BEFORE.json`, `reports/DRC_PASS30AY_MID.json`, `reports/DRC_PASS30AY_AFTER.json`, `scripts/final_pass30ay.py`
+
+## Pass30az — P0.17 J17.1 leftover, no route — 2026-09-30 13:09 IST
+
+**Decision:** **NO-ROUTE**. No copper. No via. No backup. Stopping rule: length. Pad-edge **61.510 mm** on In2.Cu (limit 36 mm). Endpoints: J17.1 (108.000, 26.000), PTH on F.Cu/In1.Cu/In2.Cu/B.Cu; and the pass30ay In2.Cu track (45.550, 21.500)–(45.550, 27.400) on the island with U1.28 (40.250, 26.750) F.Cu, J18.5 (48.160, 62.000), J13.2 (66.540, 76.000). Not a south U1 pad and not J10/J11.
+
+Straight 0.18 mm chord (45.640, 26.000)→(107.150, 26.000) does not cross the SiP fab body. Foreign under 0.15 mm: 5. POWER/VIN under 0.20 mm: 3. Chord not used. Skirt not ripped. P0.19 and P0.20 not started. Unconnected 58→58. P0.17 opens 1→1. No other net touched. No Gerbers. No commit.
+
+**Artifacts:** `reports/PASS30AZ_SUMMARY.md`, `reports/PASS30AZ_SUMMARY.json`, `scripts/final_pass30az.py`
