@@ -2,7 +2,7 @@
 
 **Role:** PCB Layout Engineer  
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
-**Review date:** 2026-09-30 10:05 IST (Asia/Calcutta) — pass30ak VDD_GPIO shove KEEP (unc headline still 64; VDD_GPIO opens 3→2; GND island 10→11 waived). Prior: pass30aj same geometry REVERT; pass30ac Package A REVERTED; SE column FROZEN (pass30z keep)
+**Review date:** 2026-09-30 10:20 IST (Asia/Calcutta) — pass30al COEX0 KEEP (unc 64→63; COEX0 opens 1→0; GND islands 11→11). Prior: pass30ak VDD_GPIO shove KEEP (unc headline was 64; VDD_GPIO opens 3→2; GND island 10→11 waived). Prior: pass30aj same geometry REVERT; pass30ac Package A REVERTED; SE column FROZEN (pass30z keep)
 **Overall:** **NOT FABRICATION-READY** — connectivity hard gate open  
 **Gerbers:** **Do not generate** until `unconnected_items = 0` and DFM checklist is green  
 
@@ -14,8 +14,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 
 | Metric | Count | Source |
 | --- | --- | --- |
-| **unconnected_items** | **64** | `reports/DRC_PASS30AK_AFTER.json` (live `kicad-cli` 9.0.2). Headline unchanged: VDD_GPIO opens 3→2, one extra F.Cu GND zone island 10→11 waived. Prior pass30ac/pass30z Class C + Stage A + P0.22/P0.19 kept
-| **shorting_items** | **0** | `reports/DRC_PASS30AK_AFTER.json` |
+| **unconnected_items** | **63** | `reports/DRC_PASS30AL_AFTER.json` (live `kicad-cli` 9.0.2). COEX0 opens 1→0. GND islands 11→11. Prior pass30ak VDD_GPIO kept
+| **shorting_items** | **0** | `reports/DRC_PASS30AL_AFTER.json` |
 | **clearance** | **0** | Pass30 after (was 6 at baseline; zone refill cleared via/zone hits) |
 | **hole_clearance** | **0** | Same |
 | via_dangling | **78** | `DRC_PASS30F_AFTER.json` |
@@ -42,6 +42,8 @@ Cross-refs: `docs/FAB_READY_CHECKLIST.md` (DFM gate **RED**), `docs/FAB_STACKUP_
 | `DRC_PASS30K_AFTER.json` | 75 | Prior — VIN_F closed; Stage A+pass30i/30j kept |
 | `DRC_PASS30J_AFTER.json` | 76 | Prior — P0.08→J12.9 stitch |
 | `DRC_PASS30I_AFTER.json` | 77 | Prior — P0.08 U1↔SW3/R14 only |
+
+**Pass delta (pass30al):** COEX0 landing, **KEEP**. Straight F.Cu from the R4 via island (29.810, 22.000) to the y=38 run hits no-net U1.51 and U1.73; 0.50 mm pad pitch cannot be threaded, and a west F.Cu jog east of x=24.2 crosses MAGPIO/MIPI and ANT/AUX/GPS (AUX reaches x=20.485). One 0.6/0.3 via at (37.000, 30.500). Six 0.18 mm segments: B (31.110, 22.000)→(32.250, 22.000)→(32.250, 30.500)→(37.000, 30.500), F (37.000, 30.500)→(37.000, 35.900)→(38.750, 35.900)→(38.750, 37.250) onto U1.93 (same island as the y=38 run). COEX0 opens 1→0. Headline unconnected 64→63. short/clearance/crossing/hole_clearance 0/0/0/0. hole_to_hole 1→1. GND islands 11→11 (waived). No non-GND net gained an open. P0.15 still 42. VDD_GPIO polyline, DEC0 B.Cu bridge, P0.10/P0.12 x=47.0 not ripped. No U1/header move. No y=44.60 pocket. No Gerbers. Details: `reports/PASS30AL_SUMMARY.md`.
 
 **Pass delta (pass30ak):** Replay of the pass30aj shove, **KEEP**. Same 0.18 mm F.Cu polyline (40.170, 19.126)→(40.170, 20.200)→(45.900, 20.200)→(45.900, 25.400)→(47.550, 25.400)→(47.550, 31.500)→(44.000, 31.500). Shoved only P0.12 and P0.10 (dangling vias x=47.4→47.0) and DEC0 (F.Cu gap near x=47.55 bridged on B.Cu). P0.08 and P0.11 not shoved. P0.15 segments 42→42. New gate waives the extra F.Cu GND zone island. short/clearance/crossing/hole_clearance 0. VDD_GPIO opens 3→2. No non-GND net gained an open. Headline unconnected 64→64 because GND islands 10→11. No U1/header move. No COEX0. No Gerbers. Details: `reports/PASS30AK_SUMMARY.md`.
 
