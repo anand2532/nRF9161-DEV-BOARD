@@ -1,0 +1,856 @@
+{
+  "pass": "30bf",
+  "timestamp": "2026-09-30 17:28 IST",
+  "decision": "KEEP",
+  "net": "P0.00",
+  "git_head": "b60ffcb6ad9ac026ee3b82eadcfdd6fd9ef8adba",
+  "pcb_blob_at_start": "625ef9d7ba5150f27306905b448cc93eee4f59d9",
+  "pcb_blob_at_end": "1689715203e755d4422b71fb29202c387b9c7889",
+  "sha1sum_at_end": "4774fc779f69b34caa867273a59932a5dc6afc60",
+  "expected_head_prefix": "b60ffcb",
+  "expected_blob": "625ef9d7ba5150f27306905b448cc93eee4f59d9",
+  "head_matches_expected": true,
+  "blob_matches_expected": true,
+  "same_island": false,
+  "start_via_on_u1_island": true,
+  "start_via": {
+    "xy": [
+      39.75,
+      41.1
+    ],
+    "width_mm": 0.6,
+    "radius_mm": 0.3,
+    "drill_mm": 0.3,
+    "through": true,
+    "nm": [
+      39750000,
+      41100000
+    ]
+  },
+  "far_island_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "u1_island_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "u1_island": [
+    "J12.1",
+    "U1.95",
+    "F.Cu (39.750,41.100)-(6.000,76.000)",
+    "F.Cu (39.750,37.250)-(39.750,41.100)",
+    "via@39.750,41.100"
+  ],
+  "far_island": [
+    "R10.1",
+    "F.Cu (79.490,18.000)-(79.490,19.126)",
+    "F.Cu (79.490,19.126)-(80.140,19.126)",
+    "via@80.140,19.126"
+  ],
+  "far_bcu_only": false,
+  "far_fcu_only": false,
+  "far_through_vias": [
+    {
+      "name": "via@80.140,19.126",
+      "xy": [
+        80.14,
+        19.125833
+      ],
+      "width_mm": 0.6,
+      "drill_mm": 0.3,
+      "nm": [
+        80140000,
+        19125833
+      ]
+    }
+  ],
+  "joined": "existing through-via (80.14, 19.125833) on In1.Cu",
+  "pad_edge_mm": 43.297995,
+  "pad_edge_census_mm": 43.298,
+  "straight_chord": {
+    "from_existing_copper": [
+      39.897,
+      36.872
+    ],
+    "to_join_point": [
+      79.408,
+      19.163
+    ],
+    "width_mm": 0.18,
+    "layer": "F.Cu",
+    "length_mm": 43.298127,
+    "crosses_sip_body": true,
+    "vdd1": {
+      "track": [
+        50.68,
+        35.0,
+        50.68,
+        31.0
+      ],
+      "width_mm": 0.4,
+      "proper_cross": true,
+      "edge_clearance_mm": -0.29000000000000004
+    },
+    "used": false,
+    "note": "Straight F.Cu chord crosses VDD1 (50.68, 35.00)-(50.68, 31.00). Not used."
+  },
+  "whole_segment_crossing_test": {
+    "method": "segment-vs-segment interior intersection plus 0.05 mm samples, against P0.16, P0.17, P0.19, P0.20, the SIM_CLK In1 run, and the SIM_RST run (F.Cu neck plus In1). Layers are not exempt. A same-centerline stack on x=44.25, x=44.60, or the y=63.20 eastbounds is a fail. Endpoint-only touches are not crossings.",
+    "crossed": false,
+    "crossing_count": 0,
+    "crossings": [],
+    "min_center_distance_to_locked_mm": 1.0,
+    "min_locked_item": {
+      "net": "SIM_RST",
+      "segment": [
+        [
+          32.75,
+          25.5
+        ],
+        [
+          26.2,
+          25.5
+        ]
+      ]
+    },
+    "segments": [
+      {
+        "start": [
+          39.75,
+          41.1
+        ],
+        "end": [
+          39.75,
+          37.4
+        ],
+        "samples": 75,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.19",
+          "segment": [
+            [
+              44.25,
+              39.1
+            ],
+            [
+              42.8,
+              39.9
+            ]
+          ],
+          "center_distance_mm": 3.05,
+          "edge_clearance_mm": 2.87
+        }
+      },
+      {
+        "start": [
+          39.75,
+          37.4
+        ],
+        "end": [
+          25.2,
+          37.4
+        ],
+        "samples": 292,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "P0.19",
+          "segment": [
+            [
+              44.25,
+              39.1
+            ],
+            [
+              42.8,
+              39.9
+            ]
+          ],
+          "center_distance_mm": 3.9437,
+          "edge_clearance_mm": 3.7637
+        }
+      },
+      {
+        "start": [
+          25.2,
+          37.4
+        ],
+        "end": [
+          25.2,
+          23.5
+        ],
+        "samples": 278,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "SIM_RST",
+          "segment": [
+            [
+              32.75,
+              25.5
+            ],
+            [
+              26.2,
+              25.5
+            ]
+          ],
+          "center_distance_mm": 1.0,
+          "edge_clearance_mm": 0.82
+        }
+      },
+      {
+        "start": [
+          25.2,
+          23.5
+        ],
+        "end": [
+          25.0,
+          23.5
+        ],
+        "samples": 4,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "SIM_RST",
+          "segment": [
+            [
+              26.2,
+              25.5
+            ],
+            [
+              26.2,
+              17.6
+            ]
+          ],
+          "center_distance_mm": 1.0,
+          "edge_clearance_mm": 0.82
+        }
+      },
+      {
+        "start": [
+          25.0,
+          23.5
+        ],
+        "end": [
+          25.0,
+          15.2
+        ],
+        "samples": 167,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "SIM_RST",
+          "segment": [
+            [
+              26.2,
+              25.5
+            ],
+            [
+              26.2,
+              17.6
+            ]
+          ],
+          "center_distance_mm": 1.2,
+          "edge_clearance_mm": 1.02
+        }
+      },
+      {
+        "start": [
+          25.0,
+          15.2
+        ],
+        "end": [
+          68.7,
+          15.2
+        ],
+        "samples": 875,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "SIM_RST",
+          "segment": [
+            [
+              26.2,
+              25.5
+            ],
+            [
+              26.2,
+              17.6
+            ]
+          ],
+          "center_distance_mm": 2.4,
+          "edge_clearance_mm": 2.22
+        }
+      },
+      {
+        "start": [
+          68.7,
+          15.2
+        ],
+        "end": [
+          68.7,
+          16.4
+        ],
+        "samples": 24,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "SIM_RST",
+          "segment": [
+            [
+              55.3,
+              18.5
+            ],
+            [
+              68.0,
+              18.5
+            ]
+          ],
+          "center_distance_mm": 2.2136,
+          "edge_clearance_mm": 2.0336
+        }
+      },
+      {
+        "start": [
+          68.7,
+          16.4
+        ],
+        "end": [
+          80.14,
+          16.4
+        ],
+        "samples": 229,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "SIM_RST",
+          "segment": [
+            [
+              55.3,
+              18.5
+            ],
+            [
+              68.0,
+              18.5
+            ]
+          ],
+          "center_distance_mm": 2.2136,
+          "edge_clearance_mm": 2.0336
+        }
+      },
+      {
+        "start": [
+          80.14,
+          16.4
+        ],
+        "end": [
+          80.14,
+          19.125833
+        ],
+        "samples": 55,
+        "crossed": false,
+        "nearest_skirt": {
+          "net": "SIM_RST",
+          "segment": [
+            [
+              55.3,
+              18.5
+            ],
+            [
+              68.0,
+              18.5
+            ]
+          ],
+          "center_distance_mm": 12.14,
+          "edge_clearance_mm": 11.96
+        }
+      }
+    ]
+  },
+  "new_via": false,
+  "segments": [
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        39.75,
+        41.1
+      ],
+      "end": [
+        39.75,
+        37.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        39.75,
+        37.4
+      ],
+      "end": [
+        25.2,
+        37.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        25.2,
+        37.4
+      ],
+      "end": [
+        25.2,
+        23.5
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        25.2,
+        23.5
+      ],
+      "end": [
+        25.0,
+        23.5
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        25.0,
+        23.5
+      ],
+      "end": [
+        25.0,
+        15.2
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        25.0,
+        15.2
+      ],
+      "end": [
+        68.7,
+        15.2
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        68.7,
+        15.2
+      ],
+      "end": [
+        68.7,
+        16.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        68.7,
+        16.4
+      ],
+      "end": [
+        80.14,
+        16.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        80.14,
+        16.4
+      ],
+      "end": [
+        80.14,
+        19.125833
+      ]
+    }
+  ],
+  "segment_count": 9,
+  "attempted_segments": [
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        39.75,
+        41.1
+      ],
+      "end": [
+        39.75,
+        37.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        39.75,
+        37.4
+      ],
+      "end": [
+        25.2,
+        37.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        25.2,
+        37.4
+      ],
+      "end": [
+        25.2,
+        23.5
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        25.2,
+        23.5
+      ],
+      "end": [
+        25.0,
+        23.5
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        25.0,
+        23.5
+      ],
+      "end": [
+        25.0,
+        15.2
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        25.0,
+        15.2
+      ],
+      "end": [
+        68.7,
+        15.2
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        68.7,
+        15.2
+      ],
+      "end": [
+        68.7,
+        16.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        68.7,
+        16.4
+      ],
+      "end": [
+        80.14,
+        16.4
+      ]
+    },
+    {
+      "layer": "In1.Cu",
+      "width_mm": 0.18,
+      "start": [
+        80.14,
+        16.4
+      ],
+      "end": [
+        80.14,
+        19.125833
+      ]
+    }
+  ],
+  "min_foreign_clearance_mm": 0.16,
+  "min_foreign_item": {
+    "net": "MIPI_VIO",
+    "item": "via@24.650,24.400"
+  },
+  "min_power_clearance_mm": 0.2457,
+  "min_power_item": {
+    "net": "VDD2",
+    "item": "via@68.137,16.874"
+  },
+  "min_hole_clearance_mm": 0.31,
+  "min_hole_item": "via MIPI_VIO @24.650,24.400",
+  "segment_clearances": [
+    {
+      "start": [
+        39.75,
+        41.1
+      ],
+      "end": [
+        39.75,
+        37.4
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.61,
+      "foreign_item": {
+        "net": "COEX0",
+        "item": "via@38.750,41.100"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.76,
+      "hole_item": "via COEX0 @38.750,41.100",
+      "why": null
+    },
+    {
+      "start": [
+        39.75,
+        37.4
+      ],
+      "end": [
+        25.2,
+        37.4
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 2.01,
+      "foreign_item": {
+        "net": "GND",
+        "item": "via@39.000,35.000"
+      },
+      "power_mm": 2.11,
+      "power_item": {
+        "net": "VDD_GPIO",
+        "item": "via@28.500,40.000"
+      },
+      "hole_mm": 2.16,
+      "hole_item": "via GND @39.000,35.000",
+      "why": null
+    },
+    {
+      "start": [
+        25.2,
+        37.4
+      ],
+      "end": [
+        25.2,
+        23.5
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.16,
+      "foreign_item": {
+        "net": "MIPI_VIO",
+        "item": "via@24.650,24.400"
+      },
+      "power_mm": 3.7112,
+      "power_item": {
+        "net": "VDD_GPIO",
+        "item": "via@28.500,40.000"
+      },
+      "hole_mm": 0.31,
+      "hole_item": "via MIPI_VIO @24.650,24.400",
+      "why": null
+    },
+    {
+      "start": [
+        25.2,
+        23.5
+      ],
+      "end": [
+        25.0,
+        23.5
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.1757,
+      "foreign_item": {
+        "net": "MAGPIO1",
+        "item": "via@25.600,23.100"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.3257,
+      "hole_item": "via MAGPIO1 @25.600,23.100",
+      "why": null
+    },
+    {
+      "start": [
+        25.0,
+        23.5
+      ],
+      "end": [
+        25.0,
+        15.2
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.21,
+      "foreign_item": {
+        "net": "MAGPIO1",
+        "item": "via@25.600,23.100"
+      },
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": 0.36,
+      "hole_item": "via MAGPIO1 @25.600,23.100",
+      "why": null
+    },
+    {
+      "start": [
+        25.0,
+        15.2
+      ],
+      "end": [
+        68.7,
+        15.2
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.21,
+      "foreign_item": {
+        "net": "nRESET",
+        "item": "via@45.680,15.800"
+      },
+      "power_mm": 0.61,
+      "power_item": {
+        "net": "VDD2_MID",
+        "item": "via@67.213,16.300"
+      },
+      "hole_mm": 0.36,
+      "hole_item": "via nRESET @45.680,15.800",
+      "why": null
+    },
+    {
+      "start": [
+        68.7,
+        15.2
+      ],
+      "end": [
+        68.7,
+        16.4
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.21,
+      "foreign_item": {
+        "net": "P0.15",
+        "item": "via@69.300,15.350"
+      },
+      "power_mm": 0.2457,
+      "power_item": {
+        "net": "VDD2",
+        "item": "via@68.137,16.874"
+      },
+      "hole_mm": 0.36,
+      "hole_item": "via P0.15 @69.300,15.350",
+      "why": null
+    },
+    {
+      "start": [
+        68.7,
+        16.4
+      ],
+      "end": [
+        80.14,
+        16.4
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": 0.2457,
+      "foreign_item": {
+        "net": "VDD2",
+        "item": "via@68.137,16.874"
+      },
+      "power_mm": 0.2457,
+      "power_item": {
+        "net": "VDD2",
+        "item": "via@68.137,16.874"
+      },
+      "hole_mm": 0.4457,
+      "hole_item": "via VDD2 @68.137,16.874",
+      "why": null
+    },
+    {
+      "start": [
+        80.14,
+        16.4
+      ],
+      "end": [
+        80.14,
+        19.125833
+      ],
+      "layer": "In1.Cu",
+      "ok": true,
+      "body": false,
+      "foreign_mm": null,
+      "foreign_item": null,
+      "power_mm": null,
+      "power_item": null,
+      "hole_mm": null,
+      "hole_item": null,
+      "why": null
+    }
+  ],
+  "p000_opens_before": 1,
+  "p000_opens_after": 0,
+  "unconnected_before": 54,
+  "unconnected_after": 53,
+  "short_clearance_crossing_hole_before": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "short_clearance_crossing_hole_after": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "hole_to_hole_before": 1,
+  "hole_to_hole_after": 1,
+  "gnd_islands_before": 12,
+  "gnd_islands_after": 12,
+  "other_nongnd_gained": {},
+  "reason": "KEEP. In1 west/north bypass, 9 new segments, no new via, from existing through-via (39.75, 41.10) onto existing through-via (80.14, 19.125833). Straight F.Cu chord not used (VDD1). Skirt slot and sealed pocket not used. Whole-segment crossings: 0. P0.00 opens 1\u21920. Unconnected 54\u219253. Foreign 0.16 mm vs {'net': 'MIPI_VIO', 'item': 'via@24.650,24.400'}. POWER 0.2457 mm vs {'net': 'VDD2', 'item': 'via@68.137,16.874'}. short/clearance/crossing/hole 0/0/0/0. hole_to_hole 1. GND islands 12\u219212 (waived). Other non-GND gained: none. Four skirts, SIM_CLK, and SIM_RST not ripped or stacked. No other net.",
+  "skirts_crossed_or_stacked": false,
+  "skirts_ripped": false,
+  "sim_clk_ripped_or_stacked": false,
+  "sim_rst_ripped_or_stacked": false,
+  "skirt_slot_used": false,
+  "sealed_pocket_used": false,
+  "other_net": false,
+  "gerbers": false,
+  "commit": false,
+  "board_sha256": "52d7890ef1cf7584e99e92a203c743bd8497846a50a0877511b753c12711a78a",
+  "backup": "/workspace/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/pass30bf/pre-edit.kicad_pcb",
+  "reverted_to_pre_edit_blob": false
+}
