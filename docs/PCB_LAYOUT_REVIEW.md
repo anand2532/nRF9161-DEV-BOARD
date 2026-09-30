@@ -1327,3 +1327,13 @@ A straight 0.18 mm line between those endpoints overlaps locked and foreign copp
 **P0.14 opens:** 1 → 1 (mid 1). **Unconnected:** 60 → 60 (mid 60). GND islands waived. Full restore to `.mcp-backups/pass30av/pre-edit.kicad_pcb`. No F.Cu pinch retry. P0.13/P0.15 vias not moved. U1.88 / U1.89 not retried. P0.24 not started. No Gerbers. No git commit.
 
 **Artifacts:** `reports/PASS30AV_SUMMARY.{md,json}`, `reports/DRC_PASS30AV_BEFORE.json`, `reports/DRC_PASS30AV_MID.json`, `reports/DRC_PASS30AV_AFTER.json`, `scripts/final_pass30av.py`
+
+## Pass30ay — P0.17 north-exit jog — 2026-09-30 12:57 IST
+
+**Decision:** **KEEP**. In2.Cu 0.18 mm, no new via: (40.25, 23.10)→(40.25, 21.50)→(45.55, 21.50)→(45.55, 27.40)→(44.60, 27.40)→(44.60, 60.40)→(48.16, 60.40)→(48.16, 61.30).
+
+Remeasured pad-edge U1.28↔J18.5 **34.860 mm** (effective shapes; chord between (40.378, 27.147) and (47.913, 61.187) is 34.864 mm). Foreign 0.21 mm vs {'net': 'P0.06', 'item': 'via@45.150,36.000'}. POWER 0.3378 mm vs {'net': 'VDD2', 'item': 'via@44.722,25.900'}. Straight 0.18 mm F.Cu chord (40.378, 27.147)→(47.913, 61.187) not used (crosses the SiP; GND via (42.0, 35.0)). F.Cu and B.Cu free space from via (40.25, 23.10) die at y=26.5. Existing through-via kept. No second via. Locked P0.16 In1 skirt not ripped. x>24.2. No header or U1 move. No Gerbers. No commit.
+
+**P0.17 opens:** 2 → 1. **Unconnected:** 59 → 58. **short/clearance/crossing/hole:** 0/0/0/0. **hole_to_hole:** 1 → 1. **GND islands:** 12 → 12 (waived).
+
+**Artifacts:** `reports/PASS30AY_SUMMARY.md`, `reports/PASS30AY_SUMMARY.json`, `reports/DRC_PASS30AY_BEFORE.json`, `reports/DRC_PASS30AY_MID.json`, `reports/DRC_PASS30AY_AFTER.json`, `scripts/final_pass30ay.py`

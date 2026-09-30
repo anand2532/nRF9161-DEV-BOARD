@@ -1,0 +1,341 @@
+{
+  "pass": "30ay",
+  "timestamp": "2026-09-30 12:57 IST",
+  "decision": "KEEP",
+  "net": "P0.17",
+  "git_head": "c801f86437d7f588994839176f6be98a41a85d5b",
+  "pcb_blob_at_start": "b17e5794de90387894b0a45376d750cae33bde73",
+  "side": "east",
+  "layer": "In2.Cu",
+  "new_via": null,
+  "reason": "KEEP. East In2 skirt, 7 new segments, no new via. P0.17 opens 2\u21921. Unconnected 59\u219258. Foreign 0.21 mm vs {'net': 'P0.06', 'item': 'via@45.150,36.000'}. POWER 0.3378 mm vs {'net': 'VDD2', 'item': 'via@44.722,25.900'}. short/clearance/crossing/hole 0/0/0/0. hole_to_hole 1. GND islands 12\u219212 (waived). Other non-GND gained: none. Locked copper not ripped.",
+  "pad_edge_mm": 34.86,
+  "pad_edge_exact_mm": 34.860476,
+  "straight_line_not_used": {
+    "from": [
+      40.378,
+      27.147
+    ],
+    "to": [
+      47.913,
+      61.187
+    ],
+    "length_mm": 34.864,
+    "crosses_sip_body": true,
+    "gnd_via_42_35": {
+      "clearance_mm": -0.276,
+      "net": "GND",
+      "item": "via@42.000,35.000",
+      "via_radius_mm": 0.3
+    },
+    "hit_count_under_0_15": 13,
+    "nets_under_0_15": [
+      "<no-net>",
+      "ENABLE",
+      "GND",
+      "P0.04"
+    ],
+    "worst_by_net": {
+      "GND": {
+        "clearance_mm": -0.276,
+        "net": "GND",
+        "item": "via@42.000,35.000"
+      },
+      "ENABLE": {
+        "clearance_mm": 0.0,
+        "net": "ENABLE",
+        "item": "F.Cu (52.00,44.00)-(42.75,44.00)"
+      },
+      "<no-net>": {
+        "clearance_mm": 0.0,
+        "net": "<no-net>",
+        "item": "pad U1.106"
+      },
+      "P0.04": {
+        "clearance_mm": 0.04,
+        "net": "P0.04",
+        "item": "pad U1.100"
+      }
+    }
+  },
+  "layers_checked": {
+    "F": {
+      "cells": 250,
+      "bbox": [
+        37.75,
+        40.75,
+        16.0,
+        26.5
+      ],
+      "ymax": 26.5,
+      "reaches_j18": false
+    },
+    "B": {
+      "cells": 667,
+      "bbox": [
+        32.75,
+        46.25,
+        16.0,
+        26.5
+      ],
+      "ymax": 26.5,
+      "reaches_j18": false
+    },
+    "In1": {
+      "cells": 30894,
+      "bbox": [
+        24.5,
+        72.0,
+        16.0,
+        64.0
+      ],
+      "ymax": 64.0,
+      "reaches_j18": true
+    },
+    "In2": {
+      "cells": 31299,
+      "bbox": [
+        24.5,
+        72.0,
+        16.0,
+        64.0
+      ],
+      "ymax": 64.0,
+      "reaches_j18": true
+    }
+  },
+  "via": {
+    "pos": [
+      40.25,
+      23.1
+    ],
+    "drill_mm": 0.3,
+    "pad_mm": 0.6,
+    "top": "F.Cu",
+    "bottom": "B.Cu",
+    "on": {
+      "F.Cu": true,
+      "In1.Cu": true,
+      "In2.Cu": true,
+      "B.Cu": true
+    }
+  },
+  "segments": [
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        40.25,
+        23.1
+      ],
+      "end": [
+        40.25,
+        21.5
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        40.25,
+        21.5
+      ],
+      "end": [
+        45.55,
+        21.5
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        45.55,
+        21.5
+      ],
+      "end": [
+        45.55,
+        27.4
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        45.55,
+        27.4
+      ],
+      "end": [
+        44.6,
+        27.4
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.6,
+        27.4
+      ],
+      "end": [
+        44.6,
+        60.4
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.6,
+        60.4
+      ],
+      "end": [
+        48.16,
+        60.4
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        48.16,
+        60.4
+      ],
+      "end": [
+        48.16,
+        61.3
+      ]
+    }
+  ],
+  "segment_count": 7,
+  "attempted_segments": [
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        40.25,
+        23.1
+      ],
+      "end": [
+        40.25,
+        21.5
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        40.25,
+        21.5
+      ],
+      "end": [
+        45.55,
+        21.5
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        45.55,
+        21.5
+      ],
+      "end": [
+        45.55,
+        27.4
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        45.55,
+        27.4
+      ],
+      "end": [
+        44.6,
+        27.4
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.6,
+        27.4
+      ],
+      "end": [
+        44.6,
+        60.4
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        44.6,
+        60.4
+      ],
+      "end": [
+        48.16,
+        60.4
+      ]
+    },
+    {
+      "layer": "In2.Cu",
+      "width_mm": 0.18,
+      "start": [
+        48.16,
+        60.4
+      ],
+      "end": [
+        48.16,
+        61.3
+      ]
+    }
+  ],
+  "min_foreign_clearance_mm": 0.21,
+  "min_power_clearance_mm": 0.3378,
+  "min_hole_clearance_mm": 0.31,
+  "min_foreign_item": {
+    "net": "P0.06",
+    "item": "via@45.150,36.000"
+  },
+  "min_power_item": {
+    "net": "VDD2",
+    "item": "via@44.722,25.900"
+  },
+  "min_hole_item": "via P0.06 @45.150,36.000",
+  "p017_opens_before": 2,
+  "p017_opens_after": 1,
+  "unconnected_before": 59,
+  "unconnected_after": 58,
+  "gnd_islands_before": 12,
+  "gnd_islands_after": 12,
+  "other_nongnd_gained": {},
+  "before": {
+    "unconnected_items": 59,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "p017_unconnected": 2
+  },
+  "after": {
+    "unconnected_items": 58,
+    "shorting_items": 0,
+    "clearance": 0,
+    "tracks_crossing": 0,
+    "hole_clearance": 0,
+    "hole_to_hole": 1,
+    "gnd_zone_islands": 12,
+    "p017_unconnected": 1
+  },
+  "board_sha256": "a660d541cd60b2db6f5439da42eaa20f5bb4d88f8b29b4790dc39331af16dd25",
+  "backup": "/workspace/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/pass30ay/pre-edit.kicad_pcb",
+  "backup_sha256": "4b66c1232fb78694abc4aeb0ed7d0d795b3cd0a9e001d6837a4444d6274fc50a",
+  "locked_copper_ripped": false,
+  "gerbers": false,
+  "commit": false
+}
