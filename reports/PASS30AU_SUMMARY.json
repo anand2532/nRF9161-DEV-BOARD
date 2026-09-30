@@ -1,0 +1,129 @@
+{
+  "pass": "pass30au",
+  "timestamp": "2026-09-30 11:45 IST",
+  "kicad": "9.0.2",
+  "decision": "NO-ROUTE",
+  "net": "P0.14",
+  "copper_added": false,
+  "backup": null,
+  "via": null,
+  "segments": [],
+  "side_of_package": null,
+  "reason": "No 8-segment / one-via jog stays east of x=24.2, goes around the SiP (not under the body, not through the south fanout), and clears foreign copper. The U1.24 F.Cu pocket is closed on the north by the P0.13/P0.15 vias, on the sides by those nets' pad-pitch tracks, on the south by the SiP body, and on B.Cu by GND fill.",
+  "remeasured_gap_mm": 34.038,
+  "gap_pts_mm": {
+    "island_header": [
+      40.623,
+      61.154
+    ],
+    "island_u1": [
+      42.136,
+      27.15
+    ]
+  },
+  "islands": 2,
+  "p014_opens": 1,
+  "straight_line": {
+    "from": [
+      42.136,
+      27.15
+    ],
+    "to": [
+      40.623,
+      61.154
+    ],
+    "length_mm": 34.038,
+    "crosses_sip_body": true,
+    "hit_count_under_0_15": 18,
+    "worst_by_net": {
+      "GND": {
+        "clearance_mm": -0.336,
+        "net": "GND",
+        "power": false,
+        "item": "via@42.0,29.0"
+      },
+      "P0.04": {
+        "clearance_mm": -0.168,
+        "net": "P0.04",
+        "power": false,
+        "item": "F.Cu (41.25,46.80)-(37.40,46.80)"
+      },
+      "P0.03": {
+        "clearance_mm": -0.156,
+        "net": "P0.03",
+        "power": false,
+        "item": "via@41.75,41.1"
+      },
+      "P0.15": {
+        "clearance_mm": 0.149,
+        "net": "P0.15",
+        "power": false,
+        "item": "pad U1.25"
+      },
+      "<no-net>": {
+        "clearance_mm": -0.09,
+        "net": "<no-net>",
+        "power": false,
+        "item": "pad U1.127 (no net)"
+      }
+    }
+  },
+  "north_via_pinch": {
+    "left": {
+      "net": "P0.15",
+      "x": 41.75,
+      "y": 23.1,
+      "r": 0.3
+    },
+    "right": {
+      "net": "P0.13",
+      "x": 42.75,
+      "y": 23.1,
+      "r": 0.3
+    },
+    "copper_gap_mm": 0.4,
+    "need_mm": 0.48,
+    "short_by_mm": 0.08,
+    "passable": false
+  },
+  "pad_pitch": {
+    "u1_24": [
+      42.25,
+      26.75
+    ],
+    "u1_23_p013_gap_mm": 0.2,
+    "u1_25_p015_gap_mm": 0.2,
+    "need_mm": 0.48
+  },
+  "b_fill_pocket": {
+    "b_fill_edge_x_at_y25": 42.41,
+    "p013_track_west_edge_x": 42.66,
+    "halo_mm": 0.25,
+    "via_0_50_fits_in_halo": false
+  },
+  "min_foreign_clearance_mm": null,
+  "min_power_vin_clearance_mm": null,
+  "clearance_note": "No copper placed, so foreign and POWER/VIN clearance of new copper were not measured.",
+  "unconnected_before": 60,
+  "unconnected_after": 60,
+  "unconnected_source": "pcbnew CONNECTIVITY_DATA.GetUnconnectedCount (no copper edit, no DRC json)",
+  "p014_opens_before": 1,
+  "p014_opens_after": 1,
+  "gnd_islands_note": "Not recomputed by DRC. No copper edit, so the waived GND-island count is unchanged.",
+  "board_sha256": "3f209b087c54966030c17b3ca9f91dc0758a511bfacc0aacd44ef7a1850ff005",
+  "locked_untouched": [
+    "P0.30",
+    "P0.31",
+    "P0.22",
+    "P0.04",
+    "P0.15",
+    "P0.19",
+    "VDD_GPIO",
+    "COEX0",
+    "DEC0",
+    "P0.10",
+    "P0.12",
+    "U1.88",
+    "U1.89"
+  ]
+}

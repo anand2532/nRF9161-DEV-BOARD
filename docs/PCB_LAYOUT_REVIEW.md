@@ -1297,3 +1297,15 @@ A straight 0.18 mm line between those endpoints overlaps locked and foreign copp
 **Unconnected:** 60→60. **P0.30 opens:** 1→1.
 
 **Artifacts:** `reports/PASS30AT_SUMMARY.{md,json}`, `reports/PASS30AT_SHORTLIST.{md,json}`
+
+## Pass30au — P0.14 around the SiP, no route — 2026-09-30 11:45 IST
+
+**Decision:** **NO-ROUTE**. No copper. No via. No backup. The 25 mm cap was waived for this net and the straight line was still not used.
+
+**Remeasured gap:** 34.038 mm on F.Cu, pad J18.2 island (40.623, 61.154) ↔ pad U1.24 (42.136, 27.15). P0.14 opens 1→1. Ratsnest edges 60→60.
+
+**Straight line:** crosses the SiP body and the south fanout. Worst hits include GND -0.336 mm (via@42.0,29.0); P0.04 -0.168 mm (F.Cu (41.25,46.80)-(37.40,46.80)); P0.03 -0.156 mm (via@41.75,41.1); <no-net> -0.09 mm (pad U1.127 (no net)). Not used.
+
+**Blocker:** U1.24's F.Cu pocket is closed. Pad gaps to P0.13/P0.15 are 0.2 / 0.2 mm (need 0.48 mm). North via pinch copper gap 0.4 mm (need 0.48 mm). B.Cu in the pocket is GND fill; the halo beside P0.13 is 0.25 mm and will not take a via. No east-of-package jog within 8 segments and one via without entering the body, the south fanout, or the pour. Locked copper not ripped. U1.88 / U1.89 not retried. P0.24 not started. No Gerbers.
+
+**Artifacts:** `reports/PASS30AU_SUMMARY.{md,json}`, `scripts/final_pass30au.py`
