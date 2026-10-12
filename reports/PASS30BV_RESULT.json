@@ -1,0 +1,131 @@
+{
+ "start_blob": "841574e17ab38ff0508510a63863da9ad5e86a4d",
+ "before": {
+  "unconnected": 47,
+  "short": 0,
+  "clearance": 0,
+  "crossing": 0,
+  "hole": 0,
+  "hole_to_hole": 1,
+  "courtyard": 0,
+  "gnd_unconnected": 12,
+  "nongnd": {
+   "MAGPIO1": 1,
+   "MIPI_VIO": 1,
+   "P0.10": 2,
+   "P0.17": 1,
+   "P0.31": 1,
+   "P0.26": 1,
+   "MIPI_SCLK": 1,
+   "P0.05": 1,
+   "P0.09": 1,
+   "P0.27": 1,
+   "P0.03": 1,
+   "P0.07": 1,
+   "P0.01": 1,
+   "P0.30": 1,
+   "MAGPIO2": 1,
+   "P0.18": 2,
+   "P0.25": 1,
+   "SIM_1V8": 1,
+   "SIM_IO": 1,
+   "MAGPIO0": 1,
+   "COEX1": 1,
+   "P0.24": 2,
+   "P0.29": 1,
+   "P0.12": 2,
+   "P0.28": 1,
+   "P0.21": 2,
+   "MIPI_SDATA": 1,
+   "P0.11": 1,
+   "P0.14": 1,
+   "P0.23": 1
+  },
+  "types": {
+   "via_dangling": 61,
+   "track_dangling": 13,
+   "hole_to_hole": 1,
+   "lib_footprint_issues": 97,
+   "lib_footprint_mismatch": 1,
+   "silk_over_copper": 35,
+   "silk_overlap": 145
+  }
+ },
+ "after": {
+  "unconnected": 46,
+  "short": 0,
+  "clearance": 0,
+  "crossing": 0,
+  "hole": 0,
+  "hole_to_hole": 1,
+  "courtyard": 0,
+  "gnd_unconnected": 12,
+  "nongnd": {
+   "MAGPIO1": 1,
+   "MIPI_VIO": 1,
+   "P0.10": 2,
+   "P0.17": 1,
+   "P0.31": 1,
+   "P0.26": 1,
+   "MIPI_SCLK": 1,
+   "P0.05": 1,
+   "P0.09": 1,
+   "P0.27": 1,
+   "P0.03": 1,
+   "P0.07": 1,
+   "P0.01": 1,
+   "P0.30": 1,
+   "MAGPIO2": 1,
+   "P0.18": 1,
+   "P0.25": 1,
+   "SIM_1V8": 1,
+   "SIM_IO": 1,
+   "MAGPIO0": 1,
+   "COEX1": 1,
+   "P0.24": 2,
+   "P0.29": 1,
+   "P0.12": 2,
+   "P0.28": 1,
+   "P0.21": 2,
+   "MIPI_SDATA": 1,
+   "P0.11": 1,
+   "P0.14": 1,
+   "P0.23": 1
+  },
+  "types": {
+   "via_dangling": 61,
+   "track_dangling": 13,
+   "hole_to_hole": 1,
+   "lib_footprint_issues": 97,
+   "lib_footprint_mismatch": 1,
+   "silk_over_copper": 35,
+   "silk_overlap": 145
+  }
+ },
+ "new_opens": {},
+ "decision": "KEEP",
+ "end_blob": "168d2eb116cb8f2941841d65e53278bf87d2479f",
+ "via": "none (PTH to PTH)",
+ "layer": "In1.Cu",
+ "segments": [
+  [
+   68.9,
+   76.0
+  ],
+  [
+   106.7,
+   38.2
+  ],
+  [
+   106.7,
+   29.8
+  ],
+  [
+   108.0,
+   28.54
+  ]
+ ],
+ "min_plan_to_locked_mm": 0.0,
+ "plan_note": "90-degree plan crossing of P0.22 In2 at (106.7,32.5)",
+ "longest_parallel_within_0_5_mm": 1.0
+}

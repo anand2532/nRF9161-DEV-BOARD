@@ -1400,4 +1400,5 @@ Straight 0.18 mm chord (45.640, 26.000)→(107.150, 26.000) does not cross the S
 - pass30bq (2026-10-12): P0.12 NO-ROUTE. J12.13 is boxed in plan view by P0.05/P0.11 (y 74.7/74.8) and P0.09 (y 77.2), so the 0.50 mm rule cannot be met. P0.12 is do-not-retry.
 - pass30br (2026-10-12): P0.10 NO-ROUTE (rule 3). J12.11 is boxed by P0.05 In1 y=74.70 and P0.09 In1 y=77.20, leaving a 0.50 mm band inside the pad row. No copper; 49 unconnected. P0.10 is do-not-retry.
 - pass30bt (2026-10-12): P0.22 KEEP (class D, cap waived). Existing via (64.0,5.2) to existing via (109.2,32.5), In2, 3 segments. Unconnected 49->48, P0.22 1->0, h2h 1, GND 12. Parallel stretch 0 mm; min plan to locked 0.96 mm. Landed in f642613.
-- pass30bu (2026-10-12): P0.23 J13.8 to J10.3 KEEP (class D, cap waived). In2, 4 segments, no vias. Unconnected 48->47, P0.23 2->1, h2h 1, GND 12. Parallel 0 mm. Not committed.
+- pass30bu (2026-10-12): P0.23 J13.8 to J10.3 KEEP (class D, cap waived). In2, 4 segments, no vias. Unconnected 48->47, P0.23 2->1, h2h 1, GND 12. Parallel 0 mm. Landed in 05cfc22.
+- pass30bv (2026-10-12): P0.18 J13.3 to J17.2 KEEP (class D, cap waived). In1, 3 segments, no vias. Unconnected 47->46, P0.18 2->1, h2h 1, GND 12. Longest plan stretch within 0.5 mm 1.0 mm (a 90-degree crossing of P0.22 In2). Not committed.
