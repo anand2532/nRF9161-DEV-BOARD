@@ -41,19 +41,19 @@ Get real cost and lead numbers from an online quote: JLC with "Epoxy Filled & Ca
 
 ### 1.4 Fab-note text (paste into fab drawing / order remarks)
 
-**Updated 2026-10-12 for `vippo` @ 729a1a3 (PASS30CL). Scope per Hardware PM decision: 18 filled-and-capped vias = 9 × 0.20/0.30 in pads 52–60 (table A) + 9 GND thermal vias in U1 GND pads (table B), decided target **0.25/0.40** (option (b), Hardware PM + RF approved 2026-10-12). **Group B 0.25/0.40 is pending a Layout change after pass30cm; the current PCB at 729a1a3 still has 0.30/0.60.** Table A: Verified from the `.kicad_pcb` at 729a1a3 (pcbnew API, file extracted with `git show` into /tmp):
+**Updated 2026-10-12 for `vippo` @ 729a1a3 (PASS30CL). Scope per Hardware PM decision: 18 filled-and-capped vias = 9 × 0.20/0.30 in pads 52–60 (table A) + 9 GND thermal vias in U1 GND pads (table B), decided target **0.25/0.40** (option (b), Hardware PM + RF approved 2026-10-12). **Group B 0.25/0.40 is done (PASS30CN step 4, 74a6605). Group A moved with the DK land pattern to x 28.25 (PASS30CN, e6d1fe0); the table below shows the current positions.** Table A: Verified from the `.kicad_pcb` at 729a1a3 (pcbnew API, file extracted with `git show` into /tmp):
 
 | U1 pad | Net | Pad (mm) | Via centre (mm) | Drill / land (mm) |
 |---|---|---|---|---|
-| 52 | GND | 0.80×0.30 | 27.95, 27.00 | 0.20 / 0.30 |
-| 53 | MAGPIO2 | 0.80×0.30 | 27.95, 27.50 | 0.20 / 0.30 |
-| 54 | MAGPIO1 | 0.80×0.30 | 27.95, 28.00 | 0.20 / 0.30 |
-| 55 | MAGPIO0 | 0.80×0.30 | 27.95, 28.50 | 0.20 / 0.30 |
-| 56 | GND | 0.80×0.30 | 27.95, 29.00 | 0.20 / 0.30 |
-| 57 | MIPI_VIO | 0.80×0.30 | 27.95, 29.50 | 0.20 / 0.30 |
-| 58 | MIPI_SCLK | 0.80×0.30 | 27.95, 30.00 | 0.20 / 0.30 |
-| 59 | MIPI_SDATA | 0.80×0.30 | 27.95, 30.50 | 0.20 / 0.30 |
-| 60 | GND | 0.80×0.30 | 27.95, 31.00 | 0.20 / 0.30 |
+| 52 | GND | 0.30×0.30 | 28.25, 27.00 | 0.20 / 0.30 |
+| 53 | MAGPIO2 | 0.30×0.30 | 28.25, 27.50 | 0.20 / 0.30 |
+| 54 | MAGPIO1 | 0.30×0.30 | 28.25, 28.00 | 0.20 / 0.30 |
+| 55 | MAGPIO0 | 0.30×0.30 | 28.25, 28.50 | 0.20 / 0.30 |
+| 56 | GND | 0.30×0.30 | 28.25, 29.00 | 0.20 / 0.30 |
+| 57 | MIPI_VIO | 0.30×0.30 | 28.25, 29.50 | 0.20 / 0.30 |
+| 58 | MIPI_SCLK | 0.30×0.30 | 28.25, 30.00 | 0.20 / 0.30 |
+| 59 | MIPI_SDATA | 0.30×0.30 | 28.25, 30.50 | 0.20 / 0.30 |
+| 60 | GND | 0.30×0.30 | 28.25, 31.00 | 0.20 / 0.30 |
 
 - Geometry: these are the only 0.20 mm drills on the board (all other vias 0.3/0.4 drill), so selection by tool works. Annular ring is 0.05 mm (JLC POFV minimum [J1]). The land equals the 0.30 mm pad width (zero margin, does not overhang). It is offset 0.05 mm along the 0.80 mm pad length, so it stays inside the pad.
 - Spacing: the VIPPO pitch is 0.50 mm (0.20 mm land-to-land, 0.30 mm hole-to-hole edge). The nearest regular via is 2.35 mm edge-to-edge (SIM_1V8 0.5/0.3 via from pad 52), so it meets JLC's >0.45 mm rule [J1].
@@ -128,7 +128,8 @@ Marking approach: (a) a unique 0.20 mm drill size, so the drill file tool table 
 - Cost: **UNVERIFIED.** No public 4L POFV price was found ([J1], [J4], [J6], quote page [J5]). The 0.2/0.3 small-via surcharge exists, but its amount is not published [J5]. **A live JLC online quote is needed** (4L, 1.6 mm, ENIG, Epoxy Filled & Capped, min via 0.2/0.3). No numbers estimated.
 - Scope is now 18 vias. Drill-selection issue for group B: see table B above.
 - Also pending the quote: JLC accepts the no-protrusion order note (+25 µm max proud; recess ≤50 µm). Plating is JLC standard for the prototype (RF-accepted).
-- Group B drill change (0.30/0.60 → 0.25/0.40) is pending Layout after pass30cm.
+- Group B drill change (0.30/0.60 → 0.25/0.40): done in PASS30CN step 4 (74a6605), `.kicad_dru` rule VIPPO_B_size.
+- **RF C5 keepout exception (fab/CAM note):** in the RF keepout (x<29, y 26–40, F.Cu/In1), the only copper allowed is the via barrels in U1 pads 52–60 (signal 53–55, 57–59; GND 52/56/60). No F.Cu/In1 tracks. This matches the `.kicad_dru` comment.
 - C7 cannot be PASS until there is a quote.
 
 ### 1.6 Alternatives if VIPPO is rejected
