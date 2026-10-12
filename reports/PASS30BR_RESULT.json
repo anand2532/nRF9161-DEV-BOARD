@@ -1,0 +1,45 @@
+{
+ "pass": "pass30br",
+ "decision": "NO-ROUTE",
+ "rule": "3 boxed J12 pad",
+ "tip": "45743c9",
+ "blob": "5a46a4bef4da85ae0841a8b51077fd8339bb3fda",
+ "target": {
+  "pad": "J12.11",
+  "xy": [
+   31.4,
+   76.0
+  ],
+  "bbox": [
+   30.55,
+   75.15,
+   32.25,
+   76.85
+  ]
+ },
+ "north": "P0.05 In1 y=74.70 x22.51-57.05",
+ "south": "P0.09 In1 y=77.20 x30.10-55.30",
+ "plan_band": [
+  75.2,
+  76.7
+ ],
+ "drc": {
+  "unconnected": 49,
+  "p0.10": 2,
+  "gnd": 12,
+  "short": 0,
+  "clearance": 0,
+  "crossing": 0,
+  "hole": 0,
+  "hole_to_hole": 1
+ },
+ "do_not_retry": [
+  "J9.2",
+  "J9.3",
+  "SIM_1V8",
+  "P0.09 J16.4",
+  "P0.11 J16.2",
+  "P0.12",
+  "P0.10"
+ ]
+}

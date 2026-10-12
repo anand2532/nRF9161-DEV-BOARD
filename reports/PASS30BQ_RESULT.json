@@ -1,0 +1,26 @@
+{
+ "pass": "pass30bq",
+ "decision": "NO-ROUTE",
+ "tip": "45743c9",
+ "blob_start": "5a46a4bef4da85ae0841a8b51077fd8339bb3fda",
+ "blob_end": "5a46a4bef4da85ae0841a8b51077fd8339bb3fda",
+ "reason": "J12.13 boxed in plan view: P0.05 In1 y=74.7 and P0.11 In2 y=74.8 (north), P0.09 In1 y=77.2 (south). The 0.50 mm plan buffer leaves y 75.30-76.70, entirely inside the pad row (75.15-76.85); neighbour pads J12.12/J12.14 close the sides. Grid A* on In1/In2/B.Cu with the 0.50 plan rule, the x>=26 rule and clearances: unreachable on all three.",
+ "drc": {
+  "unconnected": 49,
+  "gnd": 12,
+  "p0.12": 2,
+  "short": 0,
+  "clearance": 0,
+  "crossing": 0,
+  "hole": 0,
+  "hole_to_hole": 1
+ },
+ "do_not_retry": [
+  "J9.2",
+  "J9.3",
+  "SIM_1V8",
+  "P0.09 J16.4",
+  "P0.11 J16.2",
+  "P0.12"
+ ]
+}
