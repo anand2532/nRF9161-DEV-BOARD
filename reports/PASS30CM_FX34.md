@@ -1,0 +1,11 @@
+# PASS30CM step 4: FX3/FX4 optional GND vias (both fit)
+- **FX3:** GND via 0.5/0.3 at **(27.6, 23.0)**, exactly the RF-suggested spot. It sits between the MAGPIO2 escape and VDD_GPIO, outside the keepout (y < 26), and passes DRC on all layers.
+- **FX4:** 2nd GND via 0.5/0.3 at **(26.8, 35.6)** on the 14.7 mm² B.Cu GND piece. The piece now has 2 stitches, the other being (25.98, 34.0).
+  - Like the existing stitch, the barrel lies in x<29 / y 26–40.
+  - It is a GND barrel into the In1 GND plane. RF FX4 named this spot.
+  - It is not a track, so C5 (no F.Cu/In1 *tracks*) still holds.
+- **Gate (refilled):** all violation classes 0.
+  - Unconnected 17 → 17.
+  - In1 GND: 2 pieces, 8204.6 → 8204.6 mm².
+  - VDD_nRF: 1 piece, 6777.7 → 6774.1 mm².
+  - B.Cu GND pieces: 24 → 25. All are connected; GND islands stay at 11.
