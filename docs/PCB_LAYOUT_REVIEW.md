@@ -1404,4 +1404,6 @@ Straight 0.18 mm chord (45.640, 26.000)→(107.150, 26.000) does not cross the S
 - pass30bv (2026-10-12): P0.18 J13.3 to J17.2 KEEP (class D, cap waived). In1, 3 segments, no vias. Unconnected 47->46, P0.18 2->1, h2h 1, GND 12. Longest plan stretch within 0.5 mm 1.0 mm (a 90-degree crossing of P0.22 In2). Landed in abfe3d6.
 - pass30bw (2026-10-12): P0.17 J17.1 to J13.2 KEEP (class D, cap waived). In1, 5 segments, no vias. Unconnected 46->45, P0.17 1->0, h2h 1, GND 12. Longest plan stretch 1.0 mm (90-degree crossing of P0.22). Landed in 25cb0bc.
 - pass30bx (2026-10-12): P0.21 J13.6 to J10.1 KEEP (class D, cap waived). In1, 4 segments, no vias. Unconnected 45->44, P0.21 2->1, h2h 1, GND 12. Parallel 0 mm. Landed in 191301e.
-- pass30by (2026-10-12): P0.24 J13.9 to J10.4 KEEP (class D, cap waived). In1, 5 segments, no vias. Unconnected 44->43, P0.24 2->1, h2h 1, GND 12. Parallel 0 mm. Not committed.
+- pass30by (2026-10-12): P0.24 J13.9 to J10.4 KEEP (class D, cap waived). In1, 5 segments, no vias. Unconnected 44->43, P0.24 2->1, h2h 1, GND 12. Parallel 0 mm. Landed in a458cdd.
+- pass30bz (2026-10-12): P0.23 U1.39 NO-ROUTE. The In2 9-segment route closed P0.23 but split the In2 VDD_nRF plane (+1 VDD_nRF open); full revert to e8a108d. 43 unconnected.
+- pass30ca (2026-10-12): P0.23 U1.39 NO-ROUTE. The 12-segment In2 route outside the neck box still split VDD_nRF (via 56.09,17.35 cut off); full revert to e8a108d. P0.23 U1 side is do-not-retry. 43 unconnected.
