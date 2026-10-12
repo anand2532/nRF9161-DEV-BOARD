@@ -339,3 +339,19 @@ Labels were placed with naive `origin + pin_at` (no Y-flip). Sheet had **zero wi
 - **ERC / netlist:** NOT run. kicad-cli and KiCad are not installed on the box: no `which`, no /usr/bin, nothing in /opt, no flatpak, and `find /` finds nothing. Run `kicad-cli sch erc` and a netlist export on a machine with KiCad 9.
 - **Docs:** README GPIO/peripheral maps and the In2 rule are updated (GPIO tracks allowed outside the VDD_nRF keepout x53–60 / y12–22). New `docs/PINOUT.md`.
 - **PCB:** not touched. It still carries the old J9.2/J9.3/J16 nets and U2=TLV73330. Layout must run Update-PCB-from-Schematic; the schematic is truth (U2 = TLV73333).
+
+## 2026-10-12 16:xx IST: SIM_1V8 modem-side decoupling + LED Value fix (branch `finish`, HEAD 9d14ed5)
+- **C40 added** on `schematic/01_nRF9161.kicad_sch`:
+  - 100nF 0402, `Capacitor_SMD:C_0402_1005Metric`, MPN Murata GRM155R71A104KA01D (10V X7R).
+  - Symbol at (45.72, 237.49), just left of the U1 SIM_1V8 pin label (73.66, 233.68).
+  - Pin tips: pin1 (45.72, 233.68) carries the SIM_1V8 global label; pin2 (45.72, 241.30) carries GND.
+  - Netlist SIM_1V8 = C33.1, C38.1, C40.1, JP2.1, U1.49, U4.5. C40 sits in addition to C33 at the SIM end.
+  - The `Device:C` lib_symbol was copied from 02_POWER. The instance path matches U1 on this sheet.
+  - Note: C33's existing BOM MPN is GRM155R61A104KA01 (X5R). C40 uses the X7R equivalent, as requested.
+- **D3–D7 Value** restored to `Green LED`. Source: BOM.csv (D3–D7 = Green LED, Kingbright KP-2012SGC, 0603); git history only has the role strings.
+  - Roles moved to a new `Function` property: D3 POWER, D4 STATUS, D5 LTE, D6 GNSS, D7 SPARE_DNP. Manufacturer and MPN fields added.
+  - D7 keeps its `DNP`=yes custom field. Its old duplicate "Function" note was renamed to `Note`. The KiCad `(dnp ...)` flag on D7 was already `no` and was left unchanged.
+- **ERC** (kicad-cli 9.0.2, `reports/ERC_C40_LED_after.rpt`): 0 errors, 203 warnings vs a 201-warning baseline just before the edit.
+  - The +2 are C40 library-config warnings (`Device` symbol lib / `Capacitor_SMD` footprint lib not in this box's lib tables), the same class already raised for every other cap.
+  - Netlist: `reports/netlist_C40_LED_after.xml`. Check: `reports/C40_LED_pin_tip_check.txt`.
+- The PCB needs Update-from-Schematic to place C40 near U1 pad 49.

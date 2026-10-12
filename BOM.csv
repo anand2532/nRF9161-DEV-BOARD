@@ -34,13 +34,14 @@ C36,1,22pF C0G,SIM_RST filter,Murata,GRM0335C1E220JA01,0201,,SIM_RST filter
 C37,1,22pF C0G,SIM_IO filter,Murata,GRM0335C1E220JA01,0201,,SIM_IO filter
 C38,1,22pF C0G,SIM_1V8 HF,Murata,GRM0335C1E220JA01,0201,,SIM_1V8 HF
 C39,1,DNP,Optional nRESET cap (not fitted; HDG forbids extra PU),Murata,GRM033R61A104KE15,0201,DNP,Optional nRESET cap (not fitted; HDG forbids extra PU)
+C40,1,100nF 10V X7R,SIM_1V8 decoupling at modem (U1 pad 49),Murata,GRM155R71A104KA01D,0402,,SIM_1V8 decoupling at modem (U1 pad 49)
 D1,1,PMEG4030ER,Reverse-polarity Schottky,Nexperia,PMEG4030ER,SOD-123W,,Reverse-polarity Schottky
 D2,1,SMAJ5.0A,VIN TVS 5.0 V,Littelfuse,SMAJ5.0A,DO-214AC,,VIN TVS 5.0 V
 D3,1,Green LED,Power LED on VIN,Kingbright,KP-2012SGC,0603,,Power LED on VIN
 D4,1,Green LED,User LED1 on P0.00,Kingbright,KP-2012SGC,0603,,User LED1 on P0.00
 D5,1,Green LED,User LED2 on P0.01,Kingbright,KP-2012SGC,0603,,User LED2 on P0.01
 D6,1,Green LED,User LED3 on P0.02,Kingbright,KP-2012SGC,0603,,User LED3 on P0.02
-D7,1,Green LED,User LED4 on P0.03,Kingbright,KP-2012SGC,0603,Optional,User LED4 on P0.03
+D7,1,Green LED,User LED4 on P0.03,Kingbright,KP-2012SGC,0603,DNP,User LED4 on P0.03
 F1,1,2A fuse,VIN fuse,Littelfuse,0468002.NR,1206,,VIN fuse
 FB1,1,BLM18KG221SN1,VDD1 ferrite (nRF91 HDG),Murata,BLM18KG221SN1D,0603,,VDD1 ferrite (nRF91 HDG)
 FB2,1,BLM18KG221SN1,VDD2 ferrite 1,Murata,BLM18KG221SN1D,0603,,VDD2 ferrite 1

@@ -4163,8 +4163,40 @@
 				)
 			)
 		)
-		(property "Value" "POWER"
+		(property "Value" "Green LED"
 			(at 38.1 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Function" "POWER"
+			(at 38.1 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Kingbright"
+			(at 38.1 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "KP-2012SGC"
+			(at 38.1 78.74 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
