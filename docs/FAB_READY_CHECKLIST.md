@@ -2,7 +2,7 @@
 
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
 **Checklist date:** 2026-09-23 (IST / Asia/Calcutta)  
-**Overall gate:** **RED — NOT FABRICATION-READY**
+**Overall gate:** **RED — NOT FABRICATION-READY** (re-assessed at `vippo` bc6d0fc, 2026-10-12 IST; see "Fab pass bc6d0fc" below)
 
 Do not declare fab-ready until **every** row below is PASS **and** `unconnected_items = 0`.  
 Authoritative connectivity truth: `kicad-cli pcb drc` JSON `unconnected_items` (see `reports/FINAL_FAB_RELEASE.md`, `reports/DRC_AFTER_CONNECT.json`).
@@ -13,11 +13,32 @@ Authoritative connectivity truth: `kicad-cli pcb drc` JSON `unconnected_items` (
 
 | Field | Value |
 | --- | --- |
-| Status | **RED / FAIL** |
-| unconnected_items | **80** (need 0) — `reports/DRC_AFTER_CONNECT.json` date `2026-09-18T02:01:29+05:30`; `reports/FINAL_FAB_RELEASE.md`; `reports/UNCONNECTED_AFTER_FINAL.csv` (80 data rows) |
-| shorting_items / clearance / hole_clearance (last fab-release narrative) | 0 / 0 / 0 per `FINAL_FAB_RELEASE.md` |
-| Gerbers regenerated after last connectivity pass | **No** — `FINAL_FAB_RELEASE.md` states fabrication outputs were **not** generated; on-disk `fab/gerbers` CreationDate is older (2026-09-16) |
+| Status | **RED / FAIL** (bc6d0fc) |
+| unconnected_items | **10**, all GND F.Cu zone-to-zone, **unchanged after zone refill (real, not phantom)**. Evidence: `fab/staging-bc6d0fc/DRC_bc6d0fc_asis.json`, `fab/staging-bc6d0fc/DRC_bc6d0fc_refilled.json` |
+| DRC errors (bc6d0fc) | 0 errors. Warnings: track_dangling 4 (VDD_GPIO B.Cu ×3 near (70,8)/(48.05,5.5)/(48.05,3.46); P0.11 B.Cu (44,29.2)); lib_footprint_issues 98 (stock KiCad libs not installed on the box, environment only); lib_footprint_mismatch 1 (TI_TPD3F303) |
+| Gerbers regenerated | **Yes**: `fab/staging-bc6d0fc/` from bc6d0fc (zones refilled, /tmp copy). Not releasable while RED |
 | Checklist fully green | **No** |
+
+### Fab pass bc6d0fc (2026-10-12 IST)
+
+| # | Item | Status | Evidence / reason |
+| --- | --- | --- | --- |
+| 1 | Connectivity (hard gate: unconnected = 0) | **FAIL** | 10 GND zone islands remain after refill, so they are real isolated F.Cu copper, not phantom. F.Cu GND fill has 31 pieces; 11 have no stitching via (smallest: U1 slivers 0.38 mm² at (36.1–36.4,25.6–27.2) and (40.6–40.9,25.6–27.2), 1.23 mm² at (41.1,36.8–40.9); largest: 64.5 mm² at (53.6–74.8,24.9–28.3) with C1/C3 GND, 70.6 mm² at (66.5–76.4,7.4–22.0), 50.5 mm² at (56.7–74.7,15.9–24.2)). A stitching via to In1 GND fixes each large piece. The U1 slivers are better removed (zone min-width / island removal) than stitched |
+| 2 | DRC | **PASS w/ warnings** | 0 errors; 4 dangling tracks to clean up (see above) |
+| 3 | U1 footprint vs Nordic DK | **PASS** | 159/159 pads, sizes, centres ≤0.002 mm, mask +0.05 NSMD, paste 1:1. `reports/DFM_VIPPO_NOTE.md` §1.7 |
+| 4 | VIPPO geometry | **PASS w/ note** | Group A 16 × 0.20/0.30 (9 in pads 52–60 + 7 added), all centred. Group B 9 × 0.25/0.40, **6 off-centre by 0.20 mm** (land edge = pad edge). 0.20/0.25 tools are used only by VIPPO; spacing to unfilled vias ≥0.85 mm. Fill scope is 25. Note §1.4 |
+| 5 | Gerbers | **PASS (staging)** | 4 Cu + F/B Mask, F/B Paste, F/B Silk, Edge.Cuts, VIPPO (User.1) + `nRF9161-DEV-BOARD-job.gbrjob` (LayerNumber 4, 120.1×80.1, 1.6 mm). Board outline closed (1 outline, 0 holes) |
+| 6 | Job-file stackup | **FAIL** | `job.gbrjob` MaterialStackup still has 3 × 0.48 mm dielectrics, which contradicts the LOCKED stackup (L1–L2 ≈0.12 mm, `docs/FAB_STACKUP_NOTES.md`). Fix the board stackup in KiCad or state the stackup explicitly in the order |
+| 7 | Drill | **PASS** | `drill/nRF9161-DEV-BOARD-PTH.drl` T1 0.200 ×16, T2 0.250 ×9, T3 0.300 ×329, T4 0.400 ×41, T5 0.650 ×12, T6 1.000 ×78; NPTH file has 0 holes; PDF drill maps generated |
+| 8 | IPC-D-356 | **PASS** | `fab/staging-bc6d0fc/nRF9161-DEV-BOARD.d356` |
+| 9 | BOM | **FAIL (DNP sync)** | `nRF9161-DEV-BOARD-bom.csv` covers 96 placed refs, matching the board. The schematic excludes 8 as DNP/excluded (C21, C22, C23, C24, C31, C32, D7, J16). The PCB marks only C22/C23/C24/D7 as DNP |
+| 10 | CPL | **FAIL (DNP sync)** | `nRF9161-DEV-BOARD-cpl.csv` (78 rows, all top, rotations 0/±90/180, plausible). **It still contains C21, C31, C32, J16**, which are DNP in the schematic, so the assembler would place them. Update PCB from schematic (DNP attributes) or hand-strip before ordering. `-cpl-all.csv` includes DNP parts |
+| 11 | Silk legibility (JLC: line ≥0.15 mm, text height ≥1.0 mm, https://jlcpcb.com/capabilities/pcb-capabilities) | **FAIL** | 254 of 260 silk texts are under 1.0 mm (most 0.65–0.8; smallest 0.6 mm: "SWD", "nRF9161-DEV-BOARD", "RF: 0.20mm microstrip…", "GND"). 151 have stroke under 0.15 (0.12). All 260 silk graphics are 0.12/0.10 mm. Not fixed |
+| 12 | Silk overlap / over pads | **PASS w/ 1 note** | Default DRC: 0. With JLC 0.15 mm pad-to-silk clearance (temp /tmp project): 1 silk_overlap (U1 reference vs U1 silk at (36.1,38.7)); silk_over_copper 0 |
+| 13 | Assembly (stencil 0.10 mm, X-ray first article) | **OPEN** | Per `reports/DFM_VIPPO_NOTE.md` §1.5. Apply to the assembler order |
+| C7 | JLC 4L filled & capped quote | **OPEN** (expected) | 8:1 aspect, cost/lead, no-protrusion note. Scope is now 25 vias |
+
+Package: `fab/staging-bc6d0fc/nRF9161-DEV-BOARD-fab-bc6d0fc.zip` (**staging only; do not order while RED**).
 
 ---
 

@@ -41,6 +41,13 @@ Get real cost and lead numbers from an online quote: JLC with "Epoxy Filled & Ca
 
 ### 1.4 Fab-note text (paste into fab drawing / order remarks)
 
+**VERIFIED at bc6d0fc (2026-10-12, read-only pcbnew/kicad-cli on a /tmp copy). This supersedes the counts below where they differ.**
+- Board vias: 395 = 0.6/0.3 ×259, 0.5/0.3 ×70, 0.8/0.4 ×41, **0.3/0.2 ×16**, **0.4/0.25 ×9**. Drill file tools: T1 0.200 ×16, T2 0.250 ×9, T3 0.300 ×329, T4 0.400 ×41, T5 0.650 ×12, T6 1.000 ×78. No footprint pad uses a 0.20 or 0.25 mm hole, so **0.20/0.25 drills are used only by VIPPO vias**.
+- **Group A (0.20/0.30): 16, not 9.** It is all of pads 52–60 (GND 52/56/60, MAGPIO2/1/0, MIPI_VIO/SCLK/SDATA, at x 28.25, y 27.0–31.0) **plus 7 added in pass30cm/co:** pad 48 SIM_IO (30.25,27.0), 42 P0.25 (33.25,27.0), 89 P0.31 (36.75,37.0), 29 P0.18 (39.75,27.0), 24 P0.14 (42.25,27.0), 23 P0.13 (42.75,27.0), 20 P0.12 (43.75,27.5). Every one is centred exactly (0.000 offset) in a 0.30×0.30 pad. The land equals the pad in both axes (zero margin) and sits inside the package outline. Nearest unfilled via is ≥0.85 mm Cu-edge (pad 89), which meets >0.45 mm.
+- **Group B (0.25/0.40): 9, as expected**, in the U1 0.80×0.80 GND pads at x 30/36/42, y 29/32/35. **6 of 9 are off-centre by 0.20 mm in y** (y 29 → pad centre 28.8; y 35 → pad centre 35.2). Land edge = pad edge (0.40 land, offset 0.20, in a 0.80 pad), so it is inside the pad and the outline, but with zero margin. Only the 3 at y 32 are centred. Nearest unfilled via is ≥1.30 mm Cu-edge (meets >0.45 mm). **Recommendation:** move the 6 to the pad centres (y 28.8/35.2) so the cap is fully inside the pad (Layout).
+- Fill+cap scope is therefore **25 vias** (16 + 9), not 18. The fab-note text below is updated to 25 / 16. Selection by tool (0.20 and 0.25 mm) is unchanged.
+
+
 **Updated 2026-10-12 for `vippo` @ 729a1a3 (PASS30CL). Scope per Hardware PM decision: 18 filled-and-capped vias = 9 × 0.20/0.30 in pads 52–60 (table A) + 9 GND thermal vias in U1 GND pads (table B), decided target **0.25/0.40** (option (b), Hardware PM + RF approved 2026-10-12). **Group B 0.25/0.40 is done (PASS30CN step 4, 74a6605). Group A moved with the DK land pattern to x 28.25 (PASS30CN, e6d1fe0); the table below shows the current positions.** Table A: Verified from the `.kicad_pcb` at 729a1a3 (pcbnew API, file extracted with `git show` into /tmp):
 
 | U1 pad | Net | Pad (mm) | Via centre (mm) | Drill / land (mm) |
@@ -86,11 +93,12 @@ Table B: GND thermal vias in U1 0.80×0.80 GND pads (footprint pad "103"). **Har
 - Original recommendation (kept for record): (b) with **0.25/0.40** on its own drill tool, plus a VIPPO-layer marker and order note. This gives deterministic selection by tool, uses a pair from JLC's published table, and fills only 18 vias. Fallback is (c) with an image and an EQ confirmation. Avoid (a) unless the quote shows a negligible adder. **No PCB change was made; this is a Layout decision.** If (b) is adopted, re-check that thermal performance is acceptable (RF/Power).
 
 ```
-VIA-IN-PAD / FILLED & CAPPED: 18 places, all IPC-4761 TYPE VII (NON-CONDUCTIVE epoxy fill,
+VIA-IN-PAD / FILLED & CAPPED: 25 places, all IPC-4761 TYPE VII (NON-CONDUCTIVE epoxy fill,
 planarized, copper capped both sides, then ENIG):
- Group A: 9 vias, FINISHED HOLE 0.20 mm / land 0.30 mm (the only 0.20 mm drill tool), U1 pads
+ Group A: 16 vias, FINISHED HOLE 0.20 mm / land 0.30 mm (the only 0.20 mm drill tool), U1 pads
    52-60: GND (52,56,60), MAGPIO2 (53), MAGPIO1 (54), MAGPIO0 (55), MIPI_VIO (57),
-   MIPI_SCLK (58), MIPI_SDATA (59).
+   MIPI_SCLK (58), MIPI_SDATA (59); plus pads 48 SIM_IO, 42 P0.25, 89 P0.31, 29 P0.18,
+   24 P0.14, 23 P0.13, 20 P0.12.
  Group B: 9 GND thermal vias in U1 0.8x0.8 GND pads at (30/36/42, 29/32/35) mm,
    FINISHED HOLE 0.25 mm / land 0.40 mm. The 0.25 mm drill tool is the only 0.25 mm tool
    and identifies group B.
@@ -102,7 +110,7 @@ Cap copper: per fab POFV process, minimum 5 um (JLC published), continuous over 
 No voids exposed at surface; no visible hole outline after ENIG.
 All other vias: tented both sides (no fill). If fab requires global fill, notify before
 production.
-Reference layer: Fab drawing layer "VIPPO" (User.1) markers (18 places).
+Reference layer: Fab drawing layer "VIPPO" (User.1) markers (25 places).
 Stackup per docs/FAB_STACKUP_NOTES.md (4L 1.6 mm, ENIG, 50 ohm SE coupon).
 NOTE: protrusion limit (+25 um) is tighter than fab standard (+/-50 um); confirm in EQ.
 ```
@@ -141,22 +149,21 @@ Marking approach: (a) a unique 0.20 mm drill size, so the drill file tool table 
 
 **Recommendation:** first try alternatives 1 and 2 (no special process). Any pad still trapped after that gets JLC 4L epoxy filled & capped, 0.20/0.30, on a unique drill tool, with the note above. Get a real quote before committing. Do not use PCBWay for this feature without written approval.
 
-### 1.7 U1 footprint vs nRF9161 DK (read-only comparison)
-Source: Nordic "nRF9161-DK - Hardware files 1_0_0.zip" (https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/dev-kits/nrf9161-dk/hardware-files/nrf9161-dk---hardware-files-1_0_0.zip, linked from https://www.nordicsemi.com/Products/Development-hardware/nRF9161-DK/Download). Files used: `PCA10153.../Production files/GERBER/400688.GTL` (top copper), `400688.GTS` (top mask), `400688.GTP` (top paste), plus `PICK_PLACE/400688_Pick_And_Place.csv` (M1 nRF9161, footprint LGA50P1600X1050X104-159N, centre 122.3403/24.7640, rot 0). I parsed the flashes within the package outline around M1. The PcbDoc wasn't parsed. Ours: `nRF9161-DEV-BOARD.kicad_pcb` at 729a1a3, U1 = `Board:nRF9161_LGA_16.0x10.5mm` (same as `libraries/Board.pretty/`).
+### 1.7 U1 footprint vs nRF9161 DK — **PASS at bc6d0fc** (re-checked 2026-10-12)
+Source: Nordic "nRF9161-DK - Hardware files 1_0_0.zip" (https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/dev-kits/nrf9161-dk/hardware-files/nrf9161-dk---hardware-files-1_0_0.zip), Gerbers `400688.GTL/GTS/GTP` around M1 (pick-and-place centre 122.3403/24.7640, rot 0). Ours: U1 `Board:nRF9161_LGA_16.0x10.5mm` in `nRF9161-DEV-BOARD.kicad_pcb` at bc6d0fc (pcbnew API, read-only /tmp copy).
 
-| Item | nRF9161 DK (Gerber) | Ours @729a1a3 | Matters? |
+| Item | nRF9161 DK | Ours @bc6d0fc | Result |
 |---|---|---|---|
 | Pad count | 159 | 159 | match |
-| Pad centres | 0.50/0.65 mm pitch grid | 60 interior pads match DK to <0.02 mm. 99 outer-ring pads are offset 0.25 mm outward | **yes** |
-| Outer-ring signal pads (99) | 0.30×0.30, centre 7.75 mm from package centre (copper fully inside the 16.0×10.5 outline) | **0.80×0.30 / 0.30×0.80**, centred on the outline (x ±8.0 / y ±5.25), copper extends to ±8.40 / ±5.65, i.e. **0.40 mm outside the package outline** | **YES.** Nordic nWP054: "copper pads must not extend outside the nRF9161 package outline to avoid short circuits to the device's metallized electromagnetic shielding" |
-| Interior signal pads (27) | 0.30×0.30 | 0.30×0.30 | match |
-| GND pads (31) | 0.80×0.80 | 0.80×0.80 | match |
-| Large pads (2) | 1.60×0.80 | 1.60×0.80 | match |
-| Solder-mask openings | NSMD, pad +0.05 mm/side: 0.40×0.40, 0.90×0.90, 1.70×0.90 | Mask expansion 0 (opening = copper) on all pads; board `pad_to_mask_clearance 0` | **yes:** not NSMD as Nordic advises. The mask opening equals copper, so the opening relies on fab registration |
-| Paste apertures | 1:1 with copper (0.30×0.30, 0.80×0.80, 1.60×0.80); Nordic says the assembler applies the reduction | 1:1 with copper (paste margin 0), but on the elongated 0.8×0.3 pads | yes, via the pad-shape difference. The 70–85% reduction in §1.5 is applied by the assembler on top |
+| Signal pads | 126 × 0.30×0.30 | 126 × 0.30×0.30 | match |
+| GND pads | 31 × 0.80×0.80 | 31 × 0.80×0.80 | match |
+| Large pads | 2 × 1.60×0.80 | 2 × 1.60×0.80 | match |
+| Pad centres | — | all 159 within 0.002 mm of DK | match |
+| Copper extent | inside 16.0×10.5 outline | ±7.90 / ±5.15 mm (inside ±8.00 / ±5.25) | match |
+| Mask opening | pad +0.05 mm/side (NSMD) | mask expansion 0.05 mm on every pad | match |
+| Paste | 1:1 with copper | 1:1 with copper (paste margin 0); the assembler applies the 70–85% reduction (§1.5) | match |
 
-**Consequence for VIPPO group A:** pads 52–60 are outer-ring pads. Each via sits at 8.05 mm local (land 7.90–8.20 mm), which is **outside the DK pad (7.60–7.90 mm) and mostly outside the package outline (8.00 mm)**. If the footprint is corrected to Nordic's land pattern, these 9 vias would no longer be via-in-pad. They would sit at or past the SiP edge/shield and need to be re-placed: centred in a 0.30×0.30 pad at 7.75 mm, with the 0.30 mm land then equal to the pad in both axes. Group B (0.8×0.8 GND pads) is unaffected.
-**Recommendation:** footprint correction to the DK land pattern (0.30×0.30 outer pads, 0.05 mm NSMD mask) is a **must-fix before fab** (Layout/Hardware PM). VIPPO group A placement must then be re-verified. I made no PCB or library edits.
+The 729a1a3 findings (outer pads 0.8×0.3 overhanging the outline, mask not NSMD) are **resolved** in pass30cm/co. The table above supersedes them.
 
 ### Sources
 - [J1] https://jlcpcb.com/news/free-via-in-pad-6-20-layer-pcbs-pofv
