@@ -1,0 +1,43 @@
+{
+ "pass": "pass30bm",
+ "decision": "NO-ROUTE",
+ "tip": "c72e8c5",
+ "blob_start": "7bcfe5791b156e426a2a0affefe938be4d39f8e6",
+ "blob_end": "7bcfe5791b156e426a2a0affefe938be4d39f8e6",
+ "u1_16": [
+  44.0,
+  29.5,
+  "F.Cu"
+ ],
+ "j12_10": [
+  28.86,
+  76.0,
+  "PTH all layers"
+ ],
+ "pad_edge_mm": 47.1,
+ "p009_vias": [],
+ "leftover": {
+  "pad": "J16.4",
+  "xy": [
+   108.0,
+   15.62
+  ],
+  "pad_edge_mm": 64.09,
+  "over_cap": true
+ },
+ "reason": [
+  "no existing P0.09 via",
+  "rule 4 forbids new via: J12.10 has copper on all layers",
+  "F.Cu-only A* unreachable"
+ ],
+ "drc": {
+  "unconnected": 51,
+  "p0.09_opens": 2,
+  "short": 0,
+  "clearance": 0,
+  "crossing": 0,
+  "hole": 0,
+  "hole_to_hole": 1,
+  "gnd": 12
+ }
+}
