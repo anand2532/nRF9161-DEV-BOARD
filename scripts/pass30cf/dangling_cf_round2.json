@@ -1,0 +1,47 @@
+{
+"removed": [
+[
+"track_dangling",
+"Track [SIM_RST] on F.Cu, length 1.3000 mm",
+{
+"x": 78.0,
+"y": 36.0
+}
+]
+],
+"kept": [],
+"skipped_locked": [
+[
+"via_dangling",
+"Via [SIM_CLK_C] on F.Cu - B.Cu",
+{
+"x": 76.624166,
+"y": 56.05
+}
+],
+[
+"track_dangling",
+"Track [VDD_GPIO] on B.Cu, length 9.3000 mm",
+{
+"x": 48.05,
+"y": 5.5
+}
+],
+[
+"track_dangling",
+"Track [VDD_GPIO] on B.Cu, length 3.0500 mm",
+{
+"x": 48.05,
+"y": 3.46
+}
+],
+[
+"track_dangling",
+"Track [P0.11] on B.Cu, length 4.6200 mm",
+{
+"x": 44.0,
+"y": 29.2
+}
+]
+]
+}
