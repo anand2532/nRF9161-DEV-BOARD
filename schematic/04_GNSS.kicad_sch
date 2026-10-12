@@ -1917,7 +1917,7 @@
 		(at 88.9 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "e224e0af-0884-4efb-9317-f0418e8abae3")

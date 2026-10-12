@@ -1,0 +1,22 @@
+(version 1)
+# PASS30CL VIPPO vias (0.20 drill / 0.30 land, IPC-4761 Type VII) in U1 pads; RF review C1
+# RF C5 keepout exception: via barrels in U1 pads 52-60 only (signal 53-55, 57-59; GND 52/56/60). No F.Cu/In1 tracks in the x<29 keepout.
+(rule "VIPPO_size"
+  (condition "A.Type == 'Via' && A.Hole == 0.2mm")
+  (constraint via_diameter (min 0.3mm))
+  (constraint hole_size (min 0.2mm))
+  (constraint annular_width (min 0.05mm)))
+(rule "VIPPO_In1_C1"
+  (layer "In1.Cu")
+  (condition "A.Type == 'Via' && A.Hole == 0.2mm")
+  (constraint clearance (min 0.1mm))
+  (constraint hole_clearance (min 0.1mm)))
+# PASS30CN group B: 9 VIPPO vias in U1 0.8x0.8 GND pads (x 30/36/42, y 29/32/35), 0.25 drill / 0.40 land, IPC-4761 VII (RF-approved)
+(rule "VIPPO_B_size"
+  (condition "A.Type == 'Via' && A.Hole == 0.25mm")
+  (constraint via_diameter (min 0.4mm))
+  (constraint hole_size (min 0.25mm))
+  (constraint annular_width (min 0.075mm)))
+# PASS30CP J5: RF-approved GND-only RF-keepout exception: one 0.30/0.60 tented GND via at (5.90,50.75), J5.2 (left) outer-top corner, tied to In1.
+#   No In1 slot under the feed; no F.Cu link added. Second via does not fit (GNSS_VBIAS 0.2 mm loop at x 5.02 / y 50 / y 54 fences the pad).
+# PASS30CQ: 2nd J5.2 GND via 0.30/0.60 at (5.40,52.475) after removal of the dead GNSS_VBIAS loop (RF-approved).

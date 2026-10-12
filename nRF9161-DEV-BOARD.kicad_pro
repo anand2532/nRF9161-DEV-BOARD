@@ -540,6 +540,10 @@
       {
         "netclass": "POWER",
         "pattern": "VIN*"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "SIM_1V8"
       }
     ]
   },
