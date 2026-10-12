@@ -1,6 +1,6 @@
 # DFM note — VIPPO for U1 trapped pads + `autoroute-gpio` (3e2a15f) review
 
-Author: Fab/DFM agent · 2026-10-12 IST · Opinion only: no design edits, nothing committed.
+Author: Fab/DFM agent · 2026-10-12 IST · Opinion only: no design edits. §1.4/C7 updated and committed on `vippo` for 729a1a3.
 Inputs: `nRF9161-DEV-BOARD.kicad_pcb` at 3e2a15f (= current HEAD of the shared working copy, branch `autoroute-gpio`) and at `main` (8628f07). Both were extracted with `git show` into /tmp, and DRC was run there with `kicad-cli pcb drc` (zones not refilled). Context: `docs/FAB_STACKUP_NOTES.md` (LOCKED), `docs/FAB_READY_CHECKLIST.md` (gate RED).
 
 ## Part 1 — VIPPO for U1 MAGPIO1 / MIPI_SDATA / P0.01 / SIM_1V8
@@ -40,22 +40,98 @@ Get real cost and lead numbers from an online quote: JLC with "Epoxy Filled & Ca
 - The neighbour-pad gap stays the footprint gap, because the land sits inside the pad. LGA solder joint: a capped via under a 0.3×0.8 pad is the standard VIPPO use case. A dimple will reduce solder volume, so a planarity spec is needed (below).
 
 ### 1.4 Fab-note text (paste into fab drawing / order remarks)
-```
-VIA-IN-PAD: Vias with FINISHED HOLE 0.20 mm (drill tool T<n>, the only 0.20 mm tool in the
-NC drill file; 9 places, located in U1 pads 52-60 (via barrels in pads 52-60 only; signal
-MAGPIO2/1/0 in 53-55, MIPI_VIO/SCLK/SDATA in 57-59, GND in 52/56/60)) SHALL be IPC-4761 TYPE VII: filled with NON-CONDUCTIVE epoxy, planarized, and
-copper plated over (capped) on both sides, then ENIG finished.
-Cap copper thickness >= 12 um (IPC-6012 Class 2 min for capped vias, wrap plating per IPC-6012).
-Planarity: dimple/protrusion <= 25 um (0.025 mm) relative to surrounding pad surface.
-No voids exposed at surface; no visible hole outline after ENIG.
-All other vias: tented both sides (no fill) unless fab requires global fill — in that case
-fill+cap ALL vias Type VII; notify before production.
-Reference layer: see Fab drawing layer "VIPPO" (User.1) markers (9 places).
-Stackup per docs/FAB_STACKUP_NOTES.md (4L 1.6 mm, ENIG, 50 ohm SE coupon).
-```
-Marking approach: (a) unique 0.20 mm drill size, so the drill file tool table separates these 4 vias. (b) Draw a marker ring and a "VIPPO" label for each one on a User/Fab layer that is exported with the Gerbers. (c) Put the same text in the order remarks. A 0.20 mm drill also raises the JLC drill-size price tier (≤0.25 mm hole with land <0.45 mm costs more [J2]). Note: the 12 µm cap and 25 µm dimple figures are my proposed spec, typical of industry practice. They are not taken from these fabs' pages, so confirm them in the fab EQ.
 
-### 1.5 Alternatives if VIPPO is rejected
+**Updated 2026-10-12 for `vippo` @ 729a1a3 (PASS30CL). Scope per Hardware PM decision: 18 filled-and-capped vias = 9 × 0.20/0.30 in pads 52–60 (table A) + 9 GND thermal vias in U1 GND pads (table B), decided target **0.25/0.40** (option (b), Hardware PM + RF approved 2026-10-12). **Group B 0.25/0.40 is pending a Layout change after pass30cm; the current PCB at 729a1a3 still has 0.30/0.60.** Table A: Verified from the `.kicad_pcb` at 729a1a3 (pcbnew API, file extracted with `git show` into /tmp):
+
+| U1 pad | Net | Pad (mm) | Via centre (mm) | Drill / land (mm) |
+|---|---|---|---|---|
+| 52 | GND | 0.80×0.30 | 27.95, 27.00 | 0.20 / 0.30 |
+| 53 | MAGPIO2 | 0.80×0.30 | 27.95, 27.50 | 0.20 / 0.30 |
+| 54 | MAGPIO1 | 0.80×0.30 | 27.95, 28.00 | 0.20 / 0.30 |
+| 55 | MAGPIO0 | 0.80×0.30 | 27.95, 28.50 | 0.20 / 0.30 |
+| 56 | GND | 0.80×0.30 | 27.95, 29.00 | 0.20 / 0.30 |
+| 57 | MIPI_VIO | 0.80×0.30 | 27.95, 29.50 | 0.20 / 0.30 |
+| 58 | MIPI_SCLK | 0.80×0.30 | 27.95, 30.00 | 0.20 / 0.30 |
+| 59 | MIPI_SDATA | 0.80×0.30 | 27.95, 30.50 | 0.20 / 0.30 |
+| 60 | GND | 0.80×0.30 | 27.95, 31.00 | 0.20 / 0.30 |
+
+- Geometry: these are the only 0.20 mm drills on the board (all other vias 0.3/0.4 drill), so selection by tool works. Annular ring is 0.05 mm (JLC POFV minimum [J1]). The land equals the 0.30 mm pad width (zero margin, does not overhang). It is offset 0.05 mm along the 0.80 mm pad length, so it stays inside the pad.
+- Spacing: the VIPPO pitch is 0.50 mm (0.20 mm land-to-land, 0.30 mm hole-to-hole edge). The nearest regular via is 2.35 mm edge-to-edge (SIM_1V8 0.5/0.3 via from pad 52), so it meets JLC's >0.45 mm rule [J1].
+- Earlier trapped pads: 54 MAGPIO1 and 59 MIPI_SDATA are now VIPPO. **49 SIM_1V8 and 96 P0.01 have no via-in-pad and are no longer reported as unconnected** in `reports/DRC_PASS30CL_AFTER.json` (C40/SIM_1V8 rework in PASS30CK). That file has 17 unconnected: 11 GND islands plus P0.12, P0.14, P0.18, P0.25, P0.31 and SIM_IO.
+
+
+Table B: GND thermal vias in U1 0.80×0.80 GND pads (footprint pad "103"). **Hardware PM decision: fill + cap, do not move** (they carry U1's thermal path and ground return). **Decided target drill/land: 0.25/0.40 (option (b)). PENDING Layout change after pass30cm; the "current" column below is the PCB at 729a1a3.**
+
+| # | Pad | Net | Via centre (mm) | Current drill/land @729a1a3 → target (mm) | Nearest non-filled via (Cu edge) |
+|---|---|---|---|---|---|
+| 1 | 103 | GND | 30.00, 29.00 | 0.30/0.60 → **0.25/0.40** | 2.40 mm |
+| 2 | 103 | GND | 30.00, 32.00 | 0.30/0.60 → **0.25/0.40** | 2.40 mm |
+| 3 | 103 | GND | 30.00, 35.00 | 0.30/0.60 → **0.25/0.40** | 2.40 mm |
+| 4 | 103 | GND | 36.00, 29.00 | 0.30/0.60 → **0.25/0.40** | 1.20 mm (COEX0) |
+| 5 | 103 | GND | 36.00, 32.00 | 0.30/0.60 → **0.25/0.40** | 2.40 mm |
+| 6 | 103 | GND | 36.00, 35.00 | 0.30/0.60 → **0.25/0.40** | 1.20 mm (COEX0) |
+| 7 | 103 | GND | 42.00, 29.00 | 0.30/0.60 → **0.25/0.40** | 2.40 mm |
+| 8 | 103 | GND | 42.00, 32.00 | 0.30/0.60 → **0.25/0.40** | 2.40 mm |
+| 9 | 103 | GND | 42.00, 35.00 | 0.30/0.60 → **0.25/0.40** | 2.40 mm |
+
+- The hole is 0.30 mm, inside JLC's POFV range of 0.2–0.5 mm, and the ring is 0.15 mm (≥0.05 min) [J1]. The 0.30/0.60 pair isn't in JLC's POFV size table, though (0.2/0.3, 0.2/0.35, 0.25/0.4, 0.3/0.4, 0.3/0.45) [J1]. Confirm in EQ. The pitch is 3.0 mm, and every via is ≥1.20 mm Cu-edge (≥1.50 mm hole-edge) from any non-filled via, which meets JLC's >0.45 mm rule [J1].
+
+**DFM consequence: drill-size selection.** Board via inventory at 729a1a3 is 336 vias: 0.6/0.3 ×220, 0.5/0.3 ×66, 0.8/0.4 ×41, 0.3/0.2 ×9. **286 vias are 0.30 mm drill**, and that includes these 9. Footprint pads don't use 0.30 mm holes. So the 9 GND-pad vias **cannot be singled out by drill size**.
+- (a) **"Fill all 0.30 mm vias":** 286 vias get filled and capped, which is 277 more than needed. The cost and lead-time impact is **UNVERIFIED**, because JLC publishes no 4L POFV price. Side effects: extra cap plating over 0.18 mm track areas, and no open via test points.
+- (b) **Unique drill for the 9:** Layout changes them to a size not used anywhere else, within JLC's POFV table. **0.25/0.40** is the only unused pair in that table. It keeps a 0.075 mm ring (JLC preferred) and fits easily in a 0.80 mm pad, but it gives less thermal barrel than 0.30. Alternatively, put them on the existing 0.20 mm filled tool (0.20/0.35). That needs no new tool but gives even less thermal barrel. Spacing to non-filled vias stays ≥1.2 mm, so it passes the 0.45 mm rule either way.
+- (c) **Select per via by note/image:** JLC's via-covering page allows "leave a note or upload an image... to explain which vias need to be filled" as an alternative to filling all of one diameter [J4]. This keeps 0.30/0.60 with no PCB change, but it relies on manual CAM selection, so the risk of a fab error is higher.
+- **DECISION (2026-10-12): option (b) chosen.** Group B → 0.25/0.40 on its own 0.25 mm drill tool. Layout makes the change after pass30cm.
+- **RF approval conditions (from RF, via Hardware PM):** (1) keep all 9 GND vias (no reduction in count); (2) hole-wall plating, (3) cap planarity (U1 is an LGA). **Revised 2026-10-12: RF accepts JLC standard for the prototype (no advanced / IPC Class 3 order).** Prototype values: plating = JLC standard (~18 µm average [J2]); caps: recess (dimple) ≤50 µm acceptable, protrusion ≤+25 µm. **Production target** (revisit for production): plating ≥20 µm average (IPC-6012 Class 2), 25 µm preferred. The earlier ±15 µm cap requirement is superseded.
+- After the change, spacing still holds: the via centres don't move and the land shrinks 0.60 → 0.40, so the Cu-edge gap to non-filled vias grows to ≥1.30 mm (>0.45 mm [J1]).
+- Original recommendation (kept for record): (b) with **0.25/0.40** on its own drill tool, plus a VIPPO-layer marker and order note. This gives deterministic selection by tool, uses a pair from JLC's published table, and fills only 18 vias. Fallback is (c) with an image and an EQ confirmation. Avoid (a) unless the quote shows a negligible adder. **No PCB change was made; this is a Layout decision.** If (b) is adopted, re-check that thermal performance is acceptable (RF/Power).
+
+```
+VIA-IN-PAD / FILLED & CAPPED: 18 places, all IPC-4761 TYPE VII (NON-CONDUCTIVE epoxy fill,
+planarized, copper capped both sides, then ENIG):
+ Group A: 9 vias, FINISHED HOLE 0.20 mm / land 0.30 mm (the only 0.20 mm drill tool), U1 pads
+   52-60: GND (52,56,60), MAGPIO2 (53), MAGPIO1 (54), MAGPIO0 (55), MIPI_VIO (57),
+   MIPI_SCLK (58), MIPI_SDATA (59).
+ Group B: 9 GND thermal vias in U1 0.8x0.8 GND pads at (30/36/42, 29/32/35) mm,
+   FINISHED HOLE 0.25 mm / land 0.40 mm. The 0.25 mm drill tool is the only 0.25 mm tool
+   and identifies group B.
+Fill + cap ALL vias of the 0.20 mm and 0.25 mm drill tools; no other vias are filled.
+Hole-wall copper plating: fab standard (prototype).
+Caps: planarize FLUSH or SLIGHTLY RECESSED, NEVER PROUD. Recess (dimple) up to 50 um
+acceptable; protrusion above surrounding pad surface not to exceed +25 um.
+Cap copper: per fab POFV process, minimum 5 um (JLC published), continuous over fill.
+No voids exposed at surface; no visible hole outline after ENIG.
+All other vias: tented both sides (no fill). If fab requires global fill, notify before
+production.
+Reference layer: Fab drawing layer "VIPPO" (User.1) markers (18 places).
+Stackup per docs/FAB_STACKUP_NOTES.md (4L 1.6 mm, ENIG, 50 ohm SE coupon).
+NOTE: protrusion limit (+25 um) is tighter than fab standard (+/-50 um); confirm in EQ.
+```
+Marking approach: (a) a unique 0.20 mm drill size, so the drill file tool table separates group A (and group B if option (b) is adopted). (b) PASS30CL has a marker ring for each group A via on user layer "VIPPO" (User.1); export it with the Gerbers. (c) Put the same text in the order remarks. A 0.20 mm hole with a 0.30 mm land also adds JLC's small-via charge ("hole <0.3 mm and diameter ≤0.4 mm" [J5]). **Spec values: sources and history.** Current values are the prototype values above.
+- History: my earlier 12 µm cap / 25 µm dimple proposal was withdrawn. RF's first conditions (plating ≥20–25 µm, cap ±15 µm) were superseded 2026-10-12, when RF accepted JLC standard for the prototype. The cap copper minimum of 5 µm is JLC's published filled-via figure [J4].
+
+| Item | JLC published | Prototype requirement (RF-accepted) | Production target | Order note needed? |
+|---|---|---|---|---|
+| Hole-wall plating | "Average Hole Plating Thickness 18μm" [J2] | JLC standard (~18 µm avg) | ≥20 µm avg (25 µm preferred), revisit at production | No (proto) |
+| Filled-via cap copper | "Hole surface copper thickness ≥ 5um" [J4] | JLC standard | — | No |
+| Cap planarity | "depression and protrusion within 50um" [J4], i.e. ±50 µm | Recess ≤50 µm OK; **protrusion ≤+25 µm** | — | **Yes.** +25 µm is tighter than JLC's ±50 µm on the proud side, so the order note asks for flush or slightly recessed caps, never proud |
+
+**Order-remark text (JLC):** "Epoxy filled & capped vias (0.20 mm and 0.25 mm drill tools only): please planarize caps flush or slightly recessed, never proud. Max protrusion +25 um; recess up to 50 um acceptable. Standard hole plating OK."
+
+### 1.5 Assembly (U1 LGA)
+- Stencil: **0.10 mm**, U1 paste at about **70–85% of pad area**, following Nordic guidance: nRF9161 Hardware Design Guidelines (nWP054), "Footprint and solder paste mask" (https://docs.nordicsemi.com/r/bundle/nwp_054/page/wp/nwp_054/footprint.html; footprint and mask openings are given as figures only), and nRF9151 Hardware Design Guidelines (nWP056), "Footprint, solder resist, and solder paste stencil" (https://docs.nordicsemi.com/r/bundle/nwp_056/page/wp/nwp_056/footprint.html). nWP056 gives an 80–100 µm stencil, about 70–80% paste on the large pads and about 75–85% on the signal pads. I didn't take exact aperture numbers from these pages; take U1 apertures from those documents and the assembler. Use the footprint from the nRF9161 DK PcbDoc, not pca10153.IntLib (https://devzone.nordicsemi.com/f/nordic-q-a/114096/footprint-and-soldering-issues-with-nrf9161). See also §1.7.
+- **Rationale (Hardware PM):** 0.10 mm stays within RF's 100–120 µm range for filling a cap dimple, and within Nordic's 80–100 µm. **0.10 mm is at the bottom of RF's range** (and the top of Nordic's), so there is little paste-volume margin for a 50 µm recess. The first-article X-ray below checks this.
+- *Superseded:* the earlier 0.12 mm stencil choice (5731a04) is replaced by 0.10 mm.
+- **First-article X-ray of U1** covering pads 52–60 (group A) and the 9 GND-pad vias (group B). If any open is found or voiding exceeds 25%, the next spin gets a tighter spec (plating/planarity per production target, and/or tighter cap spec).
+
+### C7 — JLC 4L POFV at 0.20/0.30 + cost: **OPEN / UNVERIFIED (cost)**
+- Capability: **evidenced.** The JLC POFV page lists the 0.20 hole / 0.30 diameter pair, annular ≥0.05 mm, >0.45 mm from other holes, and states "POFV for 4-layer PCBs still requires charges", i.e. it is offered on 4L [J1]. The via-covering help page (updated Sep 09, 2026) offers "Epoxy-filled & Capped", selected by note or by drill diameter [J4]. Not published: 8:1 aspect acceptance specifically at 1.6 mm 4L. Confirm in EQ.
+- Cost: **UNVERIFIED.** No public 4L POFV price was found ([J1], [J4], [J6], quote page [J5]). The 0.2/0.3 small-via surcharge exists, but its amount is not published [J5]. **A live JLC online quote is needed** (4L, 1.6 mm, ENIG, Epoxy Filled & Capped, min via 0.2/0.3). No numbers estimated.
+- Scope is now 18 vias. Drill-selection issue for group B: see table B above.
+- Also pending the quote: JLC accepts the no-protrusion order note (+25 µm max proud; recess ≤50 µm). Plating is JLC standard for the prototype (RF-accepted).
+- Group B drill change (0.30/0.60 → 0.25/0.40) is pending Layout after pass30cm.
+- C7 cannot be PASS until there is a quote.
+
+### 1.6 Alternatives if VIPPO is rejected
 1. **Re-escape on F.Cu between pads / via outside the courtyard:** best option if any channel exists. MAGPIO1 already has a 2.4 mm F.Cu stub out of pad 54, so its blocker is the route onward, not the pad. Check whether a 0.1 mm-clearance neck (min_clearance 0.1) can reach an outside via.
 2. **Pin remap** to an unblocked U1 GPIO for P0.01 / MAGPIO1 / MIPI_SDATA, where the schematic allows it. SIM_1V8 is a fixed function, so no remap there. Pass30cb already did remaps, so this is an established path.
 3. **Untented / plugged-only (IPC-4761 Type III/IV) via in pad:** **reject for LGA.** Solder wicks into the hole, giving open or starved joints and large voids. Plugged-only also leaves a dimple and outgassing. Not acceptable for a fine-pitch LGA.
@@ -64,11 +140,31 @@ Marking approach: (a) unique 0.20 mm drill size, so the drill file tool table se
 
 **Recommendation:** first try alternatives 1 and 2 (no special process). Any pad still trapped after that gets JLC 4L epoxy filled & capped, 0.20/0.30, on a unique drill tool, with the note above. Get a real quote before committing. Do not use PCBWay for this feature without written approval.
 
+### 1.7 U1 footprint vs nRF9161 DK (read-only comparison)
+Source: Nordic "nRF9161-DK - Hardware files 1_0_0.zip" (https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/dev-kits/nrf9161-dk/hardware-files/nrf9161-dk---hardware-files-1_0_0.zip, linked from https://www.nordicsemi.com/Products/Development-hardware/nRF9161-DK/Download). Files used: `PCA10153.../Production files/GERBER/400688.GTL` (top copper), `400688.GTS` (top mask), `400688.GTP` (top paste), plus `PICK_PLACE/400688_Pick_And_Place.csv` (M1 nRF9161, footprint LGA50P1600X1050X104-159N, centre 122.3403/24.7640, rot 0). I parsed the flashes within the package outline around M1. The PcbDoc wasn't parsed. Ours: `nRF9161-DEV-BOARD.kicad_pcb` at 729a1a3, U1 = `Board:nRF9161_LGA_16.0x10.5mm` (same as `libraries/Board.pretty/`).
+
+| Item | nRF9161 DK (Gerber) | Ours @729a1a3 | Matters? |
+|---|---|---|---|
+| Pad count | 159 | 159 | match |
+| Pad centres | 0.50/0.65 mm pitch grid | 60 interior pads match DK to <0.02 mm. 99 outer-ring pads are offset 0.25 mm outward | **yes** |
+| Outer-ring signal pads (99) | 0.30×0.30, centre 7.75 mm from package centre (copper fully inside the 16.0×10.5 outline) | **0.80×0.30 / 0.30×0.80**, centred on the outline (x ±8.0 / y ±5.25), copper extends to ±8.40 / ±5.65, i.e. **0.40 mm outside the package outline** | **YES.** Nordic nWP054: "copper pads must not extend outside the nRF9161 package outline to avoid short circuits to the device's metallized electromagnetic shielding" |
+| Interior signal pads (27) | 0.30×0.30 | 0.30×0.30 | match |
+| GND pads (31) | 0.80×0.80 | 0.80×0.80 | match |
+| Large pads (2) | 1.60×0.80 | 1.60×0.80 | match |
+| Solder-mask openings | NSMD, pad +0.05 mm/side: 0.40×0.40, 0.90×0.90, 1.70×0.90 | Mask expansion 0 (opening = copper) on all pads; board `pad_to_mask_clearance 0` | **yes:** not NSMD as Nordic advises. The mask opening equals copper, so the opening relies on fab registration |
+| Paste apertures | 1:1 with copper (0.30×0.30, 0.80×0.80, 1.60×0.80); Nordic says the assembler applies the reduction | 1:1 with copper (paste margin 0), but on the elongated 0.8×0.3 pads | yes, via the pad-shape difference. The 70–85% reduction in §1.5 is applied by the assembler on top |
+
+**Consequence for VIPPO group A:** pads 52–60 are outer-ring pads. Each via sits at 8.05 mm local (land 7.90–8.20 mm), which is **outside the DK pad (7.60–7.90 mm) and mostly outside the package outline (8.00 mm)**. If the footprint is corrected to Nordic's land pattern, these 9 vias would no longer be via-in-pad. They would sit at or past the SiP edge/shield and need to be re-placed: centred in a 0.30×0.30 pad at 7.75 mm, with the 0.30 mm land then equal to the pad in both axes. Group B (0.8×0.8 GND pads) is unaffected.
+**Recommendation:** footprint correction to the DK land pattern (0.30×0.30 outer pads, 0.05 mm NSMD mask) is a **must-fix before fab** (Layout/Hardware PM). VIPPO group A placement must then be re-verified. I made no PCB or library edits.
+
 ### Sources
 - [J1] https://jlcpcb.com/news/free-via-in-pad-6-20-layer-pcbs-pofv
 - [J2] https://jlcpcb.com/capabilities/pcb-capabilities
 - [J3] https://jlcpcb.com/resources/pcb-design
 - [J4] https://jlcpcb.com/help/article/pcb-via-covering
+- [J5] https://cart.jlcpcb.com/quote
+- [J6] https://jlcpcb.com/blog/via-filling-guide
+- [J7] https://jlcpcb.com/blog/mastering-pcb-plating
 - [P1] https://www.pcbway.com/pcb_prototype/PCB_Via_Covering.html
 - [P2] https://www.pcbway.com/pcb_prototype/PCB_Via_in_Pad.html (also helpcenter Via_in_Pad.html)
 - [P3] https://www.pcbway.com/capabilities.html
