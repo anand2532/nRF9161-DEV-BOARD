@@ -1,0 +1,12 @@
+ERC errors 0 warnings 203 (baseline before edit: 0 / 201; +2 = C40 Device lib + Capacitor_SMD footprint lib not in box lib tables, same class as other caps)
+C40 symbol (45.72,237.49) lib pins (0,+3.81)/(0,-3.81) -> tips (45.72,233.68) / (45.72,241.30); labels SIM_1V8 / GND placed there
+C40 2 -> GND
+C40 1 -> SIM_1V8
+U1 49 -> SIM_1V8
+C33 1 -> SIM_1V8
+C40 100nF {'MPN': 'GRM155R71A104KA01D'}
+D3 Green LED {'Function': 'POWER', 'MPN': 'KP-2012SGC'}
+D4 Green LED {'Function': 'STATUS', 'MPN': 'KP-2012SGC'}
+D5 Green LED {'Function': 'LTE', 'MPN': 'KP-2012SGC'}
+D6 Green LED {'Function': 'GNSS', 'MPN': 'KP-2012SGC'}
+D7 Green LED {'Function': 'SPARE_DNP', 'MPN': 'KP-2012SGC', 'DNP': 'yes', 'Note': 'Optional spare LED on P0.03; leave unpopulated to free GPIO'}
