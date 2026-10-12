@@ -1,0 +1,12 @@
+(version 1)
+# PASS30CL VIPPO vias (0.20 drill / 0.30 land, IPC-4761 Type VII) in U1 pads; RF review C1
+(rule "VIPPO_size"
+  (condition "A.Type == 'Via' && A.Hole == 0.2mm")
+  (constraint via_diameter (min 0.3mm))
+  (constraint hole_size (min 0.2mm))
+  (constraint annular_width (min 0.05mm)))
+(rule "VIPPO_In1_C1"
+  (layer "In1.Cu")
+  (condition "A.Type == 'Via' && A.Hole == 0.2mm")
+  (constraint clearance (min 0.1mm))
+  (constraint hole_clearance (min 0.1mm)))
