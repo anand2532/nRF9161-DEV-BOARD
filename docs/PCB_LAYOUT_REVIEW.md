@@ -1403,4 +1403,5 @@ Straight 0.18 mm chord (45.640, 26.000)→(107.150, 26.000) does not cross the S
 - pass30bu (2026-10-12): P0.23 J13.8 to J10.3 KEEP (class D, cap waived). In2, 4 segments, no vias. Unconnected 48->47, P0.23 2->1, h2h 1, GND 12. Parallel 0 mm. Landed in 05cfc22.
 - pass30bv (2026-10-12): P0.18 J13.3 to J17.2 KEEP (class D, cap waived). In1, 3 segments, no vias. Unconnected 47->46, P0.18 2->1, h2h 1, GND 12. Longest plan stretch within 0.5 mm 1.0 mm (a 90-degree crossing of P0.22 In2). Landed in abfe3d6.
 - pass30bw (2026-10-12): P0.17 J17.1 to J13.2 KEEP (class D, cap waived). In1, 5 segments, no vias. Unconnected 46->45, P0.17 1->0, h2h 1, GND 12. Longest plan stretch 1.0 mm (90-degree crossing of P0.22). Landed in 25cb0bc.
-- pass30bx (2026-10-12): P0.21 J13.6 to J10.1 KEEP (class D, cap waived). In1, 4 segments, no vias. Unconnected 45->44, P0.21 2->1, h2h 1, GND 12. Parallel 0 mm. Not committed.
+- pass30bx (2026-10-12): P0.21 J13.6 to J10.1 KEEP (class D, cap waived). In1, 4 segments, no vias. Unconnected 45->44, P0.21 2->1, h2h 1, GND 12. Parallel 0 mm. Landed in 191301e.
+- pass30by (2026-10-12): P0.24 J13.9 to J10.4 KEEP (class D, cap waived). In1, 5 segments, no vias. Unconnected 44->43, P0.24 2->1, h2h 1, GND 12. Parallel 0 mm. Not committed.
