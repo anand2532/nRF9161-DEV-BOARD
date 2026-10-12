@@ -2,24 +2,44 @@
 
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
 **Checklist date:** 2026-09-23 (IST / Asia/Calcutta)  
-**Overall gate:** **RED — NOT FABRICATION-READY** (re-assessed at `vippo` bc6d0fc, 2026-10-12 IST; see "Fab pass bc6d0fc" below)
+**Overall gate:** **GREEN for PCB data (pending C7 JLC quote + assembler-order notes); not yet ordered** (re-assessed at `vippo` 3eab055, 2026-10-12 IST; see "Fab pass 3eab055" below)
 
 Do not declare fab-ready until **every** row below is PASS **and** `unconnected_items = 0`.  
-Authoritative connectivity truth: `kicad-cli pcb drc` JSON `unconnected_items` (see `reports/FINAL_FAB_RELEASE.md`, `reports/DRC_AFTER_CONNECT.json`).
-
----
-
-## Overall gate
+Authoritative connectivity truth: `kicad-cli pcb drc` JSON `unconnected_items` (see `reports/FINAL_FAB## Overall gate
 
 | Field | Value |
 | --- | --- |
-| Status | **RED / FAIL** (bc6d0fc) |
-| unconnected_items | **10**, all GND F.Cu zone-to-zone, **unchanged after zone refill (real, not phantom)**. Evidence: `fab/staging-bc6d0fc/DRC_bc6d0fc_asis.json`, `fab/staging-bc6d0fc/DRC_bc6d0fc_refilled.json` |
-| DRC errors (bc6d0fc) | 0 errors. Warnings: track_dangling 4 (VDD_GPIO B.Cu ×3 near (70,8)/(48.05,5.5)/(48.05,3.46); P0.11 B.Cu (44,29.2)); lib_footprint_issues 98 (stock KiCad libs not installed on the box, environment only); lib_footprint_mismatch 1 (TI_TPD3F303) |
-| Gerbers regenerated | **Yes**: `fab/staging-bc6d0fc/` from bc6d0fc (zones refilled, /tmp copy). Not releasable while RED |
+| Status | **GREEN (data)**. All items PASS except C7 (JLC quote, OPEN as expected) and #13 (assembler-order notes, OPEN, ordering only). Don't place the order until C7 is answered |
+| unconnected_items | **0 as-is and 0 after KiCad Python zone refill**: `fab/staging-3eab055/DRC_3eab055_asis.json`, `DRC_3eab055_refilled.json` |
+| DRC (3eab055) | 0 errors, 0 design warnings. Only `lib_footprint_issues` ×100 (stock KiCad libs not installed on the box, environment only) and `lib_footprint_mismatch` ×1 (U4 TPD3F303: board copy differs from `Board` lib copy; advisory, re-sync the lib) |
+| Gerbers regenerated | **Yes**: `fab/staging-3eab055/` |
+
+### Fab pass 3eab055 (2026-10-12 IST) — supersedes bc6d0fc
+
+| # | Item | Status | Evidence / reason |
+| --- | --- | --- | --- |
+| 1 | Connectivity | **PASS** | unconnected 0 as-is and refilled |
+| 2 | DRC | **PASS** | 0 errors; no track_dangling; only environment lib warnings + U4 lib-copy mismatch (advisory) |
+| 3 | U1 footprint vs Nordic DK | **PASS** | 159/159 pads, sizes, max centre error 0.0017 mm, mask +0.05, paste 1:1. Note §1.7 |
+| 4 | VIPPO | **PASS** | 29 = 20 × 0.20/0.30 (A 9 + A2 7 + C 4) + 9 × 0.25/0.40 (B), all centred, inside the outline, VIPPO-only drills, ≥0.854 mm to unfilled vias. Note §1.4 |
+| 5 | Gerbers + job | **PASS** | 4 Cu, F/B Mask, F/B Paste, F/B Silk, Edge.Cuts, VIPPO; job LayerNumber 4, 120.1×80.1, 1.6 mm, Finish ENIG. Outline closed |
+| 6 | Stackup (board + job) | **PASS** | Board stackup and `job.gbrjob`: Cu 35 µm ×4; FR4 prepreg 0.12 (εr 4.2) / core 1.2 (εr 4.5) / prepreg 0.12; mask 10 µm ×2. Total 1.6 mm, ENIG. Matches `docs/FAB_STACKUP_NOTES.md` (L1–L2 ~0.12 mm) |
+| 7 | Drill | **PASS** | PTH T1 0.200 ×20, T2 0.250 ×9, T3 0.300 ×337, T4 0.400 ×41, T5 0.650 ×12, T6 1.000 ×78. NPTH 0 holes. PDF maps |
+| 8 | IPC-D-356 | **PASS** | `nRF9161-DEV-BOARD.d356` |
+| 9 | BOM | **PASS** | `nRF9161-DEV-BOARD-bom.csv`: 74 refs (50 lines). C21/C22/C23/C24/C31/C32/D7/J16 (DNP) and TP1–TP20, JP1, JP2 (excluded) are absent |
+| 10 | CPL | **PASS** | `nRF9161-DEV-BOARD-cpl.csv`: 74 rows, all top, rot 0/±90/180. Same ref set as the BOM; no DNP/TP/JP |
+| 11 | Silk legibility (JLC line ≥0.15 mm, text ≥1.0 mm; https://jlcpcb.com/capabilities/pcb-capabilities) | **PASS** | 249 texts: 246 at 1.0/0.15, 3 at 1.1/0.165. 0 below the minimum. 260 silk shapes all at 0.15 mm |
+| 12 | Silk over pads / overlaps | **PASS w/ advisory** | silk_over_copper 0 at JLC 0.15 mm pad-to-silk. Silk-to-silk: 0 touching. 27 pairs closer than 0.15 mm, worst: J5 "GND" text vs J5 outline 0.036 mm (6.6,51.1), P0.11 vs J12 outline 0.047 (33.8,74.8), ADC vs P0.13 0.054 (38.0,60.3), U1 ref vs U1 outline 0.088 (36.1,38.8). Cosmetic, not a JLC rule |
+| 13 | Assembler order notes | **OPEN (ordering only)** | Stencil 0.10 mm, U1 paste 70–85%, first-article X-ray (note §1.5). **JP2 (SIM_VCC, open solder jumper SIM_1V8→SIM_VCC/J7.C1) must be bridged, or the SIM gets no power.** JP1 (I_MEAS, open solder jumper bypassing R2 50 mΩ) is functional open (R2 carries VDD_nRF); README says close for normal operation. Put "bridge JP1+JP2 with solder" in the assembly order, or do it at bring-up |
+| C7 | JLC 4L filled & capped quote | **OPEN** (expected) | 8:1 aspect, cost/lead, no-protrusion note. Scope **29 vias** |
+
+TP1–TP20 are bare test pads (TestPoint_Pad_D1.0/D1.5); excluding them is correct.
+Package: `fab/staging-3eab055/nRF9161-DEV-BOARD-fab-3eab055.zip`.
+
+asable while RED |
 | Checklist fully green | **No** |
 
-### Fab pass bc6d0fc (2026-10-12 IST)
+### Fab pass bc6d0fc (2026-10-12 IST) — SUPERSEDED by 3eab055
 
 | # | Item | Status | Evidence / reason |
 | --- | --- | --- | --- |
@@ -36,7 +56,7 @@ Authoritative connectivity truth: `kicad-cli pcb drc` JSON `unconnected_items` (
 | 11 | Silk legibility (JLC: line ≥0.15 mm, text height ≥1.0 mm, https://jlcpcb.com/capabilities/pcb-capabilities) | **FAIL** | 254 of 260 silk texts are under 1.0 mm (most 0.65–0.8; smallest 0.6 mm: "SWD", "nRF9161-DEV-BOARD", "RF: 0.20mm microstrip…", "GND"). 151 have stroke under 0.15 (0.12). All 260 silk graphics are 0.12/0.10 mm. Not fixed |
 | 12 | Silk overlap / over pads | **PASS w/ 1 note** | Default DRC: 0. With JLC 0.15 mm pad-to-silk clearance (temp /tmp project): 1 silk_overlap (U1 reference vs U1 silk at (36.1,38.7)); silk_over_copper 0 |
 | 13 | Assembly (stencil 0.10 mm, X-ray first article) | **OPEN** | Per `reports/DFM_VIPPO_NOTE.md` §1.5. Apply to the assembler order |
-| C7 | JLC 4L filled & capped quote | **OPEN** (expected) | 8:1 aspect, cost/lead, no-protrusion note. Scope is now 25 vias |
+| C7 | JLC 4L filled & capped quote | **OPEN** (expected) | 8:1 aspect, cost/lead, no-protrusion note. Scope was 25 at bc6d0fc (now 29) |
 
 Package: `fab/staging-bc6d0fc/nRF9161-DEV-BOARD-fab-bc6d0fc.zip` (**staging only; do not order while RED**).
 
@@ -174,5 +194,5 @@ Only GND Class-E could be jointly redefined as non-gate after zone refill proves
 | | |
 | --- | --- |
 | **Status** | **OPEN** (overall gate stays **RED**) |
-| **Evidence** | Scope: 18 filled+capped vias at `vippo` 729a1a3: 9 × 0.20/0.30 in U1 pads 52–60, plus 9 × 0.30/0.60 GND thermal vias in U1 GND pads. Details in `reports/DFM_VIPPO_NOTE.md` §1.4/C7. Capability evidenced: JLC POFV page lists 0.2/0.3, ring ≥0.05 mm, >0.45 mm from other holes, and "POFV for 4-layer PCBs still requires charges" (https://jlcpcb.com/news/free-via-in-pad-6-20-layer-pcbs-pofv). Epoxy-filled & capped is selectable by note/image or by drill diameter (https://jlcpcb.com/help/article/pcb-via-covering). **PENDING a live JLC quote:** (a) 8:1 aspect ratio for the 0.20 mm hole through 1.6 mm; (b) 4L POFV cost and lead time; (c) JLC accepts the no-protrusion order note (caps flush or recessed, ≤+25 µm proud). Plating is JLC standard (~18 µm) for the prototype, RF-accepted; production target is ≥20 µm. **Drill selection:** 286 of 336 vias are 0.30 mm drill, so option (b) was chosen. Group B moves to **0.25/0.40** (unique tool), **pending Layout change after pass30cm**. The PCB at 729a1a3 is still 0.30/0.60. |
+| **Evidence** | Scope: **29 filled+capped vias at 3eab055** (20 × 0.20/0.30 + 9 × 0.25/0.40, all in U1 pads; history: 18 at 729a1a3, 25 at bc6d0fc). Details in `reports/DFM_VIPPO_NOTE.md` §1.4/C7. Capability evidenced: JLC POFV page lists 0.2/0.3, ring ≥0.05 mm, >0.45 mm from other holes, and "POFV for 4-layer PCBs still requires charges" (https://jlcpcb.com/news/free-via-in-pad-6-20-layer-pcbs-pofv). Epoxy-filled & capped is selectable by note/image or by drill diameter (https://jlcpcb.com/help/article/pcb-via-covering). **PENDING a live JLC quote:** (a) 8:1 aspect ratio for the 0.20 mm hole through 1.6 mm; (b) 4L POFV cost and lead time; (c) JLC accepts the no-protrusion order note (caps flush or recessed, ≤+25 µm proud). Plating is JLC standard (~18 µm) for the prototype, RF-accepted; production target is ≥20 µm. **Drill selection:** 286 of 336 vias are 0.30 mm drill, so option (b) was chosen. Group B moves to **0.25/0.40** (unique tool), **pending Layout change after pass30cm**. The PCB at 729a1a3 is still 0.30/0.60. |
 | **To go green** | Layout changes group B to 0.25/0.40 after pass30cm (keep all 9). Get a live JLC quote (4L, 1.6 mm, ENIG, Epoxy Filled & Capped) with cost/lead recorded, and get EQ acceptance of 0.2/0.3 at 8:1 and of the no-protrusion order note. |

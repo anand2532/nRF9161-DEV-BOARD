@@ -41,11 +41,18 @@ Get real cost and lead numbers from an online quote: JLC with "Epoxy Filled & Ca
 
 ### 1.4 Fab-note text (paste into fab drawing / order remarks)
 
-**VERIFIED at bc6d0fc (2026-10-12, read-only pcbnew/kicad-cli on a /tmp copy). This supersedes the counts below where they differ.**
-- Board vias: 395 = 0.6/0.3 ×259, 0.5/0.3 ×70, 0.8/0.4 ×41, **0.3/0.2 ×16**, **0.4/0.25 ×9**. Drill file tools: T1 0.200 ×16, T2 0.250 ×9, T3 0.300 ×329, T4 0.400 ×41, T5 0.650 ×12, T6 1.000 ×78. No footprint pad uses a 0.20 or 0.25 mm hole, so **0.20/0.25 drills are used only by VIPPO vias**.
-- **Group A (0.20/0.30): 16, not 9.** It is all of pads 52–60 (GND 52/56/60, MAGPIO2/1/0, MIPI_VIO/SCLK/SDATA, at x 28.25, y 27.0–31.0) **plus 7 added in pass30cm/co:** pad 48 SIM_IO (30.25,27.0), 42 P0.25 (33.25,27.0), 89 P0.31 (36.75,37.0), 29 P0.18 (39.75,27.0), 24 P0.14 (42.25,27.0), 23 P0.13 (42.75,27.0), 20 P0.12 (43.75,27.5). Every one is centred exactly (0.000 offset) in a 0.30×0.30 pad. The land equals the pad in both axes (zero margin) and sits inside the package outline. Nearest unfilled via is ≥0.85 mm Cu-edge (pad 89), which meets >0.45 mm.
-- **Group B (0.25/0.40): 9, as expected**, in the U1 0.80×0.80 GND pads at x 30/36/42, y 29/32/35. **6 of 9 are off-centre by 0.20 mm in y** (y 29 → pad centre 28.8; y 35 → pad centre 35.2). Land edge = pad edge (0.40 land, offset 0.20, in a 0.80 pad), so it is inside the pad and the outline, but with zero margin. Only the 3 at y 32 are centred. Nearest unfilled via is ≥1.30 mm Cu-edge (meets >0.45 mm). **Recommendation:** move the 6 to the pad centres (y 28.8/35.2) so the cap is fully inside the pad (Layout).
-- Fill+cap scope is therefore **25 vias** (16 + 9), not 18. The fab-note text below is updated to 25 / 16. Selection by tool (0.20 and 0.25 mm) is unchanged.
+**VERIFIED at 3eab055 (2026-10-12, read-only pcbnew/kicad-cli on a /tmp copy, zones refilled). This supersedes the bc6d0fc and earlier counts below.**
+- Board vias: 407 = 0.6/0.3 ×262, 0.5/0.3 ×75, 0.8/0.4 ×41, **0.3/0.2 ×20**, **0.4/0.25 ×9**. Drill file `fab/staging-3eab055/drill/nRF9161-DEV-BOARD-PTH.drl`: T1 0.200 ×20, T2 0.250 ×9, T3 0.300 ×337, T4 0.400 ×41, T5 0.650 ×12, T6 1.000 ×78. No footprint pad has a 0.20/0.25 hole, so **0.20 and 0.25 drills are VIPPO-only**.
+- **Total 29 = 20 × 0.20/0.30 + 9 × 0.25/0.40, all in U1 pads, all centred (0.000 offset), all inside the 16.0×10.5 outline.** Nearest unfilled via is ≥0.854 mm Cu-edge (pad 89 P0.31), which meets >0.45 mm.
+
+| Group | Drill/land | U1 pads (net) | Pad size |
+|---|---|---|---|
+| A (9) | 0.20/0.30 | 52 GND, 53 MAGPIO2, 54 MAGPIO1, 55 MAGPIO0, 56 GND, 57 MIPI_VIO, 58 MIPI_SCLK, 59 MIPI_SDATA, 60 GND (x 28.25, y 27.0–31.0) | 0.30×0.30 |
+| A2 (7) | 0.20/0.30 | 48 SIM_IO, 42 P0.25, 89 P0.31, 29 P0.18, 24 P0.14, 23 P0.13, 20 P0.12 | 0.30×0.30 |
+| C (4, new in pass30cp) | 0.20/0.30 | 36 GND (36.25,27.0), 27 GND (40.75,27.0), 21 GND (43.75,27.0), 98 GND (41.25,37.0) | 0.30×0.30 |
+| B (9) | 0.25/0.40 | U1 0.80×0.80 GND pads at x 30/36/42, y 28.8/32.0/35.2. **All 9 now centred** (the bc6d0fc 0.20 mm offset is fixed) | 0.80×0.80 |
+
+- For the 0.30 mm pads the land equals the pad (zero margin), as accepted earlier. Group C's nearest unfilled vias: 2.21 / 2.21 / 0.92 / 1.26 mm.
 
 
 **Updated 2026-10-12 for `vippo` @ 729a1a3 (PASS30CL). Scope per Hardware PM decision: 18 filled-and-capped vias = 9 × 0.20/0.30 in pads 52–60 (table A) + 9 GND thermal vias in U1 GND pads (table B), decided target **0.25/0.40** (option (b), Hardware PM + RF approved 2026-10-12). **Group B 0.25/0.40 is done (PASS30CN step 4, 74a6605). Group A moved with the DK land pattern to x 28.25 (PASS30CN, e6d1fe0); the table below shows the current positions.** Table A: Verified from the `.kicad_pcb` at 729a1a3 (pcbnew API, file extracted with `git show` into /tmp):
@@ -95,17 +102,13 @@ Table B: GND thermal vias in U1 0.80×0.80 GND pads (footprint pad "103"). **Har
 ```
 VIA-IN-PAD / FILLED & CAPPED: 29 places (PASS30CP), all IPC-4761 TYPE VII (NON-CONDUCTIVE epoxy fill,
 planarized, copper capped both sides, then ENIG):
- Group A: 16 vias, FINISHED HOLE 0.20 mm / land 0.30 mm (the only 0.20 mm drill tool), U1 pads
-   52-60: GND (52,56,60), MAGPIO2 (53), MAGPIO1 (54), MAGPIO0 (55), MIPI_VIO (57),
-   MIPI_SCLK (58), MIPI_SDATA (59); plus pads 48 SIM_IO, 42 P0.25, 89 P0.31, 29 P0.18,
-   24 P0.14, 23 P0.13, 20 P0.12.
- Group B: 9 GND thermal vias in U1 0.8x0.8 GND pads at (30/36/42, 29/32/35) mm,
-   FINISHED HOLE 0.25 mm / land 0.40 mm. The 0.25 mm drill tool is the only 0.25 mm tool
-   and identifies group B.
- Group A2: 7 signal VIPPO, 0.20/0.30, U1 pads 20 (P0.12), 23 (P0.13), 24 (P0.14), 29 (P0.18),
-   42 (P0.25), 48 (SIM_IO), 89 (P0.31) (added in earlier passes; same 0.20 tool).
- Group C (PASS30CP, PM decision 2026-10-12): 4 GND VIPPO, 0.20/0.30, centred in U1 GND pads
-   36 (36.25,27.0), 27 (40.75,27.0), 21 (43.75,27.0), 98 (41.25,37.0).
+ Group A: 9 vias, FINISHED HOLE 0.20 mm / land 0.30 mm, U1 pads 52-60: GND (52,56,60),
+   MAGPIO2 (53), MAGPIO1 (54), MAGPIO0 (55), MIPI_VIO (57), MIPI_SCLK (58), MIPI_SDATA (59).
+ Group A2: 7 signal vias, 0.20/0.30, U1 pads 20 (P0.12), 23 (P0.13), 24 (P0.14), 29 (P0.18),
+   42 (P0.25), 48 (SIM_IO), 89 (P0.31).
+ Group C: 4 GND vias, 0.20/0.30, U1 pads 36, 27, 21, 98.
+ Group B: 9 GND thermal vias in U1 0.8x0.8 GND pads at (30/36/42, 28.8/32.0/35.2) mm,
+   FINISHED HOLE 0.25 mm / land 0.40 mm (the only 0.25 mm drill tool).
  Totals: 0.20 mm tool x20 (all in U1 pads), 0.25 mm tool x9.
 Fill + cap ALL vias of the 0.20 mm and 0.25 mm drill tools; no other vias are filled.
 Hole-wall copper plating: fab standard (prototype).
@@ -139,7 +142,7 @@ Marking approach: (a) a unique 0.20 mm drill size, so the drill file tool table 
 ### C7 — JLC 4L POFV at 0.20/0.30 + cost: **OPEN / UNVERIFIED (cost)**
 - Capability: **evidenced.** The JLC POFV page lists the 0.20 hole / 0.30 diameter pair, annular ≥0.05 mm, >0.45 mm from other holes, and states "POFV for 4-layer PCBs still requires charges", i.e. it is offered on 4L [J1]. The via-covering help page (updated Sep 09, 2026) offers "Epoxy-filled & Capped", selected by note or by drill diameter [J4]. Not published: 8:1 aspect acceptance specifically at 1.6 mm 4L. Confirm in EQ.
 - Cost: **UNVERIFIED.** No public 4L POFV price was found ([J1], [J4], [J6], quote page [J5]). The 0.2/0.3 small-via surcharge exists, but its amount is not published [J5]. **A live JLC online quote is needed** (4L, 1.6 mm, ENIG, Epoxy Filled & Capped, min via 0.2/0.3). No numbers estimated.
-- Scope is now 18 vias. Drill-selection issue for group B: see table B above.
+- Scope is now **29 vias** (3eab055). Drill-selection issue for group B: see table B above.
 - Also pending the quote: JLC accepts the no-protrusion order note (+25 µm max proud; recess ≤50 µm). Plating is JLC standard for the prototype (RF-accepted).
 - Group B drill change (0.30/0.60 → 0.25/0.40): done in PASS30CN step 4 (74a6605), `.kicad_dru` rule VIPPO_B_size.
 - **RF C5 keepout exception (fab/CAM note):** in the RF keepout (x<29, y 26–40, F.Cu/In1), the only copper allowed is the via barrels in U1 pads 52–60 (signal 53–55, 57–59; GND 52/56/60). No F.Cu/In1 tracks. This matches the `.kicad_dru` comment.
@@ -154,7 +157,7 @@ Marking approach: (a) a unique 0.20 mm drill size, so the drill file tool table 
 
 **Recommendation:** first try alternatives 1 and 2 (no special process). Any pad still trapped after that gets JLC 4L epoxy filled & capped, 0.20/0.30, on a unique drill tool, with the note above. Get a real quote before committing. Do not use PCBWay for this feature without written approval.
 
-### 1.7 U1 footprint vs nRF9161 DK — **PASS at bc6d0fc** (re-checked 2026-10-12)
+### 1.7 U1 footprint vs nRF9161 DK — **PASS at bc6d0fc and 3eab055** (re-checked 2026-10-12: 159/159 pads, sizes match, max centre error 0.0017 mm, mask +0.05 NSMD, paste 1:1)
 Source: Nordic "nRF9161-DK - Hardware files 1_0_0.zip" (https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/dev-kits/nrf9161-dk/hardware-files/nrf9161-dk---hardware-files-1_0_0.zip), Gerbers `400688.GTL/GTS/GTP` around M1 (pick-and-place centre 122.3403/24.7640, rot 0). Ours: U1 `Board:nRF9161_LGA_16.0x10.5mm` in `nRF9161-DEV-BOARD.kicad_pcb` at bc6d0fc (pcbnew API, read-only /tmp copy).
 
 | Item | nRF9161 DK | Ours @bc6d0fc | Result |
