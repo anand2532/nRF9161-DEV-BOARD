@@ -81,7 +81,7 @@ Table B: GND thermal vias in U1 0.80×0.80 GND pads (footprint pad "103"). **Har
 - (b) **Unique drill for the 9:** Layout changes them to a size not used anywhere else, within JLC's POFV table. **0.25/0.40** is the only unused pair in that table. It keeps a 0.075 mm ring (JLC preferred) and fits easily in a 0.80 mm pad, but it gives less thermal barrel than 0.30. Alternatively, put them on the existing 0.20 mm filled tool (0.20/0.35). That needs no new tool but gives even less thermal barrel. Spacing to non-filled vias stays ≥1.2 mm, so it passes the 0.45 mm rule either way.
 - (c) **Select per via by note/image:** JLC's via-covering page allows "leave a note or upload an image... to explain which vias need to be filled" as an alternative to filling all of one diameter [J4]. This keeps 0.30/0.60 with no PCB change, but it relies on manual CAM selection, so the risk of a fab error is higher.
 - **DECISION (2026-10-12): option (b) chosen.** Group B → 0.25/0.40 on its own 0.25 mm drill tool. Layout makes the change after pass30cm.
-- **RF approval conditions (from RF, via Hardware PM):** (1) keep all 9 GND vias (no reduction in count); (2) hole-wall plating ≥20–25 µm in the filled vias; (3) copper cap planarity ±15 µm (U1 is an LGA).
+- **RF approval conditions (from RF, via Hardware PM):** (1) keep all 9 GND vias (no reduction in count); (2) hole-wall plating, (3) cap planarity (U1 is an LGA). **Revised 2026-10-12: RF accepts JLC standard for the prototype (no advanced / IPC Class 3 order).** Prototype values: plating = JLC standard (~18 µm average [J2]); caps: recess (dimple) ≤50 µm acceptable, protrusion ≤+25 µm. **Production target** (revisit for production): plating ≥20 µm average (IPC-6012 Class 2), 25 µm preferred. The earlier ±15 µm cap requirement is superseded.
 - After the change, spacing still holds: the via centres don't move and the land shrinks 0.60 → 0.40, so the Cu-edge gap to non-filled vias grows to ≥1.30 mm (>0.45 mm [J1]).
 - Original recommendation (kept for record): (b) with **0.25/0.40** on its own drill tool, plus a VIPPO-layer marker and order note. This gives deterministic selection by tool, uses a pair from JLC's published table, and fills only 18 vias. Fallback is (c) with an image and an EQ confirmation. Avoid (a) unless the quote shows a negligible adder. **No PCB change was made; this is a Layout decision.** If (b) is adopted, re-check that thermal performance is acceptable (RF/Power).
 
@@ -95,35 +95,38 @@ planarized, copper capped both sides, then ENIG):
    FINISHED HOLE 0.25 mm / land 0.40 mm. The 0.25 mm drill tool is the only 0.25 mm tool
    and identifies group B.
 Fill + cap ALL vias of the 0.20 mm and 0.25 mm drill tools; no other vias are filled.
-Hole-wall copper plating in all filled vias: >= 20 um average, 25 um target
-(IPC-6012 Class 2 avg 20 um / Class 3 avg 25 um).
-Cap planarity (dimple/protrusion vs surrounding pad surface): within +/-15 um.
+Hole-wall copper plating: fab standard (prototype).
+Caps: planarize FLUSH or SLIGHTLY RECESSED, NEVER PROUD. Recess (dimple) up to 50 um
+acceptable; protrusion above surrounding pad surface not to exceed +25 um.
 Cap copper: per fab POFV process, minimum 5 um (JLC published), continuous over fill.
 No voids exposed at surface; no visible hole outline after ENIG.
 All other vias: tented both sides (no fill). If fab requires global fill, notify before
 production.
 Reference layer: Fab drawing layer "VIPPO" (User.1) markers (18 places).
 Stackup per docs/FAB_STACKUP_NOTES.md (4L 1.6 mm, ENIG, 50 ohm SE coupon).
-THESE PLATING AND PLANARITY VALUES EXCEED JLC PUBLISHED STANDARD; confirm in EQ/quote.
+NOTE: protrusion limit (+25 um) is tighter than fab standard (+/-50 um); confirm in EQ.
 ```
-Marking approach: (a) a unique 0.20 mm drill size, so the drill file tool table separates group A (and group B if option (b) is adopted). (b) PASS30CL has a marker ring for each group A via on user layer "VIPPO" (User.1); export it with the Gerbers. (c) Put the same text in the order remarks. A 0.20 mm hole with a 0.30 mm land also adds JLC's small-via charge ("hole <0.3 mm and diameter ≤0.4 mm" [J5]). **Spec values: sources and reconciliation (supersedes the earlier 12 µm cap / 25 µm dimple proposal, which is withdrawn):**
-- Hole-wall plating ≥20–25 µm and cap planarity ±15 µm come **from RF** (approval conditions for option (b)).
-- The cap copper minimum of 5 µm is JLC's published filled-via figure [J4]. The earlier 12 µm proposal is dropped; it was my own estimate, not a fab or RF value.
-- **JLC public figures vs RF requirement:**
+Marking approach: (a) a unique 0.20 mm drill size, so the drill file tool table separates group A (and group B if option (b) is adopted). (b) PASS30CL has a marker ring for each group A via on user layer "VIPPO" (User.1); export it with the Gerbers. (c) Put the same text in the order remarks. A 0.20 mm hole with a 0.30 mm land also adds JLC's small-via charge ("hole <0.3 mm and diameter ≤0.4 mm" [J5]). **Spec values: sources and history.** Current values are the prototype values above.
+- History: my earlier 12 µm cap / 25 µm dimple proposal was withdrawn. RF's first conditions (plating ≥20–25 µm, cap ±15 µm) were superseded 2026-10-12, when RF accepted JLC standard for the prototype. The cap copper minimum of 5 µm is JLC's published filled-via figure [J4].
 
-| Item | JLC published | RF requirement | Gap |
-|---|---|---|---|
-| Hole-wall plating | "Average Hole Plating Thickness 18μm" [J2] | ≥20–25 µm | **Below RF.** Must be stated on the order and confirmed in the quote |
-| Filled-via cap copper | "Hole surface copper thickness ≥ 5um" [J4]; POFV "copper plating thickness of up to 25μm" [J1] | (not set by RF) | Ambiguous: [J1] says "up to", not a minimum |
-| Cap planarity | "depression and protrusion within 50um" [J4] | ±15 µm | **Looser than RF.** Must be stated on the order and confirmed in the quote |
+| Item | JLC published | Prototype requirement (RF-accepted) | Production target | Order note needed? |
+|---|---|---|---|---|
+| Hole-wall plating | "Average Hole Plating Thickness 18μm" [J2] | JLC standard (~18 µm avg) | ≥20 µm avg (25 µm preferred), revisit at production | No (proto) |
+| Filled-via cap copper | "Hole surface copper thickness ≥ 5um" [J4] | JLC standard | — | No |
+| Cap planarity | "depression and protrusion within 50um" [J4], i.e. ±50 µm | Recess ≤50 µm OK; **protrusion ≤+25 µm** | — | **Yes.** +25 µm is tighter than JLC's ±50 µm on the proud side, so the order note asks for flush or slightly recessed caps, never proud |
 
-JLC's blog also says most BGA drawings call for ≤25 µm, "tightening toward 15 µm for Class 3" [J6]. That is guidance, not a JLC process guarantee. If JLC won't commit to 20–25 µm and ±15 µm, escalate to Hardware PM/RF: options are an IPC Class 3 / advanced order, or a different fab.
+**Order-remark text (JLC):** "Epoxy filled & capped vias (0.20 mm and 0.25 mm drill tools only): please planarize caps flush or slightly recessed, never proud. Max protrusion +25 um; recess up to 50 um acceptable. Standard hole plating OK."
+
+### 1.6 Assembly (U1 LGA)
+- Stencil: **0.12 mm**, with U1 apertures per Nordic's recommended footprint / solder paste mask in the **nRF9161 Hardware Design Guidelines (nWP054), "Footprint and solder paste mask"**: https://docs.nordicsemi.com/r/bundle/nwp_054/page/wp/nwp_054/footprint.html. That page gives the land pattern and mask openings only as figures (NSMD pads). **I didn't take aperture numbers from it; take apertures from that document.** Use the footprint from the nRF9161 DK PcbDoc, not pca10153.IntLib (Nordic DevZone: https://devzone.nordicsemi.com/f/nordic-q-a/114096/footprint-and-soldering-issues-with-nrf9161).
+- **Flag for Hardware PM/RF:** Nordic's sibling nRF9151 guide (nWP056) recommends an **80–100 µm** stencil and paste reduction to ~70–85% of pad area (https://docs.nordicsemi.com/r/bundle/nwp_056/page/wp/nwp_056/footprint.html). That is thinner than the chosen 0.12 mm. I didn't find a stencil-thickness value in the nRF9161 text. Confirm 0.12 mm with the assembler or the nWP054 PDF.
+- **First-article X-ray of U1** covering pads 52–60 (group A) and the 9 GND-pad vias (group B). If any open is found or voiding exceeds 25%, the next spin gets a tighter spec (plating/planarity per production target, and/or tighter cap spec).
 
 ### C7 — JLC 4L POFV at 0.20/0.30 + cost: **OPEN / UNVERIFIED (cost)**
 - Capability: **evidenced.** The JLC POFV page lists the 0.20 hole / 0.30 diameter pair, annular ≥0.05 mm, >0.45 mm from other holes, and states "POFV for 4-layer PCBs still requires charges", i.e. it is offered on 4L [J1]. The via-covering help page (updated Sep 09, 2026) offers "Epoxy-filled & Capped", selected by note or by drill diameter [J4]. Not published: 8:1 aspect acceptance specifically at 1.6 mm 4L. Confirm in EQ.
 - Cost: **UNVERIFIED.** No public 4L POFV price was found ([J1], [J4], [J6], quote page [J5]). The 0.2/0.3 small-via surcharge exists, but its amount is not published [J5]. **A live JLC online quote is needed** (4L, 1.6 mm, ENIG, Epoxy Filled & Capped, min via 0.2/0.3). No numbers estimated.
 - Scope is now 18 vias. Drill-selection issue for group B: see table B above.
-- Also pending the quote: hole plating ≥20–25 µm (JLC publishes 18 µm average [J2]) and cap planarity ±15 µm (JLC publishes 50 µm [J4]). These are RF conditions.
+- Also pending the quote: JLC accepts the no-protrusion order note (+25 µm max proud; recess ≤50 µm). Plating is JLC standard for the prototype (RF-accepted).
 - Group B drill change (0.30/0.60 → 0.25/0.40) is pending Layout after pass30cm.
 - C7 cannot be PASS until there is a quote.
 
