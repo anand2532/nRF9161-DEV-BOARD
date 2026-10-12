@@ -117,9 +117,10 @@ Marking approach: (a) a unique 0.20 mm drill size, so the drill file tool table 
 
 **Order-remark text (JLC):** "Epoxy filled & capped vias (0.20 mm and 0.25 mm drill tools only): please planarize caps flush or slightly recessed, never proud. Max protrusion +25 um; recess up to 50 um acceptable. Standard hole plating OK."
 
-### 1.6 Assembly (U1 LGA)
-- Stencil: **0.12 mm**, with U1 apertures per Nordic's recommended footprint / solder paste mask in the **nRF9161 Hardware Design Guidelines (nWP054), "Footprint and solder paste mask"**: https://docs.nordicsemi.com/r/bundle/nwp_054/page/wp/nwp_054/footprint.html. That page gives the land pattern and mask openings only as figures (NSMD pads). **I didn't take aperture numbers from it; take apertures from that document.** Use the footprint from the nRF9161 DK PcbDoc, not pca10153.IntLib (Nordic DevZone: https://devzone.nordicsemi.com/f/nordic-q-a/114096/footprint-and-soldering-issues-with-nrf9161).
-- **Flag for Hardware PM/RF:** Nordic's sibling nRF9151 guide (nWP056) recommends an **80–100 µm** stencil and paste reduction to ~70–85% of pad area (https://docs.nordicsemi.com/r/bundle/nwp_056/page/wp/nwp_056/footprint.html). That is thinner than the chosen 0.12 mm. I didn't find a stencil-thickness value in the nRF9161 text. Confirm 0.12 mm with the assembler or the nWP054 PDF.
+### 1.5 Assembly (U1 LGA)
+- Stencil: **0.10 mm**, U1 paste at about **70–85% of pad area**, following Nordic guidance: nRF9161 Hardware Design Guidelines (nWP054), "Footprint and solder paste mask" (https://docs.nordicsemi.com/r/bundle/nwp_054/page/wp/nwp_054/footprint.html; footprint and mask openings are given as figures only), and nRF9151 Hardware Design Guidelines (nWP056), "Footprint, solder resist, and solder paste stencil" (https://docs.nordicsemi.com/r/bundle/nwp_056/page/wp/nwp_056/footprint.html). nWP056 gives an 80–100 µm stencil, about 70–80% paste on the large pads and about 75–85% on the signal pads. I didn't take exact aperture numbers from these pages; take U1 apertures from those documents and the assembler. Use the footprint from the nRF9161 DK PcbDoc, not pca10153.IntLib (https://devzone.nordicsemi.com/f/nordic-q-a/114096/footprint-and-soldering-issues-with-nrf9161). See also §1.7.
+- **Rationale (Hardware PM):** 0.10 mm stays within RF's 100–120 µm range for filling a cap dimple, and within Nordic's 80–100 µm. **0.10 mm is at the bottom of RF's range** (and the top of Nordic's), so there is little paste-volume margin for a 50 µm recess. The first-article X-ray below checks this.
+- *Superseded:* the earlier 0.12 mm stencil choice (5731a04) is replaced by 0.10 mm.
 - **First-article X-ray of U1** covering pads 52–60 (group A) and the 9 GND-pad vias (group B). If any open is found or voiding exceeds 25%, the next spin gets a tighter spec (plating/planarity per production target, and/or tighter cap spec).
 
 ### C7 — JLC 4L POFV at 0.20/0.30 + cost: **OPEN / UNVERIFIED (cost)**
@@ -130,7 +131,7 @@ Marking approach: (a) a unique 0.20 mm drill size, so the drill file tool table 
 - Group B drill change (0.30/0.60 → 0.25/0.40) is pending Layout after pass30cm.
 - C7 cannot be PASS until there is a quote.
 
-### 1.5 Alternatives if VIPPO is rejected
+### 1.6 Alternatives if VIPPO is rejected
 1. **Re-escape on F.Cu between pads / via outside the courtyard:** best option if any channel exists. MAGPIO1 already has a 2.4 mm F.Cu stub out of pad 54, so its blocker is the route onward, not the pad. Check whether a 0.1 mm-clearance neck (min_clearance 0.1) can reach an outside via.
 2. **Pin remap** to an unblocked U1 GPIO for P0.01 / MAGPIO1 / MIPI_SDATA, where the schematic allows it. SIM_1V8 is a fixed function, so no remap there. Pass30cb already did remaps, so this is an established path.
 3. **Untented / plugged-only (IPC-4761 Type III/IV) via in pad:** **reject for LGA.** Solder wicks into the hole, giving open or starved joints and large voids. Plugged-only also leaves a dimple and outgassing. Not acceptable for a fine-pitch LGA.
@@ -138,6 +139,23 @@ Marking approach: (a) a unique 0.20 mm drill size, so the drill file tool table 
 5. **6-layer board:** POFV is free at JLC on 6L+ [J1][J3], but that throws away the LOCKED 4L stackup. Only consider it if 4L VIPPO is refused and options 1–2 fail.
 
 **Recommendation:** first try alternatives 1 and 2 (no special process). Any pad still trapped after that gets JLC 4L epoxy filled & capped, 0.20/0.30, on a unique drill tool, with the note above. Get a real quote before committing. Do not use PCBWay for this feature without written approval.
+
+### 1.7 U1 footprint vs nRF9161 DK (read-only comparison)
+Source: Nordic "nRF9161-DK - Hardware files 1_0_0.zip" (https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/dev-kits/nrf9161-dk/hardware-files/nrf9161-dk---hardware-files-1_0_0.zip, linked from https://www.nordicsemi.com/Products/Development-hardware/nRF9161-DK/Download). Files used: `PCA10153.../Production files/GERBER/400688.GTL` (top copper), `400688.GTS` (top mask), `400688.GTP` (top paste), plus `PICK_PLACE/400688_Pick_And_Place.csv` (M1 nRF9161, footprint LGA50P1600X1050X104-159N, centre 122.3403/24.7640, rot 0). I parsed the flashes within the package outline around M1. The PcbDoc wasn't parsed. Ours: `nRF9161-DEV-BOARD.kicad_pcb` at 729a1a3, U1 = `Board:nRF9161_LGA_16.0x10.5mm` (same as `libraries/Board.pretty/`).
+
+| Item | nRF9161 DK (Gerber) | Ours @729a1a3 | Matters? |
+|---|---|---|---|
+| Pad count | 159 | 159 | match |
+| Pad centres | 0.50/0.65 mm pitch grid | 60 interior pads match DK to <0.02 mm. 99 outer-ring pads are offset 0.25 mm outward | **yes** |
+| Outer-ring signal pads (99) | 0.30×0.30, centre 7.75 mm from package centre (copper fully inside the 16.0×10.5 outline) | **0.80×0.30 / 0.30×0.80**, centred on the outline (x ±8.0 / y ±5.25), copper extends to ±8.40 / ±5.65, i.e. **0.40 mm outside the package outline** | **YES.** Nordic nWP054: "copper pads must not extend outside the nRF9161 package outline to avoid short circuits to the device's metallized electromagnetic shielding" |
+| Interior signal pads (27) | 0.30×0.30 | 0.30×0.30 | match |
+| GND pads (31) | 0.80×0.80 | 0.80×0.80 | match |
+| Large pads (2) | 1.60×0.80 | 1.60×0.80 | match |
+| Solder-mask openings | NSMD, pad +0.05 mm/side: 0.40×0.40, 0.90×0.90, 1.70×0.90 | Mask expansion 0 (opening = copper) on all pads; board `pad_to_mask_clearance 0` | **yes:** not NSMD as Nordic advises. The mask opening equals copper, so the opening relies on fab registration |
+| Paste apertures | 1:1 with copper (0.30×0.30, 0.80×0.80, 1.60×0.80); Nordic says the assembler applies the reduction | 1:1 with copper (paste margin 0), but on the elongated 0.8×0.3 pads | yes, via the pad-shape difference. The 70–85% reduction in §1.5 is applied by the assembler on top |
+
+**Consequence for VIPPO group A:** pads 52–60 are outer-ring pads. Each via sits at 8.05 mm local (land 7.90–8.20 mm), which is **outside the DK pad (7.60–7.90 mm) and mostly outside the package outline (8.00 mm)**. If the footprint is corrected to Nordic's land pattern, these 9 vias would no longer be via-in-pad. They would sit at or past the SiP edge/shield and need to be re-placed: centred in a 0.30×0.30 pad at 7.75 mm, with the 0.30 mm land then equal to the pad in both axes. Group B (0.8×0.8 GND pads) is unaffected.
+**Recommendation:** footprint correction to the DK land pattern (0.30×0.30 outer pads, 0.05 mm NSMD mask) is a **must-fix before fab** (Layout/Hardware PM). VIPPO group A placement must then be re-verified. I made no PCB or library edits.
 
 ### Sources
 - [J1] https://jlcpcb.com/news/free-via-in-pad-6-20-layer-pcbs-pofv

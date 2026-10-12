@@ -90,7 +90,7 @@ Authoritative connectivity truth: `kicad-cli pcb drc` JSON `unconnected_items` (
 | --- | --- |
 | **Status** | **PASS** (notes exist; assembly not released) |
 | **Evidence** | `README.md` §§ Assembly notes, First power-up, Hardware validation — LGA/stencil, DNP RF match, JP1/JP2, ferrite choices, bring-up sequence. BOM marks DNP/Optional. CPL top-only. |
-| **VIPPO assembly items** | Stencil **0.12 mm**, U1 apertures per Nordic nRF9161 Hardware Design Guidelines (nWP054) "Footprint and solder paste mask" (https://docs.nordicsemi.com/r/bundle/nwp_054/page/wp/nwp_054/footprint.html). Note: the nRF9151 guide recommends 80–100 µm, so confirm 0.12 mm with the assembler. **First-article X-ray** of U1 covering pads 52–60 and the 9 GND-pad vias; any open or voiding >25% means a tighter spec next spin. See `reports/DFM_VIPPO_NOTE.md` §1.6. |
+| **VIPPO assembly items** | Stencil **0.10 mm** (supersedes the earlier 0.12 mm), U1 paste ~70–85% of pad area per Nordic nWP054 (https://docs.nordicsemi.com/r/bundle/nwp_054/page/wp/nwp_054/footprint.html) and nWP056 (https://docs.nordicsemi.com/r/bundle/nwp_056/page/wp/nwp_056/footprint.html). Rationale (Hardware PM): within RF's 100–120 µm dimple-fill range, at its bottom. **First-article X-ray** of U1 covering pads 52–60 and the 9 GND-pad vias; any open or voiding >25% means a tighter spec next spin. **U1 footprint vs DK: FAIL.** 99 outer pads are 0.8×0.3 and extend 0.40 mm past the package outline, and the mask is not NSMD; see `reports/DFM_VIPPO_NOTE.md` §1.5/§1.7. |
 | **To go green** | Keep notes current after freeze; attach to EMS kit with BOM DNP list and RF keepout photo/PDF (`fab/nRF9161-DEV-BOARD-sch.pdf`, PCB PDF under `fab/`). |
 
 ---
