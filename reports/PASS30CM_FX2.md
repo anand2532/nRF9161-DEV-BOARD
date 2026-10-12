@@ -1,0 +1,20 @@
+# PASS30CM step 2 — FX2: COEX0 out of the RF keepout
+- **Ripped:** the U3.3 branch.
+  - F.Cu (27.45, 46.35) → (26.2, 46.35) → (26.2, 38) → **(26.2→33, 38)**: the keepout run.
+  - (33, 38) → (33, 43), via (33, 43).
+  - B.Cu (33, 43) → (38.8, 43).
+- **New route** (0.18 mm, rule-checked):
+  - U3.3 F.Cu → (26.95, 45.85) → (26.95, 44.0), via.
+  - B.Cu → (29.1, 43.5), via.
+  - F.Cu hop to (29.1, 42.5), via.
+  - B.Cu along y 42.65 → the existing B.Cu trunk at (38.8, 43).
+  - All copper is at y ≥ 42.5, so **no COEX0 copper is in x<29 / y 26–40**.
+- **Lengths:**
+  - U1.93 → U3.3 ≈ 21.8 mm. The ≤80 target is met for the U1 to U3 path.
+  - The whole net is 142.7 → **131.3 mm**. That includes the untouched pre-existing J15 header leg (~71 mm to (104, 62)) and the R4 leg. **Whole-net COEX0 exceeds 80 mm only because of that header leg**, which was not in scope.
+- **Gate (refilled):** short/clearance/crossing/hole/hole_to_hole/courtyard/edge/silk/mask_bridge are all 0.
+  - Unconnected 17 → 17.
+  - In1 GND: 2 pieces, 8206.5 → 8204.6 mm².
+  - VDD_nRF: 1 piece, 6781.0 → 6777.7 mm².
+  - COEX0 stays closed.
+- PNGs: `PASS30CM_FX2_BEFORE.png` / `_AFTER.png` (F+B).
