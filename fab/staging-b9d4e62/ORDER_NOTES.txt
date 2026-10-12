@@ -1,0 +1,9 @@
+PCB FABRICATION:
+- 4 layers, 1.6 mm FR4, ENIG. Stackup: Cu35um / prepreg 0.12mm / Cu35um / core 1.2mm / Cu35um / prepreg 0.12mm / Cu35um (as in gerber job file). 50 ohm SE microstrip on L1 over L2 GND.
+- Via-in-pad IPC-4761 Type VII (epoxy filled + copper capped) ONLY for the 0.20 mm drill (x20) and 0.25 mm drill (x9) holes = 29 vias, marked on layer VIPPO. All other vias tented, not filled.
+- Caps flush or slightly recessed, never proud: recess up to 50 um OK, protrusion max +25 um.
+- Standard hole plating OK (prototype).
+ASSEMBLY:
+- Stencil 0.10 mm. U1 (nRF9161 LGA) paste apertures 70-85% of pad area per Nordic nWP054.
+- First-article X-ray of U1 (pads 52-60 and all 29 via-in-pad locations); report voiding >25% or any open.
+- JP1 and JP2 solder jumpers have no paste openings: please bridge each manually with solder after reflow.
