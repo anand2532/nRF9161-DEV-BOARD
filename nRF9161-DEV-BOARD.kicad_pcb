@@ -22422,14 +22422,6 @@
 		(uuid "f2f15737-c2de-46d8-9b0f-30f37d38c88b")
 	)
 	(via
-		(at 76.624166 56.05)
-		(size 0.6)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(net 7)
-		(uuid "3dd4e365-3972-4c2a-9761-00cdace37d2b")
-	)
-	(via
 		(at 99.19 46.665833)
 		(size 0.6)
 		(drill 0.3)
@@ -22494,7 +22486,7 @@
 		(uuid "ab5565cc-b0d6-4d2a-bf21-eae1c00a3b65")
 	)
 	(segment
-		(start 76.62 56.05)
+		(start 76.62 53.5)
 		(end 76.62 46.67)
 		(width 0.18)
 		(layer "B.Cu")
