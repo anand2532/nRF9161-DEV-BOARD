@@ -1,5 +1,6 @@
 (version 1)
 # PASS30CL VIPPO vias (0.20 drill / 0.30 land, IPC-4761 Type VII) in U1 pads; RF review C1
+# RF C5 keepout exception: via barrels in U1 pads 52-60 only (signal 53-55, 57-59; GND 52/56/60). No F.Cu/In1 tracks in the x<29 keepout.
 (rule "VIPPO_size"
   (condition "A.Type == 'Via' && A.Hole == 0.2mm")
   (constraint via_diameter (min 0.3mm))

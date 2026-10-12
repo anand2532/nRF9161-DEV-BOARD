@@ -42,15 +42,15 @@ Get real cost and lead numbers from an online quote: JLC with "Epoxy Filled & Ca
 ### 1.4 Fab-note text (paste into fab drawing / order remarks)
 ```
 VIA-IN-PAD: Vias with FINISHED HOLE 0.20 mm (drill tool T<n>, the only 0.20 mm tool in the
-NC drill file; 4 places, located in U1 pads 49/54/59/96, nets SIM_1V8, MAGPIO1, MIPI_SDATA,
-P0.01) SHALL be IPC-4761 TYPE VII: filled with NON-CONDUCTIVE epoxy, planarized, and
+NC drill file; 9 places, located in U1 pads 52-60 (via barrels in pads 52-60 only; signal
+MAGPIO2/1/0 in 53-55, MIPI_VIO/SCLK/SDATA in 57-59, GND in 52/56/60)) SHALL be IPC-4761 TYPE VII: filled with NON-CONDUCTIVE epoxy, planarized, and
 copper plated over (capped) on both sides, then ENIG finished.
 Cap copper thickness >= 12 um (IPC-6012 Class 2 min for capped vias, wrap plating per IPC-6012).
 Planarity: dimple/protrusion <= 25 um (0.025 mm) relative to surrounding pad surface.
 No voids exposed at surface; no visible hole outline after ENIG.
 All other vias: tented both sides (no fill) unless fab requires global fill — in that case
 fill+cap ALL vias Type VII; notify before production.
-Reference layer: see Fab drawing layer "User.Comments" VIPPO markers (4 places).
+Reference layer: see Fab drawing layer "VIPPO" (User.1) markers (9 places).
 Stackup per docs/FAB_STACKUP_NOTES.md (4L 1.6 mm, ENIG, 50 ohm SE coupon).
 ```
 Marking approach: (a) unique 0.20 mm drill size, so the drill file tool table separates these 4 vias. (b) Draw a marker ring and a "VIPPO" label for each one on a User/Fab layer that is exported with the Gerbers. (c) Put the same text in the order remarks. A 0.20 mm drill also raises the JLC drill-size price tier (≤0.25 mm hole with land <0.45 mm costs more [J2]). Note: the 12 µm cap and 25 µm dimple figures are my proposed spec, typical of industry practice. They are not taken from these fabs' pages, so confirm them in the fab EQ.
