@@ -30,8 +30,13 @@ Authoritative connectivity truth: `kicad-cli pcb drc` JSON `unconnected_items` (
 | 10 | CPL | **PASS** | `nRF9161-DEV-BOARD-cpl.csv`: 74 rows, all top, rot 0/±90/180. Same ref set as the BOM; no DNP/TP/JP |
 | 11 | Silk legibility (JLC line ≥0.15 mm, text ≥1.0 mm; https://jlcpcb.com/capabilities/pcb-capabilities) | **PASS** | 249 texts: 246 at 1.0/0.15, 3 at 1.1/0.165. 0 below the minimum. 260 silk shapes all at 0.15 mm |
 | 12 | Silk over pads / overlaps | **PASS w/ advisory** | silk_over_copper 0 at JLC 0.15 mm pad-to-silk. Silk-to-silk: 0 touching. 27 pairs closer than 0.15 mm, worst: J5 "GND" text vs J5 outline 0.036 mm (6.6,51.1), P0.11 vs J12 outline 0.047 (33.8,74.8), ADC vs P0.13 0.054 (38.0,60.3), U1 ref vs U1 outline 0.088 (36.1,38.8). Cosmetic, not a JLC rule |
-| 13 | Assembler order notes | **OPEN (ordering only)** | Stencil 0.10 mm, U1 paste 70–85%, first-article X-ray (note §1.5). **JP2 (SIM_VCC, open solder jumper SIM_1V8→SIM_VCC/J7.C1) must be bridged, or the SIM gets no power.** JP1 (I_MEAS, open solder jumper bypassing R2 50 mΩ) is functional open (R2 carries VDD_nRF); README says close for normal operation. Put "bridge JP1+JP2 with solder" in the assembly order, or do it at bring-up |
+| 13 | Assembler order notes | **PASS (written)** | `fab/staging-3eab055/ORDER_NOTES.md` + `ORDER_NOTES.txt` (in the zip): fab section (stackup, ENIG, VIPPO 29 by 0.20/0.25 tool, caps never proud) and assembly section (0.10 mm stencil, U1 paste 70–85%, first-article X-ray, bridge JP1+JP2). **JP finding:** JP1/JP2 are `SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm` with **no F.Paste openings** (confirmed in `nRF9161-DEV-BOARD-F_Paste.gtp`), so the stencil will not bridge them. The notes ask for a manual solder bridge after reflow (assembler cost/handling for manual work: unverified, confirm in quote) |
 | C7 | JLC 4L filled & capped quote | **OPEN** (expected) | 8:1 aspect, cost/lead, no-protrusion note. Scope **29 vias** |
+
+**Pending follow-ups (not gate blockers):**
+1. Layout: re-sync U4 (TPD3F303) footprint with the `Board` library copy (lib_footprint_mismatch).
+2. Layout: fix silk-to-silk spacing <0.15 mm (27 pairs; worst J5 GND 0.036, P0.11/J12 0.047, ADC/P0.13 0.054, U1 ref 0.088 mm).
+3. After 1–2: final DFM re-verify (DRC as-is + refill, regenerate the package).
 
 TP1–TP20 are bare test pads (TestPoint_Pad_D1.0/D1.5); excluding them is correct.
 Package: `fab/staging-3eab055/nRF9161-DEV-BOARD-fab-3eab055.zip`.
