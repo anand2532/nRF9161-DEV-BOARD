@@ -2,19 +2,42 @@
 
 **Working path:** `/workspace/kicad-projects/nRF9161-DEV-BOARD`  
 **Checklist date:** 2026-09-23 (IST / Asia/Calcutta)  
-**Overall gate:** **GREEN for PCB data (pending C7 JLC quote + assembler-order notes); not yet ordered** (re-assessed at `vippo` 3eab055, 2026-10-12 IST; see "Fab pass 3eab055" below)
+**Overall gate:** **GREEN for PCB data (pending C7 JLC quote + assembler-order notes); not yet ordered** (final re-verify at `vippo` b9d4e62, 2026-10-12 IST; see "Fab pass b9d4e62" below)
 
 Do not declare fab-ready until **every** row below is PASS **and** `unconnected_items = 0`.  
 Authoritative connectivity truth: `kicad-cli pcb drc` JSON `unconnected_items` (see `reports/FINAL_FAB## Overall gate
 
 | Field | Value |
 | --- | --- |
-| Status | **GREEN (data)**. All items PASS except C7 (JLC quote, OPEN as expected) and #13 (assembler-order notes, OPEN, ordering only). Don't place the order until C7 is answered |
-| unconnected_items | **0 as-is and 0 after KiCad Python zone refill**: `fab/staging-3eab055/DRC_3eab055_asis.json`, `DRC_3eab055_refilled.json` |
-| DRC (3eab055) | 0 errors, 0 design warnings. Only `lib_footprint_issues` ×100 (stock KiCad libs not installed on the box, environment only) and `lib_footprint_mismatch` ×1 (U4 TPD3F303: board copy differs from `Board` lib copy; advisory, re-sync the lib) |
-| Gerbers regenerated | **Yes**: `fab/staging-3eab055/` |
+| Status | **GREEN apart from C7** (JLC quote, OPEN). All other items PASS at b9d4e62. Don't place the order until C7 is answered |
+| unconnected_items | **0 as-is, 0 after KiCad Python zone refill**: `fab/staging-b9d4e62/DRC_b9d4e62_asis.json`, `DRC_b9d4e62_refilled.json` |
+| DRC (b9d4e62) | 0 errors, 0 design warnings. U4 lib_footprint_mismatch **gone**. Only `lib_footprint_issues` ×100 (stock KiCad libs not installed on the box, environment only) |
+| Package | `fab/staging-b9d4e62/nRF9161-DEV-BOARD-fab-b9d4e62.zip` (22 files incl. ORDER_NOTES) |
 
-### Fab pass 3eab055 (2026-10-12 IST) — supersedes bc6d0fc
+### Fab pass b9d4e62 (2026-10-12 IST) — final re-verify, supersedes 3eab055
+
+Diff 3eab055 → e40ca9d → b9d4e62: **silk only**. Tracks/vias (1885 items), zones, Edge.Cuts, stackup, `.kicad_pro`/`.kicad_dru`, footprint positions/pads/attributes (DNP/BOM/pos) are all identical, and the schematic is unchanged. Changes: footprint silk of J10, J12, J13, TP18, U1 (U1 copper/pads identical); 48 board silk texts/graphics; library `Board.pretty/TI_TPD3F303_USON-8...kicad_mod` silk synced to the board copy (pads identical).
+
+| # | Item | Status | Evidence |
+| --- | --- | --- | --- |
+| 1 | Connectivity | **PASS** | 0 / 0 (as-is / refilled) |
+| 2 | DRC | **PASS** | 0 errors; U4 lib warning resolved |
+| 3 | U1 vs Nordic DK | **PASS** | 159/159, sizes match, max centre error 0.0017 mm, mask +0.05, paste 1:1 |
+| 4 | VIPPO | **PASS** | 29 = 20 × 0.20/0.30 + 9 × 0.25/0.40, all centred, inside the outline. 0.20/0.25 tools are VIPPO-only. Min 0.854 mm to unfilled vias |
+| 5 | Gerbers + job | **PASS** | 4 layers, 120.1×80.1, 1.6 mm, ENIG, outline closed |
+| 6 | Stackup | **PASS** | board = job = locked note (35 µm Cu ×4; 0.12 / 1.2 / 0.12 FR4) |
+| 7 | Drill | **PASS** | T1 0.200 ×20, T2 0.250 ×9, T3 0.300 ×337, T4 0.400 ×41, T5 0.650 ×12, T6 1.000 ×78; NPTH 0; maps |
+| 8 | IPC-D-356 | **PASS** | `nRF9161-DEV-BOARD.d356` |
+| 9 | BOM | **PASS** | 74 refs; DNP (C21–C24, C31, C32, D7, J16), TP1–20, JP1/JP2 absent |
+| 10 | CPL | **PASS** | 74 rows, top only, rot 0/±90/180, same refs as the BOM |
+| 11 | Silk legibility (JLC) | **PASS** | 241 texts (238 at 1.0/0.15, 3 at 1.1/0.165), 260 lines at 0.15. 0 below the minimum |
+| 12 | Silk spacing / over pads | **PASS** | 0.15 mm silk-to-silk scan: **0** (was 27 unique pairs at 3eab055; worst J5 GND 0.036 / P0.11–J12 / ADC–P0.13 / U1 ref all cleared). silk_over_copper 0 |
+| 13 | Order notes | **PASS** | `fab/staging-b9d4e62/ORDER_NOTES.md/.txt` (commit ref only changed). JP1/JP2 still have no paste openings (pcbnew + F_Paste Gerber), so the manual solder-bridge note stays |
+| C7 | JLC quote | **OPEN** | 8:1 aspect, cost/lead, no-protrusion note, manual JP bridge handling. 29 vias |
+
+**Follow-ups: CLOSED.** (1) U4 library re-sync: verified. (2) Silk spacing: verified 0. (3) Final DFM re-verify: this pass.
+
+### Fab pass 3eab055 (2026-10-12 IST) — SUPERSEDED by b9d4e62
 
 | # | Item | Status | Evidence / reason |
 | --- | --- | --- | --- |
@@ -33,7 +56,7 @@ Authoritative connectivity truth: `kicad-cli pcb drc` JSON `unconnected_items` (
 | 13 | Assembler order notes | **PASS (written)** | `fab/staging-3eab055/ORDER_NOTES.md` + `ORDER_NOTES.txt` (in the zip): fab section (stackup, ENIG, VIPPO 29 by 0.20/0.25 tool, caps never proud) and assembly section (0.10 mm stencil, U1 paste 70–85%, first-article X-ray, bridge JP1+JP2). **JP finding:** JP1/JP2 are `SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm` with **no F.Paste openings** (confirmed in `nRF9161-DEV-BOARD-F_Paste.gtp`), so the stencil will not bridge them. The notes ask for a manual solder bridge after reflow (assembler cost/handling for manual work: unverified, confirm in quote) |
 | C7 | JLC 4L filled & capped quote | **OPEN** (expected) | 8:1 aspect, cost/lead, no-protrusion note. Scope **29 vias** |
 
-**Pending follow-ups (not gate blockers):**
+**Follow-ups from 3eab055 (all CLOSED at b9d4e62):**
 1. Layout: re-sync U4 (TPD3F303) footprint with the `Board` library copy (lib_footprint_mismatch).
 2. Layout: fix silk-to-silk spacing <0.15 mm (27 pairs; worst J5 GND 0.036, P0.11/J12 0.047, ADC/P0.13 0.054, U1 ref 0.088 mm).
 3. After 1–2: final DFM re-verify (DRC as-is + refill, regenerate the package).
