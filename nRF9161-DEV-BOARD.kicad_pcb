@@ -4300,7 +4300,7 @@
 		(descr "Through hole straight pin header, 1x20, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x20 2.54mm single row")
 		(property "Reference" "J12"
-			(at -0.2 -2.801411 0)
+			(at -0.2 -2.851411 0)
 			(layer "F.SilkS")
 			(uuid "3a865be8-ef9e-4866-a3b4-d00dc735ac55")
 			(effects
@@ -9353,7 +9353,7 @@
 		(descr "Through hole straight pin header, 1x06, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x06 2.54mm single row")
 		(property "Reference" "J10"
-			(at 1.487642 -1.856001 0)
+			(at 1.537642 -1.906001 0)
 			(layer "F.SilkS")
 			(uuid "11370167-8085-42cc-9dac-52adc7382270")
 			(effects
@@ -10961,7 +10961,7 @@
 		(descr "Through hole straight pin header, 1x20, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x20 2.54mm single row")
 		(property "Reference" "J13"
-			(at -0.2 -2.801411 0)
+			(at -0.2 -2.851411 0)
 			(layer "F.SilkS")
 			(uuid "e1177595-cf17-4a38-8a5d-c01c90f0eafb")
 			(effects
@@ -12356,7 +12356,7 @@
 		(descr "SMD pad as test Point, diameter 1.5mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP18"
-			(at -2.799347 0.485301 0)
+			(at -2.849347 0.485301 0)
 			(layer "F.SilkS")
 			(uuid "babe1bc9-288a-4503-a1f5-fe5445c10a6d")
 			(effects
@@ -15439,7 +15439,7 @@
 		(descr "nRF9161-LACA-R7 LGA 16.0x10.5mm from Nordic PS v1.0 Table 55/56. L=7.75 e=0.65 e1=0.50. Pad 103 VSS array.")
 		(tags "LGA nRF9161 Nordic")
 		(property "Reference" "U1"
-			(at -0.1 -6.783205 0)
+			(at -0.1 -6.95 0)
 			(layer "F.SilkS")
 			(uuid "3a667eab-906d-45e9-864a-3ed21ef4c4bd")
 			(effects
@@ -20278,6 +20278,18 @@
 			(justify left)
 		)
 	)
+	(gr_text "J8: 1 3V3  2 SWDIO  3 GND\n4 SWDCLK  5 GND  6 P0.22\n8 nRESET  10 GND  7,9 NC"
+		(at 14.5 3.2 0)
+		(layer "F.SilkS")
+		(uuid "0e768402-374f-4f51-896b-b84512328347")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left)
+		)
+	)
 	(gr_text "3V3"
 		(at 105.9 31.08 0)
 		(layer "F.SilkS")
@@ -20361,7 +20373,7 @@
 		)
 	)
 	(gr_text "GND"
-		(at 5.329323 30.573232 0)
+		(at 5.179323 30.523232 0)
 		(layer "F.SilkS")
 		(uuid "17a456b8-d211-4d55-a742-06d2520f616f")
 		(effects
@@ -20476,18 +20488,6 @@
 			)
 		)
 	)
-	(gr_text "GND"
-		(at 46.6 4.73 0)
-		(layer "F.SilkS")
-		(uuid "25011398-5fc9-460d-b05f-b7e559900591")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify right)
-		)
-	)
 	(gr_text "P0.24"
 		(at 84.32 74.26 90)
 		(layer "F.SilkS")
@@ -20512,7 +20512,7 @@
 		)
 	)
 	(gr_text "GND"
-		(at 5.329323 50.573232 0)
+		(at 5.179323 50.523232 0)
 		(layer "F.SilkS")
 		(uuid "2d678fd2-799e-4aee-a0ea-f035b03f038c")
 		(effects
@@ -20582,7 +20582,7 @@
 		)
 	)
 	(gr_text "P0.11"
-		(at 33.84 74.76 90)
+		(at 33.84 74.26 90)
 		(layer "F.SilkS")
 		(uuid "3b690644-fed9-48a5-b748-793649ba2b1b")
 		(effects
@@ -20829,7 +20829,7 @@
 		)
 	)
 	(gr_text "ADC"
-		(at 38 55.4 0)
+		(at 38 55.15 0)
 		(layer "F.SilkS")
 		(uuid "644f6210-1632-4ba2-b2ed-27370b401660")
 		(effects
@@ -20872,17 +20872,6 @@
 				(thickness 0.15)
 			)
 			(justify right)
-		)
-	)
-	(gr_text "GPIO"
-		(at 34 69.15 0)
-		(layer "F.SilkS")
-		(uuid "6d8ee504-7c47-48a9-98da-4092a03febca")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
 		)
 	)
 	(gr_text "P0.09"
@@ -20934,7 +20923,7 @@
 		)
 	)
 	(gr_text "GND"
-		(at 6.445811 36.559115 0)
+		(at 6.2 40 0)
 		(layer "F.SilkS")
 		(uuid "7530236e-62f6-401a-9e3e-63aeac3571dc")
 		(effects
@@ -20942,6 +20931,7 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
+			(justify right)
 		)
 	)
 	(gr_text "P0.06"
@@ -20968,20 +20958,8 @@
 			(justify left)
 		)
 	)
-	(gr_text "3V3"
-		(at 46.6 3.46 0)
-		(layer "F.SilkS")
-		(uuid "79564812-9e98-4943-9bf7-be89820991aa")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify right)
-		)
-	)
 	(gr_text "GND"
-		(at 102.2 68.35 0)
+		(at 105.5 68.35 0)
 		(layer "F.SilkS")
 		(uuid "7c0c63c2-8963-4d58-b4e1-a63e7846e47d")
 		(effects
@@ -20989,7 +20967,7 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
-			(justify right)
+			(justify left)
 		)
 	)
 	(gr_text "P0.10"
@@ -21017,7 +20995,7 @@
 		)
 	)
 	(gr_text "GND"
-		(at 7.145811 56.259115 0)
+		(at 6.2 60 0)
 		(layer "F.SilkS")
 		(uuid "809bf034-b13c-4938-a7e5-ffc579c2f758")
 		(effects
@@ -21025,22 +21003,11 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
-		)
-	)
-	(gr_text "GND"
-		(at 53.4 8.54 0)
-		(layer "F.SilkS")
-		(uuid "83a5a0cf-d6e9-4b7b-b515-e637d1480b5b")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left)
+			(justify right)
 		)
 	)
 	(gr_text "COEX1"
-		(at 102.2 63.27 0)
+		(at 105.5 63.27 0)
 		(layer "F.SilkS")
 		(uuid "888c4262-432b-4faa-8ae9-630165353901")
 		(effects
@@ -21048,7 +21015,7 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
-			(justify right)
+			(justify left)
 		)
 	)
 	(gr_text "nn = P0.nn"
@@ -21063,7 +21030,7 @@
 		)
 	)
 	(gr_text "VIN_IN"
-		(at 85.9 7.9 0)
+		(at 85.95 7.9 0)
 		(layer "F.SilkS")
 		(uuid "8b85dcb7-ea26-4601-a4ea-2f28ebfab37b")
 		(effects
@@ -21098,7 +21065,7 @@
 		)
 	)
 	(gr_text "MIPI_VIO"
-		(at 25 10.54 0)
+		(at 28 10.54 0)
 		(layer "F.SilkS")
 		(uuid "8f087feb-e087-43c4-951f-cc46703474a6")
 		(effects
@@ -21106,7 +21073,7 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
-			(justify right)
+			(justify left)
 		)
 	)
 	(gr_text "P0.02"
@@ -21157,18 +21124,6 @@
 			(justify left)
 		)
 	)
-	(gr_text "P0.22"
-		(at 53.4 6 0)
-		(layer "F.SilkS")
-		(uuid "99454f41-8df7-4f82-8036-bc57b906b033")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left)
-		)
-	)
 	(gr_text "P0.31"
 		(at 102.1 74.26 90)
 		(layer "F.SilkS")
@@ -21182,7 +21137,7 @@
 		)
 	)
 	(gr_text "LTE-M / NB-IoT / DECT NR+ / GNSS"
-		(at 27.5 2.5 0)
+		(at 55 54.5 0)
 		(layer "F.SilkS")
 		(uuid "9995029e-83e6-49ae-ae0b-efaf3c68bccd")
 		(effects
@@ -21216,7 +21171,7 @@
 		)
 	)
 	(gr_text "MIPI_SDATA"
-		(at 25 8 0)
+		(at 28 8 0)
 		(layer "F.SilkS")
 		(uuid "a146fa70-49b8-4699-9f18-841d5c059e7b")
 		(effects
@@ -21224,7 +21179,7 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
-			(justify right)
+			(justify left)
 		)
 	)
 	(gr_text "GNSS"
@@ -21298,7 +21253,7 @@
 		)
 	)
 	(gr_text "GND"
-		(at 84.249733 10.737903 0)
+		(at 84.299733 10.787903 0)
 		(layer "F.SilkS")
 		(uuid "a7dc01e7-f7fb-4339-bc53-6e5464c6318d")
 		(effects
@@ -21306,18 +21261,6 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
-		)
-	)
-	(gr_text "SWDCLK"
-		(at 53.4 4.73 0)
-		(layer "F.SilkS")
-		(uuid "a835c24c-4193-4773-afbb-1dfdf54b891b")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left)
 		)
 	)
 	(gr_text "P0.16-31"
@@ -21426,7 +21369,7 @@
 		)
 	)
 	(gr_text "MAGPIO1"
-		(at 25 13.08 0)
+		(at 28 13.08 0)
 		(layer "F.SilkS")
 		(uuid "bb3982f8-ad55-4cbb-b813-c00749eac1d4")
 		(effects
@@ -21434,11 +21377,11 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
-			(justify right)
+			(justify left)
 		)
 	)
 	(gr_text "GND"
-		(at 11.916526 29.532463 0)
+		(at 12.016526 29.532463 0)
 		(layer "F.SilkS")
 		(uuid "bd71fdc6-aa7d-4429-8818-493a17f30047")
 		(effects
@@ -21495,7 +21438,7 @@
 			)
 		)
 	)
-	(gr_text "P0.00-15"
+	(gr_text "GPIO P0.00-15"
 		(at 28 78.5 0)
 		(layer "F.SilkS")
 		(uuid "c9095fb2-365e-4056-9e4e-2aaaf9335b97")
@@ -21530,7 +21473,7 @@
 		)
 	)
 	(gr_text "GNSS_ANT"
-		(at 10.893407 57.407413 0)
+		(at 8 57.3 0)
 		(layer "F.SilkS")
 		(uuid "cea2a9e6-ee3a-4fe0-a716-698a27108d03")
 		(effects
@@ -21577,19 +21520,7 @@
 		)
 	)
 	(gr_text "GND"
-		(at 46.6 6 0)
-		(layer "F.SilkS")
-		(uuid "d03b6d37-82fc-4992-80da-4f1d98322dd6")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify right)
-		)
-	)
-	(gr_text "GND"
-		(at 102.2 65.81 0)
+		(at 105.5 65.81 0)
 		(layer "F.SilkS")
 		(uuid "d22e0023-d1c3-4608-9c99-6fc7a30302b2")
 		(effects
@@ -21597,7 +21528,7 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
-			(justify right)
+			(justify left)
 		)
 	)
 	(gr_text "3V3"
@@ -21715,18 +21646,6 @@
 			)
 		)
 	)
-	(gr_text "SWDIO"
-		(at 53.4 3.46 0)
-		(layer "F.SilkS")
-		(uuid "e4cf5167-c065-47f4-96d1-4d5454131f0b")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left)
-		)
-	)
 	(gr_text "GND"
 		(at 10.86008 50.471158 0)
 		(layer "F.SilkS")
@@ -21809,7 +21728,7 @@
 		)
 	)
 	(gr_text "ANT_FIT"
-		(at 10.323444 37.033122 0)
+		(at 8 37.3 0)
 		(layer "F.SilkS")
 		(uuid "f1a3c341-00dc-4307-9a21-160f9124071c")
 		(effects
@@ -21817,18 +21736,6 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
-		)
-	)
-	(gr_text "nRESET"
-		(at 53.4 7.27 0)
-		(layer "F.SilkS")
-		(uuid "f2e9321e-2d34-488c-a880-e2e8ce5aa03b")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left)
 		)
 	)
 	(gr_text "GND"
