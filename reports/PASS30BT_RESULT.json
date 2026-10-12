@@ -1,0 +1,131 @@
+{
+ "start_blob": "5a46a4bef4da85ae0841a8b51077fd8339bb3fda",
+ "before": {
+  "unconnected": 49,
+  "short": 0,
+  "clearance": 0,
+  "crossing": 0,
+  "hole": 0,
+  "hole_to_hole": 1,
+  "courtyard": 0,
+  "gnd_unconnected": 12,
+  "nongnd": {
+   "MAGPIO1": 1,
+   "MIPI_VIO": 1,
+   "P0.10": 2,
+   "P0.22": 1,
+   "P0.17": 1,
+   "P0.31": 1,
+   "P0.26": 1,
+   "MIPI_SCLK": 1,
+   "P0.05": 1,
+   "P0.09": 1,
+   "P0.27": 1,
+   "P0.03": 1,
+   "P0.07": 1,
+   "P0.01": 1,
+   "P0.30": 1,
+   "MAGPIO2": 1,
+   "P0.18": 2,
+   "P0.25": 1,
+   "SIM_1V8": 1,
+   "SIM_IO": 1,
+   "MAGPIO0": 1,
+   "COEX1": 1,
+   "P0.24": 2,
+   "P0.29": 1,
+   "P0.12": 2,
+   "P0.28": 1,
+   "P0.21": 2,
+   "MIPI_SDATA": 1,
+   "P0.11": 1,
+   "P0.14": 1,
+   "P0.23": 2
+  },
+  "types": {
+   "via_dangling": 61,
+   "track_dangling": 13,
+   "hole_to_hole": 1,
+   "lib_footprint_issues": 97,
+   "lib_footprint_mismatch": 1,
+   "silk_over_copper": 35,
+   "silk_overlap": 145
+  }
+ },
+ "after": {
+  "unconnected": 48,
+  "short": 0,
+  "clearance": 0,
+  "crossing": 0,
+  "hole": 0,
+  "hole_to_hole": 1,
+  "courtyard": 0,
+  "gnd_unconnected": 12,
+  "nongnd": {
+   "MAGPIO1": 1,
+   "MIPI_VIO": 1,
+   "P0.10": 2,
+   "P0.17": 1,
+   "P0.31": 1,
+   "P0.26": 1,
+   "MIPI_SCLK": 1,
+   "P0.05": 1,
+   "P0.09": 1,
+   "P0.27": 1,
+   "P0.03": 1,
+   "P0.07": 1,
+   "P0.01": 1,
+   "P0.30": 1,
+   "MAGPIO2": 1,
+   "P0.18": 2,
+   "P0.25": 1,
+   "SIM_1V8": 1,
+   "SIM_IO": 1,
+   "MAGPIO0": 1,
+   "COEX1": 1,
+   "P0.24": 2,
+   "P0.29": 1,
+   "P0.12": 2,
+   "P0.28": 1,
+   "P0.21": 2,
+   "MIPI_SDATA": 1,
+   "P0.11": 1,
+   "P0.14": 1,
+   "P0.23": 2
+  },
+  "types": {
+   "via_dangling": 61,
+   "track_dangling": 13,
+   "hole_to_hole": 1,
+   "lib_footprint_issues": 97,
+   "lib_footprint_mismatch": 1,
+   "silk_over_copper": 35,
+   "silk_overlap": 145
+  }
+ },
+ "new_opens": {},
+ "decision": "KEEP",
+ "end_blob": "f005a44ac5f9f9816e7b6140d71b9121a23df93b",
+ "via": "existing (64.0,5.2) -> existing (109.2,32.5); no new via",
+ "layer": "In2.Cu",
+ "segments": [
+  [
+   64.0,
+   5.2
+  ],
+  [
+   70.3,
+   5.2
+  ],
+  [
+   97.6,
+   32.5
+  ],
+  [
+   109.2,
+   32.5
+  ]
+ ],
+ "min_plan_to_locked_mm": 0.96,
+ "longest_parallel_within_0_5_mm": 0.0
+}
