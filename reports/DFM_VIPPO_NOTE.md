@@ -41,7 +41,7 @@ Get real cost and lead numbers from an online quote: JLC with "Epoxy Filled & Ca
 
 ### 1.4 Fab-note text (paste into fab drawing / order remarks)
 
-**Updated 2026-10-12 for `vippo` @ 729a1a3 (PASS30CL): 9 VIPPO locations, not 4.** Verified from the `.kicad_pcb` at 729a1a3 (pcbnew API, file extracted with `git show` into /tmp):
+**Updated 2026-10-12 for `vippo` @ 729a1a3 (PASS30CL). Scope per Hardware PM decision: 18 filled-and-capped vias = 9 × 0.20/0.30 in pads 52–60 (table A) + 9 × 0.30/0.60 GND thermal vias in U1 GND pads (table B).** Table A: Verified from the `.kicad_pcb` at 729a1a3 (pcbnew API, file extracted with `git show` into /tmp):
 
 | U1 pad | Net | Pad (mm) | Via centre (mm) | Drill / land (mm) |
 |---|---|---|---|---|
@@ -58,27 +58,54 @@ Get real cost and lead numbers from an online quote: JLC with "Epoxy Filled & Ca
 - Geometry: these are the only 0.20 mm drills on the board (all other vias 0.3/0.4 drill), so selection by tool works. Annular ring is 0.05 mm (JLC POFV minimum [J1]). The land equals the 0.30 mm pad width (zero margin, does not overhang). It is offset 0.05 mm along the 0.80 mm pad length, so it stays inside the pad.
 - Spacing: the VIPPO pitch is 0.50 mm (0.20 mm land-to-land, 0.30 mm hole-to-hole edge). The nearest regular via is 2.35 mm edge-to-edge (SIM_1V8 0.5/0.3 via from pad 52), so it meets JLC's >0.45 mm rule [J1].
 - Earlier trapped pads: 54 MAGPIO1 and 59 MIPI_SDATA are now VIPPO. **49 SIM_1V8 and 96 P0.01 have no via-in-pad and are no longer reported as unconnected** in `reports/DRC_PASS30CL_AFTER.json` (C40/SIM_1V8 rework in PASS30CK). That file has 17 unconnected: 11 GND islands plus P0.12, P0.14, P0.18, P0.25, P0.31 and SIM_IO.
-- **Observation, not VIPPO:** 9 regular 0.3/0.6 GND vias are inside U1's 0.80×0.80 GND pads (pad "103", at x 30/36/42, y 29/32/35). Those are unfilled vias in solder pads, and the "all other vias tented" line below does not cover them. Either add them to the fill+cap scope (a second tool, 0.30 mm, POFV-compatible [J1]) or move them off the pads. **Layout/PM decision needed.**
+
+
+Table B: GND thermal vias in U1 0.80×0.80 GND pads (footprint pad "103"). **Hardware PM decision: fill + cap, do not move** (they carry U1's thermal path and ground return).
+
+| # | Pad | Net | Via centre (mm) | Drill / land (mm) | Nearest non-filled via (Cu edge) |
+|---|---|---|---|---|---|
+| 1 | 103 | GND | 30.00, 29.00 | 0.30 / 0.60 | 2.40 mm |
+| 2 | 103 | GND | 30.00, 32.00 | 0.30 / 0.60 | 2.40 mm |
+| 3 | 103 | GND | 30.00, 35.00 | 0.30 / 0.60 | 2.40 mm |
+| 4 | 103 | GND | 36.00, 29.00 | 0.30 / 0.60 | 1.20 mm (COEX0) |
+| 5 | 103 | GND | 36.00, 32.00 | 0.30 / 0.60 | 2.40 mm |
+| 6 | 103 | GND | 36.00, 35.00 | 0.30 / 0.60 | 1.20 mm (COEX0) |
+| 7 | 103 | GND | 42.00, 29.00 | 0.30 / 0.60 | 2.40 mm |
+| 8 | 103 | GND | 42.00, 32.00 | 0.30 / 0.60 | 2.40 mm |
+| 9 | 103 | GND | 42.00, 35.00 | 0.30 / 0.60 | 2.40 mm |
+
+- The hole is 0.30 mm, inside JLC's POFV range of 0.2–0.5 mm, and the ring is 0.15 mm (≥0.05 min) [J1]. The 0.30/0.60 pair isn't in JLC's POFV size table, though (0.2/0.3, 0.2/0.35, 0.25/0.4, 0.3/0.4, 0.3/0.45) [J1]. Confirm in EQ. The pitch is 3.0 mm, and every via is ≥1.20 mm Cu-edge (≥1.50 mm hole-edge) from any non-filled via, which meets JLC's >0.45 mm rule [J1].
+
+**DFM consequence: drill-size selection.** Board via inventory at 729a1a3 is 336 vias: 0.6/0.3 ×220, 0.5/0.3 ×66, 0.8/0.4 ×41, 0.3/0.2 ×9. **286 vias are 0.30 mm drill**, and that includes these 9. Footprint pads don't use 0.30 mm holes. So the 9 GND-pad vias **cannot be singled out by drill size**.
+- (a) **"Fill all 0.30 mm vias":** 286 vias get filled and capped, which is 277 more than needed. The cost and lead-time impact is **UNVERIFIED**, because JLC publishes no 4L POFV price. Side effects: extra cap plating over 0.18 mm track areas, and no open via test points.
+- (b) **Unique drill for the 9:** Layout changes them to a size not used anywhere else, within JLC's POFV table. **0.25/0.40** is the only unused pair in that table. It keeps a 0.075 mm ring (JLC preferred) and fits easily in a 0.80 mm pad, but it gives less thermal barrel than 0.30. Alternatively, put them on the existing 0.20 mm filled tool (0.20/0.35). That needs no new tool but gives even less thermal barrel. Spacing to non-filled vias stays ≥1.2 mm, so it passes the 0.45 mm rule either way.
+- (c) **Select per via by note/image:** JLC's via-covering page allows "leave a note or upload an image... to explain which vias need to be filled" as an alternative to filling all of one diameter [J4]. This keeps 0.30/0.60 with no PCB change, but it relies on manual CAM selection, so the risk of a fab error is higher.
+- **Recommendation:** (b) with **0.25/0.40** on its own drill tool, plus a VIPPO-layer marker and order note. This gives deterministic selection by tool, uses a pair from JLC's published table, and fills only 18 vias. Fallback is (c) with an image and an EQ confirmation. Avoid (a) unless the quote shows a negligible adder. **No PCB change was made; this is a Layout decision.** If (b) is adopted, re-check that thermal performance is acceptable (RF/Power).
 
 ```
-VIA-IN-PAD: Vias with FINISHED HOLE 0.20 mm (drill tool T<n>, the only 0.20 mm tool in the
-NC drill file; 9 places, located in U1 pads 52-60, nets GND (52, 56, 60), MAGPIO2 (53),
-MAGPIO1 (54), MAGPIO0 (55), MIPI_VIO (57), MIPI_SCLK (58), MIPI_SDATA (59); land 0.30 mm)
-SHALL be IPC-4761 TYPE VII: filled with NON-CONDUCTIVE epoxy, planarized, and
-copper plated over (capped) on both sides, then ENIG finished.
+VIA-IN-PAD / FILLED & CAPPED: 18 places, all IPC-4761 TYPE VII (NON-CONDUCTIVE epoxy fill,
+planarized, copper capped both sides, then ENIG):
+ Group A: 9 vias, FINISHED HOLE 0.20 mm / land 0.30 mm (tool T<a>, only 0.20 mm tool), U1 pads
+   52-60: GND (52,56,60), MAGPIO2 (53), MAGPIO1 (54), MAGPIO0 (55), MIPI_VIO (57),
+   MIPI_SCLK (58), MIPI_SDATA (59).
+ Group B: 9 GND thermal vias in U1 0.8x0.8 GND pads at (30/36/42, 29/32/35) mm.
+   [If Layout adopts unique drill: FINISHED HOLE 0.25 mm / land 0.40 mm, tool T<b>, the only
+   0.25 mm tool.] [If kept at 0.30/0.60: ONLY the 9 vias marked on layer "VIPPO" / attached
+   image; other 0.30 mm vias are NOT to be filled.]
 Cap copper thickness >= 12 um (IPC-6012 Class 2 min for capped vias, wrap plating per IPC-6012).
 Planarity: dimple/protrusion <= 25 um (0.025 mm) relative to surrounding pad surface.
 No voids exposed at surface; no visible hole outline after ENIG.
 All other vias: tented both sides (no fill) unless fab requires global fill — in that case
 fill+cap ALL vias Type VII; notify before production.
-Reference layer: see Fab drawing layer "VIPPO" (User.1) markers (9 places).
+Reference layer: Fab drawing layer "VIPPO" (User.1) markers (18 places).
 Stackup per docs/FAB_STACKUP_NOTES.md (4L 1.6 mm, ENIG, 50 ohm SE coupon).
 ```
-Marking approach: (a) a unique 0.20 mm drill size, so the drill file tool table separates these 9 vias. (b) PASS30CL already has a marker ring for each one on user layer "VIPPO" (User.1); export it with the Gerbers. (c) Put the same text in the order remarks. A 0.20 mm hole with a 0.30 mm land also adds JLC's small-via charge ("hole <0.3 mm and diameter ≤0.4 mm" [J5]). Note: the 12 µm cap and 25 µm dimple figures are my proposed spec, typical of industry practice. They are not taken from these fabs' pages, so confirm them in the fab EQ.
+Marking approach: (a) a unique 0.20 mm drill size, so the drill file tool table separates group A (and group B if option (b) is adopted). (b) PASS30CL has a marker ring for each group A via on user layer "VIPPO" (User.1); export it with the Gerbers. (c) Put the same text in the order remarks. A 0.20 mm hole with a 0.30 mm land also adds JLC's small-via charge ("hole <0.3 mm and diameter ≤0.4 mm" [J5]). Note: the 12 µm cap and 25 µm dimple figures are my proposed spec, typical of industry practice. They are not taken from these fabs' pages, so confirm them in the fab EQ.
 
 ### C7 — JLC 4L POFV at 0.20/0.30 + cost: **OPEN / UNVERIFIED (cost)**
 - Capability: **evidenced.** The JLC POFV page lists the 0.20 hole / 0.30 diameter pair, annular ≥0.05 mm, >0.45 mm from other holes, and states "POFV for 4-layer PCBs still requires charges", i.e. it is offered on 4L [J1]. The via-covering help page (updated Sep 09, 2026) offers "Epoxy-filled & Capped", selected by note or by drill diameter [J4]. Not published: 8:1 aspect acceptance specifically at 1.6 mm 4L. Confirm in EQ.
 - Cost: **UNVERIFIED.** No public 4L POFV price was found ([J1], [J4], [J6], quote page [J5]). The 0.2/0.3 small-via surcharge exists, but its amount is not published [J5]. **A live JLC online quote is needed** (4L, 1.6 mm, ENIG, Epoxy Filled & Capped, min via 0.2/0.3). No numbers estimated.
+- Scope is now 18 vias. Drill-selection issue for group B: see table B above.
 - C7 cannot be PASS until there is a quote.
 
 ### 1.5 Alternatives if VIPPO is rejected

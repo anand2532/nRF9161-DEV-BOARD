@@ -145,3 +145,12 @@ Only GND Class-E could be jointly redefined as non-gate after zone refill proves
 6. **Silk / production cosmetics** — 147 silk_overlap + 36 silk_over_copper in AFTER_CONNECT DRC (acceptable only after copper freeze, still not release-clean).
 
 **Gate remains RED.**
+
+
+## C7 — JLC 4-layer filled-and-capped via-in-pad (VIPPO)
+
+| | |
+| --- | --- |
+| **Status** | **OPEN** (overall gate stays **RED**) |
+| **Evidence** | Scope: 18 filled+capped vias at `vippo` 729a1a3: 9 × 0.20/0.30 in U1 pads 52–60, plus 9 × 0.30/0.60 GND thermal vias in U1 GND pads. Details in `reports/DFM_VIPPO_NOTE.md` §1.4/C7. Capability evidenced: JLC POFV page lists 0.2/0.3, ring ≥0.05 mm, >0.45 mm from other holes, and "POFV for 4-layer PCBs still requires charges" (https://jlcpcb.com/news/free-via-in-pad-6-20-layer-pcbs-pofv). Epoxy-filled & capped is selectable by note/image or by drill diameter (https://jlcpcb.com/help/article/pcb-via-covering). **PENDING a live JLC quote:** 8:1 aspect ratio (0.20 mm hole in 1.6 mm), plus the 4L POFV cost and lead-time adder. **Drill-selection issue:** 286 of 336 vias are 0.30 mm drill, so the 9 GND-pad vias can't be selected by size. |
+| **To go green** | Layout decides on a unique drill for the 9 GND-pad vias (recommended 0.25/0.40) or uses per-via note/image selection. Get a live JLC quote (4L, 1.6 mm, ENIG, Epoxy Filled & Capped) with cost/lead recorded, and get EQ acceptance of 0.2/0.3 at 8:1 (and 0.30/0.60 if kept). |
