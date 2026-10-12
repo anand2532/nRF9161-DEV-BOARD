@@ -843,9 +843,9 @@
 		(at 63.5 38.1 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "df576205-a162-4a1f-986e-8d52e0a76703")
 		(property "Reference" "J16"
 			(at 63.5 30.48 0)
@@ -1111,46 +1111,6 @@
 			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/d37408f3-426c-4c69-aee9-40bc1de55998" (reference "J18") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/af29c727-61dc-4c84-9136-62d2e9719b29" (reference "J18") (unit 1)))
 		)
 	)
-	(global_label "P0.10"
-		(at 58.42 33.02 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "fea39c13-57c6-435e-9957-6a47c1010a45")
-	)
-	(global_label "P0.11"
-		(at 58.42 35.56 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5c06836a-b258-462a-a908-2e49842ec4ec")
-	)
-	(global_label "P0.12"
-		(at 58.42 38.1 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "06e93350-876f-4f58-871f-1db3fb75fa51")
-	)
-	(global_label "P0.09"
-		(at 58.42 40.64 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "19e44aca-d034-48a8-8331-77deb584605d")
-	)
 	(global_label "VDD_GPIO"
 		(at 58.42 43.18 180)
 		(effects
@@ -1310,6 +1270,22 @@
 			(justify right)
 		)
 		(uuid "1adb1b78-25fe-4b30-b262-ca12904f7578")
+	)
+	(no_connect
+		(at 58.42 33.02)
+		(uuid "d968f121-8d61-4eeb-8281-5d254992609b")
+	)
+	(no_connect
+		(at 58.42 35.56)
+		(uuid "c9e76d2b-2a02-431e-a2e5-02731885caf3")
+	)
+	(no_connect
+		(at 58.42 38.1)
+		(uuid "fde57701-a37a-4299-ab3a-2c0513105d12")
+	)
+	(no_connect
+		(at 58.42 40.64)
+		(uuid "ec93c6d7-7d87-4212-8835-cbad8fc07049")
 	)
 	(sheet_instances
 		(path "/"

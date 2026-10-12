@@ -1407,3 +1407,4 @@ Straight 0.18 mm chord (45.640, 26.000)→(107.150, 26.000) does not cross the S
 - pass30by (2026-10-12): P0.24 J13.9 to J10.4 KEEP (class D, cap waived). In1, 5 segments, no vias. Unconnected 44->43, P0.24 2->1, h2h 1, GND 12. Parallel 0 mm. Landed in a458cdd.
 - pass30bz (2026-10-12): P0.23 U1.39 NO-ROUTE. The In2 9-segment route closed P0.23 but split the In2 VDD_nRF plane (+1 VDD_nRF open); full revert to e8a108d. 43 unconnected.
 - pass30ca (2026-10-12): P0.23 U1.39 NO-ROUTE. The 12-segment In2 route outside the neck box still split VDD_nRF (via 56.09,17.35 cut off); full revert to e8a108d. P0.23 U1 side is do-not-retry. 43 unconnected.
+- pass30cb (2026-10-12): PCB updated from the remapped schematic (J9.2/J9.3/J16.1-4 to NC, U2 to TLV73333PDBV, J13.17 VDD_nRF to VDD_GPIO, LED values). 0 moved, 0 deleted. Unconnected 43->38, non-GND 31->26. Not committed.

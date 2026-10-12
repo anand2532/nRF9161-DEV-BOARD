@@ -90,7 +90,7 @@ Disable GNSS LNA bias (`%XCOEX0`) if using a passive GNSS antenna.
 
 ## GPIO map (authoritative)
 
-All 32 GPIOs are on J12/J13. Protocol headers J9–J11 and J16–J18 are the **same nets** (intentional probe multiplexing). Onboard LEDs/USER share P0.00–P0.02 and P0.08 — drive those pins as GPIO or leave the LED/button unused in firmware.
+All 32 GPIOs are on J12/J13. Protocol headers J9–J11 and J17–J18 are the **same nets** (intentional probe multiplexing). J16 is DNF with no signal nets, and J9.2/J9.3 are NC (PINMAP_PROPOSAL applied, 2026-10-12). See `docs/PINOUT.md`. Onboard LEDs/USER share P0.00–P0.02 and P0.08 — drive those pins as GPIO or leave the LED/button unused in firmware.
 
 | Pin | GPIO | Default header | Onboard | Alternate |
 | --- | --- | --- | --- | --- |
@@ -98,15 +98,15 @@ All 32 GPIOs are on J12/J13. Protocol headers J9–J11 and J16–J18 are the **s
 | 96 | P0.01 | J12.2 | LTE LED D5 | — |
 | 97 | P0.02 | J12.3 | GNSS LED D6 | — |
 | 99 | P0.03 | J12.4 | SPARE LED D7 (optional) | — |
-| 100 | P0.04 | J12.5 / UART CTS J9 | — | — |
-| 2 | P0.05 | J12.6 / UART RTS J9 | — | — |
-| 3 | P0.06 | J12.7 / UART TX J9 | — | — |
-| 4 | P0.07 | J12.8 / UART RX J9 | — | — |
+| 100 | P0.04 | J12.5 / UART RX J9.4 | — | — |
+| 2 | P0.05 | J12.6 | — | — |
+| 3 | P0.06 | J12.7 / UART TX J9.1 | — | — |
+| 4 | P0.07 | J12.8 | — | — |
 | 15 | P0.08 | J12.9 | USER SW3, R14 10 kΩ to VDD_GPIO | — |
-| 16 | P0.09 | J12.10 / I2S SDIN J16 | — | — |
-| 18 | P0.10 | J12.11 / I2S SCK J16 | — | — |
-| 19 | P0.11 | J12.12 / I2S LRCK J16 | — | — |
-| 20 | P0.12 | J12.13 / I2S SDOUT J16 | — | — |
+| 16 | P0.09 | J12.10 (I2S SDIN) | — | — |
+| 18 | P0.10 | J12.11 (I2S SCK) | — | — |
+| 19 | P0.11 | J12.12 (I2S LRCK) | — | — |
+| 20 | P0.12 | J12.13 (I2S SDOUT) | — | — |
 | 23 | P0.13 | J12.14 / AIN0 J18 | — | AIN0 |
 | 24 | P0.14 | J12.15 / AIN1 J18 | — | AIN1 |
 | 25 | P0.15 | J12.16 / AIN2 J18 | — | AIN2 |
@@ -135,13 +135,15 @@ Full 127-pin audit: `reports/PIN_AUDIT.csv`.
 
 | Header | Signals |
 | --- | --- |
-| J9 UART | TX P0.06, RX P0.07, RTS P0.05, CTS P0.04, 3V3, GND |
+| J9 UART | 1 TX P0.06, 2 NC, 3 NC, 4 RX P0.04, 3V3, GND (2-wire, no HW flow control) |
 | J10 SPI | SCK P0.21, MOSI P0.22, MISO P0.23, CS P0.24, 3V3, GND |
 | J11 I2C | SDA P0.30, SCL P0.31, 3V3, GND |
-| J16 I2S | SCK P0.10, LRCK P0.11, SDIN P0.09, SDOUT P0.12, 3V3, GND |
+| J16 I2S | **DNF**; signal pins NC. I2S is on J12.10–13 (SDIN P0.09, SCK P0.10, LRCK P0.11, SDOUT P0.12) |
 | J17 PDM | CLK P0.17, DATA P0.18, 3V3, GND |
 | J18 ADC | AIN0–AIN7 (P0.13–P0.20), GND |
 | J8 SWD | 10-pin 1.27 mm ARM Cortex (J-Link) |
+
+**Trace conflict:** P0.21–P0.25 are TRACECLK/TRACEDATA[0..3]. While parallel trace is enabled, SPI0 on J10 (P0.21–P0.24), J8.6 (P0.22) and J13.6–J13.10 are owned by trace. See `docs/PINOUT.md`.
 
 PWM can be assigned to any GPIO in software; there is no dedicated PWM header.
 
@@ -226,10 +228,10 @@ Follow Nordic nRF9161 Hardware Verification Guidelines: current vs TX, VDD2 droo
 
 kicad-cli DRC (`--severity-error`): **0 shorts, 0 clearance, 0 hole_clearance**. ERC: **0 errors**. The board is **not fab-ready** because **116 pads are still unconnected**.
 
-1. **Routing is incomplete.** Outer LGA pads are Nordic oblong 0.30×0.80 mm; 27 U1 nets have courtyard vias; J3 SWF tap is on F.Cu. Remaining unconnected copper is mainly VDD1/VDD2/VDD_GPIO, SIM (RST/CLK/IO/1V8), ENABLE/nRESET, MAGPIO/MIPI/COEX, and several GPIOs plus their protocol-header duplicates (J9/J10/J16/J18). Finish those in Pcbnew.
+1. **Routing is incomplete.** Outer LGA pads are Nordic oblong 0.30×0.80 mm; 27 U1 nets have courtyard vias; J3 SWF tap is on F.Cu. Remaining unconnected copper is mainly VDD1/VDD2/VDD_GPIO, SIM (RST/CLK/IO/1V8), ENABLE/nRESET, MAGPIO/MIPI/COEX, and several GPIOs plus their protocol-header duplicates (J10/J18). Finish those in Pcbnew.
 2. GNSS_VBIAS still needs C30 and L4 joined around the GNSS_ANT spine without crossing the 50 Ω line.
 3. 0.50 mm-pitch LGA escape cannot run traces *along* pad rows; remaining U1 pads that failed fanout must leave along the oblong long axis into the north/south/east via rings (west MAGPIO/MIPI should jog to the north ring).
-4. In2.Cu is the VDD_nRF plane — do not pour GPIO on it. Long GPIO remainder belongs on B.Cu with unique channels south of J18 (y≈46–55) and west wrap x≈25–33 for J12 pins in the RF x-range.
+4. In2.Cu is the VDD_nRF plane. GPIO *tracks* on In2 are allowed outside the VDD_nRF keepout x53–60 / y12–22 (as in passes 30bg–30bo), provided they do not split the plane (DRC must show no new VDD_nRF open). Do not pour GPIO on In2. Long GPIO remainder belongs on B.Cu with unique channels south of J18 (y≈46–55) and west wrap x≈25–33 for J12 pins in the RF x-range.
 5. Silkscreen is dense on 0402 clusters. Connector names and pin-1 markers are present.
 6. No onboard GNSS LNA/patch. Active antenna required.
 7. Input TVS is 5.0 V; continuous VIN must stay within 3.0–5.5 V.

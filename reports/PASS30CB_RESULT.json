@@ -1,0 +1,125 @@
+{
+ "pass": "pass30cb",
+ "tip": "57c4af7",
+ "blob_before": "e8a108d7d4fe1a374a10789f45217ab39eecb735",
+ "blob_after": "0e1d4fa0bdb7451c1ad46c4632b1cb834de71c3e",
+ "erc": {
+  "errors": 0,
+  "warnings": 201
+ },
+ "changes": {
+  "value": [
+   [
+    "D3",
+    "Green",
+    "POWER"
+   ],
+   [
+    "D4",
+    "Green",
+    "STATUS"
+   ],
+   [
+    "D5",
+    "Green",
+    "LTE"
+   ],
+   [
+    "D7",
+    "Green",
+    "SPARE_DNP"
+   ],
+   [
+    "D6",
+    "Green",
+    "GNSS"
+   ],
+   [
+    "U2",
+    "TLV73330PDBV",
+    "TLV73333PDBV"
+   ]
+  ],
+  "net": [
+   [
+    "J9.2",
+    "P0.07",
+    ""
+   ],
+   [
+    "J9.3",
+    "P0.05",
+    ""
+   ],
+   [
+    "J13.17",
+    "VDD_nRF",
+    "VDD_GPIO"
+   ],
+   [
+    "U3.4",
+    "unconnected-(U3-NC-Pad4)",
+    ""
+   ],
+   [
+    "U3.5",
+    "unconnected-(U3-QOD-Pad5)",
+    ""
+   ],
+   [
+    "J16.1",
+    "P0.10",
+    ""
+   ],
+   [
+    "J16.2",
+    "P0.11",
+    ""
+   ],
+   [
+    "J16.3",
+    "P0.12",
+    ""
+   ],
+   [
+    "J16.4",
+    "P0.09",
+    ""
+   ]
+  ],
+  "nonet": [],
+  "fp_missing_in_pcb": [],
+  "fp_missing_in_sch": [],
+  "footprint_lib": [
+   [
+    "FB5",
+    "L_0402_1005Metric",
+    "Inductor_SMD:L_0402_1005Metric"
+   ],
+   [
+    "U3",
+    "SOT-363_SC-70-6",
+    "Package_TO_SOT_SMD:SOT-363_SC-70-6"
+   ]
+  ],
+  "U2_value": [
+   "TLV73333PDBV"
+  ],
+  "moved": [],
+  "tracks_before_after": [
+   1423,
+   1423
+  ]
+ },
+ "drc_after": {
+  "unconnected": 38,
+  "nongnd": 26,
+  "gnd": 12,
+  "short": 0,
+  "clearance": 0,
+  "crossing": 0,
+  "hole": 0,
+  "hole_to_hole": 1
+ },
+ "keepout_new": "VDD_nRF In2 x53-60 y12-22"
+}

@@ -324,3 +324,18 @@ Labels were placed with naive `origin + pin_at` (no Y-flip). Sheet had **zero wi
 - `nRF9161-DEV-BOARD-erc.rpt` — deleted as stale (2026-09-23)
 - `schematics/README.md` — added in-place quarantine marker
 - `docs/SCHEMATIC_REVIEW.md` — this document and cleanup status
+
+## 2026-10-12: PINMAP_PROPOSAL applied (schematic only)
+- `schematic/07_UART.kicad_sch`:
+  - Removed the `P0.07` global label at J9.2 tip (71.12, 60.96) and the `P0.05` label at J9.3 tip (71.12, 63.5).
+  - Added `no_connect` at both points.
+  - J9.4 keeps `P0.04`, now UART0 RX. J9.1 is P0.06 TX. No HW flow control.
+- `schematic/09_I2S_PDM_ADC.kicad_sch`:
+  - J16 set to `(dnp yes)` and `(in_bom no)`; symbol and footprint kept.
+  - Removed labels P0.10/P0.11/P0.12/P0.09 at J16.1–4 tips (58.42, 33.02/35.56/38.1/40.64) and added `no_connect` there.
+  - J16.5 VDD_GPIO and J16.6 GND are unchanged.
+- **Y-flip check:** pin tip = (sym_x − 5.08, sym_y − lib_y), with lib Y-up → sheet Y-down. Result is in `reports/PINMAP_pin_tip_check_after.txt`.
+- Neither sheet has any wires, so labels and NC flags bind directly at the pin tips.
+- **ERC / netlist:** NOT run. kicad-cli and KiCad are not installed on the box: no `which`, no /usr/bin, nothing in /opt, no flatpak, and `find /` finds nothing. Run `kicad-cli sch erc` and a netlist export on a machine with KiCad 9.
+- **Docs:** README GPIO/peripheral maps and the In2 rule are updated (GPIO tracks allowed outside the VDD_nRF keepout x53–60 / y12–22). New `docs/PINOUT.md`.
+- **PCB:** not touched. It still carries the old J9.2/J9.3/J16 nets and U2=TLV73330. Layout must run Update-PCB-from-Schematic; the schematic is truth (U2 = TLV73333).

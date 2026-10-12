@@ -1,0 +1,14 @@
+# 07_UART.kicad_sch J9 at (76.2,63.5); sheet wires=0
+J9.1 tip (71.12, 58.42): net=P0.06 no_connect=False
+J9.2 tip (71.12, 60.96): net=- no_connect=True
+J9.3 tip (71.12, 63.5): net=- no_connect=True
+J9.4 tip (71.12, 66.04): net=P0.04 no_connect=False
+J9.5 tip (71.12, 68.58): net=VDD_GPIO no_connect=False
+J9.6 tip (71.12, 71.12): net=GND no_connect=False
+# 09_I2S_PDM_ADC.kicad_sch J16 at (63.5,38.1); sheet wires=0
+J16.1 tip (58.42, 33.02): net=- no_connect=True
+J16.2 tip (58.42, 35.56): net=- no_connect=True
+J16.3 tip (58.42, 38.1): net=- no_connect=True
+J16.4 tip (58.42, 40.64): net=- no_connect=True
+J16.5 tip (58.42, 43.18): net=VDD_GPIO no_connect=False
+J16.6 tip (58.42, 45.72): net=GND no_connect=False

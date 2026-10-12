@@ -1,0 +1,3090 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-12T07:58:33+0000",
+    "kicad_version": "9.0.2",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b",
+            "violations": [
+                {
+                    "description": "The symbol library 'Nordic_nRF9161' was not found at '/home/anand/kicad-projects/nRF9161-DEV-BOARD/libraries/Nordic_nRF9161.kicad_sym'.",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [NRF9161-LACA-R7]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 0.889
+                            },
+                            "uuid": "3a075127-070a-4ebf-be0f-6bba34758913"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The symbol library 'Nordic_nRF9161' was not found at '/home/anand/kicad-projects/nRF9161-DEV-BOARD/libraries/Nordic_nRF9161.kicad_sym'.",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [NRF9161-LACA-R7]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 1.778
+                            },
+                            "uuid": "5e4572eb-469e-4607-9240-548ad995c138"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The symbol library 'Nordic_nRF9161' was not found at '/home/anand/kicad-projects/nRF9161-DEV-BOARD/libraries/Nordic_nRF9161.kicad_sym'.",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [NRF9161-LACA-R7]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 1.778
+                            },
+                            "uuid": "c9adc54f-ec37-4d82-ba7e-7e3ede3db5cf"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The symbol library 'Nordic_nRF9161' was not found at '/home/anand/kicad-projects/nRF9161-DEV-BOARD/libraries/Nordic_nRF9161.kicad_sym'.",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [NRF9161-LACA-R7]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 2.54
+                            },
+                            "uuid": "d4bdd36b-8f49-4fcd-973d-fdd5edc8fe28"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C30 [C]",
+                            "pos": {
+                                "x": 0.254,
+                                "y": 0.127
+                            },
+                            "uuid": "7bf2327d-5a98-41f6-8bb7-ee40dc24b7cd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C30 [C]",
+                            "pos": {
+                                "x": 0.254,
+                                "y": 0.127
+                            },
+                            "uuid": "7bf2327d-5a98-41f6-8bb7-ee40dc24b7cd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C29 [C]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.127
+                            },
+                            "uuid": "43d46b35-fda6-42e3-9eb7-b6013b60df38"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C29 [C]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.127
+                            },
+                            "uuid": "43d46b35-fda6-42e3-9eb7-b6013b60df38"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'SOT-363_SC-70-6' not found in library 'Package_TO_SOT_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol U3 [TPS22919DCK]",
+                            "pos": {
+                                "x": 0.1524,
+                                "y": 0.381
+                            },
+                            "uuid": "d6f404c3-dcf3-4e6f-a903-611a9667f36e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'power_switch'",
+                    "items": [
+                        {
+                            "description": "Symbol U3 [TPS22919DCK]",
+                            "pos": {
+                                "x": 0.1524,
+                                "y": 0.381
+                            },
+                            "uuid": "d6f404c3-dcf3-4e6f-a903-611a9667f36e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C28 [C]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.127
+                            },
+                            "uuid": "8063e50d-e39e-48de-9cf7-58c028813815"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C28 [C]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.127
+                            },
+                            "uuid": "8063e50d-e39e-48de-9cf7-58c028813815"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'L_0402_1005Metric' not found in library 'Inductor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol FB5 [FerriteBead]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.381
+                            },
+                            "uuid": "6e2a26bc-a5e4-4d2b-b315-d324d01cc639"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol FB5 [FerriteBead]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.381
+                            },
+                            "uuid": "6e2a26bc-a5e4-4d2b-b315-d324d01cc639"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'L_0402_1005Metric' not found in library 'Inductor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol L4 [L]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.254
+                            },
+                            "uuid": "ce6ca848-bf68-4a5b-bbfd-bd7f15f6fa49"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol L4 [L]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.254
+                            },
+                            "uuid": "ce6ca848-bf68-4a5b-bbfd-bd7f15f6fa49"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0201_0603Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C27 [C]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.508
+                            },
+                            "uuid": "bcce83c4-45fc-4089-b8c3-fdd8014b7ade"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C27 [C]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.508
+                            },
+                            "uuid": "bcce83c4-45fc-4089-b8c3-fdd8014b7ade"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C32 [C]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.635
+                            },
+                            "uuid": "d4eac5f8-a9e2-418b-968f-9959f009f6b0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C32 [C]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.635
+                            },
+                            "uuid": "d4eac5f8-a9e2-418b-968f-9959f009f6b0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'U.FL_Hirose_U.FL-R-SMT-1_Vertical' not found in library 'Connector_Coaxial'.",
+                    "items": [
+                        {
+                            "description": "Symbol J5 [Conn_Coaxial]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.508
+                            },
+                            "uuid": "d67d03d0-6275-4879-8c6b-9cd508e4783f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J5 [Conn_Coaxial]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.508
+                            },
+                            "uuid": "d67d03d0-6275-4879-8c6b-9cd508e4783f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J6 [Conn_Coaxial]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.762
+                            },
+                            "uuid": "f0f2ac71-7e41-4e7d-87e8-b166374e12d1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'R_0402_1005Metric' not found in library 'Resistor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol R4 [R]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 1.143
+                            },
+                            "uuid": "98bb59d9-fe8a-4de6-af5d-2d23b0da3618"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R4 [R]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 1.143
+                            },
+                            "uuid": "98bb59d9-fe8a-4de6-af5d-2d23b0da3618"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP2 [TestPoint]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 1.143
+                            },
+                            "uuid": "e224e0af-0884-4efb-9317-f0418e8abae3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP2 [TestPoint]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 1.143
+                            },
+                            "uuid": "e224e0af-0884-4efb-9317-f0418e8abae3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x06_P2.54mm_Vertical' not found in library 'Connector_PinHeader_2.54mm'.",
+                    "items": [
+                        {
+                            "description": "Symbol J9 [Conn_01x06]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.635
+                            },
+                            "uuid": "9cbb4d7a-7624-455e-a02a-89a5f8b64f3d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector_Generic'",
+                    "items": [
+                        {
+                            "description": "Symbol J9 [Conn_01x06]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.635
+                            },
+                            "uuid": "9cbb4d7a-7624-455e-a02a-89a5f8b64f3d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x20_P2.54mm_Vertical' not found in library 'Connector_PinHeader_2.54mm'.",
+                    "items": [
+                        {
+                            "description": "Symbol J12 [Conn_01x20]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.508
+                            },
+                            "uuid": "78ecdecf-8468-4c4d-b7d4-b273dd80b44d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector_Generic'",
+                    "items": [
+                        {
+                            "description": "Symbol J12 [Conn_01x20]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.508
+                            },
+                            "uuid": "78ecdecf-8468-4c4d-b7d4-b273dd80b44d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x20_P2.54mm_Vertical' not found in library 'Connector_PinHeader_2.54mm'.",
+                    "items": [
+                        {
+                            "description": "Symbol J13 [Conn_01x20]",
+                            "pos": {
+                                "x": 1.397,
+                                "y": 0.508
+                            },
+                            "uuid": "49fde4ec-5dea-4e74-a511-486a1549ca37"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector_Generic'",
+                    "items": [
+                        {
+                            "description": "Symbol J13 [Conn_01x20]",
+                            "pos": {
+                                "x": 1.397,
+                                "y": 0.508
+                            },
+                            "uuid": "49fde4ec-5dea-4e74-a511-486a1549ca37"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x02_P2.54mm_Vertical' not found in library 'Connector_PinHeader_2.54mm'.",
+                    "items": [
+                        {
+                            "description": "Symbol J1 [Conn_01x02]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.381
+                            },
+                            "uuid": "5029f733-d585-4c5f-a24e-1865a3f5c8ed"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector_Generic'",
+                    "items": [
+                        {
+                            "description": "Symbol J1 [Conn_01x02]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.381
+                            },
+                            "uuid": "5029f733-d585-4c5f-a24e-1865a3f5c8ed"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'D_SMA' not found in library 'Diode_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol D1 [D_Schottky]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.381
+                            },
+                            "uuid": "e61ad9ec-aefd-4039-a89d-f965fab9e3ea"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol D1 [D_Schottky]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.381
+                            },
+                            "uuid": "e61ad9ec-aefd-4039-a89d-f965fab9e3ea"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'LED_0603_1608Metric' not found in library 'LED_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol D3 [LED]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.762
+                            },
+                            "uuid": "ce7eef6d-118d-4ba5-9b59-ba7579c61c2d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol D3 [LED]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.762
+                            },
+                            "uuid": "ce7eef6d-118d-4ba5-9b59-ba7579c61c2d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'R_0402_1005Metric' not found in library 'Resistor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol R3 [R]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.762
+                            },
+                            "uuid": "d316e26c-803c-447c-8c7b-010726a8ab6f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R3 [R]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.762
+                            },
+                            "uuid": "d316e26c-803c-447c-8c7b-010726a8ab6f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'Fuse_1206_3216Metric' not found in library 'Fuse'.",
+                    "items": [
+                        {
+                            "description": "Symbol F1 [Fuse]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 0.381
+                            },
+                            "uuid": "78260630-68b7-4465-878b-8dde99504e5a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol F1 [Fuse]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 0.381
+                            },
+                            "uuid": "78260630-68b7-4465-878b-8dde99504e5a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'D_SMA' not found in library 'Diode_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol D2 [D_TVS]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 0.508
+                            },
+                            "uuid": "91482271-8191-4adf-92fe-ba2f152f4e6a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol D2 [D_TVS]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 0.508
+                            },
+                            "uuid": "91482271-8191-4adf-92fe-ba2f152f4e6a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'SOT-23-5' not found in library 'Package_TO_SOT_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol U2 [TLV73333PDBV]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 1.016
+                            },
+                            "uuid": "d0ff57dd-15f2-4f59-a941-cbea45324e90"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Regulator_Linear'",
+                    "items": [
+                        {
+                            "description": "Symbol U2 [TLV73333PDBV]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 1.016
+                            },
+                            "uuid": "d0ff57dd-15f2-4f59-a941-cbea45324e90"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'L_0805_2012Metric' not found in library 'Inductor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol FB4 [FerriteBead]",
+                            "pos": {
+                                "x": 1.143,
+                                "y": 0.381
+                            },
+                            "uuid": "3f865975-7d36-469e-8fab-cee3d9b52c50"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol FB4 [FerriteBead]",
+                            "pos": {
+                                "x": 1.143,
+                                "y": 0.381
+                            },
+                            "uuid": "3f865975-7d36-469e-8fab-cee3d9b52c50"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'power'",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR01 [GND]",
+                            "pos": {
+                                "x": 0.254,
+                                "y": 1.27
+                            },
+                            "uuid": "fd674c97-29e4-4e4e-bc0d-6c12ab71679d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0805_2012Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C1 [C]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 0.508
+                            },
+                            "uuid": "972d08fc-eb50-4082-b985-6c74f797217c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C1 [C]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 0.508
+                            },
+                            "uuid": "972d08fc-eb50-4082-b985-6c74f797217c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'power'",
+                    "items": [
+                        {
+                            "description": "Symbol #FLG01 [PWR_FLAG]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 1.397
+                            },
+                            "uuid": "2c2f1de8-cdf6-4f7d-b0f9-34d9c56c7762"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C2 [C]",
+                            "pos": {
+                                "x": 1.3716,
+                                "y": 0.508
+                            },
+                            "uuid": "c3ed5c09-4c90-4b0e-ab1e-b8f2950212e9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C2 [C]",
+                            "pos": {
+                                "x": 1.3716,
+                                "y": 0.508
+                            },
+                            "uuid": "c3ed5c09-4c90-4b0e-ab1e-b8f2950212e9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0201_0603Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C12 [C]",
+                            "pos": {
+                                "x": 0.9906,
+                                "y": 1.143
+                            },
+                            "uuid": "9e754f40-cd47-4fc8-9250-466cbbde8d58"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C12 [C]",
+                            "pos": {
+                                "x": 0.9906,
+                                "y": 1.143
+                            },
+                            "uuid": "9e754f40-cd47-4fc8-9250-466cbbde8d58"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm' not found in library 'Jumper'.",
+                    "items": [
+                        {
+                            "description": "Symbol JP1 [SolderJumper_2_Open]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.254
+                            },
+                            "uuid": "7c0bde72-dd29-42bc-b63f-550ea347c02d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Jumper'",
+                    "items": [
+                        {
+                            "description": "Symbol JP1 [SolderJumper_2_Open]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.254
+                            },
+                            "uuid": "7c0bde72-dd29-42bc-b63f-550ea347c02d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'R_1206_3216Metric' not found in library 'Resistor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol R2 [R]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.381
+                            },
+                            "uuid": "2586a1ea-ad4e-4bf0-a451-0304270178a1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R2 [R]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.381
+                            },
+                            "uuid": "2586a1ea-ad4e-4bf0-a451-0304270178a1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C13 [C]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 1.143
+                            },
+                            "uuid": "392d12bb-a06a-4a97-a3d2-c555e07d6585"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C13 [C]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 1.143
+                            },
+                            "uuid": "392d12bb-a06a-4a97-a3d2-c555e07d6585"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'SW_SPST_CK_KXT3' not found in library 'Button_Switch_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol SW1 [SW_Push]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.889
+                            },
+                            "uuid": "07a3ef3b-a181-45e4-b5c1-69fb5137c8c3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Switch'",
+                    "items": [
+                        {
+                            "description": "Symbol SW1 [SW_Push]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.889
+                            },
+                            "uuid": "07a3ef3b-a181-45e4-b5c1-69fb5137c8c3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'power'",
+                    "items": [
+                        {
+                            "description": "Symbol #FLG05 [PWR_FLAG]",
+                            "pos": {
+                                "x": 1.651,
+                                "y": 0.635
+                            },
+                            "uuid": "97c01f3e-5763-49d8-a586-f26d5330e1b8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'L_0603_1608Metric' not found in library 'Inductor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol FB1 [FerriteBead]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 0.254
+                            },
+                            "uuid": "d6a97ba7-9d1a-40a1-b904-f7bd5f8ced73"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol FB1 [FerriteBead]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 0.254
+                            },
+                            "uuid": "d6a97ba7-9d1a-40a1-b904-f7bd5f8ced73"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'L_0603_1608Metric' not found in library 'Inductor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol FB2 [FerriteBead]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 0.508
+                            },
+                            "uuid": "ce945b03-898b-4e9e-b2e7-ac11201a02ee"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol FB2 [FerriteBead]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 0.508
+                            },
+                            "uuid": "ce945b03-898b-4e9e-b2e7-ac11201a02ee"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'R_0201_0603Metric' not found in library 'Resistor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol R1 [R]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 0.762
+                            },
+                            "uuid": "fd8cdce0-f4dc-43e2-bc60-aceac21679af"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R1 [R]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 0.762
+                            },
+                            "uuid": "fd8cdce0-f4dc-43e2-bc60-aceac21679af"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0805_2012Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C3 [C]",
+                            "pos": {
+                                "x": 1.9812,
+                                "y": 0.127
+                            },
+                            "uuid": "40399e0b-19c3-4f7a-9430-15acc3051d4c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C3 [C]",
+                            "pos": {
+                                "x": 1.9812,
+                                "y": 0.127
+                            },
+                            "uuid": "40399e0b-19c3-4f7a-9430-15acc3051d4c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'L_0603_1608Metric' not found in library 'Inductor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol FB3 [FerriteBead]",
+                            "pos": {
+                                "x": 1.9812,
+                                "y": 0.508
+                            },
+                            "uuid": "95b2db1b-aa1a-45f8-a3a0-92c149d22528"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol FB3 [FerriteBead]",
+                            "pos": {
+                                "x": 1.9812,
+                                "y": 0.508
+                            },
+                            "uuid": "95b2db1b-aa1a-45f8-a3a0-92c149d22528"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C4 [C]",
+                            "pos": {
+                                "x": 2.0828,
+                                "y": 0.127
+                            },
+                            "uuid": "9c8c85c7-9a70-4bbc-8cce-2c1357e36856"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C4 [C]",
+                            "pos": {
+                                "x": 2.0828,
+                                "y": 0.127
+                            },
+                            "uuid": "9c8c85c7-9a70-4bbc-8cce-2c1357e36856"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0201_0603Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C14 [C]",
+                            "pos": {
+                                "x": 1.9812,
+                                "y": 0.889
+                            },
+                            "uuid": "471b49fe-085c-4e7f-8561-7784baea9758"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C14 [C]",
+                            "pos": {
+                                "x": 1.9812,
+                                "y": 0.889
+                            },
+                            "uuid": "471b49fe-085c-4e7f-8561-7784baea9758"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0201_0603Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C5 [C]",
+                            "pos": {
+                                "x": 2.1844,
+                                "y": 0.127
+                            },
+                            "uuid": "ac0d1cb7-cd34-472f-ab09-75f27355db18"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C5 [C]",
+                            "pos": {
+                                "x": 2.1844,
+                                "y": 0.127
+                            },
+                            "uuid": "ac0d1cb7-cd34-472f-ab09-75f27355db18"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0805_2012Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C7 [C]",
+                            "pos": {
+                                "x": 2.1844,
+                                "y": 0.508
+                            },
+                            "uuid": "68f86764-cf91-4644-9279-495990499af5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C7 [C]",
+                            "pos": {
+                                "x": 2.1844,
+                                "y": 0.508
+                            },
+                            "uuid": "68f86764-cf91-4644-9279-495990499af5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0201_0603Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C6 [C]",
+                            "pos": {
+                                "x": 2.286,
+                                "y": 0.127
+                            },
+                            "uuid": "05f413f6-1031-4398-b036-f74834034e26"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C6 [C]",
+                            "pos": {
+                                "x": 2.286,
+                                "y": 0.127
+                            },
+                            "uuid": "05f413f6-1031-4398-b036-f74834034e26"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C8 [C]",
+                            "pos": {
+                                "x": 2.286,
+                                "y": 0.508
+                            },
+                            "uuid": "71b9e222-204b-4ad5-8f31-2597bff1d282"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C8 [C]",
+                            "pos": {
+                                "x": 2.286,
+                                "y": 0.508
+                            },
+                            "uuid": "71b9e222-204b-4ad5-8f31-2597bff1d282"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'power'",
+                    "items": [
+                        {
+                            "description": "Symbol #FLG02 [PWR_FLAG]",
+                            "pos": {
+                                "x": 2.159,
+                                "y": 1.016
+                            },
+                            "uuid": "6404d8c6-1db7-4e0e-844c-c73fcc5e6001"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0201_0603Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C9 [C]",
+                            "pos": {
+                                "x": 2.3876,
+                                "y": 0.508
+                            },
+                            "uuid": "825708d6-6dcd-465a-8acd-6b7aa022563b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C9 [C]",
+                            "pos": {
+                                "x": 2.3876,
+                                "y": 0.508
+                            },
+                            "uuid": "825708d6-6dcd-465a-8acd-6b7aa022563b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'power'",
+                    "items": [
+                        {
+                            "description": "Symbol #FLG03 [PWR_FLAG]",
+                            "pos": {
+                                "x": 2.286,
+                                "y": 1.016
+                            },
+                            "uuid": "d506610c-29c5-43db-9c1c-584567b8c754"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0201_0603Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C10 [C]",
+                            "pos": {
+                                "x": 2.4892,
+                                "y": 0.508
+                            },
+                            "uuid": "d1dd7d1e-b2b2-489b-a525-9e9cd7793460"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C10 [C]",
+                            "pos": {
+                                "x": 2.4892,
+                                "y": 0.508
+                            },
+                            "uuid": "d1dd7d1e-b2b2-489b-a525-9e9cd7793460"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0201_0603Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C35 [C]",
+                            "pos": {
+                                "x": 0.254,
+                                "y": 0.381
+                            },
+                            "uuid": "1abd5079-533a-4d1f-b129-68c656286d7e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C35 [C]",
+                            "pos": {
+                                "x": 0.254,
+                                "y": 0.381
+                            },
+                            "uuid": "1abd5079-533a-4d1f-b129-68c656286d7e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0201_0603Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C36 [C]",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 0.381
+                            },
+                            "uuid": "9cec2932-f080-403e-b2c4-d63fa20ff840"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C36 [C]",
+                            "pos": {
+                                "x": 0.3556,
+                                "y": 0.381
+                            },
+                            "uuid": "9cec2932-f080-403e-b2c4-d63fa20ff840"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0201_0603Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C37 [C]",
+                            "pos": {
+                                "x": 0.4572,
+                                "y": 0.381
+                            },
+                            "uuid": "42701eef-5dbc-4ad5-a7d8-9939c847322b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C37 [C]",
+                            "pos": {
+                                "x": 0.4572,
+                                "y": 0.381
+                            },
+                            "uuid": "42701eef-5dbc-4ad5-a7d8-9939c847322b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0201_0603Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C38 [C]",
+                            "pos": {
+                                "x": 0.5588,
+                                "y": 0.381
+                            },
+                            "uuid": "fbe1ce72-82b2-4df1-afc1-59ca2a401aef"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C38 [C]",
+                            "pos": {
+                                "x": 0.5588,
+                                "y": 0.381
+                            },
+                            "uuid": "fbe1ce72-82b2-4df1-afc1-59ca2a401aef"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Power_Protection'",
+                    "items": [
+                        {
+                            "description": "Symbol U4 [TPD3F303DPV]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.635
+                            },
+                            "uuid": "254ef822-f3da-4b8f-b078-4452b115db11"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C33 [C]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 1.016
+                            },
+                            "uuid": "13148042-9461-4e0b-92f7-14fef50bb5f2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C33 [C]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 1.016
+                            },
+                            "uuid": "13148042-9461-4e0b-92f7-14fef50bb5f2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'JAE_SIM_Card_SF72S006' not found in library 'Connector_JAE'.",
+                    "items": [
+                        {
+                            "description": "Symbol J7 [JAE_SIM_Card_SF72S006]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.635
+                            },
+                            "uuid": "95206a63-7a02-4d87-bb2d-97e613cf6c99"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J7 [JAE_SIM_Card_SF72S006]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.635
+                            },
+                            "uuid": "95206a63-7a02-4d87-bb2d-97e613cf6c99"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm' not found in library 'Jumper'.",
+                    "items": [
+                        {
+                            "description": "Symbol JP2 [SolderJumper_2_Open]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 1.016
+                            },
+                            "uuid": "a8a2d99e-244b-4229-b4b0-a465548daeda"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Jumper'",
+                    "items": [
+                        {
+                            "description": "Symbol JP2 [SolderJumper_2_Open]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 1.016
+                            },
+                            "uuid": "a8a2d99e-244b-4229-b4b0-a465548daeda"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C34 [C]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 1.016
+                            },
+                            "uuid": "4105cc11-2e32-4d2e-b3cd-c84c34966246"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C34 [C]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 1.016
+                            },
+                            "uuid": "4105cc11-2e32-4d2e-b3cd-c84c34966246"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.0mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP3 [TestPoint]",
+                            "pos": {
+                                "x": 1.397,
+                                "y": 0.381
+                            },
+                            "uuid": "fcdf7c68-77b6-4f80-9a04-7face8274823"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP3 [TestPoint]",
+                            "pos": {
+                                "x": 1.397,
+                                "y": 0.381
+                            },
+                            "uuid": "fcdf7c68-77b6-4f80-9a04-7face8274823"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.0mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP4 [TestPoint]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.381
+                            },
+                            "uuid": "9c8d8ffe-0728-42f3-900c-103f746a3fa9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP4 [TestPoint]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.381
+                            },
+                            "uuid": "9c8d8ffe-0728-42f3-900c-103f746a3fa9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.0mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP5 [TestPoint]",
+                            "pos": {
+                                "x": 1.651,
+                                "y": 0.381
+                            },
+                            "uuid": "15a15442-5c75-4f80-9b23-0281a8fbeaf0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP5 [TestPoint]",
+                            "pos": {
+                                "x": 1.651,
+                                "y": 0.381
+                            },
+                            "uuid": "15a15442-5c75-4f80-9b23-0281a8fbeaf0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'power'",
+                    "items": [
+                        {
+                            "description": "Symbol #FLG07 [PWR_FLAG]",
+                            "pos": {
+                                "x": 1.1557,
+                                "y": 1.2446
+                            },
+                            "uuid": "e20b2639-4d98-44e9-8172-cf0fb6372141"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.0mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP6 [TestPoint]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 0.381
+                            },
+                            "uuid": "7d5ae0ec-4f8d-4a6d-b9af-a0a39206bde7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP6 [TestPoint]",
+                            "pos": {
+                                "x": 1.778,
+                                "y": 0.381
+                            },
+                            "uuid": "7d5ae0ec-4f8d-4a6d-b9af-a0a39206bde7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x06_P2.54mm_Vertical' not found in library 'Connector_PinHeader_2.54mm'.",
+                    "items": [
+                        {
+                            "description": "Symbol J10 [Conn_01x06]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.508
+                            },
+                            "uuid": "bd0f30d5-4d6e-4811-ab99-de782fa2d887"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector_Generic'",
+                    "items": [
+                        {
+                            "description": "Symbol J10 [Conn_01x06]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.508
+                            },
+                            "uuid": "bd0f30d5-4d6e-4811-ab99-de782fa2d887"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x04_P2.54mm_Vertical' not found in library 'Connector_PinHeader_2.54mm'.",
+                    "items": [
+                        {
+                            "description": "Symbol J11 [Conn_01x04]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 1.016
+                            },
+                            "uuid": "0ae3b686-2b55-4eb7-b7f8-7c17791f6087"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector_Generic'",
+                    "items": [
+                        {
+                            "description": "Symbol J11 [Conn_01x04]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 1.016
+                            },
+                            "uuid": "0ae3b686-2b55-4eb7-b7f8-7c17791f6087"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'R_0402_1005Metric' not found in library 'Resistor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol R10 [R]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.381
+                            },
+                            "uuid": "a985b04e-755a-40ad-abeb-b847242fee8c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R10 [R]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.381
+                            },
+                            "uuid": "a985b04e-755a-40ad-abeb-b847242fee8c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'R_0402_1005Metric' not found in library 'Resistor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol R11 [R]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.635
+                            },
+                            "uuid": "db7c9eb1-c6fc-4016-a0b3-46ec9ecc4aff"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R11 [R]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.635
+                            },
+                            "uuid": "db7c9eb1-c6fc-4016-a0b3-46ec9ecc4aff"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'LED_0603_1608Metric' not found in library 'LED_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol D4 [LED]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.381
+                            },
+                            "uuid": "73cc850b-1474-4706-9e6d-002e840c31a7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol D4 [LED]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.381
+                            },
+                            "uuid": "73cc850b-1474-4706-9e6d-002e840c31a7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'LED_0603_1608Metric' not found in library 'LED_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol D5 [LED]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.635
+                            },
+                            "uuid": "1df8b6ac-0681-4ad8-ab36-876bc08cee70"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol D5 [LED]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.635
+                            },
+                            "uuid": "1df8b6ac-0681-4ad8-ab36-876bc08cee70"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'R_0402_1005Metric' not found in library 'Resistor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol R12 [R]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.889
+                            },
+                            "uuid": "f7ccded2-7ee1-4e25-8c2e-43822f1fc072"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R12 [R]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.889
+                            },
+                            "uuid": "f7ccded2-7ee1-4e25-8c2e-43822f1fc072"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'LED_0603_1608Metric' not found in library 'LED_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol D6 [LED]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.889
+                            },
+                            "uuid": "25f8439f-1630-4783-b9e1-6d5ae2a264c7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol D6 [LED]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.889
+                            },
+                            "uuid": "25f8439f-1630-4783-b9e1-6d5ae2a264c7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'R_0402_1005Metric' not found in library 'Resistor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol R13 [R]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 1.143
+                            },
+                            "uuid": "3aa25170-3661-4f90-bb9d-cdc90fe2b1a8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R13 [R]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 1.143
+                            },
+                            "uuid": "3aa25170-3661-4f90-bb9d-cdc90fe2b1a8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'LED_0603_1608Metric' not found in library 'LED_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol D7 [LED]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 1.143
+                            },
+                            "uuid": "b2399bc6-7741-4070-b046-f0248b61e4b1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol D7 [LED]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 1.143
+                            },
+                            "uuid": "b2399bc6-7741-4070-b046-f0248b61e4b1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'SW_SPST_CK_KXT3' not found in library 'Button_Switch_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol SW3 [SW_Push]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 0.635
+                            },
+                            "uuid": "70b048ab-ca42-4368-82d5-a0d288fd5e67"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Switch'",
+                    "items": [
+                        {
+                            "description": "Symbol SW3 [SW_Push]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 0.635
+                            },
+                            "uuid": "70b048ab-ca42-4368-82d5-a0d288fd5e67"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C21 [C]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.635
+                            },
+                            "uuid": "a007dde6-456c-45ae-8bbd-fdd0d39ccec6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C21 [C]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.635
+                            },
+                            "uuid": "a007dde6-456c-45ae-8bbd-fdd0d39ccec6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C22 [C]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.635
+                            },
+                            "uuid": "ae34add3-6882-4029-9f8a-0f19b6d0feb9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C22 [C]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.635
+                            },
+                            "uuid": "ae34add3-6882-4029-9f8a-0f19b6d0feb9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'U.FL_Hirose_U.FL-R-SMT-1_Vertical' not found in library 'Connector_Coaxial'.",
+                    "items": [
+                        {
+                            "description": "Symbol J2 [Conn_Coaxial]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.508
+                            },
+                            "uuid": "b4db8628-1bf2-4669-8fc8-ba7adfa691f7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J2 [Conn_Coaxial]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.508
+                            },
+                            "uuid": "b4db8628-1bf2-4669-8fc8-ba7adfa691f7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol J3 [Conn_Coaxial]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.762
+                            },
+                            "uuid": "80c5c965-27d3-4cef-a698-d7b61dbb3470"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'L_0402_1005Metric' not found in library 'Inductor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol L2 [L]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 1.143
+                            },
+                            "uuid": "322dcfc4-d9dd-4b8e-8358-35cb114a3834"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol L2 [L]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 1.143
+                            },
+                            "uuid": "322dcfc4-d9dd-4b8e-8358-35cb114a3834"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C23 [C]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 1.27
+                            },
+                            "uuid": "3b0936c7-88c1-4d4f-9a41-bb4eb6528c7d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C23 [C]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 1.27
+                            },
+                            "uuid": "3b0936c7-88c1-4d4f-9a41-bb4eb6528c7d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0402_1005Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C24 [C]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 1.27
+                            },
+                            "uuid": "43407c07-605a-450d-add9-4076a5115a8a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C24 [C]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 1.27
+                            },
+                            "uuid": "43407c07-605a-450d-add9-4076a5115a8a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP1 [TestPoint]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 1.143
+                            },
+                            "uuid": "3acc6af2-c280-4891-9ce8-57593f6fd6e1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP1 [TestPoint]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 1.143
+                            },
+                            "uuid": "3acc6af2-c280-4891-9ce8-57593f6fd6e1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x06_P1.27mm_Vertical' not found in library 'Connector_PinHeader_1.27mm'.",
+                    "items": [
+                        {
+                            "description": "Symbol J14 [Conn_01x06]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.508
+                            },
+                            "uuid": "7bdcab56-9863-4162-b785-3c6472a1fb20"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector_Generic'",
+                    "items": [
+                        {
+                            "description": "Symbol J14 [Conn_01x06]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.508
+                            },
+                            "uuid": "7bdcab56-9863-4162-b785-3c6472a1fb20"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x06_P1.27mm_Vertical' not found in library 'Connector_PinHeader_1.27mm'.",
+                    "items": [
+                        {
+                            "description": "Symbol J15 [Conn_01x06]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 1.143
+                            },
+                            "uuid": "b1891eaf-6cf9-41ff-9100-8c8e64948ca1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector_Generic'",
+                    "items": [
+                        {
+                            "description": "Symbol J15 [Conn_01x06]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 1.143
+                            },
+                            "uuid": "b1891eaf-6cf9-41ff-9100-8c8e64948ca1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_2x05_P1.27mm_Vertical_SMD' not found in library 'Connector_PinHeader_1.27mm'.",
+                    "items": [
+                        {
+                            "description": "Symbol J8 [Conn_02x05_Odd_Even]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.635
+                            },
+                            "uuid": "781cb005-c389-4a31-b411-e53d3a455df4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector_Generic'",
+                    "items": [
+                        {
+                            "description": "Symbol J8 [Conn_02x05_Odd_Even]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.635
+                            },
+                            "uuid": "781cb005-c389-4a31-b411-e53d3a455df4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'R_0201_0603Metric' not found in library 'Resistor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol R5 [R]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 1.016
+                            },
+                            "uuid": "e89ac851-6741-4520-a40a-008b6597770b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R5 [R]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 1.016
+                            },
+                            "uuid": "e89ac851-6741-4520-a40a-008b6597770b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'C_0201_0603Metric' not found in library 'Capacitor_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol C39 [C]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 1.143
+                            },
+                            "uuid": "ef491496-fd50-4485-9903-59272d82b7af"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C39 [C]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 1.143
+                            },
+                            "uuid": "ef491496-fd50-4485-9903-59272d82b7af"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'SW_SPST_CK_KXT3' not found in library 'Button_Switch_SMD'.",
+                    "items": [
+                        {
+                            "description": "Symbol SW2 [SW_Push]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 1.016
+                            },
+                            "uuid": "782464be-5dbf-4ae0-9898-a4b0d64ba2ee"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Switch'",
+                    "items": [
+                        {
+                            "description": "Symbol SW2 [SW_Push]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 1.016
+                            },
+                            "uuid": "782464be-5dbf-4ae0-9898-a4b0d64ba2ee"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP7 [TestPoint]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 0.381
+                            },
+                            "uuid": "85703bad-f738-4d76-870d-ea30808693ef"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP7 [TestPoint]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 0.381
+                            },
+                            "uuid": "85703bad-f738-4d76-870d-ea30808693ef"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP8 [TestPoint]",
+                            "pos": {
+                                "x": 1.397,
+                                "y": 0.381
+                            },
+                            "uuid": "1d6d7c61-e1b7-47d1-984d-9014a4b7744e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP8 [TestPoint]",
+                            "pos": {
+                                "x": 1.397,
+                                "y": 0.381
+                            },
+                            "uuid": "1d6d7c61-e1b7-47d1-984d-9014a4b7744e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP9 [TestPoint]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.381
+                            },
+                            "uuid": "b83ccdf8-a438-4237-a315-8959ae5df3cc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP9 [TestPoint]",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 0.381
+                            },
+                            "uuid": "b83ccdf8-a438-4237-a315-8959ae5df3cc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP10 [TestPoint]",
+                            "pos": {
+                                "x": 1.651,
+                                "y": 0.381
+                            },
+                            "uuid": "97e5921d-1fec-44f9-ac9a-5c44102f00c5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP10 [TestPoint]",
+                            "pos": {
+                                "x": 1.651,
+                                "y": 0.381
+                            },
+                            "uuid": "97e5921d-1fec-44f9-ac9a-5c44102f00c5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x06_P2.54mm_Vertical' not found in library 'Connector_PinHeader_2.54mm'.",
+                    "items": [
+                        {
+                            "description": "Symbol J16 [Conn_01x06]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.381
+                            },
+                            "uuid": "df576205-a162-4a1f-986e-8d52e0a76703"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector_Generic'",
+                    "items": [
+                        {
+                            "description": "Symbol J16 [Conn_01x06]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.381
+                            },
+                            "uuid": "df576205-a162-4a1f-986e-8d52e0a76703"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x04_P2.54mm_Vertical' not found in library 'Connector_PinHeader_2.54mm'.",
+                    "items": [
+                        {
+                            "description": "Symbol J17 [Conn_01x04]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.762
+                            },
+                            "uuid": "4d7d7f9b-16b9-4b67-a2af-6a5f13fdbde7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector_Generic'",
+                    "items": [
+                        {
+                            "description": "Symbol J17 [Conn_01x04]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.762
+                            },
+                            "uuid": "4d7d7f9b-16b9-4b67-a2af-6a5f13fdbde7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'PinHeader_1x10_P2.54mm_Vertical' not found in library 'Connector_PinHeader_2.54mm'.",
+                    "items": [
+                        {
+                            "description": "Symbol J18 [Conn_01x10]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 1.27
+                            },
+                            "uuid": "a4da247a-ec42-459b-b450-7b30fb0fa59d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector_Generic'",
+                    "items": [
+                        {
+                            "description": "Symbol J18 [Conn_01x10]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 1.27
+                            },
+                            "uuid": "a4da247a-ec42-459b-b450-7b30fb0fa59d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP11 [TestPoint]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.381
+                            },
+                            "uuid": "fbf45e12-8345-401c-a128-a79b8414f2e6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP11 [TestPoint]",
+                            "pos": {
+                                "x": 0.381,
+                                "y": 0.381
+                            },
+                            "uuid": "fbf45e12-8345-401c-a128-a79b8414f2e6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP12 [TestPoint]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.381
+                            },
+                            "uuid": "c5d6cc51-5f13-4262-84a9-1e7049f8ff89"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP12 [TestPoint]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.381
+                            },
+                            "uuid": "c5d6cc51-5f13-4262-84a9-1e7049f8ff89"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP13 [TestPoint]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.381
+                            },
+                            "uuid": "04842368-d6df-44ec-8b1b-bc63a02137a7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP13 [TestPoint]",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 0.381
+                            },
+                            "uuid": "04842368-d6df-44ec-8b1b-bc63a02137a7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP20 [TestPoint]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.635
+                            },
+                            "uuid": "f7a0baef-6501-4ce5-a4f8-f512718c838d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP20 [TestPoint]",
+                            "pos": {
+                                "x": 0.508,
+                                "y": 0.635
+                            },
+                            "uuid": "f7a0baef-6501-4ce5-a4f8-f512718c838d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP14 [TestPoint]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.381
+                            },
+                            "uuid": "2f51ab81-10b7-4678-9ba6-cd68b08baca6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP14 [TestPoint]",
+                            "pos": {
+                                "x": 0.762,
+                                "y": 0.381
+                            },
+                            "uuid": "2f51ab81-10b7-4678-9ba6-cd68b08baca6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP15 [TestPoint]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 0.381
+                            },
+                            "uuid": "02f31fe1-8cc4-4442-a99c-07f528feceec"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP15 [TestPoint]",
+                            "pos": {
+                                "x": 0.889,
+                                "y": 0.381
+                            },
+                            "uuid": "02f31fe1-8cc4-4442-a99c-07f528feceec"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP16 [TestPoint]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.381
+                            },
+                            "uuid": "380699c3-4f05-48c0-85a6-0eeb2d4ae045"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP16 [TestPoint]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.381
+                            },
+                            "uuid": "380699c3-4f05-48c0-85a6-0eeb2d4ae045"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP17 [TestPoint]",
+                            "pos": {
+                                "x": 1.143,
+                                "y": 0.381
+                            },
+                            "uuid": "06630937-37de-482e-8278-390cd0517c3b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP17 [TestPoint]",
+                            "pos": {
+                                "x": 1.143,
+                                "y": 0.381
+                            },
+                            "uuid": "06630937-37de-482e-8278-390cd0517c3b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Footprint 'TestPoint_Pad_D1.5mm' not found in library 'TestPoint'.",
+                    "items": [
+                        {
+                            "description": "Symbol TP18 [TestPoint]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 0.381
+                            },
+                            "uuid": "1ec09cf3-2fc8-4a13-954a-f367d0c12df9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'Connector'",
+                    "items": [
+                        {
+                            "description": "Symbol TP18 [TestPoint]",
+                            "pos": {
+                                "x": 1.27,
+                                "y": 0.381
+                            },
+                            "uuid": "1ec09cf3-2fc8-4a13-954a-f367d0c12df9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                }
+            ]
+        },
+        {
+            "path": "/A. nRF9161/",
+            "uuid_path": "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/a281c411-c6a9-483c-bcd2-9828bb4a9c02",
+            "violations": []
+        },
+        {
+            "path": "/D. GNSS/",
+            "uuid_path": "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/4f557c02-0258-45cb-8da4-f63d73173d91",
+            "violations": []
+        },
+        {
+            "path": "/G. UART/",
+            "uuid_path": "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/d42bc010-aba6-416b-b465-dd1a45e916de",
+            "violations": []
+        },
+        {
+            "path": "/J. GPIO EXPANSION/",
+            "uuid_path": "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/626201db-df36-41b2-8dca-cf7cb365ca58",
+            "violations": []
+        },
+        {
+            "path": "/B. POWER/",
+            "uuid_path": "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/2a755dad-182f-48fa-9692-e2f4cf175fd3",
+            "violations": []
+        },
+        {
+            "path": "/E. SIM/UICC/",
+            "uuid_path": "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/3a57f46a-7ea3-4044-9115-e6e4a2e6a682",
+            "violations": []
+        },
+        {
+            "path": "/H. SPI/I2C/",
+            "uuid_path": "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/08644c31-ed6f-48a3-a952-fcb31a88cbf8",
+            "violations": []
+        },
+        {
+            "path": "/K. LEDs/BUTTONS/",
+            "uuid_path": "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/875f8df2-b476-452a-ae42-3ddb22327da8",
+            "violations": []
+        },
+        {
+            "path": "/C. LTE/NR+ RF/",
+            "uuid_path": "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/6afb7625-1c68-4375-a08d-8eba81f8723a",
+            "violations": []
+        },
+        {
+            "path": "/F. SWD/DEBUG/",
+            "uuid_path": "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/771cec44-91bf-49a5-8340-cd824d7c5092",
+            "violations": []
+        },
+        {
+            "path": "/I. I2S/PDM/ADC/",
+            "uuid_path": "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/af29c727-61dc-4c84-9136-62d2e9719b29",
+            "violations": []
+        },
+        {
+            "path": "/L. TEST POINTS/",
+            "uuid_path": "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/6094c42a-44ea-4b9f-82fd-f46adfb0569c",
+            "violations": []
+        }
+    ],
+    "source": "nRF9161-DEV-BOARD.kicad_sch"
+}
