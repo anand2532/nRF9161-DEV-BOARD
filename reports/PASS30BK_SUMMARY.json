@@ -1,0 +1,404 @@
+{
+  "pass": "30bk",
+  "timestamp": "2026-09-30 18:16 IST",
+  "decision": "NO-ROUTE",
+  "net": "SIM_1V8",
+  "pair": "U1.49-far-F.Cu-(72.90,44.10)-(72.90,48.60)",
+  "git_head": "b91e9d5acd79f3dedac131b4c7b87d38c51f7bac",
+  "pcb_blob_at_start": "7bcfe5791b156e426a2a0affefe938be4d39f8e6",
+  "pcb_blob_at_end": "7bcfe5791b156e426a2a0affefe938be4d39f8e6",
+  "sha1sum_at_start": "c6dc3ba60aa52dbe533823c2a6a2af7aa5fb0e40",
+  "sha1sum_at_end": "c6dc3ba60aa52dbe533823c2a6a2af7aa5fb0e40",
+  "expected_head_prefix": "b91e9d5",
+  "expected_blob": "7bcfe5791b156e426a2a0affefe938be4d39f8e6",
+  "head_matches_expected": true,
+  "blob_matches_expected": true,
+  "end_blob_matches_start": true,
+  "same_island": false,
+  "pad_edge_mm": 46.030849,
+  "pad_edge_census_mm": 46.031,
+  "u1_island": [
+    "U1.49"
+  ],
+  "u1_island_layers": [
+    "F.Cu"
+  ],
+  "far_track": "F.Cu (72.900,44.100)-(72.900,48.600) w=0.400",
+  "far_island_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "far_through_vias": [
+    {
+      "name": "via@80.000,47.126",
+      "xy": [
+        80.0,
+        47.126
+      ],
+      "width_mm": 0.6,
+      "drill_mm": 0.3
+    },
+    {
+      "name": "via@76.170,45.126",
+      "xy": [
+        76.17,
+        45.126
+      ],
+      "width_mm": 0.6,
+      "drill_mm": 0.3
+    }
+  ],
+  "far_fcu_only": false,
+  "joined": null,
+  "other_sim_1v8_opens_left": [],
+  "other_pads_already_on_far_island": [
+    {
+      "name": "C38.1",
+      "xy": [
+        71.68,
+        52.0
+      ],
+      "same_as_u1": false,
+      "same_as_far": true,
+      "layers": [
+        "F.Cu"
+      ]
+    },
+    {
+      "name": "U4.5",
+      "xy": [
+        78.65,
+        56.6
+      ],
+      "same_as_u1": false,
+      "same_as_far": true,
+      "layers": [
+        "F.Cu"
+      ]
+    },
+    {
+      "name": "C33.1",
+      "xy": [
+        75.52,
+        44.0
+      ],
+      "same_as_u1": false,
+      "same_as_far": true,
+      "layers": [
+        "F.Cu"
+      ]
+    },
+    {
+      "name": "JP2.1",
+      "xy": [
+        79.35,
+        46.0
+      ],
+      "same_as_u1": false,
+      "same_as_far": true,
+      "layers": [
+        "F.Cu"
+      ]
+    }
+  ],
+  "sim_io_flank": {
+    "via": {
+      "net": "SIM_IO",
+      "xy": [
+        30.25,
+        23.1
+      ],
+      "width_mm": 0.6,
+      "radius_mm": 0.3,
+      "drill_mm": 0.3,
+      "pos_nm": [
+        30250000,
+        23100000
+      ]
+    },
+    "candidates": [
+      {
+        "x": 29.71,
+        "y0": 26.4,
+        "y1": 22.6,
+        "stored_x_nm": 29710000,
+        "copper_clearance_mm": 0.15,
+        "center_distance_mm": 0.5399999999999991,
+        "under_0_15": false,
+        "on_gate_0_150": true,
+        "meets_gate": false
+      },
+      {
+        "x": 29.7,
+        "y0": 26.4,
+        "y1": 22.6,
+        "stored_x_nm": 29700000,
+        "copper_clearance_mm": 0.16,
+        "center_distance_mm": 0.5500000000000007,
+        "under_0_15": false,
+        "on_gate_0_150": false,
+        "meets_gate": true
+      },
+      {
+        "x": 29.69,
+        "y0": 26.4,
+        "y1": 22.6,
+        "stored_x_nm": 29690000,
+        "copper_clearance_mm": 0.17,
+        "center_distance_mm": 0.5599999999999987,
+        "under_0_15": false,
+        "on_gate_0_150": false,
+        "meets_gate": true
+      }
+    ]
+  },
+  "coex0_clearance": {
+    "via": {
+      "net": "COEX0",
+      "xy": [
+        29.81,
+        22.0
+      ],
+      "width_mm": 0.6,
+      "radius_mm": 0.3,
+      "drill_mm": 0.3,
+      "pos_nm": [
+        29810000,
+        22000000
+      ]
+    },
+    "candidates": [
+      {
+        "x": 29.71,
+        "y0": 26.4,
+        "y1": 21.4,
+        "stored_x_nm": 29710000,
+        "copper_clearance_mm": 0.0,
+        "center_distance_mm": 0.09999999999999787,
+        "under_0_15": true,
+        "on_gate_0_150": false,
+        "meets_gate": false
+      },
+      {
+        "x": 29.7,
+        "y0": 26.4,
+        "y1": 21.4,
+        "stored_x_nm": 29700000,
+        "copper_clearance_mm": 0.0,
+        "center_distance_mm": 0.10999999999999943,
+        "under_0_15": true,
+        "on_gate_0_150": false,
+        "meets_gate": false
+      },
+      {
+        "x": 29.2,
+        "y0": 26.4,
+        "y1": 21.4,
+        "stored_x_nm": 29200000,
+        "copper_clearance_mm": 0.22,
+        "center_distance_mm": 0.6099999999999994,
+        "under_0_15": false,
+        "on_gate_0_150": false,
+        "meets_gate": true
+      }
+    ]
+  },
+  "x_rejected": [
+    29.71,
+    29.7
+  ],
+  "x_used": null,
+  "west_slot_best": {
+    "x": 26.01,
+    "foreign_exact": 0.01,
+    "foreign_mm": 0.01,
+    "foreign_item": {
+      "net": "SIM_RST",
+      "item": "trk (26.20,25.50)-(26.20,17.60)"
+    },
+    "power": null,
+    "body": false
+  },
+  "north_run_crossing": {
+    "method": "segment-vs-segment interior intersection plus 0.05 mm samples, against P0.16, P0.17, P0.19, P0.20, and the SIM_CLK In1 run. Layers are not exempt. A same-centerline stack on x=44.25, x=44.60, or the y=63.20 eastbounds is a fail. Endpoint-only touches are not crossings.",
+    "crossed": true,
+    "crossing_count": 1,
+    "crossings": [
+      {
+        "segment": [
+          [
+            29.7,
+            26.4
+          ],
+          [
+            29.7,
+            22.6
+          ]
+        ],
+        "locked_net": "SIM_RST",
+        "locked_layer": "In1.Cu",
+        "locked": [
+          [
+            32.75,
+            25.5
+          ],
+          [
+            26.2,
+            25.5
+          ]
+        ],
+        "proper_interior": true,
+        "collinear_stack": false,
+        "interior_sample_hits": [],
+        "min_center_distance_mm": 0.012
+      }
+    ],
+    "min_center_distance_to_locked_mm": 0.012,
+    "min_locked_item": {
+      "net": "SIM_RST",
+      "segment": [
+        [
+          32.75,
+          25.5
+        ],
+        [
+          26.2,
+          25.5
+        ]
+      ]
+    },
+    "segments": [
+      {
+        "start": [
+          29.7,
+          26.4
+        ],
+        "end": [
+          29.7,
+          22.6
+        ],
+        "samples": 76,
+        "crossed": true,
+        "nearest_skirt": {
+          "net": "SIM_RST",
+          "segment": [
+            [
+              32.75,
+              25.5
+            ],
+            [
+              26.2,
+              25.5
+            ]
+          ],
+          "center_distance_mm": 0.012,
+          "edge_clearance_mm": -0.168
+        }
+      }
+    ]
+  },
+  "straight_chord": {
+    "from_existing_copper": [
+      29.897,
+      27.128
+    ],
+    "to_join_point": [
+      72.714,
+      44.027
+    ],
+    "width_mm": 0.18,
+    "layer": "F.Cu",
+    "length_mm": 46.031203,
+    "crosses_sip_body": true,
+    "gnd": {
+      "xy": [
+        42.0,
+        32.0
+      ],
+      "width_mm": 0.6,
+      "center_distance_mm": 0.08854487164217303,
+      "edge_clearance_mm": -0.30145512835782695
+    },
+    "used": false
+  },
+  "new_via": false,
+  "segments": [],
+  "segment_count": 0,
+  "whole_segment_crossing_count_kept": 0,
+  "whole_segment_crossing_count_rejected_north_run": 1,
+  "min_foreign_clearance_mm": null,
+  "min_power_clearance_mm": null,
+  "sim_1v8_opens_before": 1,
+  "sim_1v8_opens_after": 1,
+  "unconnected_before": 51,
+  "unconnected_after": 51,
+  "short_clearance_crossing_hole_before": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "short_clearance_crossing_hole_after": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "hole_to_hole_before": 1,
+  "hole_to_hole_after": 1,
+  "gnd_islands_before": 12,
+  "gnd_islands_after": 12,
+  "reason": "NO-ROUTE. No copper. The y=23.10 via-row exit is blocked. Pad-edge 46.030849 mm (census 46.031). SIM_IO via (30.25, 23.10) radius 0.3 mm. x=29.71 copper clearance 0.150000 mm, exactly on the 0.15 gate (same failure class as pass30be x=32.71). Rejected. x=29.70 clears SIM_IO at 0.160 mm but a north through-run crosses locked SIM_RST In1 (32.75, 25.50)\u2013(26.20, 25.50) and COEX0 via (29.81, 22.00) clearance is 0.000 mm. West slot x=24.80\u201327.20 best foreign 0.01 mm at x=26.01 vs {'net': 'SIM_RST', 'item': 'trk (26.20,25.50)-(26.20,17.60)'}. That slot is the only geometric opening that does not cross SIM_RST, and it fails the 0.15 mm gate (MAGPIO1 via sits in it; P0.00 x=25.20 and SIM_RST x=26.20 close the sides). Straight F.Cu chord hits GND via (42.0, 32.0) at -0.301 mm. Not used. Far island is not F.Cu-only (through-vias at 80.000,47.126 and 76.170,45.126) but no legal segment reaches the named track or those vias. Skirt slot, sealed pocket, and RF keepout not used. No second path. Blob matches start: True.",
+  "j9_before": {
+    "fp_xy": [
+      116.0,
+      8.0
+    ],
+    "2": {
+      "net": "P0.07",
+      "xy": [
+        116.0,
+        10.54
+      ]
+    },
+    "3": {
+      "net": "P0.05",
+      "xy": [
+        116.0,
+        13.08
+      ]
+    }
+  },
+  "j9_after": {
+    "fp_xy": [
+      116.0,
+      8.0
+    ],
+    "2": {
+      "net": "P0.07",
+      "xy": [
+        116.0,
+        10.54
+      ]
+    },
+    "3": {
+      "net": "P0.05",
+      "xy": [
+        116.0,
+        13.08
+      ]
+    }
+  },
+  "j9_2_touched": false,
+  "j9_3_touched": false,
+  "locked_runs_touched": false,
+  "skirt_slot_used": false,
+  "sealed_pocket_used": false,
+  "rf_keepout_used": false,
+  "other_net": false,
+  "gerbers": false,
+  "commit": false,
+  "backup": "/workspace/kicad-projects/nRF9161-DEV-BOARD/.mcp-backups/pass30bk/pre-edit.kicad_pcb"
+}
