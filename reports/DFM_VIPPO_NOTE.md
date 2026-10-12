@@ -86,7 +86,7 @@ Table B: GND thermal vias in U1 0.80×0.80 GND pads (footprint pad "103"). **Har
 - Original recommendation (kept for record): (b) with **0.25/0.40** on its own drill tool, plus a VIPPO-layer marker and order note. This gives deterministic selection by tool, uses a pair from JLC's published table, and fills only 18 vias. Fallback is (c) with an image and an EQ confirmation. Avoid (a) unless the quote shows a negligible adder. **No PCB change was made; this is a Layout decision.** If (b) is adopted, re-check that thermal performance is acceptable (RF/Power).
 
 ```
-VIA-IN-PAD / FILLED & CAPPED: 18 places, all IPC-4761 TYPE VII (NON-CONDUCTIVE epoxy fill,
+VIA-IN-PAD / FILLED & CAPPED: 29 places (PASS30CP), all IPC-4761 TYPE VII (NON-CONDUCTIVE epoxy fill,
 planarized, copper capped both sides, then ENIG):
  Group A: 9 vias, FINISHED HOLE 0.20 mm / land 0.30 mm (the only 0.20 mm drill tool), U1 pads
    52-60: GND (52,56,60), MAGPIO2 (53), MAGPIO1 (54), MAGPIO0 (55), MIPI_VIO (57),
@@ -94,6 +94,11 @@ planarized, copper capped both sides, then ENIG):
  Group B: 9 GND thermal vias in U1 0.8x0.8 GND pads at (30/36/42, 29/32/35) mm,
    FINISHED HOLE 0.25 mm / land 0.40 mm. The 0.25 mm drill tool is the only 0.25 mm tool
    and identifies group B.
+ Group A2: 7 signal VIPPO, 0.20/0.30, U1 pads 20 (P0.12), 23 (P0.13), 24 (P0.14), 29 (P0.18),
+   42 (P0.25), 48 (SIM_IO), 89 (P0.31) (added in earlier passes; same 0.20 tool).
+ Group C (PASS30CP, PM decision 2026-10-12): 4 GND VIPPO, 0.20/0.30, centred in U1 GND pads
+   36 (36.25,27.0), 27 (40.75,27.0), 21 (43.75,27.0), 98 (41.25,37.0).
+ Totals: 0.20 mm tool x20 (all in U1 pads), 0.25 mm tool x9.
 Fill + cap ALL vias of the 0.20 mm and 0.25 mm drill tools; no other vias are filled.
 Hole-wall copper plating: fab standard (prototype).
 Caps: planarize FLUSH or SLIGHTLY RECESSED, NEVER PROUD. Recess (dimple) up to 50 um
@@ -102,7 +107,7 @@ Cap copper: per fab POFV process, minimum 5 um (JLC published), continuous over 
 No voids exposed at surface; no visible hole outline after ENIG.
 All other vias: tented both sides (no fill). If fab requires global fill, notify before
 production.
-Reference layer: Fab drawing layer "VIPPO" (User.1) markers (18 places).
+Reference layer: Fab drawing layer "VIPPO" (User.1) markers (13 rings: group A + group C; groups A2/B identified by drill tool).
 Stackup per docs/FAB_STACKUP_NOTES.md (4L 1.6 mm, ENIG, 50 ohm SE coupon).
 NOTE: protrusion limit (+25 um) is tighter than fab standard (+/-50 um); confirm in EQ.
 ```
