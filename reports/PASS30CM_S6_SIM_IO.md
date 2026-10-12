@@ -1,0 +1,15 @@
+# PASS30CM step 6: SIM_IO closed
+- **VIPPO 0.30/0.20** at the new pad 48 centre (30.25, 27.0). From there SIM_IO takes a B.Cu path:
+  - south between the VDD_GPIO run (x 28.85) and the SIM_1V8 run (x 31.05);
+  - a short F.Cu hop at y 37.8, outside the body and the keepout;
+  - B.Cu back under U1 and north/east at y≈24.6;
+  - out to the existing SIM_IO / C37 / U4 / TP5 chain.
+- **SIM_1V8 rework was not needed.** A legal B.Cu path exists with the current SIM_1V8 escape, so SIM_1V8 is **untouched**: closed, POWER class, C40 kept at its place.
+- **SIM spacing**, measured on the new SIM_IO copper against all non-GND copper:
+  - **≥0.55 mm outside** the fan-out zone;
+  - **≥0.20 mm inside** the y≥24 U1 fan-out zone (allowed: 0.15).
+- **Length:** SIM_IO 105.2 mm of new copper (5 vias + VIPPO); the whole net is 142.7 mm. The route is long and meandering. It meets the gate, but Layout/SI may want a cleanup pass. The ≤10 mm parallel-run SIM rule was not checked by tool.
+- **Gate (refilled):** all violation classes 0. **Unconnected 13 → 12** (P0.14 and P0.18 remain; GND islands 10).
+  - In1 GND: 2 pieces, 8190.1 → 8185.2 mm².
+  - VDD_nRF: 1 piece, 6747.6 → 6737.0 mm².
+  - No closed net reopened.
