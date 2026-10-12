@@ -200,3 +200,6 @@ Fab minimums: new vias are 0.5/0.3 with a 0.10 mm annular ring. That meets JLC m
 5. Silk counts are unchanged and remain a checklist item. Acid traps/slivers: no DRC hits (KiCad has no acid-angle check). Freerouting output is orthogonal/45° at 0.18 mm, so I see no obvious acute-angle risk, but I haven't inspected it visually. Re-check in the fab DFM viewer after Gerbers.
 
 **Verdict: `autoroute-gpio` NEEDS CHANGES before fab.** It is a real connectivity improvement (38→19), but issue 1 breaks the locked RF reference plane. Fab gate remains RED.
+
+### PASS30CP: J5 RF-keepout exception (GND only, RF-approved 2026-10-12)
+One tented 0.30/0.60 GND via at (5.90, 50.75), next to J5 pad 2 (left), tied to In1 GND. It is not a VIPPO and is not filled. It is the only via inside the J5 RF keepout.

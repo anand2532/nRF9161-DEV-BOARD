@@ -17,3 +17,5 @@
   (constraint via_diameter (min 0.4mm))
   (constraint hole_size (min 0.25mm))
   (constraint annular_width (min 0.075mm)))
+# PASS30CP J5: RF-approved GND-only RF-keepout exception: one 0.30/0.60 tented GND via at (5.90,50.75), J5.2 (left) outer-top corner, tied to In1.
+#   No In1 slot under the feed; no F.Cu link added. Second via does not fit (GNSS_VBIAS 0.2 mm loop at x 5.02 / y 50 / y 54 fences the pad).
