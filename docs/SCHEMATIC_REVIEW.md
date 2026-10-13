@@ -355,3 +355,15 @@ Labels were placed with naive `origin + pin_at` (no Y-flip). Sheet had **zero wi
   - The +2 are C40 library-config warnings (`Device` symbol lib / `Capacitor_SMD` footprint lib not in this box's lib tables), the same class already raised for every other cap.
   - Netlist: `reports/netlist_C40_LED_after.xml`. Check: `reports/C40_LED_pin_tip_check.txt`.
 - The PCB needs Update-from-Schematic to place C40 near U1 pad 49.
+
+## 2026-10-13: v2 UART modem module simplification (branch `v2`, base 067291f) — APPLIED
+Approved by Anand via Hardware PM. Plan + decisions: `reports/V2_SIMPLIFY_PLAN.md` (APPLIED). Firmware/pinout: `docs/PINOUT.md`.
+- **Removed (36 refs):** J1, J3, J6, J9–J18, R2, JP1, SW1, SW3, R4, R11–R14, D5–D7, TP2–TP6, TP10–TP12, TP18–TP20, plus their pin-tip global labels/NC flags. Sheets `08_SPI_I2C`, `09_I2S_PDM_ADC`, `10_GPIO` deleted from root and repo; K/L sheets renamed H. LEDs/RESET, I. TEST POINTS.
+- **Power:** FB4.2/C1/C2 `VIN_FILT` labels renamed `VDD_nRF` (direct connection replacing R2/JP1). VIN enters only at J20.1 (`VIN_IN` → D1). ENABLE always-on via R1 (no SW1, no PWR_OFF).
+- **C39:** `(dnp yes)(in_bom no)`; BOM.csv already DNP — now consistent.
+- **New sheet G (`schematic/07_UART.kicad_sch`, same file/uuid):** J20 1×10, U5/U6 SN74LXC2T45DCU, U7/U8 SN74LXC1T45DBV, Q1 BSS138, R21 100k DTR pull-up, R23 100k VIO pull-down, C41–C48 100 nF, PWR_FLAG on VIO. Lib symbols for the LXC parts and BSS138 are embedded (`nRF9161_v2:*`), pin numbers from the TI datasheets (LXC2T45 DCU: 1 VCCA, 2 A1, 3 A2, 4 GND, 5 DIR, 6 B2, 7 B1, 8 VCCB; LXC1T45 DBV: 1 VCCA, 2 GND, 3 A, 4 B, 5 DIR, 6 VCCB; BSS138 SOT-23: 1 G, 2 S, 3 D).
+- **U1 (01_nRF9161):** 32 global labels whose nets disappeared (P0.01, P0.04, P0.05, P0.08–P0.21, P0.23–P0.29, MAGPIO0–2, MIPI_SDATA/SCLK/VIO, COEX1/2) replaced by `no_connect` at the same pin tips.
+- **Pin-tip check** (Y-flip rule tip = (sym_x+lib_x, sym_y−lib_y), unit-aware): every pin on every live sheet lands on a label/NC, except U3 on 04_GNSS which uses wire stubs (unchanged).
+- **ERC** (kicad-cli 9.0.2, `reports/ERC_V2_after.rpt`): **0 errors**, 170 warnings, all `lib_symbol_issues`/`footprint_link_issues` (box lib tables), vs 203 of the same class at 067291f.
+- **Netlist** (`reports/netlist_V2_after.net`): VIN_IN = D1.1, J20.1 · HOST_TX = J20.4, U5.2 → P0.03 = U5.7, U1.99 · HOST_RX = J20.5, U6.2 ← P0.02 = U6.7, U1.97 · HOST_RTS = J20.6, U5.3 → P0.07 = U5.6, U1.4 · HOST_CTS = J20.7, U6.3 ← P0.06 = U6.6, U1.3 · HOST_DTR = J20.8, R21.2, U7.3 → P0.31 = U7.4, U1.89 · HOST_RI = J20.9, U8.3 ← P0.30 = U8.4, U1.88 · HOST_nRESET = J20.10, Q1.3; nRESET = Q1.2, U1.32, J8.8, R5.1, TP9.1, C39.1 · Q1.1 = VDD_GPIO.
+- **PCB not touched**: it is now out of sync (still v1). Layout must Update PCB from Schematic. New footprints need libraries: `Package_SO:VSSOP-8_2.3x2mm_P0.5mm`, `Package_TO_SOT_SMD:SOT-23-6`, `SOT-23`, `Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical`.

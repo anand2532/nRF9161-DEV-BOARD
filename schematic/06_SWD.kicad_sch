@@ -1161,9 +1161,9 @@
 		(at 38.1 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "ef491496-fd50-4485-9903-59272d82b7af")
 		(property "Reference" "C39"
 			(at 38.1 111.76 0)
@@ -1457,80 +1457,6 @@
 			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/b0fd138d-e5f5-4ca1-8a8b-2e0bf9d0b757" (reference "TP9") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/771cec44-91bf-49a5-8340-cd824d7c5092" (reference "TP9") (unit 1)))
 		)
 	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 165.1 38.1 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "97e5921d-1fec-44f9-ac9a-5c44102f00c5")
-		(property "Reference" "TP10"
-			(at 165.1 35.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VDD_GPIO"
-			(at 165.1 40.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 170.18 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 165.1 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "874fadac-007d-4926-b517-52ae4b55b30c")
-		)
-		(instances
-			(project "nRF9161-DEV-BOARD"
-				(path "/1d447b02-1bc4-4911-9534-6821deb40bd5"
-					(reference "TP10")
-					(unit 1)
-				)
-			 (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/b0fd138d-e5f5-4ca1-8a8b-2e0bf9d0b757" (reference "TP10") (unit 1)) (path "/e1caf6a7-e2a0-4ff1-8424-4d92c0348b6b/771cec44-91bf-49a5-8340-cd824d7c5092" (reference "TP10") (unit 1)))
-		)
-	)
 	(global_label "VDD_GPIO"
 		(at 71.12 58.42 180)
 		(effects
@@ -1700,16 +1626,6 @@
 			(justify right)
 		)
 		(uuid "c5f3c53c-ad1b-42dc-9d15-846af0563837")
-	)
-	(global_label "VDD_GPIO"
-		(at 165.1 38.1 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "039048ab-e398-4ae6-aa57-71704056c586")
 	)
 	(no_connect
 		(at 71.12 66.04)
