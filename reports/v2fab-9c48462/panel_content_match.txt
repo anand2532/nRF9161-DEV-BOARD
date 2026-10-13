@@ -1,0 +1,3 @@
+vias by drill panel {0.3: 872, 0.2: 84, 0.25: 36} expect {0.3: 872, 0.2: 84, 0.25: 36} | tracks 3300 expect 3300
+silk text mismatch none
+footprint mismatch none

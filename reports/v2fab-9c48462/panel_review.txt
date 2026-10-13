@@ -1,0 +1,19 @@
+panel DRC {('warning', 'lib_footprint_issues'): 199} unconn 0
+panel WxH 118.1 93.1
+board instances (U1 positions rel. panel TL): [(28.05, 28.55), (28.05, 68.05), (80.05, 28.55), (80.05, 68.05)]
+mousebite holes 128
+ board TL (8.03, 8.03) holes 20 edges {'N': 10, 'S': 10} board-local x range per edge: {'S': (6.02, 30.02), 'N': (30.02, 43.02)}
+ board TL (8.03, 47.52) holes 20 edges {'N': 10, 'S': 10} board-local x range per edge: {'S': (6.02, 30.02), 'N': (30.02, 43.02)}
+ board TL (60.02, 8.03) holes 20 edges {'S': 10, 'N': 10} board-local x range per edge: {'S': (6.02, 30.02), 'N': (30.02, 43.02)}
+ board TL (60.02, 47.52) holes 20 edges {'S': 10, 'N': 10} board-local x range per edge: {'S': (6.02, 30.02), 'N': (30.02, 43.02)}
+straight-edge x range on N/S (board-local): 2.5 .. 47.55 (R2.0 corners: 2.0 .. 48.05)
+  ('KiKit_FID_B_1', 'B', 15.05, 4.4, [(1.0, 0.5)])
+  ('KiKit_FID_B_2', 'B', 103.05, 4.4, [(1.0, 0.5)])
+  ('KiKit_FID_B_3', 'B', 15.05, 88.7, [(1.0, 0.5)])
+  ('KiKit_FID_T_1', 'T', 15.05, 4.4, [(1.0, 0.5)])
+  ('KiKit_FID_T_2', 'T', 103.05, 4.4, [(1.0, 0.5)])
+  ('KiKit_FID_T_3', 'T', 15.05, 88.7, [(1.0, 0.5)])
+  ('KiKit_TO_1', 'T', 3.05, 3.05, [(2.0, 0.0)])
+  ('KiKit_TO_2', 'T', 115.05, 3.05, [(2.0, 0.0)])
+  ('KiKit_TO_3', 'T', 3.05, 90.05, [(2.0, 0.0)])
+  ('KiKit_TO_4', 'T', 115.05, 90.05, [(2.0, 0.0)])

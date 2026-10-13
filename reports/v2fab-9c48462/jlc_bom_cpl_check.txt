@@ -1,0 +1,29 @@
+BOM headers ['Comment', 'Designator', 'Footprint', 'LCSC'] | CPL headers ['Ref', 'Val', 'Package', 'PosX', 'PosY', 'Rot', 'Side']
+BOM refs 67 CPL refs 67 board fitted 67
+dupes in CPL none
+fitted not in BOM none | fitted not in CPL none
+BOM not fitted (DNP placed?) none | CPL not fitted none
+missing LCSC none
+per-ref mismatches: [('D1', ['CPL val PMEG4030ER vs board SS34']), ('FB4', ['CPL val BLM18PG221SN1 vs board BLM21PG221SN1']), ('J2', ['BOM comment U.FL-R-SMT-1(10) vs board value U.FL_LTE_NR+']), ('J5', ['BOM comment U.FL-R-SMT-1(10) vs board value U.FL_GNSS']), ('L1', ['CPL val 0R / DNP match vs board 0R']), ('L2', ['CPL val 0R / DNP match vs board 0R'])]
+sides in CPL Counter({'top': 51, 'bottom': 16})
+--- rotation review list (polarized/ICs/connectors) for JLC DFM preview:
+  D1   D_SMA                                         rot 180.000000 top    LCSC C8678
+  D2   D_SMA                                         rot 0.000000 top    LCSC C10758
+  D3   LED_0603_1608Metric                           rot 0.000000 top    LCSC C125098
+  D4   LED_0603_1608Metric                           rot 180.000000 top    LCSC C125098
+  F1   Fuse_1206_3216Metric                          rot 90.000000 top    LCSC C187611
+  J2   U.FL_Hirose_U.FL-R-SMT-1_Vertical             rot 180.000000 top    LCSC C88373
+  J20  PinHeader_1x10_P2.54mm_Vertical               rot 0.000000 top    LCSC C57369
+  J5   U.FL_Hirose_U.FL-R-SMT-1_Vertical             rot 180.000000 top    LCSC C88373
+  J7   JAE_SIM_Card_SF72S006                         rot -90.000000 top    LCSC C2977286
+  J8   PinHeader_2x05_P1.27mm_Vertical_SMD           rot 0.000000 top    LCSC C5155080
+  Q1   SOT-23                                        rot 0.000000 bottom LCSC C52895
+  SW2  SW_SPST_CK_KXT3                               rot 0.000000 top    LCSC C778127
+  U1   nRF9161_LGA_16.0x10.5mm                       rot 180.000000 top    LCSC C21547412
+  U2   SOT-23-5                                      rot 0.000000 bottom LCSC C134139
+  U3   SOT-363_SC-70-6                               rot 0.000000 top    LCSC C2149796
+  U4   TI_TPD3F303_USON-8_DPV_2.1x1.6mm_P0.5mm       rot 180.000000 top    LCSC C2865991
+  U5   VSSOP-8_2.3x2mm_P0.5mm                        rot 0.000000 bottom LCSC C5217891
+  U6   VSSOP-8_2.3x2mm_P0.5mm                        rot 0.000000 bottom LCSC C5217891
+  U7   SOT-23-6                                      rot 0.000000 bottom LCSC C4364198
+  U8   SOT-23-6                                      rot 0.000000 bottom LCSC C4364198

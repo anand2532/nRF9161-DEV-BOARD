@@ -133,7 +133,7 @@ New in this pass:
 - Q15. 0.20 mm drill through 1.6 mm (8:1 aspect ratio).
 - Q16. Manual JP2 bridge on the bottom side.
 - Q17. Mouse-bite tab width. JLC's capabilities page says "For breakaway with mouse-bites, the minimum width is 5mm" (https://jlcpcb.com/capabilities/pcb-capabilities). Our tabs are 3 mm and the rails are 6 mm. Does the 5 mm minimum apply to the tabs? Unverified.
-- Note: Q14 is now 22 filled vias per board, 88 per panel.
+- Note: Q14 is now 30 filled vias per board, 120 per panel (from 9c48462).
 
 ## Fix list for Layout
 1. Move the unfilled vias out of the J7, C34, R23, Q1 and C42 pads, and clear the U5.4, C44.1 and U2.1 overlaps. Alternatively, give those vias a unique drill and add them to the fill list.
@@ -164,3 +164,11 @@ New in this pass:
 - Panel rebuilt from v2_panel.json. Panel DRC is 0/0, and its content matches 4× the board.
 - Package: fab/staging-v2-bcd1c34/. The DO-NOT-ORDER note has been removed; the order is still gated on the quote questions, including Q17.
 - WAIVED (kept): C14, FB1.1, FB2.1, and the bottom pad-to-via pairs under 0.3 mm.
+
+## Pass 9c48462 (v2-u4, v2k–v2m, 2026-10-13): **RED**
+- R1: the U4 footprint has 3 F.SilkS lines 0.10 mm wide, below the JLC 0.15 mm minimum. Fix the library footprint and the board copy.
+- WARN W1: the U4 DPV land is derived, since TI publishes no DPV land pattern (SLVSAM5A pp.16–18). The pad heel is short by 0.03 mm nominal and 0.13 mm worst case. Proposal: pins 0.60 long at ±0.70.
+- WARN W2: jlc/CPL_JLC_v2.csv has stale values and KiCad headers. The package CPL is regenerated with JLC headers.
+- WARN W3: check rotations in the JLC DFM preview.
+- Filled vias: 30 per board, 120 per panel (21 × 0.20 + 9 × 0.25). DRC is 0/0 as-is and refilled, with parity 0. Panel rebuilt, DRC 0/0. Package: fab/staging-v2-9c48462/ (DO NOT ORDER).
+- WAIVED (kept): C14, FB1.1, FB2.1, and the bottom pad-via pairs under 0.3 mm. Quote questions Q1–Q17 are still open (Q17: mouse-bite 5 mm).
