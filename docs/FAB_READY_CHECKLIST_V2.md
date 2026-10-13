@@ -1,9 +1,39 @@
 # FAB READY CHECKLIST: v2 (UART modem module, double-sided)
 
-Board: `v2` @ 6645a01. Pass date: 2026-10-13 IST. Full report: `reports/V2_FAB_PASS_6645a01.md`. Rules: `reports/V2_DFM_RULES.md` (branch v2-dfm-rules, fb29971).
-v1's checklist stays in `docs/FAB_READY_CHECKLIST.md`.
+Board: `v2` @ **d89dc88** (final layout candidate). Pass date: 2026-10-13 IST. Report: `reports/V2_FAB_PASS_d89dc88.md`. Evidence: `reports/v2fab-d89dc88/`. Package: `fab/staging-v2-d89dc88/`. v1's checklist stays in `docs/FAB_READY_CHECKLIST.md`.
 
-## Overall gate: **RED** (5 items below; the JLC quote items are open as expected)
+## Overall gate (d89dc88): **RED** (6 items; the JLC quote items are open as expected)
+
+| # | Item | Status | Evidence |
+|---|---|---|---|
+| 1 | Claims: 50×37.5, 4L, 44 top / 23 bottom, J7 top | PASS | parts.json |
+| 2 | Connectivity as-is / refilled | PASS 0/0 | DRC_asis.json, DRC_refilled.json |
+| 3 | DRC errors | PASS 0 | same |
+| 4 | Bottom parts (no BGA/LGA/QFN, heavy, tall, THT) | **FAIL**: U4 USON-8 | report §4 |
+| 5 | Lighter bottom / reflow order | PASS: 23 vs 44 parts; mass not determined | report §4 |
+| 6 | Nothing on the bottom under U1 + 1 mm | PASS | geometry_checks.txt |
+| 7 | No unfilled vias in soldered pads | **FAIL**: J7 ×4, C34, R23, Q1, C42 (+ overlaps) | via_in_pad_unfilled.txt |
+| 8 | Bottom pads ≥0.3 mm from via copper [General DFM practice] | **FAIL**: 55 pairs | geometry_checks.txt |
+| 9 | U1 VIPPO 16 (7×0.20 + 9×0.25), centred, ≥0.45 mm to unfilled | PASS | report §5 |
+| 10 | 0.20/0.25 drills exclusive to the fill scope | **OPEN (decision)**: 4 non-pad 0.20 GND vias near U4/C33/C37. Recommend (a) fill (20 total), pending Hardware PM | drill020_classification.txt |
+| 11 | Stackup board = job = locked note | PASS | package_sanity.txt |
+| 12 | Silk text ≥1.0/0.15 | PASS | silk_widths.txt |
+| 13 | Silk lines ≥0.15 | **FAIL**: 51 lines at 0.12 | silk_widths.txt |
+| 14 | Silk spacing ≥0.15 / no silk on pads | **FAIL**: C23 to U1 0.09 mm; on pads 0 | silk_spacing_015.txt |
+| 15 | U1 vs Nordic DK | PASS (unchanged since b9d4e62) | report §8 |
+| 16 | Part-to-edge | PASS with the panel frame | edge_clearance.txt |
+| 17 | Panel (118.10×93.10, 6 mm frame, 3+3 fiducials, 4 × 2 mm tooling, mouse bites, DRC 0/0) | PASS | panel/, DRC_panel.json |
+| 18 | Package single + panel, CPL top/bottom | PASS (contents); not orderable while RED | fab/staging-v2-d89dc88/ |
+| 19 | Order notes (option (a), pending HW PM) | PASS (written) | fab/staging-v2-d89dc88/ORDER_NOTES.md |
+| Q | JLC quote Q1–Q16 | OPEN | below |
+
+Q14 now reads: POFV price on 4-layer boards for **20** vias per board (16 if option (b)).
+
+---
+
+# Superseded: pass on 6645a01 (kept for history)
+
+## 6645a01 gate: **RED** (5 items below; the JLC quote items are open as expected)
 
 | # | Item | Status | Evidence |
 |---|---|---|---|
