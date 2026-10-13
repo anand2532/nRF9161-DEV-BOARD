@@ -6,3 +6,10 @@ __pycache__/
 
 # KiCad alternate netlist export
 *.kicad_net
+
+# KiCad local/caches
+fp-info-cache
+*-backups/
+*.kicad_prl.lck
+*.lck
+*_drc_violations.json
