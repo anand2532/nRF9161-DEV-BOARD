@@ -1,230 +1,202 @@
-# nRF9161-DEV-BOARD
+# nRF9161 UART Modem Module (v2)
 
-Development board for **Nordic Semiconductor nRF9161-LACA-R7** (LTE-M, NB-IoT, DECT NR+, GNSS).
+A small 50 × 37.5 mm LTE-M / NB-IoT + GNSS modem board built around the Nordic **nRF9161**. Any host MCU controls it with AT commands over one 10-pin UART header.
 
-Electrical source of truth is official Nordic documentation only:
+![nRF9161 v2 module, 3D render](images/3d_angle.png)
 
-- nRF9161 Product Specification v1.0 (pinout Table 55, mechanics Table 56, reference circuitry)
-- nRF91 Hardware Design Guidelines (nWP-037 family / Table 2) — nRF9161 uses the nRF9160 SiP power/RF pinout with DK extra **FB3 on VDD2**
-- nRF91 Series Antenna and RF Interface Guidelines (nWP033)
-- nRF9161 DK PCA10153 1.0.0 (FB3, GNSS U.FL + COEX0, TPD3F303, SWF MM8130)
-- PCN134: DEC0 = **4.7 µF** (not the older 47 µF)
+> **Status:** v2 has passed DRC (0 errors, 0 unconnected), ERC (0 errors), schematic parity, an RF review and a DFM review. The JLCPCB fab and assembly package is in `fab/staging-v2-36d8578/`. **It has not been ordered yet.**
 
-Do not treat this README as a substitute for those documents when certifying a product.
+## Features
 
-Project files keep the existing names `nRF9161-DEV-BOARD.kicad_*` (not `nRF9161_Board.*`).
+- **Nordic nRF9161-LACA-R7** SiP: LTE-M and NB-IoT, plus GNSS. (The nRF9161 has **no 2G/GSM**.)
+- **Host interface on one header:** J20 is a 1×10, 2.54 mm header carrying UART with RTS/CTS, DTR wake, RI indicate and an open-drain reset.
+- **Level-shifted host side:** SN74LXC translators referenced to the host's VIO (1.1–5.5 V per the LXC range), so 1.8 V, 3.3 V and 5 V hosts all work. If VIO is missing, the translators go hi-Z, so the board never back-powers the host.
+- **Single supply:** VIN 3.0–5.5 V. It has reverse-polarity protection (SS34), a TVS (SMAJ5.0A), a 2 A fuse and ferrite filtering, plus a TLV73333 3.3 V LDO for the GPIO and translator rail.
+- **nano-SIM (4FF)**, JAE SF72S006, with TPD3F303 ESD protection.
+- **Two U.FL connectors:** LTE (J2) and GNSS (J5). The GNSS port supplies bias for an active antenna, switched by a TPS22919 from COEX0.
+- **SWD:** 10-pin 1.27 mm Cortex debug header (J8), reset button SW2, and status LEDs (D3 power, D4 status/network).
+- **Build:** 4-layer board, 1.6 mm, ENIG, parts on both sides (51 top / 16 bottom). Every part has an LCSC number for JLCPCB assembly.
 
-## Board purpose (v2: UART modem module)
+## Block diagram
 
-Branch `v2` turns the board into a simple **host-driven LTE-M / NB-IoT (+ DECT NR+, GNSS) modem module**. A host MCU talks AT commands over UART (Nordic Serial Modem add-on, `external-mcu.overlay`). The nRF9161 has **no 2G/GSM**. All breakout headers (J1, J9–J18) are removed; the only host connection is **J20**, a 1×10 2.54 mm through-hole header. Parts may sit on both sides (see `reports/V2_SIMPLIFY_PLAN.md` §6).
-
-## Host header J20
-
-| Pin | Name (host view) | Function |
-| --- | --- | --- |
-| 1 | VIN | 3.0–5.5 V supply in |
-| 2 | GND | ground |
-| 3 | VIO | host logic rail 1.1–5.5 V (reference for translators; not an output) |
-| 4 | HOST_TX | host TX → modem RXD P0.03 |
-| 5 | HOST_RX | modem TXD P0.02 → host RX |
-| 6 | HOST_RTS | host RTS → modem CTS P0.07 |
-| 7 | HOST_CTS | modem RTS P0.06 → host CTS |
-| 8 | HOST_DTR | host → DTR P0.31 (active-low wake; 100k pull-up to VIO) |
-| 9 | HOST_RI | RI P0.30 → host (active-low) |
-| 10 | HOST_nRESET | open-drain active-low reset via Q1 BSS138 (5 V safe) |
-
-Level shifting: U5/U6 SN74LXC2T45, U7/U8 SN74LXC1T45 (fixed direction, A=VIO, B=VDD_GPIO 3.3 V). Full details and firmware notes: `docs/PINOUT.md`.
-
-## nRF9161 capabilities on this board
-
-| Function | Implementation |
-| --- | --- |
-| LTE-M / NB-IoT / DECT NR+ | ANT pin 61, reserved π-match (0 Ω series, DNP shunts), U.FL J2 |
-| AUX | AUX pin 64, reserved π-match, TP1 |
-| GNSS | GPS pin 67, nWP033 active-antenna bias-T, U.FL J5 |
-| UICC/SIM | SIM_RST/CLK/IO/1V8 via TPD3F303 + JAE SF72S006 nano-SIM. SIM_DET pin 45 **floats** |
-| Host UART + DTR/RI + reset | J20 via U5–U8, Q1 |
-| SWD | 10-pin Cortex-M J8 |
-| ENABLE / nRESET | R1 10 kΩ to VDD1 + C14 (always enabled); R5 1 kΩ + SW2 RESET; C39 DNP |
-| LEDs | D3 power (VIN), D4 STATUS (P0.00) |
-
-Onboard GNSS ceramic antenna + BGM1212N7 LNA from the nRF9161 DK is **not fitted**. GNSS is U.FL-only for an external **active** antenna.
-
-## Power requirements
-
-VIN **3.0–5.5 V** on J20.1 (nRF9161 VDD range).
-
-```
-VIN_IN (J20.1)
-  D1 PMEG4030ER reverse Schottky → D2 SMAJ5.0A → F1 2 A → FB4 → C1/C2 = VDD_nRF (v2: R2/JP1 current shunt removed)
-       FB1 → VDD1 (pin 102) + C3 47 µF / C4 4.7 µF / C5 100 nF / C6 15 pF
-       FB2 + FB3 → VDD2 (pin 22) + C7–C10 (FB3 per nRF9161 DK)
-  R1 10 kΩ → ENABLE (pin 101) + C14 100 nF (no disable button / PWR_OFF pin in v2)
-  TLV73333 3.3 V (EN=ENABLE) → VDD_GPIO (pin 12) + C11/C12, also translator B-side
-  DEC0 (pin 13) → C13 4.7 µF
+```mermaid
+flowchart LR
+  HOST["Host MCU<br/>(1.8 / 3.3 / 5 V)"] -- "J20: TX RX RTS CTS DTR RI" --> LS["SN74LXC2T45 ×2<br/>SN74LXC1T45 ×2<br/>(VIO ↔ 3.3 V)"]
+  HOST -- "J20: nRESET" --> Q1["Q1 BSS138<br/>open-drain"]
+  LS --> U1["nRF9161-LACA-R7<br/>LTE-M / NB-IoT / GNSS"]
+  Q1 --> U1
+  VIN["J20 VIN 3.0–5.5 V"] --> PROT["D1 SS34 · D2 SMAJ5.0A<br/>F1 2 A · FB4"] --> U1
+  PROT --> LDO["U2 TLV73333<br/>3.3 V VDD_GPIO"] --> LS
+  U1 -- "SIM_RST/CLK/IO/1V8" --> ESD["U4 TPD3F303"] --> SIM["J7 nano-SIM"]
+  U1 -- "ANT" --> J2["J2 U.FL LTE"]
+  U1 -- "GPS" --> J5["J5 U.FL GNSS"]
+  LDO --> SW["U3 TPS22919<br/>(COEX0)"] -- "active-antenna bias" --> J5
+  SWD["J8 SWD 2×5 1.27 mm"] --- U1
+  U1 -- "P0.00" --> D4["D4 status / network LED"]
 ```
 
-Peak LTE TX on VDD2 is on the order of **500 mA**. The host must supply this on J20.1; use a current-limited bench supply for first power-up (1 A limit is a reasonable start; 2 A fuse is the hard limit).
+## Host header J20 pinout
 
-Power LED D3 is on VIN, not a GPIO.
+| Pin | Name | Direction (host view) | Modem side |
+|---|---|---|---|
+| 1 | VIN | power in | 3.0–5.5 V supply |
+| 2 | GND | — | ground |
+| 3 | VIO | reference in | host logic rail, 1.1–5.5 V (feeds the translators; **not** an output) |
+| 4 | TX | host → modem | P0.03, UART RXD (via U5) |
+| 5 | RX | modem → host | P0.02, UART TXD (via U6) |
+| 6 | RTS | host → modem | P0.07, modem CTS (via U5) |
+| 7 | CTS | modem → host | P0.06, modem RTS (via U6) |
+| 8 | DTR | host → modem, active-low | P0.31 (via U7, 100k pull-up to VIO) |
+| 9 | RI | modem → host, active-low | P0.30 (via U8) |
+| 10 | nRESET | host → modem, active-low | open-drain through Q1 BSS138 (5 V safe) |
 
-Test points (no BOM): TP15 VIN, TP14 VDD_nRF, TP13 VDD_GPIO, TP16 GND, TP17 ENABLE, TP7 SWDIO, TP8 SWCLK, TP9 nRESET, TP1 AUX_FIT.
+The RTS/CTS crossover is done on the board, so **wire J20 straight across to the host pins with the same names**. Full details: [`docs/PINOUT.md`](docs/PINOUT.md).
 
-## RF architecture
-
-Nordic evaluates ANT/AUX/GPS as **50 Ω single-ended**. Matching values are antenna- and PCB-specific (nWP033). This board does **not** invent tuned L/C values:
-
-- LTE/NR+: series L1 is a 0 Ω / LQW15AN placeholder; C21/C22 DNP high-Q 0402 (HDG: Murata LQW15AN + GJM1555C1).
-- AUX: same reserved π (L2, C23, C24).
-- GNSS: nWP033 active-antenna bias-T — C27 100 pF DC block, L4 100 nH choke, C28–C30 + FB5 on ~3.3 V bias from VDD_GPIO via U3 TPS22919DCKR (ON=COEX0) → FB5 (v2: R4/TP2 sense removed). Shunts C31/C32 DNP.
-
-Tune L1/C21/C22 (and GNSS shunts) on the finished mechanics with a VNA.
-
-LTE and GNSS matching sit immediately west of the SiP (U1 rotation 180°, RF edge west). Do not place digital traces under the matching networks.
-
-## Antenna requirements
-
-| Connector | Net | Use |
-| --- | --- | --- |
-| J2 U.FL | ANT_FIT | External LTE / DECT NR+ antenna |
-| J5 U.FL | GNSS_ANT | External **active** GNSS antenna (DC on center) |
-| TP1 | AUX_FIT | AUX test |
-
-Disable GNSS LNA bias (`%XCOEX0`) if using a passive GNSS antenna.
-
-**Antenna choice (RF review F3).** The board ground is only 50 × 37.5 mm (≈0.11 λ at 700 MHz), so it cannot act as the counterpoise for a quarter-wave antenna.
-- **LTE (J2):** use a ground-independent antenna, i.e. a sleeve dipole or a flex dipole covering 698–2200 MHz. Do **not** use a monopole "stick" antenna that relies on the board ground plane.
-- **GNSS (J5):** use an active patch antenna with its own ground plate.
-
-## SIM requirements
-
-- nRF9161 SIM_RST / SIM_CLK / SIM_IO / SIM_1V8 → TPD3F303DPV → JAE SF72S006 **nano-SIM (4FF)**
-- SIM_DET (pin 45) **must float** (PS). Mechanical card-detect is `SIM_CD` on J7 CSW-DSW (TP6 removed in v2) — **not** pin 45
-- Close JP2 to feed SIM_1V8 to the card
-- SIM VPP (C6) NC
-
-## GPIO map (v2)
-
-| U1 pad | GPIO | v2 use |
-| --- | --- | --- |
-| 95 | P0.00 | STATUS LED D4 (via R10) |
-| 97 | P0.02 | UART2 TXD → U6 → J20.5 HOST_RX |
-| 99 | P0.03 | UART2 RXD ← U5 ← J20.4 HOST_TX |
-| 3 | P0.06 | UART2 RTS → U6 → J20.7 HOST_CTS |
-| 4 | P0.07 | UART2 CTS ← U5 ← J20.6 HOST_RTS |
-| 88 | P0.30 | RI → U8 → J20.9 |
-| 89 | P0.31 | DTR ← U7 ← J20.8 |
-| 38 | P0.22 | J8.6 SWO (optional) |
-| others | P0.01, P0.04, P0.05, P0.08–P0.21, P0.23–P0.29 | NC (no-connect) |
-
-COEX0 drives U3 (GNSS bias). COEX1/2, MAGPIO0–2, MIPI_* are NC in v2. See `docs/PINOUT.md` for firmware overlay notes.
-
-## SWD / programming
-
-J8 (Samtec FTSH-105 style 1.27 mm 2×5):
-
-| Pin | Signal |
-| --- | --- |
-| 1 | VDD_GPIO (VTREF) |
-| 2 | SWDIO (pin 34) + TP7 |
-| 3 | GND |
-| 4 | SWCLK (pin 33) + TP8 |
-| 5 | GND |
-| 6 | P0.22 SWO (optional) |
-| 7 | NC |
-| 8 | nRESET via R5 1 kΩ + TP9 |
-| 9 | NC |
-| 10 | GND |
-
-Use nRF Command Line Tools / J-Link. SWD is referenced to the SiP debug domain; VDD_GPIO on pin 1 is target-voltage sense at 3.3 V.
+### Host wiring example (3.3 V MCU)
 
 ```
-nrfjprog -f NRF91 --program firmware.hex --chiperase --verify --reset
+Host MCU            J20
+3V3 / 5V  ───────── 1 VIN   (must supply ~500 mA LTE TX peaks)
+GND       ───────── 2 GND
+3V3 (IO)  ───────── 3 VIO
+UART TX   ───────── 4 TX
+UART RX   ───────── 5 RX
+UART RTS  ───────── 6 RTS
+UART CTS  ───────── 7 CTS
+GPIO (out)───────── 8 DTR   (optional; pull low to wake)
+GPIO (in) ───────── 9 RI    (optional)
+GPIO (OD) ───────── 10 nRESET (optional)
 ```
 
-## PCB stackup
+UART settings: 115200 baud, 8N1, hardware flow control (as in the Serial Modem `external-mcu.overlay`).
 
-Assumed **4-layer, 1.6 mm**, JLCPCB-like 7628 / JLC04161H-7628 (confirm with the fabricator impedance coupon):
+## Specifications
 
-| Layer | Name | Copper | Use |
-| --- | --- | --- | --- |
-| L1 | F.Cu | 1 oz | Components, RF microstrip, short digital |
-| prepreg | ~0.12 mm, εr ≈ 4.2 | | |
-| L2 | In1.Cu | 1 oz | **Solid GND** |
-| core | ~1.2 mm | | |
-| L3 | In2.Cu | 1 oz | VDD_nRF pour + remaining signals |
-| prepreg | ~0.12 mm | | |
-| L4 | B.Cu | 1 oz | GND pour + digital |
+| Parameter | Value |
+|---|---|
+| Modem | nRF9161-LACA-R7 (LTE-M, NB-IoT, GNSS) |
+| Supply (VIN) | 3.0–5.5 V. Input TVS is 5.0 V; 2 A fuse |
+| Host logic (VIO) | 1.1–5.5 V (SN74LXC range) |
+| Internal GPIO rail | 3.3 V (TLV73333) |
+| Peak current | about 500 mA on LTE TX (VDD2). Use a 1 A-limited supply for bring-up |
+| Host UART | 115200 baud, RTS/CTS, DTR, RI |
+| Antennas | U.FL LTE (J2); U.FL GNSS, active antenna (J5) |
+| SIM | nano-SIM 4FF (JAE SF72S006) |
+| Debug | SWD, 2×5 1.27 mm (J8) |
+| Board size | 50.05 × 37.55 mm, R2.0 corners |
+| PCB | 4 layers, 1.6 mm FR4, ENIG, 1 oz; stackup 0.12 / 1.2 / 0.12 mm |
+| Vias | 30 epoxy-filled and capped (POFV) per board: 21 × 0.20 mm, 9 × 0.25 mm |
+| Assembly | double-sided: 51 top, 16 bottom (67 parts) |
 
-Outline 120 mm × 80 mm, R2 mm corners.
+## Key components
 
-## Impedance assumptions
+| Ref | Part | Function | LCSC |
+|---|---|---|---|
+| U1 | NRF9161-LACA-R7 | LTE-M / NB-IoT / GNSS SiP | C21547412 |
+| U2 | TLV73333PDBV | 3.3 V LDO (VDD_GPIO) | C134139 |
+| U3 | TPS22919DCKR | GNSS active-antenna bias switch | C2149796 |
+| U4 | TPD3F303DPV | SIM ESD protection | C2865991 |
+| U5, U6 | SN74LXC2T45 | UART level shifters | C5217891 |
+| U7, U8 | SN74LXC1T45 | DTR / RI level shifters | C4364198 |
+| Q1 | BSS138 | open-drain reset isolator | C52895 |
+| D1 | SS34 | reverse-polarity Schottky | C8678 |
+| D2 | SMAJ5.0A | VIN TVS | C10758 |
+| F1 | 2 A 1206 fuse | input fuse | C187611 |
+| J2, J5 | Hirose U.FL-R-SMT-1(10) | LTE / GNSS antenna | C88373 |
+| J7 | JAE SF72S006 | nano-SIM holder | C2977286 |
+| J8 | 2×5 1.27 mm SMD header | SWD | C5155080 |
+| J20 | 1×10 2.54 mm header | host interface | C57369 |
+| SW2 | C&K KXT3 | reset button | C778127 |
+| D3, D4 | LTST-C191KGKT green 0603 | power / status LEDs | C125098 |
 
-50 Ω microstrip on L1 over L2 GND:
+Full BOM and placement: [`jlc/BOM_JLC_v2.csv`](jlc/BOM_JLC_v2.csv), [`jlc/CPL_JLC_v2.csv`](jlc/CPL_JLC_v2.csv), master [`jlc/BOM.csv`](jlc/BOM.csv).
 
-- H ≈ 0.12 mm, εr ≈ 4.2, 1 oz copper
-- Trace width **0.20 mm** (net class `RF_50OHM`)
-- Confirm with the fabricator’s 4-layer impedance coupon before tape-out (typical 0.16–0.22 mm)
+## Board images
 
-RF keepout: no digital components or buses in the west matching/U.FL region. L2 under the 50 Ω line is solid GND (required for microstrip). Do not split L2 under ANT/GPS.
+| Top | Bottom |
+|---|---|
+| ![Top](images/top.png) | ![Bottom](images/bottom.png) |
+| ![Assembly top](images/assembly_top.png) | ![Assembly bottom](images/assembly_bottom.png) |
 
-## Assembly notes
+## Getting started
 
-1. LGA 16.0×10.5 mm, 0.30 mm round-rect pads from PS Table 56 (b=0.30). Nordic also documents oblong b×b1 0.30×0.80 for perimeter fanout; this revision uses 0.30 mm pads. Verify against the DK PcbDoc before SMT.
-2. Stencil: follow Nordic DK practice; typical 0.10–0.12 mm stainless with reduction on LGA pads. Characterise with the EMS.
-3. Populate DNP match parts only after VNA tune.
-4. Close JP2 for bring-up (SIM VCC). (v2: JP1/R2 current shunt removed; measure current at the VIN supply.)
-5. Ferrites: BOM uses BLM18KG221SN1 on VDD1/VDD2 (HDG Table 2 family). Some later DK notes prefer BLM18PG121SN1D (DCR < 0.1 Ω) — either is a Nordic-documented option; do not substitute arbitrary beads.
+1. **Power up carefully.** Apply 3.3–5.0 V on J20.1 from a current-limited supply. Start around 200 mA, then raise it to 1 A. D3 lights on VIN. Check TP15 VIN, TP14 VDD_nRF, TP13 VDD_GPIO (~3.3 V) and TP17 ENABLE.
+2. **SIM.** Insert a nano-SIM. **JP2 (bottom) must be solder-bridged**, or the SIM has no power.
+3. **Antennas.** LTE on J2: use a ground-independent antenna (sleeve or flex dipole, 698–2200 MHz), because the small board can't act as a counterpoise for a monopole. GNSS on J5: use an **active** patch antenna.
+4. **Flash firmware over SWD.** Build Nordic's [Serial Modem add-on](https://github.com/nrfconnect/ncs-serial-modem) (NCS 3.x) for `nrf9161dk/nrf9161/ns` with the external-MCU overlay, which matches this board's pins with no changes:
+   ```sh
+   west build -b nrf9161dk/nrf9161/ns app -- -DEXTRA_DTC_OVERLAY_FILE=external-mcu.overlay
+   west flash   # J-Link on J8
+   # or: nrfjprog -f NRF91 --program merged.hex --chiperase --verify --reset
+   ```
+   The nRF9161 modem firmware must also be present; flash it with nRF Connect Programmer if needed.
+5. **Talk to it** from the host at 115200 baud, RTS/CTS:
+   ```
+   AT                 -> OK
+   AT+CGMR            -> modem firmware version
+   AT+CFUN=1          -> radio on
+   AT+CEREG=5         -> enable registration notifications
+   AT+CEREG?          -> +CEREG: 5,1,... (1 = home, 5 = roaming)
+   AT%XMONITOR        -> network/cell info
+   AT+CFUN=0          -> radio off
+   ```
 
-## First power-up procedure
+### Network LED (D4)
 
-1. Visual inspect solder, LGA, RF matching, SIM cage, polarity of D1/D2/LEDs.
-2. With power off, measure resistance VIN–GND and VDD_nRF–GND. Expect high kΩ after capacitors charge; a dead short is a stop.
-3. Leave J2/J5 antennas disconnected until DC rails are good.
-4. Apply **current-limited** 3.3–5.0 V at J1 (start ~200 mA limit, raise to 1 A).
-5. Check TP15 VIN, TP14 VDD_nRF, TP13 VDD_GPIO (~3.3 V), TP17 ENABLE high, TP16 GND.
-6. Apply host VIO on J20.3. nRESET should sit high (internal pull-up); HOST_nRESET must not be held low.
-7. Connect J-Link to J8. `nrfjprog -f NRF91 --ids` must see the SiP.
-8. Program a blink/UART sample.
-9. Toggle P0.00–P0.02 and watch STATUS/LTE/GNSS LEDs; press USER (P0.08).
-10. Insert nano-SIM, close JP2, check SIM_1V8, CLK, RST, IO with a scope (keep probes short).
-11. Fit LTE antenna on J2, run `%COPS` / Nordic asset_tracker LTE attach.
-12. Fit **active** GNSS antenna on J5, enable COEX0 / LNA bias, check `$GNGGA` or `%XMONITOR`.
-13. DECT NR+ only with matching firmware and a suitable 1.9 GHz antenna on J2.
+D4 sits on **P0.00** (through R10, 1 kΩ, active-high). The Serial Modem app has no built-in network LED, so add about 20 lines of app code: subscribe to LTE registration events and drive P0.00 high on *registered home/roaming*, low otherwise. No hardware change is needed. In the board overlay, define a `gpio-leds` node on `&gpio0 0 GPIO_ACTIVE_HIGH` and disable the unused nRF9161 DK `led0–3` and button nodes.
 
-## Hardware validation
+### Notes
 
-Follow Nordic nRF9161 Hardware Verification Guidelines: current vs TX, VDD2 droop during LTE pulses, conducted RF via J2/J5 U.FL (v2: J3/J6 SWF removed), UICC ISO-7816, SWD, host UART/DTR/RI loopback through J20 at VIO = 1.8/3.3/5 V.
+- If you use a passive GNSS antenna, disable the GNSS LNA bias (COEX0, `AT%XCOEX0`).
+- SIM_DET (pin 45) intentionally floats. Card detect is on the J7 switch, not on pin 45.
+- The LTE π-match (L1 = 0 Ω, C21/C22 DNP) is a placeholder. Tune it with a VNA on the final mechanics.
 
-## Known limitations — not production-ready until these are closed
+## Fabrication and ordering (JLCPCB)
 
-kicad-cli DRC (`--severity-error`): **0 shorts, 0 clearance, 0 hole_clearance**. ERC: **0 errors**. The board is **not fab-ready** because **116 pads are still unconnected**.
+Order the **panel**: `fab/staging-v2-36d8578/nRF9161-v2-panel-36d8578.zip`, a 2×2 panel of 118.10 × 93.10 mm with mouse-bite tabs, a 6 mm frame and fiducials. The full instructions are in [`fab/staging-v2-36d8578/ORDER_NOTES.md`](fab/staging-v2-36d8578/ORDER_NOTES.md) and [`docs/FAB_READY_CHECKLIST_V2.md`](docs/FAB_READY_CHECKLIST_V2.md).
 
-0. **v2 (branch `v2`): the PCB has NOT been updated.** `nRF9161-DEV-BOARD.kicad_pcb` still holds the v1 breakout layout; Layout must run Update PCB from Schematic and re-place/route (items below describe v1).
-1. **Routing is incomplete.** Outer LGA pads are Nordic oblong 0.30×0.80 mm; 27 U1 nets have courtyard vias; J3 SWF tap is on F.Cu. Remaining unconnected copper is mainly VDD1/VDD2/VDD_GPIO, SIM (RST/CLK/IO/1V8), ENABLE/nRESET, MAGPIO/MIPI/COEX, and several GPIOs plus their protocol-header duplicates (J10/J18). Finish those in Pcbnew.
-2. GNSS_VBIAS still needs C30 and L4 joined around the GNSS_ANT spine without crossing the 50 Ω line.
-3. 0.50 mm-pitch LGA escape cannot run traces *along* pad rows; remaining U1 pads that failed fanout must leave along the oblong long axis into the north/south/east via rings (west MAGPIO/MIPI should jog to the north ring).
-4. In2.Cu is the VDD_nRF plane. GPIO *tracks* on In2 are allowed outside the VDD_nRF keepout x53–60 / y12–22 (as in passes 30bg–30bo), provided they do not split the plane (DRC must show no new VDD_nRF open). Do not pour GPIO on In2. Long GPIO remainder belongs on B.Cu with unique channels south of J18 (y≈46–55) and west wrap x≈25–33 for J12 pins in the RF x-range.
-5. Silkscreen is dense on 0402 clusters. Connector names and pin-1 markers are present.
-6. No onboard GNSS LNA/patch. Active antenna required.
-7. Input TVS is 5.0 V; continuous VIN must stay within 3.0–5.5 V.
-8. `schematics/` (plural) is leftover unused hierarchy; the live design is `schematic/` (singular).
+- **PCB:** 4 layers, 1.6 mm, ENIG, impedance stackup 0.12 / 1.2 / 0.12 mm.
+- **Via filling:** epoxy filled and copper capped (POFV, IPC-4761 Type VII). That's 30 vias per board and 120 per panel, all 0.20 mm and 0.25 mm holes. The caps must be flush or recessed.
+- **Assembly:** Standard PCBA, double-sided. Use separate top and bottom 0.10 mm stencils. Reflow the bottom first. U1 paste should be 70–85% of pad area, and U1 needs a first-article X-ray. JP2 is hand-bridged after reflow. J20 is THT and needs selective/wave soldering with a fixture.
+- **Rotations:** check them in JLC's DFM preview (U1, U4, U2/U3/U5–U8, Q1, D1–D4, F1, J2/J5, J7, J8, J20, SW2). No offsets are pre-applied.
+- **Consign the nRF9161.** JLC listed only 6 in stock for C21547412, so consign U1 or buy it from Mouser or DigiKey.
+- **Before ordering,** settle quote questions Q1–Q17 in the checklist (filled-via price, 0.20 mm drill in 1.6 mm, JP2 bridge, J20 fixture, panel CPL designators, mouse-bite minimum).
 
-**Do not send this PCB to a fab until unconnected nets are routed and DRC unconnected_items is zero.**
+## Repository structure
 
-## Reports and manufacturing
+```
+.
+├── README.md
+├── hardware/                 KiCad 9 project (open hardware/nRF9161-DEV-BOARD.kicad_pro)
+│   ├── nRF9161-DEV-BOARD.kicad_{pro,pcb,sch,dru,prl}
+│   ├── schematic/            hierarchical sheets 01–12
+│   ├── libraries/            project symbols + footprints (Board.pretty, Nordic_*)
+│   ├── 3dmodels/             placeholder STEP models
+│   ├── panel/                2×2 JLC panel project
+│   └── fp-lib-table, sym-lib-table   (${KIPRJMOD}-relative)
+├── jlc/                      BOM_JLC_v2.csv, CPL_JLC_v2.csv, master BOM.csv
+├── fab/
+│   ├── staging-v2-36d8578/   current fab package (single + panel zips, ORDER_NOTES)
+│   └── archive/              older staging packages and v1 outputs
+├── docs/                     pinout, fab checklist, stackup, reviews
+│   └── reports/              design, RF, DFM and DRC/ERC reports
+├── images/                   renders and assembly drawings
+└── tools/                    helper scripts
+```
 
-- BOM: `BOM.csv`
-- ERC: `reports/ERC.txt`, `reports/ERC_kicad-cli.rpt`
-- DRC: `reports/DRC_kicad-cli.rpt`, `reports/DRC_SUMMARY.txt`
-- Pin audit: `reports/PIN_AUDIT.csv`
-- Gerbers/drill/pos: `fab/` (generated from the last saved PCB; reflects the routing state above)
+## Revision history
 
-## Project files
+| Version | Branch | Notes |
+|---|---|---|
+| v1 | [`v1-dev-board`](../../tree/v1-dev-board) | Full breakout development board (120 × 80 mm, many headers) |
+| v2 | `main` | UART modem module: breakouts removed, single J20 host header with level shifters, 50.05 × 37.55 mm, double-sided assembly, U4 DPV footprint fixed, JLC-ready |
 
-- `nRF9161-DEV-BOARD.kicad_pro`
-- `nRF9161-DEV-BOARD.kicad_sch` — sheets A–L
-- `schematic/01_nRF9161.kicad_sch` … `12_TESTPOINTS.kicad_sch`
-- `nRF9161-DEV-BOARD.kicad_pcb`
-- `libraries/Nordic_nRF9161.kicad_sym`
-- `libraries/Board.pretty` — LGA, SWF, TPD3F303 USON
+## References
+
+- nRF9161 Product Specification, nRF91 Hardware Design Guidelines, nWP033 (antenna/RF), nWP054 (footprint)
+- nRF9161 DK PCA10153 reference design
+- [Nordic Serial Modem add-on](https://github.com/nrfconnect/ncs-serial-modem)
+
+## License
+
+No license file has been added yet. All rights are reserved by the author until one is.
