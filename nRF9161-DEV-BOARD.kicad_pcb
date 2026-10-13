@@ -201,7 +201,7 @@
 	(net 52 "unconnected-(J8-Pin_7-Pad7)")
 	(net 53 "unconnected-(J8-Pin_9-Pad9)")
 	(net 54 "unconnected-(U4-NC-Pad4)")
-	(net 55 "unconnected-(J7-VPP/SWP-PadC6)")
+	(net 55 "unconnected-(J7-VPP{slash}SWP-PadC6)")
 	(net 56 "unconnected-(U2-NC-Pad4)")
 	(net 57 "unconnected-(U3-NC-Pad4)")
 	(net 58 "unconnected-(U3-QOD-Pad5)")
@@ -5697,7 +5697,7 @@
 				)
 			)
 		)
-		(property "Value" "0R / DNP match"
+		(property "Value" "0R"
 			(at 0 1.17 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -6404,7 +6404,7 @@
 			(at 0 0.71 90)
 			(size 0.9 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 55 "unconnected-(J7-VPP/SWP-PadC6)")
+			(net 55 "unconnected-(J7-VPP{slash}SWP-PadC6)")
 			(uuid "45e53682-e578-4272-9694-b38e12e4e782")
 		)
 		(pad "C7" smd rect
@@ -6528,7 +6528,7 @@
 				)
 			)
 		)
-		(property "Value" "BLM18PG221SN1"
+		(property "Value" "BLM21PG221SN1"
 			(at 0 1.55 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10605,7 +10605,7 @@
 				)
 			)
 		)
-		(property "Value" "0R / DNP match"
+		(property "Value" "0R"
 			(at 0 1.17 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12181,7 +12181,7 @@
 				)
 			)
 		)
-		(property "Value" "PMEG4030ER"
+		(property "Value" "SS34"
 			(at 0 2.6 180)
 			(layer "F.Fab")
 			(hide yes)
