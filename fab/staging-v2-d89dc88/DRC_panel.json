@@ -1,0 +1,2996 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-13T06:30:33+0000",
+    "kicad_version": "9.0.2",
+    "schematic_parity": [],
+    "source": "nRF9161-v2-panel.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C9",
+                    "pos": {
+                        "x": 126.4,
+                        "y": 41.5
+                    },
+                    "uuid": "003e4f69-3de7-44a7-aa38-18b69d23b39d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'TestPoint' was not found at '/usr/share/kicad/footprints//TestPoint.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint TP1",
+                    "pos": {
+                        "x": 155.4,
+                        "y": 89.0
+                    },
+                    "uuid": "0154657f-db77-4c32-a695-ae9825e21c97"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB3",
+                    "pos": {
+                        "x": 183.7,
+                        "y": 78.5
+                    },
+                    "uuid": "01a3ac56-51cf-49d3-ae56-17da25c2d066"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C4",
+                    "pos": {
+                        "x": 180.2,
+                        "y": 55.5
+                    },
+                    "uuid": "03922cd1-754b-4b5c-a872-50adccadcf45"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB5",
+                    "pos": {
+                        "x": 106.3,
+                        "y": 97.7
+                    },
+                    "uuid": "05205ac8-4709-43fc-ab52-787e9ce8d9af"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C6",
+                    "pos": {
+                        "x": 176.9,
+                        "y": 55.5
+                    },
+                    "uuid": "07520857-e79d-4bb4-ad2d-fade21c0678e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C1",
+                    "pos": {
+                        "x": 134.5,
+                        "y": 46.5
+                    },
+                    "uuid": "0838e069-3ca0-4f29-bccb-e2e2eb34a1d0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Diode_SMD' was not found at '/usr/share/kicad/footprints//Diode_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D2",
+                    "pos": {
+                        "x": 137.0,
+                        "y": 37.8
+                    },
+                    "uuid": "0998d7ce-7eee-4f4f-9f2d-ab36ddc7a090"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C12",
+                    "pos": {
+                        "x": 127.5,
+                        "y": 87.8
+                    },
+                    "uuid": "0acdbfdc-20a5-41aa-b39a-4face82e0749"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C11",
+                    "pos": {
+                        "x": 179.6,
+                        "y": 49.5
+                    },
+                    "uuid": "0b449176-a2dd-47aa-8da1-ddcea79e8d05"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R10",
+                    "pos": {
+                        "x": 142.0,
+                        "y": 91.0
+                    },
+                    "uuid": "0ba9af4c-2197-4e1d-b618-644f94490690"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB3",
+                    "pos": {
+                        "x": 183.7,
+                        "y": 39.0
+                    },
+                    "uuid": "0bf20511-d9eb-4191-a0c3-76d5691da76b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint L2",
+                    "pos": {
+                        "x": 106.695,
+                        "y": 89.0
+                    },
+                    "uuid": "0c5111bf-ebd7-4248-a907-ed04c07dc797"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C11",
+                    "pos": {
+                        "x": 127.6,
+                        "y": 49.5
+                    },
+                    "uuid": "0d86bbb7-8624-45de-94cc-3be6513c4659"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C14",
+                    "pos": {
+                        "x": 175.5,
+                        "y": 57.1
+                    },
+                    "uuid": "0da681be-647d-46ca-b492-b04b548a6ae7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C39",
+                    "pos": {
+                        "x": 172.5,
+                        "y": 80.5
+                    },
+                    "uuid": "10d26f5e-989a-419c-bd6c-b03168c5ff80"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_PinHeader_1.27mm' was not found at '/usr/share/kicad/footprints//Connector_PinHeader_1.27mm.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J8",
+                    "pos": {
+                        "x": 171.5,
+                        "y": 36.1
+                    },
+                    "uuid": "10ebd9f9-5fed-485b-a748-86092d274ffb"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'LED_SMD' was not found at '/usr/share/kicad/footprints//LED_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D3",
+                    "pos": {
+                        "x": 191.0,
+                        "y": 88.0
+                    },
+                    "uuid": "177e38ca-adf0-4853-9f21-968734db19ca"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C13",
+                    "pos": {
+                        "x": 179.6,
+                        "y": 86.6
+                    },
+                    "uuid": "18335b43-7a16-4f03-9664-4454845aee57"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C2",
+                    "pos": {
+                        "x": 188.5,
+                        "y": 86.0
+                    },
+                    "uuid": "19555396-e604-457a-8c61-a91b233ac1c9"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'LED_SMD' was not found at '/usr/share/kicad/footprints//LED_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D3",
+                    "pos": {
+                        "x": 139.0,
+                        "y": 88.0
+                    },
+                    "uuid": "195b78c7-9bd7-424c-b95a-15a60f05f3f7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C1",
+                    "pos": {
+                        "x": 186.5,
+                        "y": 86.0
+                    },
+                    "uuid": "19721a04-4ece-4f47-ad19-02cb401232bd"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C28",
+                    "pos": {
+                        "x": 105.85,
+                        "y": 95.7
+                    },
+                    "uuid": "1a95933d-2ce7-4f2b-8e5c-a1f7f10d1c0f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'TestPoint' was not found at '/usr/share/kicad/footprints//TestPoint.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint TP1",
+                    "pos": {
+                        "x": 155.4,
+                        "y": 49.5
+                    },
+                    "uuid": "1a9852c0-0dc3-4b0b-b590-7e87b32552d8"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C13",
+                    "pos": {
+                        "x": 127.6,
+                        "y": 86.6
+                    },
+                    "uuid": "1b05961d-806a-49e2-9959-74638e1ed141"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Package_TO_SOT_SMD' was not found at '/usr/share/kicad/footprints//Package_TO_SOT_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint U3",
+                    "pos": {
+                        "x": 110.4,
+                        "y": 58.2
+                    },
+                    "uuid": "1b2daa0e-2013-4ad9-87b5-72e5902403ab"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 177.2,
+                        "y": 57.1
+                    },
+                    "uuid": "1bbff44c-1f92-43e6-8537-e91dc0990698"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C39",
+                    "pos": {
+                        "x": 120.5,
+                        "y": 80.5
+                    },
+                    "uuid": "1cb4420d-74d8-4279-b07a-6e9aa5a079d1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Board'.",
+            "items": [
+                {
+                    "description": "Footprint U1",
+                    "pos": {
+                        "x": 117.5,
+                        "y": 88.0
+                    },
+                    "uuid": "1dbecfb2-a4d4-49f7-b238-006dfe48b327"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C6",
+                    "pos": {
+                        "x": 176.9,
+                        "y": 95.0
+                    },
+                    "uuid": "1e263dee-453e-4092-9724-a65907d23dfe"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C40",
+                    "pos": {
+                        "x": 163.3,
+                        "y": 80.5
+                    },
+                    "uuid": "1f928165-a38c-4e2d-88ca-2e56ed4ecdf6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C39",
+                    "pos": {
+                        "x": 120.5,
+                        "y": 41.0
+                    },
+                    "uuid": "2183ecdd-8513-44ea-8965-a43d0d2d21b4"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C27",
+                    "pos": {
+                        "x": 105.11,
+                        "y": 53.0
+                    },
+                    "uuid": "225b3017-dc78-4f87-a3d3-1b06db5d31a7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C7",
+                    "pos": {
+                        "x": 180.7,
+                        "y": 78.6
+                    },
+                    "uuid": "250736e6-9959-4f55-b083-3c9da080e0ee"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_PinHeader_2.54mm' was not found at '/usr/share/kicad/footprints//Connector_PinHeader_2.54mm.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J20",
+                    "pos": {
+                        "x": 145.5,
+                        "y": 76.57
+                    },
+                    "uuid": "274ffa6c-a7d2-45ae-8b79-448db40e6579"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB5",
+                    "pos": {
+                        "x": 158.3,
+                        "y": 58.2
+                    },
+                    "uuid": "27522fa8-0883-40bf-bbe7-629a72f6e16d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C13",
+                    "pos": {
+                        "x": 179.6,
+                        "y": 47.1
+                    },
+                    "uuid": "28206a12-bc6e-4793-9ea3-284af12642c7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C9",
+                    "pos": {
+                        "x": 178.4,
+                        "y": 41.5
+                    },
+                    "uuid": "28c6ac3e-f2e5-4556-8156-a8b149924384"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'LED_SMD' was not found at '/usr/share/kicad/footprints//LED_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D3",
+                    "pos": {
+                        "x": 139.0,
+                        "y": 48.5
+                    },
+                    "uuid": "2927f1a2-8088-43df-b6a4-cf3a5a2cb56a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Fuse' was not found at '/usr/share/kicad/footprints//Fuse.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint F1",
+                    "pos": {
+                        "x": 190.5,
+                        "y": 81.5
+                    },
+                    "uuid": "2a4f1203-a7dc-4e71-8a2d-2375ded868ac"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB1",
+                    "pos": {
+                        "x": 183.5,
+                        "y": 56.5
+                    },
+                    "uuid": "2df34ecb-e5d1-4704-9496-381787e6aeb5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C30",
+                    "pos": {
+                        "x": 108.15,
+                        "y": 56.2
+                    },
+                    "uuid": "30d58d17-6bcb-4cc6-9add-c8f3f76dc61f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C22",
+                    "pos": {
+                        "x": 155.5,
+                        "y": 45.52
+                    },
+                    "uuid": "33567573-ebda-4afe-9a7e-259bbe94ebe5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C24",
+                    "pos": {
+                        "x": 157.25,
+                        "y": 49.98
+                    },
+                    "uuid": "33bfddef-16e9-4688-9a43-e0d20e1c1427"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C2",
+                    "pos": {
+                        "x": 136.5,
+                        "y": 86.0
+                    },
+                    "uuid": "34cd088a-0b62-45a0-8a19-38cc44107943"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C8",
+                    "pos": {
+                        "x": 180.2,
+                        "y": 81.0
+                    },
+                    "uuid": "350025e7-8888-43d4-b25f-614fca054ac8"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_PinHeader_1.27mm' was not found at '/usr/share/kicad/footprints//Connector_PinHeader_1.27mm.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J8",
+                    "pos": {
+                        "x": 171.5,
+                        "y": 75.6
+                    },
+                    "uuid": "35f42b1d-362e-4c67-bef2-bdfc599eb197"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C12",
+                    "pos": {
+                        "x": 179.5,
+                        "y": 48.3
+                    },
+                    "uuid": "3752e98b-1539-4b86-86be-0c9ef539114a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C5",
+                    "pos": {
+                        "x": 126.4,
+                        "y": 55.5
+                    },
+                    "uuid": "379bb1fa-2174-4347-a8a7-2975b5022ce0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C28",
+                    "pos": {
+                        "x": 157.85,
+                        "y": 95.7
+                    },
+                    "uuid": "3910551f-845c-4db2-aef2-ed83ab1d2eef"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_PinHeader_1.27mm' was not found at '/usr/share/kicad/footprints//Connector_PinHeader_1.27mm.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J8",
+                    "pos": {
+                        "x": 119.5,
+                        "y": 75.6
+                    },
+                    "uuid": "3a19960f-45dc-4cf5-a27f-561c8df99f28"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R5",
+                    "pos": {
+                        "x": 133.5,
+                        "y": 62.0
+                    },
+                    "uuid": "3ace0726-b25f-4403-a99b-70edb3c7bfee"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB5",
+                    "pos": {
+                        "x": 158.3,
+                        "y": 97.7
+                    },
+                    "uuid": "3d486ef1-1db6-4b37-bd6b-0d88d9944de7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'LED_SMD' was not found at '/usr/share/kicad/footprints//LED_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D4",
+                    "pos": {
+                        "x": 139.0,
+                        "y": 51.5
+                    },
+                    "uuid": "3d52ca67-6846-4055-bcf6-ed33112f9545"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 125.2,
+                        "y": 96.6
+                    },
+                    "uuid": "3ef1aab2-70df-4c27-823b-cf3826d07050"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C3",
+                    "pos": {
+                        "x": 128.7,
+                        "y": 57.9
+                    },
+                    "uuid": "3f28e375-211c-4ecc-9e7f-43915359b5f1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C27",
+                    "pos": {
+                        "x": 157.11,
+                        "y": 53.0
+                    },
+                    "uuid": "3fbdf0b1-c9f2-4b6b-878d-e9fd35a57a99"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C24",
+                    "pos": {
+                        "x": 105.25,
+                        "y": 49.98
+                    },
+                    "uuid": "4012c75c-fc58-4ec9-a765-d21af866471e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R3",
+                    "pos": {
+                        "x": 142.0,
+                        "y": 48.5
+                    },
+                    "uuid": "406f008b-ac19-4d9e-a0a5-f136616e19c5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C32",
+                    "pos": {
+                        "x": 155.5,
+                        "y": 52.52
+                    },
+                    "uuid": "40d076e5-4c45-4f79-9114-af9a99a20f31"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB1",
+                    "pos": {
+                        "x": 183.5,
+                        "y": 96.0
+                    },
+                    "uuid": "40f8500b-569d-482c-a3c8-4b069467a5ff"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB2",
+                    "pos": {
+                        "x": 131.7,
+                        "y": 82.5
+                    },
+                    "uuid": "429dfe8c-ebaa-45f6-8c84-672f9ae3fbd7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C31",
+                    "pos": {
+                        "x": 106.35,
+                        "y": 92.98
+                    },
+                    "uuid": "432a8d7f-e360-4d14-a290-63e31ffcd216"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C23",
+                    "pos": {
+                        "x": 108.15,
+                        "y": 88.52
+                    },
+                    "uuid": "43881f26-90bf-490c-9048-751554feefc7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C4",
+                    "pos": {
+                        "x": 128.2,
+                        "y": 95.0
+                    },
+                    "uuid": "4425527f-5899-4433-a293-964ca4dd95f6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R10",
+                    "pos": {
+                        "x": 194.0,
+                        "y": 91.0
+                    },
+                    "uuid": "454b4ac7-2075-40de-b553-fc63e7c1cd8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C22",
+                    "pos": {
+                        "x": 155.5,
+                        "y": 85.02
+                    },
+                    "uuid": "46e35ba4-3623-4f29-afb7-1d0372508cdc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB4",
+                    "pos": {
+                        "x": 186.0,
+                        "y": 41.7
+                    },
+                    "uuid": "48d53eae-4449-429e-9e51-aba2bf557d2e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C22",
+                    "pos": {
+                        "x": 103.5,
+                        "y": 85.02
+                    },
+                    "uuid": "49123a10-ccfd-4318-b9f1-c0b111782b23"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C21",
+                    "pos": {
+                        "x": 106.4,
+                        "y": 85.02
+                    },
+                    "uuid": "4952b338-8e0e-4fa1-991e-6f3a1212b9fc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C23",
+                    "pos": {
+                        "x": 160.15,
+                        "y": 49.02
+                    },
+                    "uuid": "4a060784-1a51-4bb5-8210-31ad64d2fb5f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C11",
+                    "pos": {
+                        "x": 127.6,
+                        "y": 89.0
+                    },
+                    "uuid": "4b5db11a-a4a8-4f4d-9206-ed2397474a4a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C10",
+                    "pos": {
+                        "x": 124.9,
+                        "y": 41.5
+                    },
+                    "uuid": "4cdc7b69-4685-4ab8-b080-a1b9e9f7b7ee"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Fuse' was not found at '/usr/share/kicad/footprints//Fuse.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint F1",
+                    "pos": {
+                        "x": 138.5,
+                        "y": 42.0
+                    },
+                    "uuid": "4eab16e3-ef8d-4192-a2ce-f94a334c55d1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C1",
+                    "pos": {
+                        "x": 134.5,
+                        "y": 86.0
+                    },
+                    "uuid": "518db10a-f99f-42c5-bf97-45c35420f8dc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Fuse' was not found at '/usr/share/kicad/footprints//Fuse.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint F1",
+                    "pos": {
+                        "x": 190.5,
+                        "y": 42.0
+                    },
+                    "uuid": "525de07e-dba0-4741-8ca6-e99c19a235e0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Diode_SMD' was not found at '/usr/share/kicad/footprints//Diode_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D1",
+                    "pos": {
+                        "x": 189.0,
+                        "y": 73.6
+                    },
+                    "uuid": "5418ad18-9a0d-4881-8e8b-d58dce28d78a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C5",
+                    "pos": {
+                        "x": 126.4,
+                        "y": 95.0
+                    },
+                    "uuid": "589bfca4-234c-45f8-b560-245b55fa6c32"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB2",
+                    "pos": {
+                        "x": 131.7,
+                        "y": 43.0
+                    },
+                    "uuid": "59442c64-868c-4e7e-82b0-9b2ac8ce41ec"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB4",
+                    "pos": {
+                        "x": 134.0,
+                        "y": 41.7
+                    },
+                    "uuid": "5abdbb15-98d4-4b15-9c9b-d31bf6d36694"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Diode_SMD' was not found at '/usr/share/kicad/footprints//Diode_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D2",
+                    "pos": {
+                        "x": 189.0,
+                        "y": 37.8
+                    },
+                    "uuid": "5c8d227f-bc8c-4b46-8484-8502e9e699f1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R3",
+                    "pos": {
+                        "x": 194.0,
+                        "y": 48.5
+                    },
+                    "uuid": "5dfd81ab-23b1-45f3-b529-0df3b55e34e1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C40",
+                    "pos": {
+                        "x": 111.3,
+                        "y": 80.5
+                    },
+                    "uuid": "5e9b81d1-bc86-416e-8c7b-9937a105d43d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C28",
+                    "pos": {
+                        "x": 157.85,
+                        "y": 56.2
+                    },
+                    "uuid": "619171a0-6832-4c29-a5eb-fab390c29981"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C14",
+                    "pos": {
+                        "x": 123.5,
+                        "y": 96.6
+                    },
+                    "uuid": "61b660c9-4f60-4ca5-ab0b-67c38411fbfa"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB2",
+                    "pos": {
+                        "x": 183.7,
+                        "y": 43.0
+                    },
+                    "uuid": "6233cf30-c7e5-4860-a86b-c4826ba71a7b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint L4",
+                    "pos": {
+                        "x": 156.79,
+                        "y": 93.985
+                    },
+                    "uuid": "6449e6f2-a585-47cc-b321-feb70ab08bed"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C30",
+                    "pos": {
+                        "x": 160.15,
+                        "y": 95.7
+                    },
+                    "uuid": "646ac43d-2017-445a-8c00-c02c427a9fe2"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R5",
+                    "pos": {
+                        "x": 185.5,
+                        "y": 101.5
+                    },
+                    "uuid": "67e3a403-a5a4-4a5f-a79f-4ee0c260370e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Button_Switch_SMD' was not found at '/usr/share/kicad/footprints//Button_Switch_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint SW2",
+                    "pos": {
+                        "x": 137.5,
+                        "y": 101.5
+                    },
+                    "uuid": "686072c0-9d89-4aa5-ba85-527be387e998"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C29",
+                    "pos": {
+                        "x": 159.0,
+                        "y": 95.7
+                    },
+                    "uuid": "6a317ea2-5903-4d2e-9b76-6c1fc511b26d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C24",
+                    "pos": {
+                        "x": 105.25,
+                        "y": 89.48
+                    },
+                    "uuid": "6bd114c9-1f39-4817-beab-b49c59d72a87"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'LED_SMD' was not found at '/usr/share/kicad/footprints//LED_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D3",
+                    "pos": {
+                        "x": 191.0,
+                        "y": 48.5
+                    },
+                    "uuid": "6be4ec4c-ae64-44e2-aa58-6dc958cea529"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Board'.",
+            "items": [
+                {
+                    "description": "Footprint U1",
+                    "pos": {
+                        "x": 169.5,
+                        "y": 48.5
+                    },
+                    "uuid": "6befb5f3-19b2-43f8-a19f-47c1c1c6bc32"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint L2",
+                    "pos": {
+                        "x": 158.695,
+                        "y": 49.5
+                    },
+                    "uuid": "6c934ca8-7238-45b6-87d0-00b3929c3032"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C5",
+                    "pos": {
+                        "x": 178.4,
+                        "y": 55.5
+                    },
+                    "uuid": "6f967f28-afc3-4065-b444-75c1bdadb11e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C7",
+                    "pos": {
+                        "x": 128.7,
+                        "y": 78.6
+                    },
+                    "uuid": "6fb7aaea-5dc9-419c-9298-0b47c2086e4b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R5",
+                    "pos": {
+                        "x": 133.5,
+                        "y": 101.5
+                    },
+                    "uuid": "71461430-ebdd-47d7-8e26-35921bb52329"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Diode_SMD' was not found at '/usr/share/kicad/footprints//Diode_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D1",
+                    "pos": {
+                        "x": 137.0,
+                        "y": 34.1
+                    },
+                    "uuid": "749fda89-25b1-417c-af26-b7399bd0e406"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_Coaxial' was not found at '/usr/share/kicad/footprints//Connector_Coaxial.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J5",
+                    "pos": {
+                        "x": 100.5,
+                        "y": 53.0
+                    },
+                    "uuid": "75cabf0b-a2df-4158-a2b5-9bee74c9095c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C7",
+                    "pos": {
+                        "x": 128.7,
+                        "y": 39.1
+                    },
+                    "uuid": "75df8373-2efb-4860-95d0-2be1b1f415e8"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 125.2,
+                        "y": 57.1
+                    },
+                    "uuid": "761b38ad-41be-4260-951a-d6c4838833a1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_PinHeader_2.54mm' was not found at '/usr/share/kicad/footprints//Connector_PinHeader_2.54mm.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J20",
+                    "pos": {
+                        "x": 197.5,
+                        "y": 37.07
+                    },
+                    "uuid": "779d421d-6f7c-4ed4-afcc-4881b5f243b2"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_Coaxial' was not found at '/usr/share/kicad/footprints//Connector_Coaxial.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 100.5,
+                        "y": 46.0
+                    },
+                    "uuid": "77e5faac-8f0d-4d44-9f11-b1972d8e2b69"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C10",
+                    "pos": {
+                        "x": 176.9,
+                        "y": 81.0
+                    },
+                    "uuid": "77f97757-562c-4088-8421-a5e574c54616"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Button_Switch_SMD' was not found at '/usr/share/kicad/footprints//Button_Switch_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint SW2",
+                    "pos": {
+                        "x": 137.5,
+                        "y": 62.0
+                    },
+                    "uuid": "784f30d5-0468-461f-b629-3a17aa59099d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C31",
+                    "pos": {
+                        "x": 158.35,
+                        "y": 92.98
+                    },
+                    "uuid": "79dc471a-870d-4a21-8b35-f692edc02e31"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C40",
+                    "pos": {
+                        "x": 163.3,
+                        "y": 41.0
+                    },
+                    "uuid": "7e944c68-1e97-4829-8ca2-d7cef7d8a4de"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C21",
+                    "pos": {
+                        "x": 106.4,
+                        "y": 45.52
+                    },
+                    "uuid": "7eb04e9b-0e74-4df8-9136-b9ca2c8abdf4"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Package_TO_SOT_SMD' was not found at '/usr/share/kicad/footprints//Package_TO_SOT_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint U3",
+                    "pos": {
+                        "x": 110.4,
+                        "y": 97.7
+                    },
+                    "uuid": "7ecd27fa-7210-4392-ad61-20401579277a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C30",
+                    "pos": {
+                        "x": 108.15,
+                        "y": 95.7
+                    },
+                    "uuid": "7fc6ce77-dae5-4dec-ba38-7890ae93c015"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_JAE' was not found at '/usr/share/kicad/footprints//Connector_JAE.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J7",
+                    "pos": {
+                        "x": 107.265,
+                        "y": 74.955
+                    },
+                    "uuid": "8077e26b-62a0-4c92-990f-c4ab56da3a52"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C10",
+                    "pos": {
+                        "x": 124.9,
+                        "y": 81.0
+                    },
+                    "uuid": "8133f328-350e-4f84-ba39-844de177ea8e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C21",
+                    "pos": {
+                        "x": 158.4,
+                        "y": 45.52
+                    },
+                    "uuid": "81818069-8d50-4881-b970-37b12d99799c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB1",
+                    "pos": {
+                        "x": 131.5,
+                        "y": 56.5
+                    },
+                    "uuid": "865c6e17-f489-48ba-a06f-52d4ddcecd91"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C27",
+                    "pos": {
+                        "x": 105.11,
+                        "y": 92.5
+                    },
+                    "uuid": "89201ab6-83ad-43ee-979a-bda78a2f7793"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C22",
+                    "pos": {
+                        "x": 103.5,
+                        "y": 45.52
+                    },
+                    "uuid": "89355594-b7dd-42f8-b364-b8b94ff42844"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C11",
+                    "pos": {
+                        "x": 179.6,
+                        "y": 89.0
+                    },
+                    "uuid": "89ebc9f1-b8f3-44f8-852f-61db489a91fe"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint L2",
+                    "pos": {
+                        "x": 106.695,
+                        "y": 49.5
+                    },
+                    "uuid": "8ccd31f4-4975-4563-a5d2-ed03718e2f79"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R10",
+                    "pos": {
+                        "x": 142.0,
+                        "y": 51.5
+                    },
+                    "uuid": "8deeb468-f52b-4852-ba3a-6a245cc60f6b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C29",
+                    "pos": {
+                        "x": 159.0,
+                        "y": 56.2
+                    },
+                    "uuid": "8e5d5d67-c1ac-44a9-8473-9d40c962f6c5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'LED_SMD' was not found at '/usr/share/kicad/footprints//LED_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D4",
+                    "pos": {
+                        "x": 139.0,
+                        "y": 91.0
+                    },
+                    "uuid": "8f256c1c-a37e-4a96-8898-8f943c43f7e1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_Coaxial' was not found at '/usr/share/kicad/footprints//Connector_Coaxial.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 152.5,
+                        "y": 85.5
+                    },
+                    "uuid": "8f765778-0a8b-4daa-b07f-86412a806780"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB4",
+                    "pos": {
+                        "x": 186.0,
+                        "y": 81.2
+                    },
+                    "uuid": "8fd39a5b-1128-49d6-9f8a-52168de52c3c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R5",
+                    "pos": {
+                        "x": 185.5,
+                        "y": 62.0
+                    },
+                    "uuid": "90cc4328-e570-461e-8f0a-2b4818dcb0ac"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C6",
+                    "pos": {
+                        "x": 124.9,
+                        "y": 55.5
+                    },
+                    "uuid": "91a308f1-b394-44b4-850b-9d578b9c0b15"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint L1",
+                    "pos": {
+                        "x": 156.945,
+                        "y": 46.0
+                    },
+                    "uuid": "947f4139-1ffe-47fc-b045-9b6f9241ec1c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Button_Switch_SMD' was not found at '/usr/share/kicad/footprints//Button_Switch_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint SW2",
+                    "pos": {
+                        "x": 189.5,
+                        "y": 62.0
+                    },
+                    "uuid": "9482786b-e55d-453f-9aaa-9f35499db9f6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C10",
+                    "pos": {
+                        "x": 176.9,
+                        "y": 41.5
+                    },
+                    "uuid": "94e0cf96-edb0-42c6-9da6-85bf3f1e0e99"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_Coaxial' was not found at '/usr/share/kicad/footprints//Connector_Coaxial.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 152.5,
+                        "y": 46.0
+                    },
+                    "uuid": "94e3fdbf-2eb6-4328-895f-e1af52c31b57"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint L1",
+                    "pos": {
+                        "x": 104.945,
+                        "y": 85.5
+                    },
+                    "uuid": "9a201f9b-0f1e-4b04-b6d6-1540978f32f0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_PinHeader_2.54mm' was not found at '/usr/share/kicad/footprints//Connector_PinHeader_2.54mm.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J20",
+                    "pos": {
+                        "x": 145.5,
+                        "y": 37.07
+                    },
+                    "uuid": "9a8592cb-ed61-4ab2-81e0-f6e583cd187d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_Coaxial' was not found at '/usr/share/kicad/footprints//Connector_Coaxial.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J5",
+                    "pos": {
+                        "x": 100.5,
+                        "y": 92.5
+                    },
+                    "uuid": "9cd9a90d-187d-43ce-ac0d-ce0e2b21eda3"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Package_TO_SOT_SMD' was not found at '/usr/share/kicad/footprints//Package_TO_SOT_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint U3",
+                    "pos": {
+                        "x": 162.4,
+                        "y": 97.7
+                    },
+                    "uuid": "9da07fd0-c9ea-4a75-b1ad-979290f4fe79"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C12",
+                    "pos": {
+                        "x": 127.5,
+                        "y": 48.3
+                    },
+                    "uuid": "9f1f7996-997c-4bf2-9c78-a51e746e6e6c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Fuse' was not found at '/usr/share/kicad/footprints//Fuse.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint F1",
+                    "pos": {
+                        "x": 138.5,
+                        "y": 81.5
+                    },
+                    "uuid": "a24c8352-eba9-45aa-9e61-8f9bd1cf956b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C1",
+                    "pos": {
+                        "x": 186.5,
+                        "y": 46.5
+                    },
+                    "uuid": "a331c853-f7d6-4082-afe1-915de5a31aaa"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint L4",
+                    "pos": {
+                        "x": 104.79,
+                        "y": 93.985
+                    },
+                    "uuid": "a37db223-9c1c-4756-ae41-2630dedc82a4"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Diode_SMD' was not found at '/usr/share/kicad/footprints//Diode_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D2",
+                    "pos": {
+                        "x": 137.0,
+                        "y": 77.3
+                    },
+                    "uuid": "a4016bfc-c8ae-497e-98bd-73cb2ec3d736"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C32",
+                    "pos": {
+                        "x": 155.5,
+                        "y": 92.02
+                    },
+                    "uuid": "a43925e6-e494-4ab8-a553-349a6db2aca5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB2",
+                    "pos": {
+                        "x": 183.7,
+                        "y": 82.5
+                    },
+                    "uuid": "a46fc601-63db-4453-96a8-4e31e7f00649"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_JAE' was not found at '/usr/share/kicad/footprints//Connector_JAE.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J7",
+                    "pos": {
+                        "x": 159.265,
+                        "y": 35.455
+                    },
+                    "uuid": "a4a99e9b-eb99-4171-867d-f81cbbb01d29"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C2",
+                    "pos": {
+                        "x": 188.5,
+                        "y": 46.5
+                    },
+                    "uuid": "a4b75471-83bd-4306-a917-afa1c99b2ad8"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C3",
+                    "pos": {
+                        "x": 180.7,
+                        "y": 57.9
+                    },
+                    "uuid": "a6c63cbb-505b-45d7-b4c5-119b3ac4323a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C9",
+                    "pos": {
+                        "x": 178.4,
+                        "y": 81.0
+                    },
+                    "uuid": "a6d82ac2-48ca-4e05-8560-cdac71e59b9d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C12",
+                    "pos": {
+                        "x": 179.5,
+                        "y": 87.8
+                    },
+                    "uuid": "a6f274d4-d727-4d8b-bf9b-e5897548aadb"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C3",
+                    "pos": {
+                        "x": 180.7,
+                        "y": 97.4
+                    },
+                    "uuid": "a7720001-955f-4d61-bd81-39903afece73"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB4",
+                    "pos": {
+                        "x": 134.0,
+                        "y": 81.2
+                    },
+                    "uuid": "a7d1624b-c2b0-4dfa-b285-9275de2adc8d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint L1",
+                    "pos": {
+                        "x": 156.945,
+                        "y": 85.5
+                    },
+                    "uuid": "a80b9bdd-9f40-4458-8ad5-86827973b191"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_JAE' was not found at '/usr/share/kicad/footprints//Connector_JAE.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J7",
+                    "pos": {
+                        "x": 159.265,
+                        "y": 74.955
+                    },
+                    "uuid": "a9185bd0-f3cc-4bda-88aa-01426d3927ee"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'TestPoint' was not found at '/usr/share/kicad/footprints//TestPoint.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint TP1",
+                    "pos": {
+                        "x": 103.4,
+                        "y": 49.5
+                    },
+                    "uuid": "a9d9847b-af5a-423d-b2f0-f554d8152db0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'LED_SMD' was not found at '/usr/share/kicad/footprints//LED_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D4",
+                    "pos": {
+                        "x": 191.0,
+                        "y": 51.5
+                    },
+                    "uuid": "aa45d451-02c4-4eda-a55e-72fd21288971"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C32",
+                    "pos": {
+                        "x": 103.5,
+                        "y": 52.52
+                    },
+                    "uuid": "aaf16aab-75c4-4373-a21b-4da714212e4a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R3",
+                    "pos": {
+                        "x": 142.0,
+                        "y": 88.0
+                    },
+                    "uuid": "ab550335-80fa-4c69-81ed-3eec70157c17"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C2",
+                    "pos": {
+                        "x": 136.5,
+                        "y": 46.5
+                    },
+                    "uuid": "ac01cc69-9739-4645-810d-f7cbd86d7bfa"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Board'.",
+            "items": [
+                {
+                    "description": "Footprint U1",
+                    "pos": {
+                        "x": 169.5,
+                        "y": 88.0
+                    },
+                    "uuid": "ac59e483-0c73-49fd-8073-6f52bdd062ca"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C23",
+                    "pos": {
+                        "x": 108.15,
+                        "y": 49.02
+                    },
+                    "uuid": "acf16011-fcc1-420f-bd94-a7683a07f6cb"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C13",
+                    "pos": {
+                        "x": 127.6,
+                        "y": 47.1
+                    },
+                    "uuid": "aff4b2a9-ce43-4149-98dd-9a618bdf86ac"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Diode_SMD' was not found at '/usr/share/kicad/footprints//Diode_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D2",
+                    "pos": {
+                        "x": 189.0,
+                        "y": 77.3
+                    },
+                    "uuid": "b0e0a49b-d179-4c34-80d6-0aa3fa78aaf8"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C14",
+                    "pos": {
+                        "x": 123.5,
+                        "y": 57.1
+                    },
+                    "uuid": "b205de27-4709-4268-b7d2-bc4185a07938"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Button_Switch_SMD' was not found at '/usr/share/kicad/footprints//Button_Switch_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint SW2",
+                    "pos": {
+                        "x": 189.5,
+                        "y": 101.5
+                    },
+                    "uuid": "b2c33dd7-68dd-4677-9163-c1f7b64e5af2"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_PinHeader_2.54mm' was not found at '/usr/share/kicad/footprints//Connector_PinHeader_2.54mm.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J20",
+                    "pos": {
+                        "x": 197.5,
+                        "y": 76.57
+                    },
+                    "uuid": "b46e2ad2-c6e6-477d-bd95-a4e1e7deafcd"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Package_TO_SOT_SMD' was not found at '/usr/share/kicad/footprints//Package_TO_SOT_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint U3",
+                    "pos": {
+                        "x": 162.4,
+                        "y": 58.2
+                    },
+                    "uuid": "b499af2e-2214-46b9-8d11-4b48e56e7ba6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_Coaxial' was not found at '/usr/share/kicad/footprints//Connector_Coaxial.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 100.5,
+                        "y": 85.5
+                    },
+                    "uuid": "b882ab87-177a-40a1-93b9-6def407ac01f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C24",
+                    "pos": {
+                        "x": 157.25,
+                        "y": 89.48
+                    },
+                    "uuid": "b88413ad-0ad7-4102-904e-589b9cf4407c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C40",
+                    "pos": {
+                        "x": 111.3,
+                        "y": 41.0
+                    },
+                    "uuid": "b9fc2f9b-d9a6-4d67-a5fd-83720643a609"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB1",
+                    "pos": {
+                        "x": 131.5,
+                        "y": 96.0
+                    },
+                    "uuid": "bbd474fb-94df-4538-89ea-caacf9be9db7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C27",
+                    "pos": {
+                        "x": 157.11,
+                        "y": 92.5
+                    },
+                    "uuid": "bea1821d-3b22-4226-92f0-1ad0aa9313b7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C32",
+                    "pos": {
+                        "x": 103.5,
+                        "y": 92.02
+                    },
+                    "uuid": "bed8748e-6194-4d19-b36d-39e7fbf5ce09"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C14",
+                    "pos": {
+                        "x": 175.5,
+                        "y": 96.6
+                    },
+                    "uuid": "bfaa9616-8a30-42ff-bbae-dd53eb31983d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint L1",
+                    "pos": {
+                        "x": 104.945,
+                        "y": 46.0
+                    },
+                    "uuid": "c00af5ed-d0f4-44db-8fe9-2f72f673b2e0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'LED_SMD' was not found at '/usr/share/kicad/footprints//LED_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D4",
+                    "pos": {
+                        "x": 191.0,
+                        "y": 91.0
+                    },
+                    "uuid": "c16ec74b-eca1-45f0-a613-7284c46a2f22"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R3",
+                    "pos": {
+                        "x": 194.0,
+                        "y": 88.0
+                    },
+                    "uuid": "c2246f2f-fb24-4512-87ef-eb54947dc7e1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Resistor_SMD' was not found at '/usr/share/kicad/footprints//Resistor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 177.2,
+                        "y": 96.6
+                    },
+                    "uuid": "c2a34c09-0442-460f-8908-dffce99dab7b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C21",
+                    "pos": {
+                        "x": 158.4,
+                        "y": 85.02
+                    },
+                    "uuid": "c5e82b27-0878-496d-8499-6f135eb9facc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint L2",
+                    "pos": {
+                        "x": 158.695,
+                        "y": 89.0
+                    },
+                    "uuid": "c6c6f8bb-78cd-4efb-8c29-a2f3a4c80e26"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_PinHeader_1.27mm' was not found at '/usr/share/kicad/footprints//Connector_PinHeader_1.27mm.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J8",
+                    "pos": {
+                        "x": 119.5,
+                        "y": 36.1
+                    },
+                    "uuid": "c73be954-ed2f-445d-8489-e27161f7dd26"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C4",
+                    "pos": {
+                        "x": 180.2,
+                        "y": 95.0
+                    },
+                    "uuid": "c7504de3-d1b6-48fe-975e-5e167c40c1bb"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Diode_SMD' was not found at '/usr/share/kicad/footprints//Diode_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D1",
+                    "pos": {
+                        "x": 189.0,
+                        "y": 34.1
+                    },
+                    "uuid": "c757d28b-1811-4729-a84b-ac0cba5af66a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C6",
+                    "pos": {
+                        "x": 124.9,
+                        "y": 95.0
+                    },
+                    "uuid": "c7a11a7d-c7b5-4a57-a4b5-1997bb0a4df6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C23",
+                    "pos": {
+                        "x": 160.15,
+                        "y": 88.52
+                    },
+                    "uuid": "ca0433a0-759f-4a5c-a639-55df2b8f377a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_JAE' was not found at '/usr/share/kicad/footprints//Connector_JAE.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J7",
+                    "pos": {
+                        "x": 107.265,
+                        "y": 35.455
+                    },
+                    "uuid": "cf03aa85-4c0d-4a75-8b4c-f8fd85af0496"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Diode_SMD' was not found at '/usr/share/kicad/footprints//Diode_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint D1",
+                    "pos": {
+                        "x": 137.0,
+                        "y": 73.6
+                    },
+                    "uuid": "cf2a55b2-8a6f-44bf-b6d2-5c060da08169"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C39",
+                    "pos": {
+                        "x": 172.5,
+                        "y": 41.0
+                    },
+                    "uuid": "d3ce0c86-741d-4995-bb70-e80d814ee654"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint L4",
+                    "pos": {
+                        "x": 156.79,
+                        "y": 54.485
+                    },
+                    "uuid": "db23e930-e8da-45ba-9ad7-60451991d6d3"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C31",
+                    "pos": {
+                        "x": 158.35,
+                        "y": 53.48
+                    },
+                    "uuid": "dc196e18-84c7-4871-a6f5-f17a39a06fdd"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB5",
+                    "pos": {
+                        "x": 106.3,
+                        "y": 58.2
+                    },
+                    "uuid": "dc27ed1b-bdb2-40c4-ac03-2c01c0c8121b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Inductor_SMD' was not found at '/usr/share/kicad/footprints//Inductor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint FB3",
+                    "pos": {
+                        "x": 131.7,
+                        "y": 39.0
+                    },
+                    "uuid": "dc8fdf93-a04b-4d9a-8626-9e92e65cbb0d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_Coaxial' was not found at '/usr/share/kicad/footprints//Connector_Coaxial.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J5",
+                    "pos": {
+                        "x": 152.5,
+                        "y": 92.5
+                    },
+                    "uuid": "e105f762-0dd1-4462-bc40-340dc99951e3"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C9",
+                    "pos": {
+                        "x": 126.4,
+                        "y": 81.0
+                    },
+                    "uuid": "e3bca9d5-f7ac-4d27-afb3-7137986a5e29"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C8",
+                    "pos": {
+                        "x": 128.2,
+                        "y": 81.0
+                    },
+                    "uuid": "e444f6fa-45c1-4d99-9446-3d42539d42ae"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C8",
+                    "pos": {
+                        "x": 128.2,
+                        "y": 41.5
+                    },
+                    "uuid": "e6bab8c6-13fd-4ea4-a052-27131b0ef115"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'Board'.",
+            "items": [
+                {
+                    "description": "Footprint U1",
+                    "pos": {
+                        "x": 117.5,
+                        "y": 48.5
+                    },
+                    "uuid": "e7c6bc6b-8155-4453-b744-cbd017483dc4"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C5",
+                    "pos": {
+                        "x": 178.4,
+                        "y": 95.0
+                    },
+                    "uuid": "e8482676-5b9c-4c92-9068-4917ee1d7467"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Connector_Coaxial' was not found at '/usr/share/kicad/footprints//Connector_Coaxial.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint J5",
+                    "pos": {
+                        "x": 152.5,
+                        "y": 53.0
+                    },
+                    "uuid": "e84c52f8-76e0-4a38-9561-1499744fd869"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C29",
+                    "pos": {
+                        "x": 107.0,
+                        "y": 56.2
+                    },
+                    "uuid": "e9861e8b-b7cf-4f6f-899e-d70069b96b55"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C8",
+                    "pos": {
+                        "x": 180.2,
+                        "y": 41.5
+                    },
+                    "uuid": "ed41280d-51b5-41c3-9bb2-5648a1e02d80"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C7",
+                    "pos": {
+                        "x": 180.7,
+                        "y": 39.1
+                    },
+                    "uuid": "edf1af44-3e96-4c7f-b136-27900ead2d52"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'Capacitor_SMD' was not found at '/usr/share/kicad/footprints//Capacitor_SMD.pretty'.",
+            "items": [
+                {
+                    "description": "Footprint C29",
+                    "pos": {
+                        "x": 107.0,
+                        "y": 95.7
+                    },
+                    "uuid": "f04b18c7-f609-4c0c-bb41-794dccd736ee"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        }
+    ]
+}

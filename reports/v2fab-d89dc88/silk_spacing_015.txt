@@ -1,0 +1,2 @@
+Counter({'lib_footprint_issues': 84, 'annular_width': 20, 'drill_out_of_range': 20, 'via_diameter': 20, 'silk_overlap': 1})
+Silkscreen overlap (board setup constraints silk clearance 0.1500 mm; actual 0.0900 mm) ['Segment of C23 on F.Silkscreen', 'Segment of U1 on F.Silkscreen']

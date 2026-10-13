@@ -1,0 +1,2 @@
+F texts 36 min h 1.0 below-min 0 Counter()
+B texts 28 min h 1.0 below-min 0 Counter()

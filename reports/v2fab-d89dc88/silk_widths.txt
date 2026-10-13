@@ -1,0 +1,2 @@
+F texts 37 min h 1.0 below-min items 6 Counter({('line', 'J20', 0.12): 6})
+B texts 32 min h 1.0 below-min items 45 Counter({('line', 'U7', 0.12): 5, ('line', 'Q1', 0.12): 5, ('line', 'U5', 0.12): 5, ('line', 'U8', 0.12): 5, ('line', 'U6', 0.12): 5, ('line', 'C41', 0.12): 2, ('line', 'C47', 0.12): 2, ('line', 'C43', 0.12): 2, ('line', 'C46', 0.12): 2, ('line', 'C45', 0.12): 2, ('line', 'R23', 0.12): 2, ('line', 'R21', 0.12): 2, ('line', 'C48', 0.12): 2, ('line', 'C44', 0.12): 2, ('line', 'C42', 0.12): 2})

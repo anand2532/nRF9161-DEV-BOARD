@@ -1,0 +1,10 @@
+{
+ "layout": {"type":"grid","rows":2,"cols":2,"space":"2mm","rotation":"0deg","alternation":"none","renamenet":"Board_{n}-{orig}","renameref":"{orig}"},
+ "tabs": {"type":"annotation","width":"3mm"},
+ "cuts": {"type":"mousebites","drill":"0.6mm","spacing":"1mm","offset":"-0.1mm","prolong":"0.5mm"},
+ "framing": {"type":"frame","width":"6mm","space":"2mm","cuts":"both"},
+ "tooling": {"type":"4hole","hoffset":"3mm","voffset":"3mm","size":"2mm","paste":false},
+ "fiducials": {"type":"3fid","hoffset":"15mm","voffset":"4.35mm","coppersize":"1mm","opening":"2mm","paste":false},
+ "post": {"millradius":"1mm","copperfill":false,"origin":"bl"},
+ "page": {"type":"inherit"}
+}
