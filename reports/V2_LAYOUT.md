@@ -84,3 +84,10 @@ The bottom is lighter (23 vs 44 assembled). J7 SIM holder is now on top. Bottom 
 ## Images
 - Top: `reports/v2_layout_top.png`
 - Bottom (mirrored view): `reports/v2_layout_bottom.png`
+
+## Pass v2d (DFM RED fixes from V2_FAB_PASS_6645a01), base d89dc88
+- v2d-1 2208604: unfilled 0.3 vias moved off pasted pads (C42.1, Q1.1, R23.1, C44.1, U2.1, J7 C5, C1.1, FB4.2); U5.4 edge via dropped. **No via converted to VIPPO.**
+- v2d-2 ff8f1bb: U4 (SIM ESD) + C33–C38 moved to TOP beside J7 (U4 @ 32.4,23.9), outside RF keepouts. SIM nets rerouted; no vias in any J7 pad. U4 EP: 0.3 mm GND track to 2 GND vias (30.75,23.9)/(30.9,23.05) + C40.2 tie. SWDIO/P0.22 rerouted.
+- v2d-3 76d2941: all bottom silk lines + J20 lines 0.15 mm; min_silk_clearance 0.15 (.kicad_pro); C23 east silk segment removed (was 0.09 mm to U1 silk).
+- Step 4 (bottom pad ↔ via copper ≥0.3 mm): not changed further; 15 different-net bottom-pad/via pairs <0.3 mm remain (all DRC-legal).
+- Gate: DRC 0, unconnected 0, silk 0. G1 8.66 mm; G2 In1 1 piece 1707 mm²/100 %; G3 fences ANT 100/100, GPS 98.7/100, AUX 100/100, rf_vias 0; G4 0.2×7 + 0.25×9 GND, B.Cu 100 %; G5 In2 1 piece 1574.7 mm², C40→U1.49 2.58 mm; G6 3/3 GND vias. Counts: top 51 assembled / bottom 16 assembled.
