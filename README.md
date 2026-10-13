@@ -162,6 +162,10 @@ Order the **panel**: `fab/staging-v2-36d8578/nRF9161-v2-panel-36d8578.zip`, a 2�
 - **Consign the nRF9161.** JLC listed only 6 in stock for C21547412, so consign U1 or buy it from Mouser or DigiKey.
 - **Before ordering,** settle quote questions Q1–Q17 in the checklist (filled-via price, 0.20 mm drill in 1.6 mm, JP2 bridge, J20 fixture, panel CPL designators, mouse-bite minimum).
 
+## Where to buy in India
+
+JLC assembly uses the LCSC parts in `jlc/`. Indian sourcing is for **hand assembly, rework or spares**. See **[india/README.md](india/README.md)** for Indian PCB fab and assembly vendors (with which ones can likely make the 0.20 mm filled vias) and for component vendors. The per-part sourcing list is [india/BOM_INDIA.csv](india/BOM_INDIA.csv) (Robu, then LionCircuits, with URLs, INR prices and stock).
+
 ## Repository structure
 
 ```
@@ -175,6 +179,7 @@ Order the **panel**: `fab/staging-v2-36d8578/nRF9161-v2-panel-36d8578.zip`, a 2�
 │   ├── panel/                2×2 JLC panel project
 │   └── fp-lib-table, sym-lib-table   (${KIPRJMOD}-relative)
 ├── jlc/                      BOM_JLC_v2.csv, CPL_JLC_v2.csv, master BOM.csv
+├── india/                    India sourcing: BOM_INDIA.csv/.xlsx, fab + parts vendor guide
 ├── fab/
 │   ├── staging-v2-36d8578/   current fab package (single + panel zips, ORDER_NOTES)
 │   └── archive/              older staging packages and v1 outputs
