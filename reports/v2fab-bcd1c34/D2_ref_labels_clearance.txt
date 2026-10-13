@@ -1,0 +1,24 @@
+F.Silkscreen 'TX' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.4 0.871 | nearest via 0.331 | edge 3.72
+F.Silkscreen 'nRST' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.9 2.348 | nearest via 0.278 | edge 5.197
+F.Silkscreen 'SWD' h/w/stroke 1.0 1.0 0.15 | nearest mask opening J8.2 1.368 | nearest via 0.293 | edge 5.88
+F.Silkscreen 'LTE' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J2.2 1.426 | nearest via 0.371 | edge 4.775
+F.Silkscreen 'RTS' h/w/stroke 1.0 0.6 0.15 | nearest mask opening R3.2 0.175 | nearest via 0.331 | edge 3.72
+F.Silkscreen 'RX' h/w/stroke 1.0 0.6 0.15 | nearest mask opening R3.2 0.432 | nearest via 0.331 | edge 3.72
+F.Silkscreen 'DTR' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.8 0.871 | nearest via 3.317 | edge 3.72
+F.Silkscreen 'GND' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.2 0.871 | nearest via 0.331 | edge 3.72
+F.Silkscreen 'CT' h/w/stroke 1.0 0.6 0.15 | nearest mask opening R10.2 0.434 | nearest via 1.564 | edge 3.72
+F.Silkscreen 'VIN' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.1 0.87 | nearest via 0.331 | edge 3.72
+F.Silkscreen 'VIO' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.3 0.884 | nearest via 0.331 | edge 3.72
+F.Silkscreen 'RI' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.9 0.871 | nearest via 1.753 | edge 3.72
+F.Silkscreen 'D2 ref' h/w/stroke 1.0 1.0 0.15 | nearest mask opening D1.1 0.587 | nearest via 1.121 | edge 4.989
+B.Silkscreen 'VIN' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.1 0.87 | nearest via 0.331 | edge 3.72
+B.Silkscreen 'RX' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.5 0.871 | nearest via 0.331 | edge 3.72
+B.Silkscreen 'RI' h/w/stroke 1.0 0.6 0.15 | nearest mask opening U2.5 0.185 | nearest via 1.753 | edge 3.72
+B.Silkscreen 'CT' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.7 0.871 | nearest via 1.618 | edge 3.72
+B.Silkscreen 'nRF9161\nUART Modem v2' h/w/stroke 1.2 1.2 0.18 | nearest mask opening TP14.1 0.783 | nearest via 0.254 | edge 1.19
+B.Silkscreen 'VIO' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.3 0.893 | nearest via 0.331 | edge 3.72
+B.Silkscreen 'GND' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.2 0.871 | nearest via 0.331 | edge 3.72
+B.Silkscreen 'RTS' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.6 0.871 | nearest via 0.331 | edge 3.72
+B.Silkscreen 'TX' h/w/stroke 1.0 0.6 0.15 | nearest mask opening J20.4 0.871 | nearest via 0.331 | edge 3.72
+B.Silkscreen 'DTR' h/w/stroke 1.0 0.6 0.15 | nearest mask opening U2.4 0.411 | nearest via 3.345 | edge 3.72
+B.Silkscreen 'nRST' h/w/stroke 1.0 0.6 0.15 | nearest mask opening U2.5 0.33 | nearest via 0.268 | edge 3.22

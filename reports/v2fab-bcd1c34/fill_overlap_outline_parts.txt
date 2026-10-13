@@ -1,0 +1,11 @@
+via classes {(0.3, 0.6): 223, (0.2, 0.3): 13, (0.25, 0.4): 9}
+FILLED/board {0.2: 13, 0.25: 9} 22 panel 88
+all tented True
+ring-only via(42.457,40.352) vs T C14.paste hole-edge-to-pad=0.127 assembled=yes
+ring-only via(42.457,40.352) vs T C14.2 hole-edge-to-pad=0.107 assembled=yes
+HOLE-OVERLAP via(63.2,46.6) vs B TP13.1 hole-edge-to-pad=-0.15 assembled=no
+ring-only via(44.9,16.6) vs B TP14.1 hole-edge-to-pad=-0.0 assembled=no
+ring-only via(49.564,27.924) vs T FB2.1 hole-edge-to-pad=0.106 assembled=yes
+ring-only via(50.636,41.424) vs T FB1.1 hole-edge-to-pad=0.106 assembled=yes
+outline closed True 1 holes 0 edges [('Arc', 2.0), ('Arc', 2.0), ('Arc', 2.0), ('Arc', 2.0), ('Line', 33.5), ('Line', 33.5), ('Line', 46.0), ('Line', 46.0)]
+parts T 51 170.1 mm2; B 16 30.1 mm2 -> bottom reflowed first

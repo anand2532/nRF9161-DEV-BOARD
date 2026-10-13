@@ -1,0 +1,2 @@
+panel/nRF9161-v2-panel.kicad_pcb : vias 980 (expect 980 ) tracks 3212 (expect 3212 ) silk-text mismatches vs 4x board: {(5, 'TX', 0.8, 90.0): 4, (5, 'nRST', 0.8, 0.0): 4, (5, 'LTE', 0.8, 0.0): 4, (5, 'RTS', 0.8, 90.0): 4, (5, 'RX', 0.8, 90.0): 4, (5, 'DTR', 0.8, 90.0): 4, (5, 'GND', 0.8, 90.0): 4, (5, 'CTS', 0.8, 90.0): 4, (5, 'VIN', 0.8, 90.0): 4, (5, 'VIO', 0.8, 90.0): 4, (5, 'RI', 0.8, 90.0): 4, (7, 'VIN', 0.8, 90.0): 4} | edge arcs {}
+/tmp/v2refill/panel5ad.kicad_pcb : vias 980 (expect 980 ) tracks 3212 (expect 3212 ) silk-text mismatches vs 4x board: none | edge arcs {}

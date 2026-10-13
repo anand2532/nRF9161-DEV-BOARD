@@ -169,3 +169,19 @@ Worktree: /workspace/kicad-projects/nRF9161-v2, which has v2-cosmetic checked ou
 - **AMP logo:** F.Silkscreen only, 3 filled shapes, bbox x 40.5–46.0, y 46.6–48.4. It sits on no copper layer and on no F.Cu pads, and is ≥30 mm from J2/J5. OK.
 - **Corners and DRC:** copper-edge clearance is 0.5 mm with R2.5 mm corners. kicad-cli: **0 errors, 0 unconnected**. 82 `lib_footprint_issues` warnings (environment only) and 1 cosmetic parity `net_conflict` on J7 C6.
 - G1–G8 PASS. F2–F4 notes unchanged.
+
+---
+## Re-check @ 5ad8bde (v2-cosmetic, vs 42876bb): **PASS (FAB-OK WITH NOTES)**
+- **Diff:** the copper/footprint diff of the .kicad_pcb (tracks, vias, footprints, zone outlines) shows only **+2 vias, both GND 0.6/0.3**, at (23.0, 26.5) and (18.5, 41.5). Footprints and zones are unchanged. Everything else is Edge.Cuts R2.0, silk/logo/fab, panel and renders.
+- **Stitching** (largest distance to the nearest GND via):
+  - Near J5: 1.80 → **1.58 mm**, about 3.2 mm spacing, which is ≈ λ/20.
+  - Around the J2 row (y 26.5): the gap is closed.
+  - The J2-area maximum, 1.80 mm, is now at (18.5, 24). That spot is outside B5, next to the still-removed via at (18.5, 25.0).
+  - The RF corner maximum of 3.33 mm at the west edge (16.5, 36) is unchanged since before v2-cosmetic.
+  - Pour islands: 17 on F.Cu and 13 on B.Cu, the same as before.
+  - Acceptable. Optional: also restore (18.5, 25.0).
+- **Fences:** ANT has 8 vias (max gap 2.36 mm), AUX 3 (2.0 mm), GNSS 9 (2.15 mm). Intact.
+- **In1:** 0 tracks, 1 piece, 1705.6 mm².
+- **Edge clearance:** copper-to-edge is 0.5 mm with R2.0 corners. DRC copper_edge_clearance has 0 hits. The J7 courtyard chamfer sits 0.052 mm inside the arc: that is a mechanical/courtyard item, not copper.
+- **DRC (kicad-cli 9.0.2):** **0 errors, 0 unconnected**. 82 `lib_footprint_issues` warnings (environment only) and 1 cosmetic parity `net_conflict` on J7 C6.
+- G1–G8 PASS. F2–F4 notes unchanged.

@@ -132,6 +132,8 @@ New in this pass:
 - Q14. POFV price on 4-layer boards (16 vias per board).
 - Q15. 0.20 mm drill through 1.6 mm (8:1 aspect ratio).
 - Q16. Manual JP2 bridge on the bottom side.
+- Q17. Mouse-bite tab width. JLC's capabilities page says "For breakaway with mouse-bites, the minimum width is 5mm" (https://jlcpcb.com/capabilities/pcb-capabilities). Our tabs are 3 mm and the rails are 6 mm. Does the 5 mm minimum apply to the tabs? Unverified.
+- Note: Q14 is now 22 filled vias per board, 88 per panel.
 
 ## Fix list for Layout
 1. Move the unfilled vias out of the J7, C34, R23, Q1 and C42 pads, and clear the U5.4, C44.1 and U2.1 overlaps. Alternatively, give those vias a unique drill and add them to the fill list.
@@ -139,3 +141,26 @@ New in this pass:
 3. Set the 0.12 mm silk lines to ≥0.15 mm (bottom-side footprints, J20).
 4. Fix the C23/U1 silk spacing. C23 is DNP, so its silk can be trimmed.
 5. Get bottom pads ≥0.3 mm from via copper where practical [General DFM practice].
+
+## Pass 42876bb (check-only, 2026-10-13)
+- Gate: **RED**. R1: logo A–M spacing is 0.143 mm, under 0.15. R2: the logo P notch is about 0.107 mm. All other checks GREEN; see reports/V2_FAB_PASS_42876bb.md.
+- Filled vias: 22/board, unchanged. DRC is 0/0 both as-is and refilled. The de49f6e panel is OK.
+- WAIVED (kept): C14, FB1.1, FB2.1, and the bottom pad-via pairs under 0.3 mm.
+- No package for this SHA. The final package will be built on v2h, which restores 2 GND vias at (23.0,26.5) and (18.5,41.5).
+
+## Pass 5ad8bde (v2h + v2i, 2026-10-13)
+- Gate: **RED**. R1: 21 silk labels are 0.8 mm high, below the JLC 1.0 mm minimum (J20 pin labels on F and B, plus LTE). Everything else is GREEN apart from the quote; see reports/V2_FAB_PASS_5ad8bde.md.
+- Logo gaps are 0.215 / 0.254 mm and the P notch is gone. J7 F.Fab is 0.106 mm and its courtyard 0.052 mm inside the R2.0 arc. DRC is 0/0 as-is and refilled.
+- Filled vias: 22 per board, 88 per panel. The restored (23.0, 26.5) and (18.5, 41.5) vias are 0.30 mm and unfilled.
+- The panel was rebuilt; the 0c124fa panel lacked the v2i-2/3 silk. Package: fab/staging-v2-5ad8bde/, marked DO NOT ORDER until R1 is resolved.
+- WAIVED (kept): C14, FB1.1, FB2.1, and the bottom pad-via pairs under 0.3 mm.
+- Open question for JLC: does the 5 mm mouse-bite "breakaway tab" minimum apply to our 3 mm tabs?
+
+## Pass bcd1c34 (v2j, 2026-10-13): **GREEN apart from the JLC quote**
+- R1 from 5ad8bde is closed. All 21 labels are now 1.0 mm high, 0.6 mm wide, with a 0.15 mm stroke. No silk text is under 1.0 mm and no stroke is under 0.15 mm. There are no silk-to-silk gaps under 0.15 mm. The closest silk to a mask opening is 0.175 mm. DRC reports 0 silk violations.
+- No copper changes since 5ad8bde: only text position, size and justification changed, plus the D2 reference.
+- Logo gaps are 0.215 / 0.254 mm, with no notch.
+- Filled vias: 22 per board, 88 per panel, and the VIPPO Gerber marks all 22 / 88. DRC is 0/0 both as-is and refilled.
+- Panel rebuilt from v2_panel.json. Panel DRC is 0/0, and its content matches 4× the board.
+- Package: fab/staging-v2-bcd1c34/. The DO-NOT-ORDER note has been removed; the order is still gated on the quote questions, including Q17.
+- WAIVED (kept): C14, FB1.1, FB2.1, and the bottom pad-to-via pairs under 0.3 mm.

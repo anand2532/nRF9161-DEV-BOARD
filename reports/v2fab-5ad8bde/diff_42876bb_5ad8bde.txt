@@ -1,0 +1,6 @@
+U1 identical to 42876bb: True
+vias removed []
+vias added [(18.5, 41.5, 0.3, 0.6, 'GND'), (23.0, 26.5, 0.3, 0.6, 'GND')]
+tracks removed 0 added 0 nets []
+stackup unchanged: True
+(stackup (layer "F.SilkS" (type "Top Silk Screen") ) (layer "F.Paste" (type "Top Solder Paste") ) (layer "F.Mask" (type "Top Solder Mask") (thickness 0.01) ) (layer "F.Cu" (type "copper") (thickness 0.035) ) (layer "dielectric 1" (type "prepreg") (thickness 0.12) (material "FR4") (epsilon_r 4.2) (loss_tangent 0.02) ) (layer "In1.Cu" (type "copper") (thickness 0.035) ) (layer "dielectric 2" (type "core") (thickness 1.2) (material "FR4") (epsilon_r 4.5) (loss_tangent 0.02) ) (layer "In2.Cu" (type "copper") (thickness 0.035) ) (layer "dielectric 3" (type "prepreg") (thickness 0.12) (material "FR4") (epsilon_r 4.2) (loss_tangent 0.02) ) (layer "B.Cu" (type "copper") (thickness 0.035) ) (layer "B.Mask" (type "Bottom Solder Mask") (thickness 0.01) ) (layer "B.Paste" (type "Bottom Solder Paste") ) (layer "B.SilkS" (type "Bottom Silk Screen") ) (copper_finish "ENIG") (dielectric_constraints no) )

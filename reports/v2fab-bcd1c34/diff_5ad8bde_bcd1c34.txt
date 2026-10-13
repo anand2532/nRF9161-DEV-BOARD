@@ -1,0 +1,25 @@
+git diff 5ad8bde..bcd1c34 -- nRF9161-DEV-BOARD.kicad_pcb: changed lines by kind
+     21 + at
+      2 + gr_text
+      1 + justify
+     21 + size
+     21 - at
+      2 - gr_text
+      2 - justify
+     21 - size
+context of each hunk (owning object):
+      1 (footprint "Diode_SMD:D_SMA"
+      2 (gr_text "DTR"
+      2 (gr_text "GND"
+      1 (gr_text "GNSS"
+      1 (gr_text "LTE"
+      2 (gr_text "RI"
+      2 (gr_text "RTS"
+      2 (gr_text "RX"
+      1 (gr_text "SWD"
+      2 (gr_text "TX"
+      2 (gr_text "VIN"
+      2 (gr_text "VIO"
+      1 (gr_text "nRF9161\nUART Modem v2"
+      2 (gr_text "nRST"
+      1 (property "Reference" "D2"
