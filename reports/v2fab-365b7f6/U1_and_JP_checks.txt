@@ -1,0 +1,2 @@
+U1 d89dc88 vs 365b7f6 identical (fpid,pos,rot,side,pads): True pads 159
+JP2 SIM_VCC B [('1', False, False), ('2', False, False)] BOM-excluded True

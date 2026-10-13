@@ -1,6 +1,33 @@
 # FAB READY CHECKLIST: v2 (UART modem module, double-sided)
 
-Board: `v2` @ **d89dc88** (final layout candidate). Pass date: 2026-10-13 IST. Report: `reports/V2_FAB_PASS_d89dc88.md`. Evidence: `reports/v2fab-d89dc88/`. Package: `fab/staging-v2-d89dc88/`. v1's checklist stays in `docs/FAB_READY_CHECKLIST.md`.
+Board: `v2` @ **365b7f6** (pass v2d). Pass date: 2026-10-13 IST. Report: `reports/V2_FAB_PASS_365b7f6.md`. Evidence: `reports/v2fab-365b7f6/`. Package: `fab/staging-v2-365b7f6/`. Drill scheme **(a) fill every 0.20 mm hole: CONFIRMED** (20 filled vias).
+
+## Overall gate (365b7f6): **RED (2 items)**
+
+| # | Item | Status | Evidence |
+|---|---|---|---|
+| 1 | Claims: size, 4L, J7 top; assembled 51 top / 16 bottom | PASS | parts.json |
+| 2 | Connectivity as-is / refilled | PASS 0/0 | DRC_asis.json, DRC_refilled.json |
+| 3 | DRC errors (silk clearance rule now 0.15) | PASS 0 | same |
+| 4 | Bottom parts (no BGA/LGA/QFN, heavy, tall, THT) | PASS (U4 moved to top) | report |
+| 5 | Lighter bottom / reflow order | PASS 16 vs 51 | report |
+| 6 | Nothing on the bottom under U1 + 1 mm | PASS | geometry_checks.txt |
+| 7 | No unfilled vias in pasted pads | **FAIL**: C38.2 (new via, centred); C12.1 (0.28 mm overlap, pre-existing). FB1.1/FB2.1/C14 edge overlaps ≤0.044 mm, hole outside the pad: waiver proposed | via_in_pad_unfilled.txt |
+| 8 | Bottom pads ≥0.3 mm from via copper | WAIVED (general practice): 20 pairs by bbox (Layout: 15), DRC-legal, no filled cap involved | bottom_pair_waiver.txt |
+| 9 | Fill scope: 0.20 ×11 + 0.25 ×9 = 20; U1 ones centred; ≥0.45 mm to unfilled | PASS | drill020_classification.txt |
+| 10 | New vias vs moved parts | PASS except C38.2 (item 7) | new_vias_vs_moved_parts.txt |
+| 11 | Stackup board = job = locked note | PASS | package_sanity.txt |
+| 12 | Silk text/lines ≥1.0/0.15, spacing 0.15, none on pads | PASS | silk_widths.txt, DRC_asis.json |
+| 13 | U1 vs Nordic DK | PASS | U1_and_JP_checks.txt |
+| 14 | Part-to-edge (panel frame) | PASS | edge_clearance.txt |
+| 15 | Panel 118.10×93.10, 6 mm frame, 3+3 fiducials, 4 × 2 mm tooling, mouse bites, DRC 0/0 | PASS | panel/, DRC_panel.json |
+| 16 | Package single + panel, CPL top/bottom | PASS (contents); not orderable while RED | fab/staging-v2-365b7f6/ |
+| 17 | Order notes (fill scheme confirmed, 51/16, bottom-first) | PASS | fab/staging-v2-365b7f6/ORDER_NOTES.md |
+| Q | JLC quote Q1–Q16 (Q14 = POFV price for 20 vias/board) | OPEN | below |
+
+---
+
+# Superseded: pass on d89dc88
 
 ## Overall gate (d89dc88): **RED** (6 items; the JLC quote items are open as expected)
 
