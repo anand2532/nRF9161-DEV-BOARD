@@ -1135,7 +1135,7 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C34"
-			(at 3.8 -2 0)
+			(at 1.300001 -2.05 0)
 			(layer "F.SilkS")
 			(uuid "bf1b25b8-d5dd-4a37-a584-2dcdd2925918")
 			(effects
@@ -1413,7 +1413,7 @@
 		(descr "surface-mounted straight pin header, 2x05, 1.27mm pitch, double rows")
 		(tags "Surface mounted pin header SMD 2x05 1.27mm double row")
 		(property "Reference" "J8"
-			(at -4.3 -4.3 0)
+			(at 0.6 -4.35 0)
 			(layer "F.SilkS")
 			(uuid "e4bf2ea5-154e-4f1e-8ad4-a40776e2c1b1")
 			(effects
@@ -18598,7 +18598,7 @@
 		)
 	)
 	(gr_text "SWD"
-		(at 43.8 21.1 0)
+		(at 43.95 18 0)
 		(layer "F.SilkS")
 		(uuid "281281e5-64ba-44e9-ac6b-28febb849b96")
 		(effects
