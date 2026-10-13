@@ -185,3 +185,65 @@ Worktree: /workspace/kicad-projects/nRF9161-v2, which has v2-cosmetic checked ou
 - **Edge clearance:** copper-to-edge is 0.5 mm with R2.0 corners. DRC copper_edge_clearance has 0 hits. The J7 courtyard chamfer sits 0.052 mm inside the arc: that is a mechanical/courtyard item, not copper.
 - **DRC (kicad-cli 9.0.2):** **0 errors, 0 unconnected**. 82 `lib_footprint_issues` warnings (environment only) and 1 cosmetic parity `net_conflict` on J7 C6.
 - G1–G8 PASS. F2–F4 notes unchanged.
+
+---
+## Re-check @ 8b768da (branch v2-u4, worktree nRF9161-v2-u4wt; copper base 13dce71 = 5ad8bde copper): **PASS (FAB-OK WITH NOTES)**
+**Copper diff:** besides the U4 footprint, vias were removed at (30.75, 23.9) GND, (30.9, 23.05) GND, (31.3, 23.9) GND, (31.3, 25.1) SIM_IO and (32.15, 25.3) SIM_CLK. New vias, all 0.20/0.30 filled:
+- GND: (30.35, 23.85), (30.6, 23.2), (33.85, 23.75)
+- SIM_IO: (30.9, 24.4), (33.65, 24.75)
+- SIM_CLK: (31.45, 25.3), (32.5, 25.3)
+- SIM_1V8: (31.35, 24.75)
+
+**U4 (TPD3F303DPVR) pinout:** checked against TI SLVSAJ7 §5, top view.
+- Datasheet: 1 DATA1_OUT, 2 CLK_OUT, 3 DATA2_OUT, 4 NC, 5 VCC, 6 DATA2_IN, 7 CLK_IN, 8 DATA1_IN, EP GND.
+- Board: 1 SIM_IO_C, 2 SIM_CLK_C, 3 SIM_RST_C, 4 NC, 5 SIM_1V8, 6 SIM_RST, 7 SIM_CLK, 8 SIM_IO, 9 GND.
+- The pairs 1↔8, 2↔7 and 3↔6 are correct, and the card side is on the OUT pins.
+- Numbering is counter-clockwise from the top (pins 1–4 on row y 23.15, 5–8 on row y 24.65, pin 8 opposite pin 1), so it is **not mirrored**.
+- Land: P0.5, pads 0.25×0.50, row span 2.0, EP 1.70×0.40, 2 paste-only windows. This is consistent with the DPV 1.6 × 2.1 body. Rotation 180°.
+
+**U4 ground (F1):** stays **closed**.
+- The EP has 3 GND vias:
+  - (33.85, 23.75): 0.45 mm edge-to-edge, 1.46 mm centre-to-centre, via a 0.25 mm track.
+  - (30.6, 23.2): 0.93 mm edge-to-edge, 1.93 mm centre-to-centre.
+  - (30.35, 23.85): 1.05 mm edge-to-edge, 2.05 mm centre-to-centre, on 0.25 mm.
+- Further vias at (34.45, 23.2) and (32.1, 26.35) are at 1.00 / 1.95 mm edge-to-edge.
+- The EP is merged into the F.Cu GND pour.
+- Estimated loop to In1: ≈0.8–1 nH (≈1 mm of 0.25 mm track plus a 0.12 mm via barrel). Similar to c37dc20, and fine for IEC 61000-4-2.
+- No via sits in a U4 pad. However, (30.35, 23.85) overlaps the **J7 SH shield pad (GND, same net)**. It is filled and capped, so this is acceptable, but it is "in pad", contrary to the Layout note.
+- TI asks for vias directly under the package. The EP is only 0.40 mm wide, so off-pad vias at ≤0.5 mm are the practical equivalent.
+
+**SIM routing:**
+- Card side, all F.Cu, 0.15 mm, no vias: SIM_RST_C **14.29 mm** (≤15 OK), SIM_IO_C 9.57 mm, SIM_CLK_C 5.26 mm.
+- Modem side: SIM_IO 9.85, SIM_CLK 6.14, SIM_RST 3.59, SIM_1V8 20.2 mm.
+- The minimum same-layer gap between SIM nets is 0.20 mm. Long parallel runs are short, so this is OK.
+- Distance to RF copper: SIM_CLK **5.15 mm**, SIM_CLK_C 8.26 mm (≥5 OK). The minimum for any SIM net is 4.48 mm (SIM_1V8, a DC rail, unchanged).
+
+**New vias:**
+- Distance to RF copper is ≥6.65 mm.
+- None is in B1 or B5. The SIM_CLK vias (31.45, 25.3) and (32.5, 25.3) are only **0.03 mm** outside the B1 outline. DRC passes, but this is a note.
+- Distance to U1 pads is ≥1.40 mm, so they are clear of the U1 VIPPO.
+- Distance to DEC/C40 pads is ≥0.21 mm. (30.35, 23.85) is the closest, near C40 (SIM_1V8 decoupling), and that is acceptable.
+
+**Fences, In1, islands:**
+- Fences are intact: ANT 8 vias / max gap 2.36 mm, AUX 3 / 2.0 mm, GNSS 9 / 2.15 mm.
+- In1: 0 tracks, 1 piece, 1716.8 mm².
+- Pour islands went **down** (F.Cu 17→13, B.Cu 13→11), with no new ones.
+- Stitching near J2/J5 is unchanged (1.80 / 1.58 mm).
+
+**DRC (kicad-cli 9.0.2, /tmp copy):**
+- **0 errors, 0 unconnected.**
+- 82 `lib_footprint_issues` warnings (environment only).
+- **1 new `lib_footprint_mismatch` on U4.** The footprint is still named `Board:TI_TPD3F303_USON-8_1.45x1.45mm_P0.4mm` (in the schematic too), but its geometry is now the 2.1×1.6 P0.5 DPV.
+- Parity: 1 cosmetic `net_conflict` on J7 C6.
+
+**Notes / fixes (non-blocking):**
+1. N1: rename the U4 footprint to e.g. `TI_TPD3F303_USON-8_2.1x1.6mm_P0.5mm`, update the Board lib copy and the schematic Footprint field, and clear the lib mismatch. This prevents an old-land regression on a future "update footprints from library".
+2. N2: optionally nudge the SIM_CLK vias (31.45 / 32.5, 25.3) about 0.1 mm north for margin on the B1 outline.
+3. N3: record the filled GND via in the J7 SH pad at (30.35, 23.85) as accepted.
+
+**Network LED guidance (future change):**
+- Place on top, ≥5 mm from any RF pad/feed/connector and outside B1–B5 (e.g. the north or east edge near D4/R10, or x ≥ 40 mm).
+- Drive from a free nRF GPIO (or the existing P0.00 STATUS LED) through a 1 kΩ series resistor placed at the LED, to VDD_GPIO or GND.
+- Do not use MAGPIO/COEX pins (they are reserved for the RF front end / U3 GNSS bias gate).
+- Route on F.Cu or B.Cu away from x < 30 / y 25–45. No trace under or alongside the feeds, none in B1–B5, none on In1.
+- LED current ≤5 mA keeps the VDD_GPIO IR drop negligible (<2 mV).
