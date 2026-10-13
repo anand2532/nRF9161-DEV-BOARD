@@ -1,0 +1,20 @@
+Edge.Cuts items: [('Arc', 2.5), ('Arc', 2.5), ('Line', ''), ('Arc', 2.5), ('Arc', 2.5), ('Line', ''), ('Line', ''), ('Line', '')]
+closed outline (GetBoardPolygonOutlines): True outlines 1 holes 0
+closest copper (pads by bbox corner, vias/track ends) to the real outline incl. R2.5 corners: [(-0.3, 'via', 'ENABLE'), (-0.3, 'via', 'GND'), (-0.3, 'via', 'GND'), (-0.3, 'via', 'GND'), (-0.3, 'via', 'GND'), (-0.3, 'via', 'GND')]
+corner NW pads within 4 mm of the corner point: [('J7', 'T')]
+corner NE pads within 4 mm of the corner point: []
+corner SW pads within 4 mm of the corner point: []
+corner SE pads within 4 mm of the corner point: [('TP13', 'B')]
+footprints with courtyard corners outside the rounded outline: ['J7']
+C44: B (41.0, 46.4) 0.0 [('1', 'VDD_GPIO'), ('2', 'GND')]
+C44 nearest same-side pads: [(1.03, 'C43.1', 'C44.1'), (1.03, 'C43.2', 'C44.1'), (1.365, 'U6.1', 'C44.1')]
+C44 nearest vias (copper gap): [(0.13, 'C44.1', 0.3, 'VDD_GPIO'), (0.445, 'C44.2', 0.3, 'GND'), (0.51, 'C44.1', 0.3, 'VDD_GPIO')]
+C44 edge distance (pads): 0.0
+--- corrected edge distances (shapely, polygonised outline incl. arcs); outline area 1869.62
+closest copper to outline: [(0.515, 'pad', 'J7.SH', 'T'), (0.65, 'track', 'VDD_GPIO', 'F.Cu'), (0.65, 'track', 'VDD_GPIO', 'F.Cu'), (0.65, 'track', 'VDD_GPIO', 'F.Cu'), (0.675, 'pad', 'J7.SH', 'T'), (0.675, 'pad', 'J7.SH', 'T')]
+min zone-fill to outline: 0.498
+J7 courtyard area outside outline 0.0726 mm2, bbox (16.05, 11.95, 16.1, 24.0)
+J7 courtyard area outside outline 0.0493 mm2, bbox (16.05, 11.95, 31.25, 12.0)
+J7 body(F.Fab) area outside outline 0.0175 mm2, bbox (16.43, 12.32, 30.88, 12.43)
+J7 body(F.Fab) area outside outline 0.0212 mm2, bbox (16.43, 12.32, 16.52, 14.82)
+J7 pads min dist to outline: 0.515

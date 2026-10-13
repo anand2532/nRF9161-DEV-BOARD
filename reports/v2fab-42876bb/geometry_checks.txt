@@ -1,0 +1,53 @@
+VIPPO 22
+ drill 0.2 ann 0.3 pad 21 psize [0.3, 0.3] off 0.0 net GND type 3
+ drill 0.25 ann 0.4 pad 103 psize [0.8, 0.8] off 0.0 net GND type 3
+ drill 0.2 ann 0.3 pad None psize None off None net GND type 3
+ drill 0.25 ann 0.4 pad 103 psize [0.8, 0.8] off 0.0 net GND type 3
+ drill 0.2 ann 0.3 pad 36 psize [0.3, 0.3] off 0.0 net GND type 3
+ drill 0.2 ann 0.3 pad 60 psize [0.3, 0.3] off 0.0 net GND type 3
+ drill 0.25 ann 0.4 pad 103 psize [0.8, 0.8] off 0.0 net GND type 3
+ drill 0.2 ann 0.3 pad 27 psize [0.3, 0.3] off 0.0 net GND type 3
+ drill 0.25 ann 0.4 pad 103 psize [0.8, 0.8] off 0.0 net GND type 3
+ drill 0.2 ann 0.3 pad None psize None off None net GND type 3
+ drill 0.25 ann 0.4 pad 103 psize [0.8, 0.8] off 0.0 net GND type 3
+ drill 0.25 ann 0.4 pad 103 psize [0.8, 0.8] off 0.0 net GND type 3
+ drill 0.25 ann 0.4 pad 103 psize [0.8, 0.8] off 0.0 net GND type 3
+ drill 0.25 ann 0.4 pad 103 psize [0.8, 0.8] off 0.0 net GND type 3
+ drill 0.2 ann 0.3 pad None psize None off None net GND type 3
+ drill 0.25 ann 0.4 pad 103 psize [0.8, 0.8] off 0.0 net GND type 3
+ drill 0.2 ann 0.3 pad None psize None off None net GND type 3
+ drill 0.2 ann 0.3 pad 52 psize [0.3, 0.3] off 0.0 net GND type 3
+ drill 0.2 ann 0.3 pad None psize None off None net GND type 3
+ drill 0.2 ann 0.3 pad 98 psize [0.3, 0.3] off 0.0 net GND type 3
+ drill 0.2 ann 0.3 pad 56 psize [0.3, 0.3] off 0.0 net GND type 3
+ drill 0.2 ann 0.3 pad None psize None off None net VDD_GPIO type 3
+min VIPPO-unfilled hole-edge/cu-edge/cc [(0.7, 0.5, 0.95), (0.717, 0.517, 0.967), (0.796, 0.596, 1.046)]
+U1 fab bbox (27.95, 26.7, 44.05, 37.3)
+bottom pad to via-cu <0.3mm: 26
+  ('TP13', '1', -0.3, 0.3, 'VDD_GPIO', 'VDD_GPIO')
+  ('TP14', '1', -0.15, 0.3, 'VDD_nRF', 'VDD_nRF')
+  ('U2', '1', 0.036, 0.3, 'VDD_nRF', 'VDD_nRF')
+  ('TP13', '1', 0.05, 0.3, 'VDD_GPIO', 'VDD_GPIO')
+  ('C42', '1', 0.09, 0.3, 'VDD_GPIO', 'VDD_GPIO')
+  ('U6', '4', 0.102, 0.3, 'HOST_CTS', 'GND')
+  ('U6', '2', 0.109, 0.3, 'HOST_RX', 'HOST_RX')
+  ('R23', '1', 0.114, 0.3, 'P0.30', 'VIO')
+  ('R23', '1', 0.116, 0.3, 'VIO', 'VIO')
+  ('Q1', '2', 0.12, 0.3, 'GND', 'nRESET')
+  ('C47', '2', 0.122, 0.3, 'P0.30', 'GND')
+  ('U5', '5', 0.13, 0.3, 'HOST_RTS', 'VIO')
+  ('C44', '1', 0.13, 0.3, 'VDD_GPIO', 'VDD_GPIO')
+  ('U5', '6', 0.138, 0.3, 'HOST_RTS', 'P0.07')
+  ('U6', '1', 0.141, 0.3, 'HOST_RX', 'VIO')
+  ('TP7', '1', 0.15, 0.3, 'SIM_VCC', 'SWDIO')
+  ('Q1', '3', 0.159, 0.3, 'VDD_GPIO', 'HOST_nRESET')
+  ('Q1', '3', 0.159, 0.3, 'VDD_GPIO', 'HOST_nRESET')
+  ('U6', '1', 0.165, 0.3, 'VDD_GPIO', 'VIO')
+  ('Q1', '3', 0.18, 0.3, 'GND', 'HOST_nRESET')
+  ('C43', '2', 0.24, 0.3, 'VDD_GPIO', 'GND')
+  ('C42', '2', 0.259, 0.3, 'VDD_GPIO', 'GND')
+  ('C41', '1', 0.263, 0.3, 'HOST_TX', 'VIO')
+  ('U6', '1', 0.282, 0.3, 'VDD_GPIO', 'VIO')
+  ('JP2', '2', 0.285, 0.2, 'GND', 'SIM_VCC')
+  ('C43', '2', 0.29, 0.3, 'GND', 'GND')
+VIPPO bottom caps near bottom pads: [('JP2', '2', 0.285, 0.2, 'GND', 'SIM_VCC')]

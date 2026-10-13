@@ -139,3 +139,9 @@ New in this pass:
 3. Set the 0.12 mm silk lines to ≥0.15 mm (bottom-side footprints, J20).
 4. Fix the C23/U1 silk spacing. C23 is DNP, so its silk can be trimmed.
 5. Get bottom pads ≥0.3 mm from via copper where practical [General DFM practice].
+
+## Pass 42876bb (check-only, 2026-10-13)
+- Gate: **RED**. R1: logo A–M spacing is 0.143 mm, under 0.15. R2: the logo P notch is about 0.107 mm. All other checks GREEN; see reports/V2_FAB_PASS_42876bb.md.
+- Filled vias: 22/board, unchanged. DRC is 0/0 both as-is and refilled. The de49f6e panel is OK.
+- WAIVED (kept): C14, FB1.1, FB2.1, and the bottom pad-via pairs under 0.3 mm.
+- No package for this SHA. The final package will be built on v2h, which restores 2 GND vias at (23.0,26.5) and (18.5,41.5).
