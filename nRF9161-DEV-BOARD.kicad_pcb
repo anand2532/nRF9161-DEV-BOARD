@@ -18644,6 +18644,17 @@
 			)
 		)
 	)
+	(gr_text "LTE"
+		(at 21.45 26.3 0)
+		(layer "F.SilkS")
+		(uuid "4cf23fe8-1327-4cd4-8019-1510f1413146")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
 	(gr_text "RTS"
 		(at 62.4 33.27 0)
 		(layer "F.SilkS")
@@ -18870,17 +18881,6 @@
 				(thickness 0.15)
 			)
 			(justify left mirror)
-		)
-	)
-	(gr_text "LTE"
-		(at 21.7 26.2 0)
-		(layer "F.Fab")
-		(uuid "4cf23fe8-1327-4cd4-8019-1510f1413146")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
 		)
 	)
 	(gr_text "GNSS"
