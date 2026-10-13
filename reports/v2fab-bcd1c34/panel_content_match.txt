@@ -1,0 +1,1 @@
+panel vias 980 expect 980 tracks 3212 expect 3212 silk text mismatches vs 4x board: none | CT labels in panel: 8 | CTS: 0

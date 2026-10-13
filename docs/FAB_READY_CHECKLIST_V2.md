@@ -132,6 +132,8 @@ New in this pass:
 - Q14. POFV price on 4-layer boards (16 vias per board).
 - Q15. 0.20 mm drill through 1.6 mm (8:1 aspect ratio).
 - Q16. Manual JP2 bridge on the bottom side.
+- Q17. Mouse-bite tab width. JLC's capabilities page says "For breakaway with mouse-bites, the minimum width is 5mm" (https://jlcpcb.com/capabilities/pcb-capabilities). Our tabs are 3 mm and the rails are 6 mm. Does the 5 mm minimum apply to the tabs? Unverified.
+- Note: Q14 is now 22 filled vias per board, 88 per panel.
 
 ## Fix list for Layout
 1. Move the unfilled vias out of the J7, C34, R23, Q1 and C42 pads, and clear the U5.4, C44.1 and U2.1 overlaps. Alternatively, give those vias a unique drill and add them to the fill list.
@@ -153,3 +155,12 @@ New in this pass:
 - The panel was rebuilt; the 0c124fa panel lacked the v2i-2/3 silk. Package: fab/staging-v2-5ad8bde/, marked DO NOT ORDER until R1 is resolved.
 - WAIVED (kept): C14, FB1.1, FB2.1, and the bottom pad-via pairs under 0.3 mm.
 - Open question for JLC: does the 5 mm mouse-bite "breakaway tab" minimum apply to our 3 mm tabs?
+
+## Pass bcd1c34 (v2j, 2026-10-13): **GREEN apart from the JLC quote**
+- R1 from 5ad8bde is closed. All 21 labels are now 1.0 mm high, 0.6 mm wide, with a 0.15 mm stroke. No silk text is under 1.0 mm and no stroke is under 0.15 mm. There are no silk-to-silk gaps under 0.15 mm. The closest silk to a mask opening is 0.175 mm. DRC reports 0 silk violations.
+- No copper changes since 5ad8bde: only text position, size and justification changed, plus the D2 reference.
+- Logo gaps are 0.215 / 0.254 mm, with no notch.
+- Filled vias: 22 per board, 88 per panel, and the VIPPO Gerber marks all 22 / 88. DRC is 0/0 both as-is and refilled.
+- Panel rebuilt from v2_panel.json. Panel DRC is 0/0, and its content matches 4× the board.
+- Package: fab/staging-v2-bcd1c34/. The DO-NOT-ORDER note has been removed; the order is still gated on the quote questions, including Q17.
+- WAIVED (kept): C14, FB1.1, FB2.1, and the bottom pad-to-via pairs under 0.3 mm.
