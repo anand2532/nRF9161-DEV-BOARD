@@ -1,0 +1,3 @@
+closest copper to outline: [(0.498, 'zone GND'), (0.498, 'zone GND'), (0.498, 'zone GND'), (0.498, 'zone VDD_nRF')] | outside: none
+J7 F.Courtyard inside outline: True min clearance 0.049
+J7 F.Fab inside outline: True min clearance 0.106

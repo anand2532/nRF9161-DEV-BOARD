@@ -1,0 +1,5 @@
+BOM headers ['Comment', 'Designator', 'Footprint', 'LCSC'] | CPL headers ['Designator', 'Comment', 'Footprint', 'Mid X', 'Mid Y', 'Layer', 'Rotation'] | JLC required CPL: Designator, Mid X, Mid Y, Layer, Rotation -> True
+counts BOM 67 CPL 67 unique 67 board fitted 67 | layers Counter({'Top': 51, 'Bottom': 16})
+set diffs: fitted-BOM none fitted-CPL none CPL-fitted none BOM-fitted none
+missing LCSC none
+mismatches [('J2', ['BOM comment U.FL-R-SMT-1(10) vs CPL U.FL_LTE_NR+']), ('J5', ['BOM comment U.FL-R-SMT-1(10) vs CPL U.FL_GNSS'])]

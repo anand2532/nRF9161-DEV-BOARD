@@ -1,0 +1,9 @@
+FP D1 ['value'] (55.5, 17.6, 180.0, 'T', 'Diode_SMD:D_SMA', 'PMEG4030ER') -> (55.5, 17.6, 180.0, 'T', 'Diode_SMD:D_SMA', 'SS34')
+FP FB4 ['value'] (52.5, 25.2, 90.0, 'T', 'Inductor_SMD:L_0805_2012Metric', 'BLM18PG221SN1') -> (52.5, 25.2, 90.0, 'T', 'Inductor_SMD:L_0805_2012Metric', 'BLM21PG221SN1')
+FP J7 ['pads'] (25.765, 18.955, -90.0, 'T', 'Connector_JAE:JAE_SIM_Card_SF72S006', 'nanoSIM_4FF') -> (25.765, 18.955, -90.0, 'T', 'Connector_JAE:JAE_SIM_Card_SF72S006', 'nanoSIM_4FF')
+FP L1 ['value'] (23.445, 29.5, 180.0, 'T', 'Inductor_SMD:L_0402_1005Metric', '0R / DNP match') -> (23.445, 29.5, 180.0, 'T', 'Inductor_SMD:L_0402_1005Metric', '0R')
+FP L2 ['value'] (25.195, 33.0, 180.0, 'T', 'Inductor_SMD:L_0402_1005Metric', '0R / DNP match') -> (25.195, 33.0, 180.0, 'T', 'Inductor_SMD:L_0402_1005Metric', '0R')
+FP U4 ['rot', 'fpid', 'pads'] (32.4, 23.9, 0.0, 'T', 'Board:TI_TPD3F303_USON-8_1.45x1.45mm_P0.4mm', 'TPD3F303DPV') -> (32.4, 23.9, 180.0, 'T', 'Board:TI_TPD3F303_USON-8_DPV_2.1x1.6mm_P0.5mm', 'TPD3F303DPV')
+vias removed [(30.75, 23.9, 0.3, 0.6, 'GND'), (30.9, 23.05, 0.3, 0.6, 'GND'), (31.3, 23.9, 0.3, 0.6, 'GND'), (31.3, 25.1, 0.3, 0.6, 'SIM_IO'), (32.15, 25.3, 0.3, 0.6, 'SIM_CLK')]
+vias added [(30.35, 23.85, 0.2, 0.3, 'GND'), (30.6, 23.2, 0.2, 0.3, 'GND'), (30.9, 24.4, 0.2, 0.3, 'SIM_IO'), (31.35, 24.75, 0.2, 0.3, 'SIM_1V8'), (31.45, 25.3, 0.2, 0.3, 'SIM_CLK'), (32.5, 25.2, 0.2, 0.3, 'SIM_CLK'), (33.65, 24.75, 0.2, 0.3, 'SIM_IO'), (33.85, 23.75, 0.2, 0.3, 'GND')]
+tracks removed 28 added 50 nets touched ['GND', 'SIM_1V8', 'SIM_CLK', 'SIM_CLK_C', 'SIM_IO', 'SIM_IO_C', 'SIM_RST', 'SIM_RST_C']

@@ -1,0 +1,10 @@
+== F.Silkscreen items 166; below 1.0 mm text / 0.15 mm stroke: [('U4', 'line', 0.1), ('U4', 'line', 0.1), ('U4', 'line', 0.1)]
+ silk-to-silk gaps 0<g<0.15 between different owners: none
+ features narrower than 0.15 (mitre opening, area>0.002 mm2): [((33.41, 22.8, 33.51, 24.45), 0.1627), ((31.29, 23.35, 31.39, 24.45), 0.1077)]
+ gaps/notches narrower than 0.15 (mitre closing, area>0.001 mm2): [((43.57, 37.81, 43.93, 37.92), 0.0121)]
+== B.Silkscreen items 102; below 1.0 mm text / 0.15 mm stroke: none
+ silk-to-silk gaps 0<g<0.15 between different owners: none
+ features narrower than 0.15 (mitre opening, area>0.002 mm2): none
+ gaps/notches narrower than 0.15 (mitre closing, area>0.001 mm2): none
+== AMP logo: 0 filled pieces -> 0 connected letters; bbox (nan, nan, nan, nan) size nan x nan
+  logo slits/notches <0.15 (closing): none

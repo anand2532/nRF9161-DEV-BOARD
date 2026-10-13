@@ -1,0 +1,1 @@
+U4 Board:TI_TPD3F303_USON-8_DPV_2.1x1.6mm_P0.5mm pos 32.4 23.9 rot 180.0 side T value TPD3F303DPV
