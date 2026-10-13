@@ -10615,7 +10615,7 @@
 		(descr "Diode SMA (DO-214AC)")
 		(tags "Diode SMA (DO-214AC)")
 		(property "Reference" "D2"
-			(at 4.7 -2.2 0)
+			(at 4.65 -2.75 0)
 			(layer "F.SilkS")
 			(uuid "59f97727-d5b4-4021-8202-05dac598737c")
 			(effects
@@ -18610,26 +18610,25 @@
 		(uuid "c595af0d-bd21-4d08-8e0e-5024ae3abf20")
 	)
 	(gr_text "TX"
-		(at 61.85 28.19 90)
+		(at 61.75 28.19 90)
 		(layer "F.SilkS")
 		(uuid "1043efab-4cc2-4267-a684-763926c2701d")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 		)
 	)
 	(gr_text "nRST"
-		(at 59.1 43.43 0)
+		(at 59.7 41.28 0)
 		(layer "F.SilkS")
 		(uuid "212a3e65-8a9f-4c9f-8a10-bdbff4b75d54")
 		(effects
 			(font
-				(size 0.8 0.8)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
-			(justify right)
 		)
 	)
 	(gr_text "SWD"
@@ -18649,142 +18648,142 @@
 		(uuid "4cf23fe8-1327-4cd4-8019-1510f1413146")
 		(effects
 			(font
-				(size 0.8 0.8)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 		)
 	)
 	(gr_text "RTS"
-		(at 61.85 33.27 90)
+		(at 61.75 33.27 90)
 		(layer "F.SilkS")
 		(uuid "5cce1a48-cf45-4749-93c4-f061f29535bd")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 		)
 	)
 	(gr_text "RX"
-		(at 61.85 30.73 90)
+		(at 61.75 30.73 90)
 		(layer "F.SilkS")
 		(uuid "633bd785-6a71-4887-b695-773a456e1999")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 		)
 	)
 	(gr_text "DTR"
-		(at 61.85 38.35 90)
+		(at 61.75 38.35 90)
 		(layer "F.SilkS")
 		(uuid "6bf94008-2ff6-4a74-850a-dc90d9e051e0")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 		)
 	)
 	(gr_text "GND"
-		(at 61.85 22.56 90)
+		(at 61.75 22.56 90)
 		(layer "F.SilkS")
 		(uuid "76bbea5c-6a04-43fd-a9bb-062b2260f918")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 		)
 	)
-	(gr_text "CTS"
-		(at 61.85 35.81 90)
+	(gr_text "CT"
+		(at 61.75 36.3 90)
 		(layer "F.SilkS")
 		(uuid "b8734f05-7a55-4dba-9a8f-1645fe9a2426")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 		)
 	)
 	(gr_text "VIN"
-		(at 61.85 20.07 90)
+		(at 61.75 20.07 90)
 		(layer "F.SilkS")
 		(uuid "bd670c2b-f6ff-4b48-ab08-a6d35b259e78")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 		)
 	)
 	(gr_text "VIO"
-		(at 61.85 24.7 90)
+		(at 61.75 24.7 90)
 		(layer "F.SilkS")
 		(uuid "bdde1b40-25a5-44d8-bcb8-d76edfc8cc72")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 		)
 	)
 	(gr_text "RI"
-		(at 61.85 40.89 90)
+		(at 61.75 40.89 90)
 		(layer "F.SilkS")
 		(uuid "ce697128-fac9-4ff1-b63b-e40c972f19fa")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 		)
 	)
 	(gr_text "VIN"
-		(at 61.85 20.07 90)
+		(at 61.75 20.07 90)
 		(layer "B.SilkS")
 		(uuid "031142c3-ac30-41ac-b14f-fe048ff3c517")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 			(justify mirror)
 		)
 	)
 	(gr_text "RX"
-		(at 61.85 30.73 90)
+		(at 61.75 30.73 90)
 		(layer "B.SilkS")
 		(uuid "41ff46cb-783e-4c86-bedb-245821f00073")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 			(justify mirror)
 		)
 	)
 	(gr_text "RI"
-		(at 61.85 40.89 90)
+		(at 61.75 40.89 90)
 		(layer "B.SilkS")
 		(uuid "4a29d355-4d74-4113-a46b-8fdf33a85bf7")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 			(justify mirror)
 		)
 	)
-	(gr_text "CTS"
-		(at 61.85 35.81 90)
+	(gr_text "CT"
+		(at 61.75 36.3 90)
 		(layer "B.SilkS")
 		(uuid "785c6d42-155c-4717-b41b-93185563adb6")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 			(justify mirror)
@@ -18803,75 +18802,75 @@
 		)
 	)
 	(gr_text "VIO"
-		(at 61.85 24.7 90)
+		(at 61.75 24.7 90)
 		(layer "B.SilkS")
 		(uuid "ae7c4058-3a79-424b-8f29-efdbc7659851")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 			(justify mirror)
 		)
 	)
 	(gr_text "GND"
-		(at 61.85 22.56 90)
+		(at 61.75 22.56 90)
 		(layer "B.SilkS")
 		(uuid "b2e7a530-2f36-4ec5-9af6-1c4118af005e")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 			(justify mirror)
 		)
 	)
 	(gr_text "RTS"
-		(at 61.85 33.27 90)
+		(at 61.75 33.27 90)
 		(layer "B.SilkS")
 		(uuid "b828353f-7d37-4a54-ba0a-0747ede7b681")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 			(justify mirror)
 		)
 	)
 	(gr_text "TX"
-		(at 61.85 28.19 90)
+		(at 61.75 28.19 90)
 		(layer "B.SilkS")
 		(uuid "f51ba254-6821-442f-89ef-7f8ddb949156")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 			(justify mirror)
 		)
 	)
 	(gr_text "DTR"
-		(at 61.85 38.35 90)
+		(at 61.75 38.35 90)
 		(layer "B.SilkS")
 		(uuid "f8b74678-a8f5-4fc0-99b7-034cd53d39ec")
 		(effects
 			(font
-				(size 0.8 0.7)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
 			(justify mirror)
 		)
 	)
 	(gr_text "nRST"
-		(at 62.15 48 0)
+		(at 62.25 42.83 90)
 		(layer "B.SilkS")
 		(uuid "fb994504-e6ec-4ee2-8f03-b3b0c9eaaaa3")
 		(effects
 			(font
-				(size 0.8 0.8)
+				(size 1 0.6)
 				(thickness 0.15)
 			)
-			(justify left mirror)
+			(justify mirror)
 		)
 	)
 	(gr_text "GNSS"
