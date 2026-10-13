@@ -1,5 +1,7 @@
 # nRF9161 UART Modem Module (v2)
 
+[![License: CERN-OHL-P-2.0](https://img.shields.io/badge/License-CERN--OHL--P--2.0-blue.svg)](LICENSE)
+
 A small 50 × 37.5 mm LTE-M / NB-IoT + GNSS modem board built around the Nordic **nRF9161**. Any host MCU controls it with AT commands over one 10-pin UART header.
 
 ![nRF9161 v2 module, 3D render](images/3d_angle.png)
@@ -204,4 +206,6 @@ JLC assembly uses the LCSC parts in `jlc/`. Indian sourcing is for **hand assemb
 
 ## License
 
-No license file has been added yet. All rights are reserved by the author until one is.
+This hardware design is licensed under the **CERN Open Hardware Licence Version 2 – Permissive (CERN-OHL-P v2)**. See [LICENSE](LICENSE) for the full text.
+
+Copyright 2026 Anand Mohan Pandey. SPDX-License-Identifier: CERN-OHL-P-2.0
