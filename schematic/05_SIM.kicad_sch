@@ -1493,7 +1493,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "Board:TI_TPD3F303_USON-8_1.45x1.45mm_P0.4mm"
+		(property "Footprint" "Board:TI_TPD3F303_USON-8_DPV_2.1x1.6mm_P0.5mm"
 			(at 49.53 53.34 0)
 			(hide yes)
 			(show_name no)

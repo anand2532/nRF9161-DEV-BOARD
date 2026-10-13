@@ -763,7 +763,7 @@
 			)
 		)
 	)
-	(footprint "Board:TI_TPD3F303_USON-8_1.45x1.45mm_P0.4mm"
+	(footprint "Board:TI_TPD3F303_USON-8_DPV_2.1x1.6mm_P0.5mm"
 		(layer "F.Cu")
 		(uuid "1069bf20-3732-4b99-b943-ce47d1836e5c")
 		(at 32.4 23.9 180)

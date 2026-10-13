@@ -2,7 +2,7 @@ Reference,Quantity,Value,Description,Manufacturer,MPN,Package,DNP/Optional,Funct
 U1,1,nRF9161-LACA-R7,LTE-M/NB-IoT/DECT NR+/GNSS SiP (PS v1.0),Nordic Semiconductor,NRF9161-LACA-R7,LGA 16.0x10.5mm,,LTE-M/NB-IoT/DECT NR+/GNSS SiP (PS v1.0),C21547412
 U2,1,TLV73333PDBV,3.3 V VDD_GPIO LDO; EN tied to ENABLE,Texas Instruments,TLV73333PDBVR,SOT-23-5,,3.3 V VDD_GPIO LDO; EN tied to ENABLE,C134139
 U3,1,TPS22919DCKR,GNSS VBIAS high-side load switch; ON=COEX0,Texas Instruments,TPS22919DCKR,SC-70-6 / SOT-363,,GNSS active-antenna bias gate (LOCKED),C2149796
-U4,1,TPD3F303DPV,SIM ESD/EMI filter per nRF91 HDG,Texas Instruments,TPD3F303DPVR,USON-8 1.45x1.45mm,,SIM ESD/EMI filter per nRF91 HDG,C2865991
+U4,1,TPD3F303DPV,SIM ESD/EMI filter per nRF91 HDG,Texas Instruments,TPD3F303DPVR,USON-8 (DPV) 2.1x1.6mm P0.5mm,,SIM ESD/EMI filter per nRF91 HDG,C2865991
 C1,1,10uF/16V X5R,VDD_nRF (JP1/R2 removed) bulk after input filter,Samsung Electro-Mechanics,CL21A106KOQNNNE,0805,,VDD_nRF (JP1/R2 removed) bulk after input filter,C1713
 C2,1,100nF 10V X5R,VDD_nRF (JP1/R2 removed) HF decoupling,Samsung Electro-Mechanics,CL05B104KO5NNNC,0402,,VDD_nRF (JP1/R2 removed) HF decoupling,C1525
 C3,1,47uF 10V X5R,VDD1 bulk (nRF91 HDG Table 2 C3),Murata,GRM21BR61A476ME15L,0805,,VDD1 bulk (nRF91 HDG Table 2 C3),C124129
