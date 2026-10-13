@@ -1,0 +1,11 @@
+single size {'X': 50.05, 'Y': 37.55} layers 4 thk 1.6 finish ENIG diel [0.12, 1.2, 0.12] gerbers 13
+   nRF9161-DEV-BOARD-NPTH.drl []
+   nRF9161-DEV-BOARD-PTH.drl [('0.200', 11), ('0.250', 9), ('0.300', 229), ('1.000', 10)]
+  cpl top 51 {'top'} ['-90.000000', '0.000000', '180.000000', '90.000000'] ref multiplicity {1}
+  cpl bottom 16 {'bottom'} ['0.000000', '90.000000'] ref multiplicity {1}
+panel size {'X': 118.0995, 'Y': 93.0992} layers 4 thk 1.6 finish ENIG diel [0.12, 1.2, 0.12] gerbers 13
+   nRF9161-v2-panel-NPTH.drl [('0.600', 128), ('2.000', 4)]
+   nRF9161-v2-panel-PTH.drl [('0.200', 44), ('0.250', 36), ('0.300', 916), ('1.000', 40)]
+  cpl top 204 {'top'} ['-90.000000', '0.000000', '180.000000', '90.000000'] ref multiplicity {4}
+  cpl bottom 64 {'bottom'} ['0.000000', '90.000000'] ref multiplicity {4}
+BOM lines 39 refs 67 BOM-CPL diff [] TP/JP in BOM []

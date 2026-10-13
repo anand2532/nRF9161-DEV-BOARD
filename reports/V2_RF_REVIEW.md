@@ -99,3 +99,34 @@ Rules made obsolete or changed by the simplify plan (the rules file itself is no
 3. **F3 (doc), integration note.** Specify a ground-independent LTE antenna (sleeve or flex dipole, 698–2200 MHz) and an active GNSS patch with its own ground. Avoid monopole stick antennas.
 4. **F4 (next spin).** VDD_GPIO direct 0.4 mm route of about 91 mm after the south translator strip is re-placed.
 5. **N1 (info).** The "0.1 mm GNSS fence via" figure in V2_LAYOUT / the PM brief is not reproduced. The measured minimum is 0.519 mm to the trace and 0.333 mm to the J5.1 pad. No action.
+
+---
+## Re-check @ 365b7f6 (v2d: U4 + C33–C38 to top, SWDIO/P0.22 reroute): **PASS (FAB-OK WITH NOTES)**
+Read-only. Analysis ran on a /tmp copy using pcbnew 9.0.2 and kicad-cli DRC with parity.
+
+- **Moved parts:** all are now F.Cu. U4 is at (32.4, 23.9) and C33–C38 sit at x 32.3–35.3, y 17.3–25.5.
+  - Min pad to RF copper (feeds and RF pads): **7.30 mm** (C36); U4 is 7.42 mm.
+  - Min to the top RF keepout (x<29, y 26–40): **2.64 mm** (U4).
+  - Min to the U1 body bbox: C36 0.11 mm, U4 1.03 mm. DRC shows no courtyard overlap, and U1's non-RF north side is OK.
+  - B1–B5 are bottom-only zones, so they don't apply to these top parts. Bottom parts in B1–B5: 0 (rule areas DRC-clean).
+- **Rerouted tracks:**
+  - Min to RF copper: SWDIO 9.77 mm, P0.22 8.07 mm. The SIM nets bottom out at 4.48 mm (SIM_1V8).
+  - 0 points in the top RF keepout.
+  - The B.Cu segments (SIM_IO, SIM_CLK, SIM_1V8 jumpers) stay outside B1, closest **0.18 mm**, which DRC accepts.
+- **In1:** 0 tracks, 1 GND island of 1707.1 mm².
+- **Fence vias are unchanged:**
+  - ANT: 8 vias, max gap 2.36 mm.
+  - AUX: 3 vias, max gap 2.0 mm.
+  - GNSS: 9 vias, max gap 2.15 mm.
+  - The min centre distance (0.919 mm on GNSS) is unchanged, so the 0.519 mm edge figure still holds.
+- **U4 ESD return (F1):** improved, but the target isn't fully met, so F1 stays open as recommended rather than blocking.
+  - The EP connects over **0.3 mm** F.Cu to 2 GND vias at **1.65 mm** (30.75, 23.9) and **1.72 mm** (30.9, 23.05), and on to C40.2.
+  - The U4 EP and the C33/C35/C36/C37 GND pads all touch the F.Cu GND pour.
+  - Nearest via per ESD cap GND pad: C38 0.16 mm, C36 1.85 mm, C33 2.54 mm, C37 2.58 mm, C35 3.34 mm.
+  - The ≤0.5 mm EP-via target is not met.
+  - Remaining fix: add 1–2 GND vias ≤0.7 mm from the U4 EP (32.4, 23.9) and from C35.2 (34.45, 23.98) and C37.2 (35.25, 24.62), DRC permitting.
+- **G7 recomputed:**
+  - kicad-cli 9.0.2: **0 errors, 0 unconnected**.
+  - 82 `lib_footprint_issues` warnings (environment only).
+  - Parity: 1 cosmetic `net_conflict` on J7 C6 (no-connect net name with "/" vs "{slash}").
+- G1–G6 and G8 hold. F2–F4 from above are unchanged.

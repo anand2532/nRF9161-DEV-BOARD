@@ -1,0 +1,9 @@
+tenting: all vias tented F/B: True
+method: pad bbox (copper pads and paste-only apertures, both sides) vs unfilled 0.30 via; ring overlap if dist<0.30 (via r), HOLE overlap if dist<0.15
+ring-only via(42.457,40.352) GND vs T C14.paste  ring-overlap=0.023 hole-edge-to-pad=0.127 paste=yes assembled=yes
+ring-only via(42.457,40.352) GND vs T C14.2 GND ring-overlap=0.043 hole-edge-to-pad=0.107 paste=no assembled=yes
+HOLE-OVERLAP via(63.2,46.6) VDD_GPIO vs B TP13.1 VDD_GPIO ring-overlap=0.3 hole-edge-to-pad=-0.15 paste=no assembled=no
+ring-only via(44.9,16.6) VDD_nRF vs B TP14.1 VDD_nRF ring-overlap=0.15 hole-edge-to-pad=-0.0 paste=no assembled=no
+ring-only via(49.564,27.924) VDD_nRF vs T FB2.1 VDD_nRF ring-overlap=0.044 hole-edge-to-pad=0.106 paste=yes assembled=yes
+ring-only via(50.636,41.424) VDD_nRF vs T FB1.1 VDD_nRF ring-overlap=0.044 hole-edge-to-pad=0.106 paste=yes assembled=yes
+total overlaps 6
