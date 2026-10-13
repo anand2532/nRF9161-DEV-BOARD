@@ -2564,6 +2564,17 @@
 			(uuid "f51e651b-6a06-41c4-8513-0909f667bc06")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/3dmodels/TI_USON-8_1.45x1.45mm_placeholder.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0805_2012Metric"
 		(layer "F.Cu")
@@ -6410,7 +6421,7 @@
 			(uuid "c46fad11-a0e4-4406-96bd-d537070ccd4a")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Connector_JAE.3dshapes/JAE_SIM_Card_SF72S006.step"
+		(model "${KIPRJMOD}/3dmodels/JAE_SF72S006_placeholder.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -10487,6 +10498,17 @@
 			(uuid "8e28d200-4af3-4990-a8da-bf24b09670c5")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/3dmodels/nRF9161_LGA_16.0x10.5mm_placeholder.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Inductor_SMD:L_0402_1005Metric"
 		(layer "F.Cu")
@@ -11913,7 +11935,7 @@
 			(uuid "e5365c3c-af3b-4400-812c-2d92369ae92d")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPST_CK_KXT3.step"
+		(model "${KIPRJMOD}/3dmodels/CK_KXT3_placeholder.step"
 			(offset
 				(xyz 0 0 0)
 			)
