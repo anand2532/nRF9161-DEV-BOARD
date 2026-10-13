@@ -172,3 +172,9 @@ New in this pass:
 - WARN W3: check rotations in the JLC DFM preview.
 - Filled vias: 30 per board, 120 per panel (21 × 0.20 + 9 × 0.25). DRC is 0/0 as-is and refilled, with parity 0. Panel rebuilt, DRC 0/0. Package: fab/staging-v2-9c48462/ (DO NOT ORDER).
 - WAIVED (kept): C14, FB1.1, FB2.1, and the bottom pad-via pairs under 0.3 mm. Quote questions Q1–Q17 are still open (Q17: mouse-bite 5 mm).
+
+## Pass 36d8578 (v2-u4, v2n, 2026-10-13): **GREEN apart from the JLC quote**
+- The 9c48462 items are closed: R1 (U4 silk now 0.15), W1 (U4 DPV land 0.28 × 0.60 at ±0.70, heel/toe OK, 0.22/0.20 mask webs ≥ the JLC 0.10 minimum) and W2 (jlc/CPL_JLC_v2.csv has JLC headers and current values; 67 = BOM = board).
+- Filled vias: 30 per board, 120 per panel. DRC is 0/0 as-is and refilled, with parity 0. Panel rebuilt, DRC 0/0, content = 4 × the board.
+- Package: fab/staging-v2-36d8578/ (DO NOT ORDER removed). Rotations to be checked in the JLC DFM preview.
+- WAIVED (kept): C14, FB1.1, FB2.1, and the bottom pad-via pairs under 0.3 mm. Quote questions Q1–Q17 are still open (Q17: mouse-bite 5 mm).

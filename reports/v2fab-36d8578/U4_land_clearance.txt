@@ -1,0 +1,16 @@
+pin-pin gaps (copper=mask web, mask 1:1): [0.22]
+pin-EP gaps: [0.2]
+mask openings = copper: True
+  (0.06, 'pad5', 'SIM_1V8', 'HOLE-edge', 'SIM_1V8', 0.2)
+  (0.203, 'pad4', 'unconnected-(U4-NC-Pad4)', 'track', 'SIM_RST_C', '')
+  (0.204, 'pad5', 'SIM_1V8', 'track', 'SIM_RST', '')
+  (0.205, 'pad5', 'SIM_1V8', 'track', 'SIM_RST', '')
+  (0.206, 'pad7', 'SIM_CLK', 'HOLE-edge', 'SIM_CLK', 0.2)
+  (0.211, 'pad2', 'SIM_CLK_C', 'track', 'SIM_IO_C', '')
+  (0.211, 'pad3', 'SIM_RST_C', 'track', 'SIM_CLK_C', '')
+  (0.239, 'pad6', 'SIM_RST', 'via', 'SIM_CLK', 0.2)
+  (0.255, 'pad4', 'unconnected-(U4-NC-Pad4)', 'track', 'GND', '')
+  (0.26, 'pad6', 'SIM_RST', 'track', 'SIM_1V8', '')
+  (0.26, 'pad8', 'SIM_IO', 'HOLE-edge', 'SIM_IO', 0.2)
+  (0.263, 'pad4', 'unconnected-(U4-NC-Pad4)', 'track', 'SIM_RST_C', '')
+rules: netclass clearance [(wxString('POWER'), 0.15), (wxString('RF_50OHM'), 0.15)]
