@@ -1,0 +1,3 @@
+T assembled 51 pad area mm2 170.1 
+B assembled 16 pad area mm2 30.1 ['C41', 'C42', 'C43', 'C44', 'C45', 'C46', 'C47', 'C48', 'Q1', 'R21', 'R23', 'U2', 'U5', 'U6', 'U7', 'U8']
+total 67 ; reflow first: bottom

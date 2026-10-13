@@ -1,0 +1,11 @@
+Edge.Cuts items: [('Arc', 2.0), ('Arc', 2.0), ('Arc', 2.0), ('Arc', 2.0), ('Line', 33.5), ('Line', 33.5), ('Line', 46.0), ('Line', 46.0)]
+closed outline: True outlines 1 holes 0
+bbox [16.0, 11.5, 66.0, 49.0] area 1871.56
+closest copper to outline (as-is fill): [(0.498, 'zone GND B.Cu'), (0.498, 'zone GND F.Cu'), (0.498, 'zone GND In1.Cu'), (0.498, 'zone VDD_nRF In2.Cu'), (0.647, 'pad J7.SH')]
+any copper outside outline: none
+J7 courtyard: 5 segments; outside outline: 0; min distance to outline 0.049 mm
+F.Courtyard J7 vertices in NW corner box: [(16.075, 13.2, 'inside-arc-by 0.052'), (16.075, 13.2, 'inside-arc-by 0.052'), (16.8, 11.975, 'inside-arc-by 0.059'), (16.8, 11.975, 'inside-arc-by 0.059')]  all vertices inside outline: True
+Traceback (most recent call last):
+  File "<stdin>", line 11, in <module>
+AttributeError: 'PCB_TEXT' object has no attribute 'GetShapeStr'
+J7 F.Fab body: 6 shapes; all inside outline: True ; min clearance to outline 0.106 mm
