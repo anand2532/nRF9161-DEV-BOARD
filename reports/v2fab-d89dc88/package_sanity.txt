@@ -1,0 +1,13 @@
+single size {'X': 50.05, 'Y': 37.55} layers 4 thk 1.6 finish ENIG diel [0.12, 1.2, 0.12]
+  gerbers 13 edge file True
+   nRF9161-DEV-BOARD-NPTH.drl []
+   nRF9161-DEV-BOARD-PTH.drl [('0.200', 11), ('0.250', 9), ('0.300', 231), ('1.000', 10)]
+  cpl top 44 {'top'} ['-90.000000', '0.000000', '180.000000', '90.000000']
+  cpl bottom 23 {'bottom'} ['0.000000', '180.000000', '90.000000']
+panel size {'X': 118.0995, 'Y': 93.0992} layers 4 thk 1.6 finish ENIG diel [0.12, 1.2, 0.12]
+  gerbers 13 edge file True
+   nRF9161-v2-panel-NPTH.drl [('0.600', 128), ('2.000', 4)]
+   nRF9161-v2-panel-PTH.drl [('0.200', 44), ('0.250', 36), ('0.300', 924), ('1.000', 40)]
+  cpl top 123 {'top'} ['0.000000', '180.000000', '90.000000']
+  cpl bottom 92 {'bottom'} ['0.000000', '180.000000', '90.000000']
+BOM lines 39 refs 67 BOM-CPL diff []

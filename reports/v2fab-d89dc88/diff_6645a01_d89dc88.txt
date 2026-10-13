@@ -1,0 +1,6 @@
+outline (50.05, 37.55) (50.05, 37.55) thk same True
+footprints changed: []
+vias added: [(18.78, 19.45, 0.2, 0.3, 'GND'), (21.5, 18.95, 0.2, 0.3, 'GND'), (21.5, 20.05, 0.2, 0.3, 'GND'), (22.78, 22.4, 0.2, 0.3, 'GND')]
+vias removed: []
+tracks added 23 removed 21 nets Counter({'VDD1': 13, 'VDD2': 7, 'GND': 3}) Counter({'VDD1': 13, 'VDD2': 7, 'GND': 1})
+added widths Counter({('VDD1', 0.5): 13, ('VDD2', 0.5): 7, ('GND', 0.3): 2, ('GND', 0.2): 1})
