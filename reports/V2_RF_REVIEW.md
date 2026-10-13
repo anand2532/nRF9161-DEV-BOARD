@@ -130,3 +130,19 @@ Read-only. Analysis ran on a /tmp copy using pcbnew 9.0.2 and kicad-cli DRC with
   - 82 `lib_footprint_issues` warnings (environment only).
   - Parity: 1 cosmetic `net_conflict` on J7 C6 (no-connect net name with "/" vs "{slash}").
 - G1–G6 and G8 hold. F2–F4 from above are unchanged.
+
+---
+## Re-check @ c37dc20 (v2e: F1 vias, SIM_IO jog, filled vias C38.2 and near C12): **PASS, F1 CLOSED**
+- **U4 ground return:** the U4 ground pad (32.4, 23.9) now has 3 GND vias at 1.10 mm (new, 31.3/23.9), 1.65 mm and 1.72 mm (centre-to-pad-centre), all on 0.3 mm F.Cu and tied to the top GND pour. The new via is about 0.45 mm edge to edge from the pad.
+  - C35.2 has a via at 0.78 mm (centre, (34.45, 23.2)) and C37.2 one at 0.68 mm ((35.85, 24.95)). C38.2 has a 0.2/0.3 filled via in the pad.
+  - C33.2 is at 1.64 mm and C36.2 at 1.85 mm. Both are on the pour, which is acceptable.
+  - **F1 closed.**
+- **SIM_IO on the bottom:** the closest point to B1 is 0.30 mm edge to edge, on the via-stub segment (31.3, 25.1→24.75). The jog at y 24.15 is 1.25 mm from B1. It stays outside B1, and SIM_IO is ≥4.68 mm from RF copper.
+- **New vias:**
+  - Distance to RF copper is ≥7.72 mm; none is in B1.
+  - Distance to U1 pads: (35.85, 24.95) is 1.60 mm and (45.6, 31.4) VDD_GPIO is 1.55 mm. Both are outside B1 (0.23 and 0.18 mm from its edge).
+  - The nearest U1 VIPPO via is ≥2.09 mm away, and no via sits in a DEC pad.
+- **In1:** 0 tracks, 1 piece, 1707.5 mm².
+- **Fence vias:** unchanged (max gap ANT 2.36, AUX 2.0, GNSS 2.15 mm).
+- **DRC (kicad-cli 9.0.2):** 0 errors, 0 unconnected. 82 `lib_footprint_issues` warnings (environment only) and 1 cosmetic parity `net_conflict` on J7 C6.
+- G1–G8 PASS. FAB-OK WITH NOTES; F2–F4 unchanged.
