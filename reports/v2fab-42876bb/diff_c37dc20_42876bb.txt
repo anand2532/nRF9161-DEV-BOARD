@@ -1,0 +1,4 @@
+footprints changed: {'C44': ((41.0, 46.2, 0.0, True, False, False), (41.0, 46.4, 0.0, True, False, False))}
+vias removed 9 [(17.0, 41.5, 0.3, 'GND'), (17.0, 47.5, 0.3, 'GND'), (18.5, 25.0, 0.3, 'GND'), (18.5, 41.5, 0.3, 'GND'), (18.5, 43.0, 0.3, 'GND'), (20.0, 41.5, 0.3, 'GND'), (21.5, 26.5, 0.3, 'GND'), (23.0, 26.5, 0.3, 'GND'), (24.5, 26.5, 0.3, 'GND')]
+vias added []
+tracks removed 1 added 1 nets ['VDD_GPIO']

@@ -1,0 +1,4 @@
+zips:
+-rw-r--r-- 1 box box 921128 Oct 13 13:29 fab/staging-v2-5ad8bde/nRF9161-v2-panel-5ad8bde.zip
+-rw-r--r-- 1 box box 230925 Oct 13 13:29 fab/staging-v2-5ad8bde/nRF9161-v2-single-5ad8bde.zip
+PTH single: 0.200x13 0.250x9 0.300x223 1.000x10; panel: 0.200x52 0.250x36 0.300x892 1.000x40; NPTH panel 0.600x128 2.000x4; VIPPO.gbr 22/88 flashes; gbrjob 4L 1.6 ENIG 0.12/1.2/0.12; CPL 51T/16B single, 204T/64B panel; BOM identical to c37dc20 package

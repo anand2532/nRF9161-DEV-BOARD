@@ -1,0 +1,28 @@
+F.Silkscreen: texts 43 (min h 1.0, min stroke 0.15), stroked lines 112 (min 0.15), filled polygons 4; below 1.0/0.15: 0 []
+  filled polygons bbox (27.58, 40.26, 46.0, 48.379) = 18.42 x 8.119 mm; owners Counter({'board': 3, 'U3': 1}); outline stroke widths {0.0, 0.15}
+  opening test r=0.075 (features <0.15 mm wide): area lost 0.0519 mm2 of 5.456 mm2; largest lost piece 0.0103 mm2
+  gap test (spaces <0.15 mm inside logo): area 0.0976 mm2
+B.Silkscreen: texts 30 (min h 1.0, min stroke 0.15), stroked lines 63 (min 0.15), filled polygons 6; below 1.0/0.15: 0 []
+  filled polygons bbox (32.385, 42.31, 58.29, 47.44) = 25.905 x 5.13 mm; owners Counter({'U7': 1, 'Q1': 1, 'U5': 1, 'U2': 1, 'U8': 1, 'U6': 1}); outline stroke widths {0.15}
+  opening test r=0.075 (features <0.15 mm wide): area lost 0.0731 mm2 of 0.475 mm2; largest lost piece 0.0049 mm2
+  gap test (spaces <0.15 mm inside logo): area 0.0 mm2
+logo poly: filled True stroke 0.0
+logo poly: filled True stroke 0.0
+logo poly: filled True stroke 0.0
+--- AMP logo only: bbox 5.5 x 1.758 mm at (40.5, 46.62) area 5.377
+stroke test: features narrower than 0.15 mm: 26 pieces, total 0.0397 mm2, largest 0.0103 mm2, at [(44.7, 48.27), (45.31, 47.44), (45.36, 47.72), (42.23, 48.36), (40.53, 48.36)]
+stroke test: features narrower than 0.153 mm: 26 pieces, total 0.0413 mm2, largest 0.0107 mm2, at [(44.7, 48.26), (45.31, 47.44), (45.36, 47.72), (42.23, 48.35), (40.53, 48.35)]
+spacing test: gaps narrower than 0.15 mm: 14 pieces, total 0.0976 mm2, at [(45.1, 47.76), (45.35, 47.52), (45.11, 47.39), (45.11, 46.98), (45.55, 47.11)]
+logo polygons (outlines): 3 union parts 3
+--- logo min-width/min-gap sweep (pieces > 0.003 mm2 only; smaller = sharp-corner artefacts)
+ width<0.1: 0 pieces [] | gap<0.1: 1 pieces [((45.52, 47.27), 0.0094)]
+ width<0.12: 0 pieces [] | gap<0.12: 1 pieces [((45.52, 47.27), 0.0094)]
+ width<0.13: 0 pieces [] | gap<0.13: 1 pieces [((45.52, 47.27), 0.0094)]
+ width<0.15: 0 pieces [] | gap<0.15: 1 pieces [((45.52, 47.27), 0.0094)]
+narrow-gap feature bounds (45.457, 47.137, 45.564, 47.381) area 0.0094
+polygon 0 to 1 distance 2.392
+polygon 0 to 2 distance 0.143
+polygon 1 to 2 distance 0.258
+poly 0 bounds (40.5, 46.62, 42.27, 48.38) interiors 0 is the gap inside its bbox: False
+poly 1 bounds (44.66, 46.62, 46.0, 48.38) interiors 0 is the gap inside its bbox: True
+poly 2 bounds (42.41, 46.62, 44.4, 48.38) interiors 0 is the gap inside its bbox: False

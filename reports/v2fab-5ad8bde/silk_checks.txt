@@ -1,0 +1,16 @@
+== F.Silkscreen items 160; below 1.0 mm text / 0.15 mm stroke: [('text', 'TX', 0.8, 0.15), ('text', 'nRST', 0.8, 0.15), ('text', 'LTE', 0.8, 0.15), ('text', 'RTS', 0.8, 0.15), ('text', 'RX', 0.8, 0.15), ('text', 'DTR', 0.8, 0.15), ('text', 'GND', 0.8, 0.15), ('text', 'CTS', 0.8, 0.15), ('text', 'VIN', 0.8, 0.15), ('text', 'VIO', 0.8, 0.15), ('text', 'RI', 0.8, 0.15)]
+ silk-to-silk gaps 0<g<0.15 between different owners: none
+ features narrower than 0.15 (mitre opening, area>0.002 mm2): none
+ gaps/notches narrower than 0.15 (mitre closing, area>0.001 mm2): [((43.57, 37.81, 43.93, 37.92), 0.0121)]
+== B.Silkscreen items 99; below 1.0 mm text / 0.15 mm stroke: [('text', 'VIN', 0.8, 0.15), ('text', 'RX', 0.8, 0.15), ('text', 'RI', 0.8, 0.15), ('text', 'CTS', 0.8, 0.15), ('text', 'VIO', 0.8, 0.15), ('text', 'GND', 0.8, 0.15), ('text', 'RTS', 0.8, 0.15), ('text', 'TX', 0.8, 0.15), ('text', 'DTR', 0.8, 0.15), ('text', 'nRST', 0.8, 0.15)]
+ silk-to-silk gaps 0<g<0.15 between different owners: none
+ features narrower than 0.15 (mitre opening, area>0.002 mm2): none
+ gaps/notches narrower than 0.15 (mitre closing, area>0.001 mm2): none
+== AMP logo: 5 filled pieces -> 3 connected letters; bbox (40.5, 46.633, 46.0, 48.367) size 5.5 x 1.735
+  letter bbox (40.5, 46.633, 42.244, 48.367) holes 1 min stroke ok
+  letter bbox (42.459, 46.633, 44.424, 48.367) holes 0 min stroke ok
+  letter bbox (44.678, 46.633, 46.0, 48.367) holes 1 min stroke ok
+  gap letter0-letter1: 0.215 mm
+  gap letter0-letter2: 2.434 mm
+  gap letter1-letter2: 0.254 mm
+  logo slits/notches <0.15 (closing): none
