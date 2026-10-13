@@ -514,243 +514,7 @@
     "netclass_patterns": [
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-SIM_VCC"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1D-P0.20_AIN7-Pad35)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad121)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U4-NC-Pad4)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad125)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1C-P0.10-Pad18)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1B-COEX1-Pad92)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad123)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad10)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-P0.31"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1B-MIPI_SCLK-Pad58)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-HOST_TX"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad109)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-GNSS_VBIAS_SRC"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad70)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad115)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-P0.07"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1D-P0.27-Pad84)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad111)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-HOST_RTS"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-nRESET"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(J7-VPP/SWP-PadC6)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-GND"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1D-P0.18_AIN5-Pad29)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-HOST_RI"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1C-P0.08-Pad15)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-DEC0"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad122)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad107)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad114)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1C-P0.11-Pad19)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad71)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1B-MIPI_SDATA-Pad59)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U3-QOD-Pad5)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-SIM_DET-Pad45)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-SWDIO"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad126)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U2-NC-Pad4)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1D-P0.28-Pad86)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad119)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad104)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad108)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1B-MAGPIO1-Pad54)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1C-P0.09-Pad16)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1C-P0.12-Pad20)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-HOST_CTS"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad120)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1C-P0.01-Pad96)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1D-P0.21_TRACECLK-Pad37)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1C-P0.04-Pad100)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad106)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1C-P0.05-Pad2)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U3-NC-Pad4)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-ENABLE"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad51)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1C-P0.14_AIN1-Pad24)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1D-P0.29-Pad87)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-P0.06"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1C-P0.13_AIN0-Pad23)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1B-COEX2-Pad91)"
+        "pattern": "Board_0-SIM_IO_C"
       },
       {
         "netclass": "Board_0-Default",
@@ -758,35 +522,7 @@
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-HOST_RX"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1D-P0.23_TRACEDATA1-Pad39)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1B-MAGPIO2-Pad53)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad127)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-SIM_RST"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-COEX0"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-HOST_nRESET"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-P0.02"
+        "pattern": "Board_0-unconnected-(U1C-P0.15_AIN2-Pad25)"
       },
       {
         "netclass": "Board_0-Default",
@@ -794,87 +530,7 @@
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-SIM_IO_C"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1D-P0.19_AIN6-Pad30)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(J8-Pin_7-Pad7)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-SIM_CLK"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-SIM_CD"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-SWDCLK"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad73)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-GNSS_VBIAS"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad124)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1D-P0.17_AIN4-Pad28)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-LED_PWR_K"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad113)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1D-P0.26-Pad83)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-nRESET_SW"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1D-P0.25_TRACEDATA3-Pad42)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(J8-Pin_9-Pad9)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-SIM_CLK_C"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad110)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1D-P0.24_TRACEDATA2-Pad40)"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-P0.30"
-      },
-      {
-        "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad112)"
+        "pattern": "Board_0-HOST_TX"
       },
       {
         "netclass": "Board_0-Default",
@@ -882,19 +538,23 @@
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-P0.00"
+        "pattern": "Board_0-P0.06"
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1C-P0.15_AIN2-Pad25)"
+        "pattern": "Board_0-unconnected-(U1B-COEX1-Pad92)"
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-SIM_RST_C"
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad112)"
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-P0.22"
+        "pattern": "Board_0-unconnected-(U1D-P0.20_AIN7-Pad35)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad127)"
       },
       {
         "netclass": "Board_0-Default",
@@ -902,19 +562,111 @@
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad117)"
+        "pattern": "Board_0-SWDCLK"
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1E-RES-Pad118)"
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad123)"
       },
       {
         "netclass": "Board_0-Default",
-        "pattern": "Board_0-unconnected-(U1D-P0.16_AIN3-Pad26)"
+        "pattern": "Board_0-unconnected-(U1B-COEX2-Pad91)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad107)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad125)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-HOST_nRESET"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad73)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad109)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad122)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1D-P0.29-Pad87)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad106)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-GND"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad114)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U2-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-LED_PWR_K"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-P0.30"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1D-P0.23_TRACEDATA1-Pad39)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-SIM_CD"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-SIM_CLK_C"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1C-P0.10-Pad18)"
       },
       {
         "netclass": "Board_0-Default",
         "pattern": "Board_0-unconnected-(U1E-RES-Pad105)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-P0.07"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-P0.22"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-nRESET_SW"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1D-P0.24_TRACEDATA2-Pad40)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1C-P0.08-Pad15)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1C-P0.12-Pad20)"
       },
       {
         "netclass": "Board_0-Default",
@@ -926,7 +678,255 @@
       },
       {
         "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(J8-Pin_9-Pad9)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1D-P0.19_AIN6-Pad30)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1D-P0.17_AIN4-Pad28)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad111)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1C-P0.05-Pad2)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad10)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad118)"
+      },
+      {
+        "netclass": "Board_0-Default",
         "pattern": "Board_0-SIM_IO"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1D-P0.25_TRACEDATA3-Pad42)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad51)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-COEX0"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad117)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1B-MIPI_SCLK-Pad58)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U4-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1B-MAGPIO2-Pad53)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1D-P0.18_AIN5-Pad29)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-SIM_VCC"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-SIM_DET-Pad45)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-nRESET"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-GNSS_VBIAS"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-SIM_CLK"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-HOST_RTS"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-GNSS_VBIAS_SRC"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1B-MAGPIO1-Pad54)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1D-P0.27-Pad84)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1D-P0.28-Pad86)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-DEC0"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1C-P0.13_AIN0-Pad23)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1B-MIPI_SDATA-Pad59)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-HOST_RI"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-P0.31"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1C-P0.11-Pad19)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad104)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1C-P0.14_AIN1-Pad24)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-SIM_RST"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(J8-Pin_7-Pad7)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad119)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad124)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-HOST_RX"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-SIM_RST_C"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad121)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad115)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad126)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-HOST_CTS"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1D-P0.26-Pad83)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad108)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad70)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-P0.00"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1C-P0.04-Pad100)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad120)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(J7-VPP/SWP-PadC6)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U3-QOD-Pad5)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-ENABLE"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad110)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad113)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1C-P0.09-Pad16)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1D-P0.16_AIN3-Pad26)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1E-RES-Pad71)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1D-P0.21_TRACECLK-Pad37)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U3-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-P0.02"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-unconnected-(U1C-P0.01-Pad96)"
+      },
+      {
+        "netclass": "Board_0-Default",
+        "pattern": "Board_0-SWDIO"
       },
       {
         "netclass": "Board_0-RF_50OHM",
@@ -958,23 +958,7 @@
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad119)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad125)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1B-MIPI_VIO-Pad57)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad116)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad51)"
+        "pattern": "Board_1-unconnected-(U1B-COEX1-Pad92)"
       },
       {
         "netclass": "Board_1-Default",
@@ -982,247 +966,7 @@
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-SIM_IO_C"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1D-P0.29-Pad87)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-HOST_DTR"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1D-P0.16_AIN3-Pad26)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad127)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1D-P0.24_TRACEDATA2-Pad40)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-SIM_RST"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-LED_PWR_K"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1B-MAGPIO0-Pad55)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad120)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U3-QOD-Pad5)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad71)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-GNSS_VBIAS_SRC"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-HOST_RTS"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad105)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U4-NC-Pad4)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-ENABLE"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-SWDCLK"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1C-P0.01-Pad96)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1D-P0.20_AIN7-Pad35)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1D-P0.27-Pad84)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad108)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad117)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-P0.07"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-LED1_A"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-P0.31"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-P0.03"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad123)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-DEC0"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1B-COEX1-Pad92)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1D-P0.25_TRACEDATA3-Pad42)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-P0.06"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1D-P0.26-Pad83)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1C-P0.08-Pad15)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1D-P0.17_AIN4-Pad28)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-SIM_VCC"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-SIM_CLK"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-HOST_RX"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1D-P0.28-Pad86)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(J7-VPP/SWP-PadC6)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad126)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-HOST_RI"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1C-P0.05-Pad2)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-SIM_DET-Pad45)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1B-MIPI_SDATA-Pad59)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad124)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad10)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-P0.02"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad106)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-nRESET"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad114)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-HOST_TX"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-GND"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-P0.00"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-COEX0"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1C-P0.13_AIN0-Pad23)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1B-MIPI_SCLK-Pad58)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(J8-Pin_9-Pad9)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-SIM_RST_C"
-      },
-      {
-        "netclass": "Board_1-Default",
         "pattern": "Board_1-SIM_CLK_C"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U2-NC-Pad4)"
       },
       {
         "netclass": "Board_1-Default",
@@ -1230,67 +974,27 @@
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1C-P0.15_AIN2-Pad25)"
+        "pattern": "Board_1-HOST_RTS"
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-P0.22"
+        "pattern": "Board_1-unconnected-(U1B-MIPI_SDATA-Pad59)"
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad107)"
+        "pattern": "Board_1-unconnected-(U1C-P0.09-Pad16)"
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad109)"
+        "pattern": "Board_1-GNSS_VBIAS_SRC"
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-HOST_CTS"
+        "pattern": "Board_1-P0.06"
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1D-P0.21_TRACECLK-Pad37)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1D-P0.23_TRACEDATA1-Pad39)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-SIM_CD"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-SIM_IO"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad115)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-nRESET_SW"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad122)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-HOST_nRESET"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad118)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(J8-Pin_7-Pad7)"
-      },
-      {
-        "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U3-NC-Pad4)"
+        "pattern": "Board_1-unconnected-(U1D-P0.25_TRACEDATA3-Pad42)"
       },
       {
         "netclass": "Board_1-Default",
@@ -1298,7 +1002,27 @@
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1B-MAGPIO2-Pad53)"
+        "pattern": "Board_1-unconnected-(U1C-P0.01-Pad96)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1C-P0.08-Pad15)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U3-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-SIM_RST"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad112)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1D-P0.23_TRACEDATA1-Pad39)"
       },
       {
         "netclass": "Board_1-Default",
@@ -1306,11 +1030,115 @@
       },
       {
         "netclass": "Board_1-Default",
+        "pattern": "Board_1-SIM_IO_C"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad127)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1D-P0.19_AIN6-Pad30)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-LED1_A"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad118)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-GND"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad105)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-GNSS_VBIAS"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad108)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-LED_PWR_K"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad111)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(J8-Pin_7-Pad7)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad107)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad124)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1C-P0.04-Pad100)"
+      },
+      {
+        "netclass": "Board_1-Default",
         "pattern": "Board_1-unconnected-(U1C-P0.12-Pad20)"
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1C-P0.09-Pad16)"
+        "pattern": "Board_1-unconnected-(J7-VPP/SWP-PadC6)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad110)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1B-MAGPIO0-Pad55)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad106)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1C-P0.14_AIN1-Pad24)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1D-P0.28-Pad86)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-P0.31"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-P0.07"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad116)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1B-MAGPIO1-Pad54)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad109)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1D-P0.21_TRACECLK-Pad37)"
       },
       {
         "netclass": "Board_1-Default",
@@ -1322,23 +1150,99 @@
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad110)"
+        "pattern": "Board_1-unconnected-(U1D-P0.24_TRACEDATA2-Pad40)"
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1C-P0.04-Pad100)"
+        "pattern": "Board_1-SIM_CLK"
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1D-P0.19_AIN6-Pad30)"
+        "pattern": "Board_1-unconnected-(U3-QOD-Pad5)"
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1C-P0.14_AIN1-Pad24)"
+        "pattern": "Board_1-unconnected-(U1D-P0.17_AIN4-Pad28)"
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1B-MAGPIO1-Pad54)"
+        "pattern": "Board_1-SIM_VCC"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U2-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad122)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad120)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-SWDCLK"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-SIM_DET-Pad45)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-nRESET_SW"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad115)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-COEX0"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1B-MAGPIO2-Pad53)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-HOST_CTS"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1D-P0.27-Pad84)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1D-P0.16_AIN3-Pad26)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(J8-Pin_9-Pad9)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1C-P0.15_AIN2-Pad25)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-SIM_IO"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-P0.22"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1D-P0.26-Pad83)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-nRESET"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-SIM_CD"
       },
       {
         "netclass": "Board_1-Default",
@@ -1346,15 +1250,19 @@
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad111)"
+        "pattern": "Board_1-P0.00"
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1E-RES-Pad112)"
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad119)"
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-GNSS_VBIAS"
+        "pattern": "Board_1-unconnected-(U1D-P0.20_AIN7-Pad35)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad114)"
       },
       {
         "netclass": "Board_1-Default",
@@ -1362,7 +1270,7 @@
       },
       {
         "netclass": "Board_1-Default",
-        "pattern": "Board_1-unconnected-(U1C-P0.10-Pad18)"
+        "pattern": "Board_1-SIM_RST_C"
       },
       {
         "netclass": "Board_1-Default",
@@ -1370,7 +1278,99 @@
       },
       {
         "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad71)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1D-P0.29-Pad87)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-P0.03"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1C-P0.13_AIN0-Pad23)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-HOST_RI"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1B-MIPI_SCLK-Pad58)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad126)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-HOST_nRESET"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-DEC0"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1C-P0.05-Pad2)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad10)"
+      },
+      {
+        "netclass": "Board_1-Default",
         "pattern": "Board_1-unconnected-(U1E-RES-Pad104)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad51)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-HOST_RX"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad125)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-HOST_TX"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1B-MIPI_VIO-Pad57)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-HOST_DTR"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad117)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U4-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-ENABLE"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1C-P0.10-Pad18)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-unconnected-(U1E-RES-Pad123)"
+      },
+      {
+        "netclass": "Board_1-Default",
+        "pattern": "Board_1-P0.02"
       },
       {
         "netclass": "Board_1-RF_50OHM",
@@ -1402,247 +1402,11 @@
       },
       {
         "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad71)"
+        "pattern": "Board_2-unconnected-(U1B-MAGPIO2-Pad53)"
       },
       {
         "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad125)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1D-P0.29-Pad87)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad121)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad118)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-LED_PWR_K"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-SIM_VCC"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad123)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-P0.00"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-SIM_DET-Pad45)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1C-P0.13_AIN0-Pad23)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1C-P0.01-Pad96)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-LED1_A"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1B-MIPI_SCLK-Pad58)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad113)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1B-MIPI_VIO-Pad57)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1C-P0.14_AIN1-Pad24)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-GND"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-P0.07"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U2-NC-Pad4)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-ENABLE"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-SIM_CLK_C"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad107)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-HOST_nRESET"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-SWDIO"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad106)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad112)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad119)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1D-P0.27-Pad84)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad105)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1C-P0.10-Pad18)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1D-P0.20_AIN7-Pad35)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U3-QOD-Pad5)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad111)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1D-P0.21_TRACECLK-Pad37)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1C-P0.09-Pad16)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1C-P0.08-Pad15)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-P0.03"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad104)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-P0.30"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad115)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-SWDCLK"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-P0.31"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1D-P0.18_AIN5-Pad29)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1D-P0.26-Pad83)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1D-P0.25_TRACEDATA3-Pad42)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-HOST_RTS"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U4-NC-Pad4)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad73)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-P0.22"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-COEX0"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad126)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1B-MAGPIO0-Pad55)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1C-P0.15_AIN2-Pad25)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-HOST_TX"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1D-P0.16_AIN3-Pad26)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad109)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-P0.02"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-nRESET"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad114)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1D-P0.24_TRACEDATA2-Pad40)"
+        "pattern": "Board_2-unconnected-(U1C-P0.12-Pad20)"
       },
       {
         "netclass": "Board_2-Default",
@@ -1650,7 +1414,151 @@
       },
       {
         "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad122)"
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad10)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-GND"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad73)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad115)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-GNSS_VBIAS"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-nRESET_SW"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad107)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(J8-Pin_9-Pad9)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1D-P0.29-Pad87)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-SIM_CD"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1D-P0.24_TRACEDATA2-Pad40)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-SIM_RST_C"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-P0.06"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1D-P0.25_TRACEDATA3-Pad42)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-SIM_VCC"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad126)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad124)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-P0.00"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1B-MAGPIO0-Pad55)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad105)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-LED_PWR_K"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-SIM_IO"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U3-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad121)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-SIM_RST"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad120)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad71)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-HOST_CTS"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1C-P0.10-Pad18)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-HOST_RX"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1B-MIPI_SDATA-Pad59)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad106)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-P0.07"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad127)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-SIM_IO_C"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-P0.03"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1D-P0.20_AIN7-Pad35)"
       },
       {
         "netclass": "Board_2-Default",
@@ -1662,91 +1570,15 @@
       },
       {
         "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1C-P0.12-Pad20)"
+        "pattern": "Board_2-unconnected-(U2-NC-Pad4)"
       },
       {
         "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1D-P0.19_AIN6-Pad30)"
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad118)"
       },
       {
         "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad124)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-HOST_CTS"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1B-MAGPIO1-Pad54)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-GNSS_VBIAS"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad127)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(J7-VPP/SWP-PadC6)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1B-MIPI_SDATA-Pad59)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad51)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad108)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1C-P0.04-Pad100)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U3-NC-Pad4)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-SIM_CLK"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-SIM_RST_C"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1B-MAGPIO2-Pad53)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1B-COEX2-Pad91)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-SIM_IO_C"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1B-COEX1-Pad92)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-GNSS_VBIAS_SRC"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad10)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-HOST_RX"
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad123)"
       },
       {
         "netclass": "Board_2-Default",
@@ -1754,59 +1586,19 @@
       },
       {
         "netclass": "Board_2-Default",
-        "pattern": "Board_2-SIM_RST"
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad125)"
       },
       {
         "netclass": "Board_2-Default",
-        "pattern": "Board_2-DEC0"
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad112)"
       },
       {
         "netclass": "Board_2-Default",
-        "pattern": "Board_2-P0.06"
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad122)"
       },
       {
         "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1D-P0.17_AIN4-Pad28)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-SIM_CD"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(J8-Pin_9-Pad9)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-HOST_DTR"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad117)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-HOST_RI"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad70)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad110)"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-nRESET_SW"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-SIM_IO"
-      },
-      {
-        "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1D-P0.28-Pad86)"
+        "pattern": "Board_2-COEX0"
       },
       {
         "netclass": "Board_2-Default",
@@ -1814,7 +1606,215 @@
       },
       {
         "netclass": "Board_2-Default",
-        "pattern": "Board_2-unconnected-(U1E-RES-Pad120)"
+        "pattern": "Board_2-unconnected-(U1D-P0.28-Pad86)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad110)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-SIM_CLK_C"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-HOST_DTR"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-HOST_TX"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-P0.31"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad108)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1B-MAGPIO1-Pad54)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-P0.02"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad70)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-P0.22"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-LED1_A"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1C-P0.13_AIN0-Pad23)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1B-MIPI_VIO-Pad57)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1C-P0.14_AIN1-Pad24)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1C-P0.01-Pad96)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad109)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-HOST_RTS"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1D-P0.18_AIN5-Pad29)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U4-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-SWDCLK"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1C-P0.04-Pad100)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad117)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1D-P0.16_AIN3-Pad26)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-P0.30"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-nRESET"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad114)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-ENABLE"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-SIM_CLK"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-SIM_DET-Pad45)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad113)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U3-QOD-Pad5)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1B-COEX1-Pad92)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1B-MIPI_SCLK-Pad58)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1D-P0.21_TRACECLK-Pad37)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(J7-VPP/SWP-PadC6)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1D-P0.17_AIN4-Pad28)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-SWDIO"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-HOST_nRESET"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1C-P0.15_AIN2-Pad25)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1C-P0.08-Pad15)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1B-COEX2-Pad91)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1D-P0.26-Pad83)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1C-P0.09-Pad16)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1D-P0.27-Pad84)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad51)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-GNSS_VBIAS_SRC"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-HOST_RI"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1D-P0.19_AIN6-Pad30)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad104)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-DEC0"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad119)"
+      },
+      {
+        "netclass": "Board_2-Default",
+        "pattern": "Board_2-unconnected-(U1E-RES-Pad111)"
       },
       {
         "netclass": "Board_2-RF_50OHM",
@@ -1846,131 +1846,7 @@
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-SIM_RST"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad123)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1B-MIPI_SDATA-Pad59)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1B-MIPI_VIO-Pad57)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1B-MAGPIO1-Pad54)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad122)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1D-P0.26-Pad83)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad112)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-GNSS_VBIAS"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-GND"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-HOST_RX"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1C-P0.11-Pad19)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-P0.00"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1C-P0.05-Pad2)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-HOST_RI"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1B-COEX2-Pad91)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1D-P0.24_TRACEDATA2-Pad40)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1C-P0.09-Pad16)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad106)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1C-P0.08-Pad15)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-P0.06"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad110)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-SIM_DET-Pad45)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1D-P0.20_AIN7-Pad35)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(J7-VPP/SWP-PadC6)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-SWDIO"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1C-P0.13_AIN0-Pad23)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad111)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1B-COEX1-Pad92)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad51)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-P0.03"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-SIM_CLK"
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad114)"
       },
       {
         "netclass": "Board_3-Default",
@@ -1978,131 +1854,7 @@
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1D-P0.28-Pad86)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-P0.02"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-P0.30"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad114)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1D-P0.16_AIN3-Pad26)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(J8-Pin_7-Pad7)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad115)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1C-P0.04-Pad100)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad108)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-DEC0"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-COEX0"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1D-P0.27-Pad84)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1D-P0.19_AIN6-Pad30)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-P0.22"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad113)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad104)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-SIM_CLK_C"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U4-NC-Pad4)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U3-QOD-Pad5)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-HOST_CTS"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad118)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad116)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-GNSS_VBIAS_SRC"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1D-P0.23_TRACEDATA1-Pad39)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1C-P0.15_AIN2-Pad25)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-nRESET_SW"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad120)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-P0.31"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-SWDCLK"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-LED_PWR_K"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1D-P0.25_TRACEDATA3-Pad42)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-HOST_nRESET"
+        "pattern": "Board_3-P0.00"
       },
       {
         "netclass": "Board_3-Default",
@@ -2110,27 +1862,131 @@
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1D-P0.21_TRACECLK-Pad37)"
+        "pattern": "Board_3-unconnected-(U4-NC-Pad4)"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad109)"
+        "pattern": "Board_3-unconnected-(U1E-SIM_DET-Pad45)"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U3-NC-Pad4)"
+        "pattern": "Board_3-LED1_A"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-P0.07"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(J8-Pin_9-Pad9)"
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad116)"
       },
       {
         "netclass": "Board_3-Default",
         "pattern": "Board_3-unconnected-(U1D-P0.17_AIN4-Pad28)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-GNSS_VBIAS_SRC"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(J7-VPP/SWP-PadC6)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad112)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad113)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1B-MAGPIO2-Pad53)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1C-P0.15_AIN2-Pad25)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1D-P0.23_TRACEDATA1-Pad39)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad106)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1B-MIPI_VIO-Pad57)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-GNSS_VBIAS"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1B-MIPI_SDATA-Pad59)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad121)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad123)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1D-P0.24_TRACEDATA2-Pad40)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad118)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-COEX0"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-HOST_TX"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1D-P0.26-Pad83)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad70)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-SIM_CLK_C"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-HOST_RI"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1D-P0.16_AIN3-Pad26)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U3-QOD-Pad5)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad119)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad71)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-SWDCLK"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1D-P0.18_AIN5-Pad29)"
       },
       {
         "netclass": "Board_3-Default",
@@ -2142,11 +1998,15 @@
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad107)"
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad110)"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-SIM_IO"
+        "pattern": "Board_3-P0.03"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-SIM_CLK"
       },
       {
         "netclass": "Board_3-Default",
@@ -2154,31 +2014,31 @@
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-SIM_IO_C"
+        "pattern": "Board_3-HOST_CTS"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad105)"
+        "pattern": "Board_3-P0.02"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1D-P0.18_AIN5-Pad29)"
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad122)"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-SIM_VCC"
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad109)"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad125)"
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad104)"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-HOST_TX"
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad120)"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1C-P0.01-Pad96)"
+        "pattern": "Board_3-unconnected-(U1D-P0.25_TRACEDATA3-Pad42)"
       },
       {
         "netclass": "Board_3-Default",
@@ -2186,51 +2046,43 @@
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad70)"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-HOST_DTR"
-      },
-      {
-        "netclass": "Board_3-Default",
-        "pattern": "Board_3-HOST_RTS"
-      },
-      {
-        "netclass": "Board_3-Default",
         "pattern": "Board_3-unconnected-(U1E-RES-Pad73)"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1C-P0.12-Pad20)"
+        "pattern": "Board_3-SIM_RST"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-LED1_A"
+        "pattern": "Board_3-unconnected-(U1C-P0.11-Pad19)"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U2-NC-Pad4)"
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad125)"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad117)"
+        "pattern": "Board_3-SIM_IO"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad71)"
+        "pattern": "Board_3-SIM_VCC"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1B-MAGPIO2-Pad53)"
+        "pattern": "Board_3-unconnected-(U1B-MAGPIO1-Pad54)"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-ENABLE"
+        "pattern": "Board_3-unconnected-(U1C-P0.14_AIN1-Pad24)"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1B-MIPI_SCLK-Pad58)"
+        "pattern": "Board_3-unconnected-(U1D-P0.19_AIN6-Pad30)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-P0.07"
       },
       {
         "netclass": "Board_3-Default",
@@ -2238,11 +2090,19 @@
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad119)"
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad51)"
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1E-RES-Pad121)"
+        "pattern": "Board_3-GND"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-HOST_RTS"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-P0.22"
       },
       {
         "netclass": "Board_3-Default",
@@ -2250,7 +2110,115 @@
       },
       {
         "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad115)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-HOST_RX"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(J8-Pin_7-Pad7)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-HOST_nRESET"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-ENABLE"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1C-P0.01-Pad96)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad108)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad117)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad111)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-HOST_DTR"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1C-P0.05-Pad2)"
+      },
+      {
+        "netclass": "Board_3-Default",
         "pattern": "Board_3-unconnected-(U1E-RES-Pad124)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1D-P0.28-Pad86)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-SIM_IO_C"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1C-P0.12-Pad20)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-P0.30"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-LED_PWR_K"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-DEC0"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-P0.06"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-SWDIO"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1C-P0.04-Pad100)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U2-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1B-MIPI_SCLK-Pad58)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1D-P0.21_TRACECLK-Pad37)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-P0.31"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1B-COEX2-Pad91)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U3-NC-Pad4)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(J8-Pin_9-Pad9)"
       },
       {
         "netclass": "Board_3-Default",
@@ -2258,7 +2226,39 @@
       },
       {
         "netclass": "Board_3-Default",
-        "pattern": "Board_3-unconnected-(U1C-P0.14_AIN1-Pad24)"
+        "pattern": "Board_3-unconnected-(U1B-COEX1-Pad92)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad105)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1C-P0.08-Pad15)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1D-P0.27-Pad84)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1D-P0.20_AIN7-Pad35)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1C-P0.13_AIN0-Pad23)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-nRESET_SW"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1C-P0.09-Pad16)"
+      },
+      {
+        "netclass": "Board_3-Default",
+        "pattern": "Board_3-unconnected-(U1E-RES-Pad107)"
       },
       {
         "netclass": "Board_3-RF_50OHM",

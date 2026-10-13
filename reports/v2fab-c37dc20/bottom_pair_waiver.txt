@@ -1,0 +1,23 @@
+VIPPO bottom caps near bottom pads: [('JP2', '2', 0.285, 0.2, 'GND', 'SIM_VCC')]
+entries <0.3: 26 assembled unique pairs: 20 overlaps on assembled: []
+filled (0.20/0.25) caps among assembled pairs: []
+  ('C41', '1', 0.263, 0.3, 'HOST_TX')
+  ('C42', '1', 0.09, 0.3, 'VDD_GPIO')
+  ('C42', '2', 0.259, 0.3, 'VDD_GPIO')
+  ('C43', '2', 0.24, 0.3, 'VDD_GPIO')
+  ('C43', '2', 0.29, 0.3, 'GND')
+  ('C44', '1', 0.27, 0.3, 'VDD_GPIO')
+  ('C47', '2', 0.122, 0.3, 'P0.30')
+  ('Q1', '2', 0.12, 0.3, 'GND')
+  ('Q1', '3', 0.159, 0.3, 'VDD_GPIO')
+  ('Q1', '3', 0.18, 0.3, 'GND')
+  ('R23', '1', 0.114, 0.3, 'P0.30')
+  ('R23', '1', 0.116, 0.3, 'VIO')
+  ('U2', '1', 0.036, 0.3, 'VDD_nRF')
+  ('U5', '5', 0.13, 0.3, 'HOST_RTS')
+  ('U5', '6', 0.138, 0.3, 'HOST_RTS')
+  ('U6', '1', 0.141, 0.3, 'HOST_RX')
+  ('U6', '1', 0.165, 0.3, 'VDD_GPIO')
+  ('U6', '1', 0.282, 0.3, 'VDD_GPIO')
+  ('U6', '2', 0.109, 0.3, 'HOST_RX')
+  ('U6', '4', 0.102, 0.3, 'HOST_CTS')

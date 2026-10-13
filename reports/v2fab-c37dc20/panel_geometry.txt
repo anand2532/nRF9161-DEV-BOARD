@@ -1,0 +1,5 @@
+panel DRC Counter({('warning', 'lib_footprint_issues'): 199}) unconn 0
+panel WxH 118.1 93.1
+mousebite holes 128 KTAB left 0
+[('KiKit_FID_B_1', 'B', 15.05, 4.4), ('KiKit_FID_B_2', 'B', 103.05, 4.4), ('KiKit_FID_B_3', 'B', 15.05, 88.7), ('KiKit_FID_T_1', 'T', 15.05, 4.4), ('KiKit_FID_T_2', 'T', 103.05, 4.4), ('KiKit_FID_T_3', 'T', 15.05, 88.7), ('KiKit_TO_1', 'T', 3.05, 3.05), ('KiKit_TO_2', 'T', 115.05, 3.05), ('KiKit_TO_3', 'T', 3.05, 90.05), ('KiKit_TO_4', 'T', 115.05, 90.05)]
+closest pad to mousebite hole edge [(2.102, 'C46')]

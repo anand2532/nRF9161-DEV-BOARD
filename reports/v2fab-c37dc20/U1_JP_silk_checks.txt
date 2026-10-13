@@ -1,0 +1,6 @@
+U1 identical to 365b7f6: True
+footprints moved/added/removed vs 365b7f6: []
+JP2 B paste [False, False]
+silk F below 1.0/0.15: 0
+silk B below 1.0/0.15: 0
+DRC silk violations (board rule 0.15): []

@@ -1,6 +1,34 @@
 # FAB READY CHECKLIST: v2 (UART modem module, double-sided)
 
-Board: `v2` @ **365b7f6** (pass v2d). Pass date: 2026-10-13 IST. Report: `reports/V2_FAB_PASS_365b7f6.md`. Evidence: `reports/v2fab-365b7f6/`. Package: `fab/staging-v2-365b7f6/`. Drill scheme **(a) fill every 0.20 mm hole: CONFIRMED** (20 filled vias).
+Board: `v2` @ **c37dc20** (Layout v2e). Pass date: 2026-10-13 IST. Report: `reports/V2_FAB_PASS_c37dc20.md`. Evidence: `reports/v2fab-c37dc20/`. Package: `fab/staging-v2-c37dc20/`. Drill scheme: fill every 0.20 mm hole, CONFIRMED. **22 filled vias per board, 88 per panel.**
+
+## Overall gate (c37dc20): **GREEN apart from the JLC quote**
+
+| # | Item | Status | Evidence |
+|---|---|---|---|
+| 1 | Claims: size, 4L, J7 top; assembled 51 top / 16 bottom | PASS | parts.json |
+| 2 | Connectivity as-is / refilled | PASS 0/0 | DRC_asis.json, DRC_refilled.json |
+| 3 | DRC errors | PASS 0 | same |
+| 4 | Bottom parts (no BGA/LGA/QFN, heavy, tall, THT) | PASS | report |
+| 5 | Lighter bottom / reflow order (bottom first) | PASS 16 vs 51 | report |
+| 6 | Nothing on the bottom under U1 + 1 mm | PASS | geometry_checks.txt |
+| 7 | No unfilled hole overlapping an assembled pasted pad (edge-overlap method, both sides) | PASS | unfilled_hole_pad_overlap.txt |
+| 7a | FB1.1, FB2.1, C14: ring overlap 0.02–0.044 mm, hole >0.1 mm outside the pad | **WAIVED** (Hardware PM) | unfilled_hole_pad_overlap.txt |
+| 8 | Bottom pads <0.3 mm from via copper (20 pairs, all 0.30 tented, none overlaps, no filled cap) | **WAIVED** (Hardware PM, general practice) | bottom_pair_waiver.txt |
+| 9 | Fill scope 22 = 13 × 0.20 + 9 × 0.25, all intended; U1/C38.2 ones centred (0.000 mm); ≥0.45 mm to unfilled | PASS | drill_fill_classification.txt |
+| 10 | Layout v2e claims (C38.2, C12 via, 3 F1 vias) | PASS | drill_fill_classification.txt |
+| 11 | Stackup board = job = locked note | PASS | package_sanity.txt |
+| 12 | Silk ≥1.0/0.15, spacing 0.15, none on pads | PASS | U1_JP_silk_checks.txt, DRC_asis.json |
+| 13 | U1 vs Nordic DK | PASS | U1_JP_silk_checks.txt |
+| 14 | Part-to-edge (panel frame) | PASS | edge_clearance.txt |
+| 15 | Panel 118.10×93.10, 6 mm frame, 3+3 fiducials, 4 × 2 mm tooling, mouse bites, DRC 0/0 | PASS | panel/, DRC_panel.json |
+| 16 | Package single + panel, CPL top/bottom | PASS | fab/staging-v2-c37dc20/ |
+| 17 | Order notes (22/board, 88/panel; bottom first; JP2 manual bridge + cap caution) | PASS | fab/staging-v2-c37dc20/ORDER_NOTES.md |
+| Q | JLC quote Q1–Q16 (Q14 = POFV price for 22/board) | OPEN | below |
+
+---
+
+# Superseded: pass on 365b7f6
 
 ## Overall gate (365b7f6): **RED (2 items)**
 
