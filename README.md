@@ -92,6 +92,10 @@ LTE and GNSS matching sit immediately west of the SiP (U1 rotation 180°, RF edg
 
 Disable GNSS LNA bias (`%XCOEX0`) if using a passive GNSS antenna.
 
+**Antenna choice (RF review F3).** The board ground is only 50 × 37.5 mm (≈0.11 λ at 700 MHz), so it cannot act as the counterpoise for a quarter-wave antenna.
+- **LTE (J2):** use a ground-independent antenna, i.e. a sleeve dipole or a flex dipole covering 698–2200 MHz. Do **not** use a monopole "stick" antenna that relies on the board ground plane.
+- **GNSS (J5):** use an active patch antenna with its own ground plate.
+
 ## SIM requirements
 
 - nRF9161 SIM_RST / SIM_CLK / SIM_IO / SIM_1V8 → TPD3F303DPV → JAE SF72S006 **nano-SIM (4FF)**
