@@ -146,3 +146,26 @@ Read-only. Analysis ran on a /tmp copy using pcbnew 9.0.2 and kicad-cli DRC with
 - **Fence vias:** unchanged (max gap ANT 2.36, AUX 2.0, GNSS 2.15 mm).
 - **DRC (kicad-cli 9.0.2):** 0 errors, 0 unconnected. 82 `lib_footprint_issues` warnings (environment only) and 1 cosmetic parity `net_conflict` on J7 C6.
 - G1–G8 PASS. FAB-OK WITH NOTES; F2–F4 unchanged.
+
+---
+## Re-check @ 42876bb (branch v2-cosmetic, base 0abc883): **PASS (FAB-OK WITH NOTES)**
+Worktree: /workspace/kicad-projects/nRF9161-v2, which has v2-cosmetic checked out at 42876bb. Read-only. DRC ran on a /tmp copy.
+- **Removed vias:** 9 GND vias, the corner via (17.0, 47.5) plus 8 stitching vias. No vias were added.
+  - None is a fence via: all are ≥3.0 mm from RF trace centre, and fence vias are ≤1.5 mm.
+  - "Not near J2/J5" is only partly true:
+    - J2 side: (21.5, 26.5), (23.0, 26.5) and (24.5, 26.5) are 3.9 / 5.0 / 6.3 mm from J2, and (18.5, 25.0) is 4.5 mm.
+    - J5 side: (17.0, 41.5), (18.5, 41.5), (20.0, 41.5) and (18.5, 43.0) are 5.0–6.5 mm from J5.
+- **Fences:** intact. ANT has 8 vias (max gap 2.36 mm), AUX 3 (2.0 mm) and GNSS 9 (2.15 mm).
+- **In1:** 0 tracks, 1 piece, 1704.1 mm².
+- **Stitching:** measured as the largest distance from any point to the nearest GND via.
+  - Near J2: 1.68 → 1.82 mm, about 3.6 mm effective spacing.
+  - Near J5: 1.12 → 1.80 mm.
+  - RF corner: 3.33 mm, unchanged and pre-existing at (16.5, 36).
+  - Elsewhere: max 8.1 mm, at the north edge near (41, 12.5). That is within the ~10 mm guideline.
+  - Pour islands are unchanged: F.Cu 17 / B.Cu 13, the same count and sizes as base.
+  - Near J2/J5 the spacing is now marginally above λ/20 (3 mm), but not on the feed. This is a note, not a fix.
+  - Optional: restore (23.0, 26.5) and (18.5, 41.5) if silk allows.
+- **C44:** 100 nF VDD_GPIO decoupling on B.Cu, moved from (41.0, 46.2) to (41.0, 46.4), a 0.2 mm shift. It is ≥17 mm from RF and outside B1–B5. OK.
+- **AMP logo:** F.Silkscreen only, 3 filled shapes, bbox x 40.5–46.0, y 46.6–48.4. It sits on no copper layer and on no F.Cu pads, and is ≥30 mm from J2/J5. OK.
+- **Corners and DRC:** copper-edge clearance is 0.5 mm with R2.5 mm corners. kicad-cli: **0 errors, 0 unconnected**. 82 `lib_footprint_issues` warnings (environment only) and 1 cosmetic parity `net_conflict` on J7 C6.
+- G1–G8 PASS. F2–F4 notes unchanged.
