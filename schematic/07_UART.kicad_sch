@@ -1309,7 +1309,7 @@
 				)
 			)
 		)
-		(property "MPN" "2.54-1*10PPin"
+		(property "MPN" "2.54-1*10P"
 			(at 40.64 88.9 0)
 			(hide yes)
 			(effects

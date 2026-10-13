@@ -861,7 +861,7 @@
 				)
 			)
 		)
-		(property "Value" "0R / DNP match"
+		(property "Value" "0R"
 			(at 63.5 53.34 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -898,6 +898,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0402WGF0000TCE"
+			(at 63.5 50.8 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17168"
+			(at 63.5 50.8 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 63.5 50.8 90)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1139,6 +1166,33 @@
 				)
 			)
 		)
+		(property "MPN" "U.FL-R-SMT-1(10)"
+			(at 101.6 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C88373"
+			(at 101.6 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Hirose"
+			(at 101.6 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ebd3811d-62f7-4e17-a77e-1278112c8ef1")
 		)
@@ -1173,7 +1227,7 @@
 				)
 			)
 		)
-		(property "Value" "0R / DNP match"
+		(property "Value" "0R"
 			(at 63.5 116.84 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1210,6 +1264,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0402WGF0000TCE"
+			(at 63.5 114.3 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17168"
+			(at 63.5 114.3 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 63.5 114.3 90)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -1,65 +1,65 @@
 Reference,Quantity,Value,Description,Manufacturer,MPN,Package,DNP/Optional,Function,LCSC
-U1,1,nRF9161-LACA-R7,LTE-M/NB-IoT/DECT NR+/GNSS SiP (PS v1.0),Nordic Semiconductor,nRF9161-LACA-R7,LGA 16.0x10.5mm,,LTE-M/NB-IoT/DECT NR+/GNSS SiP (PS v1.0),
-U2,1,TLV73333PDBV,3.3 V VDD_GPIO LDO; EN tied to ENABLE,Texas Instruments,TLV73333PDBVR,SOT-23-5,,3.3 V VDD_GPIO LDO; EN tied to ENABLE,
-U3,1,TPS22919DCKR,GNSS VBIAS high-side load switch; ON=COEX0,Texas Instruments,TPS22919DCKR,SC-70-6 / SOT-363,,GNSS active-antenna bias gate (LOCKED),
-U4,1,TPD3F303DPV,SIM ESD/EMI filter per nRF91 HDG,Texas Instruments,TPD3F303DPVR,USON-8 1.45x1.45mm,,SIM ESD/EMI filter per nRF91 HDG,
-C1,1,10uF/16V X5R,VDD_nRF (JP1/R2 removed) bulk after input filter,Murata,GRM21BR61C106ME15,0805,,VDD_nRF (JP1/R2 removed) bulk after input filter,
-C2,1,100nF 10V X5R,VDD_nRF (JP1/R2 removed) HF decoupling,Murata,GRM155R61A104KA01,0402,,VDD_nRF (JP1/R2 removed) HF decoupling,
-C3,1,47uF 10V X5R,VDD1 bulk (nRF91 HDG Table 2 C3),Murata,GRM21BR61A476ME15,0805,,VDD1 bulk (nRF91 HDG Table 2 C3),
-C4,1,4.7uF 10V X5R,VDD1 mid decoupling (HDG Table 2),Murata,GRM155R61A475MEAA,0402,,VDD1 mid decoupling (HDG Table 2),
-C5,1,100nF 10V X5R,VDD1 HF decoupling (HDG Table 2),Murata,GRM033R61A104KE15,0201,,VDD1 HF decoupling (HDG Table 2),
-C6,1,15pF 25V C0G,VDD1 RF decoupling (HDG Table 2),Murata,GJM0335C1E150JB01,0201,,VDD1 RF decoupling (HDG Table 2),
-C7,1,47uF 10V X5R,VDD2 bulk (HDG Table 2 C10),Murata,GRM21BR61A476ME15,0805,,VDD2 bulk (HDG Table 2 C10),
-C8,1,4.7uF 10V X5R,VDD2 mid decoupling,Murata,GRM155R61A475MEAA,0402,,VDD2 mid decoupling,
-C9,1,100nF 10V X5R,VDD2 HF decoupling,Murata,GRM033R61A104KE15,0201,,VDD2 HF decoupling,
-C10,1,15pF 25V C0G,VDD2 RF decoupling,Murata,GJM0335C1E150JB01,0201,,VDD2 RF decoupling,
-C11,1,4.7uF 10V X5R,VDD_GPIO bulk,Murata,GRM155R61A475MEAA,0402,,VDD_GPIO bulk,
-C12,1,100nF 10V X5R,VDD_GPIO HF,Murata,GRM033R61A104KE15,0201,,VDD_GPIO HF,
-C13,1,4.7uF 10V X5R,DEC0 (nRF91x1 / PCN134 4.7uF not 47uF),Murata,GRM155R61A475MEAA,0402,,DEC0 (nRF91x1 / PCN134 4.7uF not 47uF),
-C14,1,100nF 10V X5R,ENABLE decoupling (HDG 4.3),Murata,GRM033R61A104KE15,0201,,ENABLE decoupling (HDG 4.3),
+U1,1,nRF9161-LACA-R7,LTE-M/NB-IoT/DECT NR+/GNSS SiP (PS v1.0),Nordic Semiconductor,NRF9161-LACA-R7,LGA 16.0x10.5mm,,LTE-M/NB-IoT/DECT NR+/GNSS SiP (PS v1.0),C21547412
+U2,1,TLV73333PDBV,3.3 V VDD_GPIO LDO; EN tied to ENABLE,Texas Instruments,TLV73333PDBVR,SOT-23-5,,3.3 V VDD_GPIO LDO; EN tied to ENABLE,C134139
+U3,1,TPS22919DCKR,GNSS VBIAS high-side load switch; ON=COEX0,Texas Instruments,TPS22919DCKR,SC-70-6 / SOT-363,,GNSS active-antenna bias gate (LOCKED),C2149796
+U4,1,TPD3F303DPV,SIM ESD/EMI filter per nRF91 HDG,Texas Instruments,TPD3F303DPVR,USON-8 1.45x1.45mm,,SIM ESD/EMI filter per nRF91 HDG,C2865991
+C1,1,10uF/16V X5R,VDD_nRF (JP1/R2 removed) bulk after input filter,Samsung Electro-Mechanics,CL21A106KOQNNNE,0805,,VDD_nRF (JP1/R2 removed) bulk after input filter,C1713
+C2,1,100nF 10V X5R,VDD_nRF (JP1/R2 removed) HF decoupling,Samsung Electro-Mechanics,CL05B104KO5NNNC,0402,,VDD_nRF (JP1/R2 removed) HF decoupling,C1525
+C3,1,47uF 10V X5R,VDD1 bulk (nRF91 HDG Table 2 C3),Murata,GRM21BR61A476ME15L,0805,,VDD1 bulk (nRF91 HDG Table 2 C3),C124129
+C4,1,4.7uF 10V X5R,VDD1 mid decoupling (HDG Table 2),Murata,GRM155R61A475MEAAD,0402,,VDD1 mid decoupling (HDG Table 2),C335105
+C5,1,100nF 10V X5R,VDD1 HF decoupling (HDG Table 2),Murata,GRM033R61A104KE15D,0201,,VDD1 HF decoupling (HDG Table 2),C76934
+C6,1,15pF 25V C0G,VDD1 RF decoupling (HDG Table 2),Murata,GJM0335C1E150JB01D,0201,,VDD1 RF decoupling (HDG Table 2),C710722
+C7,1,47uF 10V X5R,VDD2 bulk (HDG Table 2 C10),Murata,GRM21BR61A476ME15L,0805,,VDD2 bulk (HDG Table 2 C10),C124129
+C8,1,4.7uF 10V X5R,VDD2 mid decoupling,Murata,GRM155R61A475MEAAD,0402,,VDD2 mid decoupling,C335105
+C9,1,100nF 10V X5R,VDD2 HF decoupling,Murata,GRM033R61A104KE15D,0201,,VDD2 HF decoupling,C76934
+C10,1,15pF 25V C0G,VDD2 RF decoupling,Murata,GJM0335C1E150JB01D,0201,,VDD2 RF decoupling,C710722
+C11,1,4.7uF 10V X5R,VDD_GPIO bulk,Murata,GRM155R61A475MEAAD,0402,,VDD_GPIO bulk,C335105
+C12,1,100nF 10V X5R,VDD_GPIO HF,Murata,GRM033R61A104KE15D,0201,,VDD_GPIO HF,C76934
+C13,1,4.7uF 10V X5R,DEC0 (nRF91x1 / PCN134 4.7uF not 47uF),Murata,GRM155R61A475MEAAD,0402,,DEC0 (nRF91x1 / PCN134 4.7uF not 47uF),C335105
+C14,1,100nF 10V X5R,ENABLE decoupling (HDG 4.3),Murata,GRM033R61A104KE15D,0201,,ENABLE decoupling (HDG 4.3),C76934
 C21,1,DNP High-Q,LTE pi-match shunt (unpopulated until antenna tune),Murata,GJM1555C1H100JB01,0402,DNP,LTE pi-match shunt (unpopulated until antenna tune),
 C22,1,DNP High-Q,LTE pi-match shunt (DNP),Murata,GJM1555C1H100JB01,0402,DNP,LTE pi-match shunt (DNP),
 C23,1,DNP High-Q,AUX pi-match shunt (DNP),Murata,GJM1555C1H100JB01,0402,DNP,AUX pi-match shunt (DNP),
 C24,1,DNP High-Q,AUX pi-match shunt (DNP),Murata,GJM1555C1H100JB01,0402,DNP,AUX pi-match shunt (DNP),
-C27,1,100pF C0G,GNSS DC block (nWP033 active-antenna bias-T),Murata,GJM0335C1E101JB01,0201,,GNSS DC block (nWP033 active-antenna bias-T),
-C28,1,100pF,GNSS Vbias HF filter,Murata,GRM155R71H101KA01,0402,,GNSS Vbias HF filter,
-C29,1,10nF,GNSS Vbias mid filter,Murata,GRM155R71H103KA01,0402,,GNSS Vbias mid filter,
-C30,1,100nF,GNSS Vbias bulk filter,Murata,GRM155R61A104KA01,0402,,GNSS Vbias bulk filter,
+C27,1,100pF C0G,GNSS DC block (nWP033 active-antenna bias-T),Murata,GRM0335C1H101JA01D,0201,,GNSS DC block (nWP033 active-antenna bias-T),C76922
+C28,1,100pF,GNSS Vbias HF filter,Murata,GRM1555C1H101JA01D,0402,,GNSS Vbias HF filter,C77177
+C29,1,10nF,GNSS Vbias mid filter,Samsung Electro-Mechanics,CL05B103KB5NNNC,0402,,GNSS Vbias mid filter,C15195
+C30,1,100nF,GNSS Vbias bulk filter,Samsung Electro-Mechanics,CL05B104KO5NNNC,0402,,GNSS Vbias bulk filter,C1525
 C31,1,DNP,GNSS match shunt (DNP),Murata,GJM1555C1H100JB01,0402,DNP,GNSS match shunt (DNP),
 C32,1,DNP,GNSS match shunt (DNP),Murata,GJM1555C1H100JB01,0402,DNP,GNSS match shunt (DNP),
-C33,1,100nF,SIM_1V8 decoupling,Murata,GRM155R61A104KA01,0402,,SIM_1V8 decoupling,
-C34,1,220nF,SIM VCC decoupling (ISO 7816 / HDG),Murata,GRM155R61A224KE01,0402,,SIM VCC decoupling (ISO 7816 / HDG),
-C35,1,22pF C0G,SIM_CLK filter,Murata,GRM0335C1E220JA01,0201,,SIM_CLK filter,
-C36,1,22pF C0G,SIM_RST filter,Murata,GRM0335C1E220JA01,0201,,SIM_RST filter,
-C37,1,22pF C0G,SIM_IO filter,Murata,GRM0335C1E220JA01,0201,,SIM_IO filter,
-C38,1,22pF C0G,SIM_1V8 HF,Murata,GRM0335C1E220JA01,0201,,SIM_1V8 HF,
+C33,1,100nF,SIM_1V8 decoupling,Samsung Electro-Mechanics,CL05B104KO5NNNC,0402,,SIM_1V8 decoupling,C1525
+C34,1,220nF,SIM VCC decoupling (ISO 7816 / HDG),Samsung Electro-Mechanics,CL05B224KO5NNNC,0402,,SIM VCC decoupling (ISO 7816 / HDG),C16772
+C35,1,22pF C0G,SIM_CLK filter,Murata,GRM0335C1H220JA01D,0201,,SIM_CLK filter,C76924
+C36,1,22pF C0G,SIM_RST filter,Murata,GRM0335C1H220JA01D,0201,,SIM_RST filter,C76924
+C37,1,22pF C0G,SIM_IO filter,Murata,GRM0335C1H220JA01D,0201,,SIM_IO filter,C76924
+C38,1,22pF C0G,SIM_1V8 HF,Murata,GRM0335C1H220JA01D,0201,,SIM_1V8 HF,C76924
 C39,1,DNP,"nRESET cap footprint, DNP (nRF91 HDG: no extra parts on nRESET; v2 C39 resolution)",Murata,GRM033R61A104KE15,0201,DNP,"nRESET cap footprint, DNP (nRF91 HDG: no extra parts on nRESET; v2 C39 resolution)",
-C40,1,100nF 10V X7R,SIM_1V8 decoupling at modem (U1 pad 49),Murata,GRM155R71A104KA01D,0402,,SIM_1V8 decoupling at modem (U1 pad 49),
-D1,1,PMEG4030ER,Reverse-polarity Schottky,Nexperia,PMEG4030ER,SOD-123W,,Reverse-polarity Schottky,
-D2,1,SMAJ5.0A,VIN TVS 5.0 V,Littelfuse,SMAJ5.0A,DO-214AC,,VIN TVS 5.0 V,
-D3,1,Green LED,Power LED on VIN,Kingbright,KP-2012SGC,0603,,Power LED on VIN,
-D4,1,Green LED,STATUS LED on P0.00,Kingbright,KP-2012SGC,0603,,STATUS LED on P0.00,
-F1,1,2A fuse,VIN fuse,Littelfuse,0468002.NR,1206,,VIN fuse,
-FB1,1,BLM18KG221SN1,VDD1 ferrite (nRF91 HDG),Murata,BLM18KG221SN1D,0603,,VDD1 ferrite (nRF91 HDG),
-FB2,1,BLM18KG221SN1,VDD2 ferrite 1,Murata,BLM18KG221SN1D,0603,,VDD2 ferrite 1,
-FB3,1,BLM18KG221SN1,VDD2 ferrite 2 (nRF9161 DK extra FB3),Murata,BLM18KG221SN1D,0603,,VDD2 ferrite 2 (nRF9161 DK extra FB3),
-FB4,1,BLM18PG221SN1,VIN input ferrite,Murata,BLM18PG221SN1D,0805,,VIN input ferrite,
-FB5,1,BLM15HG102SN1,GNSS bias ferrite (land L_0402_1005Metric),Murata,BLM15HG102SN1D,0402,,GNSS bias ferrite; schematic footprint fixed 0603→0402,
-L1,1,0R / DNP match,LTE series match placeholder (0R until tune; LQW15AN family per HDG),Murata,LQW15AN10NG00,0402,Fit 0R until VNA; then LQW15AN,LTE series match placeholder (0R until tune; LQW15AN family per HDG),
-L2,1,0R / DNP match,AUX series match placeholder,Murata,LQW15AN10NG00,0402,Fit 0R until VNA; then LQW15AN,AUX series match placeholder,
-L4,1,100nH,GNSS bias-T RF choke (nWP033),Murata,LQW15ANR10J00,0402,,GNSS bias-T RF choke (nWP033),
-R1,1,10k,ENABLE series to VDD1 (HDG 4.3),Yageo,RC0201FR-0710KL,0201,,ENABLE series to VDD1 (HDG 4.3),
-R3,1,1k,Power LED resistor,Yageo,RC0402FR-071KL,0402,,Power LED resistor,
-R5,1,1k,nRESET series (HDG 4.8; no external pull-up),Yageo,RC0201FR-071KL,0201,,nRESET series (HDG 4.8; no external pull-up),
-R10,1,1k,LED1 series,Yageo,RC0402FR-071KL,0402,,LED1 series,
+C40,1,100nF 10V X7R,SIM_1V8 decoupling at modem (U1 pad 49),Murata,GRM155R71A104KA01D,0402,,SIM_1V8 decoupling at modem (U1 pad 49),C71687
+D1,1,SS34,Reverse-polarity Schottky,MDD (Microdiode),SS34,SMA (DO-214AC),,Reverse-polarity Schottky,C8678
+D2,1,SMAJ5.0A,VIN TVS 5.0 V,RUILON,SMAJ5.0A,DO-214AC,,VIN TVS 5.0 V,C10758
+D3,1,Green LED,Power LED on VIN,Lite-On,LTST-C191KGKT,0603,,Power LED on VIN,C125098
+D4,1,Green LED,STATUS LED on P0.00,Lite-On,LTST-C191KGKT,0603,,STATUS LED on P0.00,C125098
+F1,1,2A fuse,VIN fuse,Littelfuse,0468002.NRHF,1206,,VIN fuse,C187611
+FB1,1,BLM18KG221SN1,VDD1 ferrite (nRF91 HDG),Murata,BLM18KG221SN1D,0603,,VDD1 ferrite (nRF91 HDG),C88980
+FB2,1,BLM18KG221SN1,VDD2 ferrite 1,Murata,BLM18KG221SN1D,0603,,VDD2 ferrite 1,C88980
+FB3,1,BLM18KG221SN1,VDD2 ferrite 2 (nRF9161 DK extra FB3),Murata,BLM18KG221SN1D,0603,,VDD2 ferrite 2 (nRF9161 DK extra FB3),C88980
+FB4,1,BLM21PG221SN1,VIN input ferrite,Murata,BLM21PG221SN1D,0805,,VIN input ferrite,C85840
+FB5,1,BLM15HG102SN1,GNSS bias ferrite (land L_0402_1005Metric),Murata,BLM15HG102SN1D,0402,,GNSS bias ferrite; schematic footprint fixed 0603→0402,C76889
+L1,1,0R,LTE series match placeholder (0R until tune; LQW15AN family per HDG),UNI-ROYAL,0402WGF0000TCE,0402,Fit 0R until VNA; then LQW15AN,LTE series match placeholder (0R until tune; LQW15AN family per HDG),C17168
+L2,1,0R,AUX series match placeholder,UNI-ROYAL,0402WGF0000TCE,0402,Fit 0R until VNA; then LQW15AN,AUX series match placeholder,C17168
+L4,1,100nH,GNSS bias-T RF choke (nWP033),Murata,LQW15ANR10J00D,0402,,GNSS bias-T RF choke (nWP033),C86130
+R1,1,10k,ENABLE series to VDD1 (HDG 4.3),Yageo,RC0201FR-0710KL,0201,,ENABLE series to VDD1 (HDG 4.3),C106225
+R3,1,1k,Power LED resistor,UNI-ROYAL,0402WGF1001TCE,0402,,Power LED resistor,C11702
+R5,1,1k,nRESET series (HDG 4.8; no external pull-up),Yageo,RC0201FR-071KL,0201,,nRESET series (HDG 4.8; no external pull-up),C138165
+R10,1,1k,LED1 series,UNI-ROYAL,0402WGF1001TCE,0402,,LED1 series,C11702
 JP2,1,SIM_VCC jumper,Connect SIM_1V8 to card VCC; close for operation,Keystone,solder jumper,SJ-2 open,,Connect SIM_1V8 to card VCC; close for operation,
-J2,1,U.FL LTE/NR+,External LTE/DECT NR+ antenna,Hirose,U.FL-R-SMT-1(10),U.FL,,External LTE/DECT NR+ antenna,
-J5,1,U.FL GNSS,External active GNSS antenna,Hirose,U.FL-R-SMT-1(10),U.FL,,External active GNSS antenna,
-J7,1,nano-SIM 4FF,nano-SIM connector,JAE,SF72S006V4BR,SF72S006,,nano-SIM connector,
-J8,1,SWD 10-pin,ARM Cortex 10-pin (J-Link compatible),Samtec,FTSH-105-01-L-DV,2x05 1.27mm,,ARM Cortex 10-pin (J-Link compatible),
-SW2,1,RESET,nRESET button,C&K,KXT311LHS,KXT3,,nRESET button,
+J2,1,U.FL LTE/NR+,External LTE/DECT NR+ antenna,Hirose,U.FL-R-SMT-1(10),U.FL,,External LTE/DECT NR+ antenna,C88373
+J5,1,U.FL GNSS,External active GNSS antenna,Hirose,U.FL-R-SMT-1(10),U.FL,,External active GNSS antenna,C88373
+J7,1,nano-SIM 4FF,nano-SIM connector,JAE,SF72S006VBDR2500,SF72S006,,nano-SIM connector,C2977286
+J8,1,SWD 10-pin,ARM Cortex 10-pin (J-Link compatible),Samtec,FTSH-105-01-L-DV-K,2x05 1.27mm,,ARM Cortex 10-pin (J-Link compatible) (FTSH -K keying pegs: Layout checking peg holes),C5155080
+SW2,1,RESET,nRESET button,C&K,KXT331LHS,KXT3,,nRESET button,C778127
 "TP1,TP7-TP9,TP13-TP17",9,Test points,"Bring-up test pads (no BOM): AUX_FIT, SWDIO, SWCLK, nRESET, VDD_GPIO, VDD_nRF, VIN, GND, ENABLE",Keystone,5015,D1.0/1.5mm pad,,"Bring-up test pads (no BOM): AUX_FIT, SWDIO, SWCLK, nRESET, VDD_GPIO, VDD_nRF, VIN, GND, ENABLE",
-J20,1,HOST_1x10_2.54,"Host header 1x10 2.54mm THT: VIN,GND,VIO,TX,RX,RTS,CTS,DTR,RI,nRESET",BOOMELE,2.54-1*10PPin,1x10 2.54mm THT,,Host interface header,C57369
+J20,1,HOST_1x10_2.54,"Host header 1x10 2.54mm THT: VIN,GND,VIO,TX,RX,RTS,CTS,DTR,RI,nRESET",BOOMELE,2.54-1*10P,1x10 2.54mm THT,,Host interface header,C57369
 U5,1,SN74LXC2T45,Host->modem TX/RTS translator (DIR=VIO),Texas Instruments,SN74LXC2T45DCUR,VSSOP-8 (DCU),,"HOST_TX->P0.03, HOST_RTS->P0.07",C5217891
 U6,1,SN74LXC2T45,Modem->host RX/CTS translator (DIR=GND),Texas Instruments,SN74LXC2T45DCUR,VSSOP-8 (DCU),,"P0.02->HOST_RX, P0.06->HOST_CTS",C5217891
 U7,1,SN74LXC1T45,Host->modem DTR translator (DIR=VIO),Texas Instruments,SN74LXC1T45DBVR,SOT-23-6,,HOST_DTR->P0.31,C4364198
