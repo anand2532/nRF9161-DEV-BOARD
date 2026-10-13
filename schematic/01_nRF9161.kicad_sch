@@ -2690,6 +2690,33 @@
 				)
 			)
 		)
+		(property "MPN" "NRF9161-LACA-R7"
+			(at 88.9 88.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C21547412"
+			(at 88.9 88.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nordic Semiconductor"
+			(at 88.9 88.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f8e4019f-b6d0-4bbc-acfd-089718325fd4")
 		)
@@ -2903,6 +2930,33 @@
 				)
 			)
 		)
+		(property "MPN" "NRF9161-LACA-R7"
+			(at 177.8 88.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C21547412"
+			(at 177.8 88.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nordic Semiconductor"
+			(at 177.8 88.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "53"
 			(uuid "01fb5f0f-6603-4238-9708-083678c9ce91")
 		)
@@ -3008,6 +3062,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "NRF9161-LACA-R7"
+			(at 88.9 177.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C21547412"
+			(at 88.9 177.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nordic Semiconductor"
+			(at 88.9 177.8 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3137,6 +3218,33 @@
 				)
 			)
 		)
+		(property "MPN" "NRF9161-LACA-R7"
+			(at 177.8 177.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C21547412"
+			(at 177.8 177.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nordic Semiconductor"
+			(at 177.8 177.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "26"
 			(uuid "ac61aed1-a470-4756-ad4a-f0e84a635448")
 		)
@@ -3254,6 +3362,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "NRF9161-LACA-R7"
+			(at 88.9 254 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C21547412"
+			(at 88.9 254 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nordic Semiconductor"
+			(at 88.9 254 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4407,6 +4542,15 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C71687"
+			(at 45.72 237.49 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)

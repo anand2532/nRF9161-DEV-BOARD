@@ -688,7 +688,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Kingbright"
+		(property "Manufacturer" "Lite-On"
 			(at 76.2 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -699,7 +699,7 @@
 				)
 			)
 		)
-		(property "MPN" "KP-2012SGC"
+		(property "MPN" "LTST-C191KGKT"
 			(at 76.2 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -737,6 +737,15 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C125098"
+			(at 76.2 38.1 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -818,6 +827,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0402WGF1001TCE"
+			(at 50.8 38.1 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C11702"
+			(at 50.8 38.1 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 50.8 38.1 90)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)

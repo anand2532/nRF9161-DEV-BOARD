@@ -20,3 +20,6 @@
 # PASS30CP J5: RF-approved GND-only RF-keepout exception: one 0.30/0.60 tented GND via at (5.90,50.75), J5.2 (left) outer-top corner, tied to In1.
 #   No In1 slot under the feed; no F.Cu link added. Second via does not fit (GNSS_VBIAS 0.2 mm loop at x 5.02 / y 50 / y 54 fences the pad).
 # PASS30CQ: 2nd J5.2 GND via 0.30/0.60 at (5.40,52.475) after removal of the dead GNSS_VBIAS loop (RF-approved).
+# v2n: board-wide minimum silkscreen line width 0.15 mm (JLC legend). KiCad 9 DRU has no constraint for
+#   graphic line width (track_width ignores shapes), so it is the project default (silk_line_width 0.15 in
+#   .kicad_pro) and is verified per pass by script (all F/B.SilkS shapes >= 0.15 mm).

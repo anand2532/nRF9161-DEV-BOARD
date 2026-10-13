@@ -962,6 +962,33 @@
 				)
 			)
 		)
+		(property "MPN" "FTSH-105-01-L-DV-K"
+			(at 76.2 63.5 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C5155080"
+			(at 76.2 63.5 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samtec"
+			(at 76.2 63.5 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5502f2fc-8df6-4fa9-90e8-3dc4fa60f4ef")
 		)
@@ -1063,6 +1090,33 @@
 				)
 			)
 		)
+		(property "MPN" "RC0201FR-071KL"
+			(at 50.8 101.6 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C138165"
+			(at 50.8 101.6 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 50.8 101.6 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "590ee315-cbc8-4703-bc27-c4e77900d102")
 		)
@@ -1135,6 +1189,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "KXT331LHS"
+			(at 76.2 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C778127"
+			(at 76.2 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "C&K"
+			(at 76.2 101.6 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)

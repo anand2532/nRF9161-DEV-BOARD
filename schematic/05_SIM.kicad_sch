@@ -1391,6 +1391,33 @@
 				)
 			)
 		)
+		(property "MPN" "SF72S006VBDR2500"
+			(at 101.6 63.5 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2977286"
+			(at 101.6 63.5 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "JAE"
+			(at 101.6 63.5 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "C1"
 			(uuid "9bd36e17-9d2a-413e-a364-fe70b18a3214")
 		)
@@ -1466,7 +1493,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "Board:TI_TPD3F303_USON-8_1.45x1.45mm_P0.4mm"
+		(property "Footprint" "Board:TI_TPD3F303_USON-8_DPV_2.1x1.6mm_P0.5mm"
 			(at 49.53 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -1493,6 +1520,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TPD3F303DPVR"
+			(at 50.8 63.5 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2865991"
+			(at 50.8 63.5 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 50.8 63.5 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1607,6 +1661,33 @@
 				)
 			)
 		)
+		(property "MPN" "CL05B104KO5NNNC"
+			(at 50.8 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1525"
+			(at 50.8 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 50.8 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8c600e0b-d3f6-42bc-86ef-3d620d6d0649")
 		)
@@ -1688,6 +1769,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL05B224KO5NNNC"
+			(at 101.6 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C16772"
+			(at 101.6 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 101.6 101.6 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1781,6 +1889,33 @@
 				)
 			)
 		)
+		(property "MPN" "GRM0335C1H220JA01D"
+			(at 25.4 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C76924"
+			(at 25.4 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 25.4 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "df987425-3e87-451f-a449-8d4c491b7f3b")
 		)
@@ -1862,6 +1997,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM0335C1H220JA01D"
+			(at 35.56 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C76924"
+			(at 35.56 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 35.56 38.1 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1955,6 +2117,33 @@
 				)
 			)
 		)
+		(property "MPN" "GRM0335C1H220JA01D"
+			(at 45.72 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C76924"
+			(at 45.72 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 45.72 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e56ce869-92c8-4ee6-9e50-566566c2c5d1")
 		)
@@ -2036,6 +2225,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM0335C1H220JA01D"
+			(at 55.88 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C76924"
+			(at 55.88 38.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 55.88 38.1 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)

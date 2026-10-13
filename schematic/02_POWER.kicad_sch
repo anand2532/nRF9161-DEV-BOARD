@@ -1914,7 +1914,7 @@
 				)
 			)
 		)
-		(property "Value" "PMEG4030ER"
+		(property "Value" "SS34"
 			(at 63.5 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1951,6 +1951,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "SS34"
+			(at 63.5 38.1 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C8678"
+			(at 63.5 38.1 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "MDD (Microdiode)"
+			(at 63.5 38.1 90)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2042,6 +2069,33 @@
 				)
 			)
 		)
+		(property "MPN" "SMAJ5.0A"
+			(at 88.9 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C10758"
+			(at 88.9 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "RUILON"
+			(at 88.9 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9f42d98a-c3a6-4091-b05b-5666d15eb5bd")
 		)
@@ -2127,6 +2181,33 @@
 				)
 			)
 		)
+		(property "MPN" "0468002.NRHF"
+			(at 88.9 38.1 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C187611"
+			(at 88.9 38.1 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 88.9 38.1 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d0c42524-da79-4bcd-ba6e-6f2128784fe5")
 		)
@@ -2169,7 +2250,7 @@
 				)
 			)
 		)
-		(property "Value" "BLM18PG221SN1"
+		(property "Value" "BLM21PG221SN1"
 			(at 114.3 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2206,6 +2287,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "BLM21PG221SN1D"
+			(at 114.3 38.1 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C85840"
+			(at 114.3 38.1 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 114.3 38.1 90)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2299,6 +2407,33 @@
 				)
 			)
 		)
+		(property "MPN" "CL21A106KOQNNNE"
+			(at 127 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1713"
+			(at 127 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 127 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e094e4d4-d179-4969-8732-6981c8188cc7")
 		)
@@ -2380,6 +2515,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL05B104KO5NNNC"
+			(at 137.16 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1525"
+			(at 137.16 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 137.16 50.8 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2471,6 +2633,33 @@
 				)
 			)
 		)
+		(property "MPN" "BLM18KG221SN1D"
+			(at 177.8 25.4 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C88980"
+			(at 177.8 25.4 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 177.8 25.4 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "18b1456e-ea9f-4a20-b90d-ff99e7170425")
 		)
@@ -2556,6 +2745,33 @@
 				)
 			)
 		)
+		(property "MPN" "BLM18KG221SN1D"
+			(at 177.8 50.8 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C88980"
+			(at 177.8 50.8 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 177.8 50.8 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "28761ed0-9227-413d-ab34-c921bf4ac9ce")
 		)
@@ -2635,6 +2851,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "BLM18KG221SN1D"
+			(at 198.12 50.8 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C88980"
+			(at 198.12 50.8 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 198.12 50.8 90)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2728,6 +2971,33 @@
 				)
 			)
 		)
+		(property "MPN" "GRM21BR61A476ME15L"
+			(at 198.12 12.7 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C124129"
+			(at 198.12 12.7 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 198.12 12.7 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b58614f3-b41e-4d3d-8713-4c30f04a2aa3")
 		)
@@ -2809,6 +3079,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61A475MEAAD"
+			(at 208.28 12.7 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C335105"
+			(at 208.28 12.7 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 208.28 12.7 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2902,6 +3199,33 @@
 				)
 			)
 		)
+		(property "MPN" "GRM033R61A104KE15D"
+			(at 218.44 12.7 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C76934"
+			(at 218.44 12.7 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 218.44 12.7 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1f29376a-e12b-43d5-a364-f0ce08f55022")
 		)
@@ -2983,6 +3307,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GJM0335C1E150JB01D"
+			(at 228.6 12.7 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C710722"
+			(at 228.6 12.7 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 228.6 12.7 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3076,6 +3427,33 @@
 				)
 			)
 		)
+		(property "MPN" "GRM21BR61A476ME15L"
+			(at 218.44 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C124129"
+			(at 218.44 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 218.44 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "168aa03f-0691-48b9-b5e6-0be97b9bc90b")
 		)
@@ -3157,6 +3535,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61A475MEAAD"
+			(at 228.6 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C335105"
+			(at 228.6 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 228.6 50.8 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3250,6 +3655,33 @@
 				)
 			)
 		)
+		(property "MPN" "GRM033R61A104KE15D"
+			(at 238.76 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C76934"
+			(at 238.76 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 238.76 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5c6fbb63-33d9-42fa-a8dc-51ca8288a8b5")
 		)
@@ -3337,6 +3769,33 @@
 				)
 			)
 		)
+		(property "MPN" "GJM0335C1E150JB01D"
+			(at 248.92 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C710722"
+			(at 248.92 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 248.92 50.8 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e1f15903-7d0f-4fd7-a752-87a8324fd9ac")
 		)
@@ -3416,6 +3875,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0201FR-0710KL"
+			(at 177.8 76.2 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C106225"
+			(at 177.8 76.2 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 177.8 76.2 90)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3509,6 +3995,33 @@
 				)
 			)
 		)
+		(property "MPN" "GRM033R61A104KE15D"
+			(at 198.12 88.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C76934"
+			(at 198.12 88.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 198.12 88.9 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "25a761b8-cbfe-41e3-8910-03f6070a0f65")
 		)
@@ -3590,6 +4103,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TLV73333PDBVR"
+			(at 63.5 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C134139"
+			(at 63.5 101.6 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 63.5 101.6 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3692,6 +4232,33 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61A475MEAAD"
+			(at 88.9 114.3 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C335105"
+			(at 88.9 114.3 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 88.9 114.3 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c006b03f-624f-4468-8fbb-8e3344096d47")
 		)
@@ -3773,6 +4340,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM033R61A104KE15D"
+			(at 99.06 114.3 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C76934"
+			(at 99.06 114.3 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 99.06 114.3 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3866,6 +4460,33 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61A475MEAAD"
+			(at 127 114.3 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C335105"
+			(at 127 114.3 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 127 114.3 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "30d86a09-9f69-414c-81c9-b5a961c10711")
 		)
@@ -3928,7 +4549,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Kingbright"
+		(property "Manufacturer" "Lite-On"
 			(at 38.1 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -3939,7 +4560,7 @@
 				)
 			)
 		)
-		(property "MPN" "KP-2012SGC"
+		(property "MPN" "LTST-C191KGKT"
 			(at 38.1 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -3977,6 +4598,15 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C125098"
+			(at 38.1 76.2 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4062,6 +4692,33 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0402WGF1001TCE"
+			(at 50.8 76.2 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C11702"
+			(at 50.8 76.2 90)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 50.8 76.2 90)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
